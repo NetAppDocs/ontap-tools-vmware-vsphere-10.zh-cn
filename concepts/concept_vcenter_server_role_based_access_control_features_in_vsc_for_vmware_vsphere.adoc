@@ -38,7 +38,7 @@ vCenter Server 提供了基于角色的访问控制（ Role-Based Access Control
 
 NOTE: vCenter Server角色适用于ONTAP工具vCenter用户、而不适用于管理员。默认情况下、管理员对产品具有完全访问权限、不需要为其分配角色。
 
-没有为用户和组分配角色。它们通过加入vCenter Server角色获得对某个角色的访问权限。
+用户和组通过加入vCenter Server角色获得对某个角色的访问权限。
 
 
 

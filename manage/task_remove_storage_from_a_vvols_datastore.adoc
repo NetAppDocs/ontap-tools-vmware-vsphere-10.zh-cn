@@ -35,6 +35,9 @@ DELETE
 ----
   DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
 ----
+
+NOTE: 如果您已将delete_volume标志传递为true、则删除虚拟卷数据存储库工作流将删除数据存储库卷、而不管该数据存储库卷是否受管理。
+
 * 删除虚拟卷数据存储库、而不从存储中删除卷
 
 
