@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: qsg_10.html 
+permalink: deploy/qsg_10.html 
 keywords: QSG, ONTAP tools for VMware vSphere, Quick start guide, Installing 
 summary: 提供有关部署和初始化适用于 VMware vSphere 的 ONTAP 工具的说明。 
 ---

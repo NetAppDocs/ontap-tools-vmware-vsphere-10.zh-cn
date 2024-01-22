@@ -3,7 +3,7 @@ section: deploy
 title: 部署 ONTAP 工具
 entries:
 - title: ONTAP 工具快速入门
-  url: "/qsg_10.html"
+  url: "/deploy/qsg_10.html"
 - title: 部署 ONTAP 工具的要求
   url: "/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html"
 - title: 如何下载 ONTAP 工具

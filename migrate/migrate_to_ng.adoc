@@ -33,7 +33,7 @@ NOTE: 作为现有用户、在升级到9.10D修补程序或9.11D修补程序之�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. 部署适用于VMware vSphere 10.0版本的适用于ONTAP的OVA工具。请参见 link:../qsg_10.html["ONTAP 工具快速入门"]
+. 部署适用于VMware vSphere 10.0版本的适用于ONTAP的OVA工具。请参见 link:../deploy/qsg_10.html["ONTAP 工具快速入门"]
 . 添加要迁移到适用于VMware vSphere 10.0版本的ONTAP工具的vCenter。请参见 link:../configure/add_vcenter.html["添加vCenter"]。
 . 从远程插件vCenter API本地板载存储后端。请参见 link:../configure/onboard_svm.html["板载存储后端"]。将存储添加为本地范围以进行迁移。
 . 使用以下API进行迁移：

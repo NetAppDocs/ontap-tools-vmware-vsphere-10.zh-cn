@@ -441,7 +441,6 @@
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">作为现有用户、在升级到9.10D修补程序或9.11D修补程序之前、您需要从9.10/9.11创建OVA备份</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">在适用于VMware vSphere 9.10D2和9.11D2的现有ONTAP工具上启用Derby端口1527。要启用此端口、请使用root用户登录到命令行界面、然后运行以下命令：</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">ONTAP 工具快速入门</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">部署适用于VMware vSphere 10.0版本的适用于ONTAP的OVA工具。请参见 <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">添加要迁移到适用于VMware vSphere 10.0版本的ONTAP工具的vCenter。请参见 <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>。</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">板载存储后端</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">从远程插件vCenter API本地板载存储后端。请参见 <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>。将存储添加为本地范围以进行迁移。</block>
@@ -675,7 +674,6 @@ ONTAP 9.8及更高版本上基于NFS的虚拟卷数据存储库提供了性能�
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">部署要求</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部署软件包的空间要求以及一些基本主机系统要求。</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">您可以将ONTAP工具与Windows vCenter Server或VMware vCenter Server VirtualAppliance (vCSA)结合使用。您必须在包含ESXi系统的受支持vSphere上部署ONTAP工具。</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">有关详细信息，请参见 <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">ONTAP 工具要求</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">下载 .ova 文件。</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">vCenter Server 实例的登录凭据。</block>
@@ -841,4 +839,6 @@ ONTAP 9.8及更高版本上基于NFS的虚拟卷数据存储库提供了性能�
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">用户和组通过加入vCenter Server角色获得对某个角色的访问权限。</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">如果您已将delete_volume标志传递为true、则删除虚拟卷数据存储库工作流将删除数据存储库卷、而不管该数据存储库卷是否受管理。</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP工具基于角色的访问控制概述</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">部署适用于VMware vSphere 10.0版本的适用于ONTAP的OVA工具。请参见 <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">有关详细信息，请参见 <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>

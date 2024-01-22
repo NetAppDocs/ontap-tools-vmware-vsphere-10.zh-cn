@@ -9,7 +9,7 @@ indexpage:
     - title: 了解适用于 VMware vSphere 的 ONTAP 工具
       url: "/concepts/concept_ontap_tools_overview.html"
     - title: ONTAP 工具快速入门
-      url: "/qsg_10.html"
+      url: "/deploy/qsg_10.html"
     - title: 部署 ONTAP 工具
       url: "/deploy/prepare_deployment.html"
     - title: 迁移ONTAP工具
