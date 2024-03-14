@@ -15,7 +15,7 @@ summary: 您可以使用ONTAP工具和ONTAP系统管理器提供的JSON文件配
 
 * 您需要的内容 *
 
-* 您应已使用\https：<loadbalancerIP>：8443/Virtualization /用户权限/User_roles.zip从ONTAP工具下载ONTAP权限文件。
+* 您应已使用从ONTAP工具下载ONTAP权限文件 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: 您可以在集群或直接Storage Virtual Machine (SVM)级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。

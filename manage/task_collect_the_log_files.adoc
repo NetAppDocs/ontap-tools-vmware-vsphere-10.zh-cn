@@ -15,7 +15,7 @@ summary: '您可以使用适用于VMware vSphere的ONTAP工具图形用户界面
 
 * 步骤 *
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从边栏中选择*Log Bundes*。
 +
 此操作可能需要几分钟时间。

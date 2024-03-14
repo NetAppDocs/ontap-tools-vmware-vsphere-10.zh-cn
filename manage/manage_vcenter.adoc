@@ -21,7 +21,7 @@ vCenter是一种中央管理平台、可用于控制主机、虚拟机和存储�
 
 * 步骤 *
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从侧栏中选择vCenter
 . 选择*使用vCenter IP地址/主机名、用户名、密码和端口添加*到板载vCenter。
 . 导航到*存储后端*页面并选择*使用主机名、用户名、密码和端口添加到板载存储后端*(ONTAP集群)。
@@ -38,7 +38,7 @@ vCenter列表页面显示了相关的存储后端数量。每个vCenter都可以
 
 * 步骤 *
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从侧栏中选择vCenter。
 . 单击要与存储后端关联或解除关联的vCenter旁边的垂直省略号。
 . 根据您要执行的操作，选择*关联或取消关联存储后端*。
@@ -53,7 +53,7 @@ vCenter列表页面显示了相关的存储后端数量。每个vCenter都可以
 
 请按照以下步骤修改这些vCenter。
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从侧栏中选择vCenter
 . 单击要修改的vCenter旁边的垂直省略号、然后选择*修改*。
 . 修改vCenter详细信息并选择*修改*。
@@ -65,7 +65,7 @@ vCenter列表页面显示了相关的存储后端数量。每个vCenter都可以
 
 您需要先删除连接到vCenter的所有存储后端、然后再将其删除。
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从侧栏中选择vCenter
 . 单击要删除的vCenter旁边的垂直省略号、然后选择*删除*。
 +

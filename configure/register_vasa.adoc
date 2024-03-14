@@ -25,7 +25,7 @@ summary: 您可以使用自签名证书或CA签名证书向vCenter注册VASA Pro
 . 输入存储提供程序的连接信息：
 +
 .. name：任何用户友好的名称、例如"ScaleoutVP"
-.. 网址： https://<name>/virtualization/version.xml[] - URL中的名称对应于在单vCenter部署OVA期间提供的虚拟IP (或多vCenter部署的域名)。将证书添加到URL。将相同的证书发布到vCenter。
+.. 网址： `\https://<name>/virtualization/version.xml` - URL中的名称对应于在单vCenter部署OVA期间提供的虚拟IP (或多vCenter部署的域名)。将证书添加到URL。将相同的证书发布到vCenter。
 .. 凭据：在OVA部署期间提供的< VASA Provider用户名>/< VASA Provider密码>。
 
 

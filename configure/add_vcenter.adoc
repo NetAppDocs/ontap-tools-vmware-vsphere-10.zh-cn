@@ -19,7 +19,7 @@ vCenter是一种中央管理平台、可用于控制主机、虚拟机(VM)和存
 
 * 步骤 *
 
-. 启动 https://loadBalanceIP:8443/virtualization/ui/[] 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
+. 启动 `\https://loadBalanceIP:8443/virtualization/ui/` 使用部署期间提供的ONTAP工具管理员凭据从浏览器访问。
 . 从侧栏中选择vCenter
 . 选择*使用vCenter IP地址/主机名、用户名、密码和端口添加*到板载vCenter。
 
