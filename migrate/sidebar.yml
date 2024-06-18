@@ -2,5 +2,5 @@
 section: migrate
 title: 迁移ONTAP工具
 entries:
-- title: 迁移到最新版本的ONTAP工具
-  url: "/migrate/migrate_to_ng.html"
+- title: 迁移到适用于VMware vSphere的最新ONTAP工具版本
+  url: "/migrate/migrate-to-latest-ontaptools.html"
