@@ -43,37 +43,32 @@ NOTE: 您需要保留负载平衡器IP地址和Kubbernetes API服务器IP地址�
 +
 .. 应用程序用户名和密码：此用户名和密码用于在vCenter Server中注册VASA Provider和SRA。此密码可能与初始部署期间提供的用户名和密码不同。
 .. 默认情况下，“*启用ASUP*”复选框处于选中状态。
-+
+
+
+
+
 只能在部署期间启用或禁用AutoSupport。
+...在*ASUP代理URL*字段中，提供此URL以避免防火墙阻止AutoSupport数据传输。
+...管理员用户名和管理员密码：这是用于登录到ONTAP工具管理器的密码。此密码可能与初始部署期间提供的用户名和密码不同。
+...在*NTP服务器*字段中输入NTP服务器信息。
+...维护用户密码：用于授予对维护控制台选项的访问权限。
+。在*Customize temple*>*Deployment Configuration*窗口中，输入部署期间提供的详细信息。除了数据LIF值之外、本节中的所有值都应与初始部署期间提供的值相同。
 
-.. 在*ASUP代理URL*字段中，提供此URL以避免防火墙阻止AutoSupport数据传输。
-.. 管理员用户名和管理员密码：这是用于登录到ONTAP工具管理器的密码。此密码可能与初始部署期间提供的用户名和密码不同。
-.. 在*NTP服务器*字段中输入NTP服务器信息。
-.. 维护用户密码：用于授予对维护控制台选项的访问权限。
-
-
-. 在*Customize temple*>*Deployment Configuration*窗口中，输入部署期间提供的详细信息。除了数据LIF值之外、本节中的所有值都应与初始部署期间提供的值相同。
-+
 
 NOTE: 存储SVM名称不应更改、因为它是存储恢复数据的位置。此适用场景还直接添加了SVM用户帐户。
+。对于HA部署恢复、请提供以下详细信息：
+...内容库详细信息。
+...vCenter配置详细信息。
+。在*Customize temp*>*Node Configuration*窗口中，根据您要恢复的设置、非HA或HA设置输入详细信息。
+。查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 
-. 对于HA部署恢复、请提供以下详细信息：
-+
-.. 内容库详细信息。
-.. vCenter配置详细信息。
-
-
-. 在*Customize temp*>*Node Configuration*窗口中，根据您要恢复的设置、非HA或HA设置输入详细信息。
-. 查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 +
 创建部署任务后、vSphere任务栏中将显示进度。
+。完成此任务后、打开虚拟机的电源。
 
-. 完成此任务后、打开虚拟机的电源。
 +
 此时将开始安装。您可以在VM的Web控制台中跟踪安装进度。
 在安装过程中、系统会验证节点配置。系统会验证在OVF表单的Customize模板下的不同部分下提供的输入。如果出现任何差异、则会显示一个对话框、提示您采取更正操作。
-
-. 在对话框提示符中进行必要的更改。使用Tab键在面板中导航，输入您的值*OK*或*Cancel*。
-. 选择*OK*或*Cancel*后，提供的值将再次验证。您可以将任何值更正3次。如果在3次尝试中均未能更正、则产品安装将停止、建议您尝试在新虚拟机上进行安装。
-. 成功安装后、Web控制台将显示适用于VMware vSphere的ONTAP工具的状态。成功安装后、您应按照中的准则手动编辑硬件要求 link:../deploy/sizing-requirements.html["部署适用于VMware vSphere的ONTAP工具的前提条件"] 页面。
-
+。在对话框提示符中进行必要的更改。使用Tab键在面板中导航，输入您的值*OK*或*Cancel*。
+。选择*OK*或*Cancel*后，提供的值将再次验证。您可以将任何值更正3次。如果在3次尝试中均未能更正、则产品安装将停止、建议您尝试在新虚拟机上进行安装。
+。成功安装后、Web控制台将显示适用于VMware vSphere的ONTAP工具的状态。成功安装后、您应按照中的准则手动编辑硬件要求 link:../deploy/sizing-requirements.html["部署适用于VMware vSphere的ONTAP工具的前提条件"] 页面。

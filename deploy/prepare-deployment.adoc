@@ -23,7 +23,7 @@ summary: 要使用此设备、您应在环境中部署适用于VMware vSphere的
 . 配置和设置 vCenter Server 环境。
 . 下载_.ova_文件。
 . (可选)用于自动化用户—收集NetApp提供的Postman集合JSON文件。
-. 用于部署OVA的父vCenter Server凭据。
+. 用于部署OVA的父vCenter Server凭据。父vCenter Server密码不应包含这些特殊字符($、'、")
 . 确保部署OVA的主机或资源池具有中所述的最低资源 link:../deploy/sizing-requirements.html["部署适用于VMware vSphere的ONTAP工具的前提条件"] 部分。
 . 适用于VMware vSphere的ONTAP工具要连接到的vCenter Server实例的登录凭据、用于在部署后进行注册。
 . 删除浏览器缓存。
@@ -47,7 +47,7 @@ summary: 要使用此设备、您应在环境中部署适用于VMware vSphere的
 .. 协议
 .. Kubbernetes控制平台的虚拟IP地址。
 .. HA/non-HA下拉列表
-.. 主机名列表)
+.. 主机名列表
 .. IP地址(字符串)
 .. 内容库名称
 .. VF模板名称
