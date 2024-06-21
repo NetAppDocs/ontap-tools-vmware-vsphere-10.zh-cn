@@ -27,6 +27,10 @@ summary: 您可以在小型或中型配置中配置非HA单节点。
 . 登录到vSphere服务器。
 . 导航到要部署OVA的资源池、集群或主机。
 . 右键单击所需位置并选择*Deploy OVF temple...*。
++
+
+NOTE: 请勿将ONTAP工具VMware vSphere虚拟机部署在其管理的vvol数据存储库上。
+
 . 您可以输入_.ova_文件的URL，也可以浏览到保存_.ova_文件的文件夹，然后选择*Next*。
 . 选择虚拟机的名称和文件夹，然后选择*Next*。
 . 选择主机并选择*Next*

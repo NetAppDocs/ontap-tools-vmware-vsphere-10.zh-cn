@@ -64,3 +64,5 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: 重置维护控制台用户密码
     url: "/manage/reset-maint-password.html"
+- title: 清理卷
+  url: "/manage/delete-deployment.html"

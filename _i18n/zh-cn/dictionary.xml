@@ -29,7 +29,6 @@
   <block id="6a90716733c7d74d3742e2f3700f6422" category="list-text">删除浏览器缓存。</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*每个节点的安装包空间要求*</block>
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">10 GB用于精简配置安装</block>
-  <block id="62648a528ee4599cab2971c0bcbe7294" category="list-text">200 GB用于厚配置安装</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*每个节点的主机系统规模估算要求*
 根据部署规模和每个节点的建议内存如下表所示：</block>
   <block id="bf444bdf7f96ac7722b4e0845a28088a" category="cell">部署类型</block>
@@ -1542,12 +1541,7 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="dfb1f7e164fa9a18cdccdd70cc836871" category="doc">更新 SRA 凭据</block>
   <block id="ee51889e9927730735b810a56b6257a4" category="inline-link-macro">在SRM设备上配置SRA</block>
   <block id="3ac66bb3c6a9ea86b09af707ea7b346e" category="paragraph">您应已执行本主题中提到的步骤 <block ref="2844354f8ed275182ec054cfc4f78370" category="inline-link-macro-rx"></block></block>
-  <block id="91041cdb80acf69ffc64bea820b683a1" category="list-text">删除的内容<block ref="deb83d2dfd0ec1ec35caefe22e2fc515" prefix=" " category="inline-code"></block> 使用：</block>
-  <block id="c8c76585229a8fa67ac61e761baed2fc" category="list-text"><block ref="3f4f7415d3b5542ac20a11b143c4cee8" prefix="" category="inline-code"></block></block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
-  <block id="42f35b3ef9c82737da1f02ca0b45f308" category="list-text">执行 perl 命令以使用新凭据配置 SRA ：</block>
-  <block id="325c22d13dffac10de126d900c39ff29" category="list-text"><block ref="c8a7687f579de473b4cc34b8e40736ff" prefix="" category="inline-code"></block></block>
-  <block id="54772781d1f02544ab65b187cf257798" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block></block>
   <block id="a505f8df337aa6363aedcbf7da761b22" category="summary">您应映射受保护站点和恢复站点上的文件夹、以便它们之间可以进行通信。</block>
   <block id="16dac3a3c7de93aedd97c33f658f9028" category="doc">配置文件夹映射</block>
   <block id="975a5d96a32b63ae9e78d2fab188fc7d" category="list-text">在管理选项卡中，选择 * 文件夹映射 * 。</block>
@@ -1881,4 +1875,32 @@ HA和非HA部署均支持升级。</block>
 。在*Customize temple*&gt;*Deployment Configuration*窗口中，输入以下详细信息：</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="99126fb772977a83acb4723e429a29c0" category="admonition">请勿将ONTAP工具VMware vSphere虚拟机部署在其管理的vvol数据存储库上。</block>
+  <block id="6287b30826f078b30c5359360e127f14" category="list-text">248 GB用于厚配置安装</block>
+  <block id="c5e37bc00c030bf0bbf393fbb0102c75" category="summary">删除适用于VMware vSphere部署的ONTAP工具后、您应清理在部署期间创建的FlexVolumes。如果您已使用专用ONTAP集群进行部署、则应清理FlexVolumes、因为此部署会创建大量未使用的FlexVolume、从而降低性能。</block>
+  <block id="ad528646e45a18d9a7dfd1bdb26d3590" category="doc">清理卷</block>
+  <block id="01eca24b015422068e7eaa5d160ba4c7" category="paragraph">在删除适用于VMware vSphere部署的ONTAP工具后、请按照以下准则清理FlexVolumes。</block>
+  <block id="bdb13f3eee9a7d0b56448fc712a7cde0" category="list-text">从适用于VMware vSphere的ONTAP工具的主节点VM中、运行以下命令以确定部署类型。</block>
+  <block id="6aa67ccabd12c5a1df1d1b2ed5e708fe" category="paragraph">_cat /opt/NetApp/meta/Ansend_vars.yaml | gep -i protocol</block>
+  <block id="500709781cf1f23d88b63694fea55531" category="paragraph">如果是iSCSI部署、则还需要删除igroub。</block>
+  <block id="bb113144dfd0e0dacc7ebb805636d51b" category="list-text">使用以下命令提取部署期间在ONTAP中创建的FlexVolume列表。</block>
+  <block id="a2b995300ba8f79cc278568247266c61" category="paragraph">_kubect描述持久性卷| grep interalName | AWK -F'=''｛print $2｝'_</block>
+  <block id="15408f1c813642ad74ef2fc0f2b80003" category="inline-link">从vCenter Server或数据存储库中删除VM或VM模板</block>
+  <block id="1f9681143775b9bbb796eb20e711fdc5" category="list-text">从vCenter Server中删除VM、请参见<block ref="9df05bce2537d61ac4cfd60da50857ed" category="inline-link-rx"></block></block>
+  <block id="ef5b87aeaa907022daf2aa19faf9b465" category="inline-link">删除 FlexVol 卷</block>
+  <block id="61829ef583e1b41805512593ab501327" category="list-text">从ONTAP System Manager中删除卷、请参见<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>。在命令行界面命令中提供FlexVolume的确切名称以删除此卷。</block>
+  <block id="e38d6f0a684b3cc719c83432498db42b" category="inline-link">查看和管理SAN启动程序和igroup</block>
+  <block id="c3a21329f59e75c5e2c910cc4e4e7a7e" category="list-text">如果部署了iSCSI、请从ONTAP中删除SAN igroub、请参见<block ref="14bc02d0e479c1e35338b733fac8ca0e" category="inline-link-rx"></block>。</block>
+  <block id="8eb7110d281793cfd0b541853bac16d5" category="paragraph">在HA部署中、会创建四个igroub、在非HA部署中、会创建两个igroub。
+运行以下命令以查找第一个igrop名称：</block>
+  <block id="c26071422bbf92a43331f2741632aca9" category="paragraph">_kubectl -n tident get tbc tident-backend -o yaml | grep igroupName：| AWK -F'：'｛print $2｝'_</block>
+  <block id="497c71b0c5006d96abb762b862d3b40a" category="paragraph">其他igrop名称以虚拟机的主机名开头。</block>
+  <block id="3642e7476d2c39d4c6204e36acaa5431" category="list-text">运行以下命令以删除SRM计算机文件夹缓存的ONTAP工具用户名密码：</block>
+  <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
+  <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
+  <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
+  <block id="2a7f66eb3c213058f0136bcf65d63f11" category="list-text"><block ref="1c2934a64ebf7e159bf45c1e6c30b478" prefix="" category="inline-code"></block></block>
+  <block id="c6503e5473d2858467146e434dedb32e" category="list-text">运行perl命令为SRA配置新凭据：</block>
+  <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
+  <block id="d6dc3fa77b8368a0795d43ba5098caec" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block> 您需要在密码值周围使用一个引号。</block>
 </blocks>
