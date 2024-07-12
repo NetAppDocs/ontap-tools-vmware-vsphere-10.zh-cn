@@ -11,7 +11,7 @@ summary: ONTAP工具管理器为VMware vSphere管理员提供了更多的ONTAP�
 
 
 [role="lead"]
-适用于VMware vSphere的ONTAP工具是一个多租户系统、可管理多个vCenter Server实例。ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。
+适用于VMware vSphere的ONTAP工具是一个多租户系统、可管理多个vCenter Server实例。通过ONTAP工具管理器、VMware vSphere管理员可以通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。
 
 ONTAP工具管理器有助于：
 

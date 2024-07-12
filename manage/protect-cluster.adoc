@@ -1,0 +1,36 @@
+---
+permalink: manage/protect-cluster.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: 删除数据存储库操作将删除此数据存储库。如果使用的是NFS或VMFS数据存储库、则会显示一个对话框、其中列出了正在使用该数据存储库的虚拟机。 
+---
+= 保护主机集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revdate: ONTAP tools for VMware vSphere manages protection of a host cluster.
+
+
+属于选定SVM (并挂载在集群的一个或多个主机上)的所有数据存储库都会在主机集群下受到保护(对于SMA)。
+
+.前提条件
+在保护主机集群之前，请确保满足以下条件：。主机集群只包含一个SVM中的数据存储库。SVM (SB)版本应高于9.15.1.主机集群上挂载的任何数据存储库不应挂载到集群外部的任何主机上。。主机集群上挂载的所有数据存储库都必须是VMFS数据存储库。。主机集群上挂载的构成数据存储库的任何FlexVol或LUN都不应属于任何现有CG。。任何FlexVol或LUN都不应属于SnapMirror关系
+
+.步骤
+. 使用登录到vSphere Client `\https://vcenterip/ui`
+. 右键单击某个主机群集，然后选择*Protect Cluster* NetApp ONTAP tools*>*Protect Cluster*。
+. 在保护集群窗口中、输入要保护的数据存储库的保护设置。主机集群只能包含一个SVM (集群)中的数据存储库。
+. 选择一个目标ONTAP集群和Storage VM选项。
+. 选中*启用本地Snap照*复选框以将本地快照策略附加到数据存储库的后备卷。
+. 选中*启用SnapMirror复选框和*添加关系*以使用选定的AutomatedFailover双 工策略、目标集群和目标Storage VM保护数据存储库。
+. 要获得统一配置，请将*Unif统一 主机配置*切换按钮设置为true。
+. 根据统一的主机配置切换按钮选择，为每台主机提供*主机邻近*或*访问*。
+. 选择 * 添加 * 。
+. 查看摘要页面并选择保护。
+
+
+在vCenter上创建任务。使用生成的作业ID监控任务。

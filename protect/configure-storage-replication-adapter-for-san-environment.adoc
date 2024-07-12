@@ -38,7 +38,7 @@ https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 
 
 . 验证主 ESXi 主机是否已连接到受保护站点上主存储系统中的 LUN 。
 . 验证LUN是否位于具有的igroub中 `ostype` 选项在主存储系统上设置为_vmware_。
-. 验证恢复站点上的ESXi主机是否与Storage Virtual Machine (SVM)建立了适当的iSCSI连接。二级站点ESXi主机应能够访问二级站点存储、同样、主站点ESXi主机也应能够访问主站点存储。
+. 验证恢复站点上的ESXi主机是否与Storage Virtual Machine (SVM)建立了适当的iSCSI连接。二级站点ESXi主机应有权访问二级站点存储、而主站点ESXi主机应有权访问主站点存储。
 +
 为此、您可以验证ESXi主机是否已在SVM或上连接本地LUN `iscsi show initiators` 命令。
 在ESXi主机中检查映射的LUN的LUN访问、以验证iSCSI连接。

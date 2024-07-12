@@ -32,7 +32,7 @@ summary: 要使用此设备、您应在环境中部署适用于VMware vSphere的
 . 内容库模板一旦上传、不应在部署后删除、因为它将在重新启动期间使用。
 . 在多vCenter部署中、自定义CA证书是必需的、请将颁发此证书的域名映射到虚拟IP地址。对域名执行_nslookup_检查以检查域是否已解析为预期的IP地址。应使用负载平衡器IP地址的域名和IP地址创建证书。
 . IPv4/IPv6支持的VLAN -不支持纯IPv6。具有IPv6和IPv4地址的VLAN支持混合模式。
-. 为vCenter Server提供的NTP服务器、用于进行时间同步。
+. 为vCenter Server提供的用于时间同步的NTP服务器。
 . 要部署OVA的节点或VM的静态IP地址配置详细信息(必填)以及其他详细信息。
 +
 .. vCenter Server主机名(部署了OVA的vCenter)

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: '您可以将VMware虚拟卷(vvol)数据存储库挂载到一个或多个其他主机、以便为其他主机提供存储访问权限。您可以使用API卸载卷数据存储库。' 
 ---
-= 挂载并卸载此数据存储库
+= 挂载并卸载一个卷数据存储库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

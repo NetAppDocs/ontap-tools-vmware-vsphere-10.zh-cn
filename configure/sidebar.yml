@@ -24,7 +24,7 @@ entries:
   url: "/configure/discover-storage-systems-and-hosts.html"
 - title: 添加存储后端
   url: "/configure/add-storage-backend.html"
-- title: 将存储后端与vCenter Server相关联
+- title: 将存储后端与vCenter Server实例相关联
   url: "/configure/associate-storage-backend.html"
 - title: 配置网络访问
   url: "/configure/configure-network-access.html"

@@ -6,7 +6,7 @@ entries:
   entries:
   - title: 挂载NFS和VMFS数据存储库
     url: "/manage/mount-datastores-on-host.html"
-  - title: 挂载vols数据存储库
+  - title: 挂载 VVOL 数据存储库
     url: "/manage/mount-a-vvols-datastore.html"
   - title: 调整NFS和VMFS数据存储库的大小
     url: "/manage/resize-datastores.html"
@@ -66,3 +66,5 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: 清理卷
   url: "/manage/delete-deployment.html"
+- title: 保护主机集群
+  url: "/manage/protect-cluster.html"

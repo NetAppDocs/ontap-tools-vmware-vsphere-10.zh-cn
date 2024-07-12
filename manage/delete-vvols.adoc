@@ -13,7 +13,7 @@ summary: 删除数据存储库操作将删除此数据存储库。如果使用�
 [role="lead"]
 适用于VMware vSphere的所有ONTAP工具均支持从数据存储库中删除存储操作、这些工具在vCenter Server中发现或管理Vvol数据存储库。通过此操作、可以从此卷数据存储库中删除卷。
 
-如果某个特定卷上驻留有个FlexVol、则会禁用删除选项。除了从数据存储库中删除卷之外、您还可以删除ONTAP存储上的选定卷。
+如果某个特定卷上驻留了大量的FlexVol、则会禁用删除选项。除了从数据存储库中删除卷之外、您还可以删除ONTAP存储上的选定卷。
 
 在vCenter Server中从适用于VMware vSphere的ONTAP工具中删除数据存储库任务将执行以下操作：
 

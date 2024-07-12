@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、此用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere插件的ONTAP工具摘要的信息板。 
+summary: 在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。 
 ---
 = 适用于VMware vSphere插件的NetApp ONTAP工具信息板概述
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在vCenter Client的快捷方式部分中选择适用于VMware vSphere�
 
 
 [role="lead"]
-在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、此用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。
+在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。
 
 对于增强型链接模式设置(ELM)、将显示vCenter Server选择下拉列表、您可以选择所需的vCenter Server以查看与其相关的数据。此下拉列表可用于此插件的所有其他列表视图。
 在一个页面中选择的vCenter Server会在此插件的各个选项卡上保留。
@@ -25,14 +25,7 @@ image:../media/remote-plugin-dashboard.png["信息板概述"]
 | *卡名* | * 问题描述 * 
 
 
-| Status | 状态卡可显示添加的存储后端数量、存储后端的整体运行状况以及vCenter的VASA Provider状态。
-
-如果所有存储后端状态均正常、则存储后端状态将显示为"运行状况良好"。
-如果任一存储后端具有问题描述(未知/无法访问/已降级状态)、则存储后端状态将显示为"运行状况不正常"。
-
-单击"运行状况不正常"状态时、将打开一个工具提示、其中显示了存储后端的状态。集群名称是超链接的、您可以单击该链接打开存储后端摘要页面以了解更多详细信息。
-
-其他VASA Provider (VP)状态链接显示在vCenter Server中注册的VP的当前状态。 
+| Status | 状态卡可显示添加的存储后端数量、存储后端的整体运行状况以及vCenter的VASA Provider状态。如果所有存储后端状态均正常、则存储后端状态将显示为"运行状况良好"。如果任一存储后端具有问题描述(未知/无法访问/已降级状态)、则存储后端状态将显示为"运行状况不正常"。单击"运行状况不正常"状态时、将打开一个工具提示、其中显示了存储后端的状态。您可以单击任何存储后端以了解更多详细信息。其他VASA Provider (VP)状态链接显示在vCenter Server中注册的VP的当前状态。 
 
 
 | 存储后端—容量 | 此卡显示选定vCenter Server实例的所有存储后端的已用容量和可用容量。 

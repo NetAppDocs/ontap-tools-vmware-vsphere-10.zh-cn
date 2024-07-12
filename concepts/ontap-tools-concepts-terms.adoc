@@ -35,13 +35,19 @@ LUN是一个数字、用于标识存储区域网络(SAN)中的逻辑单元。这
 
 === ONTAP工具管理器
 
-ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助管理vCenter Server实例、存储后端、证书、密码和日志捆绑包下载。
+ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助管理vCenter Server实例、存储后端、证书、密码和日志包下载。
 
 
 
 === 开放式虚拟设备(OVA)
 
 OVA是一种用于打包和分发必须在虚拟机上运行的虚拟设备或软件的开放式标准。
+
+
+
+=== SnapMirror活动(SMAS)
+
+通过SnapMirror主动同步、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移需要手动干预或自定义脚本。
 
 
 

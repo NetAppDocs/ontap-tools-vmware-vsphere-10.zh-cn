@@ -22,7 +22,7 @@ entries:
     url: "/automation/onboard-svm-workflow.html"
   - title: 创建卷数据存储库
     url: "/automation/create-vvol-workflow.html"
-  - title: 挂载并卸载此数据存储库
+  - title: 挂载并卸载一个卷数据存储库
     url: "/automation/mount-unmount-workflow.html"
   - title: 扩展或缩减VVOV数据存储库的存储
     url: "/automation/expand-shrink-workflow.html"

@@ -13,7 +13,7 @@ summary: 您可以从 NetApp 支持站点下载适用于 VMware vSphere 的 ONTA
 [role="lead"]
 您可以下载 `.zip` 包含中适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支持站点"^]。
 
-部署完成后、您的环境中将安装适用于VMware vSphere和ONTAP产品的VMware工具。默认情况下、在您决定后续部署模式并根据需要选择是否启用VASA Provider后、适用于VMware vSphere的ONTAP工具便会开始工作。请参见 link:../configure/registration-process.html["向vCenter Server实例注册VASA Provider"] 了解详细信息。
+部署完成后、您的环境中将安装适用于VMware vSphere和ONTAP产品的VMware工具。默认情况下、在您确定部署模式并根据需要选择是否启用VASA Provider后、适用于VMware vSphere的ONTAP工具便会开始工作。有关详细信息、请参见。 link:../configure/registration-process.html["向vCenter Server实例注册VASA Provider"]
 
 
 
