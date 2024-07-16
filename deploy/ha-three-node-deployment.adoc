@@ -88,7 +88,7 @@ NOTE: 启用SVM范围后、您应事先使用管理IP地址启用SVM支持。
 .. 输入ONTAP集群或SVM ONTAP或SVM数据LIF。数据LIF应属于选定协议。例如、如果选择了iSCSI协议、则应提供iSCSI数据LIF。
 .. 对于Storage VM、您可以选择提供ONTAP的默认Storage VM详细信息、也可以创建新的Storage VM。如果选择了启用SVM范围界定、请勿在* Storage VM*字段中输入值、因为此字段将被忽略。
 .. 输入ONTAP或SVM用户名。在高级或HA部署情况下、要创建用于存储服务数据的卷以及在节点发生故障期间从卷恢复数据、需要提供ONTAP或SVM用户名和密码。
-.. 输入ONTAP或SVM密码。此Storage VM的ONTAP或SVM登录密码不应包含这些特殊字符($、'、")。
+.. 输入ONTAP或SVM密码。
 .. 默认情况下、主VM处于启用状态。请勿更改此选项。
 
 

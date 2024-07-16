@@ -188,10 +188,6 @@
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">输入 ...<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> 以选择支持和诊断。</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">输入 ...<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> 以选择Access诊断Shell。</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">输入 ...<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 以继续。</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">根据需要更新凭据：</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">OTV-update --ontapUsername &lt;new username&gt;--ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">OTV-update --vcenterUSERNAME &lt;new username&gt;--vcenterPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">OTV-update --dataLif &lt;new Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">播放按钮</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">* 控制台菜单 *</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">* 选项 *</block>
@@ -1696,7 +1692,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
 创建部署任务后、vSphere任务栏中将显示进度。
 。完成此任务后、打开虚拟机的电源。</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0u3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">输入ONTAP或SVM密码。此Storage VM的ONTAP或SVM登录密码不应包含这些特殊字符($、'、")。</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">请勿将ONTAP工具VMware vSphere虚拟机部署在其管理的vvol数据存储库上。</block>
@@ -1825,9 +1820,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">删除存储后端</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">您需要先删除连接到存储后端的所有数据存储库、然后再删除存储后端。请按照以下步骤删除存储后端。</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">单击右窗格中的*Config*选项卡。</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">要更新ONTAP凭据、请运行以下命令：</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">要更新vCenter凭据、请运行命令：</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">要更新数据LIF、请运行以下命令：</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">单击右窗格中的*Monitor*选项卡。</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">将适用于VMware vSphere存储提供程序的ONTAP工具添加到vCenter Server和 <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">停止旧的VASA提供程序后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。</block>
@@ -1867,4 +1859,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。如果需要恢复配置、可以使用恢复卷恢复适用于VMware vSphere的ONTAP工具设置。如果您要对适用于VMware vSphere 10.1的ONTAP工具执行修补程序级别升级、则会使用同一恢复卷并刷新详细信息。HA和非HA部署均支持升级。</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">适用于VMware vSphere 10.1的ONTAP工具文档</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">输入ONTAP或SVM密码。</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以选择System Configuration Menu。</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">输入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以更改ONTAP凭据。</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">输入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以更改vCenter凭据。</block>
 </blocks>
