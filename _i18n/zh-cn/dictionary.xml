@@ -1776,7 +1776,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">选择页面右侧的*创建*。</block>
   <block id="1b363a673c183e8f6180915f94b60037" category="list-text">选择页面右侧的*Actions*并选择*Import Item*并导入OVA文件。</block>
   <block id="a640a03a856b5e3aae702472813c834b" category="list-text">管理员用户名和管理员密码：用于登录到ONTAP工具管理器的密码。</block>
-  <block id="e4784e1bb3bd818491d6767390ee6d49" category="list-text">在*协议*字段中选择NFS、iSCSI、NVMe/TCP或NVMe/FC。</block>
   <block id="7fba027b53fe0361b3e204e33ff5d78d" category="list-text">输入ONTAP或SVM用户名。在高级或HA部署情况下、要创建用于存储服务数据的卷以及在节点发生故障期间从卷恢复数据、需要提供ONTAP或SVM用户名和密码。</block>
   <block id="5152e3b7ceb6dfd9a3bf166aa65ef895" category="list-text">只有在需要双堆栈时、才在已部署的网络上输入IPv6地址。</block>
   <block id="d41b8ccbeee15bda2042a49f14f4aa0c" category="paragraph">此时将开始安装。您可以在VM的Web控制台中跟踪安装进度。在安装过程中、系统会验证节点配置。系统会验证在OVF表单的Customize模板下的不同部分下提供的输入。如果出现任何差异、则会显示一个对话框、提示您采取更正操作。</block>
@@ -1790,8 +1789,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="e3737327f930d4c72818d209bfcf6259" category="paragraph">只能在部署期间启用或禁用AutoSupport。……在*ASUP代理URL*字段中，提供此URL以避免防火墙阻止AutoSupport数据传输。……管理员用户名和管理员密码：用于登录到ONTAP工具管理器的密码。此密码可能与初始部署期间提供的用户名和密码不同。……在*NTP服务器*字段中输入NTP服务器信息。……维护用户密码：用于授予对维护控制台选项的访问权限。。在*Customize temple*&gt;*Deployment Configuration*窗口中，输入部署期间提供的详细信息。除了数据LIF值之外、本节中的所有值都应与初始部署期间提供的值相同。</block>
   <block id="8d6f4234d5e392c6af4a7f7a63466a02" category="paragraph">+安装开始。您可以在VM的Web控制台中跟踪安装进度。在安装过程中、系统会验证节点配置。系统会验证在OVF表单的Customize模板下的不同部分下提供的输入。如果出现任何差异、则会显示一个对话框、提示您采取更正操作。。在对话框提示符中进行必要的更改。使用Tab键在面板中导航，输入您的值*OK*或*Cancel*。。选择*OK*或*Cancel*后，提供的值将再次验证。使用适用于VMware的ONTAP工具、您可以尝试三次以更正任何无效值。如果在三次尝试后仍无法更正问题、则产品安装将停止、建议您尝试在全新虚拟机上进行安装。。成功安装后、Web控制台将显示适用于VMware vSphere的ONTAP工具的状态。成功安装后、您应按照页面中的准则手动编辑硬件要求 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 。</block>
   <block id="51bc5399ec09a540c942908f434a6727" category="section-title">最低存储和应用程序要求</block>
-  <block id="6e49cbaea696f892ae53c9a0995b93cd" category="cell">ONTAP 9.13.1, 9.14.1和9.15.1.的最新修补程序版本。</block>
-  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
   <block id="4bcb36ab655842162169378c79643b23" category="summary">一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。</block>
   <block id="c461f736da6382202e4d5e2cb330125b" category="paragraph">一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您要管理多个vCenter Server实例、并且要在多个vCenter Server实例上启用vvol功能、则需要使用ONTAP工具管理器界面将自签名证书更改为自定义CA证书。您可以使用同一界面续订或刷新所有证书。</block>
   <block id="a2587697ec1c091500e1ebcb1fb42235" category="list-text">在*将证书升级到自定义CA*弹出窗口中，上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。工具提示提供证书的问题描述。</block>
@@ -1812,18 +1809,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="942cf885b18078ee60d85d8f60fdd3bb" category="list-text">选择*仅更改存储*，然后单击*下一步*。</block>
   <block id="ad4926bc91a1588104b73a5c2567773a" category="list-text">选择与要迁移的数据存储库的功能匹配的虚拟磁盘格式、虚拟机存储策略和VVOV数据存储库。单击 * 下一步 * 。</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">挂载 VVOL 数据存储库</block>
-  <block id="36e1355079ba82b06508974d2c01905d" category="doc">保护主机集群</block>
-  <block id="df5fc4c5860b228222af73dea5081d49" category="paragraph">属于选定SVM (并挂载在集群的一个或多个主机上)的所有数据存储库都会在主机集群下受到保护(对于SMA)。</block>
-  <block id="33e9b7450e4681b65d656e9bf374d3a2" category="paragraph">在保护主机集群之前，请确保满足以下条件：。主机集群只包含一个SVM中的数据存储库。SVM (SB)版本应高于9.15.1.主机集群上挂载的任何数据存储库不应挂载到集群外部的任何主机上。。主机集群上挂载的所有数据存储库都必须是VMFS数据存储库。。主机集群上挂载的构成数据存储库的任何FlexVol或LUN都不应属于任何现有CG。。任何FlexVol或LUN都不应属于SnapMirror关系</block>
-  <block id="2a1efdf83826a56993bfba5b5a635373" category="list-text">右键单击某个主机群集，然后选择*Protect Cluster* NetApp ONTAP tools*&gt;*Protect Cluster*。</block>
-  <block id="5cef65058acde71f54351729c4d4aae0" category="list-text">在保护集群窗口中、输入要保护的数据存储库的保护设置。主机集群只能包含一个SVM (集群)中的数据存储库。</block>
-  <block id="f602a92649e69bfb5e514f1f7e6ec2e3" category="list-text">选择一个目标ONTAP集群和Storage VM选项。</block>
-  <block id="4edbc81d130e38bf5282945e677bae74" category="list-text">选中*启用本地Snap照*复选框以将本地快照策略附加到数据存储库的后备卷。</block>
-  <block id="d8377abd09ba6f445ff59b4cd7998e60" category="list-text">选中*启用SnapMirror复选框和*添加关系*以使用选定的AutomatedFailover双 工策略、目标集群和目标Storage VM保护数据存储库。</block>
-  <block id="2fd9549357e908dd8c088fe87589817e" category="list-text">要获得统一配置，请将*Unif统一 主机配置*切换按钮设置为true。</block>
-  <block id="cc86829e222178f4a897942d9fe91b66" category="list-text">根据统一的主机配置切换按钮选择，为每台主机提供*主机邻近*或*访问*。</block>
-  <block id="7b1742183451ff119f53d562e7bbe3c5" category="list-text">查看摘要页面并选择保护。</block>
-  <block id="5d641001c5c7b915643b5170f746e9be" category="paragraph">在vCenter上创建任务。使用生成的作业ID监控任务。</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">适用于VMware vSphere插件的ONTAP工具可为虚拟机和数据存储库提供报告。在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、此用户界面将导航到概述页面。选择"Reports"(报告)选项卡以查看虚拟机和数据存储库报告。</block>
   <block id="f7a2e0b6ed3f51220e81b2d1a0df9298" category="paragraph">虚拟机报告显示已发现虚拟机(应至少有一个磁盘来自基于ONTAP存储的数据存储库)的列表以及性能指标。展开VM记录时、将显示所有与磁盘相关的数据存储库信息。</block>
   <block id="4e740e8d009ff8d0ca15216304e1e027" category="paragraph">您可以使用"管理列"选项隐藏或显示不同的列。</block>
@@ -1844,15 +1829,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">要更新vCenter凭据、请运行命令：</block>
   <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">要更新数据LIF、请运行以下命令：</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">单击右窗格中的*Monitor*选项卡。</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.2版本。</block>
-  <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">部署适用于VMware vSphere 10.2版的适用于ONTAP的OVA工具。</block>
-  <block id="bd0f2e6bf32427dcda6828d92fdc2bb7" category="list-text">添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参见 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
-  <block id="6d97df629c9c16b4d9a0dcf9a97cf50d" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.2 SRA适配器的ONTAP工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
-  <block id="f2f34eedd3398b474ec363008e4f96c1" category="list-text">添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参阅。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">将适用于VMware vSphere存储提供程序的ONTAP工具添加到vCenter Server和 <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">停止旧的VASA提供程序后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。</block>
-  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">成功迁移并将ONTAP工具10.2注册到vCenter Server后、请执行以下操作：</block>
   <block id="aa37ece429cdd8d8eb8497434085200a" category="summary">部署SRM设备后、您应在此SRM设备上配置SRA。成功配置SRA后、SRM设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据的ONTAP工具\(IP地址和管理员密码\)存储在SRM设备中、以实现SRM设备与SRA之间的通信。</block>
   <block id="7f1de51a94944bdde2c4458094963297" category="paragraph">部署SRM设备后、您应在此SRM设备上配置SRA。成功配置SRA后、SRM设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据(IP地址)的ONTAP工具存储在SRM设备中、以实现SRM设备与SRA之间的通信。</block>
   <block id="3eed86b47b47a45bf41f076589a64165" category="paragraph">在SRM设备上配置SRA会将SRA凭据存储在SRM设备中。</block>
@@ -1875,8 +1853,18 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="d43a71ae180632566a3e174280cb4453" category="paragraph">您应该已经执行了主题中提到的步骤 <block ref="2844354f8ed275182ec054cfc4f78370" category="inline-link-macro-rx"></block>。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">运行Perl命令为SRA配置新凭据：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">选择所需的阵列对并验证相应的详细信息。</block>
-  <block id="cfde4c1ad1c585a7cc3eb6944c2c2297" category="summary">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.2后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。</block>
-  <block id="a24408ea1ff869c3683365ba548dfa2d" category="paragraph">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.2后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。如果需要恢复配置、可以使用恢复卷恢复适用于VMware vSphere的ONTAP工具设置。如果您要对适用于VMware vSphere 10.2的ONTAP工具执行修补程序级别升级、则会使用同一恢复卷并刷新详细信息。HA和非HA部署均支持升级。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*</block>
-  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">适用于VMware vSphere 10.2的ONTAP工具文档</block>
+  <block id="6d2010d4e5297c8351863ce46a5c8da3" category="list-text">在*协议*字段中选择NFS或iSCSI。</block>
+  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1或9.14.1的最新修补程序版本</block>
+  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
+  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.1版本。</block>
+  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。</block>
+  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参见 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
+  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.1的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
+  <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
+  <block id="c75271fb1b456df4f20e50dc78c6f11d" category="list-text">添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参阅。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功迁移并将ONTAP工具10.1注册到vCenter Server后、请执行以下操作：</block>
+  <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。</block>
+  <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。如果需要恢复配置、可以使用恢复卷恢复适用于VMware vSphere的ONTAP工具设置。如果您要对适用于VMware vSphere 10.1的ONTAP工具执行修补程序级别升级、则会使用同一恢复卷并刷新详细信息。HA和非HA部署均支持升级。</block>
+  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">适用于VMware vSphere 10.1的ONTAP工具文档</block>
 </blocks>

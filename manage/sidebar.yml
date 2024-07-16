@@ -66,5 +66,3 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: 清理卷
   url: "/manage/delete-deployment.html"
-- title: 保护主机集群
-  url: "/manage/protect-cluster.html"

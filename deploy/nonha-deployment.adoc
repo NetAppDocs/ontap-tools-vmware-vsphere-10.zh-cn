@@ -62,7 +62,7 @@ image:../media/ha-deploy-config.png["部署配置"]
 
 NOTE: 启用SVM范围后、您应已使用管理IP地址启用SVM支持。
 
-. 在*协议*字段中选择NFS、iSCSI、NVMe/TCP或NVMe/FC。
+. 在*协议*字段中选择NFS或iSCSI。
 . 在* ONTAP或SVM管理LIF*字段中输入ONTAP集群或SVM管理IP地址。
 . 输入ONTAP集群或SVM ONTAP或SVM数据LIF。数据LIF应属于选定协议。例如、如果选择了iSCSI协议、则应提供iSCSI数据LIF。
 . 对于Storage VM、您可以选择提供ONTAP的默认Storage VM详细信息、也可以创建新的Storage VM。如果选择了启用SVM范围界定、请勿在* Storage VM*字段中输入值、因为此字段将被忽略。
