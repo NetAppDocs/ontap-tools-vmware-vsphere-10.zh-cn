@@ -21,7 +21,7 @@ indexpage:
       url: "/concepts/vcenter-server-role-based-access-control-features.html"
     - title: 配置远程诊断
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: 配置高可用性
+    - title: 适用于VMware vSphere的ONTAP工具的高可用性
       url: "/concepts/high-availability.html"
     - title: 保护数据存储库
       url: "/protect/enable-storage-replication-adapter.html"

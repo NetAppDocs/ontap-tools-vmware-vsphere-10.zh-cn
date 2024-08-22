@@ -11,7 +11,7 @@ summary: 在ONTAP中、导出策略用于提供对主机的卷数据路径访问
 
 
 [role="lead"]
-在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。
+在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。适用于VMware vSphere的ONTAP工具可轻松直观地创建igrop、并提供丰富的端到端工作流。为确保一致性、不支持在存储平台上直接创建iGroup。
 
 在vCenter Server中创建虚拟卷数据存储库或将其挂载到主机时、需要根据数据存储库的协议类型为主机授予对卷(NFS)或LUN (iSCSI)的访问权限。
 

@@ -31,8 +31,6 @@
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">10 GB用于精简配置安装</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*每个节点的主机系统规模估算要求*
 根据部署规模和每个节点的建议内存如下表所示：</block>
-  <block id="bf444bdf7f96ac7722b4e0845a28088a" category="cell">部署类型</block>
-  <block id="be70a8462e76377bf6617032c00c4811" category="cell">CPU</block>
   <block id="791e55cc3f81b4b7d562d4f91f1eaf68" category="cell">小型(S)</block>
   <block id="c9f0f895fb98ab9159f51fd0297e236d" category="cell">8.</block>
   <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16.</block>
@@ -177,7 +175,6 @@
   <block id="20ebbe0f696031d124c12b3e2d3cee5a" category="list-text">删除虚拟卷数据存储库、而不从存储中删除卷</block>
   <block id="54472d1da4b0c6eadf8684e846b25dcc" category="paragraph">响应：</block>
   <block id="fb1b65e7c4d7ec571b88c25798f1f9fd" category="summary">在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而igrou则用于提供对ESXi主机的LUN数据路径访问。</block>
-  <block id="3cae099e6cf2c630d0f090ef22b36293" category="paragraph">在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。</block>
   <block id="227f24a6f5a1d70388e1e252c8a4599a" category="list-text">支持在其他主机上挂载、无需手动干预。</block>
   <block id="84fd2e9f48ced2057b35ca005d2e23dd" category="doc">收集日志文件</block>
   <block id="d6fce28ac0c1f6d2d916d915623f072d" category="list-text">从边栏中选择*Log Bundes*。</block>
@@ -273,7 +270,6 @@
   <block id="1e4bd1ddc2319e118af50ab5c5d7522f" category="sidebar">迁移ONTAP工具</block>
   <block id="317bbf73ff27c5f981628c8fb83ebf22" category="sidebar">配置基于角色的访问控制</block>
   <block id="48bc2d028cb2a507ef974230ca3ba793" category="sidebar">配置远程诊断</block>
-  <block id="641e9457539249e880725760f91d5ee2" category="sidebar">配置高可用性</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多资源</block>
   <block id="4c3c39a603eb21106d2df2836d4b456c" category="sidebar">NetApp 知识库— ONTAP 工具</block>
   <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">NetApp 社区— ONTAP 工具</block>
@@ -332,15 +328,11 @@
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">在存储提供程序/存储后端下、验证是否已正确列出已启用的VASA提供程序。</block>
   <block id="05cb6ed323f4143840fd9e10390fb26a" category="list-text">要从远程插件UI验证VASA Provider、请执行以下步骤：</block>
   <block id="1cf4fb2801949267bdb04886bc49e596" category="list-text">您可以在概述页面和*设置*&gt;* VASA Provider设置*页面中查看已注册的VASA Provider。</block>
-  <block id="4639666fe14f57dbd0374872ecdc2400" category="paragraph">根据为操作选择的目标、系统会在目标的所有主机上创建并挂载数据存储库、只有当前用户具有执行权限时、才会启用此操作。</block>
   <block id="d418b16c9420ea00709d4c60eb2f4123" category="list-text">在*类型*窗格中、在*数据存储库类型*中选择"vols"。</block>
-  <block id="757690fe6359faa277b533c4964010b5" category="admonition">只有在向选定vCenter注册了VVO尔 选项的情况下、您才会获得VVO尔 选项。</block>
   <block id="c541e6c09ab567adf5bace8dda1aa1fb" category="list-text">在*名称和协议*窗格中，提供*数据存储库名称*和*协议*信息。</block>
   <block id="6ac25f555cb8079b3c003a72d9fee5a1" category="list-text">平台选项和非对称选项有助于筛选出SVM下拉选项。您应选择要创建的SVM或使用卷创建数据存储库。</block>
-  <block id="c190f78bd1a2f1f31ee72d7856b3b47d" category="list-text">对于AFF平台、非对称为true、对于ASA平台、非对称为false。</block>
   <block id="8cb4fc60d25a1ad8c44280eb9ba4d720" category="list-text">在*存储属性*窗格中，您可以创建新卷或使用现有卷。创建新卷时、您可以在数据存储库上启用QoS。</block>
   <block id="2368a6b040d4adc2d37ac7169ec7c692" category="list-text">在*Type*窗格中，在*数据 存储库Type*中选择NFS。</block>
-  <block id="12000d9d0b25981f3f4f14a890196a8f" category="list-text">在*名称和协议*窗格中，输入数据存储库名称、大小和协议信息。在高级选项中、选择*数据存储库集群*和Kerberos身份验证。</block>
   <block id="2a9d2de19ec883fa633494c082a8bddc" category="list-text">在*存储*窗格中，选择*平台*和*存储VM*。您可以在*高级选项*部分中选择*自定义导出策略*。</block>
   <block id="d6912beeaac19fd0d96cc7553862efc5" category="list-text">*非对称*切换按钮只有在平台下拉列表中选择了性能或容量时才可见。</block>
   <block id="53a55f63b586976eed071f053f5bd93d" category="list-text">通过平台下拉列表中的*any*选项、您可以查看属于vCenter的所有SVM、而不受平台或非对称标志的影响。</block>
@@ -348,20 +340,6 @@
   <block id="db7e33787aabbd286bac5bcc2981ef04" category="list-text">查看*摘要*窗格中的选择，然后单击*完成*。</block>
   <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">虚拟机文件系统(Virtual Machine File System、VMFS)是一种专门为在VMware vSphere环境中存储虚拟机文件而设计的集群模式文件系统。它允许多个ESXi主机同时访问相同的虚拟机文件、从而实现vMotion和高可用性等功能。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 开始之前 *</block>
-  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">继续操作前、请检查以下各项：</block>
-  <block id="746437a57f09c63dea646ac51bff8480" category="list-text">检查所有目标主机是否运行正常、并检查主机是否支持协议。</block>
-  <block id="bc361c5267b80f87eb47da33e4f683d2" category="list-text">创建新卷(最小大小为2 GB)</block>
-  <block id="24ffad23648ff5681e07d804f66c8077" category="list-text">使用QoS设置卷选项</block>
-  <block id="95ff42a5f26b97fb24e0ed635e7328a6" category="list-text">创建类型为vmware的LUN</block>
-  <block id="9006f6edfd58376a45bfae50bfb82650" category="list-text">获取所有目标主机的启动程序</block>
-  <block id="541523d3d2461180f5afe4ecaf531449" category="list-text">根据匹配的启动程序创建/重复使用igrop</block>
-  <block id="a53b2e2b243ee39ca6be3c257a7126d1" category="list-text">将LUN映射到igrop</block>
-  <block id="6c4d389134ff5cffe224662436fe76f6" category="list-text">将iSCSI目标添加到ESXi主机</block>
-  <block id="d2089385743c16f573947a6505c40373" category="list-text">在所有主机上重新扫描主机总线适配器(HBA)</block>
-  <block id="0118eee6209835a4cd74c3a41084047e" category="list-text">将卷挂载为VMFS6数据存储库(适用于6.5及更高版本的主机)</block>
-  <block id="d6fbb7282829a96ce67702bc64d7dd92" category="list-text">在ESXi主机上重新扫描VMFS存储</block>
-  <block id="98afd64433ddc34bf88e6c305f973084" category="list-text">将数据存储库移至数据存储库集群</block>
-  <block id="c2b1b77cc53e8e9f58bab2a88aa2ceed" category="list-text">重新平衡iSCSI路径</block>
   <block id="dcb7d3ba96571479c14a3f217235fda3" category="list-text">在*Type*窗格中，在*DataStore Type*中选择VMFS。</block>
   <block id="da3f875209d829ec95b02790b132f892" category="list-text">在*名称和协议*窗格中，输入数据存储库名称、大小和协议信息。在窗格的*高级选项*部分中，选择要将此数据存储库添加到的数据存储库集群。</block>
   <block id="422b0793eae20199839e73ad8d631758" category="summary">ONTAP工具管理器为VMware vSphere管理员提供了更多的ONTAP工具控制和功能、有助于全面管理设备、租户和存储后端。</block>
@@ -421,7 +399,6 @@
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色和特权。</block>
   <block id="e851bbdaa710a1277f829baaeeb738b5" category="list-text">您应已使用以下&lt;loadbalancerIP&gt;命令从适用于VMware vSphere的ONTAP工具下载ONTAP特权文件：_\https：//VMware：8443/Virtualization：user-golites/User_roles.zip_。</block>
   <block id="5d0fbbf77d63dd4a6501929f5b229ee9" category="admonition">您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。</block>
-  <block id="4dd2b422617db0ca4f46e3a3f7720fdf" category="admonition">您可以在集群级别或SVM级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。</block>
   <block id="43646e7149ab6454d53dccb48f546e65" category="list-text">提取下载的_\https：//https：&lt;loadbalancerIP&gt;：8443/Virtualization /用户权限/USER_Roles.zip_文件。</block>
   <block id="e85e7085cb02b451ed0ba49e3f1febd6" category="list-text">使用集群的集群管理IP地址访问ONTAP系统管理器。</block>
   <block id="6e2198e632f8de89c3e71e8215c06c49" category="list-text">以集群或SVM用户身份登录。</block>
@@ -627,7 +604,6 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
   <block id="6de1d606334a744ef35a27bdd474a0c6" category="doc">适用于VMware vSphere的ONTAP工具维护控制台概述</block>
   <block id="98e3bea019c371a7308c43a4583f8138" category="paragraph">在部署适用于VMware vSphere的ONTAP工具后、您应安装VMware工具、才能访问维护控制台。您应使用<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> 作为您在部署期间配置的用户名和密码、用于登录到ONTAP工具的维护控制台。在维护或root登录控制台中，应使用*ano*来编辑文件。</block>
   <block id="234b4e4f9ae67097596aecf827e76c96" category="admonition">您应设置的密码<block ref="776e6c3d14fd9df9fc13e130d598c448" prefix=" " category="inline-code"></block> 用户。</block>
-  <block id="6a514ee40f981dba8b5f3238a5bf08d0" category="paragraph">您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。单击时 <block ref="2a80d37643163549da13f0138c347a60" category="inline-image-macro-rx" type="image"></block>，此时维护控制台将启动。</block>
   <block id="477e80d80b2fc511da8499af4d9d38a6" category="list-text">更改VASA Provider服务和SRA服务的日志级别</block>
   <block id="905caaa103479b6c14b498a6d296af1e" category="list-text">禁用AutoSupport</block>
   <block id="e46941e38b95d6ab828243368aaa5a49" category="list-text">生成令牌以重置管理员UI密码</block>
@@ -738,7 +714,6 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
   <block id="c3e54de1629f4b952a428aa7d2126621" category="summary">在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部署软件包的空间要求以及一些基本主机系统要求。</block>
   <block id="e9790b500d5166335e4176cad7f20e44" category="doc">部署适用于VMware vSphere的ONTAP工具的前提条件</block>
   <block id="d2a731e17e932f5e2185dd4d0230dace" category="paragraph">您可以将适用于VMware vSphere的ONTAP工具与VMware vCenter Server虚拟设备(vCSA)结合使用。您应在包含ESXi系统的受支持vSphere客户端上部署适用于VMware vSphere的ONTAP工具。</block>
-  <block id="a57c0ce4d3d1909f36fd6d1a7910403f" category="cell">内存(GB)</block>
   <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">最低版本要求</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
   <block id="4ee667a9190fbad5088c191cedc77afb" category="paragraph">在自定义ONTAP工具的部署时、您应考虑一些要求。</block>
@@ -993,7 +968,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c81a665c9ba0e83e2b726f2af01cbf73" category="paragraph"><block ref="c81a665c9ba0e83e2b726f2af01cbf73" category="inline-link-rx"></block></block>
   <block id="9f6f5d475066edc4f0466fea40fc53cc" category="summary">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它可与VMware生态系统集成、并有助于虚拟机的配置、基本保护和灾难恢复。</block>
   <block id="2bd2f3ded095498e9ee97f7cc9074dc0" category="doc">适用于VMware vSphere的ONTAP工具概述</block>
-  <block id="46de2019a5a2b2dc97881de1aecb48ff" category="paragraph">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。适用于VMware vSphere的ONTAP工具可与VMware生态系统集成、以帮助配置数据存储库并为虚拟机提供基本保护。</block>
   <block id="e57ef79b89d008b00ca33aabc087c40e" category="list-text">虚拟机功能、例如基本保护和灾难恢复</block>
   <block id="a18d382710dfe7b582ca9e2bd707d11e" category="list-text">用于VM粒度管理的VASA Provider</block>
   <block id="410414402089bdca884f44be14088a59" category="list-text">Storage Replication Adapter （ SRA ）</block>
@@ -1068,7 +1042,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="a8e01cabe9b5f1e74700dfe84ecb64df" category="paragraph">您可以随时修改一个权限。</block>
   <block id="738c71d468b929e0b80b012e95674531" category="paragraph">如果更改了某个权限中的权限，则与该权限关联的用户应先注销，然后重新登录，以启用更新后的权限。</block>
   <block id="8199d65907d89211dfcf977c5adaa6ea" category="summary">适用于VMware vSphere的ONTAP工具支持高可用性\(HA)配置、可帮助在发生故障时为适用于VMware vSphere的ONTAP工具提供无中断的功能。</block>
-  <block id="3dd82918c95b0b4f9afff1b501cd4020" category="doc">为适用于VMware vSphere的ONTAP工具配置高可用性</block>
   <block id="9624863e1bada8aa7f612552980aaa76" category="paragraph">适用于VMware vSphere的ONTAP工具支持高可用性(HA)配置、有助于在发生故障时为适用于VMware vSphere的ONTAP工具提供无中断运行的功能。</block>
   <block id="8064fc3703a869b3b7423038b89f7e8c" category="paragraph">通过高可用性（ High-Availability ， HA ）解决方案，可以从以下原因导致的中断中快速恢复：</block>
   <block id="9e376ae380add7745ba0f865258f10a7" category="paragraph">无需对适用于VMware vSphere的ONTAP工具进行其他配置、即可提供高可用性(HA)。</block>
@@ -1084,7 +1057,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="debdb3ce4a86d0a653cb9af2997ed87b" category="paragraph">用户或组定义了谁可以执行此任务。</block>
   <block id="83002a8f3da272c6326e5e31c94c7134" category="admonition">在此图中，灰色方框表示 vCenter Server 中的组件，白色方框表示运行 vCenter Server 的操作系统中的组件。</block>
   <block id="c044992cd80fcb18a780756977b6bc3f" category="inline-image-macro">权限组件插图</block>
-  <block id="752fd6292dcabfe0b9af18508df77116" category="paragraph"><block ref="752fd6292dcabfe0b9af18508df77116" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b96085011a4e0805bceab50863c6d6a7" category="paragraph">适用于 VMware vSphere 的 ONTAP 工具具有两种特权：</block>
   <block id="ac38773d017495a97d5b88f242578cb8" category="list-text">原生 vCenter Server 特权</block>
   <block id="812c5d24b89720dbab0e021d979b0bdf" category="paragraph">这些特权随 vCenter Server 一起提供。</block>
@@ -1382,9 +1354,7 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="56d43ad1a280ada5e16fd2960ae44b32" category="list-text">SRM</block>
   <block id="03b870ced8b149ca765fa1ffe2f8b770" category="paragraph">有关安装 SRM 的文档位于 VMware 站点上。</block>
   <block id="4617dd5a7193927c5552182931541c9c" category="inline-link">VMware Site Recovery Manager 文档</block>
-  <block id="2b27cdd9529ad91885c6c019ee8329ee" category="paragraph"><block ref="2b27cdd9529ad91885c6c019ee8329ee" category="inline-link-rx"></block></block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
-  <block id="5964a20b29586f71f419711aae6ae487" category="paragraph">此适配器安装在 SRM 上。</block>
   <block id="39d642e40fbcd108eb0ab15715ee349d" category="list-text">验证主 ESXi 主机是否已连接到受保护站点上主存储系统中的 LUN 。</block>
   <block id="c295c005211b8c46c7e8ae09f97dae78" category="list-text">验证LUN是否位于具有的igroub中<block ref="0d6ab6a77645c5e5eca594cd0178560d" prefix=" " category="inline-code"></block> 选项在主存储系统上设置为_vmware_。</block>
   <block id="a340d4cdfac0ffa0f805506a4dcc486a" category="paragraph">为此、您可以验证ESXi主机是否已在SVM或上连接本地LUN<block ref="855f251760f36b28957ff0a7b42be36a" prefix=" " category="inline-code"></block> 命令。
@@ -1863,4 +1833,67 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以选择System Configuration Menu。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">输入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以更改ONTAP凭据。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">输入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以更改vCenter凭据。</block>
+  <block id="ab475951501b4995dc2913e61372d546" category="section-title">双堆栈</block>
+  <block id="6fad70424d056d4284134202caa28cae" category="paragraph">双堆栈网络是一种支持同时使用IPv4和IPv6地址的网络环境。</block>
+  <block id="6f62fbc302f97c02d31478f2812a56ea" category="paragraph">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。借助适用于VMware vSphere的ONTAP工具、管理员可以无缝管理存储生命周期管理</block>
+  <block id="38fbb1e19cdf2b31cbfb571328fbea35" category="paragraph"><block ref="38fbb1e19cdf2b31cbfb571328fbea35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c44d290e1f1de6d718f00f72c70dbd6b" category="paragraph">在主机集群级别创建数据存储库时、系统会创建数据存储库并将其挂载到目标的所有主机上、只有当前用户具有执行权限时、才会启用此操作。</block>
+  <block id="1b369357ff10f9c1a770a78f4b54265c" category="paragraph">确保已向选定vCenter注册了ASA Provider。</block>
+  <block id="b09d656c52330bb347bae9aeee4f9b34" category="list-text">对于AFF平台，选择*A对称*切换按钮，对于ASA平台，将其禁用。</block>
+  <block id="259450d9669b66ac4364e9fcbb6c06e6" category="list-text">在*名称和协议*窗格中，输入数据存储库名称、大小和协议信息。在高级选项中，选择*数据 存储库群集*和*Kerberos身份验证*。</block>
+  <block id="5541521d8d465590f0919510f29154b2" category="summary">部署适用于VMware vSphere的ONTAP工具的配置限制</block>
+  <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">您可以使用下表作为指南来配置适用于VMware vSphere的ONTAP工具。</block>
+  <block id="4043f29990bf7ab4f6f8e863d6aaacfa" category="cell">* 部署 *</block>
+  <block id="7464a7978b1ad9e7f36e5f0181e97eb5" category="cell">* 类型 *</block>
+  <block id="5162809ac332f21bfb27ba3b5e6afb04" category="cell">*数量*</block>
+  <block id="53fa84754bf02000ddafdbb2cd7a2311" category="cell">*主机数*</block>
+  <block id="ea6d5c5191b710dd21022e70d31e4f38" category="cell">*协议类型*</block>
+  <block id="3ea680c1f5cc3b9a14bdbbf610c5def7" category="cell">轻松部署</block>
+  <block id="44b88df569624fea08b72a4f32d29c00" category="cell">~1、K</block>
+  <block id="b728989cf49d653755349def747eb330" category="cell">NFS、iSCSI</block>
+  <block id="9fb2b888687c528698d5ec3b1fcac6d9" category="cell">~24K</block>
+  <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
+  <block id="9505247cbbe2382d170a963c34412544" category="cell">高可用性</block>
+  <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">~50 k</block>
+  <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
+  <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">~100k</block>
+  <block id="2bb1251c29165de4f0dfe1a14572fe83" category="cell">256 [注意]表中的主机数显示了来自多个vCenter的主机总数。</block>
+  <block id="4817fc1db77ffd3d9559878c1947be09" category="paragraph">有关每个节点的主机系统规模估算要求的详细信息，请参见<block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>。</block>
+  <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)</block>
+  <block id="747389dd88507b473bef28a38f605585" category="paragraph">下表显示了使用适用于VMware vSphere的ONTAP工具时每个SRM实例支持的数量。</block>
+  <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">*vCenter部署大小*</block>
+  <block id="e8ae9f0392263b55e4580177a75c948e" category="cell">*小*</block>
+  <block id="f3e6e184202c9901024fa409f2c24cb1" category="cell">*中*</block>
+  <block id="391e0ab91194fd8d4dab9408a244f1db" category="cell">配置为使用基于阵列的复制进行保护的虚拟机总数</block>
+  <block id="08f90c1a417155361a5c4b8d297e0d78" category="cell">2000</block>
+  <block id="a35fe7f7fe8217b4369a0af4244d1fca" category="cell">5000</block>
+  <block id="28b16fd6c945c3389d0d48e920c695d6" category="cell">基于阵列的复制保护组总数</block>
+  <block id="6c9882bbac1c7093bd25041881277658" category="cell">250</block>
+  <block id="222fa016b8cc76ade3db1a99a1a6f341" category="cell">每个恢复计划的保护组总数</block>
+  <block id="c0c7c76d30bd3dcaefc96f40275bdc0a" category="cell">50</block>
+  <block id="4b96549527a17ad7418888ad798c8770" category="cell">复制的数据存储库数量</block>
+  <block id="fe131d7f5a6b38b23cc967316c13dae2" category="cell">255</block>
+  <block id="e49da487a27e7484579695ad7765c888" category="cell">VM数量</block>
+  <block id="1bd69c7df3112fb9a584fbd9edfc6c90" category="cell">4000</block>
+  <block id="708be71b9ab6e0a84252760579ade9f1" category="cell">7000</block>
+  <block id="d037256bbf0f0260699fa03968eba2cf" category="paragraph">下表显示了SRM的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。</block>
+  <block id="3a1a412e50cda82ae9e433b202ecc21a" category="cell">*SRM实例数*</block>
+  <block id="6be4728a24ecd589d1ceed4bba75de25" category="cell">* ONTAP工具部署规模*</block>
+  <block id="e107d10db282d343eb4fc9317e44b024" category="cell">最多4个</block>
+  <block id="2660064e68655415da2628c2ae2f7592" category="cell">小型</block>
+  <block id="fd42d681c3656c6fd26604eb6a8f2f87" category="cell">4 到 8</block>
+  <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="cell">中</block>
+  <block id="da1bcee466e19a180f0d554d6fbf72f8" category="cell">8个以上</block>
+  <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">大型</block>
+  <block id="bff7ca9974a0352c641d1a0709ae7c9f" category="inline-link">VMware Live Site Recovery的操作限制</block>
+  <block id="c45d11643f21718fc7abf1cd9d372ada" category="paragraph">有关详细信息，请参阅<block ref="a6c32129895f16c366ad763f98402804" category="inline-link-rx"></block>。</block>
+  <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">*部署类型*</block>
+  <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU *</block>
+  <block id="5a4776483c0990d54df47e0a2478facc" category="cell">*内存(GB)*</block>
+  <block id="9062a44d27a4f37689abd458521d9079" category="paragraph"><block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>有关详细信息、请参见。</block>
+  <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。适用于VMware vSphere的ONTAP工具可轻松直观地创建igrop、并提供丰富的端到端工作流。为确保一致性、不支持在存储平台上直接创建iGroup。</block>
+  <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。单击时<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>，维护控制台将启动。</block>
+  <block id="a1b160da533b2cfee0734b4e536da205" category="paragraph"><block ref="a1b160da533b2cfee0734b4e536da205" category="inline-link-rx"></block></block>
+  <block id="783dbbcc9c265d80adfea7bac4a2d980" category="paragraph">此适配器已安装在SRM上。</block>
+  <block id="f02f2c757f889d163cf5903890ac95ef" category="sidebar">配置限制</block>
 </blocks>

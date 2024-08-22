@@ -26,11 +26,11 @@ summary: '在为Site Recovery Manager \(SRM\)运行Storage Replication Adapter \
 有关安装 SRM 的文档位于 VMware 站点上。
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 文档"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager 文档"]
 
 * SRA
 +
-此适配器安装在 SRM 上。
+此适配器已安装在SRM上。
 
 
 
@@ -58,7 +58,7 @@ https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 
 有关安装 SRM 的文档，请参见 VMware 站点。
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 文档"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager 文档"]
 
 * SRA
 +

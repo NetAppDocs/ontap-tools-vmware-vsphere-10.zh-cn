@@ -24,9 +24,6 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 * 您应已使用存储后端的管理员权限登录。
 
 
-
-NOTE: 您可以在集群级别或SVM级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。
-
 * 步骤 *
 
 . 提取下载的_\https：//https：<loadbalancerIP>：8443/Virtualization /用户权限/USER_Roles.zip_文件。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '适用于VMware vSphere的ONTAP工具支持高可用性\(HA)配置、可帮助在发生故障时为适用于VMware vSphere的ONTAP工具提供无中断的功能。' 
 ---
-= 为适用于VMware vSphere的ONTAP工具配置高可用性
+= 适用于VMware vSphere的ONTAP工具的高可用性
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
