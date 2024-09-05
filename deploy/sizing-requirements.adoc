@@ -61,7 +61,7 @@ link:../deploy/config-limits.html["部署适用于VMware vSphere的ONTAP工具�
 | VASA 提供程序 | 3.0 
 
 
-| OVA应用程序 | 10.1 
+| OVA应用程序 | 10.2 
 |===
 互操作性表工具(IMT)提供了有关受支持的ONTAP、vCenter Server、ESXi主机和插件应用程序版本的最新信息。
 

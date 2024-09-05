@@ -1551,14 +1551,10 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">选择所需的阵列对并验证相应的详细信息。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1或9.14.1的最新修补程序版本</block>
-  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
   <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.1版本。</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。</block>
-  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参见 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.1的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功迁移并将ONTAP工具10.1注册到vCenter Server后、请执行以下操作：</block>
-  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">适用于VMware vSphere 10.1的ONTAP工具文档</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以选择System Configuration Menu。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">输入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以更改ONTAP凭据。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">输入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以更改vCenter凭据。</block>
@@ -1848,4 +1844,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">更新vCenter Server和ONTAP凭据</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">管理主机集群保护</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">修改主机集群保护</block>
+  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
+  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">适用于VMware vSphere 10.2的ONTAP工具文档</block>
 </blocks>

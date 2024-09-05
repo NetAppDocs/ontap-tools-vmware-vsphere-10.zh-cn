@@ -32,9 +32,9 @@ NOTE: 作为现有用户、在升级到修补程序版本之前、您需要从�
 . 从适用于VMware vSphere插件的ONTAP工具vCenter Server API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。
 . 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。
 . 部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。
-. 添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参见 link:../configure/add-vcenter.html["添加和管理vCenter Server实例"]
+. 添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参见 link:../configure/add-vcenter.html["添加和管理vCenter Server实例"]
 . 从适用于VMware vSphere插件的ONTAP工具vCenter API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。
-. 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.1的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。
+. 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。
 
 
 
