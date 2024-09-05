@@ -49,7 +49,7 @@ link:../deploy/config-limits.html["部署适用于VMware vSphere的ONTAP工具�
 | 存储、主机和应用程序 | 最低版本要求 
 
 
-| ONTAP | ONTAP 9.12.1、9.13.1或9.14.1的最新修补程序版本 
+| ONTAP | ONTAP 9．12.1、9．1．1、9．1．1和9．1．1的最新修补程序版本。 
 
 
 | ESXi主机 | ESXi 7.0.3 

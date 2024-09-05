@@ -1550,8 +1550,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">运行Perl命令为SRA配置新凭据：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">选择所需的阵列对并验证相应的详细信息。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*</block>
-  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1、9.13.1或9.14.1的最新修补程序版本</block>
-  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.1版本。</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功迁移并将ONTAP工具10.1注册到vCenter Server后、请执行以下操作：</block>
@@ -1581,7 +1579,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">~50 k</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
   <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">~100k</block>
-  <block id="4817fc1db77ffd3d9559878c1947be09" category="paragraph">有关每个节点的主机系统规模估算要求的详细信息，请参见<block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>。</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)</block>
   <block id="747389dd88507b473bef28a38f605585" category="paragraph">下表显示了使用适用于VMware vSphere的ONTAP工具时每个SRM实例支持的数量。</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">*vCenter部署大小*</block>
@@ -1634,7 +1631,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="adbcecad06ff22a439836e6c9002cc82" category="section-title">vSphere Metro Storage Cluster</block>
   <block id="fdaedd61903be1be2102df0b95fd62f8" category="inline-link">VMware vSphere Metro Storage Cluster</block>
   <block id="ab214a77aca7f1a5595c69a10b7f0c9d" category="paragraph">vSphere Metro Storage Cluster (VMSC)是一项技术、可在延伸型集群部署中支持和支持vSphere。NetApp MetroCluster和SnapMirror active sync (以前称为SMBC)均支持VMSC解决方案。这些解决方案可在域发生故障时增强业务连续性。故障恢复能力模型取决于您的特定配置选择。详细了解<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>。</block>
-  <block id="becce2ec351a7286510e90f70f5d4890" category="paragraph">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。适用于VMware vSphere的ONTAP工具是一组可水平扩展的事件驱动型微服务、部署为开放式虚拟设备(OVA)。此版本已将REST API与ONTAP集成在一起。</block>
   <block id="743bb9eba37e39241a186d033a7c1e5d" category="list-text">右键单击某个主机并选择*Update NetApp ONTAP host data*。</block>
   <block id="7da745ff746553dfa65f8ae5fbe4b8ff" category="list-text">您只能在受保护集群上创建VMFS数据存储库。将VMFS数据存储库添加到受保护集群时、该数据存储库将自动受到保护。</block>
   <block id="7f4eeeb7066fc64c51f02eba557a897f" category="list-text">您不能在具有一个或多个受保护主机集群的数据中心上创建数据存储库。</block>
@@ -1846,4 +1842,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">修改主机集群保护</block>
   <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2</block>
   <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">适用于VMware vSphere 10.2的ONTAP工具文档</block>
+  <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。</block>
+  <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">适用于VMware vSphere的ONTAP工具是一组可水平扩展的事件驱动型微服务、部署为开放式虚拟设备(OVA)。此版本已将REST API与ONTAP集成在一起。</block>
+  <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">ONTAP 9．12.1、9．1．1、9．1．1和9．1．1的最新修补程序版本。</block>
+  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.2版本。</block>
 </blocks>

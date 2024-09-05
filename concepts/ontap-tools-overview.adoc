@@ -11,7 +11,9 @@ summary: 适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周�
 
 
 [role="lead"]
-适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。适用于VMware vSphere的ONTAP工具是一组可水平扩展的事件驱动型微服务、部署为开放式虚拟设备(OVA)。此版本已将REST API与ONTAP集成在一起。
+适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。
+
+适用于VMware vSphere的ONTAP工具是一组可水平扩展的事件驱动型微服务、部署为开放式虚拟设备(OVA)。此版本已将REST API与ONTAP集成在一起。
 
 适用于VMware vSphere的ONTAP工具包括：
 
