@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA提供程序数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。 
 ---
-= 迁移到最新版本的ONTAP工具
+= 从适用于VMware vSphere 9.x的ONTAP工具迁移到10.2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA提供程序数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。
 
 
-NOTE: 建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。如果您有NVMe数据存储库和VVOV复制、建议不要将此设置迁移到适用于VMware vSphere 10.1的ONTAP工具。
+NOTE: 建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。
 
 * 关于此任务 *
 
@@ -27,6 +27,10 @@ NOTE: 作为现有用户、在升级到修补程序版本之前、您需要从�
 
 == 常见迁移步骤
 
+. 部署适用于VMware vSphere 10.2版的适用于ONTAP的OVA工具。
+. 添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参见 link:../configure/add-vcenter.html["添加和管理vCenter Server实例"]
+. 从适用于VMware vSphere插件的ONTAP工具vCenter Server API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。
+. 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。
 . 部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。
 . 添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参见 link:../configure/add-vcenter.html["添加和管理vCenter Server实例"]
 . 从适用于VMware vSphere插件的ONTAP工具vCenter API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。
@@ -70,9 +74,9 @@ NOTE: 如果故障转移刚刚完成且重新保护处于待定状态、请勿�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. 部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。
-. 添加要迁移到适用于VMware vSphere 10.1版的ONTAP工具的vCenter Server实例。请参阅。 link:../configure/add-vcenter.html["添加vCenter Server实例"]
-. 从远程插件vCenter API本地板载存储后端。将存储添加为本地范围以进行迁移。
+. 部署适用于VMware vSphere 10.2版的适用于ONTAP的OVA工具。
+. 添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参阅。 link:../configure/add-vcenter.html["添加vCenter Server实例"]
+. 从远程插件vCenter Server API本地板载存储后端。将存储添加为本地范围以进行迁移。
 . 问题描述要迁移的API调用：
 +
 []

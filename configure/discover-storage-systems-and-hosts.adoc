@@ -28,7 +28,7 @@ summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具�
 * 步骤 *
 
 . 在vSphere Client主页中、选择*主机和集群*。
-. 右键单击所需的数据中心，然后选择*Host tools*>*Update NetApp ONTAP Data*。
+. 右键单击所需的数据中心，然后选择*Host tools*>*更新NetApp ONTAP Data*。
 +
 适用于VMware vSphere的ONTAP工具会显示一个*确认*对话框，其中包含以下消息：
 
@@ -36,7 +36,7 @@ summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具�
 "此操作将重新开始发现所有已连接存储系统、可能需要几分钟时间。是否要继续？"
 
 . 单击 * 是 * 。
-. 选择具有状态的已发现存储控制器 `Authentication Failure`，然后单击*Actions*>*Modify*。
+. 选择已发现的状态为的存储控制器 `Authentication Failure`，然后单击*Actions*>*Modify*。
 . 在*修改存储系统*对话框中填写所需信息。
 . 对具有的所有存储控制器重复步骤4和5 `Authentication Failure` 状态。
 

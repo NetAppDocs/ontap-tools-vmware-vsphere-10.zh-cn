@@ -2,20 +2,23 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: 从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。 
+summary: HA和非HA部署均支持升级。 
 ---
-= 升级到最新版本的 ONTAP 工具
+= 从适用于VMware vSphere 10.x的ONTAP工具升级到10.2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、系统将创建一个恢复卷、并将所有必要的详细信息输入到恢复卷中。如果需要恢复配置、可以使用恢复卷恢复适用于VMware vSphere的ONTAP工具设置。如果您要对适用于VMware vSphere 10.1的ONTAP工具执行修补程序级别升级、则会使用同一恢复卷并刷新详细信息。HA和非HA部署均支持升级。
+HA和非HA部署均支持升级。
+
+
+NOTE: 要从适用于VMware vSphere 10.0的ONTAP工具升级到10.2版、您需要先升级到适用于VMware vSphere 10.1的ONTAP工具、然后再升级到10.2版。
 
 * 开始之前 *
 
-继续执行升级任务之前、您需要完成以下步骤：
+如果要从适用于VMware vSphere 10.0的ONTAP工具升级到10.1、则需要完成以下步骤、然后再继续执行升级任务：
 
 *启用诊断*
 
@@ -62,7 +65,7 @@ summary: 从适用于VMware vSphere 10.0和10.1的ONTAP工具升级到10.1后、
 
 . 将适用于VMware vSphere的ONTAP工具升级ISO上传到内容库。
 . 在主VM页面中，选择*Actions*>*Edit Settings*
-. 在“编辑设置”窗口的*CD/DVD驱动器*字段下，选择内容库ISO文件。
+. 在编辑设置窗口的*CD/DVD驱动器*字段中，选择内容库ISO文件。
 . 选择ISO文件并单击*OK*。选择*CD/DVD驱动器*字段中的已连接复选框。
 image:../media/primaryvm-edit-settings.png["编辑设置"]
 . 从vCenter Server中、打开一个ONTAP工具控制台。

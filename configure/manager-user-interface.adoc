@@ -18,8 +18,7 @@ ONTAP工具管理器有助于：
 * vCenter Server实例管理—将vCenter Server实例添加到ONTAP工具并对其进行管理。
 * 存储后端管理—将ONTAP存储集群添加到适用于VMware vSphere的ONTAP工具并进行管理、然后将其全局映射到已部署的vCenter Server实例。
 * 日志捆绑包下载—收集适用于VMware vSphere的ONTAP工具的日志文件。
-* 证书管理-将自签名证书更改为自定义CA证书并续订
-或刷新所有证书。
+* 证书管理-将自签名证书更改为自定义CA证书、并续订或刷新VASA Provider的所有证书。
 * Password management (密码管理)-重置用户的OVA应用程序密码。
 
 

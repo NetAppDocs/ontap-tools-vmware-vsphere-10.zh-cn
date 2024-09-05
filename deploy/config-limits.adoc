@@ -42,6 +42,28 @@ summary: 部署适用于VMware vSphere的ONTAP工具的配置限制
 下表显示了使用适用于VMware vSphere的ONTAP工具时每个SRM实例支持的数量。
 
 |===
+
+
+| 配置为使用基于阵列的复制进行保护的虚拟机总数 | 5000 
+
+
+| 基于阵列的复制保护组总数 | 250 
+
+
+| 每个恢复计划的保护组总数 | 50 
+
+
+| 复制的数据存储库数量 | 255 
+|===
+有关每个节点的主机系统规模估算要求的详细信息，请参见link:../deploy/sizing-requirements.html["部署适用于VMware vSphere的ONTAP工具的前提条件"]。
+
+
+
+== 适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)
+
+下表显示了使用适用于VMware vSphere的ONTAP工具时每个SRM实例支持的数量。
+
+|===
 | *vCenter部署大小* | *小* | *中* 
 
 

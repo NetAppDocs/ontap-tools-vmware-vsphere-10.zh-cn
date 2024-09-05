@@ -32,5 +32,7 @@ entries:
   url: "/configure/configure-user-role-and-privileges.html"
 - title: 适用于VMware vSphere的NetApp ONTAP工具插件信息板概述
   url: "/configure/dashboard-overview.html"
+- title: 创建主机集群保护
+  url: "/configure/protect-cluster.html"
 - title: 创建数据存储库
   url: "/configure/create-vvols-datastore.html"

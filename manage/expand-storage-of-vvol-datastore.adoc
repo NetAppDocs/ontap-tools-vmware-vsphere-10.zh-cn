@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: 在vCenter对象视图中右键单击数据存储库对象后、适用于VMware vSphere的ONTAP工具支持的操作将显示在插件部分下。 
 ---
-= 展开"vols (卷)""
+= 扩展 vVol 数据存储库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

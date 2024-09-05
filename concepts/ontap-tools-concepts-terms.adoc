@@ -21,6 +21,12 @@ CA是颁发安全套接字层(SSL)证书的受信任实体。
 
 
 
+=== 一致性组
+
+一致性组是指作为一个单元进行管理的一组卷。在ONTAP中、一致性组可为跨多个卷的应用程序工作负载提供轻松的管理和保护保证。详细了解 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["一致性组"]。
+
+
+
 === 双堆栈
 
 双堆栈网络是一种支持同时使用IPv4和IPv6地址的网络环境。
@@ -39,6 +45,12 @@ LUN是一个数字、用于标识存储区域网络(SAN)中的逻辑单元。这
 
 
 
+=== NVMe命名空间和子系统
+
+NVMe 命名空间是指可格式化为逻辑块的非易失性内存量。命名空间相当于 FC 和 iSCSI 协议的 LUN ， NVMe 子系统类似于 igroup 。NVMe 子系统可以与启动程序关联，以便关联的启动程序可以访问子系统中的命名空间。
+
+
+
 === ONTAP工具管理器
 
 ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助管理vCenter Server实例、存储后端、证书、密码和日志包下载。
@@ -51,9 +63,9 @@ OVA是一种用于打包和分发必须在虚拟机上运行的虚拟设备或�
 
 
 
-=== SnapMirror活动(SMAS)
+=== SnapMirror主动同步(SMAS)
 
-通过SnapMirror主动同步、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移需要手动干预或自定义脚本。
+通过SnapMirror主动同步、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移需要手动干预或自定义脚本。Lear了解更多信息 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror活动同步"]。
 
 
 
@@ -66,6 +78,18 @@ SRA是存储供应商专用的软件、安装在SRM设备中。通过该适配�
 === Storage Virtual Machine (SVM)
 
 与在虚拟机管理程序上运行的虚拟机类似、SVM是一个逻辑实体、用于抽象物理资源。SVM包含数据卷以及一个或多个用于向客户端提供数据的生命周期。
+
+
+
+=== 统一和非统一配置
+
+* *统一主机访问*表示两个站点的主机都连接到两个站点上存储集群的所有路径。跨站点路径会跨越距离进行延伸。
+* *非一致主机访问*表示每个站点中的主机仅连接到同一站点中的集群。跨站点路径和延伸型路径未连接。
++
+
+NOTE: 任何SnapMirror主动同步部署均支持统一主机访问；只有对称主动/主动部署才支持非统一主机访问。
+
+
 
 
 
@@ -102,6 +126,12 @@ VASA是一组API、可将存储阵列与vCenter Server集成在一起以进行�
 === VMware vSphere存储API—阵列集成(VAAI)
 
 VAAI是一组API、可用于在VMware vSphere ESXi主机和存储设备之间进行通信。这些API包括一组原始操作、主机使用这些操作将存储操作卸载到阵列。VAAI可以显著提高存储密集型任务的性能。
+
+
+
+=== vSphere Metro Storage Cluster
+
+vSphere Metro Storage Cluster (VMSC)是一项技术、可在延伸型集群部署中支持和支持vSphere。NetApp MetroCluster和SnapMirror active sync (以前称为SMBC)均支持VMSC解决方案。这些解决方案可在域发生故障时增强业务连续性。故障恢复能力模型取决于您的特定配置选择。详细了解 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"]。
 
 
 

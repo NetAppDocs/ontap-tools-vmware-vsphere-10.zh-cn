@@ -6,7 +6,7 @@ indexpage:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3319071
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3327064
     - title: 了解适用于 VMware vSphere 的 ONTAP 工具
       url: "/concepts/ontap-tools-overview.html"
     - title: 部署适用于VMware vSphere的ONTAP工具

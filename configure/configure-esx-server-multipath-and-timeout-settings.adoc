@@ -20,7 +20,7 @@ summary: 适用于VMware vSphere的ONTAP工具可检查并设置最适合NetApp�
 * 步骤 *
 
 . 在VMware vSphere Web Client主页中、单击*主机和群集*。
-. 右键单击某个主机，然后选择*Update NetApp ONTAP host data*。
+. 右键单击某个主机并选择*Update NetApp ONTAP host data*。
 . 在快捷方式页面中，单击插件部分下的NetApp ONTAP tools*。
 . 转至适用于VMware vSphere的ONTAP工具插件概述(信息板)中的"ESXi主机合规性"卡。
 . 选择*应用建议设置*链接。

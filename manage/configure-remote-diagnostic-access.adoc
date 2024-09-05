@@ -38,7 +38,7 @@ summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用
 . 从vCenter Server中、打开一个VASA Provider控制台。
 . 以维护用户身份登录。
 . 输入 ... `4` 以选择支持和诊断。
-. 输入 ... `3` 以选择启用远程诊断访问。
+. 输入 `2`以选择Enable remote diagnostics access。
 . 输入 ... `y` 在确认对话框中启用远程诊断访问。
 . 输入远程诊断访问的密码。
 
