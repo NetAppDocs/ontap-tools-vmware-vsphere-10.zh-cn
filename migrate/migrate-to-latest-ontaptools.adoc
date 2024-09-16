@@ -49,9 +49,9 @@ NOTE: 作为现有用户、在升级到修补程序版本之前、您需要从�
 NOTE: 如果故障转移刚刚完成且重新保护处于待定状态、请勿迁移。完成重新保护、然后执行迁移。
 同一适用场景测试恢复计划。恢复计划测试完成后、清理测试恢复、然后开始迁移。
 
-. 要在SRM UI中删除适用于VMware vSphere 9.xx版SRA适配器的ONTAP工具、请执行以下步骤：
+. 要在VMware Live Site Recovery UI中删除适用于VMware vSphere 9.xx版本SRA适配器的ONTAP工具、请执行以下步骤：
 +
-.. 转到SRM配置管理页面
+.. 转到VMware Live Site Recovery配置管理页面
 .. 转至Storage Replication Adapter部分
 .. 单击“KEBBP”菜单，然后单击“*Reset configuration*”(重置配置)
 .. 点击“烤肉”菜单，然后选择*Delete*
@@ -60,8 +60,8 @@ NOTE: 如果故障转移刚刚完成且重新保护处于待定状态、请勿�
 
 
 
-. 按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 link:../protect/configure-on-srm-appliance.html["在SRM设备上配置SRA"]
-. 在SRM UI页面中，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并验证这些设备是否显示为迁移前的状态。
+. 按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 link:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]
+. 在VMware Live Site Recovery UI页面中，执行*Discover Arrays *和*Discover Devices*操作，并验证这些设备是否显示为迁移前的状态。
 
 
 

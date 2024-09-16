@@ -11,7 +11,7 @@ summary: '您可以使用适用于VMware vSphere的NetApp工具安装适用于VM
 
 
 [role="lead"]
-您可以使用适用于VMware vSphere的NetApp工具安装适用于VMware vStorage APIS for Array Integration (VAAI)的ONTAP NFS插件。
+您可以使用适用于VMware vSphere的NetApp工具安装适用于vSphere的ONTAP阵列集成API (VAAI) NFS插件。
 
 * 您需要的内容 *
 
@@ -43,3 +43,16 @@ summary: '您可以使用适用于VMware vSphere的NetApp工具安装适用于VM
 当VMware管理员重新启动ESXi主机时、适用于VMware vSphere的ONTAP工具会自动检测NFS VAAI插件。您无需执行其他步骤即可启用此插件。
 
 
+
+
+
+=== 为VAAI副本卸载配置正确的NFS导出策略
+
+在NFS环境中配置VAAI时、应在配置导出策略规则时牢记以下要求：
+
+* 相关卷需要允许NFSv4调用。
+* root用户应保持root身份、并且所有接合父卷都应允许使用NFSv4。
+* 需要在相关NFS服务器上设置VAAI支持选项。
+
+
+有关此过程的详细信息、请参阅 https://kb.netapp.com/on-prem/ontap/DM/VAAI/VAAI-KBs/Configure_the_correct_NFS_export_policies_for_VAAI_copy_offload["为VAAI副本卸载配置正确的NFS导出策略"]知识库文章。

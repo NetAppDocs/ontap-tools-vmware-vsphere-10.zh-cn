@@ -2,7 +2,7 @@
 permalink: protect/configure-array-manager.html 
 sidebar: sidebar 
 keywords:  
-summary: 您可以使用 Site Recovery Manager （ SRM\ ）中的阵列管理器向导配置 Storage Replication Adapter （ SRA ），以启用 SRM 与 Storage Virtual Machine （ SVM\ ）之间的交互。 
+summary: '您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。' 
 ---
 = 使用阵列管理器配置 SRA
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 您可以使用 Site Recovery Manager （ SRM\ ）中的阵列管理器
 
 
 [role="lead"]
-您可以使用 Site Recovery Manager （ SRM ）的 Array Manager 向导配置 Storage Replication Adapter （ SRA ），以便在 SRM 和 Storage Virtual Machine （ SVM ）之间进行交互。
+您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。
 
 * 您需要的内容 *
 
-* 您应已在SRM中将受保护站点和恢复站点配对。
+* 您应已在VMware Live Site Recovery中将受保护站点和恢复站点配对。
 * 在配置阵列管理器之前、您应已配置已启用的存储。
 * 您应已在受保护站点和恢复站点之间配置和复制SnapMirror关系。
 * 要启用多租户、您应已启用SVM管理SVM。
@@ -25,8 +25,8 @@ SRA 支持集群级别的管理和 SVM 级别的管理。如果在集群级别�
 
 * 步骤 *
 
-. 在SRM中，单击*Array Manager*，然后单击*Add Array Manager*。
-. 输入以下信息以描述 SRM 中的阵列：
+. 在VMware Live Site Recovery中，单击*Array Manager*，然后单击*Add Array Manager*。
+. 输入以下信息以描述VMware Live Site Recovery中的阵列：
 +
 .. 在 * 显示名称 * 字段中输入一个名称以标识阵列管理器。
 .. 在 * SRA 类型 * 字段中，选择 * 适用于 ONTAP 的 NetApp 存储复制适配器 * 。

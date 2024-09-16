@@ -53,7 +53,7 @@ NVMe 命名空间是指可格式化为逻辑块的非易失性内存量。命名
 
 === ONTAP工具管理器
 
-ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助管理vCenter Server实例、存储后端、证书、密码和日志包下载。
+ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助您管理vCenter Server实例、存储后端、证书、密码和日志捆绑包下载。
 
 
 
@@ -71,7 +71,7 @@ OVA是一种用于打包和分发必须在虚拟机上运行的虚拟设备或�
 
 === Storage Replication Adapter （ SRA ）
 
-SRA是存储供应商专用的软件、安装在SRM设备中。通过该适配器、可以在Storage Virtual Machine (SVM)级别和集群级别配置上实现Site Recovery Manager与存储控制器之间的通信。
+SRA是存储供应商专用的软件、安装在VMware Live Site Recovery设备中。通过该适配器、可以在Storage Virtual Machine (SVM)级别和集群级别配置上实现Site Recovery Manager与存储控制器之间的通信。
 
 
 
@@ -111,9 +111,9 @@ VM存储策略会在vCenter Server中的"Policies and Profile (策略和配置�
 
 
 
-=== VMware Site Recovery Manager (SRM)
+=== VMware Live Site Recovery
 
-SRM可为VMware虚拟环境提供业务连续性、灾难恢复、站点迁移和无中断测试功能。
+VMware Live Site Recovery为VMware虚拟环境提供业务连续性、灾难恢复、站点迁移和无中断测试功能。
 
 
 

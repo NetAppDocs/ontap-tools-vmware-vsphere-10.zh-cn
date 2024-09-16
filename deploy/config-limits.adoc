@@ -39,7 +39,7 @@ summary: 部署适用于VMware vSphere的ONTAP工具的配置限制
 
 == 适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)
 
-下表显示了使用适用于VMware vSphere的ONTAP工具时每个SRM实例支持的数量。
+下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。
 
 |===
 | *vCenter部署大小* | *小* | *中* 
@@ -59,12 +59,12 @@ summary: 部署适用于VMware vSphere的ONTAP工具的配置限制
 
 | VM数量 | 4000 | 7000 
 |===
-下表显示了SRM的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。
+下表显示了VMware Live Site Recovery的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。
 
 |===
 
 
-| *SRM实例数* | * ONTAP工具部署规模* 
+| *VMware Live Site Recovery实例数* | * ONTAP工具部署规模* 
 
 
 | 最多4个 | 小型 

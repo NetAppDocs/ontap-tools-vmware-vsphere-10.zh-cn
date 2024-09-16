@@ -141,3 +141,80 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 | /API | 只读 | 集群用户应具有此权限才能获取正确的存储后端状态。否则、ONTAP工具管理器将显示"未知"存储后端状态。 
 |===
+
+
+=== 将适用于VMware vSphere 10.1用户的ONTAP工具升级到10.2用户
+
+如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的集群范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.2版。
+
+对于产品功能：
+
+* VSC
+* VSC和VASA Provider
+* VSC和SRA
+* VSC、VASA Provider和SRA。
+
+
+集群Privileges：
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem show"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host show"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map show"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve sho-interface"-access read_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host add"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map add"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem delete"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host remove"-access all_
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map remove"-access all_
+
+如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的SVM范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.2版。
+
+SVM Privileges：
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve"-access all -vserver nve_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem show"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host show"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map show"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name>-cmddirname "vserver nve sho-interface"-access read -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host add"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map add"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve"-access all -vserver nve_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem delete"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem host remove"-access all -vserver nv_<vserver-name>
+
+_security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map remove"-access all -vserver nv_<vserver-name>
+
+向现有角色添加命令_vserver nvexe命名空间show_和_vserver nvserver subsystem show_可添加以下命令。
+
+[listing]
+----
+vserver nvme namespace create
+
+vserver nvme namespace modify
+
+vserver nvme subsystem create
+
+vserver nvme subsystem modify
+
+----

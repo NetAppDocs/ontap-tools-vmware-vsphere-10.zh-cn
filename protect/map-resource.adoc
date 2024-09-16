@@ -18,7 +18,7 @@ summary: 您应映射受保护站点和恢复站点上的资源、以便将虚�
 您应已连接受保护站点和恢复站点。
 
 
-NOTE: 在 Site Recovery Manager （ SRM ）中，资源可以是资源池， ESXi 主机或 vSphere 集群。
+NOTE: 在VMware Live Site Recovery中、资源可以是资源池、ESXi主机或vSphere集群。
 
 * 步骤 *
 

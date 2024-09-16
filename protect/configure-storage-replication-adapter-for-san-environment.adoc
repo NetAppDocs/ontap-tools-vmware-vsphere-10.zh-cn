@@ -2,7 +2,7 @@
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html 
 sidebar: sidebar 
 keywords:  
-summary: '在为Site Recovery Manager \(SRM\)运行Storage Replication Adapter \(SRA\)之前、应先设置存储系统。' 
+summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Recovery之前、应先设置存储系统。' 
 ---
 = 为SAN和NAS环境配置SRA
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: '在为Site Recovery Manager \(SRM\)运行Storage Replication Adapter \
 
 
 [role="lead"]
-在运行适用于Site Recovery Manager (SRM)的Storage Replication Adapter (SRA)之前、应先设置存储系统。
+在运行适用于VMware Live Site Recovery的Storage Replication Adapter (SRA)之前、应先设置存储系统。
 
 
 
@@ -21,16 +21,16 @@ summary: '在为Site Recovery Manager \(SRM\)运行Storage Replication Adapter \
 
 您应在受保护站点和恢复站点上安装以下程序：
 
-* SRM
+* VMware Live Site Recovery
 +
-有关安装 SRM 的文档位于 VMware 站点上。
+VMware站点上提供了有关安装VMware Live Site Recovery的文档。
 
 +
-https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager 文档"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["关于VMware Live Site Recovery"]
 
 * SRA
 +
-此适配器已安装在SRM上。
+适配器已安装在VMware Live Site Recovery上。
 
 
 
@@ -53,16 +53,16 @@ https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recover
 
 您应在受保护站点和恢复站点上安装以下程序：
 
-* SRM
+* VMware Live Site Recovery
 +
-有关安装 SRM 的文档，请参见 VMware 站点。
+有关安装VMware Live Site Recovery的文档可在VMware站点上找到。
 
 +
-https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager 文档"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["关于VMware Live Site Recovery"]
 
 * SRA
 +
-适配器安装在 SRM 和 SRA 服务器上。
+此适配器已安装在VMware Live Site Recovery和SRA服务器上。
 
 
 
@@ -70,6 +70,6 @@ https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recover
 
 . 验证受保护站点上的数据存储库是否包含已向 vCenter Server 注册的虚拟机。
 . 验证受保护站点上的 ESXi 主机是否已挂载 Storage Virtual Machine （ SVM ）中的 NFS 导出卷。
-. 使用阵列管理器向导向 SRM 添加阵列时，验证是否在 * NFS 地址 * 字段中指定了有效地址，例如存在 NFS 导出的 IP 地址，主机名或 FQDN 。
+. 使用Array Manager向导向VMware Live Site Recovery添加阵列时，请验证是否在*NFS Addresses*字段中指定了有效的地址，例如NFS导出所在的IP地址、主机名或FQDN。
 . 使用 `ping` 命令、以验证此主机是否具有可访问用于从SVM提供NFS导出的IP地址的VMkernel端口。
 

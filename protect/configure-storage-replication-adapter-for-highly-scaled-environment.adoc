@@ -17,7 +17,7 @@ summary: '您应按照建议的设置配置存储超时时间间隔、以使Stor
 
 == 存储提供程序设置
 
-您应在 SRM 上为扩展环境设置以下超时值：
+您应在适用于扩展环境的VMware Live Site Recovery上设置以下超时值：
 
 |===
 
@@ -56,7 +56,7 @@ summary: '您应按照建议的设置配置存储超时时间间隔、以使Stor
 
 有关修改存储提供程序设置的详细信息、请参见VMware文档。
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere 文档：更改存储提供程序设置"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere 文档：更改存储提供程序设置"]
 
 
 
@@ -69,4 +69,4 @@ NOTE: 指定的超时间隔为最大值。您无需等待达到最大超时值�
 
 有关详细信息、请参见有关修改SAN Provider设置的VMware文档。
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager 文档：更改存储设置"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager 文档：更改存储设置"]

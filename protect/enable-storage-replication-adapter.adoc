@@ -22,9 +22,8 @@ summary: 适用于VMware vSphere的ONTAP工具提供了一个选项、用于启�
 
 * 步骤 *
 
-. 使用以下URL登录到SRM设备管理界面 `\https://:<srm_ip>:5480`，然后转到VMware SRM设备管理界面中的Storage Replication Adapters。
+. 使用以下URL登录到VMware Live Site Recovery设备管理界面 `\https://:<srm_ip>:5480`，然后转到VMware Live Site Recovery设备管理界面中的Storage Replication Adapters。
 . 选择*新适配器*。
-. 将 SRA 插件的 _.tar.gz_ 安装程序上传到 SRM 。
-. 重新扫描适配器以验证SRM存储复制适配器上的详细信息是否已更新
-页面。
+. 将SRA插件的_.tar.gz_安装程序上传到VMware Live Site Recovery。
+. 重新扫描适配器以验证是否已在VMware Live Site Recovery Storage Replication Adapters页面上更新详细信息。
 
