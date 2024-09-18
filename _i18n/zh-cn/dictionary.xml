@@ -1208,7 +1208,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">网络映射页面将显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
   <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">作为现有用户、在升级到修补程序版本之前、您需要从当前版本创建OVA备份。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">常见迁移步骤</block>
-  <block id="eece6ba8141877366a154b925c32a9f5" category="list-text">从适用于VMware vSphere插件的ONTAP工具vCenter API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA迁移步骤</block>
   <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">迁移前、请确保其中一个站点处于受保护状态、另一个站点处于恢复状态。</block>
   <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">如果故障转移刚刚完成且重新保护处于待定状态、请勿迁移。完成重新保护、然后执行迁移。
@@ -1504,8 +1503,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">运行Perl命令为SRA配置新凭据：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">选择所需的阵列对并验证相应的详细信息。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*</block>
-  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署适用于VMware vSphere 10.1版的适用于ONTAP的OVA工具。</block>
-  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功迁移并将ONTAP工具10.1注册到vCenter Server后、请执行以下操作：</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以选择System Configuration Menu。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">输入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以更改ONTAP凭据。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">输入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以更改vCenter凭据。</block>
@@ -1587,7 +1584,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="2b1af6f75eb17029e34abc0a1219ad91" category="list-text">右键单击主机系统、主机集群或数据中心，然后选择*Create tools*&gt;*Create NetApp ONTAP。</block>
   <block id="f72f57410286ed6d906bcd47b23e2804" category="list-text">在*存储*窗格中，选择*平台*和*存储VM*。在*高级选项*部分中，根据需要选择自定义导出策略(对于NFS协议)或自定义启动程序组名称(对于iSCSI和FC协议)。</block>
   <block id="a78a02bb1fc75e90c0aa8b7d5ee977d3" category="list-text">右键单击主机系统、主机群集或数据中心，然后选择*Create NetApp ONTAP tools*&gt;*Create Datacenter*。</block>
-  <block id="cf15c96a94a1c3b116a75ddc813146c7" category="paragraph">虚拟机文件系统(Virtual Machine File System、VMFS)是一种专门为在VMware vSphere环境中存储虚拟机文件而设计的集群模式文件系统。它允许多个ESXi主机同时访问相同的虚拟机文件、从而实现vMotion和高可用性等功能。开始之前，请先检查以下各项，然后再继续：</block>
   <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">对于ONTAP存储端的每个协议、需要启用相应的服务和LIF。</block>
   <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">如果您使用的是NVMe/TCP协议、请执行以下步骤来配置ESXi主机：</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware 兼容性指南</block>
@@ -1843,7 +1839,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">要在VMware Live Site Recovery UI中删除适用于VMware vSphere 9.xx版本SRA适配器的ONTAP工具、请执行以下步骤：</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在VMware Live Site Recovery设备上配置SRA</block>
-  <block id="9bf06b478ac6a48afec45b6081899c00" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.1 SRA适配器的ONTAP工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">在VMware Live Site Recovery UI页面中，执行*Discover Arrays *和*Discover Devices*操作，并验证这些设备是否显示为迁移前的状态。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。</block>
@@ -1885,4 +1880,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">适用于VMware vSphere 10.1的ONTAP工具文档</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">适用于VMware vSphere 9的早期版本ONTAP工具的文档</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">了解采用ONTAP的VMware vSphere</block>
+  <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">虚拟机文件系统(Virtual Machine File System、VMFS)是一种专门为在VMware vSphere环境中存储虚拟机文件而设计的集群模式文件系统。它允许多个ESXi主机同时访问相同的虚拟机文件、从而实现vMotion和高可用性等功能。</block>
+  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">继续操作前、请检查以下各项：</block>
+  <block id="2557cccd5218f319091e35b938bd9d10" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.2 SRA适配器的ONTAP工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
+  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">成功迁移并将ONTAP工具10.2注册到vCenter Server后、请执行以下操作：</block>
 </blocks>
