@@ -22,11 +22,6 @@
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">提供有关适用于 VMware vSphere 的此版本 ONTAP 工具的重要信息，包括新增功能和增强功能，已修复的问题，已知问题，注意事项和限制。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">发行说明</block>
   <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">提供有关适用于 VMware vSphere 的此版本 ONTAP 工具的重要信息，包括已修复的问题，已知问题，注意事项和限制。</block>
-  <block id="5e207fa1cdb20b33974d902c6b058369" category="doc">准备部署ONTAP工具</block>
-  <block id="6a6bb2fcebc6acd4649aee3d098f191a" category="section-title">准备部署</block>
-  <block id="b617261cab9c7f9e335f8f61a682f04e" category="list-text">配置和设置 vCenter Server 环境。</block>
-  <block id="ba8a1449ede5fee82e075573c5257bc6" category="list-text">下载_.ova_文件。</block>
-  <block id="6a90716733c7d74d3742e2f3700f6422" category="list-text">删除浏览器缓存。</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*每个节点的安装包空间要求*</block>
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">10 GB用于精简配置安装</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*每个节点的主机系统规模估算要求*
@@ -56,7 +51,6 @@
   <block id="38330c4323759fcee2f79d39d38019ea" category="list-text">查看模板摘要并选择*下一步*。</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">阅读并接受许可协议，然后选择*Next*。</block>
   <block id="23b73d362123204bbb0b2e4f075436e0" category="list-text">完成此任务后、打开虚拟机的电源。</block>
-  <block id="cac000aa96604e0bb47a3105eddb0164" category="summary">您可以从 NetApp 支持站点下载适用于 VMware vSphere 的 ONTAP 工具的 .ova 文件。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支持站点</block>
   <block id="fc7420289587a37ba45ec23cf35bfe1b" category="list-text">提供库的名称并创建内容库。</block>
   <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">* 您需要的内容 *</block>
@@ -111,7 +105,6 @@
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">选择 * 添加 * 。</block>
   <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">* 您需要的内容 *</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">需要信息。</block>
-  <block id="89922f355605e81a1f798ba45c777e17" category="list-text">从侧栏中选择vCenter。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">从弹出窗口的下拉列表中选择存储后端。</block>
   <block id="452b471da4d961cce8ade590fb91c551" category="summary">迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA提供程序数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。</block>
   <block id="b2ed14efa60f0218dbe29d217936db05" category="list-text">作业完成后、验证迁移报告。您可以在JobData中查看来自作业响应的报告。</block>
@@ -160,7 +153,6 @@
   <block id="50089549e67582388411828760b039b4" category="paragraph">支持和诊断</block>
   <block id="d32b692a228c985bcc53d0e3be7f3ee9" category="list-text">访问诊断 Shell</block>
   <block id="fc50930a1e8c2b869ad303b5b5234574" category="list-text">启用远程诊断访问</block>
-  <block id="67e8d37004344b33c567518872c9984e" category="doc">管理存储后端</block>
   <block id="7c4be48b14320d4ba792548a51fdd4a0" category="list-text">从侧栏中选择存储后端。</block>
   <block id="efede0d5afb055973ecbabd1510449bc" category="doc">配置远程诊断访问</block>
   <block id="bd0c5df6e8c9602ce4ddef780c7bf3a3" category="paragraph">使用 SSH 访问 diag 用户帐户具有以下限制：</block>
@@ -232,15 +224,12 @@
   <block id="48541486be8b3f08161f9ca5ec2e9de2" category="list-text">选择*应用建议设置*链接。</block>
   <block id="7ca24662c9fd82d1c8f828af5176f560" category="list-text">在设置页面中、根据需要选择建议值。</block>
   <block id="c260b7a566deca46e5b1c9214afd516d" category="summary">存储后端是ESXi主机用于数据存储的系统。</block>
-  <block id="fa6528c70649ccd7f38d2b521c1e5eb6" category="section-title">使用ONTAP工具管理器添加存储后端</block>
   <block id="038f6457c1cb541ff02015f8ede42bdb" category="list-text">从Web浏览器启动ONTAP工具管理器：<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block></block>
   <block id="600bee7ab6e14dd0a2755b8f2270990c" category="list-text">使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
-  <block id="66631cd36658e6b90df2e99196befe6c" category="section-title">使用vSphere客户端UI添加存储后端：</block>
   <block id="835e306294a47e73fead15ebe0ab0f34" category="list-text">使用登录到vSphere Client<block ref="aa8722d854b4ede974e04f75b8b124b5" prefix=" " category="inline-code"></block></block>
   <block id="be220ca65fb361f10c452627110630ac" category="list-text">在ONTAP工具的左窗格中，导航到*Storage Backends*并选择*Add*。</block>
   <block id="7f2d9eb042fad8493c138993f867cd80" category="paragraph">此时、此列表将刷新、您可以在此列表中看到新添加的存储后端。</block>
   <block id="f6c30a782639c90ebe44f3f343922077" category="summary">vCenter Server实例是中央管理平台、可用于控制主机、虚拟机(VM)和存储后端。</block>
-  <block id="d8caae7f24a2bdcc68ccd54af195f667" category="doc">添加和管理vCenter Server实例</block>
   <block id="9a22df67797f0968951385551d26d202" category="paragraph">vCenter Server提供了一个中央管理平台、可用于控制主机、虚拟机(VM)和存储后端。</block>
   <block id="a8534b379980a6bb97915d2890ad3522" category="section-title">添加vCenter Server实例</block>
   <block id="aaf638e0edd71bac35fef1b1149f3843" category="paragraph">您可以使用一个适用于VMware vSphere的ONTAP工具实例添加和管理多个vCenter Server实例。</block>
@@ -250,13 +239,8 @@
   <block id="2ac1dd1c4b8256022b5e0787f80e4796" category="list-text">已注册vCenter Client插件</block>
   <block id="558eb42fc2df4bacc01e4c41a425eaa9" category="list-text">插件和API的自定义权限将推送到vCenter Server实例</block>
   <block id="1fb8597774c73340601ce61c9d3435ad" category="list-text">创建自定义角色以管理用户。</block>
-  <block id="ba8ede12654a8a6bdaec85ea8dcc709b" category="section-title">向vCenter Server实例注册适用于VMware vSphere插件的ONTAP工具</block>
   <block id="7cf8d73badf9183387fac300a5b1c2f5" category="paragraph">添加vCenter Server实例时、适用于VMware vSphere插件的ONTAP工具会作为远程插件自动注册到vCenter Server中。此插件可通过vSphere用户界面快捷方式查看。</block>
   <block id="834391696f42211e534b504b2ab7fc3b" category="paragraph">此插件会使用密钥_com.netapp.otv_注册到vCenter Server实例中、并可在vCenter Server实例的扩展管理器中查看。</block>
-  <block id="30c40d72d7661a8a983d9efd2ebfdc3e" category="section-title">取消注册适用于VMware vSphere插件的ONTAP工具</block>
-  <block id="a25b52ff1196300e6756c99470de737c" category="paragraph">您可以按照以下步骤从vCenter Server实例中取消注册适用于VMware vSphere插件的ONTAP工具。</block>
-  <block id="aea5938f160fd1bbd28fbc5d20a2857f" category="list-text">单击要删除的vCenter旁边的垂直省略号、然后选择*删除*选项。</block>
-  <block id="a87d604a211fc732e0ce4410cde1a145" category="admonition">如果vCenter Server实例已连接存储映射、则无法将其删除。您需要先删除此映射、然后才能删除vCenter Server实例。</block>
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">在ONTAP工具中删除vCenter Server实例时、系统会自动执行以下操作：</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">已取消注册插件。</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">插件权限和插件角色将被删除。</block>
@@ -453,19 +437,11 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
   <block id="b6d50c4645c0bca6b859870159ef8d88" category="list-text">在vSphere Client主页中、转到*支持*&gt;*日志捆绑包*&gt;*生成*。</block>
   <block id="d33e0eed0ba191bd65fd110cd78b4fe3" category="list-text">提供日志包标签并生成日志包。
 生成文件后、您可以看到下载选项。下载可能需要一段时间。</block>
-  <block id="a255983dad229631589c671899817f11" category="doc">管理vCenter Server实例</block>
-  <block id="4c11feccc2fbd7b67a5c49308adc4c3e" category="paragraph">vCenter Server是一种中央管理平台、可用于控制主机、虚拟机和存储后端。</block>
-  <block id="f043ab9d6cb4e64db936079acecb4412" category="list-text">从工具条中选择vCenter Server实例。</block>
   <block id="6a7f3ac83e0c65049ec0ceb21e5a43cf" category="list-text">单击要与存储后端关联或解除关联的vCenter Server旁边的垂直省略号。</block>
-  <block id="ccbcb35e4328f1429c01947488bdb8e3" category="section-title">修改vCenter Server实例</block>
-  <block id="181cfe47065ba8ae261a8f98f2747a87" category="paragraph">按照以下步骤修改vCenter Server实例。</block>
-  <block id="f66ac4c103ce58f4fd4ae2727b7b1497" category="list-text">从工具条中选择vCenter Server实例</block>
   <block id="a164c42c0b421ef080c9ece13b2dc4f5" category="list-text">单击要修改的vCenter Server旁边的垂直省略号、然后选择*修改*。</block>
   <block id="1de6fa416467171388151875976896ac" category="list-text">修改vCenter Server实例详细信息并选择*修改*。</block>
-  <block id="925fb856541b580466cb68c4f44b3b51" category="section-title">删除vCenter Server实例</block>
   <block id="2917b452ab6d9fd65242e5b878abb0ca" category="paragraph">您需要先删除连接到vCenter Server的所有存储后端、然后再将其删除。</block>
   <block id="4043d34409a767217985df86b4e697a1" category="list-text">单击要删除的vCenter Server旁边的垂直省略号，然后选择*Remove*。</block>
-  <block id="ab13b0c8fd5a52249b387c606102a525" category="admonition">删除vCenter Server实例后、应用程序将不再对其进行维护。</block>
   <block id="c1506892d1092bf8f73a94ec8249a0f5" category="summary">您可以使用ONTAP工具管理器更改管理员密码。</block>
   <block id="c4f8ed60e900e21e211600378be9ee4b" category="doc">更改ONTAP工具管理器密码</block>
   <block id="31b542807ad1cd5852e5030eca687353" category="list-text">单击屏幕右上角的*管理员*图标，然后选择*更改密码*。</block>
@@ -625,14 +601,11 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
   <block id="d2a731e17e932f5e2185dd4d0230dace" category="paragraph">您可以将适用于VMware vSphere的ONTAP工具与VMware vCenter Server虚拟设备(vCSA)结合使用。您应在包含ESXi系统的受支持vSphere客户端上部署适用于VMware vSphere的ONTAP工具。</block>
   <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">最低版本要求</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
-  <block id="b8c54fcaa10ff595448f1375f4a5e9bb" category="summary">您可以在小型、中型或大型配置中配置HA。</block>
-  <block id="48390bbe5847491942373a307f08fc7e" category="doc">部署HA配置</block>
   <block id="d891ae7e307401cf3f03885dace9033c" category="paragraph">您可以在小型、中型或大型配置中配置HA三个节点。HA部署使用三项技术来存储服务数据。</block>
   <block id="7087454e43cca4ef634d205f1b927799" category="list-text">小型HA三个节点包含8个CPU、每个节点具有16 GB RAM。</block>
   <block id="a097e83181af31b95cbf5bd76f5c76b5" category="list-text">中型HA：三个节点包含12个CPU、每个节点具有24 GB RAM。</block>
   <block id="c9a45070aa8c42f9055f4709e164ecf7" category="list-text">大型HA三个节点包含16个CPU、每个节点具有32 GB RAM。</block>
   <block id="93899abdb46047bb4d50c49a867a56af" category="paragraph">此任务为您提供了有关如何在小型、中型或高配置中安装HA三个节点的说明。</block>
-  <block id="af6022579cda393daa1b57e1ee028b5b" category="inline-link-macro">下载ONTAP工具</block>
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">创建和使用内容库</block>
   <block id="950e2bbc5f7982ea062934050c4edb7c" category="paragraph">确保已将OVA导入到内容库中。请随时提供内容库的名称以及您为OVA项目提供的库项目名称。</block>
   <block id="9349198fdfb9af0c955ccb6ec9ce87ea" category="admonition">在继续部署之前、请在安装ONTAP工具期间将清单上的集群分布式资源计划程序(DRS)设置为"保守"。这样可确保虚拟机在安装期间不会迁移。</block>
@@ -642,7 +615,6 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
   <block id="2982d64d666813e553487acfc3139e7b" category="paragraph">创建部署任务后、vSphere任务栏中将显示进度。</block>
   <block id="533a0908793f5fc10cce325c8536afe3" category="list-text">成功安装后、Web控制台将显示适用于VMware vSphere的ONTAP工具的状态。</block>
   <block id="ac391481197afcd572c348e420a0a8ff" category="summary">您可以在小型或中型配置中配置非HA单节点。</block>
-  <block id="4803ceca3cd8150ee8318a574f159e98" category="doc">部署非HA单节点配置</block>
   <block id="5dc65ab95904aa2054e2dcbdd39950f7" category="paragraph">您可以采用小型或中型配置部署非HA单节点配置。</block>
   <block id="5461dccab1f0e879170985e90bdf57f3" category="list-text">小型非HA配置包含8个CPU和16 GB RAM。</block>
   <block id="8e8379b241122bc1edc3c6141e02fbd8" category="list-text">中型非HA配置包含12个CPU和24 GB RAM。</block>
@@ -781,44 +753,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="e4b78eb58767dc37e3fe79b28fb8b6af" category="list-text">在*选择存储*窗口中，为配置和磁盘文件选择存储。</block>
   <block id="041bb037e3c06caf84dedc58c6457aab" category="list-text">在*选择网络*窗口中，为每个源网络选择一个目标网络。</block>
   <block id="33f9aca743a2e76b383f29162f592587" category="admonition">您需要保留负载平衡器IP地址和Kubbernetes API服务器IP地址。您可以更改节点IP地址、也可以保留相同的IP地址。</block>
-  <block id="dd47efe31efd4cc6180876f236c1c622" category="doc">下载适用于VMware vSphere的ONTAP工具</block>
-  <block id="4c322557b2037165ab2dfd286fa6a839" category="paragraph">您可以下载<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> 包含中适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
-  <block id="66e01a394c13b76740f13530a21b08bd" category="paragraph">VMware中的内容库是一个容器对象、用于存储VM模板、vapp模板和其他类型的文件。使用内容库进行部署可为您提供无缝体验、因为它不依赖于网络连接。</block>
-  <block id="ce9b53eac944721941b422d87ebdfc04" category="admonition">您应将内容库存储在共享数据存储库上、以便集群中的所有主机都可以访问该内容库。
-在HA配置中部署OVA之前、您需要创建一个内容库来存储此OVA。
-按照以下步骤创建内容库：</block>
   <block id="ba734a1904c4fc52c9466c4911723e0d" category="list-text">选择vSphere Client旁边的水平省略号并选择*内容库*。</block>
   <block id="3af4e075c858acd892ef2371752970d3" category="list-text">导航到您创建的内容库。</block>
-  <block id="9d9008198a45ecb471e5fb2c806cbca9" category="summary">要使用此设备、您应在环境中部署适用于VMware vSphere的ONTAP工具并指定所需参数。</block>
-  <block id="00d5f105776357dd82aeedc1ad0d21e0" category="doc">准备为VMware vSphere部署ONTAP工具</block>
-  <block id="4976ac7e6cdb2104e0d748aff72a1f49" category="paragraph">在开始部署适用于VMware vSphere的ONTAP工具之前、您应了解基本存储后端要求、应用程序要求和许可证要求。
-提前规划部署、并确定希望如何在您的环境中配置适用于VMware vSphere的ONTAP工具。</block>
-  <block id="e34466eda4e5b5f68501a10425c10513" category="paragraph">以下是在继续部署之前适用于VMware vSphere的ONTAP工具的要求：</block>
-  <block id="1584251f717b5c5b67df88454cbd8688" category="list-text">(可选)用于自动化用户—收集NetApp提供的Postman集合JSON文件。</block>
-  <block id="d8cea021ae68f06628331588ee1f7b9f" category="list-text">确保部署OVA的主机或资源池具有中所述的最低资源 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 部分。</block>
-  <block id="3aa072fa38b0383a0d289fde6a7bdb7c" category="list-text">适用于VMware vSphere的ONTAP工具要连接到的vCenter Server实例的登录凭据、用于在部署后进行注册。</block>
-  <block id="0d129795e915c1dfe3e328d2bb4d641e" category="list-text">对于非HA部署、您需要三个可用IP地址—一个用于负载平衡器的可用IP地址、一个用于Kubbernetes控制平台的可用IP地址以及一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。
-在分配之前、应将主机名映射到DNS上的可用IP地址。所有这五个IP地址都应位于为部署选择的同一个VLAN上。</block>
-  <block id="9fbc06da5aa5c6831433a9fc2a8deb4d" category="list-text">内容库模板一旦上传、不应在部署后删除、因为它将在重新启动期间使用。</block>
-  <block id="1b2e635b5306823e49a3c340a98a6afd" category="list-text">在多vCenter部署中、自定义CA证书是必需的、请将颁发此证书的域名映射到虚拟IP地址。对域名执行_nslookup_检查以检查域是否已解析为预期的IP地址。应使用负载平衡器IP地址的域名和IP地址创建证书。</block>
-  <block id="3fa1479627acfbe9a9db931f94152a45" category="list-text">IPv4/IPv6支持的VLAN -不支持纯IPv6。具有IPv6和IPv4地址的VLAN支持混合模式。</block>
-  <block id="08564fbb9e5c56086e9e3a3532290eaa" category="list-text">要部署OVA的节点或VM的静态IP地址配置详细信息(必填)以及其他详细信息。</block>
-  <block id="bd7e27756180da51c648d5cc971b5831" category="list-text">vCenter Server主机名(部署了OVA的vCenter)</block>
-  <block id="c494d02d9ada9de0652e7bb0ac2263e8" category="list-text">vCenter Server用户名(部署了OVA的vCenter)</block>
-  <block id="fb7d17424f0215bfebb8f56887edf8d6" category="list-text">vCenter Server密码(部署了OVA的vCenter)</block>
-  <block id="2dcd1606cb72440c2a1ad7c76fba2364" category="list-text">资源池</block>
-  <block id="80bdaeaca76524b1c655751f3ffd76df" category="list-text">数据LIF (IPv4/IPv6)</block>
-  <block id="d0f96c9c5789cddf044d0253cd5d520e" category="list-text">管理LIF</block>
-  <block id="b6f6f62faccf09ac0aa9896299d53606" category="list-text">ONTAP用户名</block>
-  <block id="a34052c2d1580fc245b188c8a9e65f0c" category="list-text">ONTAP密码</block>
-  <block id="203c4205822c007d08ecafe163b02ea2" category="list-text">SVM name</block>
-  <block id="888a77f5ac0748b6c8001822417df8b6" category="list-text">协议</block>
-  <block id="85c3dba7de47b75da65759dc70b8b923" category="list-text">Kubbernetes控制平台的虚拟IP地址。</block>
-  <block id="a3163c4ad052022f35412b6401e0b839" category="list-text">HA/non-HA下拉列表</block>
-  <block id="1d05598e5b2e831093de6c37162ef10e" category="list-text">IP地址(字符串)</block>
-  <block id="511ff4e20173d429ce366128f541bc37" category="list-text">内容库名称</block>
-  <block id="e32539630c3af1f9f5940e0473d0ed81" category="list-text">VF模板名称</block>
-  <block id="977996b1c848f1928aa72fddd3ed1a85" category="list-text">IPv6网关(可选)</block>
   <block id="9f6f5d475066edc4f0466fea40fc53cc" category="summary">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它可与VMware生态系统集成、并有助于虚拟机的配置、基本保护和灾难恢复。</block>
   <block id="2bd2f3ded095498e9ee97f7cc9074dc0" category="doc">适用于VMware vSphere的ONTAP工具概述</block>
   <block id="e57ef79b89d008b00ca33aabc087c40e" category="list-text">虚拟机功能、例如基本保护和灾难恢复</block>
@@ -1353,11 +1289,9 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="fc7f17ed33d951dfbd3445c149321837" category="sidebar">迁移适用于VMware vSphere的ONTAP工具</block>
   <block id="cb879d6b2b33e094cf730b0a0881b07a" category="sidebar">使用适用于VMware vSphere的ONTAP工具</block>
   <block id="eaf78ca462bf848b7c59c410077002b6" category="sidebar">保护数据存储库</block>
-  <block id="cac6cd9e650cdc4d7120d3f0cceba925" category="sidebar">添加和管理vCenter Server</block>
   <block id="fbbd8350e625abcdc720a38414ee983f" category="sidebar">向vCenter Server注册VASA Provider</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">配置ESXi主机设置</block>
   <block id="9102345a83c1baa03ea8779e473dbeab" category="sidebar">适用于VMware vSphere的NetApp ONTAP工具插件信息板概述</block>
-  <block id="91c3a56ce2e1de6b96f031f2b96b5cbb" category="sidebar">管理存储阈值</block>
   <block id="fdbc6b9d3a4fa30083007ec69abfbe6e" category="sidebar">访问适用于VMware vSphere的ONTAP工具维护控制台</block>
   <block id="427d9ce60f4b39aa82a25138b4aa489f" category="sidebar">管理虚拟机</block>
   <block id="1608a10fc8319b14c6c50a77edab9e7c" category="sidebar">修改 ESXi 主机设置</block>
@@ -1377,7 +1311,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">升级 ONTAP 工具</block>
   <block id="42ac03a8bab25efc61489f3923976820" category="summary">如果您忘记了ONTAP工具管理器密码、则可以使用适用于VMware vSphere的ONTAP工具维护控制台生成的令牌重置管理员凭据。</block>
   <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">当您遇到超时时时、请增加的值<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> 和<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 更高的值。</block>
-  <block id="7443ebb7d3e5fd61a07b688ed33f3c1c" category="list-text">主机名列表</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0u3</block>
   <block id="6287b30826f078b30c5359360e127f14" category="list-text">248 GB用于厚配置安装</block>
   <block id="c5e37bc00c030bf0bbf393fbb0102c75" category="summary">删除适用于VMware vSphere部署的ONTAP工具后、您应清理在部署期间创建的FlexVolumes。如果您已使用专用ONTAP集群进行部署、则应清理FlexVolumes、因为此部署会创建大量未使用的FlexVolume、从而降低性能。</block>
@@ -1437,13 +1370,10 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="ce2fddb4782cb083028eb028f1b74ba0" category="paragraph">MPIO设置定义NetApp存储系统的首选路径。MPIO设置可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。</block>
   <block id="d16644a258624270fbc604b4a9c10811" category="paragraph">在高性能环境中、或者在测试单个LUN数据存储库的性能时、请考虑将轮询(VMW_PSP_RR)路径选择策略(PSP)的负载平衡设置从默认IOPS设置1000更改为值1。</block>
   <block id="4c6f1d39cef2f482d7f0bd371cb333c9" category="paragraph">适用于VMware vSphere的ONTAP工具是一个多租户系统、可管理多个vCenter Server实例。通过ONTAP工具管理器、VMware vSphere管理员可以通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。</block>
-  <block id="598775e58d406bbf54ca2a17a8ed0d7f" category="paragraph">部署完成后、您的环境中将安装适用于VMware vSphere和ONTAP产品的VMware工具。默认情况下、在您确定部署模式并根据需要选择是否启用VASA Provider后、适用于VMware vSphere的ONTAP工具便会开始工作。有关详细信息、请参见。 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block></block>
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">选择页面右侧的*创建*。</block>
   <block id="1b363a673c183e8f6180915f94b60037" category="list-text">选择页面右侧的*Actions*并选择*Import Item*并导入OVA文件。</block>
-  <block id="d41b8ccbeee15bda2042a49f14f4aa0c" category="paragraph">此时将开始安装。您可以在VM的Web控制台中跟踪安装进度。在安装过程中、系统会验证节点配置。系统会验证在OVF表单的Customize模板下的不同部分下提供的输入。如果出现任何差异、则会显示一个对话框、提示您采取更正操作。</block>
   <block id="b95af9d7a4191be45c26375bc81f22f0" category="paragraph">高级部署选项会使用通过ONTAP的动态存储配置程序来创建卷、而简单的部署则会使用本地存储来创建卷。</block>
   <block id="bb52754b19b2d04a0ecabf77d7f3f122" category="paragraph">此时将开始安装。您可以在VM的Web控制台中跟踪安装进度。在安装过程中、系统会验证节点配置。系统会验证在OVF表单的Customize模板下的不同部分下提供的输入。如果出现任何差异、则会显示一个对话框、提示您采取更正操作。</block>
-  <block id="758c53cff0f592d8eb0794a08c8ecc6d" category="list-text">为vCenter Server提供的用于时间同步的NTP服务器。</block>
   <block id="b6ff1fefd2cc4c3f16cbde3abeefae78" category="paragraph">如果丢失适用于VMware vSphere的ONTAP工具设置、您可以使用ONTAP卷数据中提供的数据恢复适用于VMware vSphere的ONTAP工具设置。如果设置丢失、请正常关闭设置。</block>
   <block id="51bc5399ec09a540c942908f434a6727" category="section-title">最低存储和应用程序要求</block>
   <block id="4bcb36ab655842162169378c79643b23" category="summary">一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。</block>
@@ -1560,7 +1490,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="9062a44d27a4f37689abd458521d9079" category="paragraph"><block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>有关详细信息、请参见。</block>
   <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。适用于VMware vSphere的ONTAP工具可轻松直观地创建igrop、并提供丰富的端到端工作流。为确保一致性、不支持在存储平台上直接创建iGroup。</block>
   <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。单击时<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>，维护控制台将启动。</block>
-  <block id="f02f2c757f889d163cf5903890ac95ef" category="sidebar">配置限制</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">一致性组</block>
   <block id="eba11c7a4079ec571b88361adcae2df5" category="inline-link">一致性组</block>
   <block id="0668b41054907094c1a4aab4f8e838d1" category="paragraph">一致性组是指作为一个单元进行管理的一组卷。在ONTAP中、一致性组可为跨多个卷的应用程序工作负载提供轻松的管理和保护保证。详细了解<block ref="53f778179cc7ee2da9dcd6ff88e07f22" category="inline-link-rx"></block>。</block>
@@ -1646,9 +1575,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="5db00eaa4c79d099ee52c43a21bf597a" category="paragraph">此时将使用作业ID详细信息创建一个vCenter任务、并且近期任务面板中会显示此任务的进度。这是一个异步任务、用户界面仅显示请求提交状态、不会等待任务完成。</block>
   <block id="02ecc951ba9c7de4ba8def4213f1982e" category="list-text">要查看受保护的主机集群，请导航到*Host tools*&gt;*Protectation*&gt;* NetApp ONTAP cluster几何关系*。</block>
   <block id="689f487789c06af94daaa5b3ad3db058" category="cell">256 [注意]表中的主机数显示了来自多个vCenter的主机总数。</block>
-  <block id="04442662e426cf1c91b64ae275a00818" category="paragraph">有关每个节点的主机系统规模估算要求的详细信息，请参见<block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>。</block>
-  <block id="c6963b61bbf526b2f0f3dc36e4c4dc5e" category="section-title">创建内容库</block>
-  <block id="fc0eba4777e2417aaf8aece20ca94e16" category="admonition">要部署HA三节点配置、必须创建内容库。<block ref="a2ade95cc38eb3781705a73dc8c68908" category="inline-link-macro-rx"></block>有关此过程、请参见第节。有关详细信息、请参见<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>博客。</block>
   <block id="a14afee79848f51d5784f4f72ef33c1c" category="list-text">导航到已创建的资源池、集群或要部署OVA的主机。</block>
   <block id="9e13dbd297f9b6523d249380782c6af6" category="admonition">请勿在VMware vSphere虚拟机所管理的vvol数据存储库上部署适用于该虚拟机的ONTAP工具。</block>
   <block id="3ad150a812c29bae9599272d5640318b" category="list-text">通过_.ova_文件的URL选择OVA文件，或者浏览到保存_.ova_文件的文件夹，然后单击*Next*。</block>
@@ -1668,10 +1594,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="987c9f700a5bd03a6ea089f6cb588900" category="paragraph">确保网络路由存在。存储数据网络必须可从VM管理网络访问。例如、登录到ONTAP &gt;运行命令_network route create -vserver &lt;SVM&gt;-Destination 0.0.0.0/0 -Gateway &lt;gateway_ip&gt;_</block>
   <block id="fa1f5a4960495d569163d97ca0f8ba26" category="list-text">阅读并接受许可协议。</block>
   <block id="01d4191e5d25b58cfd9d81ed5b94385e" category="list-text">在*自定义模板*中，输入所需的详细信息，然后单击*下一步*</block>
-  <block id="998959647c4f459fa4e5e8584a889f0d" category="list-text">用于部署OVA的父vCenter Server凭据。父vCenter Server密码不应包含这些特殊字符($、'、")。</block>
   <block id="3a77b52bfa16ddbe78301f821536b47f" category="list-text">导航到已创建的资源池、节点集群或要部署OVA的主机。</block>
   <block id="bb723964e950253ab9a0d3f03e8c2a30" category="list-text">在*自定义模板*窗口中，输入所需的详细信息，然后单击*下一步*</block>
-  <block id="c4236ddf8cb845d01d9f537ff16935e5" category="paragraph">成功安装后、您应按照页面中的准则手动编辑硬件要求 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 。</block>
   <block id="23a6b04e10cd61ebd1d4bab98f30ea6a" category="inline-link">适用于VMware vSphere 10.2的ONTAP工具的注意事项</block>
   <block id="e7b20c6075e473840f381c7cefae69eb" category="paragraph"><block ref="e7b20c6075e473840f381c7cefae69eb" category="inline-link-rx"></block></block>
   <block id="708a9faa83bd031efac98fcfcc00b55f" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>以选择Enable remote diagnostics access。</block>
@@ -1747,7 +1671,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="929d4b31f1c50c6c72409f0bf4ba7863" category="doc">从适用于VMware vSphere 9.x的ONTAP工具迁移到10.2</block>
   <block id="5ddb4f14bcf9ccda5a654d01d9537cd7" category="admonition">建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。</block>
   <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">部署适用于VMware vSphere 10.2版的适用于ONTAP的OVA工具。</block>
-  <block id="bd0f2e6bf32427dcda6828d92fdc2bb7" category="list-text">添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参见 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">从适用于VMware vSphere插件的ONTAP工具vCenter Server API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。</block>
   <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
   <block id="f2f34eedd3398b474ec363008e4f96c1" category="list-text">添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参阅。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
@@ -1776,7 +1699,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">在编辑设置窗口的*CD/DVD驱动器*字段中，选择内容库ISO文件。</block>
   <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">此版本中的新增功能</block>
   <block id="4d4c4bd87a75920c82f20ee9d507ffc3" category="paragraph">提供有关适用于VMware vSphere的此版本ONTAP工具的重要信息。</block>
-  <block id="556b050ce914d18480d6ea30308c7790" category="sidebar">恢复</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">挂载NFS和VMFS数据存储库</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸载NFS和VMFS数据存储库</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展开vVol数据存储库</block>
@@ -1884,4 +1806,47 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">继续操作前、请检查以下各项：</block>
   <block id="2557cccd5218f319091e35b938bd9d10" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.2 SRA适配器的ONTAP工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">成功迁移并将ONTAP工具10.2注册到vCenter Server后、请执行以下操作：</block>
+  <block id="246855aa8f01c0fbf2455bc1e4f5cd38" category="paragraph">存储后端是ESXi主机用于数据存储的系统。您可以使用ONTAP工具管理器或vSphere客户端UI添加存储后端。</block>
+  <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">使用ONTAP工具管理器</block>
+  <block id="66d025bf05fa7a9a47b57b658e95b76a" category="open-title">使用vSphere客户端UI</block>
+  <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">添加vCenter Server实例</block>
+  <block id="156c9babe4cccf84358d84e617616ce5" category="paragraph">您可以在两种配置中部署适用于VMware vSphere的ONTAP工具：</block>
+  <block id="38c6dd6f68eae9b7d0bee03a43d52083" category="list-text">非HA单节点配置</block>
+  <block id="2ae32cce8d9e1bdcb0478c5f14d4be9c" category="list-text">HA配置</block>
+  <block id="9d0c1154faecde38baf4c2a1e8f8e9e6" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
+  <block id="55c44f68688c2d86f70cb86652b69198" category="admonition">不支持纯IPv6。具有IPv6和IPv4地址的VLAN支持混合模式。</block>
+  <block id="c2a81054397fa314b9af9c4d4df908ba" category="paragraph">要部署HA三节点配置、必须先创建内容库。VMware中的内容库是一个容器对象、用于存储VM模板、vapp模板和其他类型的文件。使用内容库进行部署可为您提供无缝体验、因为它不依赖于网络连接。</block>
+  <block id="e18fee33ee299b3c7ecfc0bcb0a7489b" category="admonition">您应将内容库存储在共享数据存储库上、以便集群中的所有主机都可以访问该内容库。在HA配置中部署OVA之前、您需要创建一个内容库来存储此OVA。</block>
+  <block id="4f454f309db67b680e37db0b3943a2cd" category="admonition">内容库模板一旦上传、不应在部署后删除、因为它将在重新启动期间使用。</block>
+  <block id="df6507772bc80aa0fd34bbd6ccf1129c" category="paragraph">按照以下步骤创建内容库：</block>
+  <block id="76c9f2fd0b61e8f84a42f7ab8d5ce641" category="admonition">有关详细信息、请参见<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>博客。</block>
+  <block id="6b373c8cb8fb1cd1a92b3762ada8ce1d" category="paragraph">您可以在VM的Web控制台中跟踪安装进度。</block>
+  <block id="e7536442aca2ce381780a9b5e294fb3a" category="paragraph">如果在OVF表单中输入的值存在任何差异、则会显示一个对话框、提示您采取更正操作。在对话框中进行必要的更改、使用选项卡按钮导航并选择"确定"。您可以尝试三次以更正任何问题。如果尝试三次后问题仍然存在、则安装过程将停止、建议在新虚拟机上重试安装。</block>
+  <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">系统要求</block>
+  <block id="599aca03900e1b728df9d2a9dcacb344" category="paragraph">有关每个节点的主机系统规模估算要求的详细信息，请参见<block ref="f31c9da32555b30fe5b4be0155d7e457" category="inline-link-macro-rx"></block>。</block>
+  <block id="c835189e96a34f383995f3acc1bc2227" category="section-title">部署前检查</block>
+  <block id="7fce4518a34f28594b5d03a26ecb9f1b" category="paragraph">在继续部署之前、请确保已准备好以下各项：</block>
+  <block id="398a1d501386602b7637af74ee1f0050" category="list-text">已设置并配置vCenter Server环境。</block>
+  <block id="1e1b4fa8e125bba341f466b9e6da76fb" category="list-text">(可选)对于自动化用户—收集NetApp提供的Postman集合JSON文件。</block>
+  <block id="f4a9ce78bb78e3ef08eca681d647c97f" category="list-text">已准备好用于部署OVA的父vCenter Server凭据。</block>
+  <block id="4501e00e353424cff3952eefd1e4da0b" category="admonition">父vCenter Server密码不应包含这些特殊字符($、'、")。</block>
+  <block id="c5323fb352d4289acd4e443d9b6ffbc6" category="list-text">您拥有适用于VMware vSphere的ONTAP工具要连接到的vCenter Server实例的登录凭据、以便在部署后进行注册。</block>
+  <block id="f0e37f4c361ffc72156998eab274a0df" category="list-text">已删除浏览器缓存。</block>
+  <block id="3329fe5e48659261596f0eb67edfb0ee" category="list-text">确保有三个可用IP地址可用于非HA部署—一个用于负载平衡器的可用IP地址、一个用于Kubnetes控制平台的可用IP地址和一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。在分配之前、应将主机名映射到DNS上的可用IP地址。所有这五个IP地址都应位于为部署选择的同一个VLAN上。</block>
+  <block id="89e60c832660d19053506627cc1f15b4" category="list-text">确保在多vCenter部署中、颁发证书的域名映射到虚拟IP地址、在该部署中、自定义CA证书是必需的。对域名执行_nslookup_ check以检查域是否已解析为预期的IP地址。应使用负载平衡器IP地址的域名和IP地址创建证书。</block>
+  <block id="7b4a891ff8781d5df1c6613d8a092a8a" category="doc">管理vCenter Server实例</block>
+  <block id="55a2bc624166080e36f75d7c8c9ae6a9" category="paragraph">vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟机和存储后端。</block>
+  <block id="3f886969263f0595fc5dd4799269f188" category="list-text">从工具条中选择所需的vCenter Server实例。</block>
+  <block id="328fffedf05a4fd19a6c35615f155640" category="section-title">修改vCenter Server实例</block>
+  <block id="3a6c7e3375d2a0a0ca085b1471bf2e8a" category="paragraph">请按照以下步骤修改vCenter Server实例。</block>
+  <block id="09a7915402ea99d52bd59c26effb3cd9" category="list-text">从侧栏中选择适用的vCenter Server实例</block>
+  <block id="db846111e857460f56cbf51ec88e1faa" category="section-title">删除vCenter Server实例</block>
+  <block id="9d7b692a21eb697ecb2b728a45d820e9" category="list-text">从工具条中选择适用的vCenter Server实例</block>
+  <block id="53b6d9a27611577cca2fc7f28a47183c" category="admonition">删除vCenter Server实例后、应用程序将不再维护这些实例。</block>
+  <block id="d99c897e741ebd0d0a2745fdcd88a080" category="list-text">添加要迁移到适用于VMware vSphere 10.2版的ONTAP工具的vCenter Server实例。请参见 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="0dd6f7bffe5559434d73e3bf74241b79" category="paragraph">成功安装后、您应按照页面中的准则手动编辑硬件要求 <block ref="f31c9da32555b30fe5b4be0155d7e457" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">添加vCenter Server</block>
+  <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">部署 ONTAP 工具</block>
+  <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">恢复ONTAP工具</block>
+  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">恢复ONTAP工具</block>
 </blocks>

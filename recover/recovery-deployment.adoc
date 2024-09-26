@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery-deployment.html 
+permalink: recover/recovery-deployment.html 
 sidebar: sidebar 
 keywords:  
 summary: 如果您丢失了适用于VMware vSphere的ONTAP工具设置、但ONTAP仍在运行、则可以使用ONTAP恢复适用于VMware vSphere的ONTAP工具设置。如果设置丢失、请正常关闭设置。 
@@ -58,4 +58,4 @@ NOTE: 启用SVM范围后、您应事先使用管理IP地址启用SVM支持。
 
 成功安装后、Web控制台将显示适用于VMware vSphere的ONTAP工具的状态。
 
-成功安装后、您应按照页面中的准则手动编辑硬件要求 link:../deploy/sizing-requirements.html["部署适用于VMware vSphere的ONTAP工具的前提条件"] 。
+成功安装后、您应按照页面中的准则手动编辑硬件要求 link:../deploy/prerequisites.html["部署适用于VMware vSphere的ONTAP工具的前提条件"] 。

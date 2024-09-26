@@ -4,7 +4,7 @@ title: 配置 ONTAP 工具
 entries:
 - title: ONTAP工具管理器用户界面
   url: "/configure/manager-user-interface.html"
-- title: 添加和管理vCenter Server
+- title: 添加vCenter Server
   url: "/configure/add-vcenter.html"
 - title: 向vCenter Server注册VASA Provider
   url: "/configure/registration-process.html"
@@ -22,14 +22,14 @@ entries:
     url: "/configure/esxi-host-values.html"
 - title: 发现存储系统和主机
   url: "/configure/discover-storage-systems-and-hosts.html"
+- title: 配置ONTAP用户角色和权限
+  url: "/configure/configure-user-role-and-privileges.html"
 - title: 添加存储后端
   url: "/configure/add-storage-backend.html"
 - title: 将存储后端与vCenter Server实例相关联
   url: "/configure/associate-storage-backend.html"
 - title: 配置网络访问
   url: "/configure/configure-network-access.html"
-- title: 配置ONTAP用户角色和权限
-  url: "/configure/configure-user-role-and-privileges.html"
 - title: 适用于VMware vSphere的NetApp ONTAP工具插件信息板概述
   url: "/configure/dashboard-overview.html"
 - title: 创建主机集群保护

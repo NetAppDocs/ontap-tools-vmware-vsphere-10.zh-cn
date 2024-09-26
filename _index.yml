@@ -10,7 +10,7 @@ indexpage:
     - title: 了解适用于 VMware vSphere 的 ONTAP 工具
       url: "/concepts/ontap-tools-overview.html"
     - title: 部署适用于VMware vSphere的ONTAP工具
-      url: "/deploy/prepare-deployment.html"
+      url: "/deploy/ontap-tools-deployment.html"
     - title: 升级到适用于VMware vSphere的ONTAP工具的最新版本
       url: "/upgrade/upgrade-ontap-tools.html"
     - title: 迁移适用于VMware vSphere的ONTAP工具

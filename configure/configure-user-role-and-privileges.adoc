@@ -143,7 +143,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 |===
 
 
-=== 将适用于VMware vSphere 10.1用户的ONTAP工具升级到10.2用户
+== 将适用于VMware vSphere 10.1用户的ONTAP工具升级到10.2用户
 
 如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的集群范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.2版。
 
