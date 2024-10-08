@@ -21,7 +21,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">提供有关适用于 VMware vSphere 的此版本 ONTAP 工具的重要信息，包括新增功能和增强功能，已修复的问题，已知问题，注意事项和限制。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">发行说明</block>
-  <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">提供有关适用于 VMware vSphere 的此版本 ONTAP 工具的重要信息，包括已修复的问题，已知问题，注意事项和限制。</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*每个节点的安装包空间要求*</block>
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">10 GB用于精简配置安装</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*每个节点的主机系统规模估算要求*
@@ -1680,7 +1679,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="74b27627165f74c84a8f31981da59bce" category="list-text">指定保护组的名称和说明、方向并单击*下一步*。</block>
   <block id="aa204271b3b654aa91947cf038f3e150" category="list-text">双击vSphere Client主页上的*站点恢复*、然后单击*站点*。</block>
   <block id="41dd8791118d286f9dd16dda93fb4676" category="inline-link">适用于VMware vSphere 10.2的ONTAP工具发行说明</block>
-  <block id="c801e65ec97aa4aa423dadb596e0ae66" category="paragraph">有关详细信息，请参见<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>。</block>
   <block id="d2716515bd05082789a31002d4bbc958" category="cell">091</block>
   <block id="43474d50dc285d06ee8ee53c42bd7425" category="cell">iSCSI升级失败</block>
   <block id="e64770ac6bac05626b4f59b6a03e2ff8" category="cell">092</block>
@@ -1697,8 +1695,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="cd93511e96156295ce407e7171040058" category="admonition">要从适用于VMware vSphere 10.0的ONTAP工具升级到10.2版、您需要先升级到适用于VMware vSphere 10.1的ONTAP工具、然后再升级到10.2版。</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">如果要从适用于VMware vSphere 10.0的ONTAP工具升级到10.1、则需要完成以下步骤、然后再继续执行升级任务：</block>
   <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">在编辑设置窗口的*CD/DVD驱动器*字段中，选择内容库ISO文件。</block>
-  <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">此版本中的新增功能</block>
-  <block id="4d4c4bd87a75920c82f20ee9d507ffc3" category="paragraph">提供有关适用于VMware vSphere的此版本ONTAP工具的重要信息。</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">挂载NFS和VMFS数据存储库</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸载NFS和VMFS数据存储库</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展开vVol数据存储库</block>
@@ -1710,7 +1706,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它与VMware生态系统集成、有助于配置数据存储库并为虚拟机提供基本保护。</block>
   <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">适用于VMware vSphere的ONTAP工具是一组可水平扩展的事件驱动型微服务、部署为开放式虚拟设备(OVA)。此版本已将REST API与ONTAP集成在一起。</block>
   <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">ONTAP 9．12.1、9．1．1、9．1．1和9．1．1的最新修补程序版本。</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.2版本。</block>
   <block id="9c914c30102fcf893634491740cba696" category="paragraph">ONTAP工具管理器可让VMware vSphere管理员通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。ONTAP工具管理器可帮助您管理vCenter Server实例、存储后端、证书、密码和日志捆绑包下载。</block>
   <block id="81d59d981388d591597f0840a1778f7c" category="paragraph">SRA是存储供应商专用的软件、安装在VMware Live Site Recovery设备中。通过该适配器、可以在Storage Virtual Machine (SVM)级别和集群级别配置上实现Site Recovery Manager与存储控制器之间的通信。</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
@@ -1849,4 +1844,63 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">部署 ONTAP 工具</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">恢复ONTAP工具</block>
   <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">恢复ONTAP工具</block>
+  <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D1、9.12D1和9.13D2的ONTAP工具迁移到10.2版。</block>
+  <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
+  <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
+  <block id="71581c0be7a347807a5d3847fde7ec18" category="paragraph">了解从适用于VMware vSphere 9的ONTAP工具迁移到适用于VMware vSphere 10.1或VMware vSphere 10.2的ONTAP工具是否适合您。有关最新的兼容性信息，请参阅<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
+  <block id="e2e5efdc8b340ced50733afbe15a4fad" category="cell">ONTAP工具9.13.</block>
+  <block id="ec00f002c530dcfbc3a0e06a58d47937" category="cell">ONTAP工具10.1</block>
+  <block id="8192138c7b90bb4854daa73842003f2c" category="cell">ONTAP工具10.2</block>
+  <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">关键价值主张</block>
+  <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">利用增强的安全性、合规性和自动化功能简化零日到二日运营</block>
+  <block id="798f5d4722c6982593d6671eef46371d" category="cell">在扩展高可用性、性能和扩展限制的同时、将ONTAP工具10.x向9.x奇偶校验发展</block>
+  <block id="b96b395121ebad86d9a5850232e77183" category="cell">扩展了支持范围、仅包括适用于VMFS和VMware的FC以及适用于VMFS的NVMe-oF、NVMe-oF、TCP。NetApp SnapMirror易于使用、vSphere城域存储集群设置简单、并支持三站点SRM</block>
+  <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAP版本资格认定</block>
+  <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">ONTAP 9．9.1至ONTAP 9．15．1</block>
+  <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">ONTAP 9．12.1至ONTAP 9．14.1</block>
+  <block id="aaf6e1251cbc7e7b17911496f89b36fe" category="cell">ONTAP 9．12.1至ONTAP 9．15．1</block>
+  <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">VMware版本支持</block>
+  <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5到VMware Live Site Recovery 9.0</block>
+  <block id="170ea24c94c478abd1871386c2d1ec72" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7到VMware Live Site Recovery 9.0</block>
+  <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">协议支持</block>
+  <block id="e810af0cb36135a5b8e6f2da4440d6cb" category="cell">NFS和VMFS数据存储库：NFS (v3和v4.1)、VMFS (iSCSI和FCP) Vvol数据存储库：iSCSI、FCP、NVMe/FC、NFS v3</block>
+  <block id="8bc8491da19ddf762b07de3144d61829" category="cell">NFS和VMFS数据存储库：NFS (v3和v4.1)、VMFS (iSCSI) Vvol数据存储库：iSCSI、NFS v3</block>
+  <block id="945e5bf339d57e18c8160e2e3df16d62" category="cell">NFS和VMFS数据存储库：NFS (v3和v4.1)、VMFS (iSCSI/FCP/NVMe-oF) Vvol数据存储库：iSCSI、FCP、NFS v3</block>
+  <block id="2d215ebfc0280f8163d071454ec7ce01" category="cell">可扩展性</block>
+  <block id="1dc64c16edbea8bc4c02d8fc9f91793e" category="cell">主机和VM：300个主机、多达10000个VM数据存储库：600个NFS、多达50个VMFS、多达250个Vvol Vvol：多达14、000个</block>
+  <block id="1cd0e9deda1f8d2ec1d07623c8de9dd3" category="cell">主机和VM：600个主机Vvol：最多可达｛\f151、｝｛\f151。｝</block>
+  <block id="31fd0c2c8d388a4cd2c6459234743476" category="cell">可观察性</block>
+  <block id="0ae86707597758caa42797b966846966" category="cell">性能、容量和主机合规性信息板动态VM和数据存储库报告</block>
+  <block id="e48d3655de549622076e6823dc5953da" category="cell">更新了性能、容量和主机合规性信息板动态VM和数据存储库报告</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">数据保护</block>
+  <block id="efee7a2d070a492110e424ced07a5cb4" category="cell">适用于基于VMFS和NFS FlexVol的复制的SRA复制、用于VVO尔SCV集成并可互操作以进行备份</block>
+  <block id="15449f9a7ac234221e11423d597b85d4" category="cell">iSCSI VMFS和NFS v3数据存储库的SRA复制</block>
+  <block id="60d68cab51d9c8a782f647a80a3dc658" category="cell">适用于iSCSI VMFS和NFS v3数据存储库的SRA复制、三站点保护、结合SMAS和SRM。</block>
+  <block id="b3dc8af7a4f134b177b24282d77ca3eb" category="cell">提供了对VASA Provider的支持</block>
+  <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
+  <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
+  <block id="620a99069ca21ddda63311030de128d1" category="paragraph">了解适用于VMware vSphere 10.2的ONTAP工具中提供的新增功能和增强功能。</block>
+  <block id="a0f2f641913db0ffffab76fafad81203" category="inline-xref-macro">适用于VMware vSphere 10.2的ONTAP工具中的新增功能</block>
+  <block id="c796cc4c6989b5a604c6eef24c2de84d" category="paragraph">有关新增功能和增强功能的完整列表，请参见<block ref="815f650045efcb134f42d68a8e4fca4c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="66e41f837b141c5c933d4281f7abe97c" category="paragraph">要详细了解从适用于VMware vSphere 9的ONTAP工具迁移到ONTAP Tools 10.2是否适合您的部署，请参见<block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>。支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到ONTAP Tools 10.2。</block>
+  <block id="bb8eb6c356c3f564a1613f6389297778" category="paragraph">有关详细信息，请参见<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
+  <block id="0d43955405fcb8a6a71cf0abd21c3e42" category="summary">了解适用于VMware vSphere 10.2的ONTAP工具中提供的新功能。</block>
+  <block id="e326cb748235539f45a016f59b087724" category="doc">适用于VMware vSphere 10.2的ONTAP工具中的新增功能</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
+  <block id="f9c5165567b26fd44d26cca28ae989f8" category="inline-xref-macro">NVMe协议支持</block>
+  <block id="4348c73f2f4a3114c481b101d6c05b63" category="paragraph"><block ref="4348c73f2f4a3114c481b101d6c05b63" category="inline-xref-macro-rx"></block></block>
+  <block id="5a0b2b57fe55f878474bb1c7fe15d781" category="paragraph">适用于VMware vSphere 10.2的ONTAP工具支持使用NVMe/FC和NVMe/TCP协议来配置VMFS数据存储库。vCenter界面中无缝集成的工作流简化了数据存储库配置。使用NVMe/FC和NVMe/TCP协议配置VMFS数据存储库的优势包括：优化的性能、大规模可扩展性和高效处理多个数据请求、显著缩短延迟以及高效的资源管理。与传统数据协议相比、基于NVMe的存储IO的CPU利用率可降低多达50%。</block>
+  <block id="7d8b9f8f245933a3f23753f3aa1969c9" category="inline-xref-macro">光纤通道(Fibre Channel、FC)协议支持</block>
+  <block id="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="paragraph"><block ref="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="inline-xref-macro-rx"></block></block>
+  <block id="5dea3d6458f352c0baabcd90a7577765" category="paragraph">适用于VMware vSphere 10.2的ONTAP工具支持使用FC协议配置vvol和VMFS数据存储库。FC协议支持的优势包括高性能、可靠性和稳定性、可扩展性、增强的安全性以及高效的资源管理。</block>
+  <block id="b0152c6ea6956b36bce225d922d832c9" category="paragraph"><block ref="b0152c6ea6956b36bce225d922d832c9" category="inline-xref-macro-rx"></block></block>
+  <block id="e7dc7e22d370d773fbdac05c041a62da" category="paragraph">适用于VMware vSphere 10.2的ONTAP工具对SnapMirror主动同步的支持包括一项全新的保护集群功能、该功能可通过端到端配置工作流在vCenter UI中构建vSphere Metro Storage。这样、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。</block>
+  <block id="282017cc6c0ad4ab6de03aa6f4cdbd64" category="paragraph">除了SnapMirror活动同步之外、SnapMirror向导还可以配置SnapMirror异步和同步。</block>
+  <block id="1d8dd3cdaea3514d2aa5572ad597f0ca" category="inline-xref-macro">Storage Replication Adapter (SRA)增强功能</block>
+  <block id="118d400244411eadc174437736f63aef" category="paragraph"><block ref="118d400244411eadc174437736f63aef" category="inline-xref-macro-rx"></block></block>
+  <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRA可实施基于VMware Site Recovery Manager (SRM)规范的灾难恢复(Disaster Recovery、DR)解决方案。通过SRM集成的SnapMirror主动同步支持灾难恢复规划和流程编排解决方案、以提供透明的应用程序故障转移。</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
+  <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP工具9和ONTAP工具10功能比较</block>
 </blocks>

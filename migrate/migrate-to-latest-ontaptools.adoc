@@ -18,7 +18,7 @@ NOTE: 建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提�
 
 * 关于此任务 *
 
-支持从适用于VMware vSphere 9.10D2、9.11D2、9.12和9.13版本的ONTAP工具迁移到10.2版本。
+支持从适用于VMware vSphere 9.10D2、9.11D1、9.12D1和9.13D2的ONTAP工具迁移到10.2版。
 
 
 NOTE: 作为现有用户、在升级到修补程序版本之前、您需要从当前版本创建OVA备份。
