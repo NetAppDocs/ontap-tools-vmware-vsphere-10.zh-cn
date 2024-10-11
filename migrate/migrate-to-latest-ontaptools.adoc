@@ -14,7 +14,10 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA提供程序数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。
 
 
-NOTE: 建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。
+NOTE: 建议仅在适用于VMware vSphere 9.x的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。
+
+
+NOTE: 从适用于VMware vSphere的ONTAP工具9.x迁移到10.2后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.2仅支持对VMFS数据存储库使用NVMe-oF。
 
 * 关于此任务 *
 

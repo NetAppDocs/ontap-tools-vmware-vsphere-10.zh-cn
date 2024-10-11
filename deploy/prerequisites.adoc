@@ -43,7 +43,7 @@ summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部�
 
 | 大(L) | 16. | 32. 
 |===
-link:../deploy/config-limits.html["部署适用于VMware vSphere的ONTAP工具的配置限制"]有关详细信息、请参见。
+有关详细信息、请参阅下面的_配置限制以部署适用于VMware vSphere的ONTAP工具_一节。
 
 
 

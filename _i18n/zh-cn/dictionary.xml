@@ -1486,7 +1486,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">*部署类型*</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU *</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">*内存(GB)*</block>
-  <block id="9062a44d27a4f37689abd458521d9079" category="paragraph"><block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>有关详细信息、请参见。</block>
   <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">在ONTAP中、导出策略用于提供对主机的卷数据路径访问、而启动程序组(igrou)用于提供对ESXi主机的逻辑单元号(Logical Unit Number、LUN)数据路径访问。适用于VMware vSphere的ONTAP工具可轻松直观地创建igrop、并提供丰富的端到端工作流。为确保一致性、不支持在存储平台上直接创建iGroup。</block>
   <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。单击时<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>，维护控制台将启动。</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">一致性组</block>
@@ -1668,7 +1667,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">如果数据存储库属于受保护主机集群、则会显示一条警告消息。</block>
   <block id="303fed3350b929d95f1f937c9d4e0032" category="admonition">如果已卸载受保护的数据存储库、则现有保护设置可能会导致部分保护。<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>要启用全面保护、请参见。</block>
   <block id="929d4b31f1c50c6c72409f0bf4ba7863" category="doc">从适用于VMware vSphere 9.x的ONTAP工具迁移到10.2</block>
-  <block id="5ddb4f14bcf9ccda5a654d01d9537cd7" category="admonition">建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。</block>
   <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">部署适用于VMware vSphere 10.2版的适用于ONTAP的OVA工具。</block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">从适用于VMware vSphere插件的ONTAP工具vCenter Server API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。</block>
   <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.2的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
@@ -1903,4 +1901,7 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRA可实施基于VMware Site Recovery Manager (SRM)规范的灾难恢复(Disaster Recovery、DR)解决方案。通过SRM集成的SnapMirror主动同步支持灾难恢复规划和流程编排解决方案、以提供透明的应用程序故障转移。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP工具9和ONTAP工具10功能比较</block>
+  <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">有关详细信息、请参阅下面的_配置限制以部署适用于VMware vSphere的ONTAP工具_一节。</block>
+  <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">建议仅在适用于VMware vSphere 9.x的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。</block>
+  <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">从适用于VMware vSphere的ONTAP工具9.x迁移到10.2后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.2仅支持对VMFS数据存储库使用NVMe-oF。</block>
 </blocks>
