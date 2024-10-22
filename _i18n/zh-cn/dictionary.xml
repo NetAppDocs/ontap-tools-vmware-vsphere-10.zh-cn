@@ -1902,6 +1902,7 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">有关详细信息、请参阅下面的_配置限制以部署适用于VMware vSphere的ONTAP工具_一节。</block>
   <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">建议仅在适用于VMware vSphere 9.x的ONTAP工具设置仅用于提供vasa提供程序功能时才迁移此设置。</block>
   <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">从适用于VMware vSphere的ONTAP工具9.x迁移到10.2后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.2仅支持对VMFS数据存储库使用NVMe-oF。</block>
-  <block id="3a3be4ef9c2ffae0f29834b33de5a0ac" category="list-text">确保有三个可用IP地址可用于非HA部署—一个用于负载平衡器的可用IP地址、一个用于Kubnetes控制平台的可用IP地址和一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。在为HA和非HA部署分配之前、应将主机名映射到DNS上的可用IP地址。HA部署中的所有五个IP地址都应位于为部署选择的同一个VLAN上。</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">在*配对站点恢复管理器服务器*对话框中、输入受保护站点的平台服务控制器的地址、然后单击*下一步*。</block>
+  <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">确保有三个可用IP地址可用于非HA部署—一个用于负载平衡器的可用IP地址、一个用于Kubnetes控制平台的可用IP地址和一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。在为HA和非HA部署分配之前、应将主机名映射到DNS上的可用IP地址。HA部署中的所有五个IP地址以及非HA部署中的三个IP地址都应位于为部署选择的同一个VLAN上。</block>
+  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA提供程序/SRA时需要执行此操作。</block>
 </blocks>
