@@ -26,7 +26,7 @@ NOTE: Storage Replication Adapter （ SRA ）不支持扇出 SnapMirror 配置�
 
 . 双击vSphere Client主页上的*站点恢复*、然后单击*站点*。
 . 单击 * 对象 * > * 操作 * > * 配对站点 * 。
-. 在 Pair Site Recovery Manager Servers 对话框中，输入受保护站点的平台服务控制器的地址，然后单击 * 下一步 * 。
+. 在*配对站点恢复管理器服务器*对话框中、输入受保护站点的平台服务控制器的地址、然后单击*下一步*。
 . 在 Select vCenter Server 部分中，执行以下操作：
 +
 .. 验证受保护站点的 vCenter Server 是否显示为要配对的匹配候选服务器。
