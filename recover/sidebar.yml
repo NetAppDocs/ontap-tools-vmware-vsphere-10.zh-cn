@@ -2,5 +2,5 @@
 section: recover
 title: 恢复ONTAP工具
 entries:
-- title: 恢复ONTAP工具
+- title: 恢复ONTAP工具设置
   url: "/recover/recovery-deployment.html"

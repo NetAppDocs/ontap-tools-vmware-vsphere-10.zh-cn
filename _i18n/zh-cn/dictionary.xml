@@ -308,9 +308,6 @@
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">ESXi主机合规性卡</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">此卡按设置组/类别显示所有ESXi主机(对于选定vCenter)设置与建议的NetApp主机设置的整体合规状态。
 您可以单击应用建议设置链接来应用建议的设置。您可以单击Isses/Unknown以查看主机列表。</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">您可以在ESXi主机上运行按需发现、以获取有关存储数据的最新更新。</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">更新主机数据</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">在*更新主机数据*弹出窗口中，选择*是*以重新开始发现所有已连接的存储系统。</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色。</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">配置ONTAP用户角色和权限</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色和特权。</block>
@@ -1301,9 +1298,7 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="721041095b64df665034c0b19c967475" category="sidebar">适用于VMware vSphere的ONTAP工具的高可用性</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用 REST API 实现自动化</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">保护数据存储库和虚拟机</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">配置用于灾难恢复的存储系统</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">为高度扩展的环境配置SRA</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">配置受保护站点和恢复站点</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">配置受保护站点和恢复站点资源</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">验证复制的存储系统</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">升级 ONTAP 工具</block>
@@ -1524,7 +1519,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">添加基于RDMA的软件NVMe或基于TCP适配器的NVMe</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">对于VMware vSphere 7版本、请按照VMware站点上的说明<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text"><block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block>在ESXi主机上运行操作。有关详细信息、请参见<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">如果您使用的是NVMe/FC协议、请执行以下步骤来配置ESXi主机：</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">在ESXi主机上启用基于网络结构的NVMe (NVMe-oF)。</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">完成SCSI分区。</block>
@@ -1839,7 +1833,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">添加vCenter Server</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">部署 ONTAP 工具</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">恢复ONTAP工具</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">恢复ONTAP工具</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">支持从适用于VMware vSphere 9.10D2、9.11D1、9.12D1和9.13D2的ONTAP工具迁移到10.2版。</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
@@ -1905,4 +1898,8 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">在*配对站点恢复管理器服务器*对话框中、输入受保护站点的平台服务控制器的地址、然后单击*下一步*。</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">确保有三个可用IP地址可用于非HA部署—一个用于负载平衡器的可用IP地址、一个用于Kubnetes控制平台的可用IP地址和一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。在为HA和非HA部署分配之前、应将主机名映射到DNS上的可用IP地址。HA部署中的所有五个IP地址以及非HA部署中的三个IP地址都应位于为部署选择的同一个VLAN上。</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA提供程序/SRA时需要执行此操作。</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text"><block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block>在ESXi主机上运行操作。有关详细信息、请参见<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主机集群保护进行保护</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用SRA保护进行保护</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">恢复ONTAP工具设置</block>
 </blocks>

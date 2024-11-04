@@ -2,20 +2,22 @@
 section: protect
 title: 保护数据存储库和虚拟机
 entries:
-- title: 启用 SRA 以保护数据存储库
-  url: "/protect/enable-storage-replication-adapter.html"
-- title: 配置用于灾难恢复的存储系统
+- title: 使用主机集群保护进行保护
   entries:
+  - title: 创建主机集群保护
+    url: "/configure/protect-cluster.html"
+- title: 使用SRA保护进行保护
+  entries:
+  - title: 启用 SRA 以保护数据存储库
+    url: "/protect/enable-storage-replication-adapter.html"
   - title: 为SAN和NAS环境配置SRA
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"
   - title: 为高度扩展的环境配置SRA
     url: "/protect/configure-storage-replication-adapter-for-highly-scaled-environment.html"
-- title: 在VMware Live Site Recovery设备上配置SRA
-  url: "/protect/configure-on-srm-appliance.html"
-- title: 更新 SRA 凭据
-  url: "/protect/update-credentials.html"
-- title: 配置受保护站点和恢复站点
-  entries:
+  - title: 在VMware Live Site Recovery设备上配置SRA
+    url: "/protect/configure-on-srm-appliance.html"
+  - title: 更新 SRA 凭据
+    url: "/protect/update-credentials.html"
   - title: 配置保护组
     url: "/protect/configure-protection-groups.html"
   - title: 将受保护站点和恢复站点配对
