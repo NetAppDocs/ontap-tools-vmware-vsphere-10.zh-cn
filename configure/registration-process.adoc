@@ -29,3 +29,27 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
 
 
 
+
+* 完成后 *
+
+通过vCenter客户端UI和远程插件UI验证已启用的VASA Provider是否列在VASA Provider下。
+
+* 步骤 *
+
+. 要从vCenter客户端UI验证VASA Provider、请执行以下步骤：
++
+.. 导航到vCenter Server。
+.. 使用管理员凭据登录。
+.. 选择*存储提供程序*。
+.. 选择 * 配置 * 。
+.. 在存储提供程序/存储后端下、验证是否已正确列出已启用的VASA提供程序。
+
+
+. 要从远程插件UI验证VASA Provider、请执行以下步骤：
++
+.. 使用登录到vSphere Client `\https://vcenterip/ui`
+.. 在快捷方式页面中，单击插件部分下的NetApp ONTAP tools*。
+.. 您可以在概述页面和*设置*>* VASA Provider设置*页面中查看已注册的VASA Provider。
+
+
+
