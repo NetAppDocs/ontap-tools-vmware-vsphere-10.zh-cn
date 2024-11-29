@@ -1901,4 +1901,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用SRA保护进行保护</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">恢复ONTAP工具设置</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 完成后 *</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">在HA部署模式下、请勿在部署后重命名虚拟机名称。</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">如果您正在使用适用于VMware vSphere 9.13P1版本的ONTAP工具、则应先升级到9.13D2、然后再迁移到10.2版。</block>
 </blocks>

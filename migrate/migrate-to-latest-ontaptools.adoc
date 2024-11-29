@@ -24,6 +24,9 @@ NOTE: 从适用于VMware vSphere的ONTAP工具9.x迁移到10.2后、采用NVMe/F
 支持从适用于VMware vSphere 9.10D2、9.11D1、9.12D1和9.13D2的ONTAP工具迁移到10.2版。
 
 
+NOTE: 如果您正在使用适用于VMware vSphere 9.13P1版本的ONTAP工具、则应先升级到9.13D2、然后再迁移到10.2版。
+
+
 NOTE: 作为现有用户、在升级到修补程序版本之前、您需要从当前版本创建OVA备份。
 
 
