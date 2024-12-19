@@ -160,4 +160,5 @@ NOTE: 父vCenter Server密码不应包含这些特殊字符($、'、")。
 
 
 * 确保在多vCenter部署中、颁发证书的域名映射到虚拟IP地址、在该部署中、自定义CA证书是必需的。对域名执行_nslookup_ check以检查域是否已解析为预期的IP地址。应使用负载平衡器IP地址的域名和IP地址创建证书。
+* 在非HA高级和HA配置中安装适用于VMware vSphere 10.2的ONTAP工具之前、请查看知识库文章： https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["非HA高级配置和HA配置的前提条件"]
 

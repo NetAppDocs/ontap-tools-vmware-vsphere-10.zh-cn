@@ -1907,4 +1907,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">使用管理Privileges登录到集群。</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">要配置集群ONTAP工具角色，请选择*Cluster*&gt;*Settings*&gt;*Users and Roles*窗格。</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">要配置集群SVM ONTAP工具角色、请选择*存储SVM*&gt;*设置*&gt;*用户和角色*窗格</block>
+  <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">非HA高级配置和HA配置的前提条件</block>
+  <block id="e919c4d13d770923e879fa844b30c21a" category="list-text">在非HA高级和HA配置中安装适用于VMware vSphere 10.2的ONTAP工具之前、请查看知识库文章：<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block></block>
 </blocks>
