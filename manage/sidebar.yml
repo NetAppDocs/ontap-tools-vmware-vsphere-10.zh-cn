@@ -2,8 +2,12 @@
 section: manage
 title: 管理 ONTAP 工具
 entries:
-- title: 适用于VMware vSphere的NetApp ONTAP工具插件信息板概述
+- title: 适用于VMware vSphere的ONTAP工具信息板概述
   url: "/configure/dashboard-overview.html"
+- title: ONTAP工具管理器用户界面
+  url: "/configure/manager-user-interface.html"
+- title: 编辑设备设置
+  url: "/manage/edit-appliance-settings.html"
 - title: 管理数据存储库
   entries:
   - title: 创建数据存储库
@@ -34,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: 管理证书
   url: "/manage/certificate-manage.html"
-- title: 管理igrou和导出策略
-  url: "/manage/igroup-management.html"
 - title: 访问适用于VMware vSphere的ONTAP工具维护控制台
   entries:
   - title: 适用于VMware vSphere的ONTAP工具维护控制台概述
@@ -80,3 +82,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 删除主机集群保护
     url: "/manage/delete-hostcluster-protection.html"
+- title: RPO几乎为零
+  url: "/manage/enable-backup.html"

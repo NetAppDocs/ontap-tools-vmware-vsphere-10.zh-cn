@@ -11,14 +11,13 @@ summary: 您可以使用适用于VMware vSphere的ONTAP工具远程插件界面�
 
 
 [role="lead"]
-您可以使用适用于VMware vSphere的ONTAP工具远程插件界面向vCenter Server实例注册和取消注册VASA Provider。
-VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状态。
+您可以使用适用于VMware vSphere的ONTAP工具远程插件界面向vCenter Server实例注册和取消注册VASA Provider。VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状态。
 
 * 步骤 *
 
 . 使用登录到vSphere Client `\https://vcenterip/ui`
 . 在快捷方式页面中，单击插件部分下的NetApp ONTAP tools*。
-. 选择*Settings*>*VASA Provider settings *。VASA提供程序注册状态显示为"未注册"。
+. 选择*Settings*>*VASA Provider settings *。VASA Provider注册状态显示为未注册。
 . 单击*注册*按钮注册VASA Provider。
 . 输入VASA Provider的名称并为VMware vSphere应用程序提供ONTAP工具用户凭据、然后单击*注册*。
 . 成功注册并刷新页面后、用户界面将显示已注册的ASA Provider的状态、名称和版本。此时将激活取消注册操作。
@@ -40,9 +39,8 @@ VASA Provider设置部分显示了选定vCenter Server的VASA Provider注册状�
 +
 .. 导航到vCenter Server。
 .. 使用管理员凭据登录。
-.. 选择*存储提供程序*。
-.. 选择 * 配置 * 。
-.. 在存储提供程序/存储后端下、验证是否已正确列出已启用的VASA提供程序。
+.. 选择*存储提供程序*>*配置*。
+.. 在存储提供程序/存储后端下、验证是否已正确列出已启用的VASA Provider。
 
 
 . 要从远程插件UI验证VASA Provider、请执行以下步骤：

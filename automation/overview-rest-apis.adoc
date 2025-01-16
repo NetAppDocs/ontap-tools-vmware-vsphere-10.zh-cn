@@ -26,22 +26,6 @@ NOTE: 所有API都具有Swagger页面中提及的请求正文和示例。本节�
 
 
 
-== 网络注意事项
-
-您可以通过以下接口连接到 REST API ：
-
-* 集群管理 LIF
-* 节点管理 LIF
-* SVM 管理 LIF
-
-
-您选择使用的LIF应配置为支持HTTPS管理协议。此外、网络中的防火墙配置应允许HTTPS流量。
-
-
-NOTE: 您应始终使用集群管理LIF。这将对所有节点上的API请求进行负载平衡、并避免节点脱机或遇到连接问题。如果您配置了多个集群管理生命周期、则在访问REST API方面、这些生命周期都是相等的。
-
-
-
 == 适用于VMware vSphere的ONTAP工具API联机文档页面
 
 您可以从适用于VMware vSphere的NetApp ONTAP工具插件的支持页面中的超链接访问Swagger。

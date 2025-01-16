@@ -17,7 +17,7 @@ vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟
 
 == 将存储后端与vCenter Server实例关联或解除关联
 
-vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择关联或解除存储后端关联。此任务可帮助您全局创建存储后端与已登录vCenter Server实例之间的映射。
+vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。此任务可帮助您全局创建存储后端与已登录vCenter Server实例之间的映射。
 
 * 步骤 *
 

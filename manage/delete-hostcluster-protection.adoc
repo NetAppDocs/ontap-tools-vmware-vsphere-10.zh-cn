@@ -8,12 +8,9 @@ summary: 删除主机集群保护后、数据存储库将不受保护。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 删除主机集群保护后、数据存储库将不受保护。
 
 .步骤
@@ -21,5 +18,5 @@ summary: 删除主机集群保护后、数据存储库将不受保护。
 +
 在此页面中、您可以监控受保护主机集群及其保护状态、SnapMirror关系及其对应的SnapMirror状态。
 
-. 在*Host cluster protection (*主机集群保护*)窗口中，单击该集群对应的"GBE"菜单，然后选择*Remove protection (删除保护)*。
+. 在*主机集群保护*窗口中，单击该集群对应的省略号菜单，然后选择*删除保护*。
 

@@ -4,7 +4,7 @@ title: 配置 ONTAP 工具
 entries:
 - title: 添加vCenter Server
   url: "/configure/add-vcenter.html"
-- title: 向vCenter Server注册VASA Provider
+- title: 将VASA Provider注册到vCenter Server
   url: "/configure/registration-process.html"
 - title: 安装 NFS VAAI 插件
   url: "/configure/install-nfs-vaai-plug-in.html"
@@ -22,3 +22,5 @@ entries:
   url: "/configure/associate-storage-backend.html"
 - title: 配置网络访问
   url: "/configure/configure-network-access.html"
+- title: 创建数据存储库
+  url: "/configure/create-vvols-datastore.html"

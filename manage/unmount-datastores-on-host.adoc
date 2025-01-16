@@ -8,12 +8,9 @@ summary: 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储库。对于由适用于VMware vSphere的ONTAP工具发现或管理的NFS和VMFS数据存储库、系统会启用卸载数据存储库操作。
 
 * 步骤 *

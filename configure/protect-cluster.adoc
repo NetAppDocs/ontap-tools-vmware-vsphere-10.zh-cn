@@ -8,12 +8,9 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。属于选定SVM且挂载在集群中一个或多个主机上的所有数据存储库都会在主机集群下受到保护。
 
 .前提条件
@@ -21,7 +18,7 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 
 * 主机集群只包含一个SVM中的数据存储库。
 * 挂载在主机集群上的数据存储库不应挂载在集群外部的任何主机上。
-* 主机集群上挂载的所有数据存储库都必须是采用iSCSI/FC协议的VMFS数据存储库。不支持采用NVMe/FC和NVMe/TCP协议的VMFS数据存储库。
+* 主机集群上挂载的所有数据存储库都必须是采用iSCSI/FC协议的VMFS数据存储库。不支持采用NVMe/FC和NVMe/TCP协议的卷、NFS或VMFS数据存储库。
 * 构成主机集群上挂载的数据存储库的CG/LUN不应属于任何现有一致性组(FlexVol、CG)。
 * 构成主机集群上挂载的数据存储库的FlexVol或LUN不应属于任何现有SnapMirror关系。
 * 此主机集群应至少具有一个数据存储库。
@@ -45,7 +42,7 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 
 . 如果您选择的主机配置不一致、请为集群中的每个主机选择主机访问(源/目标)。
 . 选择 * 添加 * 。
-. 在*Protect cluster-*窗口中，创建操作期间仅支持删除操作。您可以删除并重新添加保护。在修改主机集群保护操作期间、可以使用编辑选项。您可以使用"KTE"菜单选项编辑或删除关系。
+. 在*Protect cluster-*窗口中，创建操作期间仅支持删除操作。您可以删除并重新添加保护。在修改主机集群保护操作期间、可以使用编辑选项。您可以使用省略号菜单选项编辑或删除关系。
 . 选择“*保护*”按钮。
 +
 此时将使用作业ID详细信息创建一个vCenter任务、并且近期任务面板中会显示此任务的进度。这是一个异步任务、用户界面仅显示请求提交状态、不会等待任务完成。

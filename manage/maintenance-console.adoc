@@ -32,6 +32,7 @@ NOTE: 您应设置的密码 `diag` 用户。
 . 显示服务器状态摘要
 . 更改VASA Provider服务和SRA服务的日志级别
 . 禁用AutoSupport
+. 更新AutoSupport代理URL
 
 
 
@@ -71,6 +72,8 @@ NOTE: 您应设置的密码 `diag` 用户。
  a| 
 . 访问诊断 Shell
 . 启用远程诊断访问
+. 提供用于备份的vCenter凭据
+. 进行备份
 
 
 |===

@@ -21,4 +21,5 @@ summary: 适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周�
 * 用于VM粒度管理的VASA Provider
 * 基于存储策略的管理
 * Storage Replication Adapter （ SRA ）
+* SnapMirror主动同步(SMAS)
 

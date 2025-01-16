@@ -15,7 +15,10 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 
 * 关于此任务 *
 
-此任务可帮助您加入ONTAP集群。使用ONTAP工具管理器添加存储后端时、存储后端将添加到全局集群中。将全局集群与vCenter Server实例关联、以便为SVM用户启用Vvol数据存储库配置。
+此任务可帮助您加入ONTAP集群。使用ONTAP工具管理器添加存储后端时、存储后端将添加到全局集群中。将全局集群与vCenter Server实例关联、以便为SVM用户启用Vvol数据存储库配置。您只能使用SVM在vCenter中添加存储。
+
+
+NOTE: 对于多租户工作流、您应使用ONTAP工具管理器全局添加ONTAP集群、并将这些集群与所需的vCenter租户相关联。然后、vCenter租户必须加入所需的Storage Virtual Machine (SVM)。如果不需要多租户、则应仅使用vCenter UI直接添加ONTAP系统。
 
 [role="tabbed-block"]
 ====
@@ -49,7 +52,7 @@ NOTE: 使用vSphere客户端UI添加存储后端时、Vvol数据存储库不支�
 . 在*添加存储后端*窗口中，提供服务器IP地址、用户名、密码和端口详细信息，然后单击*Add*。
 +
 
-NOTE: 您可以添加基于集群的凭据以及IPv4和IPv6管理LIF、也可以通过SVM的管理LIF提供基于SVM的凭据来直接添加SVM用户。
+NOTE: 您可以添加基于集群的凭据以及IPv4和IPv6地址管理LIF、也可以提供基于SVM的凭据以及SVM的管理LIF、以便直接添加SVM用户。
 
 
 

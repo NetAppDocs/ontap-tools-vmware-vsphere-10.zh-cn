@@ -16,7 +16,7 @@ summary: '您可以使用适用于VMware vSphere的NetApp工具安装适用于VM
 * 您需要的内容 *
 
 * 您应已下载适用于VAAI的NFS插件的安装包 (`.vib`) NetApp 支持站点。 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["适用于 VMware VAAI 的 NetApp NFS 插件"]
-* 您应已将ESXi主机7.0U3最新修补程序安装为最低版本、并将ONTAP 9.12.1Px (最新P版本) 9.13.1Px、9.14.1Px或更高版本安装为。
+* 您应已将ESXi主机7.0U3最新修补程序安装为最低版本以及ONTAP 9.14.1、9.151和9.16.0。
 * 您应已启动 ESXi 主机并挂载 NFS 数据存储库。
 * 您应已设置的值 `DataMover.HardwareAcceleratedMove`， `DataMover.HardwareAcceleratedInit`，和 `VMFS3.HardwareAcceleratedLocking` 主机设置为"`1`"。
 +

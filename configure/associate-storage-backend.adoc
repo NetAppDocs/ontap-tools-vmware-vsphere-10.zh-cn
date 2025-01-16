@@ -11,7 +11,7 @@ summary: 需要信息。
 
 
 [role="lead"]
-vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择关联一个存储后端。
+vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联。
 
 * 关于此任务 *
 

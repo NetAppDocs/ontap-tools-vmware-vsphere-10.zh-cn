@@ -6,7 +6,7 @@ indexpage:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3327064
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864
     - title: 了解适用于 VMware vSphere 的 ONTAP 工具
       url: "/concepts/ontap-tools-overview.html"
     - title: 部署适用于VMware vSphere的ONTAP工具
@@ -27,6 +27,8 @@ indexpage:
       url: "/protect/enable-storage-replication-adapter.html"
   - title: 更多资源
     links:
+    - title: 适用于VMware vSphere 10.2的ONTAP工具文档
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-102/index.html
     - title: 适用于VMware vSphere 10.1的ONTAP工具文档
       url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
     - title: 适用于VMware vSphere 9的早期版本ONTAP工具的文档
