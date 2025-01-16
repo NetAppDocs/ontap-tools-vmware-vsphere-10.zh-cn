@@ -2008,4 +2008,5 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">适用于VMware vSphere 10.2的ONTAP工具文档</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">适用于 VMware vSphere 的 ONTAP 工具 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">配置受保护站点和恢复站点</block>
+  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">适用于VMware vSphere 10.3的ONTAP工具扩展了对VMFS和VVOV数据存储库及其各自虚拟机的可观察性指标支持。</block>
 </blocks>

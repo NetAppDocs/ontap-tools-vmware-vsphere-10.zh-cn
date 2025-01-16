@@ -59,5 +59,6 @@ summary: 了解适用于VMware vSphere 10.3的ONTAP工具中提供的新功能�
  a| 
 提高了可观察性
  a| 
- ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
+适用于VMware vSphere 10.3的ONTAP工具扩展了对VMFS和VVOV数据存储库及其各自虚拟机的可观察性指标支持。
+
 |===
