@@ -708,141 +708,14 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="86087fc8fd9dd51486dc3c430bf6abac" category="cell">使用此角色可以修改存储。此角色还包括与"发现"角色和"创建存储"角色关联的所有特权。</block>
   <block id="a62ba12e7d9cf0e95b53a7ef0ccc6987" category="cell">使用此角色可以销毁存储。此角色还包括与"发现"角色、"创建存储"角色和"修改存储"角色关联的所有特权。</block>
   <block id="9aba481264947da03013bacc0bdb5337" category="paragraph">如果您要使用适用于VMware vSphere的ONTAP工具、则还应设置基于策略的管理(PBM)角色。通过此角色，您可以使用存储策略管理存储。此角色还要求您设置 `Discovery` 角色。</block>
-  <block id="5f5192bbcb78a1952f0c1de27add636d" category="summary">在实时设置中对更复杂的工作流过程使用 API 之前，访问 API 可以提供一些视角。</block>
-  <block id="6f800f16fa2f6cc79e50877afd6a63ea" category="doc">开始使用 REST API</block>
-  <block id="fa5c00786ec8e725c475f243f896380c" category="paragraph">您可以快速开始使用适用于VMware vSphere REST API的ONTAP工具。在实时设置中对更复杂的工作流过程使用 API 之前，访问 API 可以提供一些视角。</block>
-  <block id="b10a8db164e0754105b7a99be72e3fe5" category="section-title">大家好</block>
-  <block id="e6cc5e45bd046642f9fb680d6739d7fd" category="paragraph">您可以在系统上运行一个简单的命令、以便开始使用适用于VMware vSphere REST API的ONTAP工具并确认其可用性。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">开始之前</block>
-  <block id="d35295349c96319976125d2295393ac0" category="list-text">确保您的系统上提供了 Curl 实用程序。</block>
-  <block id="832f7b2b1efea4397918df5d6a77294e" category="list-text">适用于VMware vSphere服务器的ONTAP工具的IP地址或主机名</block>
-  <block id="f59f21c2861931d779d39f5711d60be6" category="list-text">有权访问适用于VMware vSphere的ONTAP工具REST API的帐户的用户名和密码。</block>
-  <block id="da932131b500d8e907961663d8ef346b" category="admonition">如果您的凭据包含特殊字符，则您需要根据所使用的 shell 以 Curl 可接受的格式设置这些凭据。例如、您可以在每个特殊字符之前插入反斜杠、也可以将整个字符打包<block ref="133e1b8eda335c4c7f7a508620ca7f10" prefix=" " category="inline-code"></block> 单引号中的字符串。</block>
-  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="paragraph-title">步骤</block>
-  <block id="34d07047db39e17aa64415185872d7ba" category="paragraph">在命令行界面中，运行以下命令以检索插件信息：</block>
-  <block id="016102d7f7027f4ec05121416c47259c" category="paragraph"><block ref="d7aacb5ab235e8ea9ffe1d2ca3f09c46" prefix="" category="inline-code"></block></block>
-  <block id="ab6f9bbbd6d40b1f24817d6aecb81f9d" category="paragraph"><block ref="f2c814248d385aa127395dbcd2585e06" prefix="" category="inline-code"></block></block>
-  <block id="0c18d1276ce1aa636415ddb70d628488" category="summary">介绍如何使用REST API执行多个ONTAP工具来执行VMware vSphere管理操作。REST API 通过 Swagger 网页公开。</block>
-  <block id="0c889d77d71512ceb7241bd0f6d6ca23" category="doc">REST API 概述</block>
-  <block id="c330f595b02061ecdc25ecb17672913c" category="paragraph">REST API可用于为VMware vSphere管理操作执行多个ONTAP工具。REST API 通过 Swagger 网页公开。</block>
-  <block id="11f00f575ae2ef170b7ce5ba13ff4781" category="paragraph">您可以访问Swagger网页、网址为_API以显示REST \https://loadbalancerIP:8443/_文档、并手动问题描述API调用。</block>
-  <block id="9a6f34cb1082502a6afd96556dec761f" category="admonition">所有API都具有Swagger页面中提及的请求正文和示例。本节中提供的工作流和示例仅供参考。</block>
-  <block id="527df4f1ccd81173595bb685c8266938" category="summary">您可以通过本地ONTAP系统上的Swagger UI访问ONTAP REST API文档。</block>
-  <block id="95b1a4018b5f1cefffdc18991e0fd8f5" category="doc">通过Swagger UI访问适用于VMware vSphere的ONTAP工具API参考文档</block>
-  <block id="161fbe930f63fa83671b46be2b2b3d58" category="paragraph">您应具备以下条件：</block>
-  <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">ONTAP 集群管理 LIF 的 IP 地址或主机名</block>
-  <block id="f2c6f5ac63b1ff8994bac2da18ed694c" category="list-text">有权访问ONTAP REST API的帐户的用户名和密码</block>
-  <block id="16f20abf4a7cb0a347b84a8585743c43" category="list-text">在浏览器中键入 URL 并按 * 输入 * ：
-_\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
-  <block id="a64f9f553a037daa06b0333e4f974c7c" category="list-text">使用ONTAP帐户登录</block>
-  <block id="382dcdb42dd365fa6d100546e6d7a4d7" category="paragraph">此时将显示ONTAP API文档页面、其中API调用按主要资源进行组织
-类别。</block>
-  <block id="b7998fdfa579757468dfd6407b7df0e3" category="list-text">作为单个 API 调用的示例，向下滚动到 * 集群 * 类别，然后单击 * 获取 /cluster* 。</block>
-  <block id="3c09024082538b393ae85161883b78ab" category="summary">您可以通过多种不同方式访问 ONTAP REST API 。</block>
-  <block id="20e6657503c09b23dd000fa27ddc5cc7" category="doc">如何访问适用于VMware vSphere REST API的ONTAP工具</block>
-  <block id="933f7bf924b9ab3c423ac46225afd9c7" category="section-title">适用于VMware vSphere的ONTAP工具API联机文档页面</block>
-  <block id="ab8a406d9f7f9d15ebedd520911bf0ef" category="paragraph">您可以从适用于VMware vSphere的NetApp ONTAP工具插件的支持页面中的超链接访问Swagger。</block>
-  <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用于访问最新版本 API 的文档页面的 URL 格式为：</block>
-  <block id="07189fcc640ffa4ecc043942258a8fc6" category="paragraph">`https：&lt;loadbalancer_ip_address&gt;`</block>
-  <block id="26af4f060203125bc0739a38e9ddfa2b" category="section-title">自定义软件和工具</block>
-  <block id="ffbba6018a0b637f1a55c4b05779c1c3" category="paragraph">您可以使用多种不同的编程语言和工具访问适用于VMware vSphere API的ONTAP工具。常见选项包括 Python ， Java ， Curl 和 PowerShell 。使用 API 的程序，脚本或工具充当 REST Web 服务客户端。通过使用编程语言、可以更深入地了解API、并可以自动使用ONTAP工具进行VMware vSphere管理。</block>
-  <block id="9670d5b867b93341fdec8b7aadfdba79" category="paragraph">用于直接访问最新版本 API 的基本 URL 格式为：</block>
-  <block id="b62c382502f5a7724851aff63073a5b0" category="paragraph">`https：//API/API &lt;loadbalancer_ip_address&gt;`</block>
-  <block id="433c12a33fdba27dd646123b380a2c4e" category="paragraph">要访问支持多个版本的特定 API 版本， URL 的格式为：</block>
-  <block id="383d966886384e9939a6e4b9de3f5bea" category="paragraph">`https：//api/v1 &lt;loadbalancer_ip_address&gt;`</block>
-  <block id="fc004b0a2e525fdc279e93342807a662" category="summary">您可以通过 HTTP 请求中设置的参数和变量来控制 API 调用的处理方式。</block>
-  <block id="ee083ff11ffc430b7230624e8985e88c" category="doc">控制 API 请求的输入变量</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP 方法</block>
-  <block id="504b3e70c32650134b8928f353c98158" category="paragraph">下表显示了适用于VMware vSphere REST API的ONTAP工具支持的HTTP方法。</block>
-  <block id="ed96d2fc76580fb63f9f0408276dd927" category="admonition">并非所有 HTTP 方法都可在每个 REST 端点使用。</block>
-  <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP 方法</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">获取</block>
-  <block id="0decd4a1f47d9c9f9601109afe0d9a4e" category="cell">检索资源实例或集合上的对象属性。</block>
   <block id="a02439ec229d8be0e74b0c1602392310" category="cell">发布</block>
-  <block id="fb9e1a48a4257dee6289fcb9c187cc7d" category="cell">根据提供的输入创建新的资源实例。</block>
   <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">删除</block>
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">删除现有资源实例。</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">PUT</block>
-  <block id="2071d14ff2885e064879040ea18a09e5" category="cell">修改现有资源实例。</block>
-  <block id="736943e80c16e2be98d8595e6376e4ee" category="section-title">请求标题</block>
-  <block id="406537306d9a15baf8ae1febe4afdec1" category="paragraph">您应在 HTTP 请求中包含多个标头。</block>
-  <block id="f64aadb713838867dd5f6cb3d02558a0" category="section-title">内容类型</block>
-  <block id="c29560cde9e7309356bf9bb27ace99c7" category="paragraph">如果请求正文包含 JSON ，则此标头应设置为 _application/json_ 。</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">接受</block>
-  <block id="2746025afdf3b4921a2c5d71d5bf62c3" category="paragraph">此标题应设置为 _application/json_ 。</block>
-  <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="section-title">Authorization</block>
-  <block id="78ea3bb2b55ad98896cff83f4d15f205" category="paragraph">基本身份验证应使用用户名和密码进行设置、并以base64字符串进行编码。</block>
-  <block id="a3ba8461439f7d0176ef3944696ea2ac" category="section-title">请求正文</block>
-  <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">请求正文的内容因具体调用而异。HTTP 请求正文包含以下内容之一：</block>
-  <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">包含输入变量的 JSON 对象</block>
-  <block id="ce2c8aed9c2fa0cfbed56cbda4d8bf07" category="list-text">空</block>
-  <block id="ac860c2e604ebd01436860da72828954" category="section-title">筛选对象</block>
-  <block id="0438b035fcfcfd3b3c333dd8d993e532" category="paragraph">发出使用 GET 的 API 调用时，您可以根据任何属性限制或筛选返回的对象。例如，您可以指定一个要匹配的精确值：</block>
-  <block id="1fc998fba92eac6c354078a63d749232" category="paragraph"><block ref="9f076f2b1cbf046a6f73c579be1c3ca0" prefix="" category="inline-code"></block></block>
-  <block id="fd412bde4d95f6a11ca6eb5291ec5055" category="paragraph">除了精确匹配之外，还可以使用其他运算符返回一组值范围内的对象。适用于VMware vSphere REST API的ONTAP工具支持下表所示的筛选操作符。</block>
-  <block id="e1b3ec89ead7f83a9245ed5c9cacfdbf" category="cell">运算符</block>
-  <block id="43ec3e5dee6e706af7766fffea512721" category="cell">=</block>
-  <block id="495c04002891bebf41bc3b56507f6d6b" category="cell">等于</block>
-  <block id="524a50782178998021a88b8cd4c8dcd8" category="cell">&lt;</block>
-  <block id="ad647e4ae904c7ed54ee93040d8298c7" category="cell">小于</block>
-  <block id="cedf8da05466bb54708268b3c694a78f" category="cell">&gt;</block>
-  <block id="05824b7be006782aaefd1fdb97c71e06" category="cell">大于</block>
-  <block id="a7eeaea90b4e8312b88abcd178019929" category="cell">&amp;lt ； =</block>
-  <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">小于或等于</block>
-  <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&amp;gt ； =</block>
-  <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">大于或等于</block>
-  <block id="15a8022d0ed9cd9c2a2e756822703eb4" category="cell">更新</block>
-  <block id="3a2d5fe857d8f9541136a124c2edec6c" category="cell">或</block>
-  <block id="9033e0e305f247c0c3c80d0c7848c8b3" category="cell">！</block>
-  <block id="9bc7de899cf1c0d3ada046cd81f96aff" category="cell">不等于</block>
-  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
-  <block id="05a8a074dcf1a74c3e6c55d4f730a475" category="cell">贪婪的通配符</block>
-  <block id="f3c93baa1e74d313b05f6891f58a4530" category="paragraph">此外，您还可以在查询中使用 * null* 关键字或其 nation * ！ null* 来根据是否设置了特定字段返回一组对象。</block>
-  <block id="5260f8fe460e79195a4c88c011e51342" category="admonition">未设置的任何字段通常会从匹配查询中排除。</block>
-  <block id="6d8c6f6bd33a2c5ad3268242ca5ff59b" category="section-title">请求特定对象字段</block>
-  <block id="3195a941efa016d87e87f54db2226a79" category="paragraph">默认情况下，使用 GET 发出 API 调用时，仅返回唯一标识一个或多个对象的属性。这组最小的字段可用作每个对象的密钥，并因对象类型而异。您可以使用选择其他对象属性<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 使用以下方式查询参数：</block>
-  <block id="c679b8eaf3069c4f7bffc461e34b95fb" category="section-title">通用字段或标准字段</block>
-  <block id="8aca4f931f0c66b003614a9f6cdbb501" category="paragraph">指定 * 字段 =* 以检索最常用的对象字段。这些字段通常保留在本地服务器内存中，或者几乎不需要处理即可访问。这些属性与使用带有 URL 路径密钥（ UUID ）的 GET 后为对象返回的属性相同。</block>
-  <block id="36579447315838f79ada095ab26bf693" category="section-title">所有字段</block>
-  <block id="d89fcd8c35307904ba8719856b606ebb" category="paragraph">指定 * 字段 =*** 可检索所有对象字段，包括需要额外服务器处理才能访问的字段。</block>
-  <block id="a686d83a73b66e60196ab98b2632e7da" category="section-title">自定义字段选择</block>
-  <block id="d2d353f9dda5271bad41d3e7e0a85b8e" category="paragraph">使用 * 字段 =&lt; 字段名称 &gt;* 指定所需的确切字段。请求多个字段时、应使用逗号分隔值、不含空格。</block>
-  <block id="e8145dd54cca5af37c6636e941e14f5e" category="admonition">作为最佳实践，您应始终确定所需的特定字段。您只能在需要时检索一组通用字段或所有字段。哪些字段归类为通用字段，并使用 _fields=* _ 返回，由 NetApp 根据内部性能分析确定。字段的分类可能会在未来版本中发生变化。</block>
-  <block id="8b9514b4e7a0d660f91152d4a5baf424" category="section-title">对输出集中的对象进行排序</block>
-  <block id="760ed1003f95d4d8f38b6a7862a1fcd6" category="paragraph">资源收集中的记录将按对象定义的默认顺序返回。您可以使用更改顺序<block ref="da3ad3b4322b19b609e4fa9d0a98a97b" prefix=" " category="inline-code"></block> 带有字段名称和排序方向的查询参数、如下所示：</block>
-  <block id="42ac83dab536d4c72f5e57b001e9d1b7" category="paragraph"><block ref="5c4be89fa58910749118c299d7146409" prefix="" category="inline-code"></block></block>
-  <block id="ec8ebedbd75e137e3d60f61956a459a3" category="paragraph">例如，您可以按降序对类型字段排序，然后按升序对 ID 排序：</block>
-  <block id="ae95344c2bcf9d6ce4630f98e0438896" category="paragraph"><block ref="e725b51939475fb54936bc15ff698a67" prefix="" category="inline-code"></block></block>
-  <block id="20687dcab7f3b4cba9b39b22c38c8ad5" category="list-text">如果指定了排序字段，但未提供方向，则这些值将按升序排序。</block>
-  <block id="c1b49548ca5d2466ba6ba83d2979b184" category="list-text">如果包含多个参数、则应使用英文逗号分隔各个字段。</block>
-  <block id="245272e0c4968634df98eb3e43fe7188" category="section-title">检索集合中的对象时分页</block>
-  <block id="6151e9d3df64b1356357d21e15fdcf59" category="paragraph">在使用GET发出API调用以访问同一类型的对象集合时、适用于VMware vSphere的ONTAP工具会根据两个限制尝试返回尽可能多的对象。您可以对请求使用其他查询参数来控制其中的每个限制。特定 GET 请求达到的第一个限制将终止该请求，因此会限制返回的记录数。</block>
-  <block id="77f9234bccd7df3df5de9766fc1ee88a" category="admonition">如果请求在迭代所有对象之前结束，则响应将包含检索下一批记录所需的链接。</block>
-  <block id="9b694e5a19d32713635e80d596a204af" category="section-title">限制对象数量</block>
-  <block id="b6d10b2319c50121a995ce56d9a78fb5" category="paragraph">默认情况下、适用于VMware vSphere的ONTAP工具最多会为一个GET请求返回10、000个对象。您可以使用 _max_records_ 查询参数更改此限制。例如：</block>
-  <block id="ca70aeac050e5deeb2d294566c856b35" category="paragraph"><block ref="6442f0c42ddfbf1a4d6374ad73dea2eb" prefix="" category="inline-code"></block></block>
-  <block id="cb5652e059687de540fb7ab71200a4e3" category="paragraph">根据相关的时间限制以及系统中的对象总数、返回的对象数可以小于实际的最大值。</block>
-  <block id="cec4fc9be41c96cfd5b0d11b548d1a5e" category="section-title">限制检索对象所用的时间</block>
-  <block id="a6422605eda5232370b98ff9dd129108" category="paragraph">默认情况下、适用于VMware vSphere的ONTAP工具会在GET请求允许的时间内返回尽可能多的对象。默认超时为 15 秒。您可以使用 _return_timeout_ 查询参数更改此限制。例如：</block>
-  <block id="4f2ca89743f0c1642129bde507459575" category="paragraph"><block ref="2eef2059f1d9935a31cf756727a21ca4" prefix="" category="inline-code"></block></block>
-  <block id="cca254a24814ec91f1f1b7933614e633" category="paragraph">返回的对象数可以小于实际的最大值、具体取决于对象数以及系统中对象总数的相关限制。</block>
-  <block id="2dadc767979da8ab1576ee0aa8da5e21" category="section-title">缩小结果集的范围</block>
-  <block id="ab92d69f97ee430d4048a43a5452659c" category="paragraph">如果需要，您可以将这两个参数与其他查询参数结合使用，以缩小结果集的范围。例如，以下内容最多返回在指定时间之后生成的 10 个 EMS 事件：</block>
-  <block id="89163f6e2498a9f894e7813e6de46b08" category="paragraph"><block ref="3a4009b6b07614ee155d4af5ecfaf8bc" prefix="" category="inline-code"></block></block>
-  <block id="5394a0e51a0e30e195e0299ede162a02" category="paragraph">您可以通过问题描述发送多个请求来浏览各个对象。后续的每个 API 调用应根据最后一个结果集中的最新事件使用一个新的时间值。</block>
-  <block id="050a8c11f48cd555f6e5e6bab96225d6" category="section-title">大小属性</block>
-  <block id="721165b216d0f852ad3d9fd6e430dbe1" category="paragraph">某些 API 调用以及某些查询参数使用的输入值为数字。您可以选择使用下表所示的后缀，而不是提供以字节为单位的整数。</block>
-  <block id="56e6ddd1cb6cec596b433440dfb21c17" category="cell">后缀</block>
-  <block id="ab57fd0432e25d5b3013133a1c910d56" category="cell">知识库</block>
-  <block id="9664b7d53f6c3f95743d9d5e1e03e0f6" category="cell">KB 千字节（ 1024 字节）或千字节</block>
-  <block id="8d8fcc1abd550c5f25dbfaa57d59cb67" category="cell">MB</block>
-  <block id="1bfdb499a2daaef53342602344b219d2" category="cell">MB 兆字节（ KB x 1024 字节）或兆字节</block>
-  <block id="79cba1185463850dedba31f172f1dc5b" category="cell">GB</block>
-  <block id="9a19cb477310ba69217d25ed9ca7c242" category="cell">GB 千兆字节（ MB x 1024 字节）或吉字节</block>
-  <block id="ff88442a425c06d961f97bccb11ddf5d" category="cell">TB</block>
-  <block id="db6eb0e01af53f05894f9ad1203350c6" category="cell">TB TB TB TB TB （ GB x 1024 字节）或 TB</block>
-  <block id="cd203ccd68b84de1c5df8fd890e104e0" category="cell">PB</block>
-  <block id="ac22fdf0c10c83edf98e803174984090" category="cell">PB PB PB PB （ TB x 1024 字节）或对等字节</block>
   <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter \(SRA\)能够发现存储系统。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">将受保护站点和恢复站点配对</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter (SRA)能够发现存储系统。</block>
@@ -1110,7 +983,6 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="6bc1d2c44eecf063e620d732e6c3e492" category="sidebar">vCenter Server权限</block>
   <block id="a9f3de4f2df78227aea2ac4a6b2e7aef" category="sidebar">建议的ONTAP角色</block>
   <block id="721041095b64df665034c0b19c967475" category="sidebar">适用于VMware vSphere的ONTAP工具的高可用性</block>
-  <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用 REST API 实现自动化</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">保护数据存储库和虚拟机</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">为高度扩展的环境配置SRA</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">配置受保护站点和恢复站点资源</block>
@@ -2009,4 +1881,155 @@ _\https：//https：//API/docs/API_&lt;ip_address&gt;</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">适用于 VMware vSphere 的 ONTAP 工具 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">配置受保护站点和恢复站点</block>
   <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">适用于VMware vSphere 10.3的ONTAP工具扩展了对VMFS和VVOV数据存储库及其各自虚拟机的可观察性指标支持。</block>
+  <block id="01e681f5a8de12d6be77dfc0e567c731" category="summary">适用于VMware vSphere 10 REST API的ONTAP工具参考包含有关所有API调用的详细信息。此参考有助于开发自动化应用程序。</block>
+  <block id="d2f73ce531661447cb475cb1f2d2e3bf" category="doc">适用于VMware vSphere 10 REST API的ONTAP工具的API参考</block>
+  <block id="ae1e8fd3c75f65498c54084ccfaf3047" category="paragraph">您可以通过Swagger UI联机访问适用于VMware vSphere 10的ONTAP工具REST API文档。您需要适用于VMware vSphere 10的ONTAP工具网关服务的IP地址或FQDN以及端口。</block>
+  <block id="08abdf16d81e0cbba6b259bea49cdf99" category="list-text">在浏览器中键入以下URL，将相应的IP地址和端口组合替换为变量，然后按*Enter*键。</block>
+  <block id="6ff8508bd0ad0da36fc04c76066c464c" category="paragraph"><block ref="4c9882763c7aaf0e39789953130b5809" prefix="" category="inline-code"></block></block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 示例 *</block>
+  <block id="95d36d22664f8854f7a69597b5d159e9" category="paragraph"><block ref="bcaca837447d687465d80574c1488516" prefix="" category="inline-code"></block></block>
+  <block id="029cd27c82b397ce647ab6fdab6ce96b" category="list-text">作为单个API调用的示例，向下滚动到*vcCenters*类别，然后单击端点旁边的*get*<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
+  <block id="9e2559913ee384f282b7c8922d9c892e" category="summary">您可以使用cURL发出API调用、以开始使用适用于VMware vSphere 10 REST API的ONTAP工具。</block>
+  <block id="25aa7ee97346651715a55a99bba91d34" category="doc">您的首个适用于VMware vSphere 10 REST API的ONTAP工具调用</block>
+  <block id="190ffd22724cdd7dfb04a0d2211e12bd" category="paragraph">您应查看CURL示例中所需的信息和参数。</block>
+  <block id="f8ad24507fa09d903436c3525e8e9d3f" category="paragraph-title">所需信息</block>
+  <block id="4c6a9048ac276eb9391ebe2abd8e0c0d" category="paragraph">您需要满足以下要求：</block>
+  <block id="112ab2a5a85b5a3c5e85046e1604d105" category="list-text">适用于VMware vSphere 10的ONTAP工具的IP地址或FQDN以及端口</block>
+  <block id="6d6423832c50665dadd867e3c67e504f" category="list-text">ONTAP工具管理器管理员凭据(用户名和密码)</block>
+  <block id="f2081dc24b29bb5a138819e4d3388b68" category="paragraph-title">参数和变量</block>
+  <block id="226752f860521d9c0712124e8150c7be" category="paragraph">下面提供的CURL示例包括Bash样式变量。您可以在Bash环境中设置这些变量、也可以在发出命令之前手动更新这些变量。如果您设置了变量、则Shell将在执行每个命令之前替换每个命令中的值。下表介绍了这些变量。</block>
+  <block id="47c14840d8e15331fa420b9b2f757cd9" category="cell">变量</block>
+  <block id="fa15b0d6419dfb51864af28640b46c50" category="cell">$FQDN_IP_port</block>
+  <block id="efad8dda7813f2f61e59fee9de5685d6" category="cell">ONTAP工具管理器的完全限定域名或IP地址以及端口号。</block>
+  <block id="6c1da12e96e7c12b338227bbad7cd8d6" category="cell">$MYUSER</block>
+  <block id="b3b52329271b1c813d865bd3430ae0eb" category="cell">ONTAP工具管理器帐户的用户名。</block>
+  <block id="10994ee890089799ef98bd935dda382e" category="cell">$MyPassword</block>
+  <block id="92a0f772935e69502901a4b26e6ea4a1" category="cell">与ONTAP工具管理器用户名关联的密码。</block>
+  <block id="31740ff30d8989f8731a7aa9804037d9" category="cell">$access_令牌</block>
+  <block id="c5ee7f5f35e3c470c8e8b9454338235e" category="cell">ONTAP工具管理器发出的访问令牌。</block>
+  <block id="34ca808d2fbc6b479eae5050e7d1f0cd" category="paragraph">以下Linux命令行界面命令和输出说明了如何设置和显示变量：</block>
+  <block id="5f165fc040c2d67a1c762d4992cfd3ad" category="section-title">第1步：获取访问令牌</block>
+  <block id="c3a5aea28e3c833fa7fb488eac1f890b" category="paragraph">要使用REST API、您需要获取访问令牌。下面提供了一个如何请求访问令牌的示例。您应替换适合您环境的值。</block>
+  <block id="aacc5a70f620b045087d925821bd671e" category="paragraph">复制并保存响应中提供的访问令牌。</block>
+  <block id="5ae6bfa5e93581b8f03eef7ec9d31b21" category="section-title">第2步：对REST API调用执行问题描述操作</block>
+  <block id="e35953edb90a1aa9f24be40109966b36" category="paragraph">获得访问令牌后、您可以使用cURL发出REST API调用。包括在第一步中获取的访问令牌。</block>
+  <block id="e0da47631d6f2648f3a36bde7e269c3b" category="listing-title">curl 示例</block>
+  <block id="e77c6880701fcbe894a878111bcb9ca8" category="paragraph">JSON响应包括配置到ONTAP工具管理器的VMware vCenter实例列表。</block>
+  <block id="bf93d289f74793d6a72e909b5fc9cca0" category="summary">适用于VMware vSphere 10的ONTAP工具是一组用于虚拟机生命周期管理的工具。它包含一个强大的REST API、您可以在自动化流程中使用它。</block>
+  <block id="10a7a63d5f7f3ff2c6438bb0f95d5494" category="doc">了解适用于VMware vSphere 10 REST API的ONTAP工具</block>
+  <block id="8ed6428212b41847f33c5db651c2aa70" category="section-title">REST Web 服务基础</block>
+  <block id="9e1fbdb44af04bcec2aeaa02a0374832" category="paragraph">表述性状态转移(Representational State Transfer、REST)是一种用于创建分布式Web应用程序(包括Web服务API的设计)的模式。它建立了一组公开基于服务器的资源并管理其状态的技术。</block>
+  <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="paragraph-title">资源和状态表示</block>
+  <block id="58b5d7d3ac91e5d496cb361d0f6d5ace" category="paragraph">资源是REST Web服务应用程序的基本组件。设计REST API时、需要执行两项重要的初始任务：</block>
+  <block id="cffc973837b1552a3c62d15a0a02dca0" category="list-text">确定基于系统或服务器的资源</block>
+  <block id="b1c112dff346df8f223cab36c5c0604b" category="list-text">定义资源状态和关联的状态过渡操作</block>
+  <block id="a45c3425ff6af29eaf7bfe965fcd8f88" category="paragraph">客户端应用程序可以通过定义完善的消息流来显示和更改资源状态。</block>
+  <block id="34d23bd6dd51b3238872241264de74bf" category="paragraph-title">HTTP消息</block>
+  <block id="1179c71c84b4d7a8614fcc6541a55e88" category="paragraph">超文本传输协议(HyperText Transfer Protocol、HTTP)是Web服务客户端和服务器用来交换有关资源的消息的协议。它遵循基于创建、读取、更新和删除等通用操作的CRUD模型。HTTP协议包括请求和响应标头以及响应状态代码。</block>
+  <block id="1d569ac5d527081ee4fa316da144f4ed" category="paragraph-title">JSON数据格式化</block>
+  <block id="6bbcb060053c7d65bb870650b05080eb" category="paragraph">虽然有多种消息格式可用、但最常用的选项是JavaScript对象表示法(JavaScript Object Notation、JSON)。JSON是以纯文本形式表示简单数据结构的行业标准、用于传输描述资源和所需操作的状态信息。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="paragraph-title">安全性</block>
+  <block id="ea288d064f7533a546b1d51c58a66f0b" category="paragraph">安全性是REST API的一个重要方面。除了用于保护网络上的HTTP流量的传输层安全(Transport Layer Security、TLS)协议之外、适用于VMware vSphere 10 REST API的ONTAP工具还会使用访问令牌进行身份验证。您需要获取访问令牌并在后续API调用中使用它。</block>
+  <block id="01480a89d67ec4bd3886317483878e03" category="paragraph-title">支持异步请求</block>
+  <block id="5ff9ea1e93ec4247f77d5572721ef380" category="paragraph">适用于VMware vSphere 10 REST API的ONTAP工具会同步执行大多数请求、并在操作完成后返回状态代码。此外、它还支持对需要较长时间才能完成的任务进行异步处理。</block>
+  <block id="85a37144ab554873deea56aa55eabc63" category="section-title">ONTAP工具管理器环境</block>
+  <block id="e06ff039f00c0a1d73976133549b5c46" category="paragraph">您应考虑ONTAP Tools Manager环境的几个方面。</block>
+  <block id="76c3fe1d90eec0f4dbe5dd8bf85ff05b" category="paragraph-title">虚拟机</block>
+  <block id="c256f323fa290d7d44d55a41351b43c3" category="paragraph">适用于VMware vSphere 10的ONTAP工具使用vSphere远程插件架构进行部署。该软件(包括对REST API的支持)在单独的虚拟机中运行。</block>
+  <block id="b213ee322b1762505374c8ee6d84f177" category="paragraph-title">ONTAP工具IP地址</block>
+  <block id="1543737af385e98b263eb837cefbed68" category="paragraph">适用于VMware vSphere 10的ONTAP工具会公开一个IP地址、该地址可为虚拟机的功能提供网关。您需要在初始配置期间提供地址、并将其分配给内部负载平衡器组件。此地址供ONTAP工具管理器用户界面使用、并可直接访问Swagger文档页面和REST API。</block>
+  <block id="be1cd531936ba46a2647fa7dd8d85828" category="paragraph-title">两个REST API</block>
+  <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP自动化</block>
+  <block id="5de3d520a303cddad4df07a561f32c63" category="paragraph">除了适用于VMware vSphere 10 REST API的ONTAP工具之外、ONTAP集群还具有自己的REST API。ONTAP工具管理器使用ONTAP REST API作为客户端来执行与存储相关的任务。请务必记住、这两个API是分开的、各不相同。有关ONTAP REST API的详细信息、请参见<block ref="2d4aebc414c2e9f6455c923c16f6303c" category="inline-link-rx"></block>文档。</block>
+  <block id="20516199cb9481d285d518fc11cdca0a" category="summary">虽然REST建立了一组通用技术和最佳实践、但每个API的具体实施可能会因设计选择而异。在使用之前、您应熟悉适用于VMware vSphere 10 REST API的ONTAP工具的设计方式。</block>
+  <block id="73e04cfa7b08e07a2220873d48382c98" category="doc">适用于VMware vSphere 10 REST API的ONTAP工具的实施详细信息</block>
+  <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API参考</block>
+  <block id="3a7801515e8905c5c1b58caba299deae" category="paragraph">REST API包括多个资源类别、例如vCenter和聚合。有关详细信息、请查看<block ref="f993b2671c2a028bb49c8687852396a0" category="inline-link-macro-rx"></block>。</block>
+  <block id="45cd4354f07a1ab359a1cc263ed79868" category="section-title">如何访问 REST API</block>
+  <block id="655869188533f107f8244bd668d07902" category="paragraph">您可以通过ONTAP工具负载平衡器IP地址和端口访问适用于VMware vSphere 10 REST API的ONTAP工具。完整的URL包括以下几个部分：</block>
+  <block id="2380e443be52c3a8babdac8a3660044f" category="list-text">ONTAP工具IP地址和端口</block>
+  <block id="7d1d9327371097419bdf83ffa671d2f2" category="list-text">API 版本</block>
+  <block id="bbf5c9c73b20bfa79e158e8eeb77c470" category="list-text">资源类别</block>
+  <block id="e6e84e4970cb2f91fac914024e7baf80" category="list-text">特定资源</block>
+  <block id="33fb1e3ea3bf8658ae3a5a56799992ad" category="paragraph">您需要在初始配置期间配置IP地址、并且端口始终为8443。此外、对于适用于VMware vSphere 10实例的特定ONTAP工具、URL的第一部分是恒定的。只有资源类别和特定资源在端点之间有所不同。</block>
+  <block id="2b8e805ca5043f79e7d7895b37f35f24" category="admonition">以下示例中的IP地址和端口值仅供说明之用。您需要为环境更改这些值。</block>
+  <block id="d66885731813874c4dabe678de135836" category="paragraph-title">访问身份验证服务的示例</block>
+  <block id="d7593fde749e66b8acd303f60946cc1c" category="paragraph"><block ref="85aef1afd5758ea88a9da531790b9beb" prefix="" category="inline-code"></block></block>
+  <block id="37ce291feb740401bb26a4bcbdf918c9" category="paragraph">此URL可用于使用POST方法请求访问令牌。</block>
+  <block id="ca2d4582209691db052fbd2c60f9f562" category="paragraph-title">列出vCenter服务器的示例</block>
+  <block id="51d2f920de63fca9d095d187b7d6e131" category="paragraph"><block ref="8966dcc71fcdaf44a08f9124e1d70fb0" prefix="" category="inline-code"></block></block>
+  <block id="24194695bb79b6d8c33b4828f530acf5" category="paragraph">此URL可用于使用GET方法请求已定义vCenter Server实例的列表。</block>
+  <block id="7ab91fd48b58ce1ea4cada1f1a4e1808" category="section-title">HTTP详细信息</block>
+  <block id="756ebff3bca8295fe64008e02bb36be6" category="paragraph">适用于VMware vSphere 10 REST API的ONTAP工具使用HTTP和相关参数对资源实例和集合执行操作。下面提供了 HTTP 实施的详细信息。</block>
+  <block id="042aa0a27ac3cee02b1b53beb8e4a111" category="paragraph">下表显示了REST API支持的HTTP方法或动词。</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
+  <block id="8ecfde6cfb333d8f81de0672a75b159c" category="cell">CRUD</block>
+  <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="cell">读取</block>
+  <block id="034aca0a59cf5f755b56ff0e7a3d2faa" category="cell">检索资源实例或集合的对象属性。在与集合一起使用时、此操作被视为列表操作。</block>
+  <block id="686e697538050e4664636337cc3b834f" category="cell">创建</block>
+  <block id="dab70249a81ca66a3d22ab410ef021a9" category="cell">根据输入参数创建新的资源实例。</block>
+  <block id="6b328273cc49d43e9c2e399042be392d" category="cell">使用提供的 JSON 请求正文更新整个资源实例。不可由用户进行编辑的密钥值将保留下来。</block>
+  <block id="06c620d6076e01f68380b53a426ccf45" category="cell">请求将请求中的一组选定更改应用于资源实例。</block>
+  <block id="f2a6c498fb90ee345d997f888fce3b18" category="cell">删除</block>
+  <block id="61967c09828f8562a1a95fc9f6fd0151" category="section-title">请求和响应标头</block>
+  <block id="3161915a502f7dd153d9e9c3b9ce5d86" category="paragraph">下表总结了REST API使用的最重要HTTP标头。</block>
+  <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">标题</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">键入</block>
+  <block id="81098f701c45e252a078b3eee62f0dab" category="cell">使用说明</block>
+  <block id="15c2d85f1fae22a3c3a0594510a1f611" category="cell">请求</block>
+  <block id="fcc5591447e85130af8ef80203f214b4" category="cell">这是客户端应用程序可以接受的内容类型。有效值包括"\*/*`或<block ref="d1f5a9d446c6cec2cf63545e8163e585" prefix=" " category="inline-code"></block>。</block>
+  <block id="27e609fa34c63bdd66a44eac9027c817" category="cell">X-auth</block>
+  <block id="03a782daddc7d3b959264503c09fa71d" category="cell">包含用于标识通过客户端应用程序发出请求的用户的访问令牌。</block>
+  <block id="dc105ac52c237f9f09c74b0767f64f74" category="cell">内容类型</block>
+  <block id="d64ed3e9c10229648e069f56e32f4c8e" category="cell">响应</block>
+  <block id="f0f2464004c8835c0d059c35d1f73ba4" category="cell">服务器根据请求标头返回<block ref="c4408d335012a56ff58937d78050efad" prefix=" " category="inline-code"></block>。</block>
+  <block id="2974f783f17d54a41f4040c8daa90545" category="section-title">HTTP status codes</block>
+  <block id="4d2dab0f16d4faba319968bb4f554c83" category="paragraph">下面介绍了REST API使用的HTTP状态代码。</block>
+  <block id="ca0dbad92a874b2f69b549293387925e" category="cell">代码</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">含义</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="e0aa021e21dddbd6d8cecec71e9cf564" category="cell">确定</block>
+  <block id="ebe8cd0cd7287699e570e52e72202209" category="cell">表示未创建新资源实例的调用成功。</block>
+  <block id="757b505cfd34c64c85ca5b5690ee5293" category="cell">201</block>
+  <block id="0eceeb45861f9585dd7a97a3e36f85c6" category="cell">已创建</block>
+  <block id="ee1b2304db98c9dc895c168c5c3e2d95" category="cell">已成功创建具有资源实例唯一标识符的对象。</block>
+  <block id="854d6fae5ee42911677c739ee1734486" category="cell">202</block>
+  <block id="382ab522931673c11e398ead1b7b1678" category="cell">已接受</block>
+  <block id="6ea0874423a44f55cc8ee103147a4bb0" category="cell">已接受此请求、并创建了一个后台作业来执行此请求。</block>
+  <block id="274ad4786c3abca69fa097b85867d9a4" category="cell">204</block>
+  <block id="8386bf720b8b55126f9551c6678647f9" category="cell">No Content</block>
+  <block id="aae60f64e8a8cfaba50bb2292348bc3c" category="cell">尽管未返回任何内容，但请求成功。</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
+  <block id="0fc30646d5cf22910283967bf24ebf66" category="cell">请求错误</block>
+  <block id="d61713af1a9c56d51f7fb3873bed7e92" category="cell">此请求输入无法识别或不适当。</block>
+  <block id="816b112c6105b3ebd537828a39af4818" category="cell">401</block>
+  <block id="e06d1ba70f1331e9f9a113cc2f887d3f" category="cell">未授权</block>
+  <block id="521a106379f6926504948326fd953a38" category="cell">此用户未获得授权、必须进行身份验证。</block>
+  <block id="bbf94b34eb32268ada57a3be5062fe7d" category="cell">403</block>
+  <block id="722969577a96ca3953e84e3d949dee81" category="cell">已禁止</block>
+  <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由于授权错误，访问被拒绝。</block>
+  <block id="4f4adcbf8c6f66dcfc8a3282ac2bf10a" category="cell">404</block>
+  <block id="9e076f5885f5cc16a4b5aeb8de4adff5" category="cell">未找到</block>
+  <block id="24ff0a9484d837d82e7f8f8218e196b6" category="cell">请求中引用的资源不存在。</block>
+  <block id="a96b65a721e561e1e3de768ac819ffbb" category="cell">409</block>
+  <block id="f1d4ac54357cc0932f385d56814ba7e4" category="cell">冲突</block>
+  <block id="47a99fc0005eeb289896eda4eb4b708a" category="cell">尝试创建对象失败，因为此对象已存在。</block>
+  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
+  <block id="8f8913c1f755436db84ae169e37c61f9" category="cell">内部错误</block>
+  <block id="03f0e0f686ebd5f796ca9febd1723676" category="cell">服务器发生一般内部错误。</block>
+  <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">身份验证</block>
+  <block id="e9e6a27d4bfbd7f5042800de53a926bb" category="paragraph">使用访问令牌对客户端进行REST API身份验证。令牌和身份验证过程的相关特征包括：</block>
+  <block id="73005c4ee1b6da331856852270bb4928" category="list-text">客户端必须使用ONTAP工具管理器管理员凭据(用户名和密码)请求令牌。</block>
+  <block id="f9c59a96248bb30ec8fe1f39c8b4902a" category="list-text">令牌的格式为JSON Web令牌(JWT, JSON Web令牌)。</block>
+  <block id="43a0f271454bd2f46f0629ca623fd6e6" category="list-text">每个令牌将在60分钟后过期。</block>
+  <block id="b2e958775d667e0a227cfddbcebd684f" category="list-text">客户端的API请求必须在请求标头中包含令牌<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>。</block>
+  <block id="8921c3b98c12a84674b91d6afb231018" category="inline-link-macro">您的第一次REST API调用</block>
+  <block id="97464d8b78e344ca1b8dbef846959c30" category="paragraph">有关请求和使用访问令牌的示例、请参见<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
+  <block id="a629cb231a04093c2a17e9137fcc8b2e" category="section-title">同步和异步请求</block>
+  <block id="a7fdec025c999a2d4658d175b36b6816" category="paragraph">大多数REST API调用都会快速完成、因此会同步运行。也就是说、在完成请求后、它们将返回状态代码(例如200)。需要较长时间才能完成的请求会使用后台作业异步运行。</block>
+  <block id="ee0683b0f9214e5957ad88b24d1d0692" category="paragraph">发出异步运行的API调用后、服务器将返回202 HTTP状态代码。这表示请求已被接受、但尚未完成。您可以查询后台作业以确定其状态、包括成功或失败。</block>
+  <block id="c6484bc2fdbc6f333ba72fd2ff67490d" category="paragraph">异步处理用于多种类型的长时间运行操作、包括数据存储库和VVOL.有关详细信息、请参见Swagger页面上REST API的作业管理器类别。</block>
+  <block id="3672cc73e8f241c0e99fa671f7d984c5" category="sidebar">使用REST API实现自动化</block>
+  <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">了解REST API</block>
+  <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST 实施</block>
 </blocks>
