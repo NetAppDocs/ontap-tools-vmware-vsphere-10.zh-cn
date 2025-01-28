@@ -92,10 +92,7 @@
   <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">* 您需要的内容 *</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">需要信息。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">从弹出窗口的下拉列表中选择存储后端。</block>
-  <block id="b2ed14efa60f0218dbe29d217936db05" category="list-text">作业完成后、验证迁移报告。您可以在JobData中查看来自作业响应的报告。</block>
-  <block id="940a68f40b0387ef09c8890b5f3351a3" category="list-text">使用以下API执行修补程序迁移：</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID是迁移后API响应中返回的迁移UUID。</block>
-  <block id="c433a687863536676c660d246d95f8f1" category="paragraph">修补程序迁移API成功后、所有VM都将符合存储策略。</block>
   <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="paragraph">用于迁移的删除API为：</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">刷新所有主机上的证书。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 问题描述 *</block>
@@ -242,7 +239,6 @@
   <block id="db02bd2307c791062e633781a3c11af0" category="list-text">vCenter Server实例管理—将vCenter Server实例添加到ONTAP工具并对其进行管理。</block>
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">存储后端管理—将ONTAP存储集群添加到适用于VMware vSphere的ONTAP工具并进行管理、然后将其全局映射到已部署的vCenter Server实例。</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">日志捆绑包下载—收集适用于VMware vSphere的ONTAP工具的日志文件。</block>
-  <block id="68ab2bf8c2ce15ec9d7b00c479775a7e" category="list-text">Password management (密码管理)-重置用户的OVA应用程序密码。</block>
   <block id="201e0f05da35ce967557e2ecf9f130be" category="paragraph">要访问ONTAP工具管理器、请启动<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> 从浏览器中、使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
   <block id="3fae23455f0376a5d42734cbd65edc69" category="summary">首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具时、适用于VMware vSphere的ONTAP工具会发现ESXi主机、其LUN和NFS导出以及这些LUN和导出所属的NetApp存储系统。</block>
   <block id="8fd43ee482a4e281b8feee6762fb22d2" category="doc">发现存储系统和主机</block>
@@ -847,15 +843,9 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6753f4982155708aac37a1bd3bef1245" category="paragraph">此时将显示创建网络映射向导。</block>
   <block id="6211d5bb29b9c1509eb64e37fd1af6f4" category="list-text">在创建网络映射向导中，执行以下操作：</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">网络映射页面将显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
-  <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">作为现有用户、在升级到修补程序版本之前、您需要从当前版本创建OVA备份。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">常见迁移步骤</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA迁移步骤</block>
-  <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">迁移前、请确保其中一个站点处于受保护状态、另一个站点处于恢复状态。</block>
-  <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">如果故障转移刚刚完成且重新保护处于待定状态、请勿迁移。完成重新保护、然后执行迁移。
-同一适用场景测试恢复计划。恢复计划测试完成后、清理测试恢复、然后开始迁移。</block>
-  <block id="0bb95f551fcbc064f5de91693d368db6" category="list-text">转至Storage Replication Adapter部分</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">在保护站点和恢复站点上执行这些步骤。</block>
-  <block id="0052540e6b71b0dead0bb00933d9a68d" category="list-text">在适用于VMware vSphere的现有ONTAP工具上启用Derby端口1527。要启用此端口、请使用root用户登录到命令行界面并运行以下命令：</block>
   <block id="c713abd43a97c8915e6503cd7f93ad36" category="list-text">问题描述要迁移的API调用：</block>
   <block id="4b2e39d58448cd6246edaab6e2789245" category="paragraph">*HTTP方法和端点*</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此REST API调用使用以下方法和端点。</block>
@@ -892,31 +882,16 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   "Status"："running"
 ｝</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">将VASA Provider注册到vCenter Server</block>
-  <block id="5fec27e27d789740b1557e43765e8712" category="list-text">从维护控制台停止适用于VMware vSphere存储提供程序9.10/9.11/9.12/9.13的ONTAP工具VASA Provider服务。</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">patch</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">修补"/api/v1/vcCenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">*JSON输入示例*</block>
-  <block id="80d6f8b7b33941158bf11590d8f340f5" category="paragraph">修补操作的请求正文为空。</block>
   <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/api/v1/vcCenters/｛vcpguid｝/migration-jobs/｛migration_id｝</block>
-  <block id="f45df61923075bce3925756b5ef238ac" category="paragraph">此API将按迁移ID删除迁移、并删除给定vCenter Server上的迁移。</block>
-  <block id="02b629daee69a13e1d9e1bb586f9aeaa" category="list-text">请等待一段时间、然后再执行数据存储库(DS)和虚拟机(VM)操作。等待时间取决于设置中存在的主机、DS和VM的数量。如果不等待、操作可能会间歇性失败。</block>
   <block id="07959986337388ebd736dc282a14afca" category="paragraph">*启用诊断*</block>
-  <block id="070fdd3da4ee331b0ced27113978cc9a" category="list-text">从vCenter Server中、打开一个ONTAP工具控制台。</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">输入*y*设置您选择的密码。</block>
-  <block id="f6026db814a9f3dd7f8b744a321a37f6" category="paragraph">*备份MongoDB*</block>
-  <block id="3ad298269c982c99cdf89686fc99f90e" category="paragraph">运行以下命令以创建MongoDB的备份：</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kn exec -it NTV-MongoDB-0 sh - kn是kubect1 -n NTV-system的别名。</block>
-  <block id="6ac951df6c4326c0b5ba21fb03e462b0" category="list-text">env | grep MongoDB_root_password—在POD中运行此命令。</block>
-  <block id="56773b08cc852ed52964549dfb9fc61e" category="list-text">'退出'-运行此命令以退出模块。</block>
-  <block id="93c8b0f299af9bd0eec6a1b971e57816" category="list-text">n exec NTV-MongoDB-0 --mongodump -u root -p MongoDB_root_password --archive=/tmp/mongodb-backup.gz --gzip -运行此命令以替换上述命令中设置的Mongo_root_password。</block>
-  <block id="e3a9f4dcb4a04b10f748467637c474e9" category="list-text">KN CP NTV-MongoDB-0：/tmp/MongoDB mongodb-backup.gz ./mongodb-backup.gz -运行此命令、将使用上述命令创建的MongoDB备份从Pod复制到主机。</block>
-  <block id="7511ae8db149d434a6d995197e107fcb" category="list-text">运行"kn get pv"命令并保存命令的输出。</block>
   <block id="bfc1d4c138c87f77e5b639193ca91674" category="list-text">使用以下方法之一逐个为所有卷创建快照：</block>
   <block id="bcf0e596a358c1cb63fd717d9fa47cd7" category="list-text">在命令行界面中、运行命令_volume Snapshot create -vserver &lt;vserver_name&gt;-volume &lt;volume_name&gt;-Snapshot &lt;snapshot_name&gt;_</block>
-  <block id="37bdbf0e3834e7af7a371007e55bb5b8" category="list-text">在ONTAP System Manager用户界面中、在搜索栏中按名称搜索卷、然后单击该名称打开该卷。转至快照并添加该卷的快照。</block>
   <block id="c3710cf1c44da535612cf08236cee98f" category="list-text">在vSphere客户端用户界面中、选择虚拟机。</block>
-  <block id="0c7449d65eaf3d8213f7d1d7f8e79d1c" category="paragraph">在执行升级之前、请从日志包中删除前缀为"generate—support-Bundle—job"的已完成Pod。
-如果正在生成支持包、请等待生成完成、然后删除此Pod。</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">将适用于VMware vSphere的ONTAP工具升级ISO上传到内容库。</block>
   <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">在主VM页面中，选择*Actions*&gt;*Edit Settings*</block>
   <block id="54a029420d74c0dff69239155cf510b5" category="inline-image-macro">编辑设置</block>
@@ -1297,7 +1272,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="fb9ce87f03a0429d0af0760d01b74612" category="cell">095</block>
   <block id="b5e39b37a2c811e88e1f07aa15f0ba15" category="summary">HA和非HA部署均支持升级。</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">如果要从适用于VMware vSphere 10.0的ONTAP工具升级到10.1、则需要完成以下步骤、然后再继续执行升级任务：</block>
-  <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">在编辑设置窗口的*CD/DVD驱动器*字段中，选择内容库ISO文件。</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">挂载NFS和VMFS数据存储库</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸载NFS和VMFS数据存储库</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展开vVol数据存储库</block>
@@ -1353,7 +1327,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">要在VMware Live Site Recovery UI中删除适用于VMware vSphere 9.xx版本SRA适配器的ONTAP工具、请执行以下步骤：</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在VMware Live Site Recovery设备上配置SRA</block>
-  <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">在VMware Live Site Recovery UI页面中，执行*Discover Arrays *和*Discover Devices*操作，并验证这些设备是否显示为迁移前的状态。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您应已在VMware Live Site Recovery中将受保护站点和恢复站点配对。</block>
@@ -1536,13 +1509,9 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="35b4916fa7f87e2934afc9aa83571dfc" category="paragraph">仅会显示符合此插件安装条件的ESXi主机。您应按照屏幕上的说明完成安装。您可以在vSphere Web Client的近期任务部分中监控安装进度。</block>
   <block id="6dc52c7290e3cfc8eb925243061b7551" category="list-text">证书管理-将自签名证书更改为自定义CA证书、并续订或刷新VASA Provider和ONTAP工具的所有证书。</block>
   <block id="f8e55333fdf93a54b9c4999e28d01f1c" category="inline-image-macro">ONTAP工具管理器信息板概述</block>
-  <block id="69a8f62bd40b2285b7006bc878f63e59" category="paragraph">ONTAP工具管理器概述部分可帮助您管理设备配置、例如服务管理、节点大小纵向扩展和高可用性(HA)支持。此外、您还可以监控与节点相关的整体ONTAP工具信息、例如运行状况、网络详细信息和警报。<block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="438feb29c72033a1e461b5f8627d139d" category="cell">设备卡</block>
-  <block id="21a9feeb29c1c0a30517eb98535f5202" category="cell">设备卡提供了ONTAP工具的整体设备状态。它会显示设备配置详细信息以及已启用服务的状态。有关ONTAP工具设备的其他详细信息，请单击“*查看详细信息*”链接。如果正在执行编辑设备设置操作作业、则设备portlet将显示作业的状态和详细信息。</block>
   <block id="2ba512cd332d9fb8cdb8eaaa68126426" category="cell">警报卡</block>
-  <block id="2a1cd4a592ca1d01c6e03390d7a6d5d1" category="cell">警报卡按类型列出ONTAP工具警报、包括HA节点级别警报。您可以通过单击计数文本(超链接)来查看警报列表。此链接会将您路由到使用选定类型筛选的警报视图页面。</block>
   <block id="3c3237ebddf22ec92cfa91fee8b87db8" category="cell">ONTAP工具节点卡</block>
-  <block id="50d0b4e12fbe47a8699d3c2d31ef6505" category="cell">ONTAP工具节点卡显示节点列表以及节点名称、节点VM名称、状态和所有网络相关数据。您可以单击*查看详细信息*以查看与选定节点相关的其他详细信息。[注意]如果是非HA设置、则仅显示一个节点。对于HA、显示三个节点。</block>
   <block id="c749ba6a66c9c4d365591fada904e866" category="list-text">主机集群上挂载的所有数据存储库都必须是采用iSCSI/FC协议的VMFS数据存储库。不支持采用NVMe/FC和NVMe/TCP协议的卷、NFS或VMFS数据存储库。</block>
   <block id="6107bfa2400c41e392656bedd41adf70" category="list-text">在*Protect cluster-*窗口中，创建操作期间仅支持删除操作。您可以删除并重新添加保护。在修改主机集群保护操作期间、可以使用编辑选项。您可以使用省略号菜单选项编辑或删除关系。</block>
   <block id="79f9acbcb92275b6970c0803108ab558" category="paragraph">此时将使用作业ID详细信息创建一个vCenter任务、并且近期任务面板中会显示此任务的进度。这是一个异步任务、用户界面仅显示请求提交状态、不会等待任务完成。</block>
@@ -1751,22 +1720,12 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="0e098cc28d02ba04dfc24f8fb59c1fd1" category="admonition">基于ASA R2的虚拟卷数据存储库不支持此视图。</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。</block>
   <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">从适用于VMware vSphere 9.x的ONTAP工具迁移到10.3</block>
-  <block id="f729a2cd0859c6ed3e1a05f2799ab893" category="admonition">建议仅在适用于VMware vSphere 9.xx的ONTAP工具设置仅提供VASA Provider功能时才迁移此设置。</block>
-  <block id="6572323c8c420a17787c730db23bfe73" category="admonition">从适用于VMware vSpher 9.x的ONTAP工具迁移到10.3之后、采用NVMe/FC协议的Vvol数据存储库将无法工作、因为ONTAP工具10.3仅支持对VMFS数据存储库使用NVMe-oF。</block>
-  <block id="fedbcbfcba84e0f83145c9556e237d18" category="paragraph">支持从适用于VMware vSphere 9.12D1和9.13D2的ONTAP工具迁移到10.3版。</block>
   <block id="98db65da9a06955541a5451543410fde" category="list-text">部署适用于VMware vSphere 10.3版的适用于ONTAP的OVA工具。</block>
-  <block id="df773402e8f2ed0ab0c0814bc876c2b4" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参见 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
-  <block id="528ca6fe76d1644ad915c3bc45c4d63d" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.3的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在适用于VMware vSphere的ONTAP工具插件用户界面页面的概述页面中。</block>
-  <block id="c86e769a3ebdcd57610a068230678ec7" category="list-text">单击省略号菜单，然后单击*Reset configuration*</block>
-  <block id="96069341a33c50a0ef5c1407a1fd182f" category="list-text">单击省略号菜单并选择*Delete*</block>
   <block id="b81b2046e8a2fa467c645a47a0ade5d0" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.3 SRA适配器的ONTAP工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">VASA Provider迁移步骤</block>
-  <block id="2cd7a3049fe96503b7de6e7f7aa952df" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参阅。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">将适用于VMware vSphere存储提供程序的ONTAP工具添加到vCenter Server和 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">请勿删除VASA Provider。</block>
-  <block id="b5a25fbe7772c238f78e903d293f5308" category="paragraph">停止旧的VASA Provider后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。</block>
   <block id="29d0e7add25c8163223dbcb531abf7d0" category="paragraph">成功迁移并将ONTAP工具10.3注册到vCenter Server后、请执行以下操作：</block>
-  <block id="b6d81ca221627275f71a12c9cd54aaf8" category="paragraph">从适用于VMware vSphere的旧版ONTAP工具迁移到10.3版后、请重新扫描SRA适配器、以验证是否已在VMware Live Site Recovery存储复制适配器页面上更新详细信息。</block>
   <block id="8e9a07c053d2ef05978af8e903731d91" category="paragraph">了解从适用于VMware vSphere 9的ONTAP工具迁移到适用于VMware vSphere 10.1或更高版本的ONTAP工具是否适合您。有关最新的兼容性信息，请参阅<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP工具10.2及更高版本</block>
   <block id="f4950bb5572ea7201d6246f4bd786edd" category="cell">适用于ONTAP工具10.2的9.12.1 9.12.1到9.15.1 9.15.1,适用于ONTAP工具10.3的ONTAP 9.14.1, 9.15.1, 9.16.0。</block>
@@ -1823,17 +1782,12 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2298090c8808f9e231d33a417e9f8fda" category="cell">刷新二级节点上的资源失败</block>
   <block id="1ca37d27a58b0a0a35fd38c8f42f39fc" category="admonition">适用于VMware vSphere 10.3的ONTAP工具支持零RPO。</block>
   <block id="e085c3225ffce6bb698ac8cf50cc0dc4" category="doc">从适用于VMware vSphere 10.x的ONTAP工具升级到10.3</block>
-  <block id="c45b0da6267d1b3ac800c0b030304702" category="paragraph">HA和非HA部署均支持升级。支持的升级路径为：</block>
   <block id="b82f42f52ac5fdc3e618aefefe8a32c4" category="cell">从适用于VMware vSphere 10.1和10.2配置的ONTAP工具</block>
   <block id="b3b9272a2c469166be75d90b4b3c80cc" category="cell">适用于VMware vSphere 10.3配置的ONTAP工具</block>
   <block id="55fccd63301cc56ac04a1c6d2f582d36" category="cell">非HA和高级小型</block>
   <block id="2f876f935e1583f150a8df2b2a6edbf0" category="cell">非HA和高级介质</block>
   <block id="4bab1341c76020b5f6d28c63555579b4" category="cell">高级小型</block>
   <block id="8cd81bc4ea1b977ea6e585721caa4349" category="cell">高级介质</block>
-  <block id="d2326859c3dfbf997316b902ffdd2b00" category="admonition">支持从适用于VM ware vSphere 10.1和10.2的ONTAP工具升级到10.3。不支持从ONTAP工具10.0直接升级到10.3。</block>
-  <block id="1a66f7eb5566c2688b2d5d921d9eef6f" category="paragraph">对于非HA升级、请关闭ONTAP Tools VM；对于HA升级、请先关闭第一个节点、然后再对虚拟机(VM)设置进行以下更改。</block>
-  <block id="b646416d8819b3149b9593d11ae9e16f" category="list-text">当服务数据存储在虚拟机本地时、在每个节点上额外添加一个100 GB的硬盘。</block>
-  <block id="fc5ce7eb2b2cb08c38ec14e4d238751d" category="list-text">根据部署方式更改已关闭电源的虚拟机的CPU和内存。为CPU和RAM启用热插件。</block>
   <block id="1b6cfd8c0ad7fbb4f3aad55904bed183" category="cell">10.3部署类型</block>
   <block id="5d86ea2686b1b1322f7a0284c0f51191" category="cell">每个节点的CPU (核心)数</block>
   <block id="5c42add8c77b8db0c96fe2b4bd853355" category="cell">每个节点的内存(GB)</block>
@@ -1848,35 +1802,18 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="662e7928456061bbc4ff15203f731479" category="cell">HA大型</block>
   <block id="70efdf2ec9b086079795c442636b55fb" category="cell">17</block>
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
-  <block id="87d8a82ad972c59e0687fe82cccc2694" category="list-text">完成更改后、启动虚拟机、并等待服务进入运行状态。</block>
-  <block id="c2bf492958f9a5af46545d2cbb870e2f" category="list-text">在HA部署中、请更改资源、为CPU和RAM启用热插件、并为第二个和第三个节点添加100 GB硬盘。无需重新启动这些节点。</block>
-  <block id="22a804da0dd55275401036ab63b714e8" category="list-text">如果此设备是使用ONTAP工具10.1或10.2版以本地路径(易于部署)方式部署的、则需要先创建静修快照、然后再进行升级。</block>
   <block id="8a6126b328272cba568f4c25bb25de85" category="list-text">输入*4*以选择*Support and Diagnostic*。</block>
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">输入*2*以选择*Enable remote diagnostic access*。</block>
-  <block id="a285f3b4aeefb88ca2fd8666fcd325b0" category="list-text">使用在上一步中设置的用户"DIAG"和密码从终端/putty登录到VM IP地址。</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">*获取所有卷的quaise快照*</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">为虚拟机创建快照</block>
   <block id="557eb1dc4f7a93540b6e414ed969c26c" category="list-text">进入快照选项卡并单击*创建快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
-  <block id="1b2929d74bbfce8f97efe465aa7ef62a" category="paragraph">对于任何类型的升级、您都需要添加一个大小为100 GB的额外硬盘驱动器(HDD)。执行以下任务以添加HDD。</block>
-  <block id="5919e650880cfeabf035fac93b2a3d51" category="list-text">选择单节点配置中的VM或选择HA配置中的所有三个VM。</block>
   <block id="f0032c952bebc43c75710433e2994c19" category="list-text">右键单击虚拟机并选择*添加新设备*&gt;*硬盘*</block>
-  <block id="24b529fa7fe637c09879ca05c8c7c2c3" category="list-text">在“*新硬盘*”字段中，添加大小为100 GB的HDD。</block>
   <block id="91228eef6e9a7bdc25cdad1b40b153b6" category="list-text">单击*Apply*</block>
-  <block id="635d38999d7fdd67d78a58a7fd2c957c" category="paragraph">添加硬盘后、根据相应配置更新虚拟机的资源、然后重新启动主虚拟机。</block>
-  <block id="b2c62309c8e6bb5418cb5e49fdc348d4" category="paragraph">此时将创建一个新的HDD。动态存储配置程序使用此HDD来创建或复制卷。</block>
   <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">升级到适用于VMware vSphere 10.3的ONTAP工具后、您可以：</block>
-  <block id="4919e6f9219e550bfd4f15862ca7c4e1" category="list-text">从管理器UI禁用服务</block>
-  <block id="cd45571610eaf41dc79736a925d0dd90" category="list-text">从非HA设置移至HA设置</block>
-  <block id="3d7a5459b11b0dd9ed444d6d42cd9d4c" category="list-text">将非HA小型配置纵向扩展到非HA中型配置或HA中型或大型配置。</block>
-  <block id="573cfbe6133f4358783c68d68d4d7733" category="list-text">如果是非HA升级、请重新启动ONTAP工具VM以反映所做的更改。如果要升级HA、请重新启动第一个节点、以反映此节点上所做的更改。</block>
-  <block id="f305a79263533021079634e7a636a791" category="paragraph">从适用于VMware vSphere的ONTAP工具的先前版本升级到10.3版后、请重新扫描SRA适配器、以验证是否已在VMware Live Site Recovery存储复制适配器页面上更新详细信息。</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">成功升级后、请按照以下过程手动从ONTAP中删除Trident卷：</block>
-  <block id="fc95380c03a9e2251e07f1937e36341b" category="admonition">如果适用于VMware vSphere 10.1或10.2的ONTAP工具采用非HA小型或非HA中型(本地路径)配置、则无需执行这些步骤。</block>
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">输入*4*以选择*Support and Diagnostic*菜单。</block>
-  <block id="7c7165f05246a4a849b52f09cdc55f2e" category="list-text">输入*1*以选择*Access diagnostics shell*选项。</block>
   <block id="69fc33706a999a8497eea8a0a1410092" category="list-text">运行以下命令</block>
   <block id="4c4796167c3422541c6e31f440e40302" category="list-text">输入ONTAP用户名和密码</block>
-  <block id="cb0777e7c086fec2eb034fbc83e6ea2c" category="paragraph">此操作将删除适用于VMware vSphere 10.1/10.2的ONTAP工具中使用的ONTAP中的所有Trident卷。</block>
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">适用于VMware vSphere 10.2的ONTAP工具文档</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">适用于 VMware vSphere 的 ONTAP 工具 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">配置受保护站点和恢复站点</block>
@@ -2032,4 +1969,75 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3672cc73e8f241c0e99fa671f7d984c5" category="sidebar">使用REST API实现自动化</block>
   <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">了解REST API</block>
   <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST 实施</block>
+  <block id="cfd78a7adbcd7e4e099e4150d96d4189" category="list-text">密码管理-重置用户的OVA应用程序密码。</block>
+  <block id="86e9662d627799ea9b0d956617badc77" category="paragraph">ONTAP工具管理器概述部分可帮助您管理设备配置、例如服务管理、节点大小扩展和高可用性(HA)支持。您还可以监控与节点相关的ONTAP工具的整体信息、例如运行状况、网络详细信息和警报。</block>
+  <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9190f42ee5e75c97614269214dfcb136" category="cell">设备卡可提供ONTAP Tools设备的整体状态。它会显示设备配置详细信息以及已启用服务的状态。有关ONTAP工具设备的其他信息，请单击*View Details (查看详细信息)*链接。如果正在执行编辑设备设置操作作业、则设备portlet将显示此作业的状态和详细信息。</block>
+  <block id="faf239172dda3b91c4655d9bbde63c82" category="cell">"警报"卡按类型列出了ONTAP工具警报、包括HA节点级警报。您可以通过单击计数文本(超链接)来查看警报列表。此链接会将您路由到按选定类型筛选的警报视图页面。</block>
+  <block id="0e347dbe23febdf1001ed9dfb3e15bc1" category="cell">ONTAP工具节点卡显示节点列表以及节点名称、节点VM名称、状态和所有网络相关数据。您可以单击*查看详细信息*以查看与选定节点相关的其他详细信息。[注意]在非HA设置中、仅显示一个节点。在HA设置中、显示了三个节点。</block>
+  <block id="8c5a94dd08e58279f7461d929aa633e6" category="paragraph">迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。</block>
+  <block id="b191a7ff08bb6435186d922c59ff1907" category="admonition">只有在适用于VMware vSphere 9.xx的ONTAP工具设置仅提供VASA Provider功能时、才应迁移此设置。</block>
+  <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">从适用于VMware vSphere的ONTAP工具9.x迁移到10.3之后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.3仅支持对VMFS数据存储库使用NVMe-oF。</block>
+  <block id="f9f52fdfc3b658d087ef0d1715cc2008" category="paragraph">您可以从适用于VMware vSphere 9.12D1和9.13D2的ONTAP工具迁移到10.3版。</block>
+  <block id="12f864a7f79090b1b0f169109899eb43" category="admonition">在升级到修补程序版本之前、您必须从当前版本创建OVA备份。</block>
+  <block id="6a52711c7181000aac8a9b276baf324a" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参见 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="9a8e25e84fe96275dbb27d27d2cca595" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.3的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在VMware vSphere插件UI页面的ONTAP工具的概述页面上。</block>
+  <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">迁移前、请确保其中一个站点处于受保护状态、另一个站点处于恢复状态。</block>
+  <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">如果故障转移刚刚完成且重新保护处于待定状态、请勿迁移。完成重新保护、然后执行迁移。完成恢复计划测试后、清理测试恢复并开始迁移。</block>
+  <block id="0f47e7ab13b9f8031de10689d97b861b" category="list-text">转到*Storage Replication Adapter*部分</block>
+  <block id="c28d0a48f388c92ed3ec2fccafeb15ea" category="list-text">单击省略号菜单并选择*重置配置*</block>
+  <block id="1c5f97ee40c90341d1819bd10d046a29" category="list-text">单击省略号菜单并选择*Delete*</block>
+  <block id="e7563198149b4ef22a580dcc695a13ec" category="list-text">在VMware Live Site Recovery UI页面上，执行*Discover Arrays *和*Discover Devices*操作，并验证这些设备是否显示为迁移前的状态。</block>
+  <block id="e316aaa000b8dea913558dbe47e2ab03" category="list-text">在适用于VMware vSphere的现有ONTAP工具上启用Derby端口1527。要启用此端口、请使用root用户登录到命令行界面并运行以下命令：</block>
+  <block id="fdb5b6876d97a075f0bc2a07cd4be907" category="list-text">部署适用于VMware vSphere 10.3的ONTAP工具OVA。</block>
+  <block id="34b17f133cdce8c13fd8b812b8c11211" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参阅。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="142e4d3f8edb2747fa0e3d260133b8c1" category="paragraph">作业完成后、验证迁移报告。此报告是作业数据的一部分、可从作业响应中查看。</block>
+  <block id="009dbe214d15197679fe0b95a8a01cc3" category="list-text">从维护控制台停止适用于VMware vSphere存储提供程序9.10/9.11/9.12/9.13的ONTAP工具VASA Provider服务。</block>
+  <block id="4bf6186a3a16efffdaebdafdd4fcaf4b" category="paragraph">停止旧的VASA Provider后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。</block>
+  <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">使用以下API执行修补程序迁移：</block>
+  <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">修补操作的请求正文为空。</block>
+  <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">成功运行修补程序迁移API后、所有VM都会遵守存储策略。</block>
+  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">此API将按迁移ID删除迁移、并删除给定vCenter Server上的迁移。</block>
+  <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">请等待一段时间、然后再执行数据存储库(DS)和虚拟机(VM)操作。等待时间取决于设置中的主机、DS和VM数量。如果不等待、操作可能会间歇性失败。</block>
+  <block id="d338e834d62b1cf850a89cbfdf1d9bd7" category="paragraph">从适用于VMware vSphere的旧版ONTAP工具迁移到10.3之后、请重新扫描SRA适配器、以验证是否已在VMware Live Site Recovery存储复制适配器页面上更新详细信息。</block>
+  <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">升级后、如果虚拟机合规性状态已过时、请按照以下步骤重新应用虚拟机存储策略：</block>
+  <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">导航到数据存储库并选择*摘要*&gt;*虚拟机存储策略*。</block>
+  <block id="578a0636e92ae2e1b6afe3bdc7c9f9b3" category="paragraph">在*VM存储策略遵从性*下，您可以看到遵从性状态。显示为*过时*</block>
+  <block id="325367fe0120f7c1592bf3028da84bee" category="list-text">选择Storage VM策略和相应的VM</block>
+  <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">选择*应用*</block>
+  <block id="b180a96ee0634f423c4629bca8858873" category="paragraph">现在，“VM storage policy Compliance”(VM存储策略合规性)下的合规状态将显示为“Compliance”(合规)。</block>
+  <block id="bd6bc908cf442363948229bac8df6193" category="list-text">在运行SRA工作流之前、源和目标ONTAP集群必须创建相同的自定义SnapMirror计划。</block>
+  <block id="53fa6655b37323ab66a83f1beb9f66c1" category="paragraph">HA和非HA部署均支持此升级。支持的升级路径为：</block>
+  <block id="6057f03ffe4bbf8fd9e051002f4f22bb" category="admonition">支持从适用于VMware vSphere 10.1和10.2的ONTAP工具升级到10.3。不支持从ONTAP工具10.0直接升级到10.3。</block>
+  <block id="a37e11c372d948a69c1ca06f96f29654" category="paragraph">对于非HA升级、请关闭ONTAP Tools VM；对于HA升级、请先关闭第一个节点、然后再对虚拟机(VM)设置进行以下更改。</block>
+  <block id="360d7dde1452a41a726a072836e13df3" category="list-text">由于服务数据存储在虚拟机本地、因此、请向每个节点再添加一个100 GB硬盘。</block>
+  <block id="d542d6e6bfec95dca9488d55ed772578" category="list-text">根据部署方式更改已关闭电源的虚拟机的CPU和内存。为CPU和RAM启用热插件。</block>
+  <block id="fdd3abbed4073b09c3b2a7f9316d5c88" category="list-text">完成更改后、启动虚拟机、并等待服务进入运行状态。</block>
+  <block id="ff305864530c5baf345b9688bd0631f4" category="list-text">在HA部署中、请更改资源、为CPU和RAM启用热插件、并为第二个和第三个节点添加100 GB硬盘。无需重新启动这些节点。</block>
+  <block id="aaa3919b119a4a5719987a826b3f426c" category="list-text">如果此设备是通过ONTAP工具10.1或10.2以本地路径部署的(易于部署)、则需要在升级之前创建静用快照。</block>
+  <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">从vCenter Server中、打开一个ONTAP工具控制台。</block>
+  <block id="8f6d00eacbf6d4158bc6e74700b0499e" category="list-text">使用用户"DIAG"和上一步中设置的密码从终端/putty登录到VM IP地址。</block>
+  <block id="2528cd48cce125276b1d088b78c23ac4" category="paragraph">*备份MongoDB*</block>
+  <block id="968d0c04f7a1680429ceb1db128906cd" category="paragraph">运行以下命令以创建MongoDB的备份：</block>
+  <block id="54efa270b0d74ef97f3590c0aae1393d" category="list-text">在POD中运行_env | grep MongoDB_root_password_命令。</block>
+  <block id="97493984eff3f2fe92f1d3aa5ec1c13a" category="list-text">运行_exit_命令退出POD。</block>
+  <block id="91e2ec0f0dd7d843927f5c85366a02ec" category="list-text">运行_kn exec NTV-MongoDB-0 --mongodump -u root -p MongoDB_root_password --archive=/tmp/mongodb-backup.gz --gzip_命令以替换上述命令中设置的Mongo_root_password。</block>
+  <block id="4728f0b778ffa8e0ae5be992c59e144b" category="list-text">运行_kn cp ntV-MongoDB-0：/tmp/MongoDB-backup.gz_ mongodb-backup.gz命令、将使用上述命令创建的MongoDB备份从Pod复制到主机。</block>
+  <block id="8694eb97cf4ec570d09d33becf6a8eed" category="list-text">运行"kn get pv"命令并保存命令输出。</block>
+  <block id="a9e8526531fd29e961f43f5bb243319e" category="list-text">从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后单击该卷名称以打开该卷。转至快照并添加该卷的快照。</block>
+  <block id="07cf559ee7bbc8841180f1dd59c2917f" category="paragraph">在执行升级之前、请从日志包中删除前缀为"generate—support-Bundle—job"的已完成Pod。如果正在生成支持包、请等待生成完成、然后删除此Pod。</block>
+  <block id="7817c7412ad536f5c02bd959934f66d5" category="paragraph">对于任何类型的升级、您都需要额外添加一个100 GB硬盘驱动器(HDD)。要添加HDD、请执行以下任务。</block>
+  <block id="11873b433682caa870371cc1631ef90f" category="list-text">选择单节点配置中的VM或HA配置中的所有三个VM。</block>
+  <block id="3fed8c7b63099eeb7748cc54424abfec" category="list-text">在*新硬盘*字段中添加一个100 GB的HDD。</block>
+  <block id="cd457aeee08a9f6476660a1f15284160" category="paragraph">添加硬盘后、根据相应配置更新虚拟机资源、然后重新启动主虚拟机。</block>
+  <block id="82c4bde04ac809c6d15f232949e072ce" category="paragraph">此时将创建一个新的HDD。动态存储配置程序使用此HDD来生成或复制卷。</block>
+  <block id="ef9e53e40d78d57abe78283a3603eb4e" category="list-text">在编辑设置窗口的*CD/DVD驱动器*字段下选择内容库ISO文件。</block>
+  <block id="e4965c8171d689acf2bfafb148ebfaa8" category="list-text">从管理器UI禁用服务</block>
+  <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">从非HA设置移至HA设置</block>
+  <block id="4521a8bb9c231770ace79aca6602dc13" category="list-text">将非HA小型配置纵向扩展为非HA中型配置、或者纵向扩展为HA中型或大型配置。</block>
+  <block id="48f74593cd55f85759914f3614a0c3b9" category="list-text">如果是非HA升级、请重新启动ONTAP工具VM以反映所做的更改。如果要升级HA、请重新启动第一个节点、以反映此节点上所做的更改。</block>
+  <block id="29c35069673bbb39e41492464283c461" category="paragraph">从适用于VMware vSphere的ONTAP工具的先前版本升级到10.3之后、请重新扫描SRA适配器、以验证是否已在VMware Live Site Recovery存储复制适配器页面上更新详细信息。</block>
+  <block id="97157e33a0e033b7effd56e6305b9030" category="admonition">如果适用于VMware vSphere 10.1或10.2的ONTAP工具采用非HA小型或中型(本地路径)配置、则不需要执行这些步骤。</block>
+  <block id="3ff3da4c344f1ccca0d255803305cce9" category="list-text">输入*1*以选择*Access diagnostics shell*选项。</block>
+  <block id="a1f81812b9996ffae82950938651b560" category="paragraph">此操作将删除适用于VMware vSphere 10.1/10.2的ONTAP工具中使用的ONTAP中的所有Trident卷。</block>
 </blocks>

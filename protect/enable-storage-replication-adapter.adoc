@@ -18,6 +18,7 @@ summary: 适用于VMware vSphere的ONTAP工具提供了一个选项、用于启�
 * 您应已设置vCenter Server实例并配置ESXi主机。
 * 您应已部署ONTAP工具。
 * 您应已下载SRA适配器 `.tar.gz` 文件 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支持站点"^]。
+* 在运行SRA工作流之前、源和目标ONTAP集群必须创建相同的自定义SnapMirror计划。
 
 
 * 步骤 *
