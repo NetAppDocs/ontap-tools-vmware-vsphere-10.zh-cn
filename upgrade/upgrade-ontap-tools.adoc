@@ -101,7 +101,7 @@ NOTE: 支持从适用于VMware vSphere 10.1和10.2的ONTAP工具升级到10.3。
 * 使用以下方法之一逐个为所有卷创建快照：
 +
 ** 在命令行界面中、运行命令_volume Snapshot create -vserver <vserver_name>-volume <volume_name>-Snapshot <snapshot_name>_
-** 从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后单击该卷名称以打开该卷。转至快照并添加该卷的快照。
+** 从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后通过选择名称打开该卷。转至快照并添加该卷的快照。
 
 
 
@@ -109,7 +109,7 @@ NOTE: 支持从适用于VMware vSphere 10.1和10.2的ONTAP工具升级到10.3。
 *为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*
 
 * 在vSphere客户端用户界面中、选择虚拟机。
-* 进入快照选项卡并单击*创建快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["为虚拟机创建快照"^]。
+* 进入快照选项卡并选择*拍摄快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["为虚拟机创建快照"^]。
 
 
 在执行升级之前、请从日志包中删除前缀为"generate—support-Bundle—job"的已完成Pod。如果正在生成支持包、请等待生成完成、然后删除此Pod。
@@ -131,8 +131,7 @@ NOTE: 支持从适用于VMware vSphere 10.1和10.2的ONTAP工具升级到10.3。
 . 将适用于VMware vSphere的ONTAP工具升级ISO上传到内容库。
 . 在主VM页面中，选择*Actions*>*Edit Settings*
 . 在编辑设置窗口的*CD/DVD驱动器*字段下选择内容库ISO文件。
-. 选择ISO文件并单击*OK*。选择*CD/DVD驱动器*字段中的已连接复选框。
-image:../media/primaryvm-edit-settings.png["编辑设置"]
+. 选择ISO文件并选择*OK*。选择*CD/DVD驱动器*字段中的已连接复选框。image:../media/primaryvm-edit-settings.png["编辑设置"]
 . 从vCenter Server中、打开一个ONTAP工具控制台。
 . 以维护用户身份登录。
 . 输入*3*选择“System Configuration”(系统配置)菜单。

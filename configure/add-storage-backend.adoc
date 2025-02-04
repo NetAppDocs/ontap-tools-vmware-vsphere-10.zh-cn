@@ -29,7 +29,7 @@ NOTE: 从ONTAP工具管理器或ONTAP工具API添加存储后端时、存储后�
 
 * 步骤 *
 
-. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalanceIP:8443/virtualization/ui/`
+. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从边栏中选择*存储后端*。
 . 选择 * 添加 * 。
@@ -46,10 +46,10 @@ NOTE: 支持IPv4和IPv6管理生命周期。此外、还支持使用管理SVM基
 
 NOTE: 使用vSphere客户端UI添加存储后端时、Vvol数据存储库不支持直接添加SVM用户。
 
-. 使用登录到vSphere Client `\https://vcenterip/ui`
-. 在快捷方式页面中，单击插件部分下的NetApp ONTAP tools*。
+. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
 . 在ONTAP工具的左窗格中，导航到*Storage Backends*并选择*Add*。
-. 在*添加存储后端*窗口中，提供服务器IP地址、用户名、密码和端口详细信息，然后单击*Add*。
+. 在*添加存储后端*窗口中，提供服务器IP地址、用户名、密码和端口详细信息，然后选择*Add*。
 +
 
 NOTE: 您可以添加基于集群的凭据以及IPv4和IPv6地址管理LIF、也可以提供基于SVM的凭据以及SVM的管理LIF、以便直接添加SVM用户。

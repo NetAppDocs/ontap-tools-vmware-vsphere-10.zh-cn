@@ -25,7 +25,7 @@ SRA 支持集群级别的管理和 SVM 级别的管理。如果在集群级别�
 
 * 步骤 *
 
-. 在VMware Live Site Recovery中，单击*Array Manager*，然后单击*Add Array Manager*。
+. 在VMware Live Site Recovery中，选择*Array Manager*>*Add Array Manager*。
 . 输入以下信息以描述VMware Live Site Recovery中的阵列：
 +
 .. 在 * 显示名称 * 字段中输入一个名称以标识阵列管理器。
@@ -62,7 +62,7 @@ NOTE: 在配置阵列管理器时、您应使用与在ONTAP工具中将存储系
 
 
 . 单击 * 下一步 * 。
-. 验证是否已发现阵列并将其显示在"Add Array Manager"(添加阵列管理器)窗口的底部，然后单击*Finish (完成)*。
+. 验证是否已发现阵列并显示在"Add Array Manager"(添加阵列管理器)窗口的底部，然后选择"*Complete"(完成)。
 
 
 您可以使用相应的 SVM 管理 IP 地址和凭据对恢复站点执行相同的步骤。在添加阵列管理器向导的启用阵列对屏幕上，您应验证是否选择了正确的阵列对，并且该阵列对是否显示为已准备好启用。

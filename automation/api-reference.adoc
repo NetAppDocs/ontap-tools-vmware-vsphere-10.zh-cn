@@ -29,5 +29,5 @@ summary: 适用于VMware vSphere 10 REST API的ONTAP工具参考包含有关所�
 +
 `\https://10.61.25.33:8443/`
 
-. 作为单个API调用的示例，向下滚动到*vcCenters*类别，然后单击端点旁边的*get* `/virtualization/api/v1/vcenters`
+. 作为单个API调用的示例，向下滚动到*vcCenters*类别，然后选择端点旁边的*get* `/virtualization/api/v1/vcenters`
 

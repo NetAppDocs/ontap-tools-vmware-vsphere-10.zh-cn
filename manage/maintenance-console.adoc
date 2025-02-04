@@ -18,7 +18,7 @@ summary: 您可以使用ONTAP工具的维护控制台管理应用程序、系统
 
 NOTE: 您应设置的密码 `diag` 用户。
 
-您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。单击时image:../media/launch-maintenance-console.gif["播放按钮"]，维护控制台将启动。
+您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。选择后image:../media/launch-maintenance-console.gif["播放按钮"]，维护控制台将启动。
 
 |===
 

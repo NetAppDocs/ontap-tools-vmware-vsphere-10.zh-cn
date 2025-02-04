@@ -26,7 +26,7 @@ summary: 删除数据存储库操作将删除此数据存储库。如果使用�
 按照以下步骤从vCenter Server中的ONTAP工具中删除NFS、VMFS或VVOV数据存储库：
 
 .步骤
-. 使用登录到vSphere Client `\https://vcenterip/ui`
+. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
 . 右键单击主机系统、主机集群或数据存储库，然后选择*Delete NetApp ONTAP tools*>*Delete DataSystem*。
 +
 

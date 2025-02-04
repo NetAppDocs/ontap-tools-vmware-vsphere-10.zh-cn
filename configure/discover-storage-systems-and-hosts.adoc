@@ -36,7 +36,7 @@ summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具�
 "此操作将重新开始发现所有已连接存储系统、可能需要几分钟时间。是否要继续？"
 
 . 单击 * 是 * 。
-. 选择已发现的状态为的存储控制器 `Authentication Failure`，然后单击*Actions*>*Modify*。
+. 选择已发现的状态为的存储控制器 `Authentication Failure`，然后选择*Actions*>*Modify*。
 . 在*修改存储系统*对话框中填写所需信息。
 . 对具有的所有存储控制器重复步骤4和5 `Authentication Failure` 状态。
 

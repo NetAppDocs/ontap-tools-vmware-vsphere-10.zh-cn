@@ -26,7 +26,7 @@ ONTAP工具选项卡显示证书类型(自签名/CA签名)和域名等详细信�
 
 * 步骤 *
 
-. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalanceIP:8443/virtualization/ui/`
+. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 选择*Certificates*> ONTAP tools*>*Renew*选项以续订证书。
 +
@@ -56,7 +56,7 @@ NOTE: 系统将处于脱机状态、直到升级完成、您将从用户界面�
 
 * 步骤 *
 
-. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalanceIP:8443/virtualization/ui/`
+. 从Web浏览器启动ONTAP工具管理器： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 选择*Certificates*>*VASA Provider*或*VASA ONTAP tools*>*Renew*选项以续订证书。
 . 要将自签名证书升级为自定义CA证书，请选择*Certificates*>*VASA Provider*或*VASA ONTAP tools*>*升级到CA*选项。

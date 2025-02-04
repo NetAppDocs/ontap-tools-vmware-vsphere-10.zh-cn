@@ -33,8 +33,8 @@ summary: '您可以使用适用于VMware vSphere的NetApp工具安装适用于VM
 . 在适用于VMware vSphere的ONTAP工具主页中单击*Settings*。
 . 单击 * NFS VAAI 工具 * 选项卡。
 . 将VAAI插件上传到vCenter Server后、在*现有版本*部分中选择*更改*。如果VAAI插件未上传到vCenter Server、请选择*上传*按钮。
-. 浏览并选择 `.vib`文件，然后单击*Upload*将文件上传到ONTAP工具。
-. 单击*在ESXI主机上安装*，选择要安装NFS VAAI插件的ESXi主机，然后单击*安装*。
+. 浏览并选择 `.vib`文件，然后选择*Upload*将文件上传到ONTAP工具。
+. 单击*在ESXi主机上安装*，选择要安装NFS VAAI插件的ESXi主机，然后选择*安装*。
 +
 仅会显示符合此插件安装条件的ESXi主机。您应按照屏幕上的说明完成安装。您可以在vSphere Web Client的近期任务部分中监控安装进度。
 

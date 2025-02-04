@@ -18,7 +18,7 @@ summary: 了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere
 | 功能 | ONTAP工具9.13. | ONTAP工具10.1 | ONTAP工具10.2及更高版本 
 
 
-| 关键价值主张 | 利用增强的安全性、合规性和自动化功能简化零日到二日运营 | 在扩展高可用性、性能和扩展限制的同时、将ONTAP工具10.x向9.x奇偶校验发展 | 扩展了支持范围、仅包括适用于VMFS和VMware的FC以及适用于VMFS的NVMe-oF、NVMe-oF、TCP。NetApp SnapMirror易于使用、vSphere城域存储集群设置简单、并支持三站点SRM 
+| 关键价值主张 | 利用增强的安全性、合规性和自动化功能简化零日到二日运营 | 在扩展高可用性、性能和扩展限制的同时、将ONTAP工具10.x向9.x奇偶校验发展 | 扩展了支持范围、仅包括适用于VMFS和VMware的FC以及适用于VMFS的NVMe-oF、NVMe-oF、TCP。NetApp SnapMirror易于使用、vSphere城域存储集群设置简单、并提供三站点VMware实时站点恢复支持 
 
 
 | ONTAP版本资格认定 | ONTAP 9．9.1至ONTAP 9．15．1 | ONTAP 9．12.1至ONTAP 9．14.1 | 适用于ONTAP工具10.2的9.12.1 9.12.1到9.15.1 9.15.1,适用于ONTAP工具10.3的ONTAP 9.14.1, 9.15.1, 9.16.0。 
@@ -36,7 +36,7 @@ summary: 了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere
 | 可观察性 | 性能、容量和主机合规性信息板动态VM和数据存储库报告 | 更新了性能、容量和主机合规性信息板动态VM和数据存储库报告 | 更新了性能、容量和主机合规性信息板动态VM和数据存储库报告 
 
 
-| 数据保护 | 适用于基于VMFS和NFS FlexVol的复制的SRA复制、用于VVO尔SCV集成并可互操作以进行备份 | iSCSI VMFS和NFS v3数据存储库的SRA复制 | 适用于iSCSI VMFS和NFS v3数据存储库的SRA复制、三站点保护、结合SMAS和SRM。 
+| 数据保护 | 适用于基于VMFS和NFS FlexVol的复制的SRA复制、用于VVO尔SCV集成并可互操作以进行备份 | iSCSI VMFS和NFS v3数据存储库的SRA复制 | 适用于iSCSI VMFS和NFS v3数据存储库的SRA复制、三站点保护、结合SMAS和VMware Live Site Recovery。 
 
 
 | VASA Provider支持 | VASA 4.0 | VASA 3.0 | VASA 3.0 

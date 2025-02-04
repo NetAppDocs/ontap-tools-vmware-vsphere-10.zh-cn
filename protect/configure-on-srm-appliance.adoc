@@ -23,7 +23,7 @@ summary: '部署VMware Live Site Recovery设备后、您应在VMware Live Site R
 
 * 步骤 *
 
-. 在VMware Live Site Recovery设备屏幕上，单击*Storage Replication Adapter*>*New Adapter*。
+. 在VMware Live Site Recovery设备屏幕上，选择*Storage Replication Adapter*>*New Adapter*。
 . 将_.tar.gz_文件上传到VMware Live Site Recovery。
 . 使用管理员帐户通过putty登录到VMware Live Site Recovery设备。
 . 使用命令切换到root用户： `su root`
