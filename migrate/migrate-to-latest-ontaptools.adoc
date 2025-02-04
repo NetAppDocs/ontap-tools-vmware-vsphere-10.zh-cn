@@ -244,3 +244,7 @@ NOTE: UUID是迁移后API响应中返回的迁移UUID。
 现在，“VM storage policy Compliance”(VM存储策略合规性)下的合规状态将显示为“Compliance”(合规)。
 
 
+
+* 相关信息 *
+
+link:../upgrade/upgrade-ontap-tools.html["从适用于VMware vSphere 10.x的ONTAP工具升级到10.3"]

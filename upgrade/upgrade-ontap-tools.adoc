@@ -175,3 +175,7 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 
 此操作将删除适用于VMware vSphere 10.1/10.2的ONTAP工具中使用的ONTAP中的所有Trident卷。
+
+* 相关信息 *
+
+link:../migrate/migrate-to-latest-ontaptools.html["从适用于VMware vSphere 9.x的ONTAP工具迁移到10.3"]
