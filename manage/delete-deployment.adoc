@@ -27,7 +27,7 @@ _cat /opt/NetApp/meta/Ansend_vars.yaml | gep -i protocol
 +
 _kubect描述持久性卷| grep interalName | AWK -F'=''｛print $2｝'_
 
-. 从vCenter Server中删除VM、请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["删除并重新注册VM和VM模板"]
+. 从vCenter Server中删除VM，请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["删除并重新注册VM和VM模板"]。
 . 从ONTAP系统管理器中删除卷，请参见 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["删除 FlexVol 卷"]。在命令行界面命令中提供FlexVolume的确切名称以删除此卷。
 . 对于iSCSI部署，请从ONTAP中删除SAN igroub，请参见 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["查看和管理SAN启动程序和igroup"]。
 

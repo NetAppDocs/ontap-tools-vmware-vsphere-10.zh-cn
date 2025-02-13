@@ -19,8 +19,7 @@ summary: 适用于VMware vSphere的ONTAP工具可检查并设置最适合NetApp�
 
 根据您的配置和系统负载、此过程可能需要很长时间。任务进度将显示在 " 近期任务 " 面板中。
 
-* 步骤 *
-
+.步骤
 . 在VMware vSphere Web Client的主页页面中、选择*主机和群集*。
 . 右键单击某个主机并选择*Update NetApp ONTAP host data*。
 . 在VMware vSphere Web Client的快捷方式页面上，选择NetApp ONTAP插件部分下的*VMware tools*。

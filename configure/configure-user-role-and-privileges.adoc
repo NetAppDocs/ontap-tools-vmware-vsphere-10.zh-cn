@@ -13,8 +13,7 @@ summary: 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Man
 [role="lead"]
 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色和特权。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应已使用以下<loadbalancerIP>命令从适用于VMware vSphere的ONTAP工具下载ONTAP特权文件：_\https：//VMware：8443/Virtualization：user-golites/User_roles.zip_。
 * 您应已使用从ONTAP工具下载ONTAP权限文件 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
@@ -24,8 +23,7 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 * 您应已使用存储后端的管理员权限登录。
 
 
-* 步骤 *
-
+.步骤
 . 提取下载的_\https：//https：<loadbalancerIP>：8443/Virtualization /用户权限/USER_Roles.zip_文件。
 . 使用集群的集群管理IP地址访问ONTAP系统管理器。
 . 使用管理Privileges登录到集群。要配置用户、请执行以下步骤：

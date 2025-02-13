@@ -56,4 +56,4 @@ summary: 适用于VMware vSphere 10的ONTAP工具是一组用于虚拟机生命�
 适用于VMware vSphere 10的ONTAP工具会公开一个IP地址、该地址可为虚拟机的功能提供网关。您需要在初始配置期间提供地址、并将其分配给内部负载平衡器组件。此地址供ONTAP工具管理器用户界面使用、并可直接访问Swagger文档页面和REST API。
 
 .两个REST API
-除了适用于VMware vSphere 10 REST API的ONTAP工具之外、ONTAP集群还具有自己的REST API。ONTAP工具管理器使用ONTAP REST API作为客户端来执行与存储相关的任务。请务必记住、这两个API是分开的、各不相同。有关ONTAP REST API的详细信息、请参见 https://docs.netapp.com/us-en/ontap-automation/["ONTAP自动化"^]文档。
+除了适用于VMware vSphere 10 REST API的ONTAP工具之外、ONTAP集群还具有自己的REST API。ONTAP工具管理器使用ONTAP REST API作为客户端来执行与存储相关的任务。请务必记住、这两个API是分开的、各不相同。有关详细信息，请参阅 https://docs.netapp.com/us-en/ontap-automation/["ONTAP自动化"^]。

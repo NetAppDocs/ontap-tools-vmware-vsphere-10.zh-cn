@@ -16,8 +16,7 @@ summary: '您可以使用适用于VMware vSphere的ONTAP工具图形用户界面
 
 NOTE: 从ONTAP工具管理器生成日志会包含所有vCenter Server实例的所有日志。从vCenter Client UI生成日志的范围仅适用于选定vCenter Server。
 
-* 步骤 *
-
+.步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从边栏中选择*Log Bundes*。

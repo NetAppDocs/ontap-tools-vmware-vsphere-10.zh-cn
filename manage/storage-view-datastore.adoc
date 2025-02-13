@@ -19,7 +19,7 @@ summary: 适用于VMware vSphere的ONTAP工具的配置选项卡下的ONTAP存�
 
 .步骤
 . 从vSphere Client导航到NFS数据存储库。
-. 单击右窗格中的*Config*选项卡。
+. 在右窗格中选择*Config*选项卡。
 . 选择* NetApp ONTAP tools*>* ONTAP Storage*。右窗格中将显示*存储详细信息*和*NFS详细信息*。
 +
 ** 存储详细信息页面包含有关存储后端、聚合和卷的信息。
@@ -34,7 +34,7 @@ summary: 适用于VMware vSphere的ONTAP工具的配置选项卡下的ONTAP存�
 
 .步骤
 . 从vSphere Client导航到VMFS数据存储库。
-. 单击右窗格中的*Config*选项卡。
+. 在右窗格中选择*Config*选项卡。
 . 选择* NetApp ONTAP tools*>* ONTAP Storage*。右侧窗格中将显示*存储详细信息*和* LUN详细信息*或*命名空间详细信息*(具体取决于协议)。
 +
 ** 存储详细信息页面包含有关存储后端、聚合和卷的信息。
@@ -54,7 +54,7 @@ NOTE: 基于ASA R2的虚拟卷数据存储库不支持此视图。
 
 .步骤
 . 从vSphere Client导航到vvol数据存储库。
-. 单击右窗格中的*Config*选项卡。
+. 在右窗格中选择*Config*选项卡。
 . 选择* NetApp ONTAP tools*>* ONTAP Storage*。
 . ONTAP存储视图将列出所有卷。您可以从ONTAP存储窗格中展开或删除存储。
 +

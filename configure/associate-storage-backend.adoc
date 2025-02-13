@@ -17,8 +17,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 
 此任务可帮助您在存储后端和已登录的vCenter Server实例之间全局创建映射。
 
-* 步骤 *
-
+.步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择vCenter。

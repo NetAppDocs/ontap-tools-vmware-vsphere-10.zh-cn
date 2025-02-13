@@ -45,8 +45,7 @@ NOTE: 有关详细信息、请参见 https://blogs.vmware.com/vsphere/2020/01/cr
 
 NOTE: 在继续部署之前、请在安装ONTAP工具期间将清单上的集群分布式资源计划程序(DRS)设置为"保守"。这样可确保虚拟机在安装期间不会迁移。
 
-* 步骤 *
-
+.步骤
 .  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支持站点"^]。如果已将OVA导入到内容库中、则可以跳过此步骤并继续执行下一步、因为您可以直接从内容库进行部署。
 . 登录到vSphere服务器。
 . 导航到已创建的资源池、集群或要部署OVA的主机。

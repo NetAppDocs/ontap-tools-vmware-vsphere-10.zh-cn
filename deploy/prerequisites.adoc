@@ -25,8 +25,7 @@ summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部�
 ** 348 GB用于厚配置安装
 
 
-* *每个节点的主机系统规模估算要求*
-根据部署规模和每个节点的建议内存如下表所示：
+* *主机系统规模估算要求*根据部署规模推荐的内存如下表所示：
 
 
 |===
@@ -41,13 +40,13 @@ summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部�
 | 非HA介质 | 13 | 26 | 350 
 
 
-| 小型HA | 27 | 54 | 1050 
+| HA小型(累计三个节点) | 27 | 54 | 1050 
 
 
-| HA介质 | 39 | 78 | 1050 
+| HA介质(累计三个节点) | 39 | 78 | 1050 
 
 
-| HA大型 | 51 | 102. | 1050 
+| HA大型(累计三个节点) | 51 | 102. | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 | 8个以上 | 大型 
 |===
-有关详细信息，请参阅 https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["VMware Live Site Recovery的操作限制"]。
+有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery的操作限制"]。
 
 
 

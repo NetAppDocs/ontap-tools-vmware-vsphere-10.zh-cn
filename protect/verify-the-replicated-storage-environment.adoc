@@ -21,8 +21,7 @@ summary: '在配置Storage Replication Adapter \(SRA\)后、您应验证受保�
 * 源站点和目标站点应具有相同的SnapMirror策略和计划。
 
 
-* 步骤 *
-
+.步骤
 . 登录到 vCenter Server 。
 . 导航到 * 站点恢复 * > * 基于阵列的复制 * 。
 . 选择所需的阵列对并验证相应的详细信息。

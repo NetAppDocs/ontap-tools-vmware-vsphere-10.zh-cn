@@ -17,8 +17,7 @@ summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Reco
 
 == 为SAN环境配置SRA
 
-* 您需要的内容 *
-
+.开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
 * VMware Live Site Recovery
@@ -26,7 +25,7 @@ summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Reco
 VMware站点上提供了有关安装VMware Live Site Recovery的文档。
 
 +
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["关于VMware Live Site Recovery"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["关于VMware Live Site Recovery"]
 
 * SRA
 +
@@ -34,8 +33,7 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 
 
 
-* 步骤 *
-
+.步骤
 . 验证主 ESXi 主机是否已连接到受保护站点上主存储系统中的 LUN 。
 . 验证LUN是否位于具有的igroub中 `ostype` 选项在主存储系统上设置为_vmware_。
 . 验证恢复站点上的ESXi主机是否与Storage Virtual Machine (SVM)建立了适当的iSCSI连接。二级站点ESXi主机应有权访问二级站点存储、而主站点ESXi主机应有权访问主站点存储。
@@ -49,8 +47,7 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 
 == 为NAS环境配置SRA
 
-* 您需要的内容 *
-
+.开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
 * VMware Live Site Recovery
@@ -58,7 +55,7 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 有关安装VMware Live Site Recovery的文档可在VMware站点上找到。
 
 +
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html["关于VMware Live Site Recovery"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["关于VMware Live Site Recovery"]
 
 * SRA
 +
@@ -66,8 +63,7 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 
 
 
-* 步骤 *
-
+.步骤
 . 验证受保护站点上的数据存储库是否包含已向 vCenter Server 注册的虚拟机。
 . 验证受保护站点上的 ESXi 主机是否已挂载 Storage Virtual Machine （ SVM ）中的 NFS 导出卷。
 . 使用Array Manager向导向VMware Live Site Recovery添加阵列时，请验证是否在*NFS Addresses*字段中指定了有效的地址，例如NFS导出所在的IP地址、主机名或FQDN。

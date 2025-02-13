@@ -11,7 +11,7 @@ summary: 您可以使用适用于 VMware vSphere 的 ONTAP 工具在 ESXi 主机
 
 
 [role="lead"]
-您可以使用适用于 VMware vSphere 的 ONTAP 工具在 ESXi 主机上设置超时和其他值，以确保性能最佳并成功进行故障转移。适用于VMware vSphere的ONTAP工具设置的值基于内部NetApp测试。
+使用适用于VMware vSphere的ONTAP工具、您可以在ESXi主机上设置超时值和其他值、以确保性能最佳并成功进行故障转移。适用于VMware vSphere的ONTAP工具设置的值基于内部NetApp测试。
 
 您可以在 ESXi 主机上设置以下值：
 
@@ -40,7 +40,7 @@ summary: 您可以使用适用于 VMware vSphere 的 ONTAP 工具在 ESXi 主机
 
 == MPIO设置
 
-MPIO设置定义NetApp存储系统的首选路径。MPIO设置可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。
+MPIO设置定义NetApp存储系统的首选路径。它们可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。
 
 在高性能环境中、或者在测试单个LUN数据存储库的性能时、请考虑将轮询(VMW_PSP_RR)路径选择策略(PSP)的负载平衡设置从默认IOPS设置1000更改为值1。
 

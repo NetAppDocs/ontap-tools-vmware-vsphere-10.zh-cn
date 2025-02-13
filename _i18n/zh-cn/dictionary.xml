@@ -22,8 +22,6 @@
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">提供有关适用于 VMware vSphere 的此版本 ONTAP 工具的重要信息，包括新增功能和增强功能，已修复的问题，已知问题，注意事项和限制。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">发行说明</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*每个节点的安装包空间要求*</block>
-  <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*每个节点的主机系统规模估算要求*
-根据部署规模和每个节点的建议内存如下表所示：</block>
   <block id="791e55cc3f81b4b7d562d4f91f1eaf68" category="cell">小型(S)</block>
   <block id="5b81efec911f93d53007d7ca5cf1538a" category="cell">中(M)</block>
   <block id="92369ad53284ddbb10d4ebedc0a4c55d" category="cell">大(L)</block>
@@ -38,12 +36,10 @@
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互操作性表工具</block>
   <block id="d9feb2b730ded2731ab499f4b64cca33" category="paragraph"><block ref="ccafd2400edf7c1aa273a76ad605940f" category="inline-link-rx"></block></block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">* 关于此任务 *</block>
-  <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">* 步骤 *</block>
   <block id="c9d092386ae73a6340bdea88112319d0" category="list-text">登录到vSphere服务器。</block>
   <block id="23b73d362123204bbb0b2e4f075436e0" category="list-text">完成此任务后、打开虚拟机的电源。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支持站点</block>
   <block id="fc7420289587a37ba45ec23cf35bfe1b" category="list-text">提供库的名称并创建内容库。</block>
-  <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">* 您需要的内容 *</block>
   <block id="9baaec212ea7cc94549bac65152b30f9" category="list-text">您应已使用存储后端的管理员权限登录。</block>
   <block id="29f2665c887f3f211c2db15093412283" category="list-text">在“用户”下选择*Add*。</block>
   <block id="ec42f863993abd2934159f53379a6901" category="list-text">在*添加用户*对话框中、选择*虚拟化产品*。</block>
@@ -87,7 +83,6 @@
   <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">使用以下URI检查状态：</block>
   <block id="f323831468d8f05429defe22a9e81256" category="list-text">从边栏中选择*存储后端*。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">选择 * 添加 * 。</block>
-  <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">* 您需要的内容 *</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">需要信息。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">从弹出窗口的下拉列表中选择存储后端。</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID是迁移后API响应中返回的迁移UUID。</block>
@@ -199,7 +194,6 @@
   <block id="7ca24662c9fd82d1c8f828af5176f560" category="list-text">在设置页面中、根据需要选择建议值。</block>
   <block id="c260b7a566deca46e5b1c9214afd516d" category="summary">存储后端是ESXi主机用于数据存储的系统。</block>
   <block id="600bee7ab6e14dd0a2755b8f2270990c" category="list-text">使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
-  <block id="be220ca65fb361f10c452627110630ac" category="list-text">在ONTAP工具的左窗格中，导航到*Storage Backends*并选择*Add*。</block>
   <block id="7f2d9eb042fad8493c138993f867cd80" category="paragraph">此时、此列表将刷新、您可以在此列表中看到新添加的存储后端。</block>
   <block id="a8534b379980a6bb97915d2890ad3522" category="section-title">添加vCenter Server实例</block>
   <block id="1fb8597774c73340601ce61c9d3435ad" category="list-text">创建自定义角色以管理用户。</block>
@@ -214,7 +208,6 @@
   <block id="53a55f63b586976eed071f053f5bd93d" category="list-text">通过平台下拉列表中的*any*选项、您可以查看属于vCenter的所有SVM、而不受平台或非对称标志的影响。</block>
   <block id="3be89e21b871a8b3f031c98d9feeed52" category="list-text">在*存储属性*窗格中，选择用于创建卷的聚合。在高级选项中，根据需要选择*Space Reserve*和*Enable QoS*。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 开始之前 *</block>
-  <block id="dcb7d3ba96571479c14a3f217235fda3" category="list-text">在*Type*窗格中，在*DataStore Type*中选择VMFS。</block>
   <block id="422b0793eae20199839e73ad8d631758" category="summary">ONTAP工具管理器为VMware vSphere管理员提供了更多的ONTAP工具控制和功能、有助于全面管理设备、租户和存储后端。</block>
   <block id="24f4f4c7ab0964cf8eb5030afe996e5b" category="doc">ONTAP工具管理器用户界面</block>
   <block id="f6024f2dcccfeea20006cf84fd6a8ced" category="paragraph">ONTAP工具管理器有助于：</block>
@@ -229,9 +222,6 @@
   <block id="b83f0da3967a69a390f1536a63502ea5" category="paragraph">您可以随时发现新的存储系统或更新有关现有存储系统的信息，以获取最新的容量和配置信息。此外、您还可以修改适用于VMware vSphere的ONTAP工具用于登录到存储系统的凭据。</block>
   <block id="153e621cc38f77ee2ff3d79434e63675" category="paragraph">发现存储系统时、适用于VMware vSphere的ONTAP工具会从vCenter Server实例管理的ESXi主机收集信息。</block>
   <block id="2dfa9a9ac0c1672dfe2d39b53faaa651" category="list-text">在vSphere Client主页中、选择*主机和集群*。</block>
-  <block id="34434df9dcca7b5f0e4167808657c6e8" category="paragraph">适用于VMware vSphere的ONTAP工具会显示一个*确认*对话框，其中包含以下消息：</block>
-  <block id="a339be0a9b5414ffdd9ed5150e8cb58f" category="paragraph">"此操作将重新开始发现所有已连接存储系统、可能需要几分钟时间。是否要继续？"</block>
-  <block id="86ce5961ef6624058f736d93459d1889" category="list-text">单击 * 是 * 。</block>
   <block id="4c3295afbbc414fa16fc1c6ec309912f" category="list-text">在*修改存储系统*对话框中填写所需信息。</block>
   <block id="70443b52a86c20ad89a6e02da197f589" category="list-text">对具有的所有存储控制器重复步骤4和5<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> 状态。</block>
   <block id="d36370265b821278bdb427bcfead17f8" category="paragraph">发现过程完成后、请执行以下操作：</block>
@@ -282,19 +272,8 @@
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">您可以使用适用于VMware vSphere的NetApp工具安装适用于VMware vStorage APIS for Array Integration \(VAAI\)的ONTAP NFS插件。</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">安装 NFS VAAI 插件</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">适用于 VMware VAAI 的 NetApp NFS 插件</block>
-  <block id="b06b2ee29e6deda3faf9551f7a95a102" category="list-text">您应已下载适用于VAAI的NFS插件的安装包 <block ref="74f7b54ea713d9f5b69839982911bbf7" prefix="(" category="inline-code"></block>) NetApp 支持站点。<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block></block>
-  <block id="f878e4da9a07a14fc1e645840b2a0d83" category="list-text">您应已启动 ESXi 主机并挂载 NFS 数据存储库。</block>
-  <block id="8ccb924205799407e66bcd7441d807d4" category="list-text">您应已设置的值<block ref="9553b7467ba64b45e0fff9da9a3dfda4" prefix=" " category="inline-code"></block>，<block ref="c0120676c487bf9bc32b0c7b71e9a203" prefix=" " category="inline-code"></block>，和<block ref="73663d0d00956f0632e4ae75d811d53f" prefix=" " category="inline-code"></block> 主机设置为"`1`"。</block>
-  <block id="97bcd1a1cb8db0174277f3bf2ed915f7" category="paragraph">更新 " 建议设置 " 对话框后，这些值将在 ESXi 主机上自动设置。</block>
-  <block id="91a6138724593362e8b67f5d018f15b6" category="list-text">您应已使用在Storage Virtual Machine (SVM)上启用vStorage选项<block ref="fb4699c00e088f288cc4b69fa042108c" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="a2ac08c36911097946dce48b9d1ef225" category="list-text">如果您使用的是NetApp NFS VAAI插件2.0、则应安装ESXi 7.0U3或更高版本。</block>
-  <block id="95fea4638c4dbfe2750aaf0811be7481" category="list-text">由于vSphere 6.5已弃用、您应已安装vSphere 7.0U3的最新修补程序版本。</block>
   <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">NetApp NFS VAAI插件2.0.1 (内部版本16)支持vSphere 8.x。</block>
-  <block id="ba7ab205a50894260a6a12a359651980" category="list-text">在适用于VMware vSphere的ONTAP工具主页中单击*Settings*。</block>
-  <block id="f18ef33280a066a65f6777903e0f3fc6" category="list-text">单击 * NFS VAAI 工具 * 选项卡。</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">将VAAI插件上传到vCenter Server后、在*现有版本*部分中选择*更改*。如果VAAI插件未上传到vCenter Server、请选择*上传*按钮。</block>
-  <block id="b69d71b082dde673b81262019b917561" category="list-text">安装完成后、您应手动重新启动ESXi主机。</block>
-  <block id="f80079b24d028427b631b828f0b21663" category="paragraph">当VMware管理员重新启动ESXi主机时、适用于VMware vSphere的ONTAP工具会自动检测NFS VAAI插件。您无需执行其他步骤即可启用此插件。</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">向vCenter Server实例注册VASA Provider</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">您可以使用挂载 VVol 数据存储库对话框将 VMware 虚拟卷（ VVols ）数据存储库挂载到一个或多个其他主机。挂载数据存储库可为其他主机提供存储访问权限。您只能通过API卸载卷数据存储库。</block>
   <block id="8ac8af3fafb018169f82c906bf521ceb" category="paragraph">您可以将VMware虚拟卷(vvol)数据存储库挂载到一个或多个其他主机、以便为其他主机提供存储访问权限。您只能通过API卸载卷数据存储库。</block>
@@ -308,12 +287,10 @@
   <block id="6d710894cd1d83594944bdb2f558f3dd" category="paragraph">您可以使用"管理列"选项隐藏或显示不同的列。</block>
   <block id="890e36ddbad7723990bfc85c381032f7" category="summary">您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用SSH访问。</block>
   <block id="08eb6f69a04bed1d014eb12b7cdc3039" category="paragraph">应为vCenter Server实例启用VASA Provider扩展。</block>
-  <block id="02d46e4efef0b1375c1eb271b6394907" category="paragraph">登录会话的有效期仅到第二天午夜。</block>
   <block id="95644633de6b27d9f2b2fc90e3f78d10" category="list-text">从vCenter Server中、打开一个VASA Provider控制台。</block>
   <block id="7aaefa4d4b1dc5f22ac66195d817ec42" category="summary">通过调整数据存储库大小、可以增加虚拟机文件的存储。您可以根据基础架构要求的变化更改数据存储库的大小。</block>
   <block id="acaef68592c39a3506e0d7bb3c9e162c" category="paragraph">您只能增加NFS和VMFS数据存储库的大小。NFS和VMFS数据存储库中的FlexVol卷不能缩减到低于现有大小、但可以增长120%。</block>
   <block id="823a888350d98ab4dac348c27cf264a3" category="doc">重置应用程序用户密码</block>
-  <block id="eeebcae8d6dc4d602035dac1bc8bf207" category="list-text">单击*Reset (重置)*以实施更改。</block>
   <block id="e811200464bd3c07736511ca762cfead" category="summary">您可以使用适用于VMware vSphere的ONTAP工具图形用户界面(GUI\)中提供的选项收集适用于VMware vSphere的ONTAP工具的日志文件。技术支持可能会要求您收集日志文件以帮助解决问题。</block>
   <block id="8058137328d41c72a79d7dea14eaab18" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具管理器用户界面中的选项收集ONTAP工具的日志文件。技术支持可能会要求您收集日志文件以帮助解决问题。</block>
   <block id="83c32c47578180e0e39fc648094deb0c" category="admonition">从ONTAP工具管理器生成日志会包含所有vCenter Server实例的所有日志。从vCenter Client UI生成日志的范围仅适用于选定vCenter Server。</block>
@@ -328,7 +305,6 @@
   <block id="c1506892d1092bf8f73a94ec8249a0f5" category="summary">您可以使用ONTAP工具管理器更改管理员密码。</block>
   <block id="c4f8ed60e900e21e211600378be9ee4b" category="doc">更改ONTAP工具管理器密码</block>
   <block id="6082370b0d6d5f8a68f4878e7fa6c9ee" category="list-text">在更改密码弹出窗口中、输入旧密码和新密码详细信息。更改密码的限制将显示在UI屏幕上。</block>
-  <block id="ed573fc99efcde0f2343089cf96f6448" category="list-text">单击*Change*以实施更改。</block>
   <block id="2da2062b7a007e397ad268a2b32e9012" category="summary">如果选定数据存储库上没有任何卷、则删除数据存储库操作将删除该数据存储库。</block>
   <block id="6cfbd682adda5c4eac39b86ca21a3fd0" category="admonition">用于选择此卷所在卷的选项已禁用。</block>
   <block id="28557ae56fb972905373e3ac7d9f0f7a" category="summary">您可以将虚拟机从NFS和VMFS数据存储库迁移到虚拟卷\(Vvols\)数据存储库、以利用基于策略的VM管理和其他Vvols功能。通过 VVOL 数据存储库，您可以满足日益增长的工作负载需求。</block>
@@ -337,8 +313,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">确保您计划迁移的任何虚拟机上未运行VASA Provider。如果将运行 VASA Provider 的虚拟机迁移到 VVOL 数据存储库，则无法执行任何管理操作，包括启动 VVOL 数据存储库上的虚拟机。</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">从NFS和VMFS数据存储库迁移到Vvol数据存储库时、vCenter Server会在从VMFS数据存储库(而不是NFS VMDK文件)移动数据时使用vStorage APIS for Array Integration (VAAI)卸载。VAAI 卸载通常会降低主机上的负载。</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">管理证书</block>
-  <block id="a4b1e33cbf18b199e2ac8e40e329b286" category="admonition">将自签名升级到自定义CA时、不支持将不同的负载平衡器IP地址映射到不同的域。</block>
-  <block id="9634326e56e18c097470ffbaeaf7292b" category="list-text">输入生成此证书的域名。</block>
   <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">您可以使用维护控制台更新vCenter Server和ONTAP凭据。</block>
   <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">更新vCenter Server和ONTAP凭据</block>
   <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">您可以使用维护控制台更新vCenter Server实例和ONTAP凭据。</block>
@@ -368,8 +342,6 @@
   <block id="7ac3113c1b6737c7529a9d0b23af02fb" category="paragraph">如果您忘记了ONTAP工具管理器密码、则可以使用适用于VMware vSphere的ONTAP工具维护控制台生成的令牌重置管理员凭据。</block>
   <block id="7b5d5a72aa33a2b11a9a331250d66471" category="list-text">在登录屏幕上，选择*Reset password*选项。</block>
   <block id="ca6ef544de910ada8f9334d21c77dd5e" category="list-text">在更改密码弹出窗口中、输入密码重置令牌、用户名和新密码详细信息。</block>
-  <block id="16a00fe4cbd154b56505bbee31311282" category="list-text">单击*Reset (重置)*以实施更改。
-成功重置密码后、您可以使用新密码进行登录。</block>
   <block id="24e33ece3722557577533666c712c8a7" category="summary">您可以使用ONTAP工具的维护控制台管理应用程序、系统和网络配置。您可以更改管理员密码和维护密码。您还可以生成支持包，设置不同的日志级别，查看和管理 TLS 配置以及启动远程诊断。</block>
   <block id="6de1d606334a744ef35a27bdd474a0c6" category="doc">适用于VMware vSphere的ONTAP工具维护控制台概述</block>
   <block id="98e3bea019c371a7308c43a4583f8138" category="paragraph">在部署适用于VMware vSphere的ONTAP工具后、您应安装VMware工具、才能访问维护控制台。您应使用<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> 作为您在部署期间配置的用户名和密码、用于登录到ONTAP工具的维护控制台。在维护或root登录控制台中，应使用*ano*来编辑文件。</block>
@@ -648,10 +620,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">将受保护站点和恢复站点配对</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter (SRA)能够发现存储系统。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">您应已在受保护站点和恢复站点上安装SRA。</block>
-  <block id="0cb204757fc030d9ca635551827fb5fc" category="list-text">单击 * 对象 * &gt; * 操作 * &gt; * 配对站点 * 。</block>
   <block id="c036188407dc1d12b6c53670d6f74de9" category="list-text">在 Select vCenter Server 部分中，执行以下操作：</block>
   <block id="c5740be3b9782c8fc0bd8ed3b5756bae" category="list-text">验证受保护站点的 vCenter Server 是否显示为要配对的匹配候选服务器。</block>
-  <block id="600901e70afccc50e18676048766ba78" category="paragraph">* 结果 *</block>
   <block id="f5687be176cf7331c8455f99c17ffcf2" category="paragraph">受保护站点和恢复站点都将显示在对象对话框中。</block>
   <block id="22bf2e5e3e861785a0e8f1eb7bd7492e" category="doc">启用 SRA 以保护数据存储库</block>
   <block id="f8159a1f10595cc4a80126746a124cb1" category="list-text">您应已设置vCenter Server实例并配置ESXi主机。</block>
@@ -663,8 +633,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b2beb4d07aac60ef0509b65054500a7c" category="paragraph">您应配置一个占位数据存储库、以便在恢复站点的vCenter清单中为受保护虚拟机(VM)保留一个位置。占位数据存储库不需要很大，因为占位 VM 很小，只使用几百 KB 或更少的 KB 。</block>
   <block id="953e6b615a5a31e17c7240dfe25d81c3" category="list-text">您应已连接受保护站点和恢复站点。</block>
   <block id="fd4020683cb15781a96e8c0356ac1436" category="list-text">您应已配置资源映射。</block>
-  <block id="1492b0392ea61287f2885789d58f0cb2" category="list-text">在 Manage 选项卡中，选择 * 占位数据存储库 * 。</block>
-  <block id="f62fc5ba64b8442458ec991092fdb379" category="list-text">单击*New*以创建新的占位数据存储库。</block>
   <block id="9f300d87b0b24027951fafe07e70031d" category="admonition">占位数据存储库可以是本地数据存储库，也可以是远程数据存储库，不应复制。</block>
   <block id="8f3d1b277e0dbea837f55587d2d62dcd" category="summary">您应创建保护组来保护受保护站点上的一组虚拟机。</block>
   <block id="3ef7adcba4fd1c35e2debd8e209d9c47" category="doc">配置保护组</block>
@@ -696,17 +664,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="a505f8df337aa6363aedcbf7da761b22" category="summary">您应映射受保护站点和恢复站点上的文件夹、以便它们之间可以进行通信。</block>
   <block id="16dac3a3c7de93aedd97c33f658f9028" category="doc">配置文件夹映射</block>
-  <block id="975a5d96a32b63ae9e78d2fab188fc7d" category="list-text">在管理选项卡中，选择 * 文件夹映射 * 。</block>
-  <block id="142974172f819aee131dbf3ddf13b30e" category="list-text">选择*文件夹*图标以创建新的文件夹映射。</block>
-  <block id="11f4ccd371b621a7fd0ddb2b197b1e00" category="paragraph">此时将显示创建文件夹映射向导。</block>
   <block id="6f39eceaad564346f7c828d828949f3f" category="list-text">在创建文件夹映射向导中，执行以下操作：</block>
-  <block id="1ce1b9392a2b445336c39282e8ba76a1" category="list-text">成功创建映射后，单击 * 下一步 * 。</block>
   <block id="dfa5d044985f5ffcb33239e7e7f02f4f" category="paragraph">" 文件夹映射 " 页面显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
   <block id="ab6fe2f57f912e70a50c692b568b9324" category="summary">您应映射受保护站点和恢复站点上的资源、以便将虚拟机配置为故障转移到其中一组主机。</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">配置资源映射</block>
-  <block id="881a8180069b4ef6ce578dc05747c26c" category="list-text">在管理选项卡中，选择 * 资源映射 * 。</block>
-  <block id="19e61e235692dd382ea607cb28ec7bd8" category="list-text">单击*New*创建新的资源映射。</block>
-  <block id="ca61b18f56707ba483d313f4fd42d21b" category="paragraph">此时将显示创建资源映射向导。</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">在创建资源映射向导中，执行以下操作：</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">" 资源映射 " 页面显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
   <block id="9efe335a21c7ed7fb03853b29d60db35" category="paragraph">您应已从下载 _tar.gz_ 文件<block ref="0e1d5eb136c80762086cbb6a49f15235" category="inline-link-rx"></block>。</block>
@@ -732,7 +693,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6eac5545ec32359b0303db72350e9e1b" category="paragraph">例如、如果要发现与卷dst_vol1具有SnapMirror关系的卷src_vol1、则应在受保护站点字段中指定src_vol1、在恢复站点字段中指定dst_vol1。</block>
   <block id="82655331603d8cc384a5d202a579b205" category="list-text">* （可选） * 在 * 卷排除列表 * 字段中输入要从发现中排除的卷。</block>
   <block id="cd146b39104fa69031db97d03b2145ad" category="paragraph">例如、如果要排除与卷_dst_vol1_具有SnapMirror关系的卷_src_vol1_、则应在受保护站点字段中指定_src_vol1_、在恢复站点字段中指定_dst_vol1_。</block>
-  <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">单击 * 下一步 * 。</block>
   <block id="a572a74f39a209b2a39fbc78485af141" category="paragraph">您可以使用相应的 SVM 管理 IP 地址和凭据对恢复站点执行相同的步骤。在添加阵列管理器向导的启用阵列对屏幕上，您应验证是否选择了正确的阵列对，并且该阵列对是否显示为已准备好启用。</block>
   <block id="9e28f23a92c9abcf9ad62bef3a78490f" category="summary">您应按照建议的设置配置存储超时时间间隔、以使Storage Replication Adapter \(SRA\)在高度扩展的环境中以最佳性能运行。</block>
   <block id="0665e266b8a667d47913e7a384e164d3" category="paragraph">您应按照建议的设置配置存储超时时间间隔、以使Storage Replication Adapter (SRA)在高度扩展的环境中以最佳性能运行。</block>
@@ -748,10 +708,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d9ad1cd9ed6154c08811ffdbeec40f42" category="paragraph"><block ref="c1533677fede32792c4b54cf81865145" prefix="" category="inline-code"></block></block>
   <block id="8febbf8519703d62abe5d2086aa5386b" category="paragraph">设置较高的值(例如：99999)</block>
   <block id="c30b7c029fe2d9044307db1e0f6ea417" category="paragraph">您还应启用<block ref="227c938fa0f7b152cce7b139b698bf4c" prefix=" " category="inline-code"></block> 选项</block>
-  <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">VMware vSphere 文档：更改存储提供程序设置</block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">存储设置</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的超时间隔为最大值。您无需等待达到最大超时值。大多数命令都会在设置的最大超时间隔内完成。</block>
-  <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager 文档：更改存储设置</block>
   <block id="2159a3bf8db76f7d77e80538e9941cab" category="summary">您应映射受保护站点和恢复站点上的网络、以便它们之间能够进行通信。</block>
   <block id="f9db3cd2b1be9139f944eb07d33427eb" category="doc">配置网络映射</block>
   <block id="dc93626e4e57c8b4d053c8c2dda38bd5" category="paragraph">您应在两个站点上配置资源映射(如VM网络、ESXi主机和文件夹)、以便将受保护站点中的每个资源映射到恢复站点上的相应资源。</block>
@@ -760,10 +718,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b60c8e9fb0670a045606b827cea12394" category="list-text">文件夹映射</block>
   <block id="3f175fe208931c674dc6c6252477f69b" category="list-text">资源映射</block>
   <block id="7cb2c88a440a03e13d32d94f6c048340" category="list-text">占位数据存储库</block>
-  <block id="2ad1cb1a025f61d83d0ce7d7ec4e1775" category="list-text">在管理选项卡中，选择 * 网络映射 * 。</block>
-  <block id="88f8284cbdd77114dfef5b82939bc46e" category="list-text">单击*New*创建新的网络映射。</block>
-  <block id="6753f4982155708aac37a1bd3bef1245" category="paragraph">此时将显示创建网络映射向导。</block>
-  <block id="6211d5bb29b9c1509eb64e37fd1af6f4" category="list-text">在创建网络映射向导中，执行以下操作：</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">网络映射页面将显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">常见迁移步骤</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA迁移步骤</block>
@@ -902,15 +856,11 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
   <block id="d6dc3fa77b8368a0795d43ba5098caec" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block> 您需要在密码值周围使用一个引号。</block>
   <block id="b7d863d6846eaf1689410c02279f9ea6" category="doc">添加存储后端</block>
-  <block id="11d338a3b0af56cfdced607e83e44a27" category="admonition">使用vSphere客户端UI添加存储后端时、Vvol数据存储库不支持直接添加SVM用户。</block>
-  <block id="787af46eba84a8c9f8559e1c4741c2c8" category="admonition">从ONTAP工具管理器或ONTAP工具API添加存储后端时、存储后端为全局后端。从vCenter Server API添加存储后端为本地后端。例如、在多租户设置中、您可以全局添加存储后端(集群)、并在本地添加SVM以使用SVM用户凭据。</block>
-  <block id="91cd9aca64c654c7b6a103f086f013e2" category="list-text">提供服务器IP地址或FQDN、用户名和密码详细信息，然后选择*Add*。</block>
   <block id="a5ff3af9e80b6313b32053dd07f43a23" category="doc">将存储后端与vCenter Server实例相关联</block>
   <block id="8da0640ba152e49c75030464c1f52d41" category="admonition">您可以展开ESXi主机以查看当前值。</block>
   <block id="3598b8dea95243a9785e55bbc16226db" category="paragraph">如果您有多个ESXi主机IP地址、则从主机中发现的所有IP地址都会默认添加到导出策略中。如果您不想将所有IP地址添加到导出策略中、请提供一个设置、以便允许使用逗号分隔列表或范围或CIDR中的特定IP地址、或者为每个vCenter设置所有这三个地址的组合。</block>
   <block id="a01f6bd7b0bc100626b19006792453e3" category="paragraph">您可以选择允许使用一些特定的ESXi主机地址执行数据存储库挂载操作。如果未提供此设置、则导出策略将添加在预挂载步骤中发现的所有IP地址。如果提供了此设置、则适用于VMware vSphere的ONTAP工具将仅添加位于列出的IP地址或范围内的那些IP地址或范围。如果某个主机的任何IP地址都不属于列出的IP地址、则该主机上的挂载将失败。</block>
   <block id="f27fd29619608fc9ae9d376566e60e56" category="paragraph">使用逗号(,)分隔IP地址。您可以指定特定的IP地址、IP地址范围或IPv6地址。</block>
-  <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">单击 * 保存 * 。</block>
   <block id="8b0c3808285b6b86f1bde63223594631" category="paragraph">本节列出了在不使用Users JSON文件的情况下创建的非管理员全局范围集群用户所需的最低权限。如果在本地范围添加了集群、建议使用JSON文件创建用户、因为适用于VMware vSphere的ONTAP工具不仅需要读取特权、还需要在ONTAP上进行配置。</block>
   <block id="484cebc53125766b84254b2ca0899b9c" category="doc">创建数据存储库</block>
   <block id="190ba216e5abb93c1ba4ee19a2b96c79" category="section-title">创建一个卷数据存储库</block>
@@ -920,22 +870,18 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2710b75030951da73f0267637e131179" category="admonition">只有在选择了NFS 4.1协议时、才能使用Kerberos身份验证。</block>
   <block id="7fb0d7d431a883d893699e725d41b19c" category="paragraph">此时将在所有主机上创建并挂载NFS数据存储库。</block>
   <block id="3b79323c405b48e8e2d5fbc5960da84d" category="section-title">创建VMFS数据存储库</block>
-  <block id="ce2fddb4782cb083028eb028f1b74ba0" category="paragraph">MPIO设置定义NetApp存储系统的首选路径。MPIO设置可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。</block>
   <block id="d16644a258624270fbc604b4a9c10811" category="paragraph">在高性能环境中、或者在测试单个LUN数据存储库的性能时、请考虑将轮询(VMW_PSP_RR)路径选择策略(PSP)的负载平衡设置从默认IOPS设置1000更改为值1。</block>
   <block id="4c6f1d39cef2f482d7f0bd371cb333c9" category="paragraph">适用于VMware vSphere的ONTAP工具是一个多租户系统、可管理多个vCenter Server实例。通过ONTAP工具管理器、VMware vSphere管理员可以通过受管vCenter Server实例和板载存储后端对ONTAP工具进行更多控制。</block>
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">选择页面右侧的*创建*。</block>
   <block id="1b363a673c183e8f6180915f94b60037" category="list-text">选择页面右侧的*Actions*并选择*Import Item*并导入OVA文件。</block>
   <block id="51bc5399ec09a540c942908f434a6727" category="section-title">最低存储和应用程序要求</block>
   <block id="4bcb36ab655842162169378c79643b23" category="summary">一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。</block>
-  <block id="a2587697ec1c091500e1ebcb1fb42235" category="list-text">在*将证书升级到自定义CA*弹出窗口中，上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。工具提示提供证书的问题描述。</block>
-  <block id="f6e8db7e26c18ff77395c70107114b81" category="list-text">单击 * 升级 * 。</block>
   <block id="175dc7694475b27598cc4934c607c602" category="admonition">生成的日志包将替换过去3天或72小时内生成的日志包。</block>
   <block id="b73c3d2e69e4de543b54f9fffab111ac" category="list-text">关闭适用于VMware vSphere VM的ONTAP工具。</block>
   <block id="c010d526ac46428eb5d252ae2a7d2d6d" category="list-text">删除适用于VMware vSphere VM的ONTAP工具。</block>
   <block id="57a91f0b109c904814be718ccd3c723a" category="paragraph">如果某个特定卷上驻留了大量的FlexVol、则会禁用删除选项。除了从数据存储库中删除卷之外、您还可以删除ONTAP存储上的选定卷。</block>
   <block id="73199adc1dd0bc42eef3c48da1e43a0b" category="doc">管理存储阈值</block>
   <block id="8efc9711c0ea0db8499241a6ec86ceab" category="list-text">在ONTAP工具的左窗格中，导航到*Settings*&gt;*Threshold Settings*&gt;*Edit*。</block>
-  <block id="ad4926bc91a1588104b73a5c2567773a" category="list-text">选择与要迁移的数据存储库的功能匹配的虚拟磁盘格式、虚拟机存储策略和VVOV数据存储库。单击 * 下一步 * 。</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">挂载 VVOL 数据存储库</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">适用于VMware vSphere插件的ONTAP工具可为虚拟机和数据存储库提供报告。在vCenter Client的快捷方式部分中选择适用于VMware vSphere的NetApp ONTAP工具插件图标后、此用户界面将导航到概述页面。选择"Reports"(报告)选项卡以查看虚拟机和数据存储库报告。</block>
   <block id="f7a2e0b6ed3f51220e81b2d1a0df9298" category="paragraph">虚拟机报告显示已发现虚拟机(应至少有一个磁盘来自基于ONTAP存储的数据存储库)的列表以及性能指标。展开VM记录时、将显示所有与磁盘相关的数据存储库信息。</block>
@@ -951,14 +897,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c79daa9e02cf670a1c4c0303d8b2995d" category="list-text">选择要修改的存储后端。</block>
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">删除存储后端</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">您需要先删除连接到存储后端的所有数据存储库、然后再删除存储后端。请按照以下步骤删除存储后端。</block>
-  <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">单击右窗格中的*Config*选项卡。</block>
-  <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">单击右窗格中的*Monitor*选项卡。</block>
   <block id="5dca53226c3a1262b461c063e61fd9e1" category="list-text">运行命令<block ref="ab64b2f5839594835c3c4d3e3c725c7c" prefix=" " category="inline-code"></block> 导航到日志目录。</block>
   <block id="1678c2984a8ccc5f17124abb9acb5bb8" category="list-text">在日志位置输入命令以获取SRA使用的Docker ID：<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="d5d2ad55b774ba92aef91e985c285c4b" category="list-text">要登录到此容器ID、请输入命令：<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
   <block id="028b51b30bc955fcd48cdc1463a4a64a" category="list-text">重复步骤3至5、为恢复站点配置占位数据存储库。</block>
-  <block id="4f785b15a82be36d3c89359f25a9c8fb" category="paragraph">有关修改存储提供程序设置的详细信息、请参见VMware文档。</block>
-  <block id="6f44adf237d560fea2debab22c99e81a" category="paragraph">有关详细信息、请参见有关修改SAN Provider设置的VMware文档。</block>
   <block id="8768938ef95af357a455691694af22a4" category="section-title">为SAN环境配置SRA</block>
   <block id="c296e8788b295e89d6f8e1bfcd28b6ff" category="list-text">验证恢复站点上的ESXi主机是否与Storage Virtual Machine (SVM)建立了适当的iSCSI连接。二级站点ESXi主机应有权访问二级站点存储、而主站点ESXi主机应有权访问主站点存储。</block>
   <block id="0cd8afb704226b6e22e0e52f54ef48ba" category="section-title">为NAS环境配置SRA</block>
@@ -1011,7 +953,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="da1bcee466e19a180f0d554d6fbf72f8" category="cell">8个以上</block>
   <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">大型</block>
   <block id="bff7ca9974a0352c641d1a0709ae7c9f" category="inline-link">VMware Live Site Recovery的操作限制</block>
-  <block id="c45d11643f21718fc7abf1cd9d372ada" category="paragraph">有关详细信息，请参阅<block ref="a6c32129895f16c366ad763f98402804" category="inline-link-rx"></block>。</block>
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">*部署类型*</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU *</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">*内存(GB)*</block>
@@ -1034,7 +975,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7f4eeeb7066fc64c51f02eba557a897f" category="list-text">您不能在具有一个或多个受保护主机集群的数据中心上创建数据存储库。</block>
   <block id="a2104e04e16a5328c37eb86f38533aab" category="list-text">如果父主机集群受到自动故障转移双工策略类型(统一/非统一配置)关系的保护、则无法在主机上创建数据存储库。</block>
   <block id="2b1af6f75eb17029e34abc0a1219ad91" category="list-text">右键单击主机系统、主机集群或数据中心，然后选择*Create tools*&gt;*Create NetApp ONTAP。</block>
-  <block id="a78a02bb1fc75e90c0aa8b7d5ee977d3" category="list-text">右键单击主机系统、主机群集或数据中心，然后选择*Create NetApp ONTAP tools*&gt;*Create Datacenter*。</block>
   <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">对于ONTAP存储端的每个协议、需要启用相应的服务和LIF。</block>
   <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">如果您使用的是NVMe/TCP协议、请执行以下步骤来配置ESXi主机：</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware 兼容性指南</block>
@@ -1044,10 +984,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="14db2df8fb05123f2db51ba24cbb8101" category="list-text">根据NIC供应商规格为NVMe/TCP配置ESXi NIC。</block>
   <block id="4f425bfd3451c6bcedd3fd5a1ce0a26d" category="inline-link">为基于TCP适配器的NVMe配置VMkernel绑定</block>
   <block id="6d42fe15ef428c6dc66bed1e59a4e237" category="inline-link">在ESXi上配置基于TCP的NVMe</block>
-  <block id="6eda33dae9f2dbe37ffaf9c71eed0ff1" category="list-text">使用VMware vSphere 7版本时、请按照VMware站点上的说明<block ref="3b25b030355879ece551d49d972e65f7" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照<block ref="f06ace997d3fe7cba473ff42f2838817" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。</block>
   <block id="a36819c9a38cba7c918742e034acfe59" category="inline-link">启用基于RDMA的NVMe或基于TCP的NVMe软件适配器</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">添加基于RDMA的软件NVMe或基于TCP适配器的NVMe</block>
-  <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">对于VMware vSphere 7版本、请按照VMware站点上的说明<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP</block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">如果您使用的是NVMe/FC协议、请执行以下步骤来配置ESXi主机：</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">在ESXi主机上启用基于网络结构的NVMe (NVMe-oF)。</block>
@@ -1060,9 +998,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="636da39a2033c6179a718983c5ce1222" category="inline-link">《 ONTAP NVMe/FC 主机配置指南》</block>
   <block id="81ef6507a13da5635951bc5b533deb59" category="inline-link">TR-4684</block>
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">有关在VMware vSphere 7.0中使用NVMe/FC的详细信息，请参阅<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block>和<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>。</block>
-  <block id="8ed67121ab040fc0922a264b155f3ebd" category="list-text">右键单击主机系统、主机集群或数据存储库，然后选择*Create tools*&gt;*Create NetApp ONTAP。</block>
-  <block id="6f0dd31cd27fc175ab8caadfb092594b" category="admonition">要使用NVMe/FC或NVMe/TCP协议创建VMFS数据存储库、您不能使用现有卷、应创建新卷。</block>
-  <block id="74251eeae0bc37e1cca3c2932fd10eed" category="admonition">如果您要在受保护集群上创建数据存储库、则会看到一条只读消息"此数据存储库正在受保护集群上挂载"。此时将创建VMFS数据存储库并将其挂载到所有主机上。</block>
   <block id="ea681736881aaf06c82b7e06948e2e8a" category="list-text">右键单击所需的数据中心，然后选择*Host tools*&gt;*更新NetApp ONTAP Data*。</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">适用于VMware vSphere的ONTAP工具可管理主机集群的保护。</block>
   <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">创建主机集群保护</block>
@@ -1087,7 +1022,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6e3d346ab934863ca5d1d45e8e42d003" category="list-text">主机名必须由大写字母(A-z)、小写字母(a-z)、数字(0-9 )或连字符(-)特殊字符组成。如果要配置双堆栈、请指定映射到IPv6地址的主机名。</block>
   <block id="708a9faa83bd031efac98fcfcc00b55f" category="list-text">输入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>以选择Enable remote diagnostics access。</block>
   <block id="ca345087ac9cc5b4dcf94a395de86c72" category="paragraph">在vCenter Server中从适用于VMware vSphere的ONTAP工具中删除数据存储库任务将执行以下操作：</block>
-  <block id="e9366540b581b3097d4eaf3f87825c86" category="list-text">右键单击主机系统、主机集群或数据存储库，然后选择*Delete NetApp ONTAP tools*&gt;*Delete DataSystem*。</block>
   <block id="aa1bdb678cc819aa1d22fb9944c073e1" category="admonition">如果有虚拟机正在使用数据存储库、则无法删除该数据存储库。要删除此数据存储库、需要先将虚拟机移动到其他数据存储库。如果数据存储库属于受保护主机集群、则不能选中卷删除复选框。</block>
   <block id="d022e296cc8c67028a80b7c8685c0da3" category="admonition">对于受保护主机集群中的VMFS数据存储库、不能删除ONTAP集群上的卷。</block>
   <block id="614598aa92a535bf2199d9e9e4e3660f" category="summary">删除主机集群保护后、数据存储库将不受保护。</block>
@@ -1110,13 +1044,11 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b5ce916c27d08fbad9feeee80c580de3" category="list-text">要编辑受保护集群的属性、您可以执行以下任一操作</block>
   <block id="aea4259738dc17224185342240e1a2c0" category="list-text">如果已在vCenter本机用户界面中创建数据存储库、则该数据存储库将显示为未受保护。用户界面会在一个对话框中显示集群中的所有数据存储库及其保护状态。选择“*保护*”按钮以启用完全保护。</block>
   <block id="0e51a5909f33cafd23635aadc0955cd1" category="admonition">对于异步类型的关系、不支持编辑操作、因为您不能将三级站点的目标SVM添加到同一个ONTAP工具实例。但是、您可以使用目标SVM的系统管理器或命令行界面来更改关系配置。</block>
-  <block id="318d692f6323a28f4f7d86fbe739882e" category="list-text">进行必要的更改后，单击*Save*。</block>
   <block id="5eb18f51432121cac7673acc65855b57" category="list-text">您可以在*Protect Cluster*窗口中看到所做的更改。</block>
   <block id="9f6458ab791d7c60d8dd28d3ce7a6f3e" category="paragraph">此时将创建一个vCenter任务、您可以在*最近任务*面板中跟踪进度。</block>
   <block id="02d4aca333bfa048250c0607c002619b" category="section-title">添加新的SnapMirror关系</block>
   <block id="be5beccd1a548240ac08da64a45a9f80" category="list-text">选择*添加关系*。</block>
   <block id="9f8190c5ec9ade7fab7f0f59cec6d852" category="list-text">将新关系添加为*异 步*或*AutomatedFailOverDw双 工*策略类型。</block>
-  <block id="fcb5607e0e0f82fe2ae26e3330c77dd0" category="list-text">单击 * 保护 * 。</block>
   <block id="e1fd7cc40822091d94be361721b8dd27" category="section-title">删除现有SnapMirror关系</block>
   <block id="200a43353197e7a3bb75ea46fd124fac" category="paragraph">要删除异步SnapMirror关系、应在适用于VMware vSphere的ONTAP工具上将二级站点SVM或集群添加为存储后端。您无法删除所有SnapMirror关系。删除关系时、ONTAP集群上的相应关系也会被删除。删除自动故障转移双工SnapMirror关系时、目标上的数据存储库将取消映射、一致性组、LUN、卷和igroups将从目标ONTAP集群中删除。</block>
   <block id="a38bf0d66035bd271b43163866e6f7dd" category="paragraph">删除此关系将在二级站点上触发重新扫描、以从主机中删除未映射的LUN作为活动路径。</block>
@@ -1194,10 +1126,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="900ab615cb0b69371787d676b2d30046" category="paragraph">_security login Role create -Role &lt;existing-role-name&gt; nve -cmddirname "vserver nve subsystem host remove"-access all -vserver nv_&lt;vserver-name&gt;</block>
   <block id="2914fec8c6d9818079914b9b8cb6298a" category="paragraph">_security login Role create -Role &lt;existing-role-name&gt; nve -cmddirname "vserver nve subsystem map remove"-access all -vserver nv_&lt;vserver-name&gt;</block>
   <block id="599c83eeb4cf9aa9a7147d39be6bd9a6" category="paragraph">向现有角色添加命令_vserver nvexe命名空间show_和_vserver nvserver subsystem show_可添加以下命令。</block>
-  <block id="0b6608365eac52ef503495b26a3e9b1f" category="paragraph">您可以使用适用于VMware vSphere的NetApp工具安装适用于vSphere的ONTAP阵列集成API (VAAI) NFS插件。</block>
   <block id="d9f27aaf5ae6bd3eb465792e14cafec5" category="section-title">为VAAI副本卸载配置正确的NFS导出策略</block>
-  <block id="2dfc2d6cb8bd212554f059fbb234cecf" category="paragraph">在NFS环境中配置VAAI时、应在配置导出策略规则时牢记以下要求：</block>
-  <block id="88328c1c70d6d0322b7c07bf6d9760c8" category="list-text">相关卷需要允许NFSv4调用。</block>
   <block id="81b7f8451857d47e62047334509e0b36" category="list-text">root用户应保持root身份、并且所有接合父卷都应允许使用NFSv4。</block>
   <block id="805928a0c13b6e1b2d20173f40408bd7" category="list-text">需要在相关NFS服务器上设置VAAI支持选项。</block>
   <block id="93cda38e25aee6138627f64e6c259593" category="paragraph">有关此过程的详细信息、请参阅<block ref="e6212f694a3524de381ff5a79b542f51" category="inline-link-rx"></block>知识库文章。</block>
@@ -1220,13 +1149,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="60979ebd2e27db419252e2b56556ea91" category="list-text">重新扫描适配器以验证是否已在VMware Live Site Recovery Storage Replication Adapters页面上更新详细信息。</block>
   <block id="8e6f017dbd3eba811685ff6bf60372e5" category="list-text">已安装相同版本的VMware Live Site Recovery</block>
   <block id="7b1dbf4673b204ff52118b225f9154bf" category="paragraph">您应在适用于扩展环境的VMware Live Site Recovery上设置以下超时值：</block>
-  <block id="e164323b5cce43e95866eb2640776865" category="paragraph"><block ref="e164323b5cce43e95866eb2640776865" category="inline-link-rx"></block></block>
-  <block id="b33d5fcf11274a869f9e11c1a59f0aed" category="paragraph"><block ref="b33d5fcf11274a869f9e11c1a59f0aed" category="inline-link-rx"></block></block>
   <block id="b20ccd4ba538ec482298b894f6a0437e" category="summary">在运行Storage Replication Adapter \(SRA\) for VMware Live Site Recovery之前、应先设置存储系统。</block>
   <block id="c031f6f2a8dcb171b23de55cec95fc3a" category="paragraph">在运行适用于VMware Live Site Recovery的Storage Replication Adapter (SRA)之前、应先设置存储系统。</block>
   <block id="84dd7fb9943b147c95a8074d22954775" category="paragraph">VMware站点上提供了有关安装VMware Live Site Recovery的文档。</block>
   <block id="4de2c2cc8da509c592b09bc5114c2360" category="inline-link">关于VMware Live Site Recovery</block>
-  <block id="fa1073d8b1d22f5d4b220d1a14c1c5e6" category="paragraph"><block ref="fa1073d8b1d22f5d4b220d1a14c1c5e6" category="inline-link-rx"></block></block>
   <block id="7285a921f077fca33245569e2e0b7b8d" category="paragraph">适配器已安装在VMware Live Site Recovery上。</block>
   <block id="2467510d19a9c4f9eee4a00341a74b62" category="paragraph">有关安装VMware Live Site Recovery的文档可在VMware站点上找到。</block>
   <block id="17935256185c49fb0cf4cd4c4d27c3e9" category="paragraph">此适配器已安装在VMware Live Site Recovery和SRA服务器上。</block>
@@ -1246,7 +1172,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">了解采用ONTAP的VMware vSphere</block>
   <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">虚拟机文件系统(Virtual Machine File System、VMFS)是一种专门为在VMware vSphere环境中存储虚拟机文件而设计的集群模式文件系统。它允许多个ESXi主机同时访问相同的虚拟机文件、从而实现vMotion和高可用性等功能。</block>
   <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">继续操作前、请检查以下各项：</block>
-  <block id="246855aa8f01c0fbf2455bc1e4f5cd38" category="paragraph">存储后端是ESXi主机用于数据存储的系统。您可以使用ONTAP工具管理器或vSphere客户端UI添加存储后端。</block>
   <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">使用ONTAP工具管理器</block>
   <block id="66d025bf05fa7a9a47b57b658e95b76a" category="open-title">使用vSphere客户端UI</block>
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">添加vCenter Server实例</block>
@@ -1320,10 +1245,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="5b1c546117e368c44e82ae035c45be9d" category="paragraph">新的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>(英文)。</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">恢复点目标(RPO)</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO用于衡量备份或复制数据的频率。它表示中断后必须恢复数据才能恢复业务运营的时间点。例如、如果组织的RPO为4小时、则在发生灾难时、可以允许最多丢失4小时的数据。</block>
-  <block id="6d53a1bafdbfffd159f3606db7ec4f40" category="paragraph">此任务可帮助您加入ONTAP集群。使用ONTAP工具管理器添加存储后端时、存储后端将添加到全局集群中。将全局集群与vCenter Server实例关联、以便为SVM用户启用Vvol数据存储库配置。您只能使用SVM在vCenter中添加存储。</block>
-  <block id="6ff40a86e9dbf12845763960c1611f1a" category="admonition">对于多租户工作流、您应使用ONTAP工具管理器全局添加ONTAP集群、并将这些集群与所需的vCenter租户相关联。然后、vCenter租户必须加入所需的Storage Virtual Machine (SVM)。如果不需要多租户、则应仅使用vCenter UI直接添加ONTAP系统。</block>
-  <block id="72e3ae7264188f32ef466bc958c20ada" category="admonition">支持IPv4和IPv6管理生命周期。此外、还支持使用管理SVM基于用户的凭据。</block>
-  <block id="4b2d8c124e59b1ec91262e9515635028" category="admonition">您可以添加基于集群的凭据以及IPv4和IPv6地址管理LIF、也可以提供基于SVM的凭据以及SVM的管理LIF、以便直接添加SVM用户。</block>
   <block id="b9a068a02697530e80b2303bfa47a612" category="paragraph">vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联。</block>
   <block id="06838b2f1fa401e4dabf9d6d8bc25d78" category="list-text">选择*关联存储后端*选项可将vCenter Server实例与所需的存储后端关联。</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">使用管理Privileges登录到集群。要配置用户、请执行以下步骤：</block>
@@ -1354,16 +1275,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="e6fa1662155a759bbefdb0296567ebe6" category="list-text">在*存储*窗格中，选择要创建数据存储库的Storage VM。在*高级选项*部分中，根据需要选择自定义导出策略(对于NFS协议)或自定义启动程序组名称(对于iSCSI和FC协议)。</block>
   <block id="968523dd6877f4f0a416c205799ed41e" category="admonition">在ASA R2存储类型SVM中、不会创建存储单元(LUN /命名空间)、因为数据存储库只是一个逻辑容器。</block>
   <block id="0a25ee59738566fab422bd58433e8600" category="list-text">在*存储属性*窗格中，您可以创建新卷或使用现有卷。创建新卷时、您可以在数据存储库上启用QoS。此步骤不适用于使用ASA R2类型ONTAP存储的VVOR数据存储库、因为VVOR数据存储库没有后备卷。默认情况下、每个LUN创建请求都会创建一个卷。</block>
-  <block id="5d8319afdbfb500a337d6daee9e2f4d1" category="list-text"><block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>在ESXi主机上运行操作。有关详细信息、请参见<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
-  <block id="d710f21af0fe112159b93d26fbf7b85e" category="list-text">在*名称和协议*窗格中，输入数据存储库名称、大小和协议信息。如果选择将新数据存储库添加到现有VMFS数据存储库集群中，请选择*Advanced Options (高级选项)*下的数据存储库集群选择器。</block>
-  <block id="6f81dc298583b73401bee46c7cab9344" category="list-text">在*存储*窗格中选择Storage VM。在窗格的*高级选项*部分中提供*自定义启动程序组名称*(可选)。您可以为此数据存储库选择一个现有igrop、也可以使用自定义名称创建一个新的igrop。</block>
-  <block id="f187ceca0ef53792a0c8b2b66c88be24" category="paragraph">如果将此协议选择为NVMe/FC或NVMe/TCP、则会创建一个新的命名空间子系统、并用于命名空间映射。默认情况下、命名空间子系统是使用自动生成的名称创建的、其中包括数据存储库名称。您可以在*Storage*窗格的高级选项中的*custom nam命名 空间子系统名称*字段中重命名命名命名空间子系统。</block>
   <block id="349a6dfa3619aee6aee78d4371eb5cf8" category="list-text">从*storage attributes*窗格：</block>
   <block id="564d5871c9fec0bf22c4c5f37c28c50b" category="list-text">从下拉菜单中选择*聚合*。</block>
-  <block id="86d07233f2764f0780723636b9c86464" category="admonition">对于ASA R2存储系统、不需要*聚合*选项、因为ASA R2存储是离散式存储。如果选择ASA R2类型SVM、则存储属性页面将显示用于启用QoS的选项。</block>
-  <block id="2701e107239593c56461aeb7b8f45476" category="list-text">根据选定协议、系统会创建一个空间预留类型为精简的存储单元(LUN /命名空间)。</block>
-  <block id="b255f486da890cc1e646dbf7019f9b77" category="list-text">根据需要选择*使用现有卷*和*启用QoS*选项，并根据需要提供详细信息。</block>
-  <block id="147fec566cd7d48204eb0552a2f81915" category="admonition">在ASA R2存储类型中、卷创建或选择不适用于存储单元创建(LUN /命名空间)、因此不会显示这些选项。</block>
   <block id="36d8439d85f01c3bc293f723943375a6" category="summary">在vCenter Client的快捷方式部分中选择适用于VMware vSphere的ONTAP工具插件图标后、用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。</block>
   <block id="677e1ca12445d4fc6810ab8d8b674802" category="doc">适用于VMware vSphere的ONTAP工具信息板概述</block>
   <block id="bf6df769c30fc0c495c99d9c389503fd" category="paragraph">在概述页面中，您可以运行*Discovery操作。发现操作会在vCenter级别运行发现、以检测任何新添加或更新的存储后端、主机、数据存储库以及保护状态/关系。您可以按需发现实体、而不必等待计划的发现。</block>
@@ -1372,8 +1285,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="5eb608c14fb00e6f328fdcb612009008" category="cell">*卡*</block>
   <block id="dd7f35945d9991d1b40238b7158f4b01" category="cell">此卡显示选定vCenter Server实例的所有存储后端的已用容量和可用容量。对于ASA R2存储系统、容量数据不会显示、因为它是一个离散式系统。</block>
   <block id="77ec0225c438e9a28006f8865dbcb95a" category="list-text">使用适用于VMware vSphere的ONTAP工具为在适配器设置列、MPIO设置列或NFS设置列中显示警报图标的主机配置ESXi主机设置。</block>
-  <block id="7fa388a6283e6645544b070194187c75" category="list-text">您应已将ESXi主机7.0U3最新修补程序安装为最低版本以及ONTAP 9.14.1、9.151和9.16.0。</block>
-  <block id="35b4916fa7f87e2934afc9aa83571dfc" category="paragraph">仅会显示符合此插件安装条件的ESXi主机。您应按照屏幕上的说明完成安装。您可以在vSphere Web Client的近期任务部分中监控安装进度。</block>
   <block id="6dc52c7290e3cfc8eb925243061b7551" category="list-text">证书管理-将自签名证书更改为自定义CA证书、并续订或刷新VASA Provider和ONTAP工具的所有证书。</block>
   <block id="f8e55333fdf93a54b9c4999e28d01f1c" category="inline-image-macro">ONTAP工具管理器信息板概述</block>
   <block id="438feb29c72033a1e461b5f8627d139d" category="cell">设备卡</block>
@@ -1475,19 +1386,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3329fe5e48659261596f0eb67edfb0ee" category="list-text">确保有三个可用IP地址可用于非HA部署—一个用于负载平衡器的可用IP地址、一个用于Kubnetes控制平台的可用IP地址和一个用于节点的IP地址。对于HA部署、除了这三个IP地址之外、第二个和第三个节点还需要两个IP地址。在分配之前、应将主机名映射到DNS上的可用IP地址。所有这五个IP地址都应位于为部署选择的同一个VLAN上。</block>
   <block id="899799bf5fac7afe26cbcc769ed8ad80" category="inline-link">适用于VMware vSphere 10.3的ONTAP工具的注意事项</block>
   <block id="021375f513cfa8c84971e1d3570f8f58" category="paragraph"><block ref="021375f513cfa8c84971e1d3570f8f58" category="inline-link-rx"></block></block>
-  <block id="d8c85beab66f76ad7bc09a665972c02c" category="paragraph">一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。</block>
-  <block id="564efc0f996a8cbef91aa5ea0c6dcdc5" category="paragraph">确保颁发证书的域名映射到多vCenter部署中的虚拟IP地址、在该部署中、自定义CA证书是必需的。对域名执行_nslookup_ check以检查域是否已解析为预期的IP地址。应使用负载平衡器IP地址的域名和IP地址创建证书。</block>
-  <block id="f820f86c93a66cd6748d4fd691aa418b" category="open-title">ONTAP工具证书</block>
   <block id="5f5053e002bb673864826817a2f5203c" category="paragraph">ONTAP工具选项卡显示证书类型(自签名/CA签名)和域名等详细信息。默认情况下、在部署期间会生成自签名证书。您可以续订此证书或将此证书升级到CA。</block>
-  <block id="488db99eb81c7ab334e43722146d8d85" category="list-text">选择*Certificates*&gt; ONTAP tools*&gt;*Renew*选项以续订证书。</block>
-  <block id="88214b7a52e377431268c6341a08cc3e" category="admonition">如果证书已过期或即将到期、您可以续订该证书。在续订证书之前、系统将处于脱机状态、您将从用户界面中注销。</block>
-  <block id="88cdd81c5ba8a594070721a3862d5cb3" category="paragraph">当证书类型为CA签名时，*Renew*是唯一可用的选项。对于CA签名的证书、将显示一个对话框、您可以在其中提供服务器证书、专用密钥、根CA和中间证书详细信息。</block>
   <block id="043925c248050af88bd5572f4c47c484" category="list-text">要将自签名证书升级为自定义CA证书，请选择*Certificates*&gt;* ONTAP tools*&gt;*升级到CA*选项。</block>
-  <block id="2476fbd5574c49417f4583b7e33e4193" category="admonition">系统将处于脱机状态、直到升级完成、您将从用户界面中注销。不允许从CA签名证书切换到自签名证书。</block>
-  <block id="d4f7a338cf736465007814539431ff7e" category="open-title">VASA提供程序证书</block>
-  <block id="9c002dd58d0a73c28b2f3fb553a76012" category="paragraph">适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您要管理多个vCenter Server实例、并且要在多个vCenter Server实例上启用vvol功能、则需要使用ONTAP工具管理器界面将自签名证书更改为自定义CA证书。</block>
-  <block id="b998da0b12db3ba920ad46e5b6662f10" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*Renew*选项以续订证书。</block>
-  <block id="dda76f88bc9cef7821c56240f9ec4b62" category="list-text">要将自签名证书升级为自定义CA证书，请选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*升级到CA*选项。</block>
   <block id="21d108129175f5ff7e7d38e10818e345" category="list-text">如果VMFS数据存储库是在ASA R2系统上创建的、并且它是保护的一部分、则需要先取消对该数据存储库的保护、然后再将其删除。</block>
   <block id="714ece12b84efacae25f0810e81201df" category="list-text">对于基于ASA R2系统的虚拟卷数据存储库、用于删除后备卷的复选框不适用。</block>
   <block id="8b432e71a26dc2273b4a71116e77e4dd" category="doc">编辑设备设置</block>
@@ -1563,16 +1463,13 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">将适用于VMware vSphere存储提供程序的ONTAP工具添加到vCenter Server和 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">请勿删除VASA Provider。</block>
   <block id="29d0e7add25c8163223dbcb531abf7d0" category="paragraph">成功迁移并将ONTAP工具10.3注册到vCenter Server后、请执行以下操作：</block>
-  <block id="8e9a07c053d2ef05978af8e903731d91" category="paragraph">了解从适用于VMware vSphere 9的ONTAP工具迁移到适用于VMware vSphere 10.1或更高版本的ONTAP工具是否适合您。有关最新的兼容性信息，请参阅<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP工具10.2及更高版本</block>
   <block id="f4950bb5572ea7201d6246f4bd786edd" category="cell">适用于ONTAP工具10.2的9.12.1 9.12.1到9.15.1 9.15.1,适用于ONTAP工具10.3的ONTAP 9.14.1, 9.15.1, 9.16.0。</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">VASA Provider支持</block>
   <block id="ac02d419043fd95f1ebe00675d9461a1" category="paragraph">了解适用于VMware vSphere 10.3的ONTAP工具中提供的新增功能和增强功能。</block>
   <block id="16e8deb7ec8db3834e1ec3294cd203bc" category="inline-xref-macro">适用于VMware vSphere 10.3的ONTAP工具中的新增功能</block>
-  <block id="50f8a09b1a1ce579514a672f26546016" category="paragraph">有关新增功能和增强功能的完整列表，请参见<block ref="bc3843eace7f4e21a753a0095be21ba6" category="inline-xref-macro-rx"></block>。</block>
   <block id="2a558aacac847fe242b61a3bf4e771e0" category="paragraph">要详细了解从适用于VMware vSphere 9的ONTAP工具迁移到ONTAP Tools 10.3是否适合您的部署，请参见<block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>。支持从适用于VMware vSphere 9.12-D和9.13-D版本的ONTAP工具迁移到适用于VMware vSphere 10.3的ONTAP工具。</block>
   <block id="61237500c1312a2c4f9b2b74dff2170b" category="inline-link">适用于VMware vSphere 10.3的ONTAP工具发行说明</block>
-  <block id="56edd51ffcdfb5e0e52621130c482abd" category="paragraph">有关详细信息，请参见<block ref="94872377b6c91690a7121bf54978d0b3" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
   <block id="c2ec10ddfa3de574244b7b99ca6f7938" category="summary">了解适用于VMware vSphere 10.3的ONTAP工具中提供的新功能。</block>
   <block id="b01cee62177f4d25aa5def6464793c19" category="doc">适用于VMware vSphere 10.3的ONTAP工具中的新增功能</block>
   <block id="599efd55c5aee4c5df18abb2efc635dd" category="paragraph">支持新平台和应用程序版本</block>
@@ -1643,7 +1540,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">输入*2*以选择*Enable remote diagnostic access*。</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">*获取所有卷的quaise快照*</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">为虚拟机创建快照</block>
-  <block id="91228eef6e9a7bdc25cdad1b40b153b6" category="list-text">单击*Apply*</block>
   <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">升级到适用于VMware vSphere 10.3的ONTAP工具后、您可以：</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">成功升级后、请按照以下过程手动从ONTAP中删除Trident卷：</block>
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">输入*4*以选择*Support and Diagnostic*菜单。</block>
@@ -1711,7 +1607,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="1543737af385e98b263eb837cefbed68" category="paragraph">适用于VMware vSphere 10的ONTAP工具会公开一个IP地址、该地址可为虚拟机的功能提供网关。您需要在初始配置期间提供地址、并将其分配给内部负载平衡器组件。此地址供ONTAP工具管理器用户界面使用、并可直接访问Swagger文档页面和REST API。</block>
   <block id="be1cd531936ba46a2647fa7dd8d85828" category="paragraph-title">两个REST API</block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP自动化</block>
-  <block id="5de3d520a303cddad4df07a561f32c63" category="paragraph">除了适用于VMware vSphere 10 REST API的ONTAP工具之外、ONTAP集群还具有自己的REST API。ONTAP工具管理器使用ONTAP REST API作为客户端来执行与存储相关的任务。请务必记住、这两个API是分开的、各不相同。有关ONTAP REST API的详细信息、请参见<block ref="2d4aebc414c2e9f6455c923c16f6303c" category="inline-link-rx"></block>文档。</block>
   <block id="20516199cb9481d285d518fc11cdca0a" category="summary">虽然REST建立了一组通用技术和最佳实践、但每个API的具体实施可能会因设计选择而异。在使用之前、您应熟悉适用于VMware vSphere 10 REST API的ONTAP工具的设计方式。</block>
   <block id="73e04cfa7b08e07a2220873d48382c98" category="doc">适用于VMware vSphere 10 REST API的ONTAP工具的实施详细信息</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API参考</block>
@@ -1810,7 +1705,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">从适用于VMware vSphere的ONTAP工具9.x迁移到10.3之后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.3仅支持对VMFS数据存储库使用NVMe-oF。</block>
   <block id="f9f52fdfc3b658d087ef0d1715cc2008" category="paragraph">您可以从适用于VMware vSphere 9.12D1和9.13D2的ONTAP工具迁移到10.3版。</block>
   <block id="12f864a7f79090b1b0f169109899eb43" category="admonition">在升级到修补程序版本之前、您必须从当前版本创建OVA备份。</block>
-  <block id="6a52711c7181000aac8a9b276baf324a" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参见 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
   <block id="9a8e25e84fe96275dbb27d27d2cca595" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.3的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在VMware vSphere插件UI页面的ONTAP工具的概述页面上。</block>
   <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">迁移前、请确保其中一个站点处于受保护状态、另一个站点处于恢复状态。</block>
   <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">如果故障转移刚刚完成且重新保护处于待定状态、请勿迁移。完成重新保护、然后执行迁移。完成恢复计划测试后、清理测试恢复并开始迁移。</block>
@@ -1874,7 +1768,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7b0f795e746611f8d000c88ef7404ee7" category="list-text">从Web浏览器启动ONTAP工具管理器：<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">使用登录到vSphere Client<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
   <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。</block>
-  <block id="58eec86a03a134f719b54881671c7c52" category="list-text">在*添加存储后端*窗口中，提供服务器IP地址、用户名、密码和端口详细信息，然后选择*Add*。</block>
   <block id="f017ca342576480350b43d2d7e7f73ae" category="summary">将vCenter Server实例添加到适用于VMware vSphere的ONTAP工具中、以配置、管理和保护vCenter Server环境中的虚拟数据存储库。</block>
   <block id="f05b95a344d62647f6489daf34512360" category="paragraph">通过与vCenter集成、ONTAP工具使您能够直接从vSphere客户端执行配置、快照和数据保护等存储任务、而无需切换到单独的存储管理控制台。</block>
   <block id="f8539fd8796614c8ef01970c32bcf658" category="list-text">打开Web浏览器并导航到URL：<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
@@ -1925,7 +1818,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="eb4182715f8cde98563dc59ea36461d3" category="cell">NFS.HeartbeatTimeout</block>
   <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
   <block id="0aa364b40943456fe1d59c4a4a6ee32d" category="list-text">浏览并选择<block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block>文件，然后选择*Upload*将文件上传到ONTAP工具。</block>
-  <block id="58baf634a0cbe2c538cb4ee8b49eb797" category="list-text">单击*在ESXi主机上安装*，选择要安装NFS VAAI插件的ESXi主机，然后选择*安装*。</block>
   <block id="741276b1afc1cd52f0ec6404edcf55de" category="paragraph">要访问ONTAP工具管理器、请<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block>从浏览器启动、然后使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
   <block id="fb31aab466ef06ee817c945e4fe16b33" category="cell">设备卡可提供ONTAP Tools设备的整体状态。它会显示设备配置详细信息以及已启用服务的状态。有关ONTAP工具设备的其他信息，请选择*View详细信息*链接。如果正在执行编辑设备设置操作作业、则设备portlet将显示此作业的状态和详细信息。</block>
   <block id="96322cb1e08cb1a6e918061bfd2a7459" category="cell">"警报"卡按类型列出了ONTAP工具警报、包括HA节点级警报。您可以通过选择计数文本(超链接)来查看警报列表。此链接会将您路由到按选定类型筛选的警报视图页面。</block>
@@ -1933,7 +1825,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="aa53af31c82c56982dcdb39a1977824c" category="paragraph">适用于VMware vSphere的ONTAP工具可管理主机集群的保护。属于选定SVM且挂载在集群中一个或多个主机上的所有数据存储库都会在主机集群下受到保护。</block>
   <block id="b7537190feef878bca08128a99683b08" category="list-text">在保护集群窗口中、系统会自动填充数据存储库类型和源Storage Virtual Machine (VM)详细信息。选择数据存储库链接以查看受保护的数据存储库。</block>
   <block id="758bc97457a26bfa0a61cc0166a6d597" category="paragraph">如果要将SnapMirror关系添加为AutomatedFailOver双 工类型策略、则必须将目标Storage VM作为存储后端添加到部署适用于VMware vSphere的ONTAP工具的同一vCenter中。</block>
-  <block id="4f968d89fcb2968c967f57e1fa7b1138" category="paragraph">在AutomatedFailOver双 工策略类型中、存在统一和非一致的主机配置。选择*统一主机配置*切换按钮时，系统会在目标站点上隐式复制主机启动程序组配置。有关详细信息、请参见<block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block></block>
   <block id="e3b0abcdc3eb75065eedea5a442bdf00" category="list-text">在*Protect cluster-*窗口中，您不能在创建操作期间编辑受保护的群集。您可以删除并重新添加保护。在修改主机集群保护操作期间、可以使用编辑选项。您可以使用省略号菜单选项编辑或删除关系。</block>
   <block id="d7c513071870643e06bdd5a2952a3848" category="list-text">选择“*保护*”按钮。</block>
   <block id="5522fdca4065fd1e9ed7b389f3a8e7b2" category="paragraph">此时将使用作业ID详细信息创建vCenter任务、其进度将显示在近期任务面板中。这是一个异步任务；用户界面仅显示请求提交状态、不会等待任务完成。</block>
@@ -1958,7 +1849,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">在*自定义模板*窗口中，填写必填字段，然后选择*下一步*。</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">选择屏幕右上角的*管理员*图标，然后选择*更改密码*。</block>
   <block id="a507cab298067b18a544dc700d1b49f7" category="inline-link">删除并重新注册VM和VM模板</block>
-  <block id="f984ae2b9e73ded60af216a40fcb5a33" category="list-text">从vCenter Server中删除VM、请参见<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block></block>
   <block id="9ac18603ba1d7eaea59e783f4b92c470" category="list-text">从ONTAP系统管理器中删除卷，请参见<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>。在命令行界面命令中提供FlexVolume的确切名称以删除此卷。</block>
   <block id="545d5a3b6fbb629619299d0278ed00f6" category="list-text">对于iSCSI部署，请从ONTAP中删除SAN igroub，请参见<block ref="14bc02d0e479c1e35338b733fac8ca0e" category="inline-link-rx"></block>。</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">在*主机集群保护*窗口中，选择集群对应的省略号菜单，然后选择*删除保护*。</block>
@@ -2009,7 +1899,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d1a23a03023137fd38165cea715f27d9" category="doc">终止ONTAP工具部署</block>
   <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。</block>
   <block id="5a542b803059205c8fd2335844a87295" category="admonition">终止适用于VMware vSphere的ONTAP工具将删除这些工具中的所有数据。</block>
-  <block id="ddd0e0be06228297b94d3fcf028edb16" category="list-text">删除在适用于VMware vSphere的ONTAP工具上创建的所有虚拟机。请参阅<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block>。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在适用于VMware vSphere的ONTAP工具上创建。</block>
   <block id="1e51d74fa593c2d20970490a2e9adbe0" category="list-text">按照以下步骤从所有vCenter Server中取消注册此vasa提供程序：</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在ONTAP工具中、选择屏幕底部的*设置*&gt;* VASA Provider设置*&gt;*注销*选项。</block>
@@ -2051,11 +1940,117 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d3a79ed7c8de1319d53eb17bb256cb17" category="cell">扩展了支持范围、仅包括适用于VMFS和VMware的FC以及适用于VMFS的NVMe-oF、NVMe-oF、TCP。NetApp SnapMirror易于使用、vSphere城域存储集群设置简单、并提供三站点VMware实时站点恢复支持</block>
   <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">适用于iSCSI VMFS和NFS v3数据存储库的SRA复制、三站点保护、结合SMAS和VMware Live Site Recovery。</block>
   <block id="0e27105caa72d21e8749a7f4537adbcf" category="list-text">从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后通过选择名称打开该卷。转至快照并添加该卷的快照。</block>
-  <block id="b639159ff2a793aff96fa54f36b5fe54" category="list-text">进入快照选项卡并选择*拍摄快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
   <block id="901db5b8a2bb826f006539770e8329a4" category="list-text">右键单击虚拟机并选择*添加新设备*&gt;*硬盘*</block>
   <block id="2c2d3019834934bb25449edddc396321" category="list-text">选择ISO文件并选择*OK*。选择*CD/DVD驱动器*字段中的已连接复选框。<block ref="af57a506b85774ef3a9f849e2b26e258" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">* 相关信息 *</block>
   <block id="588c54ba24d4dc42aed4a00de280a6c7" category="paragraph"><block ref="588c54ba24d4dc42aed4a00de280a6c7" category="inline-link-macro-rx"></block></block>
   <block id="7cef36111f48deb0a1c06475a0a59b80" category="list-text"><block ref="02abbf483718c447a62821a5783286ae" prefix="" category="inline-code"></block></block>
   <block id="b59a60fbe3c8f0c4a205eb54707a7c99" category="paragraph"><block ref="b59a60fbe3c8f0c4a205eb54707a7c99" category="inline-link-macro-rx"></block></block>
+  <block id="9e4b907c843e481024589dd74ed9c0f5" category="paragraph">除了适用于VMware vSphere 10 REST API的ONTAP工具之外、ONTAP集群还具有自己的REST API。ONTAP工具管理器使用ONTAP REST API作为客户端来执行与存储相关的任务。请务必记住、这两个API是分开的、各不相同。有关详细信息，请参阅<block ref="2d4aebc414c2e9f6455c923c16f6303c" category="inline-link-rx"></block>。</block>
+  <block id="442290d4045e6c10552f661da43a9706" category="paragraph">通过添加存储后端、您可以加入ONTAP集群。</block>
+  <block id="0333b8e59818e95f8c3464384f005977" category="paragraph">要在多租户架构中向全局范围的集群添加存储后端、请使用ONTAP工具管理器添加存储后端。将存储后端添加到全局集群后、您必须将此集群与所需的vCenter租户相关联。vCenter租户必须载入所需的Storage Virtual Machine (SVM)。这样、SVM用户便可配置Vvol数据存储库。您可以使用SVM在vCenter中添加存储。</block>
+  <block id="91310533ef068c4c3d95d7102fd2e7da" category="paragraph">要将存储后端添加到本地范围的集群、请直接使用vCenter Server上的ONTAP工具插件添加ONTAP系统。</block>
+  <block id="a761d3a6a5565687c80a0d269ca343c4" category="admonition">在多租户设置中、您可以全局添加存储后端集群、并在本地添加SVM以使用SVM用户凭据。</block>
+  <block id="9cb992b5ee53404c646502db030f7c27" category="list-text">添加存储后端并提供服务器IP地址或FQDN、用户名和密码详细信息。</block>
+  <block id="60f27fc86b38229b1a666fd3c7b129f1" category="admonition">支持IPv4和IPv6地址管理生命周期。</block>
+  <block id="e2110f6da662960cfcf0c47b8cb53bc2" category="admonition">使用vSphere客户端UI添加存储后端时、Vvol数据存储库不支持直接添加SVM用户。</block>
+  <block id="c565d2607965437af6879f40cf3d205b" category="list-text">添加存储后端并提供服务器IP地址、用户名、密码和端口详细信息。</block>
+  <block id="1aa7bf4bed36956e632c48c6bb9fe6ba" category="admonition">要直接添加SVM用户、您可以添加基于集群的凭据以及IPv4和IPv6地址管理LIF、或者通过SVM管理LIF提供基于SVM的凭据。</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">下一步是什么？</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">选择 * 保存 * 。</block>
+  <block id="e4365b2f9588eb138888d2bae6c6ac55" category="list-text">使用VMware vSphere 7版本时、请按照VMware站点上的说明<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。</block>
+  <block id="0738bb2742892ec72b20fc7b75fe9434" category="list-text">对于VMware vSphere 7版本、请按照第页上的说明<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。</block>
+  <block id="9d596e014ec247e8a36a9d698795a54f" category="list-text"><block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>在ESXi主机上运行操作。有关详细信息，请参阅<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>。</block>
+  <block id="bb9abdb0ecdc4e8ad5c61844a27d7f18" category="list-text">选择VMFS数据存储库类型。</block>
+  <block id="e402bcd72bd39747a6c313db6cf82245" category="list-text">在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。如果选择将新数据存储库添加到现有VMFS数据存储库集群中，请选择*Advanced Options (高级选项)*下的数据存储库集群选择器。</block>
+  <block id="a72fa1b6283bc49d7a35448bc8066b82" category="list-text">在*存储*窗格中选择Storage VM。在窗格的*高级选项*部分中提供*自定义启动程序组名称*(可选)。您可以为此数据存储库选择一个现有igrop、也可以使用自定义名称创建一个新的igrop。</block>
+  <block id="b92a49b47aaba3383c46457e51f8c0e3" category="paragraph">如果将此协议选择为NVMe/FC或NVMe/TCP、则会创建一个新的命名空间子系统、并用于命名空间映射。默认情况下、将使用自动生成的名称(包括数据存储库名称)创建命名空间子系统。您可以在*Storage*窗格高级选项的*custom nam命名 空间子系统名称*字段中重命名命名命名命名空间子系统。</block>
+  <block id="00ada22f90c98fe11bd33a45e83b1999" category="admonition">对于ASA R2存储系统、不需要*聚合*选项、因为ASA R2存储是离散式存储。如果选择ASA R2类型SVM、则存储属性页面将显示用于启用QoS的选项。</block>
+  <block id="dad78f51ffa5cc75da90723bb5cbfabe" category="list-text">根据选定协议、系统会创建一个空间预留类型为精简的存储单元(LUN /命名空间)。</block>
+  <block id="e77dbde1a15a93146a6e8dade4132fbe" category="list-text">根据需要选择*使用现有卷*和*启用QoS*选项，并根据需要提供详细信息。</block>
+  <block id="a773526fcff88687996b249fcf52a4e9" category="admonition">在ASA R2存储类型中、卷创建或选择不适用于存储单元创建(LUN /命名空间)。因此、不会显示这些选项。</block>
+  <block id="a12edc4e622d67446faed12a699ce69c" category="admonition">要使用NVMe/FC或NVMe/TCP协议创建VMFS数据存储库、您不能使用现有卷、应创建新卷。</block>
+  <block id="4e9c2fb6a8fbbc31672733b95f6185ee" category="admonition">如果您要在受保护集群上创建数据存储库、则会看到一条只读消息"正在将数据存储库挂载到受保护集群上"。此时将创建VMFS数据存储库并将其挂载到所有主机上。</block>
+  <block id="ff91c9509417650db07b3cfb867286fa" category="paragraph">在*Confirm *(确认*)对话框中，确认您的选择。</block>
+  <block id="a4190631e34ccca7730e594f6655cc87" category="paragraph">使用适用于VMware vSphere的ONTAP工具、您可以在ESXi主机上设置超时值和其他值、以确保性能最佳并成功进行故障转移。适用于VMware vSphere的ONTAP工具设置的值基于内部NetApp测试。</block>
+  <block id="6a56526090ecb77854d07be849799242" category="paragraph">MPIO设置定义NetApp存储系统的首选路径。它们可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。</block>
+  <block id="89f7633ad6a1e114cebf9902aa42fd5c" category="paragraph">NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、用于集成VMware vSphere和NFS存储阵列。使用适用于VMware vSphere的ONTAP工具安装NFS VAAI插件、以利用NFS存储阵列的高级功能将某些与存储相关的操作从ESXi主机卸载到存储阵列本身。</block>
+  <block id="f9fcb823ee6471ecceb63c9625d2c8fc" category="list-text">下载<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block>安装包。</block>
+  <block id="e27bb3e78ef59cd560e56215a182f3b3" category="list-text">确保ESXi主机已安装最新修补程序7.0U3或更高版本以及9.14.1 9.14.1或更高版本。</block>
+  <block id="a585389d21dd9fbdbdc15072bd5d7010" category="list-text">挂载NFS数据存储库。</block>
+  <block id="3efe2db5c0b83bc2774d6061359381ed" category="list-text">将DataMover.HardwareAcceleratedMove、DataMover.HardwareAcceleratedInit和VMFS3.HardwareAcceleratedLocking主机设置的值设置为"1"。要自动设置这些值、请应用建议的EXSi主机设置。请参阅 <block ref="a13757a488cc72436349db8983ce6613" category="inline-link-macro-rx"></block>。</block>
+  <block id="957daa20d20cf15a7839d7e44ecdb2ab" category="list-text">使用vserver NFS修改-vserver vserver_name -vStorage enabled命令在Storage Virtual Machine (SVM)上启用vStorage选项。</block>
+  <block id="d5676260c3a3d58c4d9ebd79f3558bac" category="list-text">确保您已安装vSphere 7.0U3最新的修补程序版本。</block>
+  <block id="0e57b7b27807ae2427ad1a654eca765e" category="list-text">选择*Settings*&gt;*NFS VAAI Tools*。</block>
+  <block id="75650b415bb2c723c71117c59992e489" category="list-text">选择*在ESXi主机上安装*、选择要安装NFS VAAI插件的ESXi主机、然后选择*安装*。</block>
+  <block id="681ca77b2652713f7e6d867f281733ec" category="paragraph">仅显示符合此插件安装条件的ESXi主机。您可以在vSphere Web Client的近期任务部分中监控安装进度。</block>
+  <block id="4969bf5d68bb071342161a9b29a23f5c" category="list-text">安装完成后、您应手动重新启动ESXi主机。</block>
+  <block id="d15e664257aa2207434ef9543a593a8d" category="paragraph">当VMware管理员重新启动ESXi主机时、适用于VMware vSphere的ONTAP工具会自动检测并启用NFS VAAI插件。</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什么？</block>
+  <block id="90ba1578c2c367413063e7228d8586b5" category="paragraph">安装NFS VAAI插件并重新启动ESXi主机后、您需要为VAAI副本卸载配置正确的NFS导出策略。在NFS环境中配置VAAI时、请根据以下要求配置导出策略规则：</block>
+  <block id="a63deaeb1826a534bc9e2fd4959d9dea" category="list-text">相关ONTAP卷需要允许NFSv4调用。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">相关信息</block>
+  <block id="e0996cb3275f87a00dff38d12e4715d0" category="inline-link">支持基于 NFS 的 VMware vStorage</block>
+  <block id="733a8e5c18051394b8392d2273d05f33" category="paragraph"><block ref="733a8e5c18051394b8392d2273d05f33" category="inline-link-rx"></block></block>
+  <block id="8b1ffa00fa367c9e1aed3629b62d6c4f" category="inline-link">启用或禁用NFSv4.0</block>
+  <block id="a4d224777c0d91e52fb09687f7cdc2ac" category="paragraph"><block ref="a4d224777c0d91e52fb09687f7cdc2ac" category="inline-link-rx"></block></block>
+  <block id="56a156ef32c18392cd77249a4e9d04c5" category="inline-link">ONTAP支持NFSv4.2</block>
+  <block id="26b3116c80531a47fa8562f359b1a573" category="paragraph"><block ref="26b3116c80531a47fa8562f359b1a573" category="inline-link-rx"></block></block>
+  <block id="2fa5bdd6c63d27c52dc92f5e27deea70" category="paragraph">在AutomatedFailOver双 工策略类型中、存在统一和非一致的主机配置。选择*统一主机配置*切换按钮时，系统会在目标站点上隐式复制主机启动程序组配置。有关详细信息，请参见 <block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block>。</block>
+  <block id="c01ef522cb5ee6461c57aa510b0f9dce" category="list-text">*主机系统规模估算要求*根据部署规模推荐的内存如下表所示：</block>
+  <block id="bbab260bdbd12933b5aad202ac803e9c" category="cell">HA小型(累计三个节点)</block>
+  <block id="ca38c9b2032228fad900b11b07470b17" category="cell">HA介质(累计三个节点)</block>
+  <block id="721a0cb2e546dae89564af8a23d13306" category="cell">HA大型(累计三个节点)</block>
+  <block id="4c90abc26074daa0aa69e5fcd9bac645" category="paragraph">有关详细信息，请参阅<block ref="39a0a12cac57df4f5e3df88c1e683703" category="inline-link-rx"></block>。</block>
+  <block id="8dd1b64be0dd46b9c3a80e407d38b6df" category="paragraph">默认情况下、在部署期间会为ONTAP工具和VASA Provider生成自签名证书。您可以使用ONTAP工具管理器界面续订证书或将其升级到自定义CA。</block>
+  <block id="4a132f845a55de557f0829dacbc03a93" category="list-text">在多vCenter部署中，颁发证书的域名应映射到虚拟IP地址，在该部署中，自定义CA证书是必需的。</block>
+  <block id="10cd1f260e9855405e5e3b0b9fd330f5" category="list-text">对域名运行nslookup检查、检查域是否已解析为预期的IP地址。</block>
+  <block id="a1f792ad305382a9dcc1c8551581cb57" category="list-text">应使用域名和负载平衡器IP地址创建证书。</block>
+  <block id="3e796de02283c0f84159059a89c9681a" category="admonition">负载平衡器IP地址应映射到完全限定域名(FQDN)。应使用映射到负载平衡器IP地址的相同FQDN生成证书。</block>
+  <block id="f01050ae79f30f1986973e3e8b1d62e0" category="admonition">您不能从CA签名证书切换到自签名证书。</block>
+  <block id="49f94738c3644fbe9136c4a2d758c0e8" category="open-title">升级ONTAP工具证书</block>
+  <block id="d051d66420b4ab4228c2f209cd30a155" category="list-text">选择*Certificates*&gt; ONTAP tools*&gt;*Renew*以续订证书。</block>
+  <block id="700e580d2a33afbe04073228203485fe" category="paragraph">如果证书已过期或即将到期、您可以续订该证书。如果证书类型为CA签名、则可以使用续订选项。在弹出窗口中、提供服务器证书、专用密钥、根CA和中间证书详细信息。</block>
+  <block id="04b97a75d793e5e8d9c91f69fb8803f5" category="admonition">在续订证书之前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。</block>
+  <block id="2da89430805560f209041c63cfb2f20f" category="list-text">在弹出窗口中、上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。</block>
+  <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">输入生成此证书的域名并升级此证书。</block>
+  <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">升级完成前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。</block>
+  <block id="b0c94213de0564c17f37b032d9d91905" category="open-title">升级VASA提供程序证书</block>
+  <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您管理多个vCenter Server实例并希望在这些实例上启用vvol功能、则需要将自签名证书更改为自定义CA证书。</block>
+  <block id="81914abf558d30aee207170f7eb62743" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*Renew*以续订证书。</block>
+  <block id="fafffe2e2a76baaa761981b13de575ba" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*升级到CA*以将自签名证书升级到自定义CA证书。</block>
+  <block id="6ab10f666dd4d5c8df15f3d1ec4b0587" category="list-text">选择*更改*以实施更改。</block>
+  <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">登录会话仅在第二天午夜之前有效。</block>
+  <block id="5e72086f8631962277d90aa3e0098f29" category="list-text">从vCenter Server中删除VM，请参见<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block>。</block>
+  <block id="e58da45c53be4fa05c044e29df8205bf" category="list-text">右键单击主机系统、主机集群或数据中心，然后选择*Delete tools* NetApp ONTAP (删除工具)&gt;*Delete DataSystem*(删除数据存储库)。</block>
+  <block id="4a724ef496ce3cb45c0d4dd43ce4a1cf" category="doc">使用 ONTAP 工具修改 ESXi 主机设置</block>
+  <block id="e275b0caaa6d0402ee0e31d7da910bcf" category="paragraph"><block ref="e275b0caaa6d0402ee0e31d7da910bcf" category="inline-link-macro-rx"></block></block>
+  <block id="cc307b25622cbd7026f0a8c0e553a4df" category="list-text">进行必要的更改后，选择*保存*。</block>
+  <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">选择*保护*。</block>
+  <block id="ec4a1dbd6ed28379905f9f6ea733a254" category="list-text">选择与要迁移的数据存储库的功能匹配的虚拟磁盘格式、虚拟机存储策略和VVOV数据存储库。</block>
+  <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">选择*Reset (重置)*以实施更改。</block>
+  <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">选择*Reset (重置)*以实施更改。成功重置密码后、您可以使用新密码进行登录。</block>
+  <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">在右窗格中选择*Config*选项卡。</block>
+  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage vMotion</block>
+  <block id="cbc3827441acb37e425975060545d58c" category="list-text">从适用于VMware vSphere的ONTAP工具管理的数据存储库中删除所有虚拟机。您可以将其删除(请参见<block ref="d6e07286372376b6b92ed9babd2f6996" category="inline-link-rx"></block>)或使用<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block>将其移动到非受管数据存储库。</block>
+  <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">在右窗格中选择*Monitor*选项卡。</block>
+  <block id="e53a5f7966ebf538ff3fbae3277020fa" category="list-text">添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参阅<block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
+  <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">在管理选项卡中选择*占位数据存储库*&gt;*新建*以创建新的占位数据存储库。</block>
+  <block id="1766c36b7d852fbd898c8f3e8757adf1" category="inline-link">更改存储提供程序设置</block>
+  <block id="88dd15368caf7bedf14a22682dd60571" category="paragraph">有关修改存储提供程序设置的详细信息、请参见<block ref="5734aca103a056a246bef0954aaa8488" category="inline-link-rx"></block>。</block>
+  <block id="09662246d40be3f3890675feb3a8d887" category="inline-link">更改存储设置</block>
+  <block id="df2b33876e76d1c72ae662df2c58a198" category="paragraph">有关修改SAN Provider设置的信息、请参见<block ref="cfe8edd9f380882a23e15b320dd2350a" category="inline-link-rx"></block>。</block>
+  <block id="226122417d676e2efbf655efab869e69" category="paragraph"><block ref="226122417d676e2efbf655efab869e69" category="inline-link-rx"></block></block>
+  <block id="d58ff39e1f4f8f7f9a432fa8a38d6a17" category="list-text">在管理选项卡中选择*文件夹映射*&gt;*文件夹*图标以创建新的文件夹映射。</block>
+  <block id="f7344e812c301e2553b759f92fb60845" category="list-text">成功创建映射后选择*Next*。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">结果</block>
+  <block id="8b6fe3cd894451b4b613aba7f7aa15bb" category="list-text">在管理选项卡中选择*网络映射*&gt;*新建*以创建新的网络映射。</block>
+  <block id="ee0537075fce44e6ac2bade1dbb6ebbe" category="list-text">在创建网络映射向导中、执行以下操作：</block>
+  <block id="e0b7ac4ee5dae1212e32e99c489c4e53" category="list-text">在管理选项卡中选择*Resource Mapping*&gt;*New*以创建新的资源映射。</block>
+  <block id="ed8dc3baa490877497f62cd225d8531a" category="list-text">选择*Objects*&gt;*Actions*&gt;*P对 站点*。</block>
+  <block id="a1b0bb7b5d54e1fb2449b091677a7277" category="paragraph">了解从适用于VMware vSphere 9的ONTAP工具迁移到适用于VMware vSphere 10.1或更高版本的ONTAP工具是否适合您。有关最新的兼容性信息，请参阅<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
+  <block id="4703b882263e89c7d597b2ada50fc99a" category="paragraph">有关新增功能和增强功能的完整列表，请参阅<block ref="bc3843eace7f4e21a753a0095be21ba6" category="inline-xref-macro-rx"></block>。</block>
+  <block id="eac305d871d102753386a94dcd4e13bf" category="paragraph">有关详细信息，请参阅<block ref="94872377b6c91690a7121bf54978d0b3" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
+  <block id="ed05024ef185f71f630610fa2998b97c" category="list-text">进入快照选项卡并选择*拍摄快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见<block ref="cfbcb02d8f4029fded9e80960c9fdffc" category="inline-link-rx"></block>。</block>
 </blocks>

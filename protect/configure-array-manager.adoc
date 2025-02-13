@@ -13,8 +13,7 @@ summary: '您可以使用VMware Live Site Recovery中的阵列管理器向导配
 [role="lead"]
 您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。
 
-* 您需要的内容 *
-
+.开始之前
 * 您应已在VMware Live Site Recovery中将受保护站点和恢复站点配对。
 * 在配置阵列管理器之前、您应已配置已启用的存储。
 * 您应已在受保护站点和恢复站点之间配置和复制SnapMirror关系。
@@ -23,8 +22,7 @@ summary: '您可以使用VMware Live Site Recovery中的阵列管理器向导配
 
 SRA 支持集群级别的管理和 SVM 级别的管理。如果在集群级别添加存储、则可以发现集群中的所有SVM并对其执行操作。如果在 SVM 级别添加存储，则只能管理该特定 SVM 。
 
-* 步骤 *
-
+.步骤
 . 在VMware Live Site Recovery中，选择*Array Manager*>*Add Array Manager*。
 . 输入以下信息以描述VMware Live Site Recovery中的阵列：
 +
@@ -61,7 +59,7 @@ NOTE: 在配置阵列管理器时、您应使用与在ONTAP工具中将存储系
 
 
 
-. 单击 * 下一步 * 。
+. 选择 * 下一步 * 。
 . 验证是否已发现阵列并显示在"Add Array Manager"(添加阵列管理器)窗口的底部，然后选择"*Complete"(完成)。
 
 
