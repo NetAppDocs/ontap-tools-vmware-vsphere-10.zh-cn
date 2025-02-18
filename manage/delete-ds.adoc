@@ -27,7 +27,7 @@ summary: 删除数据存储库操作将删除此数据存储库。如果使用�
 
 .步骤
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
-. 右键单击主机系统、主机集群或数据中心，然后选择*Delete tools* NetApp ONTAP (删除工具)>*Delete DataSystem*(删除数据存储库)。
+. 右键单击主机系统、主机集群或数据中心，然后选择*Delete NetApp ONTAP tools*>*Delete data*。
 +
 
 NOTE: 如果有虚拟机正在使用数据存储库、则无法删除该数据存储库。要删除此数据存储库、需要先将虚拟机移动到其他数据存储库。如果数据存储库属于受保护主机集群、则不能选中卷删除复选框。

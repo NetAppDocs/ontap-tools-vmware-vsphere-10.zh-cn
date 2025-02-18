@@ -39,7 +39,7 @@ NOTE: 检查以确保根聚合未映射到SVM。
 
 .步骤
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create tools*>*Create NetApp ONTAP。
+. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create DataSystem*。
 . 在*类型*窗格中、在*数据存储库类型*中选择"vols"。
 . 在*名称和协议*窗格中，提供*数据存储库名称*和*协议*信息。
 +
@@ -62,7 +62,7 @@ VMware网络文件系统(NFS)数据存储库使用NFS协议通过网络将ESXi�
 
 .步骤
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create tools*>*Create NetApp ONTAP。
+. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create DataSystem*。
 . 在*Type*窗格中，在*数据 存储库Type*中选择NFS。
 . 在*名称和协议*窗格中，输入数据存储库名称、大小和协议信息。在高级选项中，选择*数据 存储库群集*和*Kerberos身份验证*。
 +
@@ -122,7 +122,7 @@ NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议
 
 .步骤
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create tools*>*Create NetApp ONTAP。
+. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create DataSystem*。
 . 选择VMFS数据存储库类型。
 . 在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。如果选择将新数据存储库添加到现有VMFS数据存储库集群中，请选择*Advanced Options (高级选项)*下的数据存储库集群选择器。
 . 在*存储*窗格中选择Storage VM。在窗格的*高级选项*部分中提供*自定义启动程序组名称*(可选)。您可以为此数据存储库选择一个现有igrop、也可以使用自定义名称创建一个新的igrop。

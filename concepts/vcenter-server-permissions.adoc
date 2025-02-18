@@ -61,7 +61,7 @@ NOTE: 为了简化vCenter Server RBAC的使用、适用于VMware vSphere的ONTAP
 
 == vSphere 对象
 
-权限与 vSphere 对象关联，例如 vCenter Server ， ESXi 主机，虚拟机，数据存储库，数据中心， 和文件夹。您可以为任何 vSphere 对象分配权限。根据分配给 vSphere 对象的权限， vCenter Server 可确定谁可以对该对象执行哪些任务。对于适用于VMware vSphere的ONTAP工具的特定任务、只会在根文件夹级别(vCenter Server)分配和验证权限、而不会在任何其他实体上分配和验证权限。但VAAI插件操作除外、在该插件操作中、系统会对相关ESXi主机验证权限。
+权限与vSphere对象关联、例如vCenter Server、ESXi主机、虚拟机、数据存储库、数据中心和文件夹。您可以为任何 vSphere 对象分配权限。根据分配给 vSphere 对象的权限， vCenter Server 可确定谁可以对该对象执行哪些任务。对于适用于VMware vSphere的ONTAP工具的特定任务、只会在根文件夹级别(vCenter Server)分配和验证权限、而不会在任何其他实体上分配和验证权限。但VAAI插件操作除外、在该插件操作中、系统会对相关ESXi主机验证权限。
 
 
 

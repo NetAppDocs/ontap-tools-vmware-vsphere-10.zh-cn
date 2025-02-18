@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/api-reference.html 
-keywords: ontap tools vmware vsphere rest api reference, api reference 
+keywords: ontap tools for vmware vsphere rest api reference, api reference 
 summary: 适用于VMware vSphere 10 REST API的ONTAP工具参考包含有关所有API调用的详细信息。此参考有助于开发自动化应用程序。 
 ---
 = 适用于VMware vSphere 10 REST API的ONTAP工具的API参考
@@ -16,7 +16,7 @@ summary: 适用于VMware vSphere 10 REST API的ONTAP工具参考包含有关所�
 [role="lead"]
 适用于VMware vSphere 10 REST API的ONTAP工具参考包含有关所有API调用的详细信息。此参考有助于开发自动化应用程序。
 
-您可以通过Swagger UI联机访问适用于VMware vSphere 10的ONTAP工具REST API文档。您需要适用于VMware vSphere 10的ONTAP工具网关服务的IP地址或FQDN以及端口。
+您可以通过Swagger用户界面联机访问适用于VMware vSphere 10的ONTAP工具REST API文档。您需要适用于VMware vSphere 10的ONTAP工具网关服务的IP地址或FQDN以及端口。
 
 .步骤
 . 在浏览器中键入以下URL，将相应的IP地址和端口组合替换为变量，然后按*Enter*键。

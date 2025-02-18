@@ -15,9 +15,15 @@ summary: 下一节介绍了本文档中使用的重要概念和术语。
 
 
 
-=== ASA r2
+=== ASA r2系统
 
 新的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["了解ASA R2存储系统"](英文)。
+
+
+
+=== AutoSupport
+
+AutoSupport 是一种主动监控系统运行状况并自动向 NetApp 技术支持，您的内部支持组织和支持合作伙伴发送消息的机制。
 
 
 
@@ -78,6 +84,12 @@ RPO用于衡量备份或复制数据的频率。它表示中断后必须恢复�
 === SnapMirror主动同步(SMAS)
 
 通过SnapMirror主动同步、即使在整个站点发生故障时、业务服务也可以继续运行、从而支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移需要手动干预或自定义脚本。Lear了解更多信息 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror活动同步"]。
+
+
+
+=== 存储后端
+
+存储后端是ESXi主机用于存储虚拟机文件、数据和其他资源的底层存储基础架构。存储后端允许ESXi主机访问和管理永久性数据、从而为虚拟化环境提供所需的存储功能和性能。
 
 
 

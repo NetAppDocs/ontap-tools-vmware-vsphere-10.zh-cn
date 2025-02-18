@@ -38,10 +38,10 @@ NOTE: 支持IPv4和IPv6地址管理生命周期。
 
 
 --
-.使用vSphere客户端UI
+.使用vSphere客户端用户界面
 --
 
-NOTE: 使用vSphere客户端UI添加存储后端时、Vvol数据存储库不支持直接添加SVM用户。
+NOTE: 使用vSphere客户端用户界面添加存储后端时、Vvol数据存储库不支持直接添加SVM用户。
 
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
 . 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
