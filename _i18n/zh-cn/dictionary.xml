@@ -598,7 +598,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">删除现有资源实例。</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">PUT</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">接受</block>
-  <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter \(SRA\)能够发现存储系统。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">将受保护站点和恢复站点配对</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter (SRA)能够发现存储系统。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">您应已在受保护站点和恢复站点上安装SRA。</block>
@@ -975,7 +974,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="81ef6507a13da5635951bc5b533deb59" category="inline-link">TR-4684</block>
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">有关在VMware vSphere 7.0中使用NVMe/FC的详细信息，请参阅<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block>和<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>。</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">适用于VMware vSphere的ONTAP工具可管理主机集群的保护。</block>
-  <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">创建主机集群保护</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">确保满足以下前提条件：</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">主机集群只包含一个SVM中的数据存储库。</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">挂载在主机集群上的数据存储库不应挂载在集群外部的任何主机上。</block>
@@ -1845,9 +1843,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">选择垂直省略号菜单，然后选择*Remove*。</block>
   <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">选择父集群或存储后端下的子集群时、您可以看到组件的整体摘要。选择父集群后、您可以从"Actions"下拉菜单中执行发现存储、修改和删除操作。</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。</block>
-  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">终止ONTAP工具部署</block>
-  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。</block>
-  <block id="5a542b803059205c8fd2335844a87295" category="admonition">终止适用于VMware vSphere的ONTAP工具将删除这些工具中的所有数据。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在适用于VMware vSphere的ONTAP工具上创建。</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在ONTAP工具中、选择屏幕底部的*设置*&gt;* VASA Provider设置*&gt;*注销*选项。</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">解除所有存储后端与vCenter Server实例的关联。请参阅 <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
@@ -2054,4 +2049,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="27668debe2a46165745d80fe01711790" category="list-text">按照以下步骤从所有vCenter Server中取消注册此vasa提供程序：</block>
   <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">在*注销VASA Provider*页面中、提供应用程序用户凭据并选择*注销*。</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA Provider/SRA时需要执行此操作。</block>
+  <block id="cd8867ea57955f19f3087c7262d1186d" category="doc">卸载ONTAP工具部署</block>
+  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">卸载适用于VMware vSphere的ONTAP工具将删除这些工具中的所有数据。</block>
+  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">将适用于VMware vSphere 9.x的ONTAP工具迁移到10.3</block>
 </blocks>

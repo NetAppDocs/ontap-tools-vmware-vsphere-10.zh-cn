@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。 
 ---
-= 创建主机集群保护
+= 使用主机集群保护进行保护
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
