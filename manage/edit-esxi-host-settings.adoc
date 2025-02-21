@@ -32,4 +32,4 @@ NOTE: 您可以展开ESXi主机以查看当前值。
 
 * 相关信息 *
 
-link:../configure/esxi-host-values.html["设置ESXi主机值"]
+link:../configure/configure-esx-server-multipath-and-timeout-settings.html["配置ESXi主机设置"]

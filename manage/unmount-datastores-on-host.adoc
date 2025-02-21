@@ -32,4 +32,5 @@ summary: 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储
 
 NOTE: 如果已卸载受保护的数据存储库、则现有保护设置可能会导致部分保护。link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]要启用全面保护、请参见。
 
+.下一步是什么？
 您可以在近期任务面板中跟踪进度。

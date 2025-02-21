@@ -55,7 +55,7 @@ NOTE: 升级完成前、系统将处于脱机状态、您将从ONTAP工具管理
 
 
 --
-.升级VASA提供程序证书
+.升级VASA Provider证书
 --
 适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您管理多个vCenter Server实例并希望在这些实例上启用vvol功能、则需要将自签名证书更改为自定义CA证书。
 

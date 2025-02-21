@@ -159,7 +159,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 22 (TCP) | 在集群配置期间、Ans可 使用此SSH端口进行通信。要执行更改维护用户密码、状态消息等功能、以及在HA配置情况下更新所有三个节点上的值、需要使用此端口。 
 
 
-| 443 (TCP) | 这是用于向VASA Provider服务传入通信的直通端口。此端口托管了ASA提供程序自签名证书和自定义CA证书。 
+| 443 (TCP) | 这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。 
 
 
 | 8443 (TCP) | 此端口通过Swagger和Manager用户界面应用程序托管API文档。 
@@ -177,7 +177,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 7946 (tcp+udp) | 此端口用于Docker的容器网络发现。 
 
 
-| 9083 (TCP) | 此端口是内部使用的一个服务端口、用于提供VASA提供商服务。 
+| 9083 (TCP) | 此端口是VASA Provider服务内部使用的服务端口。 
 
 
 | 1162 (UDP) | 这是SNMP陷阱数据包端口。 

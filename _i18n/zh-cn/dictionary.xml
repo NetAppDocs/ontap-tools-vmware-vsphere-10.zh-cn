@@ -255,7 +255,6 @@
   <block id="72eb6abf9272757a5494f0d1f1c91658" category="cell">访问级别</block>
   <block id="f5791a18ace280c34a57c2ee7a726d7b" category="cell">用于</block>
   <block id="c0408daa39083be454279f1fca2118d9" category="cell">在本地添加集群的情况下获取SVM配置。</block>
-  <block id="0b249e5cb515a51c79589c2459adbaf6" category="summary">您可以使用适用于 VMware vSphere 的 ONTAP 工具在 ESXi 主机上设置超时和其他值，以确保性能最佳并成功进行故障转移。适用于VMware vSphere的ONTAP工具设置的值基于内部NetApp测试。</block>
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">设置ESXi主机值</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">您可以在 ESXi 主机上设置以下值：</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HBA/CNA适配器设置</block>
@@ -1199,7 +1198,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP工具9和ONTAP工具10功能比较</block>
-  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA提供程序/SRA时需要执行此操作。</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主机集群保护进行保护</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用SRA保护进行保护</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">* 完成后 *</block>
@@ -1323,7 +1321,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="f0585a6acfa5b4078673a8a1c0d350ac" category="cell">22 (TCP)</block>
   <block id="07ac8d53698f067d7d278deb303748d3" category="cell">在集群配置期间、Ans可 使用此SSH端口进行通信。要执行更改维护用户密码、状态消息等功能、以及在HA配置情况下更新所有三个节点上的值、需要使用此端口。</block>
   <block id="5d778c994f28bde711dfc3896d087acc" category="cell">443 (TCP)</block>
-  <block id="13a1c454aee21c16e72ab8733d5644a5" category="cell">这是用于向VASA Provider服务传入通信的直通端口。此端口托管了ASA提供程序自签名证书和自定义CA证书。</block>
   <block id="51e1729ebe78aa6583c2806bd5982eb7" category="cell">8443 (TCP)</block>
   <block id="05820e7e588ce97dc4656c92f1b83966" category="cell">此端口通过Swagger和Manager用户界面应用程序托管API文档。</block>
   <block id="2a03194d164e0f03a76cc41099ff8988" category="cell">2379 (TCP)</block>
@@ -1335,7 +1332,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8c340be6a89ca97c4af7b42628cbc335" category="cell">7946 (tcp+udp)</block>
   <block id="d0c5d9fb3af3553dbc8aa2d531b38b8f" category="cell">此端口用于Docker的容器网络发现。</block>
   <block id="4669594dac40249be880d63ece4e60fd" category="cell">9083 (TCP)</block>
-  <block id="65edc2a79bfdeeed4b3c0d4383d7abda" category="cell">此端口是内部使用的一个服务端口、用于提供VASA提供商服务。</block>
   <block id="e44129481d47005dcb6572a5d35961cb" category="cell">1162 (UDP)</block>
   <block id="ef2d924bd68e8697255e5349875213c7" category="cell">这是SNMP陷阱数据包端口。</block>
   <block id="219b39abc603cd5da84b03eac4802e2b" category="cell">6443 (TCP)</block>
@@ -1403,7 +1399,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。此任务可帮助您全局创建存储后端与已登录vCenter Server实例之间的映射。</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">创建虚拟机以进行克隆</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">有关详细信息、请参见<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
-  <block id="67d8055ce447427d2190d1100319cddc" category="paragraph">对于采用ASA R2存储类型的Windows VM、在为虚拟机创建快照时、该快照将为只读快照。在为虚拟机发出开机调用时、VASA Provider会使用只读快照创建一个LUN、然后为其启用IOPS。在关闭请求期间、VASA Provider会删除已创建的LUN、然后禁用IOPS。</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">您可以在最近任务面板中跟踪进度。</block>
   <block id="a1a77ce2be2c879d158a13c22d948645" category="admonition">基于ASA R2的虚拟卷数据存储库不支持缩减虚拟卷数据存储库操作。</block>
   <block id="e3ad07a7efc1e8b336d03741c1f32de2" category="doc">ONTAP工具报告</block>
@@ -1789,12 +1784,9 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="d7c513071870643e06bdd5a2952a3848" category="list-text">选择“*保护*”按钮。</block>
   <block id="5522fdca4065fd1e9ed7b389f3a8e7b2" category="paragraph">此时将使用作业ID详细信息创建vCenter任务、其进度将显示在近期任务面板中。这是一个异步任务；用户界面仅显示请求提交状态、不会等待任务完成。</block>
   <block id="ded8026201084be2fda01a73c0b6a45c" category="summary">您可以使用适用于VMware vSphere的ONTAP工具远程插件界面向vCenter Server实例注册VASA Provider。</block>
-  <block id="609d93e638a93ef3fbaff21b075792f5" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具向vCenter Server实例注册VASA Provider。VASA Provider设置部分显示选定vCenter Server的VASA Provider注册状态。</block>
   <block id="dbf218ab7bc36005b7fdd93dda1f6eda" category="list-text">选择插件部分下的*快捷方式*&gt;* NetApp ONTAP tools*。</block>
   <block id="1767c8dcd2dacb5056d2a398b5761669" category="list-text">选择*Settings*&gt;*VASA Provider settings *。VASA Provider注册状态将显示为未注册。</block>
   <block id="600ff4b29760f4ad12573092ddf700ed" category="list-text">选择*注册*按钮以注册VASA Provider。</block>
-  <block id="df1a39c4f4e7ca54718d4638a0fbe196" category="list-text">输入此VASA提供程序的名称并为VMware vSphere应用程序提供ONTAP工具用户凭据、然后选择*注册*。</block>
-  <block id="f4a7e7e14fab1c3d711985600e2ee7f0" category="list-text">成功注册并刷新页面后、将显示已注册的VASA提供程序的状态、名称和版本。注册后、取消注册操作将被激活。</block>
   <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">验证已启用的VASA Provider是否列在vCenter Client的VASA Provider下：</block>
   <block id="b2d759d8409be83670d858be76d08a57" category="list-text">导航到vCenter Server实例。</block>
   <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">选择*存储提供程序*&gt;*配置*。验证是否已正确列出已启用的VASA Provider。</block>
@@ -1857,9 +1849,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。</block>
   <block id="5a542b803059205c8fd2335844a87295" category="admonition">终止适用于VMware vSphere的ONTAP工具将删除这些工具中的所有数据。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在适用于VMware vSphere的ONTAP工具上创建。</block>
-  <block id="1e51d74fa593c2d20970490a2e9adbe0" category="list-text">按照以下步骤从所有vCenter Server中取消注册此vasa提供程序：</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在ONTAP工具中、选择屏幕底部的*设置*&gt;* VASA Provider设置*&gt;*注销*选项。</block>
-  <block id="ff58dfdcb939738020bc3b48ae83b617" category="list-text">在*Unregign VASA Provider*页面中，提供应用程序用户凭据，然后选择*Unregist*。</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">解除所有存储后端与vCenter Server实例的关联。请参阅 <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">删除所有存储后端。请参阅 <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">从VMware Live Site Recovery中删除SRA适配器：</block>
@@ -1967,14 +1957,12 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">在弹出窗口中、上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。</block>
   <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">输入生成此证书的域名并升级此证书。</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">升级完成前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。</block>
-  <block id="b0c94213de0564c17f37b032d9d91905" category="open-title">升级VASA提供程序证书</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您管理多个vCenter Server实例并希望在这些实例上启用vvol功能、则需要将自签名证书更改为自定义CA证书。</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*Renew*以续订证书。</block>
   <block id="fafffe2e2a76baaa761981b13de575ba" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*升级到CA*以将自签名证书升级到自定义CA证书。</block>
   <block id="6ab10f666dd4d5c8df15f3d1ec4b0587" category="list-text">选择*更改*以实施更改。</block>
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">登录会话仅在第二天午夜之前有效。</block>
   <block id="4a724ef496ce3cb45c0d4dd43ce4a1cf" category="doc">使用 ONTAP 工具修改 ESXi 主机设置</block>
-  <block id="e275b0caaa6d0402ee0e31d7da910bcf" category="paragraph"><block ref="e275b0caaa6d0402ee0e31d7da910bcf" category="inline-link-macro-rx"></block></block>
   <block id="cc307b25622cbd7026f0a8c0e553a4df" category="list-text">进行必要的更改后，选择*保存*。</block>
   <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">选择*保护*。</block>
   <block id="ec4a1dbd6ed28379905f9f6ea733a254" category="list-text">选择与要迁移的数据存储库的功能匹配的虚拟磁盘格式、虚拟机存储策略和VVOV数据存储库。</block>
@@ -2039,7 +2027,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="cecfed09fac678ab192681a3f210d345" category="list-text">如果主机集群采用统一配置进行保护、则挂载数据存储库选项将被禁用。</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">在左侧导航窗格中、选择包含主机的数据中心。</block>
   <block id="54862297571dca9382bb198a79d53cf3" category="list-text">要在主机或主机集群上挂载NFS/VMFS数据存储库，请右键单击并选择*NFS NetApp ONTAP tools*&gt;*Mount DataSes*.</block>
-  <block id="c28ad89693a8ed5dd2d20a231db5b96f" category="paragraph">要重置管理员密码、您需要使用适用于VMware vSphere的ONTAP工具维护控制台生成重置令牌。……从vCenter Server中、打开维护控制台。输入“2”选择“System Configuration”(系统配置)选项。输入"3"更改"aint"用户密码。</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">您无法从所有主机卸载数据存储库。用户界面建议改用删除数据存储库操作。</block>
   <block id="0cd5eb24f781f0b49a6c666e5220c98c" category="list-text">只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.3的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在VMware vSphere插件用户界面的ONTAP工具的概述页面上。</block>
   <block id="a0e42a34ad94909291f9863e606095c3" category="list-text">要在VMware Live Site Recovery用户界面中删除适用于VMware vSphere 9.xx版SRA适配器的ONTAP工具、请执行以下步骤：</block>
@@ -2052,4 +2039,19 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4de1c4f6191ac837f89defd159014d4f" category="sidebar">为 VMware vSphere 配置 ONTAP 工具</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">管理适用于VMware vSphere的ONTAP工具</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">升级适用于VMware vSphere的ONTAP工具</block>
+  <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具向vCenter Server实例注册VASA Provider。VASA Provider设置部分显示选定vCenter Server的VASA Provider注册状态。</block>
+  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">输入VASA Provider的名称并为VMware vSphere应用程序提供ONTAP工具用户凭据、然后选择*注册*。</block>
+  <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">成功注册并刷新页面后、将显示已注册的VASA Provider的状态、名称和版本。注册后、取消注册操作将被激活。</block>
+  <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。</block>
+  <block id="131790b08b90f216c8731a6e1a071001" category="cell">此端口是VASA Provider服务内部使用的服务端口。</block>
+  <block id="f86285920a635060c5823a8276628377" category="open-title">升级VASA Provider证书</block>
+  <block id="bfa75497fc09ee1e1a68a164c43dbf33" category="paragraph"><block ref="bfa75497fc09ee1e1a68a164c43dbf33" category="inline-link-macro-rx"></block></block>
+  <block id="7276496c35fbec54a8fb3dface57c5bb" category="paragraph">对于采用ASA R2存储类型的Windows VM、在为虚拟机创建快照时、该快照将为只读快照。在为虚拟机发出开机调用时、VASA Provider会使用只读快照创建一个LUN、然后为其启用IOPS。在关闭请求期间、VASA Provider会删除已创建的LUN、然后禁用IOPS。</block>
+  <block id="378348480ef2745d6f8b174eaac75780" category="paragraph">要重置管理员密码、您需要使用适用于VMware vSphere的ONTAP工具维护控制台生成重置令牌。</block>
+  <block id="35baad0cee1a9c308249049e655932ff" category="list-text">从vCenter Server中、打开维护控制台</block>
+  <block id="0728c65962557eb1d00ebeef0418b72c" category="list-text">输入"2"以选择"System Configuration"(系统配置)选项</block>
+  <block id="5c4950449fdd46ff4c3981422e3fd6ff" category="list-text">输入"3"更改"aint"用户密码。</block>
+  <block id="27668debe2a46165745d80fe01711790" category="list-text">按照以下步骤从所有vCenter Server中取消注册此vasa提供程序：</block>
+  <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">在*注销VASA Provider*页面中、提供应用程序用户凭据并选择*注销*。</block>
+  <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA Provider/SRA时需要执行此操作。</block>
 </blocks>

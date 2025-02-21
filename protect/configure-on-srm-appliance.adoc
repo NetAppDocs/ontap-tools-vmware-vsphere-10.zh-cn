@@ -35,7 +35,7 @@ NOTE: 您需要在单引号中提供密码值、以确保Perl脚本不会将密�
 
 +
 
-NOTE: 应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA提供程序/SRA时需要执行此操作。
+NOTE: 应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA Provider/SRA时需要执行此操作。
 
 . 重新扫描适配器以验证是否已在VMware Live Site Recovery Storage Replication Adapters页面上更新详细信息。
 
