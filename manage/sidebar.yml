@@ -6,7 +6,9 @@ entries:
   url: "/configure/dashboard-overview.html"
 - title: ONTAP工具管理器用户界面
   url: "/configure/manager-user-interface.html"
-- title: 编辑设备设置
+- title: 为VMware vSphere服务启用ONTAP工具
+  url: "/manage/enable-services.html"
+- title: 更改适用于VMware vSphere的ONTAP工具配置
   url: "/manage/edit-appliance-settings.html"
 - title: 管理数据存储库
   entries:
@@ -78,6 +80,10 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 删除主机集群保护
     url: "/manage/delete-hostcluster-protection.html"
+- title: 禁用AutoSupport
+  url: "/manage/disable-autosupport.html"
+- title: 更新AutoSupport代理URL
+  url: "/manage/update-proxyurl.html"
 - title: RPO几乎为零
   url: "/manage/enable-backup.html"
 - title: 卸载ONTAP工具部署
