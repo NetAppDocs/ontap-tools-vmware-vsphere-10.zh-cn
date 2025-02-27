@@ -2,7 +2,7 @@
 section: configure
 title: 为 VMware vSphere 配置 ONTAP 工具
 entries:
-- title: 添加vCenter Server
+- title: 添加vCenter Server实例
   url: "/configure/add-vcenter.html"
 - title: 将VASA Provider注册到vCenter Server
   url: "/configure/registration-process.html"

@@ -85,7 +85,6 @@
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">选择 * 添加 * 。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">从弹出窗口的下拉列表中选择存储后端。</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID是迁移后API响应中返回的迁移UUID。</block>
-  <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="paragraph">用于迁移的删除API为：</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">刷新所有主机上的证书。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 问题描述 *</block>
   <block id="d59f94015529940d2e6778d013097380" category="summary">vCenter是一种中央管理平台、可用于控制主机、虚拟机和存储后端。</block>
@@ -724,7 +723,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">patch</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">修补"/api/v1/vcCenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">*JSON输入示例*</block>
-  <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/api/v1/vcCenters/｛vcpguid｝/migration-jobs/｛migration_id｝</block>
   <block id="07959986337388ebd736dc282a14afca" category="paragraph">*启用诊断*</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">输入*y*设置您选择的密码。</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kn exec -it NTV-MongoDB-0 sh - kn是kubect1 -n NTV-system的别名。</block>
@@ -1144,7 +1142,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="db846111e857460f56cbf51ec88e1faa" category="section-title">删除vCenter Server实例</block>
   <block id="9d7b692a21eb697ecb2b728a45d820e9" category="list-text">从工具条中选择适用的vCenter Server实例</block>
   <block id="53b6d9a27611577cca2fc7f28a47183c" category="admonition">删除vCenter Server实例后、应用程序将不再维护这些实例。</block>
-  <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">添加vCenter Server</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere 10的ONTAP工具的功能比较</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
@@ -1187,7 +1184,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">要配置集群SVM ONTAP工具角色、请选择*存储SVM*&gt;*设置*&gt;*用户和角色*窗格</block>
   <block id="ef0a0294be4f16882c4e18df7a17b72f" category="paragraph">您可以使用维护控制台选项*Application Configuration*&gt;*Disable AutoSupport禁用AutoSupport。建议保持启用状态。启用AutoSupport有助于加快问题检测速度、并有助于更快地解决问题。即使禁用了AutoSupport、系统也会收集AutoSupport信息并将其存储在本地。但是、它不会将报告发送到任何网络。您需要使用第一个VM的维护控制台提供代理URL。使用选项*应用程序配置*&gt;*更新AutoSupport代理URL*输入代理URL。</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="inline-link">了解ASA R2存储系统</block>
-  <block id="5b1c546117e368c44e82ae035c45be9d" category="paragraph">新的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>(英文)。</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">恢复点目标(RPO)</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO用于衡量备份或复制数据的频率。它表示中断后必须恢复数据才能恢复业务运营的时间点。例如、如果组织的RPO为4小时、则在发生灾难时、可以允许最多丢失4小时的数据。</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">使用管理Privileges登录到集群。要配置用户、请执行以下步骤：</block>
@@ -1208,7 +1204,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3ce635f0fbf3a9f1cd9709aa0a4edb7d" category="section-title">将适用于VMware vSphere 10.1用户的ONTAP工具升级到10.3用户</block>
   <block id="1e881b0096e32efd8f76e57798bfb5be" category="paragraph">如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的集群范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.3版。</block>
   <block id="59ce3cdcb64efaf0360e7ca205dc328e" category="paragraph">如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的SVM范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.3版。</block>
-  <block id="86d82f563697cadf4cd70dd1f81981f5" category="paragraph">创建数据存储库操作向导支持创建NFS、VMFS和VMware数据存储库。</block>
   <block id="0f8e6a0c5a16a490062aa9802999b596" category="list-text">您只能在受保护集群上创建VMFS数据存储库。将VMFS数据存储库添加到受保护集群时、该数据存储库将自动受到保护。</block>
   <block id="9ff5d4b4efce8f3dada6ea961efce12d" category="list-text">只有当主机具有异步关系时、才能在该主机上创建VMFS数据存储库。</block>
   <block id="99ffb35f7a315e5b9ff4015fcee0ac1b" category="paragraph">从适用于VMware vSphere 10.3的ONTAP工具开始、您可以使用ASA R2类型的ONTAP存储创建vvol数据存储库。在ASA R2系统上创建的vVol数据存储库的空间效率为thin-vvol。在创建VVOV数据存储库工作流期间、VASA Provider会创建一个容器和所需的协议端点。此容器不包含任何后备卷。</block>
@@ -1260,7 +1255,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="aa4b6b62ba667064e973028ccfaba3af" category="admonition">您应将内容库存储在共享数据存储库上、以便集群中的所有主机都可以访问该内容库。在将设备设置更改为HA配置之前、您需要创建一个内容库来存储OVA。内容库模板一旦上传、不应在部署后删除。</block>
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">要稍后启用HA部署、不应将托管ONTAP工具的虚拟机直接部署在ESXi主机上。而是应将其部署在集群或资源池上。</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">如果您还没有合适的内容库、请按照以下步骤创建一个：</block>
-  <block id="8f059bfa91977298a44c980b287d6091" category="admonition">如果您只打算使用小型单节点部署、则无需创建内容库。</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">确保已将OVA导入到内容库中。</block>
   <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。如果已将OVA导入到内容库中、则可以跳过此步骤并继续执行下一步、因为您可以直接从内容库进行部署。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理的vvol数据存储库中。</block>
@@ -1644,7 +1638,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">使用以下API执行修补程序迁移：</block>
   <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">修补操作的请求正文为空。</block>
   <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">成功运行修补程序迁移API后、所有VM都会遵守存储策略。</block>
-  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">此API将按迁移ID删除迁移、并删除给定vCenter Server上的迁移。</block>
   <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">请等待一段时间、然后再执行数据存储库(DS)和虚拟机(VM)操作。等待时间取决于设置中的主机、DS和VM数量。如果不等待、操作可能会间歇性失败。</block>
   <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">升级后、如果虚拟机合规性状态已过时、请按照以下步骤重新应用虚拟机存储策略：</block>
   <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">导航到数据存储库并选择*摘要*&gt;*虚拟机存储策略*。</block>
@@ -2052,4 +2045,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="9f147a250dd9a5cd9d9745eb3f5f7668" category="paragraph">更新AutoSupport代理URL以确保在使用代理服务器进行网络访问控制或采取安全措施的情况下AutoSupport功能正常运行。它允许AutoSupport数据通过相应的代理进行路由、从而实现安全传输和合规性。</block>
   <block id="8b1bce08d5421e10a7f1c336b269cbd5" category="list-text">输入4选择*更新AutoSupport代理URL*。</block>
   <block id="24bbb6c78509566d72fa3e18de92a0fe" category="list-text">输入代理URL。</block>
+  <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">新的NetApp ASA R2系统提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>(英文)。</block>
+  <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">在主机集群级别创建数据存储库时、系统会在所有目标主机上创建并挂载该数据存储库。只有在具有所需的Privileges时、才能看到此选项。</block>
+  <block id="1dd9aa2a5203b6e1a1980842e9af2082" category="paragraph">*创建内容库*如果只打算使用小型单节点部署，则不需要创建内容库。</block>
 </blocks>
