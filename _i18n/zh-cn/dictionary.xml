@@ -83,12 +83,10 @@
   <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">使用以下URI检查状态：</block>
   <block id="f323831468d8f05429defe22a9e81256" category="list-text">从边栏中选择*存储后端*。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">选择 * 添加 * 。</block>
-  <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">从弹出窗口的下拉列表中选择存储后端。</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID是迁移后API响应中返回的迁移UUID。</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">刷新所有主机上的证书。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 问题描述 *</block>
   <block id="d59f94015529940d2e6778d013097380" category="summary">vCenter是一种中央管理平台、可用于控制主机、虚拟机和存储后端。</block>
-  <block id="aeb18aa675191e7f63da99f8c2975141" category="list-text">根据您要执行的操作，选择*关联或取消关联存储后端*。</block>
   <block id="a1c4eb450799cb3f30c400d0201414e7" category="doc">发现</block>
   <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">示例</block>
   <block id="84fd2e9f48ced2057b35ca005d2e23dd" category="doc">收集日志文件</block>
@@ -1082,13 +1080,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">下表显示了VMware Live Site Recovery的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。</block>
   <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">*VMware Live Site Recovery实例数*</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
-  <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在VMware Live Site Recovery设备上配置SRA</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您应已在VMware Live Site Recovery中将受保护站点和恢复站点配对。</block>
   <block id="a276fae7dadb74c9d51a7a7823f174bc" category="list-text">输入以下信息以描述VMware Live Site Recovery中的阵列：</block>
-  <block id="bba4b1edcf0645b5356e4f3ffed77b3a" category="summary">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据的ONTAP工具\(IP地址和管理员密码\)存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
-  <block id="ac7f1666af7e74993cdbf1eb27d64168" category="paragraph">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据(IP地址)的ONTAP工具存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
   <block id="21e557aeec91fdacbde971d5f1de9806" category="paragraph">在VMware Live Site Recovery设备上配置SRA会将SRA凭据存储在VMware Live Site Recovery设备中。</block>
   <block id="7ebae8ab4249a32272c6182685fb369b" category="list-text">将_.tar.gz_文件上传到VMware Live Site Recovery。</block>
   <block id="e94e8319bfdee87f64f751c05ceaa14e" category="list-text">使用管理员帐户通过putty登录到VMware Live Site Recovery设备。</block>
@@ -1360,7 +1355,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7a8e7317ab9023c8e3dac44950232672" category="list-text">更新AutoSupport代理URL</block>
   <block id="d51a3b8155ff2f65ec368b7278c07f16" category="list-text">提供用于备份的vCenter凭据</block>
   <block id="1f3bf2522a0df56ad834875880cfcc04" category="list-text">进行备份</block>
-  <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。此任务可帮助您全局创建存储后端与已登录vCenter Server实例之间的映射。</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">创建虚拟机以进行克隆</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">有关详细信息、请参见<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">您可以在最近任务面板中跟踪进度。</block>
@@ -1380,7 +1374,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。</block>
   <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">从适用于VMware vSphere 9.x的ONTAP工具迁移到10.3</block>
   <block id="98db65da9a06955541a5451543410fde" category="list-text">部署适用于VMware vSphere 10.3版的适用于ONTAP的OVA工具。</block>
-  <block id="b81b2046e8a2fa467c645a47a0ade5d0" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.3 SRA适配器的ONTAP工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">VASA Provider迁移步骤</block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">将适用于VMware vSphere存储提供程序的ONTAP工具添加到vCenter Server和 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">请勿删除VASA Provider。</block>
@@ -1774,7 +1767,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="bbe57747f4505ee1666f69c3e2e22914" category="list-text">在*Summary (摘要)*窗口中，查看所做的选择，然后选择*Expand*(展开)。您可以在近期任务面板中跟踪进度。</block>
   <block id="7126c2d3ac63ad339fed10c3e80b9154" category="paragraph">您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。选择后<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>，维护控制台将启动。</block>
   <block id="29f385adfbfb27c8582d1c11890c8556" category="list-text">在*编辑阈值*窗口中，在*接近全满*和*全满*字段中提供所需的值，然后选择*保存*。您可以将这些数字重置为建议值、即80表示接近全满、90表示全满。</block>
-  <block id="0f7693907bf1c5887f11085d59c4b126" category="section-title">将存储后端与vCenter Server实例关联或解除关联</block>
   <block id="e86e9d91e2d4fec33d849cf922251ff6" category="list-text">选择要与存储后端关联或解除关联的vCenter Server旁边的垂直省略号。</block>
   <block id="c059c6405b3526137de28981e7d60b16" category="list-text">选择要修改的vCenter Server旁边的垂直省略号，然后选择*Modify*。</block>
   <block id="b5c456ea007c6f139a957980317bbe28" category="list-text">选择要删除的vCenter Server旁边的垂直省略号，然后选择*Remove*。</block>
@@ -1797,7 +1789,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在适用于VMware vSphere的ONTAP工具上创建。</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在ONTAP工具中、选择屏幕底部的*设置*&gt;* VASA Provider设置*&gt;*注销*选项。</block>
-  <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">解除所有存储后端与vCenter Server实例的关联。请参阅 <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">删除所有存储后端。请参阅 <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">从VMware Live Site Recovery中删除SRA适配器：</block>
   <block id="6b888cf1301944636f489bc5295c2ef7" category="list-text">以管理员身份使用5480端口登录到VMware Live Site Recovery设备管理界面。</block>
@@ -2005,7 +1996,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">将适用于VMware vSphere 9.x的ONTAP工具迁移到10.3</block>
   <block id="d15333fd508f1d73c6c7c18f9657c60b" category="summary">将存储后端与vCenter Server相关联、以便在存储后端与全局已登录的vCenter Server实例之间创建映射。</block>
   <block id="f2b44f635f2072efed00e9602e1e2ff4" category="list-text">选择要与存储后端关联的vCenter Server实例旁边的垂直省略号。</block>
-  <block id="9d85f6212023f4e0b82efdeec842c0c7" category="list-text">从下拉列表中选择存储后端、并将vCenter Server实例与所需的存储后端关联起来。</block>
   <block id="199ed231411d6d659f29a3a7b2ea8db6" category="summary">首次配置存储系统时、默认情况下会启用AutoSupport。它会在启用后24小时向技术支持发送消息。</block>
   <block id="c5adbf27ae2d8bfae599b0a24c10a95f" category="paragraph">首次配置存储系统时、默认情况下会启用AutoSupport。它会在启用后24小时向技术支持发送消息。禁用AutoSupport后、您将无法再获得主动式支持和监控。</block>
   <block id="e58a5d9f48a5cdc890b1cc0ed74ce0b4" category="admonition">建议您始终启用AutoSupport。它有助于加快问题检测和解决速度。系统会收集AutoSupport信息并将其存储在本地、即使已禁用也是如此。</block>
@@ -2048,4 +2038,13 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">新的NetApp ASA R2系统提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>(英文)。</block>
   <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">在主机集群级别创建数据存储库时、系统会在所有目标主机上创建并挂载该数据存储库。只有在具有所需的Privileges时、才能看到此选项。</block>
   <block id="1dd9aa2a5203b6e1a1980842e9af2082" category="paragraph">*创建内容库*如果只打算使用小型单节点部署，则不需要创建内容库。</block>
+  <block id="40291729bc47db016ddfca9972ab2bda" category="list-text">从下拉列表中选择存储后端、将vCenter Server实例与所需的存储后端关联起来。</block>
+  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">断开存储后端与vCenter Server实例的关联</block>
+  <block id="b5ae5420b0908ddbac99943f9b50285d" category="paragraph">vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。</block>
+  <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">选择*取消关联存储后端*。</block>
+  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">解除所有存储后端与vCenter Server实例的关联。请参阅 <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>。</block>
+  <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">在VMware Live Site Recovery设备上配置SRA</block>
+  <block id="3bf1c404c0b424b9520fcc0dc5fb8998" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.3 SRA适配器的ONTAP工具 <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
+  <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据的ONTAP工具\(IP地址和管理员密码\)存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
+  <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据(IP地址)的ONTAP工具存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
 </blocks>

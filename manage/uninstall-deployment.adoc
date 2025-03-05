@@ -22,7 +22,7 @@ summary: 按照本节中的说明正常终止适用于VMware vSphere的ONTAP工�
 .. 在*注销VASA Provider*页面中、提供应用程序用户凭据并选择*注销*。
 
 
-. 解除所有存储后端与vCenter Server实例的关联。请参阅 link:../manage/manage-vcenter.html["将存储后端与vCenter Server实例关联或解除关联"]。
+. 解除所有存储后端与vCenter Server实例的关联。请参阅 link:../manage/manage-vcenter.html["断开存储后端与vCenter Server实例的关联"]。
 . 删除所有存储后端。请参阅 link:../manage/storage-backend.html["管理存储后端"]。
 . 从VMware Live Site Recovery中删除SRA适配器：
 +
