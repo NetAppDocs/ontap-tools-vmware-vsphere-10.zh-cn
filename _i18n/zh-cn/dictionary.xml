@@ -588,7 +588,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="f5687be176cf7331c8455f99c17ffcf2" category="paragraph">受保护站点和恢复站点都将显示在对象对话框中。</block>
   <block id="22bf2e5e3e861785a0e8f1eb7bd7492e" category="doc">启用 SRA 以保护数据存储库</block>
   <block id="f8159a1f10595cc4a80126746a124cb1" category="list-text">您应已设置vCenter Server实例并配置ESXi主机。</block>
-  <block id="0fd28be9959e611e7350a85da18ec3d2" category="list-text">您应已下载SRA适配器<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> 文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="3cd3d1462bf37583e74346e9e49e0712" category="list-text">选择*新适配器*。</block>
   <block id="c88f553be5a81e83a1a2cd590af81efb" category="summary">您应配置一个占位数据存储库、以便在恢复站点的vCenter清单中为受保护虚拟机\(VM\)保留一个位置。占位数据存储库不需要很大，因为占位 VM 很小，只使用几百 KB 或更少的 KB 。</block>
   <block id="a079415d00c6083e09f585ea2ed56548" category="doc">配置占位数据存储库</block>
@@ -632,7 +631,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">配置资源映射</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">在创建资源映射向导中，执行以下操作：</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">" 资源映射 " 页面显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。</block>
-  <block id="9efe335a21c7ed7fb03853b29d60db35" category="paragraph">您应已从下载 _tar.gz_ 文件<block ref="0e1d5eb136c80762086cbb6a49f15235" category="inline-link-rx"></block>。</block>
   <block id="bef92ccaf2eaa0578e6024bf1bbf9ea7" category="list-text">使用命令切换到root用户：<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
   <block id="eec423b8c8e795c4422b564b889c72ba" category="admonition">您需要在单引号中提供密码值、以确保Perl脚本不会将密码中的特殊字符读取为输入的分隔符。</block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">此时将显示一条成功消息，确认存储凭据已存储。SRA 可以使用提供的 IP 地址，端口和凭据与 SRA 服务器进行通信。</block>
@@ -1116,7 +1114,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">继续操作前、请检查以下各项：</block>
   <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">使用ONTAP工具管理器</block>
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">添加vCenter Server实例</block>
-  <block id="9d0c1154faecde38baf4c2a1e8f8e9e6" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="76c9f2fd0b61e8f84a42f7ab8d5ce641" category="admonition">有关详细信息、请参见<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>博客。</block>
   <block id="6b373c8cb8fb1cd1a92b3762ada8ce1d" category="paragraph">您可以在VM的Web控制台中跟踪安装进度。</block>
   <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">系统要求</block>
@@ -1251,7 +1248,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">要稍后启用HA部署、不应将托管ONTAP工具的虚拟机直接部署在ESXi主机上。而是应将其部署在集群或资源池上。</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">如果您还没有合适的内容库、请按照以下步骤创建一个：</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">确保已将OVA导入到内容库中。</block>
-  <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。如果已将OVA导入到内容库中、则可以跳过此步骤并继续执行下一步、因为您可以直接从内容库进行部署。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理的vvol数据存储库中。</block>
   <block id="b2beb53e07d823dec2c2ea3f5bc86599" category="list-text">在*选择虚拟机的名称和文件夹*窗口中，输入虚拟机名称并选择虚拟机的位置。如果选中“*自定义此虚拟机的硬件*”复选框，则在进入“准备完成”窗口之前，会启用一个名为“*自定义硬件*”的步骤。</block>
   <block id="84cc92b833510ebb4c14b968eaac82ce" category="admonition">不支持纯IPv6。具有IPv6和IPv4地址的VLAN支持混合模式。</block>
@@ -2047,4 +2043,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3bf1c404c0b424b9520fcc0dc5fb8998" category="list-text">按照中的步骤在保护站点和恢复站点上安装适用于VMware vSphere 10.3 SRA适配器的ONTAP工具 <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
   <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据的ONTAP工具\(IP地址和管理员密码\)存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
   <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据(IP地址)的ONTAP工具存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。</block>
+  <block id="16f65f1a2c3859080a448540a2f81494" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
+  <block id="9ec5add7ee06ee04d0890fe8cedb44a5" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。如果已将OVA导入到内容库中、则可以跳过此步骤并继续执行下一步、因为您可以直接从内容库进行部署。</block>
+  <block id="b0dfff6a1c3e295ea3b778c18fd97c19" category="paragraph">您应已从下载_tar.gz_文件<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block>。</block>
+  <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">您应已<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>从下载SRA适配器文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
 </blocks>
