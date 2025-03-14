@@ -49,9 +49,6 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 此时将添加新角色和用户、您可以在已配置的角色下查看详细权限。
 
 
-NOTE: 卸载操作不会删除ONTAP工具角色、但会删除ONTAP工具专用Privileges的本地化名称并为其附加前缀 `XXX missing privilege`。在重新安装适用于VMware vSphere的ONTAP工具或升级到更高版本时、适用于VMware vSphere的所有标准ONTAP工具角色和ONTAP工具专用特权都会还原。
-
-
 
 == SVM聚合映射要求
 

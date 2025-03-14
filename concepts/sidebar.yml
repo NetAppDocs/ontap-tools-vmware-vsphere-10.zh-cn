@@ -8,16 +8,20 @@ entries:
   url: "/concepts/ontap-tools-concepts-terms.html"
 - title: 基于角色的访问控制
   entries:
-  - title: 概述
-    url: "/concepts/vcenter-server-role-based-access-control-features.html"
-  - title: vCenter Server权限
-    url: "/concepts/vcenter-server-permissions.html"
-  - title: 分配和修改vCenter Server的权限
-    url: "/concepts/key-points-about-assign-and-modify-permissions.html"
-  - title: 适用于VMware vSphere的ONTAP工具任务所需的特权
-    url: "/concepts/privileges-required.html"
-  - title: 建议的ONTAP角色
-    url: "/concepts/ontap-roles.html"
+  - title: 了解RBAC
+    url: "/concepts/rbac-learn-about.html"
+  - title: VMware vSphere中的RBAC
+    entries:
+    - title: vCenter Server环境
+      url: "/concepts/rbac-vcenter-environment.html"
+    - title: 对vCenter Server使用RBAC
+      url: "/concepts/rbac-vcenter-use.html"
+  - title: RBAC与ONTAP
+    entries:
+    - title: ONTAP环境
+      url: "/concepts/rbac-ontap-environment.html"
+    - title: 将RBAC与ONTAP结合使用
+      url: "/concepts/rbac-ontap-use.html"
 - title: 适用于VMware vSphere的ONTAP工具的高可用性
   url: "/concepts/high-availability.html"
 - title: AutoSupport
