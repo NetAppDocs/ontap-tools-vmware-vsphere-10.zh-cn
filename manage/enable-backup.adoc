@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 由于适用于VMware vSphere 10.3的ONTAP工具使用动态存储配置程序、因此无法实现零RPO。但是、您可以实现近乎为零的RPO。 
 ---
-= RPO几乎为零
+= 创建备份并恢复设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
