@@ -44,7 +44,7 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 
 您可以使用ONTAP工具管理器对全局ONTAP集群执行修改操作、步骤如下。
 
-. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 7b0f795e746611f8d000c88ef7404ee7
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择存储后端。
 . 选择要修改的存储后端。
@@ -66,7 +66,7 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 
 您可以使用ONTAP工具管理器对全局ONTAP集群执行删除操作。
 
-. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 7b0f795e746611f8d000c88ef7404ee7
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从边栏中选择*存储后端*。
 . 选择要删除的存储后端

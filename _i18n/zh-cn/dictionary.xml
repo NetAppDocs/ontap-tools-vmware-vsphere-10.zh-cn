@@ -2023,13 +2023,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c024abed0c8217f644225264da1b23b2" category="sidebar">ONTAP环境</block>
   <block id="be1fc37ef971360b0cf69ced82982a58" category="sidebar">将RBAC与ONTAP结合使用</block>
   <block id="6ee7474105b9032a35cbaf63ffc159fe" category="admonition">仅支持单节点故障。</block>
-  <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">从Web浏览器启动ONTAP工具管理器：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
-  <block id="3fe306eaabad41057c3375dc9d2105d0" category="list-text">打开Web浏览器并导航到URL：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
   <block id="3f9bb7bc845de127e67fa407f69a9d9d" category="paragraph">如果尚未配置网络访问、则从ESXi主机发现的所有IP地址都会默认添加到导出策略中。您可以对其进行配置、以便向导出策略中添加一些特定IP地址、并排除其余IP地址。但是、在排除的ESXi主机上执行挂载操作时、此操作将失败。</block>
   <block id="76156bcd302d3a1ea7055492223ab4ac" category="list-text">登录到vSphere Client。</block>
   <block id="8fe01b5ee6ffbf57b3e17b9fdc9745fa" category="list-text">在“插件”部分的“快捷方式”页面中选择NetApp ONTAP tools*。</block>
   <block id="cd7241c512387375ec3c3f362c0d916f" category="paragraph">要添加多个IP地址、请使用逗号、范围、无类别域间路由(CIDR)或这三者的组合分隔列表。</block>
-  <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">要访问ONTAP工具管理器、请<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>从浏览器启动、然后使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
   <block id="7de6b0d10dcf3a326cd8217d001e6eed" category="summary">适用于VMware vSphere设备的ONTAP工具部署为小型单节点、并通过核心服务支持NFS和VMFS数据存储库。</block>
   <block id="cb91e110197791b2ea760b7aca526267" category="admonition">您应将内容库存储在共享数据存储库上、以便集群中的所有主机都可以访问该内容库。在将设备配置为HA配置之前、创建用于存储OVA的内容库。部署后、请勿删除内容库模板。</block>
   <block id="9ec0410b8c255e9e48f82eb9d09cdf96" category="admonition">要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部署在ESXi主机上。而是将其部署在集群或资源池上。</block>

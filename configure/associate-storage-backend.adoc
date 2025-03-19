@@ -14,7 +14,7 @@ summary: 将存储后端与vCenter Server相关联、以便在存储后端与全
 将存储后端与vCenter Server相关联、以便在存储后端与全局已登录的vCenter Server实例之间创建映射。
 
 .步骤
-. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 7b0f795e746611f8d000c88ef7404ee7
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择vCenter。
 . 选择要与存储后端关联的vCenter Server实例旁边的垂直省略号。

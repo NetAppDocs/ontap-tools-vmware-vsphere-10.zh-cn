@@ -14,7 +14,7 @@ summary: 您可以使用ONTAP工具管理器更改管理员密码。
 管理器、用于使用ONTAP工具管理器启用VASA Provider、导入VVOLS配置和灾难恢复(SRA)等服务。
 
 .步骤
-. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 7b0f795e746611f8d000c88ef7404ee7
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 在概述部分中选择*编辑设备设置*。
 . 在*服务*部分中，您可以根据需要启用VASA Provider、导入VVOLs配置和灾难恢复(SRA)等可选服务。
