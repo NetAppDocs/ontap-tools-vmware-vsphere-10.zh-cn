@@ -29,7 +29,7 @@ NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部�
 
 .  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。
 . 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
-. 选择vSphere Client旁边的水平省略号并选择*内容库*。
+. 选择vSphere客户端菜单并选择*内容库*。
 . 选择页面右侧的*创建*。
 . 提供库的名称并创建内容库。
 . 导航到您创建的内容库。
@@ -42,27 +42,31 @@ NOTE: 有关详细信息、请参见 https://blogs.vmware.com/vsphere/2020/01/cr
 
 NOTE: 在继续部署之前、请将清单上集群的Distributed Resource Scheduler (DRS)设置为"保守"。这样可确保在安装期间不会迁移VM。
 
+适用于VMware vSphere的ONTAP工具最初部署为非HA设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。
+
 .步骤
 .  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。如果已将OVA导入到内容库中、则可以跳过此步骤并继续下一步。
 . 登录到vSphere服务器。
 . 导航到要部署OVA的资源池、集群或主机。
-. 右键单击所需位置并选择*Deploy OVF temple...*。
 +
 
 NOTE: 切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理的vvol数据存储库中。
 
-. 从URL中选择OVA文件或浏览到其位置，然后选择*Next*。
-. 从内容库中部署适用于VMware vSphere的ONTAP工具：
+. 您可以从内容库或本地系统部署OVA。
 +
-.. 转到内容库、然后选择要部署的库项目。
-.. 选择*Actions*>*New VM from this temple*
+|===
 
 
-. 在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。如果选中标记为*自定义此虚拟机的硬件*的复选框，则在进入*Ready to Complete*(准备完成)窗口之前，还会启用一个名为*自定义硬件*的步骤。
+| 从本地系统 | 从内容库 
+
+
+| a.右键单击并选择*部署OVF模板...*。b.从URL中选择OVA文件或浏览到其位置，然后选择*下一步*。 | a.转到您的内容库并选择要部署的库项目。b.选择*操作*>*从此模板中新建虚拟机* 
+|===
+. 在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。要启用HA功能，请选择*自定义此虚拟机的硬件*选项，此选项将激活名为*自定义硬件*的附加步骤，然后再进入*准备完成*窗口。
 . 选择计算机资源，然后选择*Next*。(可选)选中*自动启动已部署的VM*复选框。
 . 查看模板的详细信息，然后选择*Next*。
 . 阅读并接受许可协议，然后选择*Next*。
-. 为配置和磁盘文件选择存储，然后选择*Next*。
+. 为配置和磁盘格式选择存储，然后选择*Next*。
 . 为每个源网络选择目标网络，然后选择*Next*。
 . 在*自定义模板*窗口中，填写必填字段，然后选择*下一步*。
 +
@@ -74,11 +78,11 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 
 
 
+. 在*自定义硬件*窗口中，启用*CPU热添加*和*Memory热插拔*选项以启用HA功能。
 . 查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 +
 创建部署任务后、vSphere任务栏中将显示进度。
 
-. 在*自定义硬件*窗口中，启用CPU热添加和内存热插件。
 . 完成此任务后、打开虚拟机的电源。
 
 

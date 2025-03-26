@@ -15,10 +15,18 @@ summary: 您可以使用ONTAP工具管理器更改管理员密码。
 
 * 开始之前 *
 
-确保您提供的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。
+* 确保您的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。
+* 确保在部署期间启用了CPU热添加和内存热插拔。如果在部署期间未启用、您可以在vCenter客户端菜单下启用它们。按照以下说明从vCenter Client启用它们：
++
+** 导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*。
+** 在*CPU*选项下，选中*Enable CPU Hot add*复选框
+** 在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。
+
+
+
 
 .步骤
-. 7b0f795e746611f8d000c88ef7404ee7
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 在概述部分中选择*编辑设备设置*。
 . 在*Configuration*部分中，您可以根据需要进行纵向扩展以增加节点大小并启用HA配置。要进行任何更改、您需要vCenter Server凭据。

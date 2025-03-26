@@ -374,7 +374,6 @@
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">创建和使用内容库</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。</block>
   <block id="2982d64d666813e553487acfc3139e7b" category="paragraph">创建部署任务后、vSphere任务栏中将显示进度。</block>
-  <block id="f0e6ca4faaee2f8ba40b1d44ce65e0a0" category="list-text">右键单击所需位置并选择*Deploy OVF temple...*。</block>
   <block id="f95217cbde86e6ddf2b6b57a275ffef5" category="summary">此页面概述了适用于VMware vSphere系统的ONTAP工具的部署、重新启动和恢复操作的错误代码。</block>
   <block id="7c7a5e1bcf7d88d7d0381d4287690efc" category="doc">部署错误代码</block>
   <block id="2a27b17a27af7deddd28a2cd93831012" category="paragraph">在适用于VMware vSphere的ONTAP工具部署、重新启动和恢复操作期间、您可能会遇到错误代码。
@@ -441,7 +440,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="38b3eff8baf56627478ec76a704e9b52" category="cell">101.</block>
   <block id="ec8956637a99787bd197eacd77acce5e" category="cell">102.</block>
   <block id="6974ce5ac660610b44d9b9fed0ff9548" category="cell">103.</block>
-  <block id="ba734a1904c4fc52c9466c4911723e0d" category="list-text">选择vSphere Client旁边的水平省略号并选择*内容库*。</block>
   <block id="3af4e075c858acd892ef2371752970d3" category="list-text">导航到您创建的内容库。</block>
   <block id="9f6f5d475066edc4f0466fea40fc53cc" category="summary">适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它可与VMware生态系统集成、并有助于虚拟机的配置、基本保护和灾难恢复。</block>
   <block id="2bd2f3ded095498e9ee97f7cc9074dc0" category="doc">适用于VMware vSphere的ONTAP工具概述</block>
@@ -1608,11 +1606,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">验证已启用的VASA Provider是否列在vCenter Client的VASA Provider下：</block>
   <block id="b2d759d8409be83670d858be76d08a57" category="list-text">导航到vCenter Server实例。</block>
   <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">选择*存储提供程序*&gt;*配置*。验证是否已正确列出已启用的VASA Provider。</block>
-  <block id="7e2b29fab046b14f9ba1bfc2251f4af8" category="list-text">转到内容库、然后选择要部署的库项目。</block>
-  <block id="4d3c2178c8b4d1172e4a40d3eea7bca5" category="list-text">选择*Actions*&gt;*New VM from this temple*</block>
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">查看模板的详细信息，然后选择*Next*。</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">阅读并接受许可协议，然后选择*Next*。</block>
-  <block id="c26e3cc6a042c9880f33d1c3ad1e1f05" category="list-text">为配置和磁盘文件选择存储，然后选择*Next*。</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">为每个源网络选择目标网络，然后选择*Next*。</block>
   <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">在*自定义模板*窗口中，填写必填字段，然后选择*下一步*。</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">选择屏幕右上角的*管理员*图标，然后选择*更改密码*。</block>
@@ -1849,7 +1844,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3e4abab771250e025c846376cbe14b39" category="list-text">在确认对话框中输入y。</block>
   <block id="cbd662f4329d81667a2e3c676911b7ad" category="doc">更改适用于VMware vSphere的ONTAP工具配置</block>
   <block id="9d9ea313f70ebddbbc3d882af75f5e27" category="paragraph">使用ONTAP工具管理器纵向扩展适用于VMware vSphere的ONTAP工具配置、以增加部署中的节点数或将配置更改为高可用性(HA)设置。适用于VMware vSphere设备的ONTAP工具最初部署在单节点非HA配置中。</block>
-  <block id="0f3db6cd288538bd8913cae2009ae58f" category="paragraph">确保您提供的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。</block>
   <block id="05cbe0f49011bed719b6be221d77d648" category="list-text">在*Configuration*部分中，您可以根据需要进行纵向扩展以增加节点大小并启用HA配置。要进行任何更改、您需要vCenter Server凭据。</block>
   <block id="8f3fa52cb4355e5e1cb508d287692baf" category="paragraph">如果ONTAP工具采用HA配置、则可以更改内容库详细信息。您应该为新的编辑提交重新提供密码。</block>
   <block id="29e10939f239223d92fb1a283cba3d1d" category="admonition">在适用于VMware vSphere的ONTAP工具中、您只能增加节点大小、而不能减小节点大小。在非HA设置中、仅支持中型配置。在HA设置中、支持中型和大型配置。</block>
@@ -2036,14 +2030,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="af0ada25f4fd07661e572cca28b961df" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。如果已将OVA导入到内容库中、则可以跳过此步骤并继续下一步。</block>
   <block id="8e872493652df7e9ffefc076dc59c381" category="list-text">导航到要部署OVA的资源池、集群或主机。</block>
   <block id="49e56c9b53ad658c96d55bc65668259a" category="admonition">切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理的vvol数据存储库中。</block>
-  <block id="4fdb7cc6a102e7695431c2e8d64d4c72" category="list-text">从URL中选择OVA文件或浏览到其位置，然后选择*Next*。</block>
-  <block id="b7891769d1bdbe1506f5809941f4a308" category="list-text">从内容库中部署适用于VMware vSphere的ONTAP工具：</block>
-  <block id="f8bdabd1321026a72dec95bc1266dee7" category="list-text">在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。如果选中标记为*自定义此虚拟机的硬件*的复选框，则在进入*Ready to Complete*(准备完成)窗口之前，还会启用一个名为*自定义硬件*的步骤。</block>
   <block id="413560adb5f032ce013265b1080e4df5" category="list-text">选择计算机资源，然后选择*Next*。(可选)选中*自动启动已部署的VM*复选框。</block>
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">此信息会在安装期间进行验证。如果存在差异、Web控制台上会显示一条错误消息、并提示您更正该错误。</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">主机名必须包含字母(A-Z、a-z)、数字(0-9)和连字符(-)。要配置双堆栈、请指定映射到IPv6地址的主机名。</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。</block>
-  <block id="8f620054c41b3449afa692f8379d810a" category="list-text">在*自定义硬件*窗口中，启用CPU热添加和内存热插件。</block>
   <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">如果在OVF表单中存在差异、则会出现一个对话框、提示您采取更正操作。使用Tab按钮导航、进行必要的更改、然后选择"确定"。您有三次尝试机会来解决任何问题。如果尝试三次后问题仍然存在、则安装过程将停止、建议在新虚拟机上重试安装。</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">删除FlexVol卷</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">如果将专用ONTAP集群用于ONTAP工具以进行VMware部署、则会创建许多未使用的FlexVol卷。删除适用于VMware vSphere的ONTAP工具后、您应删除FlexVol卷、以避免可能对性能造成的影响。</block>
@@ -2069,4 +2059,24 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">从vCenter Server中关闭适用于VMware vSphere VM的ONTAP工具并删除这些VM。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="399a5cfe88876e091f96014da7798994" category="list-text">从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后通过选择名称打开该卷。转至快照并添加该卷的快照。</block>
+  <block id="d74a40c70cc0ce39ee0a63d9809a8cb2" category="paragraph">要启用HA功能、应在部署期间或稍后在适用于VMware vSphere VM的ONTAP工具设置中启用CPU热添加和内存热插拔。</block>
+  <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">从Web浏览器启动ONTAP工具管理器：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="3fe306eaabad41057c3375dc9d2105d0" category="list-text">打开Web浏览器并导航到URL：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="0d8e6f4e10df466752fe81f2900011de" category="summary">如果尚未配置网络访问、则从ESXi主机发现的所有IP地址都会默认添加到导出策略中。</block>
+  <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">要访问ONTAP工具管理器、请<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>从浏览器启动、然后使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。</block>
+  <block id="9a68ed4eca42d8b38ad99492d29e8ab3" category="list-text">选择vSphere客户端菜单并选择*内容库*。</block>
+  <block id="82b1e70d021d2ae63524015247494128" category="paragraph">适用于VMware vSphere的ONTAP工具最初部署为非HA设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。</block>
+  <block id="6868e47bbc3a8cf87041d4fea17b993d" category="list-text">您可以从内容库或本地系统部署OVA。</block>
+  <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">从本地系统</block>
+  <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">从内容库</block>
+  <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a.右键单击并选择*部署OVF模板...*。b.从URL中选择OVA文件或浏览到其位置，然后选择*下一步*。</block>
+  <block id="575d924a41fdcb33b439a56a8275b46b" category="cell">a.转到您的内容库并选择要部署的库项目。b.选择*操作*&gt;*从此模板中新建虚拟机*</block>
+  <block id="d59f2559d7708fc33ba709f85d5f7d8d" category="list-text">在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。要启用HA功能，请选择*自定义此虚拟机的硬件*选项，此选项将激活名为*自定义硬件*的附加步骤，然后再进入*准备完成*窗口。</block>
+  <block id="b13ea8b192f2e4c057e60ddf543e1bc9" category="list-text">为配置和磁盘格式选择存储，然后选择*Next*。</block>
+  <block id="a64b411fa059b361156bb9aff3333ea7" category="list-text">在*自定义硬件*窗口中，启用*CPU热添加*和*Memory热插拔*选项以启用HA功能。</block>
+  <block id="0b6be1b11b1b2491526a1a563ceb2a11" category="list-text">确保您的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。</block>
+  <block id="af4cd60bf02a555034a6503c98fdc067" category="list-text">确保在部署期间启用了CPU热添加和内存热插拔。如果在部署期间未启用、您可以在vCenter客户端菜单下启用它们。按照以下说明从vCenter Client启用它们：</block>
+  <block id="de91beac7bb1bb4fbe105fce9753292d" category="list-text">导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*。</block>
+  <block id="f7681620b9623a6169557749d3cd3b06" category="list-text">在*CPU*选项下，选中*Enable CPU Hot add*复选框</block>
+  <block id="e964c4252671b09bcb1a48909d126115" category="list-text">在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。</block>
 </blocks>

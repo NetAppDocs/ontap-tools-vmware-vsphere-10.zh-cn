@@ -22,7 +22,7 @@ ONTAP工具管理器有助于：
 * 密码管理-重置用户的OVA应用程序密码。
 
 
-741276b1afc1cd52f0ec6404edcf55de
+要访问ONTAP工具管理器、请 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`从浏览器启动、然后使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 
 ONTAP工具管理器概述部分可帮助您管理设备配置、例如服务管理、节点大小扩展和高可用性(HA)支持。您还可以监控与节点相关的ONTAP工具的整体信息、例如运行状况、网络详细信息和警报。
 

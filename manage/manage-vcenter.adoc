@@ -20,7 +20,7 @@ vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟
 vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。
 
 .步骤
-. 7b0f795e746611f8d000c88ef7404ee7
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从工具条中选择所需的vCenter Server实例。
 . 选择要与存储后端关联或解除关联的vCenter Server旁边的垂直省略号。
@@ -33,7 +33,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 
 请按照以下步骤修改vCenter Server实例。
 
-. 7b0f795e746611f8d000c88ef7404ee7
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择适用的vCenter Server实例
 . 选择要修改的vCenter Server旁边的垂直省略号，然后选择*Modify*。
@@ -46,7 +46,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 
 您需要先删除连接到vCenter Server的所有存储后端、然后再将其删除。
 
-. 7b0f795e746611f8d000c88ef7404ee7
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从工具条中选择适用的vCenter Server实例
 . 选择要删除的vCenter Server旁边的垂直省略号，然后选择*Remove*。

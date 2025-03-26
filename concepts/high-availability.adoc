@@ -29,3 +29,5 @@ NOTE: 仅支持单节点故障。
 
 
 NOTE: 适用于VMware vSphere的ONTAP工具不支持vCenter HA。
+
+要启用HA功能、应在部署期间或稍后在适用于VMware vSphere VM的ONTAP工具设置中启用CPU热添加和内存热插拔。
