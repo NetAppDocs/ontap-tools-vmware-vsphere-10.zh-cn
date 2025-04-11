@@ -2071,12 +2071,118 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">从内容库</block>
   <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a.右键单击并选择*部署OVF模板...*。b.从URL中选择OVA文件或浏览到其位置，然后选择*下一步*。</block>
   <block id="575d924a41fdcb33b439a56a8275b46b" category="cell">a.转到您的内容库并选择要部署的库项目。b.选择*操作*&gt;*从此模板中新建虚拟机*</block>
-  <block id="d59f2559d7708fc33ba709f85d5f7d8d" category="list-text">在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。要启用HA功能，请选择*自定义此虚拟机的硬件*选项，此选项将激活名为*自定义硬件*的附加步骤，然后再进入*准备完成*窗口。</block>
   <block id="b13ea8b192f2e4c057e60ddf543e1bc9" category="list-text">为配置和磁盘格式选择存储，然后选择*Next*。</block>
-  <block id="a64b411fa059b361156bb9aff3333ea7" category="list-text">在*自定义硬件*窗口中，启用*CPU热添加*和*Memory热插拔*选项以启用HA功能。</block>
   <block id="0b6be1b11b1b2491526a1a563ceb2a11" category="list-text">确保您的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。</block>
-  <block id="af4cd60bf02a555034a6503c98fdc067" category="list-text">确保在部署期间启用了CPU热添加和内存热插拔。如果在部署期间未启用、您可以在vCenter客户端菜单下启用它们。按照以下说明从vCenter Client启用它们：</block>
-  <block id="de91beac7bb1bb4fbe105fce9753292d" category="list-text">导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*。</block>
   <block id="f7681620b9623a6169557749d3cd3b06" category="list-text">在*CPU*选项下，选中*Enable CPU Hot add*复选框</block>
   <block id="e964c4252671b09bcb1a48909d126115" category="list-text">在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。</block>
+  <block id="5857f06e072b3f06a2eb3afb539401ad" category="summary">开始使用适用于VMware vSphere的ONTAP工具包括几个步骤。</block>
+  <block id="351db6e1fb020f982e8d1e2e04a3bbff" category="doc">高可用性(HA)部署工作流</block>
+  <block id="5796a1458099f301d4addee1a242df6f" category="paragraph">如果您使用的是vvol数据存储库、则需要将ONTAP工具的初始部署扩展为高可用性(HA)配置并启用VASA Provider服务。</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
+  <block id="ef559753bb37f5c75302bc058bd8ef18" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>纵向扩展部署</block>
+  <block id="f38c69c61a8659b3b04805a82b98a406" category="paragraph">您可以纵向扩展适用于VMware vSphere的ONTAP工具配置、以增加部署中的节点数量、并将配置更改为HA设置。</block>
+  <block id="80841c66bc065a4621fdb8223573f180" category="list-text"><block ref="80841c66bc065a4621fdb8223573f180" category="inline-link-macro-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
+  <block id="e81b0e6462481fcd3413377a49eef929" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>启用服务</block>
+  <block id="c056ecd855e5405820342c3949fe830c" category="paragraph">要配置VVO尔 数据存储库、必须启用VASA Provider服务。向vCenter注册VASA Provider、并确保存储策略满足HA要求、包括正确的网络和存储配置。</block>
+  <block id="3fbec94821f3d895b930a04dc44657cc" category="paragraph">启用SRA服务以使用适用于VMware Site Recovery Manager (SRM)或VMware Live Site Recovery (vrr)的ONTAP工具存储复制适配器(SRA)。</block>
+  <block id="d9fa12637706812af1872dd61fc64453" category="inline-link-macro">启用VASA Provider和SRA服务</block>
+  <block id="c838d1e4bdb7f26f5aa0d841f7268233" category="list-text"><block ref="c838d1e4bdb7f26f5aa0d841f7268233" category="inline-link-macro-rx"></block></block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
+  <block id="294b56b882b4cc00251358d85e1743e5" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>升级证书</block>
+  <block id="5394bde54cbbfc5ed2c3a7059ca709c6" category="paragraph">如果您正在将VVOV数据存储库与多个vCenter Server实例结合使用、请将自签名证书升级为证书颁发机构(CA)签名的证书。</block>
+  <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
+  <block id="955e2530b35bd36732551d894e503a00" category="list-text">在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。</block>
+  <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">如果您使用的是vCenter 8.0.3版本，请选择*自定义此虚拟机的硬件*选项，此选项将激活名为*自定义硬件*的附加步骤，然后再进入*准备完成*窗口。</block>
+  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">如果您使用的是vCenter 7.0.3版本、请在部署结束时按照*下一步是什么？*一节中的步骤进行操作。</block>
+  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">使用vCenter 8.0.3版本时，在*Customize harder*(自定义硬件*)窗口中，启用*CPU Hot add*和*Memory Hot plug*选项以启用HA功能。</block>
+  <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">如果您已将适用于VMware vSphere的ONTAP工具部署到vCenter Server 7..3中、请在部署后按照以下步骤进行操作。</block>
+  <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">登录到vCenter Client</block>
+  <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*选项。</block>
+  <block id="9569971b9e4c597112b89f4886d293d8" category="doc">开始之前…​</block>
+  <block id="92f29cff34d92bf4fc543c08273931a8" category="paragraph">在继续部署之前、请确保满足以下要求：</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">要求</block>
+  <block id="160341e19f4199f98bae44696b547c48" category="cell">您的状态</block>
+  <block id="585f30e88e1aeab9267bdca1c7fb9b51" category="cell">vSphere版本、ONTAP版本和ESXi主机版本与ONTAP工具版本兼容。</block>
+  <block id="4902520b0fcc342236dd72f6de2ddae3" category="cell">❏是❏否</block>
+  <block id="8b7366926ee4d89536f11f5177addb76" category="cell">已设置并配置vCenter Server环境</block>
+  <block id="da6a71f9d8e8c5292268f9ff7340889b" category="cell">已删除浏览器缓存</block>
+  <block id="cf8aabec008f017accfa8137e7cf2adb" category="cell">您具有父vCenter Server凭据</block>
+  <block id="8ac6a0d49e78c74c5c49f22d390c353f" category="cell">您拥有vCenter Server实例的登录凭据、适用于VMware vSphere的ONTAP工具将在部署后连接到该实例以进行注册</block>
+  <block id="85bdb53ff90d5bbf90d739c48c458177" category="cell">在多vCenter部署中、颁发证书的域名会映射到虚拟IP地址、在该部署中、自定义CA证书是必需的。</block>
+  <block id="c4903ebf8ac3e9e53d927ca4855aeab7" category="cell">您已对域名运行nslookup检查、以检查域是否已解析为预期的IP地址。</block>
+  <block id="006efd6c70d1fd5109a917632ca7d1f0" category="cell">此时将使用域名和ONTAP工具IP地址创建证书。</block>
+  <block id="d828b14ed2b96fa8bafdeeab2e9bbb25" category="cell">可从vCenter Server访问ONTAP工具应用程序和内部服务。</block>
+  <block id="6285108ef2b20a382584e76cf96a61fb" category="cell">使用多租户SVM时、每个SVM上都有一个SVM管理LIF。</block>
+  <block id="12da9e1a2888efc8f1956c95e7801089" category="section-title">部署工作表</block>
+  <block id="6d40840d55c07c7f9a1396724662354b" category="section-title">适用于单节点部署</block>
+  <block id="bbd46d16a0b9c56c79719db1f0a2b9a8" category="paragraph">使用以下工作表收集适用于VMware vSphere的ONTAP工具初始部署所需的信息：适用于适用于VMware vSphere的ONTAP工具初始部署：</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">要求</block>
+  <block id="d9fa81fca11f55d9fd9f33b399ab9cd6" category="cell">您的价值</block>
+  <block id="89d40dff7639b41cbef7fe2a44f484ba" category="cell">ONTAP工具应用程序的IP地址</block>
+  <block id="8a446ff962c6ec80c26cad578454c2af" category="cell">用于节点间通信的节点互连IP地址</block>
+  <block id="5759f8c1a9261b4c6c0c86f5089433b5" category="cell">第一个节点的DNS主机名</block>
+  <block id="68eeeed01bf11dc7edb656408cbfd0b6" category="cell">主 DNS 服务器</block>
+  <block id="9fab0542abb763e3e75e782994d85d07" category="cell">二级 DNS 服务器</block>
+  <block id="a8887a6c969074f8ef768152e95c492b" category="cell">DNS搜索域</block>
+  <block id="b2aa01474bea61170041c002c6ac208a" category="cell">主节点的IPv4地址</block>
+  <block id="8e7f18a32aaa409ac6db22c6061404a7" category="cell">IPv4地址的子网掩码</block>
+  <block id="6eb16330b386af07329e0c9d0a1c2421" category="cell">IPv4地址的默认网关</block>
+  <block id="92abdbc0e1cb9b88fc2be7c70ef79e37" category="cell">IPv6地址(可选)</block>
+  <block id="30eddb064c9ce9ee65db8631bcdd298e" category="cell">IPv6前缀长度(可选)</block>
+  <block id="9c43cfe7668de6e1c829cb71613695fd" category="cell">IPv6地址的网关(可选)</block>
+  <block id="5d9db3dc067e65b15c415367aa49d088" category="paragraph">为上述所有IP地址创建DNS记录。在分配主机名之前、请将其映射到DNS上的可用IP地址。所有IP地址都应位于为部署选择的同一个VLAN上。</block>
+  <block id="d787ab527a9696ea7563facce1bb1001" category="section-title">适用于高可用性(HA)部署</block>
+  <block id="9abf7bed343e21874d5cd1ae37e04b89" category="paragraph">除了单节点部署要求之外、您还需要HA部署的以下信息：</block>
+  <block id="4f8c36cf923055f6ff175e557e968782" category="cell">第二个节点的DNS主机名</block>
+  <block id="3d86836a361e223ea8d773b7ff7df4a0" category="cell">第二个节点的IP地址</block>
+  <block id="670ea5f87243240203f65d4597b5720d" category="cell">第三个节点的DNS主机名</block>
+  <block id="b1b53041846844c0718e8af2d6f3e14c" category="cell">第三个节点的IP地址</block>
+  <block id="c45c6f4bee2108d6c980be118d3da754" category="section-title">网络防火墙配置</block>
+  <block id="15d12f4a88d7b390ab6d863be5684e1a" category="paragraph">在网络防火墙中打开IP地址所需的端口。ONTAP工具必须能够通过端口443访问此LIF。有关最新更新、请参见<block ref="7a521441c6d35a506dc75f134ab3c694" category="inline-link-macro-rx"></block>。</block>
+  <block id="410dbf8e1f100ad53deb3ca66cb8ec8b" category="doc">适用于VMware vSphere的ONTAP工具快速入门</block>
+  <block id="86339f91ab8e0352f8b9f8c35611a4ee" category="paragraph">开始使用适用于VMware vSphere的ONTAP工具包括几个步骤。此快速入门将指导您完成适用于VMware vSphere的ONTAP工具的初始设置。</block>
+  <block id="7261b4472f18d3e8c4584d0bb039ec79" category="inline-link-macro">HA部署工作流</block>
+  <block id="b95e3b604f6a59d80c159f8bcc30d45e" category="paragraph">最初、您将以小型单节点配置的形式部署适用于VMware vSphere的ONTAP工具、该配置可提供核心服务来支持NFS和VMFS数据存储库。如果您需要扩展配置以使用vols数据存储库和高可用性(HA)、请在完成此工作流后执行此操作。有关详细信息，请参阅<block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block>。</block>
+  <block id="3b46ad0549cc1ae15c466e1539cac6cc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>规划部署</block>
+  <block id="235431ffa3dee921fa339768f9c9a6c1" category="paragraph">验证vSphere、ONTAP和ESXi主机版本是否与ONTAP工具版本兼容。分配足够的CPU、内存和磁盘空间。根据您的安全策略、您可能需要配置防火墙或其他安全设备以允许网络流量。</block>
+  <block id="9ebdb7921f7484cee5e22c5bfd2470c8" category="paragraph">确保vCenter Server已安装且可访问。</block>
+  <block id="34f56f271329ad2edd7685e71f328b53" category="list-text"><block ref="34f56f271329ad2edd7685e71f328b53" category="inline-link-rx"></block></block>
+  <block id="726c2dd94c40576d98fa58765ada32a2" category="list-text"><block ref="726c2dd94c40576d98fa58765ada32a2" category="inline-link-macro-rx"></block></block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="inline-link-macro">开始之前</block>
+  <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
+  <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>部署适用于VMware vSphere的ONTAP工具</block>
+  <block id="f8c086dad42ca07bf14eb7f233920f24" category="paragraph">最初、您将以小型单节点配置的形式部署适用于VMware vSphere的ONTAP工具、该配置可提供核心服务来支持NFS和VMFS数据存储库。如果您计划扩展配置以使用vols数据存储库和高可用性(HA)、请在完成此工作流后执行此操作。要成功扩展到HA配置、必须确保已启用CPU热添加和内存热插拔选项。</block>
+  <block id="e5470d0dab088b9c8b712af4be3801de" category="list-text"><block ref="e5470d0dab088b9c8b712af4be3801de" category="inline-link-macro-rx"></block></block>
+  <block id="d6f4de0e60c9b74a0f06b9c8cb7e5556" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>添加vCenter Server实例</block>
+  <block id="b78f334f60c6b78034f4d3b7cf13f767" category="paragraph">将一个或多个vCenter Server实例添加到适用于VMware vSphere的ONTAP工具中、以配置、管理和保护vCenter Server环境中的虚拟数据存储库。</block>
+  <block id="fbc3413db4202f1fe331f16af6b38f13" category="list-text"><block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四个</block>
+  <block id="f876a7cbd467b5fe36bfff5b237cab15" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>配置ONTAP用户角色和Privileges</block>
+  <block id="a3dce2225c6773b6233d6d06ca6524a1" category="paragraph">使用适用于VMware vSphere的ONTAP工具提供的JSON文件配置新用户角色和Privileges以管理存储后端。</block>
+  <block id="b3debf9a0a4da8901422599f88761e9e" category="list-text"><block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block></block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五个</block>
+  <block id="78a9753ae84f65cfc93b9190109fdbe1" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>配置存储后端</block>
+  <block id="151c3727ca69fe365d30ca8b00d0ef02" category="paragraph">将存储后端添加到ONTAP集群。对于vCenter充当关联SVM的租户的多租户设置、请使用ONTAP工具管理器添加集群。将存储后端与vCenter Server相关联、以便将其全局映射到已登录的vCenter Server实例。</block>
+  <block id="623727ddcf21460c69461e09290ff6e3" category="paragraph">使用ONTAP工具用户界面使用集群或SVM凭据添加本地存储后端。这些存储后端仅限于一个vCenter。在本地使用集群凭据时、关联的SVM会自动映射到vCenter以管理Vvol或VMFS。对于VMFS管理(包括SRA)、ONTAP工具支持SVM凭据、而不需要全局集群。</block>
+  <block id="5e15cfab5137c8c5b07a50f9eb816e0a" category="list-text"><block ref="5e15cfab5137c8c5b07a50f9eb816e0a" category="inline-link-macro-rx"></block></block>
+  <block id="d0c12810d8bb376bdd62e0a7dcb8f3ef" category="inline-link-macro">将存储后端与vCenter Server实例相关联</block>
+  <block id="349dea55081cba7988d2e74a569b149b" category="list-text"><block ref="349dea55081cba7988d2e74a569b149b" category="inline-link-macro-rx"></block></block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六个</block>
+  <block id="acfa27b57a294a787f715e773cc9d67b" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block>如果您正在使用多个vCenter Server、请升级证书</block>
+  <block id="7a141a550c6b7316b61d038ab322ca86" category="paragraph">使用多个vCenter Server时、请将自签名证书升级为证书颁发机构(CA)签名的证书。</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七个</block>
+  <block id="85fa32c6f1935c07720a211f20305579" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block>(可选)启用SRA保护</block>
+  <block id="461016ffd7a6c7ca138e75fad0c9b7ce" category="paragraph">启用SRA功能以配置灾难恢复并保护NFS或VMFS数据存储库。</block>
+  <block id="9b6610ae0d9b3f2df042445cc8433cf4" category="list-text"><block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
+  <block id="24d27c169c2c881eb09a065116f2aa5c" category="inline-image-macro">八个</block>
+  <block id="1f3c2366ee78e590a43f78ce3ec33af9" category="paragraph-title"><block ref="bf2dc80b0d3f76e4f77c4fce580f56c0" category="inline-image-macro-rx" type="image"></block>(可选)启用SnapMirror主动同步保护</block>
+  <block id="ae57d8d2be38d4fab048ad6bd6a53746" category="paragraph">配置适用于VMware vSphere的ONTAP工具、以管理SnapMirror活动同步的主机集群保护。将源集群和目标集群与SVM配对以实现SnapMirror活动同步。这仅适用于VMFS数据存储库。</block>
+  <block id="5c77c00bef7fd2d8fb97abc8f2ff015a" category="list-text"><block ref="5c77c00bef7fd2d8fb97abc8f2ff015a" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">九</block>
+  <block id="c5ee3ef473a8e2d4f3f8b40330e2bcd2" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block>为适用于VMware vSphere的ONTAP工具部署设置备份和恢复</block>
+  <block id="88b80af2218eb2102e518b088dd9ed76" category="paragraph">计划对适用于VMware vSphere的ONTAP工具设置进行备份、以便在发生故障时恢复设置。</block>
+  <block id="67f34b44c083004610f6d70a0140a9aa" category="inline-link-macro">创建备份并恢复ONTAP工具设置</block>
+  <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
+  <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">确保已启用CPU热添加和内存热插拔。</block>
 </blocks>
