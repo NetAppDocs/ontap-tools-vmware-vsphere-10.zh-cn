@@ -14,12 +14,11 @@ summary: 首次配置存储系统时、默认情况下会启用AutoSupport。它
 首次配置存储系统时、默认情况下会启用AutoSupport。它会在启用后24小时向技术支持发送消息。禁用AutoSupport后、您将无法再获得主动式支持和监控。
 
 
-NOTE: 建议您始终启用AutoSupport。它有助于加快问题检测和解决速度。系统会收集AutoSupport信息并将其存储在本地、即使已禁用也是如此。
+NOTE: 建议您始终启用AutoSupport。它有助于加快问题检测和解决速度。系统会收集AutoSupport信息并将其存储在本地、即使已禁用也是如此。但是、它不会将报告发送到任何网络。
 
 .步骤
-. 从vCenter Server中、打开维护控制台。
-. 以维护用户身份登录。
-. 输入1选择*应用程序配置*。
-. 输入3以选择*Disable AutoSupport (禁用Internet连接)*。
-. 在确认对话框中输入y。
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 选择*设置*>*遥测*>*编辑*选项。
+. 取消选择*Windows* AutoSupport选项并保存更改。
 

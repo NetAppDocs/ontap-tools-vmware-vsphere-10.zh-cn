@@ -1,64 +1,31 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.3, ONTAP tools for VMware vSphere' 
-summary: 了解适用于VMware vSphere 10.3的ONTAP工具中提供的新功能。 
+keywords: 'what"s new, release notes, 10.4, ONTAP tools for VMware vSphere' 
+summary: 了解适用于VMware vSphere 10.4的ONTAP工具中提供的新功能。 
 ---
-= 适用于VMware vSphere 10.3的ONTAP工具中的新增功能
+= 适用于VMware vSphere 10.4的ONTAP工具中的新增功能
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]
-了解适用于VMware vSphere 10.3的ONTAP工具中提供的新功能。
+了解适用于VMware vSphere 10.4的ONTAP工具中提供的新功能。
 
 [cols="30%,70%"]
 |===
 | 更新 | Description 
 
 
- a| 
-支持新平台和应用程序版本
- a| 
-适用于VMware vSphere 10.3的ONTAP工具现在支持以下平台和应用程序版本：
-
-* ONTAP 9.16.0 及更高版本
-* VMware vSphere 8.0 U3
-* VMware Live Site Recovery 9.0
+| 支持ASA R2系统、每个集群12个节点 | 适用于VMware vSphere 10.4的ONTAP工具支持适用于每个集群最多12个节点的ASA R2存储系统的工作流、从而提高数据管理效率和可扩展性。它支持采用iSCSI和FC协议的虚拟卷数据存储库以及采用iSCSI、FC和NVMe协议的VMFS数据存储库、从而提供灵活且增强的存储选项。 
 
 
+| ONTAP工具管理器用户界面增强功能 | 现在、您可以启用NTP服务器、以便在环境中精确同步时间、并通过ONTAP工具管理器界面配置遥测设置以监控和分析系统性能。维护控制台中不再提供这些设置。 
 
 
- a| 
-易于部署
- a| 
-现在、您可以在一个节点集群上以最低要求部署适用于VMware vSphere 10.3的ONTAP工具、然后将其更新为高可用性(HA)或多节点部署。
+| 增强的安全功能 | 现在，安全功能可提供增强的保护并符合行业标准，从而提供强大且用户友好的体验，帮助管理员更有效地管理VMware环境。 
 
 
-
- a| 
-无缝配置和配置
- a| 
-适用于VMware vSphere 10.3的ONTAP工具已删除与Trident关联的依赖项、现在可使用动态存储配置程序实现无缝配置和配置。
-
-
-
- a| 
-增强了REST API身份验证的安全性
- a| 
-现在、适用于VMware vSphere 10.3的ONTAP工具可通过ONTAP工具REST API和用户界面的CA签名证书来提供更高的安全性。
-
-
-
- a| 
-支持ASA R2系统
- a| 
-适用于VMware vSphere 10.3的ONTAP工具支持在ASA R2系统上配置VMFS数据存储库、以通过SnapMirror Active Sync和SRA /VMware Live Site Recovery保护VMFS数据存储库。
-
-
-
- a| 
-提高了可观察性
- a| 
-适用于VMware vSphere 10.3的ONTAP工具扩展了对VMFS和VVOV数据存储库及其各自虚拟机的可观察性指标支持。
-
+| 增强了SRA灾难恢复功能 | 适用于VMware vSphere 10.4的ONTAP工具现在支持使用站点恢复设备(SRA)执行灾难恢复操作、该设备除了具有SnapMirror计划的Snapshot副本之外、还具有自定义命名的快照。 
 |===

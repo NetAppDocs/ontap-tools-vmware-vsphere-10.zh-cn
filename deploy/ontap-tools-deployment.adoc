@@ -11,10 +11,9 @@ summary: 适用于VMware vSphere设备的ONTAP工具部署为小型单节点、�
 
 
 [role="lead"]
-适用于VMware vSphere设备的ONTAP工具部署为小型单节点、并通过核心服务支持NFS和VMFS数据存储库。
+适用于VMware vSphere设备的ONTAP工具部署为小型单节点、并通过核心服务支持NFS和VMFS数据存储库。ONTAP工具部署过程可能需要长达45分钟。
 
-* 开始之前 *
-
+.开始之前
 VMware中的内容库是一个容器对象、用于存储VM模板、vapp模板和其他类型的文件。使用内容库进行部署可为您提供无缝体验、因为它不依赖于网络连接。
 
 
@@ -28,7 +27,7 @@ NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部�
 *创建内容库*如果您计划仅使用小型单节点部署，则不需要创建内容库。
 
 .  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client
 . 选择vSphere客户端菜单并选择*内容库*。
 . 选择页面右侧的*创建*。
 . 提供库的名称并创建内容库。
@@ -88,7 +87,7 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 +
 创建部署任务后、vSphere任务栏中将显示进度。
 
-. 完成此任务后、打开虚拟机的电源。
+. 如果未选择自动启动虚拟机的选项、请在完成任务后启动虚拟机。
 
 
 您可以在VM的Web控制台中跟踪安装进度。
@@ -99,6 +98,7 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 如果您已将适用于VMware vSphere的ONTAP工具部署到vCenter Server 7..3中、请在部署后按照以下步骤进行操作。
 
 . 登录到vCenter Client
+. 关闭ONTAP工具节点。
 . 导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*选项。
 . 在*CPU*选项下，选中*Enable CPU Hot add*复选框
 . 在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。

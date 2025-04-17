@@ -24,7 +24,7 @@ NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、�
 
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 选择插件部分下的*快捷方式*>* NetApp ONTAP tools*。
 . 选择*Settings*>*NFS VAAI Tools*。
 . 将VAAI插件上传到vCenter Server后、在*现有版本*部分中选择*更改*。如果VAAI插件未上传到vCenter Server、请选择*上传*按钮。

@@ -17,7 +17,7 @@ summary: 您可以使用适用于 VMware vSphere 的 ONTAP 工具信息板编辑
 如果存在具有ESXi主机设置的问题描述、则此问题描述将显示在信息板的ESXi主机系统portlet中。您可以选择此问题来查看存在此问题的ESXi主机的主机名或IP地址。
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
 . 转到适用于VMware vSphere的ONTAP工具插件概述(信息板)中的*ESXi主机合规性* portlet。
 . 选择*应用建议设置*链接。
@@ -30,6 +30,5 @@ NOTE: 您可以展开ESXi主机以查看当前值。
 . 在摘要窗格中，检查这些值并选择*Complet*。您可以在最近任务面板中跟踪进度。
 
 
-* 相关信息 *
-
+.相关信息
 link:../configure/configure-esx-server-multipath-and-timeout-settings.html["配置ESXi主机设置"]

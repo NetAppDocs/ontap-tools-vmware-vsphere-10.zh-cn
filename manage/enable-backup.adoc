@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: 由于适用于VMware vSphere 10.3的ONTAP工具使用动态存储配置程序、因此无法实现零RPO。但是、您可以实现近乎为零的RPO。 
+summary: 从适用于VMware vSphere 10.3的ONTAP工具开始、此设备使用动态存储配置程序、无法实现零RPO。但是、您可以实现近乎为零的RPO。 
 ---
-= 创建备份并恢复设置
+= 创建备份并恢复ONTAP工具设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-由于适用于VMware vSphere 10.3的ONTAP工具使用动态存储配置程序、因此无法实现零RPO。但是、您可以实现近乎为零的RPO。要实现近乎为零的RPO、您需要创建设置备份并在新虚拟机上还原。
+从适用于VMware vSphere 10.3的ONTAP工具开始、此设备使用动态存储配置程序、因此无法实现零RPO。但是、您可以实现近乎为零的RPO。要实现近乎为零的RPO、您需要创建设置备份并在新虚拟机上还原。
+
+
+NOTE: 要在启用非HA备份后迁移到HA、请先禁用备份、然后在迁移后重新启用。
 
 
 
@@ -42,7 +45,7 @@ summary: 由于适用于VMware vSphere 10.3的ONTAP工具使用动态存储配�
 
 要恢复设置、请关闭现有虚拟机、然后使用初始部署中使用的OVA部署新虚拟机。
 
-新虚拟机需要使用相同的ONTAP工具IP地址(负载平衡器IP)、并且系统配置(例如已启用的服务、节点大小和HA模式)必须与初始部署相同。
+新虚拟机需要使用相同的ONTAP工具IP地址、并且系统配置(例如、已启用服务、节点大小和HA模式)必须与初始部署相同。
 
 执行以下步骤从备份文件恢复设置。
 

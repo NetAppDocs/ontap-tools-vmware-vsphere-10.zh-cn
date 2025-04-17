@@ -31,8 +31,6 @@ NOTE: 您应设置的密码 `diag` 用户。
  a| 
 . 显示服务器状态摘要
 . 更改VASA Provider服务和SRA服务的日志级别
-. 禁用AutoSupport
-. 更新AutoSupport代理URL
 
 
 
@@ -44,7 +42,6 @@ NOTE: 您应设置的密码 `diag` 用户。
 . 关闭虚拟机
 . 更改 "maint" 用户密码
 . 更改时区
-. 添加新 NTP 服务器
 . 增加 jail 磁盘大小（ /jail ）
 . 升级
 . 安装 VMware Tools

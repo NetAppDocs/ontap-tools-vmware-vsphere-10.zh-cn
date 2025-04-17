@@ -19,4 +19,4 @@ entries:
 - title: 配置网络访问
   url: "/configure/configure-network-access.html"
 - title: 创建数据存储库
-  url: "/configure/create-vvols-datastore.html"
+  url: "/configure/create-datastore.html"

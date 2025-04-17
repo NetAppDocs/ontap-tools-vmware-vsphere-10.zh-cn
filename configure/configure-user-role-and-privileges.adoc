@@ -14,8 +14,8 @@ summary: 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Man
 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色和特权。
 
 .开始之前
-* 您应已使用以下<loadbalancerIP>命令从适用于VMware vSphere的ONTAP工具下载ONTAP特权文件：_\https：//VMware：8443/Virtualization：user-golites/User_roles.zip_。
-* 您应已使用从ONTAP工具下载ONTAP权限文件 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
+* 您应已使用以下<ONTAPtoolsIP>命令从适用于VMware vSphere的ONTAP工具下载ONTAP Privileges文件：_\https：//VMware：8443/Virtualization：user-gitrees/User_roles.zip_。
+* 您应该已使用从ONTAP工具下载ONTAP Privileges文件 `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。
@@ -24,7 +24,7 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 
 
 .步骤
-. 提取下载的_\https：//https：<loadbalancerIP>：8443/Virtualization /用户权限/USER_Roles.zip_文件。
+. 提取下载的_\https：//https：<ONTAPtoolsIP>：8443/Virtualization /用户权限/USER_Roles.zip_文件。
 . 使用集群的集群管理IP地址访问ONTAP系统管理器。
 . 使用管理Privileges登录到集群。要配置用户、请执行以下步骤：
 +
@@ -36,7 +36,7 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 +
 此时将自动填充"Product"字段。
 
-.. 从产品功能下拉菜单中选择所需的功能。
+.. 从下拉列表中选择VSC、VASA Provider或SRA等产品功能。
 +
 系统将根据选定的产品功能自动填充“角色”字段。
 
@@ -146,6 +146,9 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 
 | /API/network/IP/接口 | 只读 | 添加存储后端—要确定管理LIF的范围、请使用集群/SVM 
+
+
+| /API/storage/availability分区 | 只读 | SAZ Discovery。适用于9.16.1 9.161及更高版本和ASA R2系统。 
 |===
 
 
@@ -257,6 +260,12 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
+----
+对于ASA ONTAP R2系统上的9.16.1及更高版本、运行以下命令：
+
+[listing]
+----
+security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
 ----
 
 
@@ -376,7 +385,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 
 == 将适用于VMware vSphere 10.1用户的ONTAP工具升级到10.3用户
 
-如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的集群范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.3版。
+对于使用JSON文件创建了集群范围用户的适用于VMware vSphere 10.1的ONTAP工具用户、请对用户admin Privileges使用以下ONTAP命令行界面命令升级到10.3版。
 
 对于产品功能：
 
@@ -410,7 +419,7 @@ _security login Role create -Role <existing-role-name> nve -cmddirname "vserver 
 
 _security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map remove"-access all_
 
-如果适用于VMware vSphere 10.1的ONTAP工具用户是使用json文件创建的SVM范围用户、请使用admin用户在ONTAP命令行界面上运行以下命令、以升级到10.3版。
+对于使用json文件创建了SVM范围的用户的适用于VMware vSphere 10.1的ONTAP工具用户、请对管理员用户Privileges使用ONTAP命令行界面命令升级到10.3版。
 
 SVM Privileges：
 
@@ -448,4 +457,26 @@ vserver nvme subsystem create
 
 vserver nvme subsystem modify
 
+----
+
+
+== 将适用于VMware vSphere 10.3用户的ONTAP工具升级到10.4用户
+
+从9.16.1 9.161开始、将适用于VMware vSphere 10.3用户的ONTAP工具升级到10.4用户。
+
+如果适用于VMware vSphere 10.3的ONTAP工具用户的集群范围用户是使用JSON文件和ONTAP 9.16.1或更高版本创建的、请对管理员用户Privileges使用ONTAP命令行界面命令升级到10.4版本。
+
+对于产品功能：
+
+* VSC
+* VSC和VASA Provider
+* VSC和SRA
+* VSC、VASA Provider和SRA。
+
+
+集群Privileges：
+
+[listing]
+----
+security login role create -role <existing-role-name> -cmddirname "storage availability-zone show" -access all
 ----

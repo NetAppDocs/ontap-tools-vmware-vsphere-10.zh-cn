@@ -13,8 +13,7 @@ summary: '在配置Storage Replication Adapter \(SRA\)后、您应验证受保�
 [role="lead"]
 在配置Storage Replication Adapter (SRA)后、您应验证受保护站点和恢复站点是否已成功配对。受保护站点和恢复站点均应可发现复制的存储系统。
 
-* 开始之前 *
-
+.开始之前
 * 您应已配置存储系统。
 * 您应已使用VMware Live Site Recovery阵列管理器将受保护站点和恢复站点配对。
 * 在对SRA执行测试故障转移操作和故障转移操作之前、您应已启用FlexClone许可证和SnapMirror许可证。

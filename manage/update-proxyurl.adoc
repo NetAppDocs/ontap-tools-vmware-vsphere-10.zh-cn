@@ -14,9 +14,12 @@ summary: '您可以使用适用于VMware vSphere的ONTAP工具图形用户界面
 更新AutoSupport代理URL以确保在使用代理服务器进行网络访问控制或采取安全措施的情况下AutoSupport功能正常运行。它允许AutoSupport数据通过相应的代理进行路由、从而实现安全传输和合规性。
 
 .步骤
-. 从vCenter Server中、打开维护控制台。
-. 以维护用户身份登录。
-. 输入1选择*应用程序配置*。
-. 输入4选择*更新AutoSupport代理URL*。
-. 输入代理URL。
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 从边栏中选择*Settings*。
+. 选择*设置*>*遥测*>*编辑*选项。
+. 输入有效的*代理URL*并保存更改。
++
+如果禁用AutoSupport、则代理URL也会被禁用。
+
 

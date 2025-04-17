@@ -26,7 +26,7 @@ summary: 您可以编辑受保护主机集群的SnapMirror关系。您可以添�
 使用此过程可监控主机集群保护的状态。您可以监控每个受保护主机集群及其保护状态、SnapMirror关系、数据存储库以及相应的SnapMirror状态。
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 导航到* NetApp ONTAP tools*>*保护*>*主机集群关系*。
 +
 保护列下的图标显示保护状态
@@ -41,7 +41,7 @@ summary: 您可以编辑受保护主机集群的SnapMirror关系。您可以添�
 使用此过程可保护新添加的数据存储库或主机。您可以使用vCenter本机用户界面向受保护集群添加新主机或在主机集群上创建新数据存储库。
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 要编辑受保护集群的属性、您可以执行以下任一操作
 +
 .. 导航到*Host tools*>*Protection *>* NetApp ONTAP cluster elations*，选择该集群对应的省略号菜单，然后选择*Edit*或
@@ -65,7 +65,7 @@ NOTE: 对于异步类型的关系、不支持编辑操作、因为您不能将�
 == 添加新的SnapMirror关系
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 要编辑受保护集群的属性、您可以执行以下任一操作
 +
 .. 导航到*Host tools*>*Protection *>* NetApp ONTAP cluster elations*，选择该集群对应的省略号菜单，然后选择*Edit*或
@@ -91,7 +91,7 @@ NOTE: 对于异步类型的关系、不支持编辑操作、因为您不能将�
 删除此关系将在二级站点上触发重新扫描、以从主机中删除未映射的LUN作为活动路径。
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 要编辑受保护集群的属性、您可以执行以下任一操作
 +
 .. 导航到*Host tools*>*Protection *>* NetApp ONTAP cluster elations*，选择该集群对应的省略号菜单，然后选择*Edit*或
@@ -113,7 +113,7 @@ NOTE: 对于异步类型的关系、不支持编辑操作、因为您不能将�
 NOTE: 您不能编辑现有异步SnapMirror关系。
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 要编辑受保护集群的属性、您可以执行以下任一操作
 +
 .. 导航到*Host tools*>*Protection *>* NetApp ONTAP cluster elations*，选择该集群对应的省略号菜单，然后选择*Edit*或

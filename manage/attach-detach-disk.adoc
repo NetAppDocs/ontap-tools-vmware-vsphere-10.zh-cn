@@ -1,0 +1,49 @@
+---
+permalink: manage/attach-detach-disk.html 
+sidebar: sidebar 
+keywords:  
+summary: - 
+---
+= 将数据磁盘与虚拟机连接或断开
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 将数据磁盘连接到虚拟机
+
+将数据磁盘连接到虚拟机以扩展存储容量。
+
+.步骤
+. 登录到vSphere Client。
+. 右键单击清单中的虚拟机，然后选择*Edit Settings*。
+. 在*虚拟硬件*选项卡上，选择*现有硬盘*。
+. 选择磁盘所在的虚拟机。
+. 选择要连接的磁盘，然后选择*OK*
+
+
+.结果
+硬盘将显示在虚拟硬件设备列表中。
+
+
+
+== 将数据磁盘与虚拟机断开
+
+您可以断开连接到虚拟机的数据磁盘(如果不再需要)。将磁盘与虚拟机断开后、它不会自动删除、而是保留在ONTAP存储系统上。
+
+.步骤
+. 登录到vSphere Client。
+. 右键单击清单中的虚拟机，然后选择*Edit Settings*。
+. 将指针移动到磁盘上并选择*Remove*。
++
+
+NOTE: 磁盘将从虚拟机中删除。如果其他虚拟机共享该磁盘、则不会删除这些磁盘文件。
+
+
+
+.相关信息
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-a-new-hard-disk-to-a-virtual-machinevm-admin.html["向虚拟机添加新硬盘"]
+
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-an-existing-hard-disk-to-a-virtual-machinevm-admin.html["将现有硬盘添加到虚拟机"]

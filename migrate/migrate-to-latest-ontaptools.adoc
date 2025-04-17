@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。 
 ---
-= 从适用于VMware vSphere 9.x的ONTAP工具迁移到10.3
+= 从适用于VMware vSphere 9.x的ONTAP工具迁移到10.4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,11 +17,11 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 NOTE: 只有在适用于VMware vSphere 9.xx的ONTAP工具设置仅提供VASA Provider功能时、才应迁移此设置。
 
 
-NOTE: 从适用于VMware vSphere的ONTAP工具9.x迁移到10.3之后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.3仅支持对VMFS数据存储库使用NVMe-oF。
+NOTE: 从适用于VMware vSphere的ONTAP工具9.x迁移到10.4之后、采用NVMe/FC协议的vvol数据存储库将无法工作、因为ONTAP工具10.4仅支持对VMFS数据存储库使用NVMe-oF。
 
 * 关于此任务 *
 
-您可以从适用于VMware vSphere 9.12D1和9.13D2的ONTAP工具迁移到10.3版。
+您可以从适用于VMware vSphere 9.12D1和9.13D2的ONTAP工具迁移到10.4版。
 
 
 NOTE: 在升级到修补程序版本之前、您必须从当前版本创建OVA备份。
@@ -30,18 +30,17 @@ NOTE: 在升级到修补程序版本之前、您必须从当前版本创建OVA�
 
 == 常见迁移步骤
 
-. 部署适用于VMware vSphere 10.3版的适用于ONTAP的OVA工具。
-. 添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参阅link:../configure/add-vcenter.html["添加vCenter Server实例"]。
+. 部署适用于VMware vSphere 10.4的ONTAP工具OVA。
+. 添加要迁移到适用于VMware vSphere 10.4版的ONTAP工具的vCenter Server实例。请参阅link:../configure/add-vcenter.html["添加vCenter Server实例"]。
 . 从适用于VMware vSphere插件的ONTAP工具vCenter Server API本地板载存储后端。将存储添加为本地范围的存储以进行迁移。
-. 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.3的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在VMware vSphere插件用户界面的ONTAP工具的概述页面上。
+. 只有在触发数据存储库发现作业后、从适用于VMware vSphere 9.xx的ONTAP工具迁移的NFS和VMFS数据存储库才会显示在适用于VMware vSphere 10.4的ONTAP工具中、此作业可能需要长达30分钟才能触发。验证这些数据存储库是否显示在VMware vSphere插件用户界面的ONTAP工具的概述页面上。
 
 
 
 
 == SRA迁移步骤
 
-* 开始之前 *
-
+.开始之前
 迁移前、请确保其中一个站点处于受保护状态、另一个站点处于恢复状态。
 
 
@@ -72,8 +71,8 @@ NOTE: 如果故障转移刚刚完成且重新保护处于待定状态、请勿�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. 部署适用于VMware vSphere 10.3的ONTAP工具OVA。
-. 添加要迁移到适用于VMware vSphere 10.3版的ONTAP工具的vCenter Server实例。请参阅。 link:../configure/add-vcenter.html["添加vCenter Server实例"]
+. 部署适用于VMware vSphere 10.4的ONTAP工具OVA。
+. 添加要迁移到适用于VMware vSphere 10.4版的ONTAP工具的vCenter Server实例。请参阅。 link:../configure/add-vcenter.html["添加vCenter Server实例"]
 . 从远程插件vCenter Server API本地板载存储后端。将存储添加为本地范围以进行迁移。
 . 问题描述要迁移的API调用：
 +
@@ -199,17 +198,14 @@ NOTE: UUID是迁移后API响应中返回的迁移UUID。
 成功运行修补程序迁移API后、所有VM都会遵守存储策略。
 
 ====
-+
-成功迁移并将ONTAP工具10.3注册到vCenter Server后、请执行以下操作：
-
-+
-** 刷新所有主机上的证书。
-** 请等待一段时间、然后再执行数据存储库(DS)和虚拟机(VM)操作。等待时间取决于设置中的主机、DS和VM数量。如果不等待、操作可能会间歇性失败。
 
 
+.下一步行动
+成功迁移并将ONTAP工具10.4注册到vCenter Server后、请执行以下操作：
 
+* 刷新所有主机上的证书。
+* 请等待一段时间、然后再执行数据存储库(DS)和虚拟机(VM)操作。等待时间取决于设置中的主机、DS和VM数量。如果不等待、操作可能会间歇性失败。
 
-* 完成后 *
 
 升级后、如果虚拟机合规性状态已过时、请按照以下步骤重新应用虚拟机存储策略：
 
@@ -224,6 +220,5 @@ NOTE: UUID是迁移后API响应中返回的迁移UUID。
 
 
 
-* 相关信息 *
-
-link:../upgrade/upgrade-ontap-tools.html["从适用于VMware vSphere 10.x的ONTAP工具升级到10.3"]
+.相关信息
+link:../upgrade/upgrade-ontap-tools.html["从适用于VMware vSphere 10.x的ONTAP工具升级到10.4"]

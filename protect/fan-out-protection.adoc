@@ -1,0 +1,45 @@
+---
+permalink: protect/fan-out-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: 在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。 
+---
+= 扇出保护
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。创建、编辑和删除SnapMirror主动同步保护工作流将保持同步保护。SRM故障转移和重新保护工作流会保持异步保护。
+
+为了建立扇出保护、您需要对三个站点集群和SVM建立对等关系。
+
+示例
+
+|===
+
+
+| 条件 | 然后 
+
+
+ a| 
+* 源一致性组位于集群C1和SVM svm1上
+* 第一个目标一致性组位于集群C2和SVM svm2和上
+* 第二个目标一致性组位于集群C3和SVM svm3上
+
+ a| 
+* 源ONTAP集群上的集群对等将为(C1、C2)和(C1、C3)。
+* 第一个目标ONTAP集群上的集群对等将为(C2、C1)和(C2、C3)和
+* 第二个目标ONTAP集群上的集群对等将为(C3、C1)和(C3、C2)。
+* 源SVM上的SVM对等将为(svm1、svm2)和(svm1、svm3)。
+* 第一个目标SVM上的SVM对等关系将为(svm2、svm1)和(svm2、svm3)和
+* 第二个目标SVM上的SVM对等将为(svm3、svm1)和(svm3、svm2)。
+
+
+|===
+* 步骤 *
+
+. 创建新占位数据存储库。请参阅 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["选择占位数据存储库"]
+. 将数据存储库添加到主机集群保护link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。您需要同时添加异步和同步策略类型。
+

@@ -33,7 +33,7 @@ NOTE: 从ONTAP工具管理器生成日志会包含所有vCenter Server实例的�
 按照以下步骤使用vCenter Client用户界面生成日志包：
 
 .步骤
-. 使用登录到vSphere Client `\https://<vcenterip>/<ui>`
+. 登录到vSphere Client。
 . 在vSphere Client主页中、转到*支持*>*日志捆绑包*>*生成*。
 . 提供日志包标签并生成日志包。
 生成文件后、您可以看到下载选项。下载可能需要一段时间。

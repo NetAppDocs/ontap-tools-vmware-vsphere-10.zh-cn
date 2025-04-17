@@ -49,27 +49,39 @@ summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部�
 | HA大型(累计三个节点) | 51 | 102. | 1050 
 |===
 
+NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上还需要50 GB的空间。因此、非HA需要400 GB的空间、而HA总共需要1100 GB的空间。
+
+
 
 == 最低存储和应用程序要求
 
 |===
-| 存储、主机和应用程序 | 最低版本要求 
+| 存储、主机和应用程序 | 版本要求 
 
 
 | ONTAP | 9.14.1、9.151和9.16.0。FAS、ASA A系列、ASA C系列、AFF A系列、AFF C系列和ASA R2。 
 
 
-| ESXi主机 | ESXi 7.0.3 
+| ONTAP工具支持的ESXi主机 | 7.0.3及更高版本 
 
 
-| vCenter Server | vCenter 7.0u3 
+| ONTAP工具支持的vCenter Server | 7.0U3及更高版本 
 
 
 | VASA Provider | 3.0 
 
 
-| OVA应用程序 | 10.3 
+| OVA应用程序 | 10.4 
+
+
+| ESXi主机以部署ONTAP Tools虚拟机 | 7.0、7.0U1、7.0U2、7.0U3、8.0、8.0U1和8.0U3 
+
+
+| vCenter Server以部署ONTAP Tools虚拟机 | 7.0和8.0 
 |===
+
+NOTE: 从适用于VMware vSphere 10.4的ONTAP工具开始、虚拟机硬件已从版本10更改为17。
+
 互操作性表工具(IMT)提供了有关受支持的ONTAP、vCenter Server、ESXi主机和插件应用程序版本的最新信息。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["互操作性表工具"^]
@@ -151,50 +163,86 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-| * 端口 * | * 问题描述 * 
+| * 端口 * | *协议* | * 问题描述 * 
 
 
-| 22 (TCP) | 在集群配置期间、Ans可 使用此SSH端口进行通信。要执行更改维护用户密码、状态消息等功能、以及在HA配置情况下更新所有三个节点上的值、需要使用此端口。 
+| 8143 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
 
 
-| 443 (TCP) | 这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。 
+| 8043 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
 
 
-| 8443 (TCP) | 此端口通过Swagger和Manager用户界面应用程序托管API文档。 
+| 9060 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
 
 
-| 2379 (TCP) | 这是客户端请求(例如GET、Put、DELETE或监视et执行 密钥值存储区中的密钥)的默认端口。 
+| 22 | TCP | 在集群配置期间、Ans可 使用此SSH端口进行通信。要执行更改维护用户密码、状态消息等功能、以及在HA配置情况下更新所有三个节点上的值、需要使用此端口。 
 
 
-| 2380 (TCP) | 对于etc集群、这是服务器到服务器通信的默认端口、该集群使用raft Consensus算法、etc用于数据复制和一致性。 
+| 443 | TCP | 这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。 
 
 
-| 7472 (tcp+udp) | 这是Prometheus指标服务端口。 
+| 8443 | TCP | 此端口通过Swagger和Manager用户界面应用程序托管API文档。 
 
 
-| 7946 (tcp+udp) | 此端口用于Docker的容器网络发现。 
+| 2379 | TCP | 这是客户端请求(例如GET、Put、DELETE或监视et执行 密钥值存储区中的密钥)的默认端口。 
 
 
-| 9083 (TCP) | 此端口是VASA Provider服务内部使用的服务端口。 
+| 2380 | TCP | 对于etc集群、这是服务器到服务器通信的默认端口、该集群使用raft Consensus算法、etc用于数据复制和一致性。 
 
 
-| 1162 (UDP) | 这是SNMP陷阱数据包端口。 
+| 7472 | TCP/UDP | 这是Prometheus指标服务端口。 
 
 
-| 6443 (TCP) | 来源：RKE2代理节点。目标：REK2服务器节点。说明：Kubenetes API 
+| 7946 | TCP/UDP | 此端口用于Docker的容器网络发现。 
 
 
-| 9345 (TCP) | 来源：RKE2代理节点。目标：REK2服务器节点。说明：REK2 Supervisor API 
+| 9083 | TCP | 此端口是VASA Provider服务内部使用的服务端口。 
 
 
-| 8472 (tcp+udp) | 使用法兰通道VXLAN时、所有节点都需要能够通过UDP端口8472访问其他节点。源：所有RKE2节点。Destination：所有REK2节点。描述：带有VXLAN的Canal CNI 
+| 1162 | UDP | 这是SNMP陷阱数据包端口。 
 
 
-| 10250 (TCP) | 源：所有RKE2节点。Destination：所有REK2节点。说明：Kubelet指标 
+| 6443 | TCP | 来源：RKE2代理节点。目标：REK2服务器节点。说明：Kubenetes API 
 
 
-| 30000-32767 (TCP) | 源：所有RKE2节点。Destination：所有REK2节点。说明：nodePort端口范围 
+| 9345 | TCP | 来源：RKE2代理节点。目标：REK2服务器节点。说明：REK2 Supervisor API 
 
 
-| 123 (TCP) | ntpd.使用此端口执行NTP服务器的验证。 
+| 8472 | tcp+udp. | 使用法兰通道VXLAN时、所有节点都需要能够通过UDP端口8472访问其他节点。源：所有RKE2节点。Destination：所有REK2节点。描述：带有VXLAN的Canal CNI 
+
+
+| 10250 | TCP | 源：所有RKE2节点。Destination：所有REK2节点。说明：Kubelet指标 
+
+
+| 30000-32767 | TCP | 源：所有RKE2节点。Destination：所有REK2节点。说明：nodePort端口范围 
+
+
+| 123 | TCP | ntpd.使用此端口执行NTP服务器的验证。 
+
+
+| 137-139 | TCP/UDP | SMB/Windows共享数据包。 
+
+
+| 6789 | TCP | Ceph监控器(监控器) 
+
+
+| 3300 | TCP | Ceph监控器(监控器) 
+
+
+| 6800-7300 | TCP | Ceph Manager、OSD和文件系统(MDS)。 
+
+
+| 80 | TCP | Ceph RADOS网关(RGW) 
+
+
+| 9080 | TCP | VP HTTP/HTTPS连接(对于IPv4、仅为127.0.0.0/8；对于IPv6、仅为：1/128)。 
 |===
+
+
+== ONTAP存储设置
+
+要确保ONTAP存储与适用于VMware vSphere的ONTAP工具无缝集成、请考虑以下设置：
+
+* 如果使用光纤通道(FC)进行存储连接、请在FC交换机上配置分区、以便将ESXi主机与SVM的FC LUN连接起来。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["了解ONTAP系统的FC和FCoE分区"]
+* 要使用ONTAP工具管理的SnapMirror复制、ONTAP存储管理员应先在ONTAP中创建 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP集群对等关系"]和 https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP集群间SVM对等关系"]、然后再使用SnapMirror。
+

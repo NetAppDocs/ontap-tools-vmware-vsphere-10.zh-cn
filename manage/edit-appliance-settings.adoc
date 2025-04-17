@@ -13,8 +13,10 @@ summary: 您可以使用ONTAP工具管理器更改管理员密码。
 [role="lead"]
 使用ONTAP工具管理器纵向扩展适用于VMware vSphere的ONTAP工具配置、以增加部署中的节点数或将配置更改为高可用性(HA)设置。适用于VMware vSphere设备的ONTAP工具最初部署在单节点非HA配置中。
 
-* 开始之前 *
 
+NOTE: 要在启用非HA备份后迁移到HA、请先禁用备份、然后在迁移后重新启用。
+
+.开始之前
 * 确保您的OVA模板与节点1的OVA版本相同。节点1是最初部署适用于VMware vSphere的ONTAP工具OVA的默认节点。
 * 确保已启用CPU热添加和内存热插拔。
 
