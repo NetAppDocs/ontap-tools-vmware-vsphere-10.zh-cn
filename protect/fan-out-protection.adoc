@@ -38,6 +38,8 @@ summary: 在扇出保护中、一致性组受到双重保护、第一个目标ON
 
 
 |===
+下图显示了扇出保护配置： image:../media/fan-out-protection.png["扇出保护配置"] image:../media/fan-out-protection-relationship.png["扇出保护关系"]
+
 * 步骤 *
 
 . 创建新占位数据存储库。请参阅 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["选择占位数据存储库"]
