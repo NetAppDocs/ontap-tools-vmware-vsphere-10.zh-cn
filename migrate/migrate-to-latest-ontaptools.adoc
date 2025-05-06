@@ -51,13 +51,14 @@ NOTE: 如果故障转移已完成、但重新保护处于待定状态、请勿�
 .. 转到*Storage Replication Adapter*部分。
 .. 从省略号菜单中，选择*Reset configuration*。
 .. 从省略号菜单中选择*Delete*。
+
+
+. 在保护站点和恢复站点上执行这些步骤。
 +
-在保护站点和恢复站点上执行这些步骤。
+.. 按照中的步骤安装适用于VMware vSphere 10.4 SRA适配器的ONTAP工具link:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]。
+.. 在VMware Live Site Recovery用户界面页面上，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并确认这些设备在迁移前显示为。
 
 
-
-. 按照中的步骤安装适用于VMware vSphere 10.4 SRA适配器的ONTAP工具link:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]。
-. 在VMware Live Site Recovery用户界面页面上，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并确认这些设备在迁移前显示为。
 
 
 
@@ -73,7 +74,13 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 部署适用于VMware vSphere 10.4的ONTAP工具OVA。
 . 添加要迁移到适用于VMware vSphere 10.4版的ONTAP工具的vCenter Server实例。有关详细信息、请参见 link:../configure/add-vcenter.html["添加vCenter Server实例"] 。
 . 从vCenter Server API本地为ONTAP工具插件板载存储后端。
-. 从Swagger或Postman发出以下API进行迁移：
+. 从Swagger或Postman发出以下API进行迁移。
++
+CURL -X柱 https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration[]
+
++
+您可以通过以下URL访问Swagger：`https://$FQDN_IP_PORT/,例如： https://10.61.25.33:8443/[]。
+
 +
 []
 ====
@@ -95,7 +102,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 *卷示例*
 
-/api/v1/vcCenters/｛vcpguid｝/migration-jobs
+CURL -X柱 https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
 
 *JSON输入示例*
 
@@ -131,11 +138,11 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ｝
 
 ====
-. 使用以下URI检查状态：
+. 在Swagger中使用以下URI检查状态：
 +
 [listing]
 ----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 +
 完成此作业后、请查看迁移报告。此报告包含在作业数据中、可从作业响应访问。
@@ -150,7 +157,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 停止旧的VASA Provider后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。
 
 . 只有在触发数据存储库发现作业后、适用于VMware vSphere 9.xx的ONTAP ONTAP工具中才会显示从适用于VMware vSphere的NFS和VMFS数据存储库、此作业可能需要长达30分钟才能完成。验证这些数据存储库是否显示在VMware vSphere插件用户界面的ONTAP工具的概述页面上。
-. 使用以下API执行修补程序迁移：
+. 在Swagger或Postman中使用以下API执行修补程序迁移：
 +
 []
 ====
@@ -172,7 +179,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 
 *卷示例*
 
-修补"/api/v1/vcCenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43
+CURL -X修补程序 https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
 
 *JSON输入示例*
 
@@ -205,7 +212,7 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 .下一步行动
 完成向vCenter Server迁移和注册ONTAP工具10.4后、请按照以下步骤进行操作：
 
-* 刷新所有主机上的证书。
+* 等待*Discovery *完成，所有主机上的证书将自动刷新。
 * 在启动数据存储库和虚拟机操作之前、请留出足够的时间。所需等待时间因配置中的主机、数据存储库和虚拟机数量而异。等待失败可能会导致间歇性操作故障。
 
 

@@ -80,7 +80,7 @@ NOTE: 切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理�
 
 NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 
-** ONTAP工具IP地址是与ONTAP工具通信的主要接口
+** ONTAP工具IP地址是与ONTAP工具通信的主要接口。
 ** IPv4是节点配置的IP地址组件、可用于在节点上启用诊断Shell和SSH访问、以便进行调试和维护。
 
 
