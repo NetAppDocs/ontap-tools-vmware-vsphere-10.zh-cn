@@ -18,14 +18,14 @@ summary: 了解适用于VMware vSphere 10.4的ONTAP工具中提供的新功能�
 | 更新 | Description 
 
 
-| 支持ASA R2系统、每个集群12个节点 | 适用于VMware vSphere 10.4的ONTAP工具支持适用于每个集群最多12个节点的ASA R2存储系统的工作流、从而提高数据管理效率和可扩展性。它支持采用iSCSI和FC协议的虚拟卷数据存储库以及采用iSCSI、FC和NVMe协议的VMFS数据存储库、从而提供灵活且增强的存储选项。 
+| link:../configure/create-datastore.html["支持ASA R2系统、每个集群12个节点"] | 适用于VMware vSphere 10.4的ONTAP工具支持适用于每个集群最多12个节点的ASA R2存储系统的工作流、从而提高数据管理效率和可扩展性。它支持采用iSCSI和FC协议的虚拟卷数据存储库以及采用iSCSI、FC和NVMe协议的VMFS数据存储库、从而提供灵活且增强的存储选项。 
 
 
-| ONTAP工具管理器用户界面增强功能 | 现在、您可以启用NTP服务器、以便在环境中精确同步时间、并通过ONTAP工具管理器界面配置遥测设置以监控和分析系统性能。维护控制台中不再提供这些设置。 
+| link:../manage/add-ntpserver.html["ONTAP工具管理器用户界面增强功能"] | 现在、您可以启用NTP服务器、以便在环境中精确同步时间、并通过ONTAP工具管理器界面配置遥测设置以监控和分析系统性能。维护控制台中不再提供这些设置。 
 
 
 | 增强的安全功能 | 现在，安全功能可提供增强的保护并符合行业标准，从而提供强大且用户友好的体验，帮助管理员更有效地管理VMware环境。 
 
 
-| 增强了SRA灾难恢复功能 | 适用于VMware vSphere 10.4的ONTAP工具现在支持使用站点恢复设备(SRA)执行灾难恢复操作、该设备除了具有SnapMirror计划的Snapshot副本之外、还具有自定义命名的快照。 
+| link:../protect/enable-storage-replication-adapter.html["增强了SRA灾难恢复功能"] | 适用于VMware vSphere 10.4的ONTAP工具现在支持使用站点恢复设备(SRA)执行灾难恢复操作、该设备除了具有SnapMirror计划的Snapshot副本之外、还具有自定义命名的快照。 
 |===

@@ -14,7 +14,7 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 在存储数据迁移期间、系统会使用REST API手动建立存储后端。VASA Provider数据迁移涉及从现有Derby数据库导出数据并将其导入MongoDB数据库。
 
 
-NOTE: 只有在使用VASA Provider和vvol时、才需要从适用于VMware vSphere 9.XX的ONTAP工具进行迁移。
+NOTE: 只有在使用VASA Provider和vvol时、才需要从适用于VMware vSphere 9.XX的ONTAP工具进行迁移。NFS和VMFS数据存储库会在存储发现过程中被发现。
 
 
 NOTE: 从适用于VMware vSphere的ONTAP工具9.x迁移到10.4后、使用NVMe/FC协议的vvol数据存储库将无法运行、因为ONTAP工具10.4仅对VMFS数据存储库支持NVMe-oF协议。
