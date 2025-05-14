@@ -18,7 +18,8 @@ summary: 您可以使用适用于VMware vSphere的ONTAP工具远程插件界面�
 . 选择插件部分下的*快捷方式*>* NetApp ONTAP tools*。
 . 选择*Settings*>*VASA Provider settings *。VASA Provider注册状态将显示为未注册。
 . 选择*注册*按钮以注册VASA Provider。
-. 输入VASA Provider的名称并为VMware vSphere应用程序提供ONTAP工具用户凭据、然后选择*注册*。
+. 输入VASA Provider的名称和凭据。用户名只能包含字母、数字和下划线。密码长度应介于8到256个字符之间。
+. 选择 * 注册 * 。
 . 成功注册并刷新页面后、将显示已注册的VASA Provider的状态、名称和版本。注册后、取消注册操作将被激活。
 
 

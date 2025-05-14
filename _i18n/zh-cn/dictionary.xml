@@ -898,7 +898,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="810eb1be62c2223bbb6ff683af2508bd" category="paragraph">下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。</block>
   <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">下表显示了VMware Live Site Recovery的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。</block>
   <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">*VMware Live Site Recovery实例数*</block>
-  <block id="de7cd16aa682868ad900edd519b06059" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter (SRA)、以便在VMware Live Site Recovery和Storage Virtual Machine (SVM)之间进行交互。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您应已在VMware Live Site Recovery中将受保护站点和恢复站点配对。</block>
@@ -1497,15 +1496,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6a56526090ecb77854d07be849799242" category="paragraph">MPIO设置定义NetApp存储系统的首选路径。它们可确定哪些可用路径已进行优化(与遍历互连缆线的非优化路径不同)、并将首选路径设置为其中一个路径。</block>
   <block id="89f7633ad6a1e114cebf9902aa42fd5c" category="paragraph">NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、用于集成VMware vSphere和NFS存储阵列。使用适用于VMware vSphere的ONTAP工具安装NFS VAAI插件、以利用NFS存储阵列的高级功能将某些与存储相关的操作从ESXi主机卸载到存储阵列本身。</block>
   <block id="f9fcb823ee6471ecceb63c9625d2c8fc" category="list-text">下载<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block>安装包。</block>
-  <block id="e27bb3e78ef59cd560e56215a182f3b3" category="list-text">确保ESXi主机已安装最新修补程序7.0U3或更高版本以及9.14.1 9.14.1或更高版本。</block>
   <block id="a585389d21dd9fbdbdc15072bd5d7010" category="list-text">挂载NFS数据存储库。</block>
-  <block id="3efe2db5c0b83bc2774d6061359381ed" category="list-text">将DataMover.HardwareAcceleratedMove、DataMover.HardwareAcceleratedInit和VMFS3.HardwareAcceleratedLocking主机设置的值设置为"1"。要自动设置这些值、请应用建议的EXSi主机设置。请参阅 <block ref="a13757a488cc72436349db8983ce6613" category="inline-link-macro-rx"></block>。</block>
-  <block id="957daa20d20cf15a7839d7e44ecdb2ab" category="list-text">使用vserver NFS修改-vserver vserver_name -vStorage enabled命令在Storage Virtual Machine (SVM)上启用vStorage选项。</block>
-  <block id="d5676260c3a3d58c4d9ebd79f3558bac" category="list-text">确保您已安装vSphere 7.0U3最新的修补程序版本。</block>
   <block id="0e57b7b27807ae2427ad1a654eca765e" category="list-text">选择*Settings*&gt;*NFS VAAI Tools*。</block>
   <block id="75650b415bb2c723c71117c59992e489" category="list-text">选择*在ESXi主机上安装*、选择要安装NFS VAAI插件的ESXi主机、然后选择*安装*。</block>
   <block id="681ca77b2652713f7e6d867f281733ec" category="paragraph">仅显示符合此插件安装条件的ESXi主机。您可以在vSphere Web Client的近期任务部分中监控安装进度。</block>
-  <block id="4969bf5d68bb071342161a9b29a23f5c" category="list-text">安装完成后、您应手动重新启动ESXi主机。</block>
   <block id="d15e664257aa2207434ef9543a593a8d" category="paragraph">当VMware管理员重新启动ESXi主机时、适用于VMware vSphere的ONTAP工具会自动检测并启用NFS VAAI插件。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什么？</block>
   <block id="90ba1578c2c367413063e7228d8586b5" category="paragraph">安装NFS VAAI插件并重新启动ESXi主机后、您需要为VAAI副本卸载配置正确的NFS导出策略。在NFS环境中配置VAAI时、请根据以下要求配置导出策略规则：</block>
@@ -1594,7 +1588,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">管理适用于VMware vSphere的ONTAP工具</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">升级适用于VMware vSphere的ONTAP工具</block>
   <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具向vCenter Server实例注册VASA Provider。VASA Provider设置部分显示选定vCenter Server的VASA Provider注册状态。</block>
-  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">输入VASA Provider的名称并为VMware vSphere应用程序提供ONTAP工具用户凭据、然后选择*注册*。</block>
   <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">成功注册并刷新页面后、将显示已注册的VASA Provider的状态、名称和版本。注册后、取消注册操作将被激活。</block>
   <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。</block>
   <block id="131790b08b90f216c8731a6e1a071001" category="cell">此端口是VASA Provider服务内部使用的服务端口。</block>
@@ -1624,7 +1617,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="949ade5949e752c9b4f748b78767cb9b" category="admonition">为了简化工作流、大多数输入选项都预先填充了节点1网络详细信息。但是、您可以在导航到向导的最后一页之前编辑输入数据。只有在第一个节点上启用了IPv6地址时、才能输入其他两个节点的IPv6地址详细信息。</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">查看*摘要*部分中的详细信息并*保存*更改。</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">为VMware vSphere服务启用ONTAP工具</block>
-  <block id="8c0d7661d66e379665cc68d77a595468" category="paragraph">首次启用服务时、您必须创建VASA Provider和SRA凭据。这些命令用于在vCenter Server上注册或启用VASA Provider和SRA服务。</block>
   <block id="7e436228231add180554f1acd06b74fc" category="admonition">在禁用任何可选服务之前、请确保由ONTAP工具管理的vCenter Server未使用这些服务。</block>
   <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">如果主机集群采用统一配置进行保护、则挂载数据存储库选项将被禁用。</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">适用于VMware vSphere的ONTAP工具会在配置选项卡中显示数据存储库及其卷的ONTAP存储端视图。</block>
@@ -1991,7 +1983,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="1870a2aa0cd0290ddebdd4f60c121814" category="list-text">输入*数据存储库名称*和*协议*信息。</block>
   <block id="44a6b64ae3a7fef2f349f72cf3e32eb2" category="admonition">ASA R2系统支持对虚拟卷使用iSCSI和FC协议。</block>
   <block id="8dde1f10223f65a679d998e569d238c3" category="list-text">选择要在其中创建数据存储库的Storage VM。</block>
-  <block id="80d67086677891099603cd75cd0a26e8" category="list-text">在*高级选项*中为NFS协议选择自定义导出策略、或者为iSCSI和FC协议选择自定义启动程序组名称。</block>
   <block id="fd81895c9b4eb40921c7e241c091a1cd" category="admonition">在ASA R2存储系统类型SVM中、不会创建存储单元(LUN /命名空间)、因为数据存储库只是一个逻辑容器。</block>
   <block id="e31f7e9745380863f95d73e48e2fabbf" category="list-text">在*存储属性*窗格中，您可以创建新卷或使用现有卷。但是、不能将这两种类型的卷组合在一起来创建一个卷数据存储库。</block>
   <block id="39355798de4906f96b13a31fd76a15e6" category="paragraph">创建新卷时、您可以在数据存储库上启用QoS。默认情况下、系统会为每个LUN创建的请求创建一个卷。此步骤不适用于使用ASA R2存储系统的虚拟卷数据存储库。</block>
@@ -2001,7 +1992,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="002da57ee8bba82828c8058c7d6cfecf" category="list-text">在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。在高级选项中选择*数据存储库集群*和* Kerberos身份验证*。</block>
   <block id="8d4768d2ffaf314b3ea87a21a27f7ec4" category="admonition">只有在选择了NFS 4.1协议时、才能使用Kerberos身份验证。</block>
   <block id="7b2c27e8d2aac8a15e90a619cd860d4d" category="list-text">在*存储*窗格中选择*平台*和*存储VM*。</block>
-  <block id="b48e3fbf26333d26d1456ba93f1a6c8f" category="list-text">如有必要，在高级选项下选择*自定义导出策略*，但不建议这样做。如果使用了发现功能、请确保在vCenter中对所有对象运行发现。</block>
   <block id="97e5c74d2bd0f78816caf0c5c9036a82" category="admonition">您不能使用SVM的默认/根卷策略创建NFS数据存储库。</block>
   <block id="42d1ce422f23ede57a5c2e13f8855890" category="list-text">在高级选项中，只有在平台下拉列表中选择了性能或容量时，*非对称*切换按钮才可见。</block>
   <block id="fa6c3148403311b0d64dfc44a5925b3a" category="list-text">在平台下拉列表中选择*任何*选项后、无论平台或非对称标志如何、您都可以看到属于vCenter的SVM。</block>
@@ -2214,7 +2204,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4是节点配置的IP地址组件、可用于在节点上启用诊断Shell和SSH访问、以便进行调试和维护。</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">用于内部通信的ONTAP工具虚拟IP地址</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">在存储数据迁移期间、系统会使用REST API手动建立存储后端。VASA Provider数据迁移涉及从现有Derby数据库导出数据并将其导入MongoDB数据库。</block>
-  <block id="9060074cf56d9aadb36767f42ea21b34" category="admonition">从适用于VMware vSphere的ONTAP工具9.x迁移到10.4后、使用NVMe/FC协议的vvol数据存储库将无法运行、因为ONTAP工具10.4仅对VMFS数据存储库支持NVMe-oF协议。</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">您可以从适用于VMware vSphere 9.12D1、9.13D2和9.13P2的ONTAP工具迁移到适用于VMware vSphere 10.4的ONTAP工具。</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">在升级到修补程序版本之前、您必须备份当前ONTAP工具的部署。</block>
   <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">添加要迁移到适用于VMware vSphere 10.4版的ONTAP工具的vCenter Server实例。有关详细信息、请参见 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block> 。</block>
@@ -2222,7 +2211,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">如果故障转移已完成、但重新保护处于待定状态、请勿开始迁移。请确保重新保护过程已完成、然后再继续迁移。如果正在进行测试故障转移、请清理测试故障转移并开始迁移。</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">请按照以下步骤在VMware站点恢复中删除适用于VMware vSphere 9.xx的ONTAP工具SRA适配器：</block>
   <block id="b2c26a87d051d5889e6d2e4ab1fc79de" category="list-text">转到*Storage Replication Adapter*部分。</block>
-  <block id="b80a5fe26546f4090c014df2108347ab" category="list-text">从省略号菜单中，选择*Reset configuration*。</block>
   <block id="1ab7bd22ce5077185a70517ea0db34ec" category="list-text">从省略号菜单中选择*Delete*。</block>
   <block id="63fbd3cb55ffabae3747cd50140f1b47" category="list-text">按照中的步骤安装适用于VMware vSphere 10.4 SRA适配器的ONTAP工具<block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block>。</block>
   <block id="e3e32085ef48d00b185f9ae05a428520" category="list-text">在VMware Live Site Recovery用户界面页面上，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并确认这些设备在迁移前显示为。</block>
@@ -2272,8 +2260,18 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8bf7814538fb554d339918e8af1041b7" category="cell">*每个节点厚配置的磁盘空间(GB)*</block>
   <block id="8e1b11ef4c2ef1e1f2b2b515cc7d496b" category="cell">大注：大型部署仅适用于HA配置。</block>
   <block id="1e1982b2e5b48af62e0f42cbc47ece79" category="admonition">启用备份后、每个ONTAP工具集群在部署VM的数据存储库上还需要50 GB的空间。因此、非HA需要400 GB的空间、而HA总共需要1100 GB的空间。</block>
-  <block id="6b20aec4ce81da173c6f34628ae6d34d" category="admonition">只有在使用VASA Provider和vvol时、才需要从适用于VMware vSphere 9.XX的ONTAP工具进行迁移。NFS和VMFS数据存储库会在存储发现过程中被发现。</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
+  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">在高级选项下，可以为NFS协议选择*Custom export policy*，或为iSCSI和FC协议选择自定义启动程序组名称，但不建议这样做。如果使用此选项、请确保在vCenter中对所有对象运行发现。</block>
+  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">您可以在高级选项下选择自定义导出策略、但不建议这样做。如果使用了发现功能、请确保在vCenter中对所有对象运行发现。</block>
+  <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">确保已安装ESXi主机和vSphere 7.0U3最新修补程序或更高版本以及9.14.1 9.14.1或更高版本。</block>
+  <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">安装后手动重新启动ESXi主机。</block>
+  <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">输入VASA Provider的名称和凭据。用户名只能包含字母、数字和下划线。密码长度应介于8到256个字符之间。</block>
+  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">选择 * 注册 * 。</block>
+  <block id="7589490ed5e2b68e2f28beb45ecf3fca" category="paragraph">首次启用服务时、您必须创建VASA Provider和SRA凭据。这些命令用于在vCenter Server上注册或启用VASA Provider和SRA服务。用户名只能包含字母、数字和下划线。密码长度应介于8到256个字符之间。</block>
+  <block id="67b08defea5ec6059f6e7c54a1da7e7d" category="admonition">从适用于VMware vSphere 9的ONTAP工具迁移到10.4后、使用NVMe/FC协议的vvol数据存储库将无法运行、因为ONTAP工具10.4仅对VMFS数据存储库支持NVMe-oF协议。</block>
+  <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
+  <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">从省略号菜单中选择*重置配置*。</block>
+  <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">只有在使用VASA Provider和vvol时、才需要从适用于VMware vSphere 9的ONTAP工具进行迁移。NFS和VMFS数据存储库会在存储发现过程中被发现。</block>
 </blocks>

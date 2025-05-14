@@ -15,11 +15,8 @@ NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、�
 
 .开始之前
 * 下载 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["适用于 VMware VAAI 的 NetApp NFS 插件"]安装包。
-* 确保ESXi主机已安装最新修补程序7.0U3或更高版本以及9.14.1 9.14.1或更高版本。
+* 确保已安装ESXi主机和vSphere 7.0U3最新修补程序或更高版本以及9.14.1 9.14.1或更高版本。
 * 挂载NFS数据存储库。
-* 将DataMover.HardwareAcceleratedMove、DataMover.HardwareAcceleratedInit和VMFS3.HardwareAcceleratedLocking主机设置的值设置为"1"。要自动设置这些值、请应用建议的EXSi主机设置。请参阅 link:../configure/configure-esx-server-multipath-and-timeout-settings.html["配置ESXi服务器多路径和超时设置"]。
-* 使用vserver NFS修改-vserver vserver_name -vStorage enabled命令在Storage Virtual Machine (SVM)上启用vStorage选项。
-* 确保您已安装vSphere 7.0U3最新的修补程序版本。
 * NetApp NFS VAAI插件2.0.1 (内部版本16)支持vSphere 8.x。
 
 
@@ -33,7 +30,7 @@ NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、�
 +
 仅显示符合此插件安装条件的ESXi主机。您可以在vSphere Web Client的近期任务部分中监控安装进度。
 
-. 安装完成后、您应手动重新启动ESXi主机。
+. 安装后手动重新启动ESXi主机。
 +
 当VMware管理员重新启动ESXi主机时、适用于VMware vSphere的ONTAP工具会自动检测并启用NFS VAAI插件。
 
