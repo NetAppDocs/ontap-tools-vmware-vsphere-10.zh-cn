@@ -17,7 +17,6 @@ NFS vStorage API for Array Integration (NFS VAAI)插件是一个软件组件、�
 * 下载 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["适用于 VMware VAAI 的 NetApp NFS 插件"]安装包。
 * 确保已安装ESXi主机和vSphere 7.0U3最新修补程序或更高版本以及9.14.1 9.14.1或更高版本。
 * 挂载NFS数据存储库。
-* NetApp NFS VAAI插件2.0.1 (内部版本16)支持vSphere 8.x。
 
 
 .步骤

@@ -211,14 +211,12 @@
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">设置ESXi主机值</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">您可以在 ESXi 主机上设置以下值：</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HBA/CNA适配器设置</block>
-  <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">为NetApp存储系统设置建议的HBA超时设置。</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">MPIO设置</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">NFS 设置</block>
   <block id="5f115b5221541c527e67a2b71da5fb5d" category="list-text">从侧栏中选择vCenter。</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">您可以使用适用于VMware vSphere的NetApp工具安装适用于VMware vStorage APIS for Array Integration \(VAAI\)的ONTAP NFS插件。</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">安装 NFS VAAI 插件</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">适用于 VMware VAAI 的 NetApp NFS 插件</block>
-  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">NetApp NFS VAAI插件2.0.1 (内部版本16)支持vSphere 8.x。</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">将VAAI插件上传到vCenter Server后、在*现有版本*部分中选择*更改*。如果VAAI插件未上传到vCenter Server、请选择*上传*按钮。</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">向vCenter Server实例注册VASA Provider</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">您可以使用挂载 VVol 数据存储库对话框将 VMware 虚拟卷（ VVols ）数据存储库挂载到一个或多个其他主机。挂载数据存储库可为其他主机提供存储访问权限。您只能通过API卸载卷数据存储库。</block>
@@ -1373,14 +1371,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="34708a7ee3c666f413240fedba4b042a" category="cell">此卡显示按性能指标排序的前10个数据存储库。您可以选择标题以获取选定指标的前10个数据存储库、这些数据存储库按升序或降序排序。在更改或清除浏览器缓存之前、对卡所做的排序和筛选更改将一直存在。有一个数据存储库类型下拉列表可用于选择数据存储库的类型- NFS、VMFS或vols。</block>
   <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">此卡按设置组/类别显示所有ESXi主机(对于选定vCenter)设置与建议的NetApp主机设置的整体合规状态。您可以选择*应用建议设置*链接来应用建议的设置。您可以选择主机的合规状态以查看主机列表。</block>
   <block id="62938ab037901a948099ef101beec571" category="list-text">选择已发现的状态为的存储控制器<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block>，然后选择*Actions*&gt;*Modify*。</block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">参数</block>
   <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">将此值设置为...</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">Disk.QFullSampleSize</block>
-  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">所有配置均为32。设置此值有助于防止出现 I/O 错误。</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">Disk.QFullThreshold</block>
-  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">所有配置均为8。设置此值有助于防止出现 I/O 错误。</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Emulex FC HBA 超时</block>
-  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">默认值。</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">QLogic FC HBA 超时</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">Net.TcpipHeapSize</block>
@@ -2263,8 +2257,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
-  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">在高级选项下，可以为NFS协议选择*Custom export policy*，或为iSCSI和FC协议选择自定义启动程序组名称，但不建议这样做。如果使用此选项、请确保在vCenter中对所有对象运行发现。</block>
-  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">您可以在高级选项下选择自定义导出策略、但不建议这样做。如果使用了发现功能、请确保在vCenter中对所有对象运行发现。</block>
   <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">确保已安装ESXi主机和vSphere 7.0U3最新修补程序或更高版本以及9.14.1 9.14.1或更高版本。</block>
   <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">安装后手动重新启动ESXi主机。</block>
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">输入VASA Provider的名称和凭据。用户名只能包含字母、数字和下划线。密码长度应介于8到256个字符之间。</block>
@@ -2274,4 +2266,9 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">转到VMware Live Site Recovery配置管理页面</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">从省略号菜单中选择*重置配置*。</block>
   <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">只有在使用VASA Provider和vvol时、才需要从适用于VMware vSphere 9的ONTAP工具进行迁移。NFS和VMFS数据存储库会在存储发现过程中被发现。</block>
+  <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">将以下参数设置为默认值：</block>
+  <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">在高级选项下：</block>
+  <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">如果选择*自定义导出策略*、请确保在vCenter中对所有对象运行发现。建议不要使用此选项。</block>
+  <block id="0b3b86369c55c3299fc4f945d3cc9a8c" category="list-text">您可以为iSCSI和FC协议选择*自定义启动程序组*名称。</block>
+  <block id="91756c37ce937828e162f58ca53f85a0" category="list-text">如果在高级选项下选择*自定义导出策略*，请在vCenter中对所有对象运行发现。建议不要使用此选项。</block>
 </blocks>
