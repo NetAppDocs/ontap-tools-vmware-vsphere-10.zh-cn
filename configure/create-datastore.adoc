@@ -13,6 +13,12 @@ summary: 在主机集群级别创建数据存储库时、系统会创建数据�
 [role="lead"]
 在主机集群级别创建数据存储库时、系统会创建数据存储库并将其挂载到目标的所有主机上、只有当前用户具有执行权限时、才会启用此操作。
 
+*本机数据存储与 vCenter Server 和 ONTAP 工具管理的数据存储之间的互操作性*
+
+适用于 VMware vSphere 10 的 ONTAP 工具会为数据存储创建嵌套 igroup，其中父 igroup 特定于数据存储，子 igroup 则映射到主机。您可以从 ONTAP 系统管理器创建平面 igroup，并使用它们创建 VMFS 数据存储，而无需使用 ONTAP 工具。有关详细信息、请参见 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 启动器和 igroup"] 。
+
+当存储加入 ONTAP 工具并运行数据存储发现功能时，扁平 igroup 和 VMFS 数据存储将由 ONTAP 工具管理，并转换为嵌套 igroup。您无法使用早期的扁平 igroup 创建新的数据存储；您必须使用 ONTAP 工具用户界面或 REST API 来重用嵌套 igroup。
+
 [role="tabbed-block"]
 ====
 .创建一个卷数据存储库
@@ -102,11 +108,16 @@ NOTE: 您不能使用SVM的默认/根卷策略创建NFS数据存储库。
 * 如果您使用的是NVMe/TCP协议、请配置ESXi主机：
 +
 .. 查看 https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware 兼容性指南"]
++
 
+NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议使用VMware vSphere 8.0及更高版本。
 
+.. 验证网络接口卡(Network Interface Card、NIC)供应商是否支持采用NVMe/TCP协议的ESXi NIC。
+.. 根据NIC供应商规格为NVMe/TCP配置ESXi NIC。
+.. 使用VMware vSphere 7版本时、请按照VMware站点上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["为基于TCP适配器的NVMe配置VMkernel绑定"]配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在ESXi上配置基于TCP的NVMe"]配置NVMe/TCP端口绑定。
+.. 对于VMware vSphere 7版本、请按照第页上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["启用基于RDMA的NVMe或基于TCP的NVMe软件适配器"]配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["添加基于RDMA的软件NVMe或基于TCP适配器的NVMe"]配置NVMe/TCP软件适配器。
+.. link:../configure/discover-storage-systems-and-hosts.html["发现存储系统和主机"]在ESXi主机上运行操作。有关详细信息，请参阅 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP"]。
 
-
-VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议使用VMware vSphere 8.0及更高版本。。验证网络接口卡(Network Interface Card、NIC)供应商是否支持采用NVMe/TCP协议的ESXi NIC。。根据NIC供应商规格为NVMe/TCP配置ESXi NIC。。使用VMware vSphere 7版本时、请按照VMware站点上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["为基于TCP适配器的NVMe配置VMkernel绑定"]配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在ESXi上配置基于TCP的NVMe"]配置NVMe/TCP端口绑定。。对于VMware vSphere 7版本、请按照第页上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["启用基于RDMA的NVMe或基于TCP的NVMe软件适配器"]配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["添加基于RDMA的软件NVMe或基于TCP适配器的NVMe"]配置NVMe/TCP软件适配器。。link:../configure/discover-storage-systems-and-hosts.html["发现存储系统和主机"]在ESXi主机上运行操作。有关详细信息，请参阅 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP"]。
 
 * 如果您使用的是NVMe/FC协议、请执行以下步骤来配置ESXi主机：
 +

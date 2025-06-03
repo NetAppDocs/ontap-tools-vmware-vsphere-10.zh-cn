@@ -156,7 +156,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 +
 停止旧的VASA Provider后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。
 
-. 只有在触发数据存储库发现作业后、适用于VMware vSphere 9.xx的ONTAP ONTAP工具中才会显示从适用于VMware vSphere的NFS和VMFS数据存储库、此作业可能需要长达30分钟才能完成。验证这些数据存储库是否显示在VMware vSphere插件用户界面的ONTAP工具的概述页面上。
+. 只有在触发数据存储库发现作业后、适用于VMware vSphere 9.xx的ONTAP ONTAP工具中才会显示从适用于VMware vSphere的NFS和VMFS数据存储库、此作业可能需要长达30分钟才能完成。验证数据存储库是否在 VMware vSphere 插件用户界面页面的 ONTAP 工具概览页面上可见。
 . 在Swagger或Postman中使用以下API执行修补程序迁移：
 +
 []
