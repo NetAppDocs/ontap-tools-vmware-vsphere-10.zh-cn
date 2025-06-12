@@ -2,7 +2,7 @@
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
+summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
 ---
 = 部署适用于VMware vSphere的ONTAP工具的前提条件
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部�
 
 
 [role="lead"]
-在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部署软件包的空间要求以及一些基本主机系统要求。
+在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。
 
 您可以将适用于VMware vSphere的ONTAP工具与VMware vCenter Server虚拟设备(vCSA)结合使用。您应在包含ESXi系统的受支持vSphere客户端上部署适用于VMware vSphere的ONTAP工具。
 
@@ -68,7 +68,7 @@ NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上�
 | OVA应用程序 | 10.4 
 
 
-| ESXi主机以部署ONTAP Tools虚拟机 | 7.0、7.0U1、7.0U2、7.0U3、8.0、8.0U1和8.0U3 
+| ESXi主机以部署ONTAP Tools虚拟机 | 7.0U3和8.0U3 
 
 
 | vCenter Server以部署ONTAP Tools虚拟机 | 7.0和8.0 

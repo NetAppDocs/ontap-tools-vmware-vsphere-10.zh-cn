@@ -26,7 +26,7 @@ NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部�
 
 *创建内容库*如果您计划仅使用小型单节点部署，则不需要创建内容库。
 
-.  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。
+. 下载 `.zip`包含适用于 VMware vSphere 的 ONTAP 工具的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。
 . 登录到vSphere Client
 . 选择vSphere客户端菜单并选择*内容库*。
 . 选择页面右侧的*创建*。
@@ -41,10 +41,10 @@ NOTE: 有关详细信息、请参见 https://blogs.vmware.com/vsphere/2020/01/cr
 
 NOTE: 在继续部署之前、请将清单上集群的Distributed Resource Scheduler (DRS)设置为"保守"。这样可确保在安装期间不会迁移VM。
 
-适用于VMware vSphere的ONTAP工具最初部署为非HA设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。
+VMware vSphere 的 ONTAP 工具最初部署为非 HA 设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。
 
 .步骤
-.  `.zip`从下载包含适用于VMware vSphere的ONTAP工具的二进制文件(_.ova_)和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。如果已将OVA导入到内容库中、则可以跳过此步骤并继续下一步。
+. 下载 `.zip`包含适用于 VMware vSphere 的 ONTAP 工具的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。如果已将OVA导入到内容库中、则可以跳过此步骤并继续下一步。
 . 登录到vSphere服务器。
 . 导航到要部署OVA的资源池、集群或主机。
 +

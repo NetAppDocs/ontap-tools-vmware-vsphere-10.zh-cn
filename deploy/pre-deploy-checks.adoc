@@ -2,7 +2,7 @@
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: 在部署适用于VMware vSphere的ONTAP工具之前、您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
+summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
 ---
 = 开始之前…​
 :allow-uri-read: 
