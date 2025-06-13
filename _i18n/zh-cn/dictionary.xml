@@ -2236,7 +2236,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">从第一个节点虚拟机确定适用于 VMware vSphere 部署类型的 ONTAP 工具。</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">在 vCenter Server 中，将灾难恢复服务 (DRS) 自动化级别设置为部分自动化。部署 HA 后，将其恢复为完全自动化。</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">HA 设置中的节点主机名应采用小写。</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">输入介于10-60分钟之间的备份频率值。</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">对于用于 VMware vSphere HA 部署的 ONTAP 工具，您应该更改第一个节点（即 node1）上的维护控制台用户密码。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 设置不适用于 NVMe、NVMe/FC 和 NVMe/TCP 协议。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具向vCenter Server实例注册VASA Provider。VASA Provider设置部分显示选定vCenter Server的VASA Provider注册状态。在多 vCenter 部署中，确保每个 vCenter Server 实例都有自定义 CA 证书。</block>
@@ -2277,4 +2276,5 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">将适用于VMware vSphere 9.xx的ONTAP工具迁移到10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">迁移到适用于 VMware vSphere 的最新 ONTAP 工具</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">迁移 VASA 提供程序和 SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">输入 5 至 60 分钟之间的备份频率值。</block>
 </blocks>
