@@ -24,7 +24,7 @@ summary: 开始使用适用于VMware vSphere的ONTAP工具包括几个步骤。
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome["互操作性表工具"]
-* link:../deploy/prerequisites.html["部署适用于VMware vSphere的ONTAP工具的前提条件"]
+* link:../deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"]
 * link:../deploy/pre-deploy-checks.html["开始之前"]
 
 

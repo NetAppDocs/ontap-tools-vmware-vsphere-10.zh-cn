@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
 ---
-= 部署适用于VMware vSphere的ONTAP工具的前提条件
+= 适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -79,74 +79,6 @@ NOTE: 从适用于VMware vSphere 10.4的ONTAP工具开始、虚拟机硬件已�
 互操作性表工具(IMT)提供了有关受支持的ONTAP、vCenter Server、ESXi主机和插件应用程序版本的最新信息。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["互操作性表工具"^]
-
-
-
-== 部署适用于VMware vSphere的ONTAP工具的配置限制
-
-您可以使用下表作为指南来配置适用于VMware vSphere的ONTAP工具。
-
-|===
-
-
-| * 部署 * | * 类型 * | *数量* | *主机数* 
-
-
-| 非HA | 小型(S) | ~1、K | 32. 
-
-
-| 非HA | 中(M) | ~24K | 64 
-
-
-| 高可用性 | 小型(S) | ~24K | 64 
-
-
-| 高可用性 | 中(M) | ~50 k | 128 
-
-
-| 高可用性 | 大(L) | ~100k | 256 [注意]表中的主机数显示了来自多个vCenter的主机总数。 
-|===
-
-
-== 适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)
-
-下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。
-
-|===
-| *vCenter部署大小* | *小* | *中* 
-
-
-| 配置为使用基于阵列的复制进行保护的虚拟机总数 | 2000 | 5000 
-
-
-| 基于阵列的复制保护组总数 | 250 | 250 
-
-
-| 每个恢复计划的保护组总数 | 50 | 50 
-
-
-| 复制的数据存储库数量 | 255 | 255 
-
-
-| VM数量 | 4000 | 7000 
-|===
-下表显示了VMware Live Site Recovery的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。
-
-|===
-
-
-| *VMware Live Site Recovery实例数* | * ONTAP工具部署规模* 
-
-
-| 最多4个 | 小型 
-
-
-| 4 到 8 | 中 
-
-
-| 8个以上 | 大型 
-|===
-有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery的操作限制"]。
 
 
 
@@ -233,10 +165,68 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-== ONTAP存储设置
+== 部署适用于VMware vSphere的ONTAP工具的配置限制
 
-要确保ONTAP存储与适用于VMware vSphere的ONTAP工具无缝集成、请考虑以下设置：
+您可以使用下表作为指南来配置适用于VMware vSphere的ONTAP工具。
 
-* 如果使用光纤通道(FC)进行存储连接、请在FC交换机上配置分区、以便将ESXi主机与SVM的FC LUN连接起来。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["了解ONTAP系统的FC和FCoE分区"]
-* 要使用ONTAP工具管理的SnapMirror复制、ONTAP存储管理员应先在ONTAP中创建 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP集群对等关系"]和 https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP集群间SVM对等关系"]、然后再使用SnapMirror。
+|===
 
+
+| * 部署 * | * 类型 * | *数量* | *主机数* 
+
+
+| 非HA | 小型(S) | ~1、K | 32. 
+
+
+| 非HA | 中(M) | ~24K | 64 
+
+
+| 高可用性 | 小型(S) | ~24K | 64 
+
+
+| 高可用性 | 中(M) | ~50 k | 128 
+
+
+| 高可用性 | 大(L) | ~100k | 256 [注意]表中的主机数显示了来自多个vCenter的主机总数。 
+|===
+
+
+== 适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)
+
+下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。
+
+|===
+| *vCenter部署大小* | *小* | *中* 
+
+
+| 配置为使用基于阵列的复制进行保护的虚拟机总数 | 2000 | 5000 
+
+
+| 基于阵列的复制保护组总数 | 250 | 250 
+
+
+| 每个恢复计划的保护组总数 | 50 | 50 
+
+
+| 复制的数据存储库数量 | 255 | 255 
+
+
+| VM数量 | 4000 | 7000 
+|===
+下表显示了VMware Live Site Recovery的数量以及适用于VMware vSphere部署规模的相应ONTAP工具。
+
+|===
+
+
+| *VMware Live Site Recovery实例数* | * ONTAP工具部署规模* 
+
+
+| 最多4个 | 小型 
+
+
+| 4 到 8 | 中 
+
+
+| 8个以上 | 大型 
+|===
+有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery的操作限制"]。
