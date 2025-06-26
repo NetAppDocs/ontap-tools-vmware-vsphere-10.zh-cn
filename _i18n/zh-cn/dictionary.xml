@@ -2246,16 +2246,10 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">如果您的设置中包含 NFS 和 VMFS 数据存储，而没有 vVols 数据存储，则只需卸载 ONTAP 工具 9.xx 并部署 ONTAP 工具 10.x 即可。但是，如果您的设置包含 vVols 数据存储，则必须执行 VASA 提供程序和 SRA 的迁移过程。</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">下表概述了这两种不同场景下的迁移过程。</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*如果设置有 vVols 数据存储*</block>
-  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*如果设置不包含 vVols 数据存储*</block>
-  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">迁移 VASA 提供程序</block>
-  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">迁移 SRA</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">创建虚拟机存储策略</block>
-  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">步骤：1.<block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2.<block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">为 VMware vSphere 10.4 部署和配置 ONTAP 工具</block>
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">如何从您的环境中删除 OTV 9.xx</block>
-  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">步骤：1.从您的环境中删除 ONTAP 工具 9.xx。请参阅<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知识库文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">从适用于VMware vSphere的ONTAP工具9.xx迁移到10.4后、使用NVMe/FC协议的vvol数据存储库将无法运行、因为ONTAP工具10.4仅对VMFS数据存储库支持NVMe-oF协议。</block>
-  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">迁移 VASA 提供程序和存储复制适配器 (SRA)</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">迁移 VASA 提供程序的步骤</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">通过 vCenter 服务器 API 在本地为 ONTAP 工具插件加入存储后端。</block>
   <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">您可以通过以下URL访问Swagger：`https://$FQDN_IP_PORT/,例如：<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>。</block>
@@ -2263,13 +2257,11 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ “otv_ip”：“xx.xx.xx.xx”， “vasa_provider_credentials”：{ “用户名”：“xxxxx”， “密码”：“*******” } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">将适用于 VMware vSphere 存储提供程序的 ONTAP 工具添加到 vCenter Server 并<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>使用适用于 VMware vSphere 的 ONTAP 工具。</block>
   <block id="9a75388e84716581ed710b23451155ae" category="list-text">只有在触发数据存储库发现作业后、适用于VMware vSphere 9.xxx的ONTAP ONTAP工具中才会显示从适用于VMware vSphere的NFS和VMFS数据存储库、此作业可能需要长达30分钟才能完成。验证数据存储库是否在 VMware vSphere 插件用户界面页面的 ONTAP 工具概览页面上可见。</block>
-  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">迁移 SRA 的步骤</block>
   <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRM界面显示恢复计划的状态，其中包含有关受保护站点和恢复站点的详细信息。在恢复计划中，“清理”和“重新保护”按钮处于禁用状态，而“测试”和“运行”按钮保持启用状态。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。</block>
   <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">在扩展高可用性、性能和扩展限制的同时、将ONTAP工具10.x向9.xx奇偶校验发展</block>
   <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">将适用于VMware vSphere 9.xx的ONTAP工具迁移到10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">迁移到适用于 VMware vSphere 的最新 ONTAP 工具</block>
-  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">迁移 VASA 提供程序和 SRA</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">输入 5 至 60 分钟之间的备份频率值。</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">了解适用于 VMware vSphere 的 ONTAP 工具中的 igroup 和导出策略</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">启动器组 (igroup) 是包含 FC 协议主机全球端口名称 (WWPN) 或 iSCSI 主机限定节点名称的表。您可以定义 igroup 并将其映射到 LUN，以控制哪些启动器有权访问 LUN。</block>
@@ -2376,4 +2368,11 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制</block>
   <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">ONTAP 工具要求和配置限制</block>
+  <block id="122962cdef914297e7bd27106c4b08ef" category="cell">*如果设置仅包含 NFS 和 VMFS 数据存储*</block>
+  <block id="23582373a176f3a1391b91644579b591" category="inline-link-macro">迁移 VASA 提供程序</block>
+  <block id="56e81eec05ba3edf697b5613dfbb8977" category="cell">步骤：1.<block ref="393201960d4eefccacb06cc7ccdc8cfc" category="inline-link-macro-rx"></block> 2. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="690fca4891ecdd9975fe5dc5bd2a520b" category="inline-link-macro">更新 SRA</block>
+  <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">步骤：1.从您的环境中删除 ONTAP 工具 9.xx。请参阅<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知识库文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3.<block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">迁移 VASA 提供程序并更新 SRA</block>
+  <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">更新存储复制适配器 (SRA) 的步骤</block>
 </blocks>
