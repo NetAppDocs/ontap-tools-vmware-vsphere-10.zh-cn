@@ -2083,7 +2083,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="305675e418fa7f87d5c522fec4e29a3d" category="list-text">部署适用于VMware vSphere 10.4的ONTAP工具OVA。</block>
   <block id="472d4465d1363ede67b4fdb4c6e0e1ff" category="inline-link-macro">从适用于VMware vSphere 10.x的ONTAP工具升级到10.4</block>
   <block id="601dd8c7000a195659d470e737339c2d" category="paragraph"><block ref="601dd8c7000a195659d470e737339c2d" category="inline-link-macro-rx"></block></block>
-  <block id="de07d353dcc67566b2f1a71fe30ec4aa" category="admonition">存储复制适配器(SRA)支持扇出、一致性组上的同步关系类型为自动故障转移双工和异步关系SnapMirror。但是、不支持在一致性组上使用两个async SnapMirror的扇出或在卷上使用扇出SnapMirors。</block>
   <block id="cdeb8a4a9786cfc45563b399c91bcce8" category="summary">在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。</block>
   <block id="e7fc5cd5d3b281daa6edd76ca9076d38" category="doc">扇出保护</block>
   <block id="7e6b27bdfe27b21cf49c575fe39989af" category="paragraph">在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。创建、编辑和删除SnapMirror主动同步保护工作流将保持同步保护。SRM故障转移和重新保护工作流会保持异步保护。</block>
@@ -2299,7 +2298,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2d6cceda29fb927297683321657cc7f7" category="paragraph-title">示例 3：</block>
   <block id="6e0ad0300479c496e85c7f90f364f3da" category="paragraph">从主机卸载数据存储</block>
   <block id="1042a36d4bd6b198c75db206e253d6a1" category="paragraph">*工作流程*：[卸载] DS1 (lun1): host1 (iqn1)</block>
-  <block id="99fb3d64e6243f94e6f41859fd70993d" category="paragraph">host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。以下两种情况会发生删除：• 如果没有映射任何 LUN，ONTAP 系统将删除子 igroup。• 计划清理作业会移除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。</block>
   <block id="041ec4ff6ad5f804da8976d697659842" category="paragraph-title">示例 4：</block>
   <block id="e5e28486c61b67fca6b2ef177a5f9359" category="paragraph">删除数据存储区</block>
   <block id="4a3642a61d33fc5e86d2b97fb3ec5b26" category="paragraph">*工作流程*：[删除] DS1 (lun1): host2 (iqn2)</block>
@@ -2375,4 +2373,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">步骤：1.从您的环境中删除 ONTAP 工具 9.xx。请参阅<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知识库文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3.<block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">迁移 VASA 提供程序并更新 SRA</block>
   <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">更新存储复制适配器 (SRA) 的步骤</block>
+  <block id="6b384d855656d218511c98e4bb3a3c1a" category="paragraph">host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。在以下两种情况下会发生删除：</block>
+  <block id="3650a37003fea5e62220604565648a36" category="list-text">如果没有映射任何 LUN，则 ONTAP 系统将删除子 igroup。</block>
+  <block id="58f346f8b1d31103f78fd7d4298e390b" category="list-text">计划的清理作业将删除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。</block>
+  <block id="fcebdc1d37d884dcdadc2c706178b160" category="admonition">存储复制适配器 (SRA) 支持具有自动故障转移双工类型的一个同步关系的扇出以及一致性组上的异步关系 SnapMirror。但是、不支持在一致性组上使用两个async SnapMirror的扇出或在卷上使用扇出SnapMirors。</block>
 </blocks>

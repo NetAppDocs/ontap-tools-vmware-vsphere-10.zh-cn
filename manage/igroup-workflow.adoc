@@ -94,7 +94,11 @@ NOTE: 上述名称仅供参考，并非真实的 igroup 名称。ONTAP工具管�
 
 
 
-host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。以下两种情况会发生删除：• 如果没有映射任何 LUN，ONTAP 系统将删除子 igroup。• 计划清理作业会移除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。
+host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。在以下两种情况下会发生删除：
+
+* 如果没有映射任何 LUN，则 ONTAP 系统将删除子 igroup。
+* 计划的清理作业将删除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。
+
 
 .示例 4：
 删除数据存储区
