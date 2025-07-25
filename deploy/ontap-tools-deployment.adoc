@@ -44,7 +44,7 @@ NOTE: 在继续部署之前、请将清单上集群的Distributed Resource Sched
 VMware vSphere 的 ONTAP 工具最初部署为非 HA 设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。
 
 .步骤
-. 下载 `.zip`包含适用于 VMware vSphere 的 ONTAP 工具的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。如果已将OVA导入到内容库中、则可以跳过此步骤并继续下一步。
+. 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。如果您已经将OVA导入内容库，则可以跳过此步骤，继续下一步。
 . 登录到vSphere服务器。
 . 导航到要部署OVA的资源池、集群或主机。
 +
