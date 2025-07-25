@@ -52,7 +52,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 . 选择要删除的vCenter Server旁边的垂直省略号，然后选择*Remove*。
 +
 
-NOTE: 删除vCenter Server实例后、应用程序将不再维护这些实例。
+NOTE: 删除 vCenter Server 实例后，应用程序将不再维护它们。
 
 
 

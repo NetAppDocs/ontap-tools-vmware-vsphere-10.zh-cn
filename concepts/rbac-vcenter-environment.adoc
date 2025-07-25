@@ -56,4 +56,4 @@ vCenter Server权限是指在创建权限时绑定在一起的多个组件的软
 
 === 用户和组
 
-您可以使用Active Directory或本地vCenter Server实例定义用户和组。通过与角色结合使用、您可以在vSphere对象层次结构中的对象上创建权限。此权限会根据关联角色中的Privileges授予访问权限。请注意、角色不会单独直接分配给用户。而是通过更大的vCenter Server权限中的角色Privileges、用户和组可以访问某个对象。
+您可以使用 Active Directory 或本地 vCenter Server 实例定义用户和组。结合角色，您可以创建对 vSphere 对象层次结构中对象的权限。该权限根据关联角色中的特权授予访问权限。请注意，角色并非直接分配给单独用户。相反，用户和组通过角色特权获得对对象的访问权限，这是更大的 vCenter Server 权限的一部分。

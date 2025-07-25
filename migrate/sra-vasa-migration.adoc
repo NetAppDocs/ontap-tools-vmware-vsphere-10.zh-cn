@@ -84,7 +84,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 请勿删除VASA Provider。
 
 +
-停止旧的VASA Provider后、vCenter Server将故障转移到适用于VMware vSphere的ONTAP工具。所有数据存储库和VM均可通过适用于VMware vSphere的ONTAP工具访问和提供服务。
+旧 VASA 提供程序停止后，vCenter Server 将故障转移到ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由适用于ONTAP tools for VMware vSphere提供服务。
 
 . 只有在触发数据存储库发现作业后、适用于VMware vSphere 9.xxx的ONTAP ONTAP工具中才会显示从适用于VMware vSphere的NFS和VMFS数据存储库、此作业可能需要长达30分钟才能完成。验证数据存储库是否在 VMware vSphere 插件用户界面页面的 ONTAP 工具概览页面上可见。
 . 在Swagger或Postman中使用以下API执行修补程序迁移：
@@ -135,7 +135,7 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 完成向vCenter Server迁移和注册ONTAP工具10.4后、请按照以下步骤进行操作：
 
 * 等待*Discovery *完成，所有主机上的证书将自动刷新。
-* 在启动数据存储库和虚拟机操作之前、请留出足够的时间。所需等待时间因配置中的主机、数据存储库和虚拟机数量而异。等待失败可能会导致间歇性操作故障。
+* 启动数据存储区和虚拟机操作之前，请留出足够的时间。所需的等待时间因配置中的主机、数据存储区和虚拟机的数量而异。等待失败可能会导致间歇性操作失败。
 
 
 升级后、如果虚拟机的合规性状态已过时、请按照以下步骤重新应用存储策略：
@@ -161,7 +161,7 @@ VM存储策略兼容性*下的兼容性状态显示为*过时*。
 == 更新存储复制适配器 (SRA) 的步骤
 
 .开始之前
-在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRM界面显示恢复计划的状态，其中包含有关受保护站点和恢复站点的详细信息。在恢复计划中，“清理”和“重新保护”按钮处于禁用状态，而“测试”和“运行”按钮保持启用状态。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。
+在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRM界面显示恢复计划的状态，其中包含有关受保护站点和恢复站点的详细信息。在恢复计划中，“*CleanupP*”和“*Reprotect*”按钮处于禁用状态，而“TEST”和“RUN”按钮保持启用状态。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。
 
 
 NOTE: 如果故障转移已完成、但重新保护处于待定状态、请勿开始迁移。请确保重新保护过程已完成、然后再继续迁移。如果正在进行测试故障转移、请清理测试故障转移并开始迁移。
@@ -176,6 +176,7 @@ NOTE: 如果故障转移已完成、但重新保护处于待定状态、请勿�
 
 . 在保护站点和恢复站点上执行这些步骤。
 +
+.. link:../manage/enable-services.adoc["为VMware vSphere服务启用ONTAP工具"]
 .. 按照中的步骤安装适用于VMware vSphere 10.4 SRA适配器的ONTAP工具link:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]。
 .. 在VMware Live Site Recovery用户界面页面上，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并确认这些设备在迁移前显示为。
 

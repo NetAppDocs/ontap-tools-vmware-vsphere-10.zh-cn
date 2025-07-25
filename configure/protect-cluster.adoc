@@ -18,7 +18,7 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 
 * 主机集群只包含一个SVM中的数据存储库。
 * 挂载在主机集群上的数据存储库不应挂载在集群外部的任何主机上。
-* 主机集群上挂载的所有数据存储库都必须是采用iSCSI/FC协议的VMFS数据存储库。不支持采用NVMe/FC和NVMe/TCP协议的卷、NFS或VMFS数据存储库。
+* 主机群集上挂载的所有数据存储都必须是使用 iSCSI/FC 协议的 VMFS 数据存储。不支持使用 NVMe/FC 和 NVMe/TCP 协议的vVols、NFS 或 VMFS 数据存储。
 * 构成主机集群上挂载的数据存储库的CG/LUN不应属于任何现有一致性组(FlexVol、CG)。
 * 构成主机集群上挂载的数据存储库的FlexVol或LUN不应属于任何现有SnapMirror关系。
 * 此主机集群应至少具有一个数据存储库。

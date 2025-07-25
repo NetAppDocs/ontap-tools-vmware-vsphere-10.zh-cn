@@ -36,7 +36,7 @@ NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创
 +
 此时将自动填充"Product"字段。
 
-.. 从下拉列表中选择VSC、VASA Provider或SRA等产品功能。
+.. 从下拉菜单中选择产品功能为*VSC、VASA Provider 和 SRA*。
 +
 系统将根据选定的产品功能自动填充“角色”字段。
 
@@ -105,7 +105,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 === 非管理员全局范围集群用户所需的最低权限列表
 
-本节列出了在不使用Users JSON文件的情况下创建的非管理员全局范围集群用户所需的最低权限。如果在本地范围添加了集群、建议使用JSON文件创建用户、因为适用于VMware vSphere的ONTAP工具不仅需要读取特权、还需要在ONTAP上进行配置。
+本节列出了未使用用户 JSON 文件创建的非管理员全局范围集群用户所需的最低权限。如果在本地范围内添加了集群，建议使用 JSON 文件创建用户，因为适用ONTAP tools for VMware vSphere需要的不仅仅是在ONTAP上进行配置的读取权限。
 
 使用API：
 

@@ -2,7 +2,7 @@
 permalink: protect/configure-on-srm-appliance.html 
 sidebar: sidebar 
 keywords:  
-summary: '部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据的ONTAP工具\(IP地址和管理员密码\)存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。' 
+summary: '部署 VMware Live Site Recovery 设备后，配置存储复制适配器 (SRA) 以启用灾难恢复管理。' 
 ---
 = 在VMware Live Site Recovery设备上配置SRA
 :allow-uri-read: 
@@ -11,33 +11,36 @@ summary: '部署VMware Live Site Recovery设备后、您应在VMware Live Site R
 
 
 [role="lead"]
-部署VMware Live Site Recovery设备后、您应在VMware Live Site Recovery设备上配置SRA。成功配置SRA后、VMware Live Site Recovery设备便可与SRA进行通信以进行灾难恢复管理。您应将适用于VMware vSphere凭据(IP地址)的ONTAP工具存储在VMware Live Site Recovery设备中、以实现VMware Live Site Recovery设备与SRA之间的通信。
+部署 VMware Live Site Recovery 设备后，配置存储复制适配器 (SRA) 以启用灾难恢复管理。
+
+在 VMware Live Site Recovery 设备上配置 SRA 会将ONTAP tools for VMware vSphere保存在设备内，从而实现 VMware Live Site Recovery 和 SRA 之间的通信。
 
 .开始之前
-您应已从下载_tar.gz_文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"]。
+* 确保您已从 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"] 。
+* 确保已在ONTAP工具管理器中启用 SRA 服务。有关更多信息，请参阅link:../manage/enable-services.html["为VMware vSphere服务启用ONTAP工具"]部分。
+* 确保已将 vCenter Server 添加到 VMware vSphere 设备的 ONTATP 工具中。有关更多信息，请参阅link:../configure/add-vcenter.html["添加 vCenter Server"]部分。
+* 确保已将存储后端添加到适用ONTAP tools for VMware vSphere。有关更多信息，请参阅link:../configure/add-storage-backend.html["添加存储后端"]部分。
 
-* 关于此任务 *
-
-在VMware Live Site Recovery设备上配置SRA会将SRA凭据存储在VMware Live Site Recovery设备中。
 
 .步骤
 . 在VMware Live Site Recovery设备屏幕上，选择*Storage Replication Adapter*>*New Adapter*。
 . 将_.tar.gz_文件上传到VMware Live Site Recovery。
-. 使用管理员帐户通过putty登录到VMware Live Site Recovery设备。
+. 通过 SSH 客户端（例如 PuTTY），使用管理员帐户登录 VMware Live Site Recovery 设备。
 . 使用命令切换到root用户： `su root`
 . 运行命令 `cd /var/log/vmware/srm` 导航到日志目录。
 . 在日志位置输入命令以获取SRA使用的Docker ID： `docker ps -l`
 . 要登录到此容器ID、请输入命令： `docker exec -it -u srm <container id> sh`
-. 使用以下命令使用适用于VMware vSphere的ONTAP工具配置VMware Live Site Recovery IP地址和密码： `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
+. 使用以下命令通过ONTAP tools for VMware vSphere IP 地址和密码配置 VMware Live Site Recovery：  `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 +
 
 NOTE: 您需要在单引号中提供密码值、以确保Perl脚本不会将密码中的特殊字符读取为输入的分隔符。
 
 +
 
-NOTE: 应用程序用户名和密码是在ONTAP工具部署期间设置的。注册VASA Provider/SRA时需要执行此操作。
+NOTE: 首次启用这些服务时，您可以在ONTAP工具管理器中设置应用程序 (VASA Provider/SRA) 的用户名和密码。需要这些凭据才能将 SRA 注册到 VMware Live Site Recovery 设备。
 
-. 重新扫描适配器以验证是否已在VMware Live Site Recovery Storage Replication Adapters页面上更新详细信息。
+. 重新扫描适配器以确认更新的详细信息出现在 VMware Live Site Recovery 存储复制适配器页面上。
 
 
-此时将显示一条成功消息，确认存储凭据已存储。SRA 可以使用提供的 IP 地址，端口和凭据与 SRA 服务器进行通信。
+.结果
+此时将显示一条确认消息，指示存储凭据已保存。SRA现在可以使用指定的 IP 地址、端口和凭据与 SRA 服务器通信。

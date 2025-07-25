@@ -66,6 +66,6 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 .步骤
 . 验证受保护站点上的数据存储库是否包含已向 vCenter Server 注册的虚拟机。
 . 验证受保护站点上的 ESXi 主机是否已挂载 Storage Virtual Machine （ SVM ）中的 NFS 导出卷。
-. 使用Array Manager向导向VMware Live Site Recovery添加阵列时，请验证是否在*NFS Addresses*字段中指定了有效的地址，例如NFS导出所在的IP地址、主机名或FQDN。
+. 使用阵列管理器向导将阵列添加到 VMware Live Site Recovery 时，请验证“*NFS 地址*”字段中指定的有效地址（例如，存在 NFS 导出的 IP 地址或 FQDN）。请勿在“*NFS 地址*”字段中使用 NFS 主机名。
 . 使用 `ping` 命令、以验证此主机是否具有可访问用于从SVM提供NFS导出的IP地址的VMkernel端口。
 
