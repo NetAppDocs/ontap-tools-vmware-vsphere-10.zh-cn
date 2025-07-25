@@ -2179,7 +2179,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">对于用于 VMware vSphere HA 部署的 ONTAP 工具，您应该更改第一个节点（即 node1）上的维护控制台用户密码。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 设置不适用于 NVMe、NVMe/FC 和 NVMe/TCP 协议。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">您可以使用适用于VMware vSphere的ONTAP工具向vCenter Server实例注册VASA Provider。VASA Provider设置部分显示选定vCenter Server的VASA Provider注册状态。在多 vCenter 部署中，确保每个 vCenter Server 实例都有自定义 CA 证书。</block>
-  <block id="6cc905f50a7d9454e2cd6814a57ffcc4" category="list-text">下载<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>包含适用于 VMware vSphere 的 ONTAP 工具的二进制文件 (_.ova_) 和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
   <block id="5da601563ca7e442eafa7d6f32d54969" category="paragraph">VMware vSphere 的 ONTAP 工具最初部署为非 HA 设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。</block>
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。</block>
   <block id="7cbac47005f891099143c8780a7b8c4a" category="cell">7.0U3和8.0U3</block>
@@ -2383,4 +2382,5 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6df3cc05d7d7f12128b849f4ef34c11a" category="cell">ISO 可能与当前版本相同或高于当前版本的两个版本。</block>
   <block id="93470a6d5ec43c6c46729637f4feda14" category="paragraph">如果您要从适用于ONTAP tools for VMware vSphere升级，则需要先完成以下步骤才能继续升级任务：* 为每个节点额外添加 100 GB 硬盘，因为服务数据存储在虚拟机本地。* 根据部署情况更改已关闭虚拟机的 CPU 和内存。启用 CPU 和 RAM 的热插件。</block>
   <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。如果您已经将OVA导入内容库，则可以跳过此步骤，继续下一步。</block>
+  <block id="f7df05ae68c6e5833dfd15542c1632c0" category="list-text">从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
 </blocks>

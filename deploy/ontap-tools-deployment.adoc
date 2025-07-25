@@ -26,7 +26,7 @@ NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部�
 
 *创建内容库*如果您计划仅使用小型单节点部署，则不需要创建内容库。
 
-. 下载 `.zip`包含适用于 VMware vSphere 的 ONTAP 工具的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。
+. 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。
 . 登录到vSphere Client
 . 选择vSphere客户端菜单并选择*内容库*。
 . 选择页面右侧的*创建*。
