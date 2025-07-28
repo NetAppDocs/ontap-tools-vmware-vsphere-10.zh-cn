@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: 将数据磁盘连接到虚拟机以扩展存储容量。 
 ---
 = 将数据磁盘与虚拟机连接或断开
 :allow-uri-read: 

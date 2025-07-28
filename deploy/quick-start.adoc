@@ -94,5 +94,5 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 计划对适用于VMware vSphere的ONTAP工具设置进行备份、以便在发生故障时恢复设置。
 
 [role="quick-margin-list"]
-* link:../manage/manage/enable-backup.html["创建备份并恢复ONTAP工具设置"]
+* link:../manage/enable-backup.html["创建备份并恢复ONTAP工具设置"]
 

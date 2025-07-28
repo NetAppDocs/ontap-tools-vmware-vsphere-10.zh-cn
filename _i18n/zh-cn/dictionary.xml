@@ -2130,10 +2130,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6a9f1ff4ac0e0c970407817908ab7071" category="doc">展开vols数据存储库</block>
   <block id="c61ac620cee1003679fdaa462dbeaede" category="admonition">扩展虚拟卷数据存储库操作不适用于基于ASA R2系统的虚拟卷数据存储库。</block>
   <block id="b5bf1eb9fc501e53457cde004db09086" category="list-text">从Swagger或Postman发出以下API进行迁移。</block>
-  <block id="54caf31d7246402cdcb6cd5c255c5c64" category="paragraph">CURL -X柱<block ref="4042f1acb8fe47ca556f8b938a8d6e08" category="inline-link-rx"></block></block>
   <block id="91377d2edc3d930017c1b8c4679bdb89" category="list-text">在Swagger中使用以下URI检查状态：</block>
   <block id="96b2fedcc932770f843418dedfe7f004" category="list-text">在Swagger或Postman中使用以下API执行修补程序迁移：</block>
-  <block id="99a490d727b23ee47f3b441a7342d420" category="paragraph">CURL -X修补程序<block ref="fd07e34d045cf59e25acb7168e60f530" category="inline-link-rx"></block></block>
   <block id="5db743b53293821cee54f2f6de3ecd01" category="list-text">等待*Discovery *完成，所有主机上的证书将自动刷新。</block>
   <block id="821d346df6abaf74ffd3d352413de8ff" category="list-text">*主机系统规模估算要求*根据部署规模推荐的内存如下表所示。要部署高可用性(HA)、您需要使用表中指定的设备大小的三倍。</block>
   <block id="a13a152159236a6645a22fae6e163217" category="cell">*每个节点的CPU数*</block>
@@ -2196,7 +2194,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">从适用于VMware vSphere的ONTAP工具9.xx迁移到10.4后、使用NVMe/FC协议的vvol数据存储库将无法运行、因为ONTAP工具10.4仅对VMFS数据存储库支持NVMe-oF协议。</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">迁移 VASA 提供程序的步骤</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">通过 vCenter 服务器 API 在本地为 ONTAP 工具插件加入存储后端。</block>
-  <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">您可以通过以下URL访问Swagger：`https://$FQDN_IP_PORT/,例如：<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>。</block>
   <block id="6e086f74a5eaa2061811529e1d6a623e" category="paragraph">curl -X POST <block ref="c5820eec1fb061702ab2f34b24d1d295" category="inline-link-rx"></block> \ --header 'x-auth：&lt;auth_token&gt;' \ --header 'Content-Type：application/json' \ --data '{“otv_ip”：“xx.xx.xx.xx”，“vasa_provider_credentials”：{“用户名”：“xxxxx”，“密码”：“******”}，“database_password”：“******”}'</block>
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ “otv_ip”：“xx.xx.xx.xx”， “vasa_provider_credentials”：{ “用户名”：“xxxxx”， “密码”：“*******” } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">将适用于 VMware vSphere 存储提供程序的 ONTAP 工具添加到 vCenter Server 并<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>使用适用于 VMware vSphere 的 ONTAP 工具。</block>
@@ -2340,7 +2337,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="e6a187afd099cc2fbaed679eda4f9a89" category="paragraph">将 vCenter Server 实例添加到ONTAP tools for VMware vSphere中，以配置、管理和保护 vCenter Server 环境中的虚拟数据存储库。</block>
   <block id="0115ba480d5059c11ce8f89628a7743d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> （可选）配置 SRA 保护</block>
   <block id="3d67f96eb2aec81f92bfe17a27594d9f" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block></block>
-  <block id="26e0f425f3ae7a1bcdeaee665ec072ff" category="list-text"><block ref="26e0f425f3ae7a1bcdeaee665ec072ff" category="inline-link-macro-rx"></block></block>
   <block id="034f02f8ec70fbc1533e451250a2bcad" category="admonition">该磁盘已从虚拟机中移除。如果其他虚拟机共享该磁盘，则不会删除磁盘文件。</block>
   <block id="a5e1dbbf601c017647380a6aecd9eb8d" category="list-text">提供日志包标签并生成日志包。文件生成后，您可以看到下载选项。下载可能需要一些时间。</block>
   <block id="b0a6cb6bc671c9e84eb8bf05473ab774" category="summary">删除ONTAP tools for VMware vSphere后，您应该清理部署期间创建的 FlexVolume。如果您已使用专用ONTAP集群进行部署，则应清理 FlexVolume，因为部署会创建大量未使用的 FlexVolume，从而导致性能下降。</block>
@@ -2354,7 +2350,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c7a3e6d485a07dd9c95f9051e9912372" category="paragraph">旧 VASA 提供程序停止后，vCenter Server 将故障转移到ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由适用于ONTAP tools for VMware vSphere提供服务。</block>
   <block id="4e3b183a92792cfb6d46be8c763d9b1f" category="list-text">启动数据存储区和虚拟机操作之前，请留出足够的时间。所需的等待时间因配置中的主机、数据存储区和虚拟机的数量而异。等待失败可能会导致间歇性操作失败。</block>
   <block id="2c6bdfd15e2c3837505962bde7327555" category="paragraph">在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRM界面显示恢复计划的状态，其中包含有关受保护站点和恢复站点的详细信息。在恢复计划中，“*CleanupP*”和“*Reprotect*”按钮处于禁用状态，而“TEST”和“RUN”按钮保持启用状态。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。</block>
-  <block id="e6f96ab39ba072438ac442d86c5d8cbd" category="list-text"><block ref="e6f96ab39ba072438ac442d86c5d8cbd" category="inline-link-macro-rx"></block></block>
   <block id="2f1a00cebb4ee36563713e73cd552aad" category="list-text">如果连接到集群，请在 *SVM 名称* 字段中指定 SVM 名称，或者将其留空以管理集群中的所有 SVM。</block>
   <block id="5921d19c5073db0cf91d2f7a19cb58b3" category="summary">部署 VMware Live Site Recovery 设备后，配置存储复制适配器 (SRA) 以启用灾难恢复管理。</block>
   <block id="5f917c11d7a2e921fe58d07dc5187d72" category="paragraph">在 VMware Live Site Recovery 设备上配置 SRA 会将ONTAP tools for VMware vSphere保存在设备内，从而实现 VMware Live Site Recovery 和 SRA 之间的通信。</block>
@@ -2383,4 +2378,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="93470a6d5ec43c6c46729637f4feda14" category="paragraph">如果您要从适用于ONTAP tools for VMware vSphere升级，则需要先完成以下步骤才能继续升级任务：* 为每个节点额外添加 100 GB 硬盘，因为服务数据存储在虚拟机本地。* 根据部署情况更改已关闭虚拟机的 CPU 和内存。启用 CPU 和 RAM 的热插件。</block>
   <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。如果您已经将OVA导入内容库，则可以跳过此步骤，继续下一步。</block>
   <block id="f7df05ae68c6e5833dfd15542c1632c0" category="list-text">从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
+  <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
+  <block id="df0e042574783c577a323cad7e00d03f" category="paragraph">curl -X POST <block ref="60b2cf26de252a4c9c938a4ded6aed78" prefix=" " category="inline-code"></block></block>
+  <block id="1899392092401675b3ca134eaf0dae0e" category="paragraph">您可以通过此 URL 访问 Swagger： <block ref="2b09eb15e8e904ff30adf6fd75069681" prefix=" " category="inline-code"></block> 。</block>
+  <block id="90299a7739327ddb8f7bdb36ab48e642" category="paragraph">curl -X 补丁<block ref="8083d85a2708038b6e3e98616b6fee1c" prefix=" " category="inline-code"></block></block>
 </blocks>
