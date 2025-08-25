@@ -53,7 +53,7 @@ NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上�
 | 存储、主机和应用程序 | 版本要求 
 
 
-| ONTAP | 9.14.1、9.151和9.16.0。FAS、ASA A系列、ASA C系列、AFF A系列、AFF C系列和ASA R2。 
+| ONTAP | 9.14.1、9.15.1、9.16.0、9.16.1 和 9.16.1P3 FAS、 ASA A 系列、 ASA C 系列、 AFF A 系列、 AFF C 系列和ASA r2。 
 
 
 | ONTAP工具支持的ESXi主机 | 7.0.3及更高版本 

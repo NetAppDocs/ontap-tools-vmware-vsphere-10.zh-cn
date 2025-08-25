@@ -11,7 +11,10 @@ summary: 了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere
 
 
 [role="lead"]
-了解从适用于VMware vSphere 9的ONTAP工具迁移到适用于VMware vSphere 10.1或更高版本的ONTAP工具是否适合您。有关最新的兼容性信息，请参阅 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+了解从ONTAP tools for VMware vSphere迁移到ONTAP tools for VMware vSphere是否适合您。
+
+
+NOTE: 有关最新的兼容性信息，请参阅 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
 
 [cols="20%,25%,25%,30%"]
 |===
@@ -21,7 +24,7 @@ summary: 了解适用于VMware vSphere 9的ONTAP工具与适用于VMware vSphere
 | 关键价值主张 | 利用增强的安全性、合规性和自动化功能简化零日到二日运营 | 在扩展高可用性、性能和扩展限制的同时、将ONTAP工具10.x向9.xx奇偶校验发展 | 扩展了支持范围、仅包括适用于VMFS和VMware的FC以及适用于VMFS的NVMe-oF、NVMe-oF、TCP。NetApp SnapMirror易于使用、vSphere城域存储集群设置简单、并提供三站点VMware实时站点恢复支持 
 
 
-| ONTAP版本资格认定 | ONTAP 9．9.1至ONTAP 9．15．1 | ONTAP 9．12.1至ONTAP 9．14.1 | 适用于ONTAP工具10.2的9.12.1 9.12.1到9.15.1 9.15.1,适用于ONTAP工具10.3的ONTAP 9.14.1, 9.15.1, 9.16.0。ONTAP 9.14.1、9.151、9.16.0、9.16.1 for ONTAP tools 10.4 
+| ONTAP版本资格认定 | ONTAP 9.9.1 升级至ONTAP 9.16.1 | ONTAP 9．12.1至ONTAP 9．14.1 | ONTAP工具 10.2 的ONTAP 9.12.1 升级到ONTAP 9.15.1。适用于ONTAP工具 10.3 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。适用于ONTAP工具 10.4 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用ASA r2 系统时， ONTAP工具 10.4 需要ONTAP 9.16.1P3 及更高版本。 
 
 
 | VMware版本支持 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5到VMware Live Site Recovery 9.0 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7到VMware Live Site Recovery 9.0 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7到VMware Live Site Recovery 9.0 
