@@ -142,6 +142,6 @@ NOTE: 为上述所有IP地址创建DNS记录。在分配主机名之前、请将
 
 要确保ONTAP存储与适用于VMware vSphere的ONTAP工具无缝集成、请考虑以下设置：
 
-* 如果使用光纤通道(FC)进行存储连接、请在FC交换机上配置分区、以便将ESXi主机与SVM的FC LUN连接起来。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["了解ONTAP系统的FC和FCoE分区"]
+* 如果您使用光纤通道 (FC) 进行存储连接，请在 FC 交换机上配置分区以将 ESXi 主机与 SVM 的 FC LIF 连接起来。 https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["了解ONTAP系统的FC和FCoE分区"]
 * 要使用ONTAP工具管理的SnapMirror复制、ONTAP存储管理员应先在ONTAP中创建 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP集群对等关系"]和 https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP集群间SVM对等关系"]、然后再使用SnapMirror。
 

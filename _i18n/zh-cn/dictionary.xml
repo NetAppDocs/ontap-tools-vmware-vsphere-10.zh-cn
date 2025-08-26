@@ -1351,7 +1351,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">查看模板的详细信息，然后选择*Next*。</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">阅读并接受许可协议，然后选择*Next*。</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">为每个源网络选择目标网络，然后选择*Next*。</block>
-  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">在*自定义模板*窗口中，填写必填字段，然后选择*下一步*。</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">选择屏幕右上角的*管理员*图标，然后选择*更改密码*。</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">在*主机集群保护*窗口中，选择集群对应的省略号菜单，然后选择*删除保护*。</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">在概述部分中选择*编辑设备设置*。</block>
@@ -1763,8 +1762,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
   <block id="955e2530b35bd36732551d894e503a00" category="list-text">在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。</block>
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">如果您使用的是vCenter 8.0.3版本，请选择*自定义此虚拟机的硬件*选项，此选项将激活名为*自定义硬件*的附加步骤，然后再进入*准备完成*窗口。</block>
-  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">如果您使用的是vCenter 7.0.3版本、请在部署结束时按照*下一步是什么？*一节中的步骤进行操作。</block>
-  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">使用vCenter 8.0.3版本时，在*Customize harder*(自定义硬件*)窗口中，启用*CPU Hot add*和*Memory Hot plug*选项以启用HA功能。</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">如果您已将适用于VMware vSphere的ONTAP工具部署到vCenter Server 7..3中、请在部署后按照以下步骤进行操作。</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">登录到vCenter Client</block>
   <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*选项。</block>
@@ -1981,7 +1978,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">ONTAP存储设置</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">要确保ONTAP存储与适用于VMware vSphere的ONTAP工具无缝集成、请考虑以下设置：</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">了解ONTAP系统的FC和FCoE分区</block>
-  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">如果使用光纤通道(FC)进行存储连接、请在FC交换机上配置分区、以便将ESXi主机与SVM的FC LUN连接起来。<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
   <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">ONTAP集群对等关系</block>
   <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">ONTAP集群间SVM对等关系</block>
   <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">要使用ONTAP工具管理的SnapMirror复制、ONTAP存储管理员应先在ONTAP中创建<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block>和<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block>、然后再使用SnapMirror。</block>
@@ -2385,4 +2381,11 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">有关最新的兼容性信息，请参阅<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 升级至ONTAP 9.16.1</block>
   <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAP工具 10.2 的ONTAP 9.12.1 升级到ONTAP 9.15.1。适用于ONTAP工具 10.3 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。适用于ONTAP工具 10.4 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用ASA r2 系统时， ONTAP工具 10.4 需要ONTAP 9.16.1P3 及更高版本。</block>
+  <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="inline-image-macro">选择名称和文件夹</block>
+  <block id="797b9d658e154cdf3e14cfdbdb0fc337" category="list-text">如果您使用的是 vCenter Server 7.0.3 版本，请按照部署结束时的*下一步是什么？*部分中的步骤进行操作。<block ref="10901421e1b49cc7648423e4186ee13b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d44ed4727a9bed10ad17773b1b922e" category="inline-image-macro">自定义模板</block>
+  <block id="603b3c719f65dafb1976e068ef1f8d45" category="list-text">在*自定义模板*窗口中，填写必填字段并选择*下一步*。<block ref="bfa0729b2fed6181848e39628c495247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">定制硬件</block>
+  <block id="2a2d465455150512141b1402a600df32" category="list-text">使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="936fb178b14835844700bc06aa5ab952" category="list-text">如果您使用光纤通道 (FC) 进行存储连接，请在 FC 交换机上配置分区以将 ESXi 主机与 SVM 的 FC LIF 连接起来。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
 </blocks>
