@@ -1465,7 +1465,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">选择*Reset (重置)*以实施更改。</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">选择*Reset (重置)*以实施更改。成功重置密码后、您可以使用新密码进行登录。</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">在右窗格中选择*Config*选项卡。</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage vMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">在右窗格中选择*Monitor*选项卡。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">在管理选项卡中选择*占位数据存储库*&gt;*新建*以创建新的占位数据存储库。</block>
@@ -1707,7 +1706,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">此信息会在安装期间进行验证。如果存在差异、Web控制台上会显示一条错误消息、并提示您更正该错误。</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">主机名必须包含字母(A-Z、a-z)、数字(0-9)和连字符(-)。要配置双堆栈、请指定映射到IPv6地址的主机名。</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">如果在OVF表单中存在差异、则会出现一个对话框、提示您采取更正操作。使用Tab按钮导航、进行必要的更改、然后选择"确定"。您有三次尝试机会来解决任何问题。如果尝试三次后问题仍然存在、则安装过程将停止、建议在新虚拟机上重试安装。</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">删除FlexVol卷</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">如果将专用ONTAP集群用于ONTAP工具以进行VMware部署、则会创建许多未使用的FlexVol卷。删除适用于VMware vSphere的ONTAP工具后、您应删除FlexVol卷、以避免可能对性能造成的影响。</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">如果是iSCSI部署、则还需要删除igroub。</block>
@@ -1720,7 +1718,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">卸载适用于VMware vSphere的ONTAP工具</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">从适用于VMware vSphere托管的数据存储库的ONTAP工具中删除或移动所有虚拟机。</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">要删除虚拟机、请参见<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">要将其移至非受管数据存储库、请参见<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">如果已启用VASA Provider、请在ONTAP工具中选择*设置*&gt;* VASA Provider设置*&gt;*注销*、以便从所有vCenter Server中取消注册VASA Provider。</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">从VMware Live Site Recovery中删除SRA适配器：</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">以管理员身份使用端口5480登录到VMware Live Site Recovery设备管理界面。</block>
@@ -2388,4 +2385,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">定制硬件</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">如果您使用光纤通道 (FC) 进行存储连接，请在 FC 交换机上配置分区以将 ESXi 主机与 SVM 的 FC LIF 连接起来。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">如果 OVF 表格存在差异，则会出现一个对话框提示采取纠正措施。使用标签按钮进行导航，进行必要的更改，然后选择*确定*。您有三次机会来解决任何问题。如果三次尝试后问题仍然存在，安装过程将停止，建议在新的虚拟机上重新尝试安装。</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">如何使用 Storage vMotion 迁移虚拟机</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">要将它们移动到非托管数据存储区，请参阅<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>
