@@ -2,7 +2,7 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: 在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。 
+summary: 在扇出保护场景中，一致性组受到双重保护，在第一个目标ONTAP集群上具有同步关系，在第二个目标ONTAP集群上具有异步关系。 
 ---
 = 扇出保护
 :allow-uri-read: 
@@ -11,9 +11,12 @@ summary: 在扇出保护中、一致性组受到双重保护、第一个目标ON
 
 
 [role="lead"]
-在扇出保护中、一致性组受到双重保护、第一个目标ONTAP集群上使用同步关系、第二个目标ONTAP集群上使用异步关系。创建、编辑和删除SnapMirror主动同步保护工作流将保持同步保护。SRM故障转移和重新保护工作流会保持异步保护。
+在扇出保护场景中，一致性组受到双重保护，在第一个目标ONTAP集群上具有同步关系，在第二个目标ONTAP集群上具有异步关系。创建、编辑和删除SnapMirror主动同步保护工作流维护同步保护。  VMware Live Site Recovery 设备故障转移和重新保护工作流维持异步保护。
 
-为了建立扇出保护、您需要对三个站点集群和SVM建立对等关系。
+
+NOTE: SVM 用户不支持扇出。
+
+要设置扇出保护，请将三个站点集群和 SVM 对等连接。
 
 示例
 
@@ -38,10 +41,17 @@ summary: 在扇出保护中、一致性组受到双重保护、第一个目标ON
 
 
 |===
-下图显示了扇出保护配置： image:../media/fan-out-protection.png["扇出保护配置"] image:../media/fan-out-protection-relationship.png["扇出保护关系"]
+下图显示了扇出保护配置：image:../media/fan-out-protection.png["扇出保护配置"] image:../media/fan-out-protection-relationship.png["扇出保护关系"]
 
-* 步骤 *
+.步骤
+. 选择一个新的占位数据存储。分阶段保护的占位数据存储选择标准是：
++
+** 请勿将占位数据存储放置在您正在保护的主机群集中。
+** 如果您需要在主机集群中包含占位数据存储，请在设置SnapMirror主动同步保护之前将其添加到 VMware Live Site Recovery 设备。通过此设置，您可以将占位数据存储置于保护之外。
++
+有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["选择占位数据存储库"]
 
-. 创建一个新的占位符数据存储。参考 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["选择占位数据存储库"]
-. 将数据存储库添加到主机集群保护link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。您需要同时添加异步和同步策略类型。
+
+
+. 通过以下步骤将数据存储添加到主机群集保护中link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。添加异步和同步策略类型。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: vCenter是一种中央管理平台、可用于控制主机、虚拟机和存储后端。 
 ---
-= 管理vCenter Server实例
+= 在ONTAP工具中管理 vCenter Server 实例
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -37,19 +37,20 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择适用的vCenter Server实例
 . 选择要修改的vCenter Server旁边的垂直省略号，然后选择*Modify*。
-. 修改vCenter Server实例详细信息并选择*修改*。
+. 在“修改 vCenter”窗口中，输入用户名、密码和端口详细信息。
+. 上传证书并选择*修改*。
 
 
 
 
 == 删除vCenter Server实例
 
-您需要先删除连接到vCenter Server的所有存储后端、然后再将其删除。
+删除 vCenter Server 之前，请先删除其中的所有存储后端。
 
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从工具条中选择适用的vCenter Server实例
-. 选择要删除的vCenter Server旁边的垂直省略号，然后选择*Remove*。
+. 选择要删除的 vCenter Server 的垂直省略号，然后选择“*删除*”。
 +
 
 NOTE: 删除 vCenter Server 实例后，应用程序将不再维护它们。

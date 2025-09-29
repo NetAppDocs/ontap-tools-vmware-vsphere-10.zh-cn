@@ -1,0 +1,23 @@
+---
+permalink: manage/backup-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 输入NTP服务器详细信息以同步ONTAP工具设备的时钟。 
+---
+= 编辑备份设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从适用于ONTAP tools for VMware vSphere开始，备份功能默认启用，每 10 分钟创建一个备份。您可以禁用备份或编辑备份的频率。
+
+不要禁用备份，因为它会阻止ONTAP工具维持低 RPO。禁用备份不会删除现有的备份文件。您可以将备份频率更改为 10 到 60 分钟之间的值。
+
+.步骤
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 选择*设置* > *备份* > *编辑*选项。
+. 在编辑窗口中，您可以禁用备份或编辑备份频率。
+

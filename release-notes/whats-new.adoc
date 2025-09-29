@@ -1,31 +1,50 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.4, ONTAP tools for VMware vSphere' 
-summary: 了解适用于VMware vSphere 10.4的ONTAP工具中提供的新功能。 
+keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
+summary: 了解适用于ONTAP tools for VMware vSphere中提供的新功能。 
 ---
-= 适用于VMware vSphere 10.4的ONTAP工具中的新增功能
+= 适用于ONTAP tools for VMware vSphere的新功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-了解适用于VMware vSphere 10.4的ONTAP工具中提供的新功能。
+了解适用于ONTAP tools for VMware vSphere中提供的新功能。
 
-[cols="30%,70%"]
-|===
-| 更新 | Description 
+* *平台资质*
 
 
-| link:../configure/create-datastore.html["支持ASA R2系统、每个集群12个节点"] | 适用于VMware vSphere 10.4的ONTAP工具支持适用于每个集群最多12个节点的ASA R2存储系统的工作流、从而提高数据管理效率和可扩展性。它支持采用iSCSI和FC协议的虚拟卷数据存储库以及采用iSCSI、FC和NVMe协议的VMFS数据存储库、从而提供灵活且增强的存储选项。 
+ONTAP tools for VMware vSphere增加了对ASA r2 系统的支持，从而提供了与最新硬件和软件配置的兼容性。此版本还包括与ONTAP 9.16.1 和 9.17.1 的集成，扩展了支持的环境。
+
+* *VMware 资格和认证*
 
 
-| link:../manage/add-ntpserver.html["ONTAP工具管理器用户界面增强功能"] | 现在、您可以启用NTP服务器、以便在环境中精确同步时间、并通过ONTAP工具管理器界面配置遥测设置以监控和分析系统性能。维护控制台中不再提供这些设置。 
+ONTAP tools for VMware vSphere符合当前的 VMware 互操作性认证标准，支持 ESXi 主机和 vCenter Server。
+
+* * MetroCluster支持*
 
 
-| 增强的安全功能 | 现在，安全功能可提供增强的保护并符合行业标准，从而提供强大且用户友好的体验，帮助管理员更有效地管理VMware环境。 
+此版本引入了对MetroCluster (MCC) 配置的支持，增强了高可用性和灾难恢复功能。
+
+* *安全和证书管理*
 
 
-| link:../protect/enable-storage-replication-adapter.html["增强了SRA灾难恢复功能"] | 适用于VMware vSphere 10.4的ONTAP工具现在支持使用站点恢复设备(SRA)执行灾难恢复操作、该设备除了具有SnapMirror计划的Snapshot副本之外、还具有自定义命名的快照。 
-|===
+此版本引入了自签名证书的简化管理，增强了用户体验并提高了对安全标准的遵守。它提供了改进的证书验证工作流程，以保护ONTAP tools for VMware vSphere通信的ONTAP和 ONTAP 工具。
+
+* *复制增强*
+
+
+此版本支持具有分层一致性组的 VMFS 复制，包括ASA r2 系统中的 SRA 和SnapMirror活动同步。它支持零 RPO 备份，以提高数据保护和恢复。
+
+* *升级和迁移*
+
+
+从以前版本的ONTAP tools for VMware vSphere到ONTAP tools for VMware vSphere的升级和迁移过程旨在无缝且高效，从而最大限度地减少停机时间并确保平稳过渡。
+
+
+
+== 支持的ONTAP平台和 vCenter Server 版本
+
+有关版本兼容性的最新详细信息，请参阅 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["NetApp 互操作性表工具"^]。

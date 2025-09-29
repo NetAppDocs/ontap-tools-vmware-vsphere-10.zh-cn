@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 启动器组 (igroup) 是包含 FC 协议主机全球端口名称 (WWPN) 或 iSCSI 主机限定节点名称的表。您可以定义 igroup 并将其映射到 LUN，以控制哪些启动器有权访问 LUN。
 
-在适用于 VMware vSphere 9.x 的 ONTAP 工具中，igroup 是在扁平结构中创建和管理的，其中 vCenter 中的每个数据存储库都与单个 igroup 关联。这种模型限制了 igroup 在多个数据存储库之间的灵活性和重用性。适用于 VMware vSphere 10.x 的 ONTAP 工具引入了嵌套 igroup，其中 vCenter 中的每个数据存储库都与一个父 igroup 关联，而每个主机都链接到该父 igroup 下的子 igroup。您可以使用用户定义的名称定义自定义父 igroup，以便在多个数据存储库之间重用，从而实现更灵活、更互联的 igroup 管理。了解 igroup 工作流对于在适用于 VMware vSphere 的 ONTAP 工具中有效管理 LUN 和数据存储库至关重要。不同的工作流会生成不同的 igroup 配置，如以下示例所示：
+在ONTAP tools for VMware vSphere中，igroup 是在扁平结构中创建和管理的，其中 vCenter 中的每个数据存储都与单个 igroup 相关联。该模型限制了跨多个数据存储的 igroup 的灵活性和重用性。ONTAP tools for VMware vSphere引入了嵌套 igroup，其中 vCenter 中的每个数据存储都与一个父 igroup 相关联，而每个主机都链接到该父 igroup 下的子 igroup。您可以使用用户定义的名称定义自定义父 igroup，以便在多个数据存储区中重复使用，从而实现更灵活和互连的 igroup 管理。了解 igroup 工作流程对于在ONTAP tools for VMware vSphere中有效管理 LUN 和数据存储库至关重要。不同的工作流会生成不同的 igroup 配置，如以下示例所示：
 
 
-NOTE: 上述名称仅供参考，并非真实的 igroup 名称。ONTAP工具管理的 igroup 使用前缀“otv_”。自定义 igroup 可以指定任意名称。
+NOTE: 所提及的名称仅用于说明目的，并不代表真实的 igroup 名称。 ONTAP工具管理的 igroup 使用前缀“otv_”。自定义 igroup 可以赋予任意名称。
 
 |===
 
@@ -94,7 +94,7 @@ NOTE: 上述名称仅供参考，并非真实的 igroup 名称。ONTAP工具管�
 
 
 
-host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。在以下两种情况下会发生删除：
+host1Igroup 已从层次结构中删除。子 igroup 未被明确删除。在以下两种情况下会发生删除：
 
 * 如果没有映射任何 LUN，则 ONTAP 系统将删除子 igroup。
 * 计划的清理作业将删除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。
@@ -114,7 +114,7 @@ host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。在
 
 
 
-如果其他数据存储不重用父 igroup，则父 igroup 和子 igroup 将被移除。子 igroup 永远不会被明确删除
+如果另一个数据存储不重用父 igroup，则会删除父 igroup 和子 igroup。子 igroup 永远不会被明确删除
 
 .例 5：
 在自定义父 igroup 下创建多个数据存储区
@@ -203,7 +203,7 @@ host1Igroup 已从层次结构中移除。子 igroup 不会被明确删除。在
 
 * 工作流 *
 
-适用于 VMware vSPhere 9.x 版本的 ONTAP 工具不支持分层 igroup。在迁移到 10.3 或更高版本期间，必须将 igroup 规范化到分层结构中。
+VMware vSPhere 9.x 版本的ONTAP工具不支持分层 igroup。在迁移到 10.3 或更高版本期间，必须将 igroup 规范化到层次结构中。
 
 迁移之前：
 

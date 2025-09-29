@@ -23,7 +23,7 @@ ONTAP提供了一个强大且可扩展的RBAC环境。您可以使用RBAC功能�
 根据您的环境和目标、使用ONTAP RBAC时有多种选项可供选择。主要行政决定概述如下。有关详细信息、另请参见 https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP自动化：RBAC安全性概述"^]。
 
 
-NOTE: ONTAP RBAC专为存储环境量身定制、比vCenter Server提供的RBAC实施更简单。通过ONTAP、您可以直接为用户分配角色。ONTAP RBAC不需要配置显式权限、例如用于vCenter Server的权限。
+NOTE: ONTAP RBAC 针对存储环境进行了定制，并且比 vCenter Server 提供的 RBAC 实现更简单。使用ONTAP，您可以直接向用户分配角色。  ONTAP RBAC 不需要配置明确的权限（例如与 vCenter Server 一起使用的权限）。
 
 .角色类型和Privileges
 定义ONTAP用户时需要ONTAP角色。ONTAP角色有两种类型：

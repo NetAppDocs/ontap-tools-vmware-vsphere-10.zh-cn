@@ -2,7 +2,7 @@
 permalink: configure/configure-user-role-and-privileges.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色。 
+summary: 使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 文件为存储后端配置用户角色和权限。 
 ---
 = 配置ONTAP用户角色和权限
 :allow-uri-read: 
@@ -11,48 +11,47 @@ summary: 您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Man
 
 
 [role="lead"]
-您可以使用适用于VMware vSphere的ONTAP工具和ONTAP System Manager提供的JSON文件配置用于管理存储后端的新用户角色和特权。
+使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 文件为存储后端配置用户角色和权限。
 
 .开始之前
-* 您应已使用以下<ONTAPtoolsIP>命令从适用于VMware vSphere的ONTAP工具下载ONTAP Privileges文件：_\https：//VMware：8443/Virtualization：user-gitrees/User_roles.zip_。
-* 您应该已使用从ONTAP工具下载ONTAP Privileges文件 `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`。
+* 使用 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 从ONTAP tools for VMware vSphere下载ONTAPPrivileges文件。下载 zip 文件后，您会发现两个 JSON 文件。配置ASA r2 系统时使用ASA r2 特定的 JSON 文件。
 +
 
-NOTE: 您可以在集群级别或直接在Storage Virtual Machine (SVM)级别创建用户。您也可以在不使用user_roles.json文件的情况下创建用户、如果这样做、您需要在SVM级别具有一组最低权限。
+NOTE: 您可以在集群级别或直接在存储虚拟机 (SVM) 级别创建用户。如果您不使用 user_roles.json 文件，请确保用户具有所需的最低 SVM 权限。
 
-* 您应已使用存储后端的管理员权限登录。
+* 以存储后端的管理员权限登录。
 
 
 .步骤
-. 提取下载的_\https：//https：<ONTAPtoolsIP>：8443/Virtualization /用户权限/USER_Roles.zip_文件。
+. 提取您下载的 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 文件。
 . 使用集群的集群管理IP地址访问ONTAP系统管理器。
-. 使用管理Privileges登录到集群。要配置用户、请执行以下步骤：
+. 使用管理员权限登录集群。要配置用户：
 +
-.. 要配置集群ONTAP工具用户，请选择*Cluster*>*Settings*>*Users and Roles*窗格。
-.. 要配置SVM ONTAP工具用户、请选择*存储SVM*>*设置*>*用户和角色*窗格。
+.. 要配置集群ONTAP工具用户，请选择 *集群* > *设置* > *用户和角色*窗格。
+.. 要配置 SVM ONTAP工具用户，请选择“存储 SVM”>“设置”>“用户和角色”窗格。
 .. 在“用户”下选择*Add*。
 .. 在*添加用户*对话框中、选择*虚拟化产品*。
-.. *浏览*选择并上传ONTAP权限JSON文件。
+.. *浏览*选择并上传ONTAPPrivilegesJSON 文件。对于非ASA r2 系统，选择 users_roles.json 文件；对于ASA r2 系统，选择 users_roles_ASAr2.json 文件。
 +
-此时将自动填充"Product"字段。
+ONTAP工具会自动填充产品字段。
 
 .. 从下拉菜单中选择产品功能为*VSC、VASA Provider 和 SRA*。
 +
-系统将根据选定的产品功能自动填充“角色”字段。
+ONTAP工具会根据您选择的产品功能自动填充 *角色* 字段。
 
 .. 输入所需的用户名和密码。
-.. 选择用户所需的Privileges (发现、创建存储、修改存储、销毁存储、NS/SAN角色)、然后选择*添加*。
+.. 选择用户需要的权限（发现、创建存储、修改存储、销毁存储、NAS/SAN 角色），然后选择*添加*。
 
 
 
 
-此时将添加新角色和用户、您可以在已配置的角色下查看详细权限。
+ONTAP工具添加了新的角色和用户。您可以查看您配置的角色下的权限。
 
 
 
 == SVM聚合映射要求
 
-要使用SVM用户凭据配置数据存储库、适用于VMware vSphere的内部ONTAP工具会在数据存储库发布API中指定的聚合上创建卷。ONTAP不允许使用SVM用户凭据在SVM上未映射的聚合上创建卷。要解决此问题、您需要使用ONTAP REST API或命令行界面将SVM映射到聚合、如下所述。
+使用 SVM 用户凭据配置数据存储库时，ONTAP tools for VMware vSphere在数据存储库 POST API 中指定的聚合上创建卷。 ONTAP阻止 SVM 用户在未映射到 SVM 的聚合上创建卷。在创建卷之前，使用ONTAP REST API 或 CLI 将 SVM 映射到所需的聚合。
 
 REST API：
 
@@ -70,13 +69,13 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 == 手动创建ONTAP用户和角色
 
-按照本节中的说明手动创建用户和角色、而不使用JSON文件。
+无需 JSON 文件即可手动创建用户和角色。
 
 . 使用集群的集群管理IP地址访问ONTAP系统管理器。
 . 使用管理Privileges登录到集群。
 +
-.. 要配置集群ONTAP工具角色，请选择*Cluster*>*Settings*>*Users and Roles*窗格。
-.. 要配置集群SVM ONTAP工具角色、请选择*存储SVM*>*设置*>*用户和角色*窗格
+.. 要配置集群ONTAP工具角色，请选择 *集群* > *设置* > *用户和角色*。
+.. 要配置集群 SVM ONTAP工具角色，请选择 *存储 SVM* > *设置* > *用户和角色*。
 
 
 . 创建角色：
@@ -84,7 +83,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 .. 在*roles*表下选择*Add*。
 .. 输入*角色名称*和*角色属性*详细信息。
 +
-从下拉列表中添加*REST API Path*和相应的访问权限。
+添加*REST API 路径*并从下拉列表中选择访问权限。
 
 .. 添加所有所需的API并保存更改。
 
@@ -105,9 +104,9 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 === 非管理员全局范围集群用户所需的最低权限列表
 
-本节列出了未使用用户 JSON 文件创建的非管理员全局范围集群用户所需的最低权限。如果在本地范围内添加了集群，建议使用 JSON 文件创建用户，因为适用ONTAP tools for VMware vSphere需要的不仅仅是在ONTAP上进行配置的读取权限。
+本节列出了没有 JSON 文件的非管理员全局范围集群用户所需的最低权限。如果集群处于本地范围内，请使用 JSON 文件创建用户，因为适用ONTAP tools for VMware vSphere需要的不仅仅是在ONTAP上进行配置的读取权限。
 
-使用API：
+您可以使用 API 访问功能：
 
 |===
 
@@ -118,7 +117,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 | /API/cluster | 只读 | 集群配置发现 
 
 
-| /API/cluster-licensing /许可证 | 只读 | 协议专用许可证的许可证检查 
+| /API/cluster-licensing /许可证 | 只读 | 许可证检查协议特定的许可证 
 
 
 | /API/cluster-node | 只读 | 平台类型发现 
@@ -130,34 +129,37 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 | /api/安全性/角色 | 只读 | 特权发现 
 
 
-| /API/storage/Aggregates | 只读 | 数据存储库/卷配置期间的聚合空间检查 
+| /API/storage/Aggregates | 只读 | 数据存储/卷配置期间的聚合空间检查 
 
 
-| /API/storage/cluster | 只读 | 以获取集群级别空间和效率数据 
+| /API/storage/cluster | 只读 | 获取集群级别空间和效率数据 
 
 
-| /API/storage/disks | 只读 | 以获取聚合中关联的磁盘 
+| /API/storage/disks | 只读 | 获取聚合中关联的磁盘 
 
 
-| /API/storage/QoS/策略 | 读取/创建/修改 | QoS和VM策略管理 
+| /API/storage/QoS/策略 | 读取/创建/修改 | QoS 和 VM 策略管理 
 
 
-| /apI/SVM/SVM | 只读 | 在本地添加集群的情况下获取SVM配置。 
+| /apI/SVM/SVM | 只读 | 在本地添加集群时获取 SVM 配置。 
 
 
-| /API/network/IP/接口 | 只读 | 添加存储后端—要确定管理LIF的范围、请使用集群/SVM 
+| /API/network/IP/接口 | 只读 | 添加存储后端 - 确定管理 LIF 范围是集群/SVM 
 
 
-| /API/storage/availability分区 | 只读 | SAZ Discovery。适用于9.16.1 9.161及更高版本和ASA R2系统。 
+| /API/storage/availability分区 | 只读 | SAZ 发现。适用于ONTAP 9.16.1 及更高版本和ASA r2 系统。 
+
+
+| /api/cluster/metrocluster | 只读 | 获取MetroCluster状态和配置详细信息。 
 |===
 
 
 === 为基于VMware vSphere ONTAP API的集群范围用户创建ONTAP工具
 
 
-NOTE: 您需要发现、创建、修改和销毁Privileges、以便在数据存储库出现故障时执行修补操作和自动回滚。缺少所有这些Privileges会导致工作流中断和清理问题。
+NOTE: PATCH 操作和数据存储上的自动回滚需要发现、创建、修改和销毁权限。缺少权限可能会导致工作流程和清理问题。
 
-通过为基于VMware vSphere ONTAP API的用户创建ONTAP工具并执行发现、创建存储、修改存储、销毁存储Privileges、可以启动发现并管理ONTAP工具工作流。
+具有发现、创建、修改和销毁权限的基于ONTAP API 的用户可以管理ONTAP工具工作流。
 
 要使用上述所有Privileges创建集群范围的用户、请运行以下命令：
 
@@ -254,6 +256,8 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly
 
+security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
+
 ----
 此外、对于ONTAP 9.16.0及更高版本、请运行以下命令：
 
@@ -271,7 +275,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 
 === 为基于VMware vSphere ONTAP API的SVM范围的用户创建ONTAP工具
 
-要使用所有Privileges创建SVM范围的用户、请运行以下命令：
+运行以下命令创建具有所有权限的 SVM 范围用户：
 
 [listing]
 ----
@@ -369,7 +373,7 @@ security login create -user-or-group-name <user-name> -application http -authent
 ----
 security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
 ----
-要解除帐户锁定、请运行以下命令以启用对管理界面的访问：
+运行以下命令解锁帐户并启用管理界面访问：
 
 [listing]
 ----
@@ -445,7 +449,7 @@ _security login Role create -Role <existing-role-name> nve -cmddirname "vserver 
 
 _security login Role create -Role <existing-role-name> nve -cmddirname "vserver nve subsystem map remove"-access all -vserver nv_<vserver-name>
 
-向现有角色添加命令_vserver nvexe命名空间show_和_vserver nvserver subsystem show_可添加以下命令。
+要启用以下命令，请将命令 _vserver nvme namespace show_ 和 _vserver nvme subset show_ 添加到现有角色。
 
 [listing]
 ----
@@ -462,7 +466,7 @@ vserver nvme subsystem modify
 
 == 将适用于VMware vSphere 10.3用户的ONTAP工具升级到10.4用户
 
-从9.16.1 9.161开始、将适用于VMware vSphere 10.3用户的ONTAP工具升级到10.4用户。
+从ONTAP 9.16.1 开始，将ONTAP tools for VMware vSphere升级到 10.4 用户。
 
 如果适用于VMware vSphere 10.3的ONTAP工具用户的集群范围用户是使用JSON文件和ONTAP 9.16.1或更高版本创建的、请对管理员用户Privileges使用ONTAP命令行界面命令升级到10.4版本。
 

@@ -17,7 +17,7 @@ summary: 适用于VMware vSphere的ONTAP工具提供了一个选项、用于启�
 * 您应已设置vCenter Server实例并配置ESXi主机。
 * 您应已部署适用于VMware vSphere的ONTAP工具。
 * 您应已 `.tar.gz`从下载SRA适配器文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]。
-* 在运行SRA工作流之前、源和目标ONTAP集群必须创建相同的自定义SnapMirror计划。
+* 在运行 SRA 工作流之前，您应该在源 ONTAP 集群和目标ONTAP集群上具有相同的自定义SnapMirror计划。
 * link:../manage/enable-services.html["为VMware vSphere服务启用ONTAP工具"]启用 SRA 功能。
 
 
@@ -27,3 +27,16 @@ summary: 适用于VMware vSphere的ONTAP工具提供了一个选项、用于启�
 . 将SRA插件的_.tar.gz_安装程序上传到VMware Live Site Recovery。
 . 重新扫描适配器以验证是否已在VMware Live Site Recovery Storage Replication Adapters页面上更新详细信息。
 
+
+
+NOTE: 故障转移后，数据存储区可能无法执行扩展、挂载和删除等操作。执行数据存储发现以刷新并显示适当的上下文菜单操作。
+
+
+NOTE: 每次重新保护操作后，您必须在两个站点上执行存储发现。
+
+在具有 SRA 保护的新设置中，始终运行测试故障转移。跳过测试故障转移可能会导致重新保护操作失败。
+
+在扇出配置中，在SnapMirror活动同步故障转移（其中SnapMirror源更改为站点 B 以进行自动故障转移双工和异步SnapMirror）之后，在站点 B 和 C 之间运行测试故障转移。跳过此步骤可能会导致重新保护操作失败。
+
+.相关信息
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["使用 VMware Site Recovery Manager 配置 NFS 数据存储区的灾难恢复"]

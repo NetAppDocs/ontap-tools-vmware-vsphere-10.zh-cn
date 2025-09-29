@@ -26,7 +26,7 @@ summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具�
 
 .步骤
 . 在vSphere Client主页中、选择*主机和集群*。
-. 右键单击所需的数据中心，然后选择*Host tools*>*更新NetApp ONTAP Data*。
+. 右键单击所需的数据中心，然后选择 * NetApp ONTAP工具* > *更新主机数据*。
 +
 在*Confirm *(确认*)对话框中，确认您的选择。
 

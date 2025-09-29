@@ -20,23 +20,17 @@ summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Reco
 .开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
-* VMware Live Site Recovery
-+
-VMware站点上提供了有关安装VMware Live Site Recovery的文档。
-
+* VMware Live Site Recovery：VMware 站点提供了 VMware Live Site Recovery 的安装文档。
 +
 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["关于VMware Live Site Recovery"]
 
-* SRA
-+
-适配器已安装在VMware Live Site Recovery上。
-
+* SRA：在 VMware Live Site Recovery 上安装适配器。
 
 
 .步骤
 . 验证主 ESXi 主机是否已连接到受保护站点上主存储系统中的 LUN 。
 . 验证LUN是否位于具有的igroub中 `ostype` 选项在主存储系统上设置为_vmware_。
-. 验证恢复站点上的ESXi主机是否与Storage Virtual Machine (SVM)建立了适当的iSCSI连接。二级站点ESXi主机应有权访问二级站点存储、而主站点ESXi主机应有权访问主站点存储。
+. 验证恢复站点上的 ESXi 主机是否与存储虚拟机 (SVM) 具有适当的 iSCSI 和光纤通道连接。辅助站点 ESXi 主机应该能够访问辅助站点存储，主站点 ESXi 主机应该能够访问主站点存储。
 +
 为此、您可以验证ESXi主机是否已在SVM或上连接本地LUN `iscsi show initiators` 命令。
 在ESXi主机中检查映射的LUN的LUN访问、以验证iSCSI连接。
@@ -50,17 +44,8 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 .开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
-* VMware Live Site Recovery
-+
-有关安装VMware Live Site Recovery的文档可在VMware站点上找到。
-
-+
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["关于VMware Live Site Recovery"]
-
-* SRA
-+
-此适配器已安装在VMware Live Site Recovery和SRA服务器上。
-
+* VMware Live Site Recovery：您可以在 VMware 网站上找到 VMware Live Site Recovery 的安装文档 - https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["关于VMware Live Site Recovery"]
+* SRA：在 VMware Live Site Recovery 和 SRA 服务器上安装适配器。
 
 
 .步骤

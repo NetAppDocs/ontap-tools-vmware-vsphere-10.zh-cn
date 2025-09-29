@@ -17,7 +17,7 @@ summary: 在生产环境中使用适用于VMware vSphere 10的ONTAP工具之前�
 
 == 配置过程概述
 
-适用于VMware vSphere 10的ONTAP工具支持创建具有自定义角色的ONTAP用户。这些定义会打包在一个JSON文件中、您可以将其上传到ONTAP集群。您可以创建用户并根据环境和安全需求定制角色。
+ONTAP tools for VMware vSphere支持创建具有自定义角色的ONTAP用户。这些定义打包在一个 JSON 文件中，您可以将其上传到ONTAP集群。您可以根据您的环境和安全需求创建用户并定制角色。
 
 下面将简要介绍主要配置步骤。link:../configure/configure-user-role-and-privileges.html["配置ONTAP用户角色和权限"]有关详细信息、请参见。
 

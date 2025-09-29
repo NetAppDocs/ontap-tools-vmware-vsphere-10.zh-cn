@@ -6,7 +6,7 @@ indexpage:
   - title: 入门
     links:
     - title: 发行说明
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876
     - title: 了解适用于 VMware vSphere 的 ONTAP 工具
       url: "/concepts/ontap-tools-overview.html"
     - title: 部署适用于VMware vSphere的ONTAP工具
@@ -21,8 +21,6 @@ indexpage:
       url: "/concepts/rbac-learn-about.html"
     - title: 配置远程诊断
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: 适用于VMware vSphere的ONTAP工具的高可用性
-      url: "/concepts/high-availability.html"
     - title: 保护数据存储库
       url: "/protect/enable-storage-replication-adapter.html"
   - title: 更多资源

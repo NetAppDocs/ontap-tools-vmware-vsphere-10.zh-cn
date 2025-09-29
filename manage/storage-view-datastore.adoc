@@ -14,7 +14,7 @@ summary: 适用于VMware vSphere的ONTAP工具的配置选项卡下的ONTAP存�
 适用于VMware vSphere的ONTAP工具会在配置选项卡中显示数据存储库及其卷的ONTAP存储端视图。
 
 .步骤
-. 在vSphere客户端中、导航到数据存储库。
+. 从 vSphere 客户端转到数据存储。
 . 在右窗格中选择*Config*选项卡。
 . 选择* NetApp ONTAP tools*>* ONTAP Storage*。视图会根据数据存储库类型而有所不同。有关信息、请参见下表：
 

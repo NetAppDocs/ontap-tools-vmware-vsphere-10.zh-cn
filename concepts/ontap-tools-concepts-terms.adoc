@@ -15,21 +15,15 @@ summary: 下一节介绍了本文档中使用的重要概念和术语。
 
 
 
-=== ASA r2系统
-
-新的NetApp ASA R2系统提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["了解ASA R2存储系统"](英文)。
-
-
-
 === 证书颁发机构(CA)
 
 CA是颁发安全套接字层(SSL)证书的受信任实体。
 
 
 
-=== 一致性组(CG)
+=== 一致性组
 
-一致性组是指作为一个单元进行管理的一组卷。在存储单元和卷之间同步CGS以确保数据一致性。在ONTAP中、它们可以为跨越多个卷的应用程序工作负载提供轻松的管理和保护保证。详细了解 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["一致性组"]。
+一致性组是作为单个单元进行管理的卷的集合。一致性组跨存储单元和卷进行同步以确保数据一致性。在ONTAP中，它们为跨多个卷的应用程序工作负载提供了轻松的管理和保护保障。详细了解 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["一致性组"]。
 
 
 
@@ -125,7 +119,7 @@ VMFS是一种集群模式文件系统、专用于在VMware vSphere环境中存�
 
 === 虚拟卷（ VVOL ）
 
-虚拟卷可为虚拟机使用的存储提供卷级抽象。它具有多项优势、并提供了一种替代传统LUN的方法。一个VVOL"数据存储库通常与一个LUN相关联、该LUN充当VVOL"的容器。
+vVols为虚拟机使用的存储提供了卷级抽象。它具有多种优点，并提供了使用传统 LUN 的替代方案。  vVol 数据存储通常与vVols容器的单个 LUN 相关联。
 
 
 

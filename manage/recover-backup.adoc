@@ -1,0 +1,55 @@
+---
+permalink: manage/recover-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: 从适用于VMware vSphere 10.3的ONTAP工具开始、此设备使用动态存储配置程序、无法实现零RPO。但是、您可以实现近乎为零的RPO。 
+---
+= 恢复ONTAP工具设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从适用于ONTAP tools for VMware vSphere开始，备份功能默认启用。
+
+ONTAP tools for VMware vSphere的数据存储库用于存储备份文件。以ONTAP工具 IP 地址命名的文件夹（用下划线代替点并以 _OTV_backup_ 为后缀）保存两个最新的备份文件（_OTV_backup_1.tar.enc_ 和 _OTV_backup_2.tar.enc_）和一个包含最新备份名称的信息文件（_OTV_backup_info.txt_）。
+
+确保新虚拟机使用相同的ONTAP工具 IP 地址并与初始系统配置相匹配，包括启用的服务、节点大小和 HA 模式。
+
+.步骤
+. 将备份文件从原始虚拟机的数据存储下载到本地系统。
++
+.. 转到存储部分并选择包含虚拟机备份文件的数据存储。
+.. 选择*Files*部分。
+.. 下载所需的备份目录。
+
+
+. 关闭现有虚拟机。然后，使用与原始部署相同的 OVA 文件部署新的虚拟机。
+. 从vCenter Server中、打开维护控制台。
+. 以维护用户身份登录。
+. 输入 `4`以选择*Support and Diagnostic*。
+. 输入 `2`以选择*Enable remote diagnostic access*选项并为诊断访问创建新密码。
+. 从下载的目录中选择一个备份文件。请参阅_OTV_backup_info.txt_文件来识别最新的备份。
+. 使用以下命令将备份文件传输到新的虚拟机。出现提示时，输入诊断密码。
++
+[listing]
+----
+scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+
+NOTE: 不要改变命令中提到的目标路径和文件名（/home/diag/system_recovery.tar.enc）。
+
+. 备份文件传输完成后，登录诊断shell并运行以下命令：
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+日志记录在_/var/log/post-deep-upgrade．log_文件中。
+
+
+
+完成恢复后， ONTAP工具将恢复服务和 vCenter 对象。

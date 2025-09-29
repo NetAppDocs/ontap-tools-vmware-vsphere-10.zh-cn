@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: 首次ONTAP tools for VMware vSphere时， AutoSupport默认处于启用状态。启用后 24 小时内会向技术支持发送消息。 
+---
+= 编辑AutoSupport设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+首次ONTAP tools for VMware vSphere时， AutoSupport默认处于启用状态。启用后 24 小时内会向技术支持发送消息。
+
+
+
+== 禁用AutoSupport
+
+当您禁用AutoSupport时，您将不再获得主动支持和监控。
+
+
+NOTE: 建议保持AutoSupport启用，因为它有助于加速问题检测和解决。即使禁用AutoSupport ，系统仍会继续在本地收集和存储信息，但不会通过网络发送报告。
+
+.步骤
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 选择*设置*>*遥测*>*编辑*选项。
+. 取消选择*Windows* AutoSupport选项并保存更改。
+
+
+
+
+== 更新AutoSupport代理URL
+
+更新AutoSupport代理 URL，以便AutoSupport功能通过代理服务器路由数据，实现安全传输。
+
+.步骤
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 从边栏中选择*Settings*。
+. 选择*设置*>*遥测*>*编辑*选项。
+. 输入有效的*代理URL*并保存更改。
++
+如果禁用AutoSupport、则代理URL也会被禁用。
+
+

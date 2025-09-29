@@ -23,9 +23,9 @@ summary: '您可以使用ONTAP工具管理器更改管理员密码、以便使�
 
 +
 
-NOTE: 在禁用任何可选服务之前、请确保由ONTAP工具管理的vCenter Server未使用这些服务。
+NOTE: 在禁用任何可选服务之前，请确保ONTAP工具管理的 vCenter Server 不使用它们。
 
 +
-只有在启用VASA Provider服务后、才会显示*允许导入vvol配置*选项。通过此选项、可以将ONTAP工具9.xx中的数据迁移到ONTAP工具10.4。
+仅当启用 VASA 提供程序服务时才会显示 *允许导入vVols配置* 选项。此选项支持将vVols数据从ONTAP工具 9.xx 迁移到ONTAP工具 10.5。
 
 

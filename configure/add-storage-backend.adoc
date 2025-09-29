@@ -4,20 +4,23 @@ sidebar: sidebar
 keywords:  
 summary: 存储后端是ESXi主机用于数据存储的系统。 
 ---
-= 添加存储后端
+= 将存储后端添加到ONTAP工具
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-通过添加存储后端、您可以加入ONTAP集群。
+当您将存储后端添加到ONTAP工具时，您可以直接从 vCenter Server 配置和管理数据存储库。
 
-* 关于此任务 *
+要在本地添加存储后端，请在ONTAP工具界面中使用集群或 SVM 凭据。这些存储后端仅适用于选定的 vCenter Server。 ONTAP工具将 SVM 映射到 vCenter Server 以进行vVols或 VMFS 数据存储库管理。对于 VMFS 数据存储和 SRA 工作流，您可以使用 SVM 凭据，而无需全局映射的集群。
 
-如果在多租户设置中、vCenter充当关联SVM的租户、请使用ONTAP工具管理器添加集群。将存储后端与vCenter Server相关联、以便将其全局映射到已登录的vCenter Server实例。vCenter租户必须载入所需的Storage Virtual Machine (SVM)。这样、SVM用户便可配置Vvol数据存储库。您可以使用SVM在vCenter中添加存储。
+您可以使用ONTAP工具管理器中的ONTAP集群凭据添加全局存储后端。全局存储后端支持发现工作流来识别 vVol 管理所需的集群资源。在多租户设置中，您可以在本地添加 SVM 用户来管理vVols数据存储。
 
-使用ONTAP工具用户界面使用集群或SVM凭据添加本地存储后端。这些存储后端仅限于一个vCenter。在本地使用集群凭据时、关联的SVM会自动映射到vCenter以管理Vvol或VMFS。对于VMFS管理(包括SRA)、ONTAP工具支持SVM凭据、而不需要全局集群。
+在ONTAP系统中启用MetroCluster支持时，将源集群和目标集群都作为本地或全局存储后端加入。
+
+.开始之前
+验证证书是否包含有效的主题备用名称 (SAN) 字段。  ONTAP系统使用 SAN 字段来识别集群和 SVM 管理 LIF。
 
 [role="tabbed-block"]
 ====
@@ -35,13 +38,23 @@ NOTE: 在多租户设置中、您可以全局添加存储后端集群、并在�
 
 NOTE: 支持IPv4和IPv6地址管理生命周期。
 
+. 自动获取ONTAP集群证书并授权该证书，或者通过浏览到其位置手动上传。
++
+
+NOTE: 如果需要，您可以从维护控制台禁用主题备用名称 (SAN) 验证。有关说明，请参阅link:../manage/change-valid-flag.html["更改证书验证标志"]。
+
+. 如果您添加的存储后端是MetroCluster配置的一部分， ONTAP工具管理器会显示一条弹出消息以添加对等集群。选择“*添加*”并提供MetroCluster对等存储后端的详细信息。
++
+
+NOTE: ONTAP系统执行切换和切回后，手动运行ONTAP工具发现。
+
 
 
 --
 .使用vSphere客户端用户界面
 --
 
-NOTE: 通过vSphere客户端用户界面配置存储后端时、请务必注意、Vvol数据存储库不支持直接添加SVM用户。
+NOTE: vVols数据存储不支持通过 vSphere Client 用户界面直接添加 SVM 用户。
 
 . 登录到vSphere Client。
 . 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
@@ -49,12 +62,22 @@ NOTE: 通过vSphere客户端用户界面配置存储后端时、请务必注意�
 . 添加存储后端并提供服务器IP地址、用户名、密码和端口详细信息。
 +
 
-NOTE: 要直接添加SVM用户、您可以添加基于集群的凭据以及IPv4和IPv6地址管理LIF、或者通过SVM管理LIF提供基于SVM的凭据。
+NOTE: 您可以使用基于集群的凭据以及 IPv4 或 IPv6 管理 LIF 添加存储后端。要直接添加 SVM 用户，请提供基于 SVM 的凭据以及 SVM 管理 LIF。如果集群已加入，则无法再次从该集群加入 SVM 用户。
+
+. 自动获取ONTAP集群证书并授权该证书，或者通过浏览到其位置手动上传。
+. 如果添加的存储后端是MetroCluster配置的一部分，ONTAP工具将显示 *添加MetroCluster对等体* 屏幕。选择*添加对等*以添加对等存储后端。
++
+
+NOTE: ONTAP系统执行切换和切回后，手动运行ONTAP工具发现。
 
 
 
 .下一步是什么？
-此时、此列表将刷新、您可以在此列表中看到新添加的存储后端。
+ONTAP工具更新列表以显示新的存储后端。
 
 --
 ====
+ONTAP工具在 *存储后端* 页面上列出了新添加的存储后端。如果证书在 30 天或更短时间内过期， ONTAP工具会在证书过期日期列中显示警告。到期后， ONTAP工具会将存储后端标记为未知，因为它无法连接到存储系统。
+
+.相关信息
+https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["将集群配置到 MetroCluster 配置中"]

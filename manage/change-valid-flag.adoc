@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用维护控制台更改证书验证标志。 
+---
+= 更改证书验证标志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下，证书验证标志是启用的（设置为 true）。如果您需要绕过 SAN 证书检查，可以将ONTAP存储后端证书验证标志设置为 false。此设置不适用于 vCenter Server 证书。
+
+.开始之前
+您需要具有维护用户登录凭据。
+
+.步骤
+. 从vCenter Server中、打开一个ONTAP工具控制台。
+. 以维护用户身份登录。
+. 进入 `1`选择应用程序配置菜单。
+. 进入 `3`更改证书验证标志。
++
+维护控制台显示证书验证标志状态并提示您进行更改。
+
+. 输入“y”切换标志或输入“n”取消。
+
+
+如果将证书验证标志切换回 true，系统将执行预检查。如果任何添加的存储后端使用没有 SAN 的证书，则无法启用证书验证。在启用此标志之前，请确保所有存储后端都使用基于 SAN 的证书。如果将证书验证标志设置为 false，系统将跳过所有添加的存储后端的证书验证。

@@ -4,27 +4,27 @@ sidebar: sidebar
 keywords: upgrade 
 summary: HA和非HA部署均支持升级。 
 ---
-= 从适用于VMware vSphere 10.x的ONTAP工具升级到10.4
+= 将适用于ONTAP tools for VMware vSphere升级到 10.5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以从适用于VMware vSphere 10.2或10.3的ONTAP工具升级到10.4。但是、不支持从ONTAP工具10.0或10.1直接升级到10.4。
+您可以从ONTAP tools for VMware vSphere升级到 10.5。但是，要从ONTAP工具 10.0、10.1 或 10.2 升级到 10.5，必须先升级到 10.3 或 10.4，然后再升级到 10.5。
 
 注意：
 
-* 在ASA R2系统中、应先升级到适用于采用9.16.1 9.161的VMware vSphere 10.4的ONTAP工具、然后再添加更多存储可用性区域(Storage Availability Zones、SAZones)。
-* 如果从适用于VMware vSphere 10.2或10.3的ONTAP工具升级到10.4版失败、则不支持回滚。要恢复设置、请对VMware vSphere 10.2的ONTAP工具使用RPO、对VMware vSphere 10.3的ONTAP工具使用近乎为零的RPO或快照恢复。
+* 对于ASA r2 系统，在设置更多存储可用区 (SAZ) 之前，请确保将ONTAP tools for VMware vSphere升级到 10.5，将ONTAP到 9.16.1。
+* 如果从ONTAP tools for VMware vSphere升级到 10.5 失败，则无法回滚。使用低 RPO 或快照恢复来恢复设置。对于ONTAP tools for VMware vSphere，使用零 RPO 来恢复设置。
 
 
 .开始之前
-对于非HA升级、请关闭ONTAP Tools VM；对于HA升级、请先关闭第一个节点、然后再对虚拟机(VM)设置进行以下更改。
+* 确保ONTAP系统证书和已加入的 vCenter 证书有效期至少为 5 天。如果提前过期，升级将失败。
+* 为确保安全升级，请验证您的证书是否包含主题备用名称 (SAN) 条目。如果您的证书缺少 SAN 条目并且您需要继续升级，您可以将证书验证标志设置为 false 以在升级期间绕过 SAN 检查。
+* 确保所有节点上都有第五个磁盘，容量为 100 GB。
+* 验证节点配置是否符合下表中的规格。
 
-如果您要从适用于ONTAP tools for VMware vSphere升级，则需要先完成以下步骤才能继续升级任务：* 为每个节点额外添加 100 GB 硬盘，因为服务数据存储在虚拟机本地。* 根据部署情况更改已关闭虚拟机的 CPU 和内存。启用 CPU 和 RAM 的热插件。
-
-+
 
 |===
 | 部署类型 | 每个节点的CPU (核心)数 | 每个节点的内存(GB) | 每个节点的磁盘空间(GB) | 总CPU (核心) | 内存(GB) | 总磁盘空间(GB) 
@@ -44,110 +44,46 @@ summary: HA和非HA部署均支持升级。
 
 | HA大型 | 17 | 34 | 350 | 51 | 102. | 1050 
 |===
-* 完成更改后、启动虚拟机、并等待服务进入运行状态。
-* 在HA部署中、请更改资源、为CPU和RAM启用热插件、并为第二个和第三个节点添加100 GB硬盘。无需重新启动这些节点。
-* 如果此设备是使用ONTAP工具10.2作为本地路径部署的(易于部署)、则需要在升级之前创建一个静用快照。
+* 确保已启用 CPU 和 RAM 的热插拔。
+* 对于ONTAP tools for VMware vSphere，请在升级之前在ONTAP工具虚拟机上拍摄静默快照。
+* 启用低 RPO 备份并确保在 vCenter Client 界面中可见一个备份。
 
-
-如果要从适用于VMware vSphere 10.0的ONTAP工具升级到10.1，则需要完成以下步骤，然后再继续执行升级任务：*Enable Diagnostic*
-
-. 从vCenter Server中、打开一个ONTAP工具控制台。
-. 以维护用户身份登录。
-. 输入*4*以选择*Support and Diagnostic*。
-. 输入*2*以选择*Enable remote diagnostic access*。
-. 输入*y*设置您选择的密码。
-. 使用用户"DIAG"和上一步中设置的密码从终端/putty登录到VM IP地址。
-
-
-*备份MongoDB*
-
-运行以下命令以创建MongoDB的备份：
-
-* kn exec -it NTV-MongoDB-0 sh - kn是kubect1 -n NTV-system的别名。
-* 在POD中运行_env | grep MongoDB_root_password_命令。
-* 运行_exit_命令退出POD。
-* 运行_kn exec NTV-MongoDB-0 --mongodump -u root -p MongoDB_root_password --archive=/tmp/mongodb-backup.gz --gzip_命令以替换上述命令中设置的Mongo_root_password。
-* 运行_kn cp ntV-MongoDB-0：/tmp/MongoDB-backup.gz_ mongodb-backup.gz命令、将使用上述命令创建的MongoDB备份从Pod复制到主机。
-
-
-*获取所有卷的quaise快照*
-
-* 运行"kn get pv"命令并保存命令输出。
-* 使用以下方法之一逐个为所有卷创建快照：
-+
-** 在命令行界面中、运行命令_volume Snapshot create -vserver <vserver_name>-volume <volume_name>-Snapshot <snapshot_name>_
-** 从ONTAP系统管理器用户界面中、在搜索栏中按卷名称搜索卷、然后通过选择名称打开该卷。转至快照并添加该卷的快照。
-
-
-
-
-*为vCenter中的VMware vSphere VM创建ONTAP工具的快照(对于HA部署、为3个VM；对于非HA部署、为1个VM)*
-
-* 在vSphere客户端用户界面中、选择虚拟机。
-* 进入快照选项卡并选择*拍摄快照*按钮。为虚拟机创建一个已静用快照。有关详细信息、请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["为虚拟机创建快照"^]。
-
-
-在执行升级之前、请从日志包中删除前缀为"generate—support-Bundle—job"的已完成Pod。如果正在生成支持包、请等待生成完成、然后删除此Pod。
-
-对于任何类型的升级、您都需要额外添加一个100 GB硬盘驱动器(HDD)。要添加HDD、请执行以下任务。
-
-. 选择单节点配置中的VM或HA配置中的所有三个VM。
-. 右键单击虚拟机并选择*添加新设备*>*硬盘*
-. 在*新硬盘*字段中添加一个100 GB的HDD。
-. 选择*应用*
-
-
-添加硬盘后、根据相应配置更新虚拟机资源、然后重新启动主虚拟机。
-
-此时将创建一个新的HDD。动态存储配置程序使用此HDD来生成或复制卷。
 
 .步骤
 . 将适用于VMware vSphere的ONTAP工具升级ISO上传到内容库。
 . 在主VM页面中，选择*Actions*>*Edit Settings*
-. 在编辑设置窗口的*CD/DVD驱动器*字段下选择内容库ISO文件。
-. 选择ISO文件并选择*OK*。选择*CD/DVD驱动器*字段中的已连接复选框。image:../media/primaryvm-edit-settings.png["编辑设置"]
+. 在编辑设置窗口中的*CD/DVD 驱动器*字段下选择*内容库 ISO 文件*。
+. 选择 ISO 文件，选中 *CD/DVD 驱动器* 字段的 *已连接* 框，然后单击 *确定*。
 . 从vCenter Server中、打开一个ONTAP工具控制台。
 . 以维护用户身份登录。
-. 输入*3*选择“System Configuration”(系统配置)菜单。
-. 输入*7*以选择升级选项。
+. 输入*3*选择*系统配置*菜单。
+. 输入*7*选择*升级*选项。
++
+在升级过程中，如果任何内置存储后端证书缺少主题备用名称 (SAN) 条目，您将收到提示，指出缺少 SAN。如果您选择在未验证 SAN 的情况下继续，升级将继续，但由于存在潜在的安全风险，因此不建议这样做。
+
 . 升级时、系统会自动执行以下操作：
 +
-.. 证书升级
-.. 远程插件升级
+.. 网关证书续期，有效期为1年。当您移除之前的 SRA 适配器并上传新的 10.5 适配器时，SRA 证书有效期将从 10 年变为 1 年。
+.. 远程插件已升级
+.. ONTAP和 vCenter Server 证书经过验证并添加到ONTAP工具中
+.. 已启用备份
 
 
-
-
-升级到适用于VMware vSphere 10.4的ONTAP工具后、您可以：
-
-* 从管理器用户界面禁用服务
-* 从非HA设置移至HA设置
-* 将非HA小型配置纵向扩展为非HA中型配置、或者纵向扩展为HA中型或大型配置。
-* 如果是非HA升级、请重新启动ONTAP工具VM以反映所做的更改。如果要升级HA、请重新启动第一个节点、以反映此节点上所做的更改。
 
 
 .下一步行动
-从适用于VMware vSphere的ONTAP工具的先前版本升级到10.4之后、请重新扫描SRA适配器、以验证是否已在VMware Live Site Recovery存储复制适配器页面上更新详细信息。
+升级到适用ONTAP tools for VMware vSphere后：
 
-成功升级后、请按照以下过程手动从ONTAP中删除Trident卷：
-
-
-NOTE: 如果适用于VMware vSphere 10.1或10.2的ONTAP工具采用非HA小型或中型(本地路径)配置、则不需要执行这些步骤。
-
-. 从vCenter Server中、打开一个ONTAP工具控制台。
-. 以维护用户身份登录。
-. 输入*4*以选择*Support and Diagnostic*菜单。
-. 输入*1*以选择*Access diagnostics shell*选项。
-. 运行以下命令
-+
-[listing]
-----
-sudo python3 /home/maint/scripts/ontap_cleanup.py
-----
-. 输入ONTAP用户名和密码
+* 监控系统警报并计划在一年内网关证书到期之前更新它。
+* 删除ONTAP工具 10.4 或 10.3 SRA 适配器并上传 10.5 SRA 适配器 tar 文件。然后，重新扫描 SRA 适配器以更新 VMware Site Recovery 存储复制适配器页面。
 
 
-此操作将删除适用于VMware vSphere 10.1/10.2的ONTAP工具中使用的ONTAP中的所有Trident卷。
+升级后您可以：
+
+* 从管理器用户界面禁用服务
+* 从非HA设置移至HA设置
+* 将非 HA 小型配置扩展为非 HA 中型配置，或者扩展为 HA 中型或大型配置。
+
 
 .相关信息
-link:../migrate/migrate-to-latest-ontaptools.html["从适用于VMware vSphere 9.xx的ONTAP工具迁移到10.4"]
+link:../migrate/migrate-to-latest-ontaptools.html["从ONTAP tools for VMware vSphere迁移到 10.5"]

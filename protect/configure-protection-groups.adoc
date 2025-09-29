@@ -30,7 +30,7 @@ NOTE: 存储复制适配器 (SRA) 支持具有自动故障转移双工类型的�
 
 
 .步骤
-. 双击vSphere Client主页上的*站点恢复*并选择*站点*。
+. 在 vSphere Client 主页上，双击 *Site Recovery* 图标，然后选择 *Sites*。
 . 选择*Objects*>*Actions*>*P对 站点*。
 . 在*配对Site Recovery Manager服务器*对话框中，输入受保护站点的平台服务控制器的地址，然后选择*下一步*。
 . 在 Select vCenter Server 部分中，执行以下操作：
@@ -43,7 +43,7 @@ NOTE: 存储复制适配器 (SRA) 支持具有自动故障转移双工类型的�
 
 
 .结果
-受保护站点和恢复站点都将显示在对象对话框中。
+*对象*对话框显示受保护站点和恢复站点。
 
 
 

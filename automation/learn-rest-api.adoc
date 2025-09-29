@@ -50,7 +50,7 @@ summary: 适用于VMware vSphere 10的ONTAP工具是一组用于虚拟机生命�
 您应考虑ONTAP Tools Manager环境的几个方面。
 
 .虚拟机
-适用于VMware vSphere 10的ONTAP工具使用vSphere远程插件架构进行部署。该软件(包括对REST API的支持)在单独的虚拟机中运行。
+ONTAP tools for VMware vSphere是使用 vSphere 远程插件架构部署的。该软件（包括对 REST API 的支持）在单独的虚拟机中运行。
 
 .ONTAP工具IP地址
 适用于VMware vSphere 10的ONTAP工具会公开一个IP地址、该地址可为虚拟机的功能提供网关。您需要在初始配置期间提供地址、并将其分配给内部负载平衡器组件。此地址供ONTAP工具管理器用户界面使用、并可直接访问Swagger文档页面和REST API。

@@ -4,17 +4,57 @@ sidebar: sidebar
 keywords: upgrade 
 summary: 此页面概述了适用于VMware vSphere系统的ONTAP工具的部署、重新启动和恢复操作的错误代码。 
 ---
-= 部署错误代码
+= 排查部署错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+如果您遇到部署问题，请查看日志和错误代码以诊断和解决问题。从适用于ONTAP tools for VMware vSphere开始，从 pod 收集的日志包包括来自 MongoDB、RabbitMQ 和 Vault 的日志，以及所有 pod 的状态和描述。这些是在现有ONTAP工具服务日志的基础上提供的，增强了可支持性和故障排除能力。
+
+
+
+== 收集日志文件
+
+您可以使用适用于VMware vSphere的ONTAP工具管理器用户界面中的选项收集ONTAP工具的日志文件。技术支持可能会要求您收集日志文件以帮助解决问题。
+
+
+NOTE: 从ONTAP工具管理器生成日志会包含所有vCenter Server实例的所有日志。从vCenter Client用户界面生成日志的范围仅适用于选定vCenter Server。
+
+.步骤
+. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+. 从边栏中选择*Log Bundes*。
++
+此操作可能需要几分钟时间。
+
+. 选择*生成*以生成日志文件。
+. 输入日志分发包的标签，然后选择*Gener成*。
++
+下载tar.gz文件并将其发送给技术支持。
+
+
+
+按照以下步骤使用vCenter Client用户界面生成日志包：
+
+.步骤
+. 登录到vSphere Client。
+. 在vSphere Client主页中、转到*支持*>*日志捆绑包*>*生成*。
+. 提供日志包标签并生成日志包。文件生成后，您可以看到下载选项。下载可能需要一些时间。
+
+
+
+NOTE: 生成的日志包将替换过去3天或72小时内生成的日志包。
+
+
+
+== 部署错误代码
+
 在适用于VMware vSphere的ONTAP工具部署、重新启动和恢复操作期间、您可能会遇到错误代码。
 错误代码的长度为五位数、其中前两位数表示遇到问题描述的脚本、后三位数表示该脚本中的特定工作流。
 
-所有错误日志都记录在ansible-perl-errors.log文件中、以便于跟踪和解决问题。此日志文件包含错误代码和失败的Ands清除 任务。
+所有错误日志都记录在 /var/log 目录下的 ansible-perl-errors.log 文件中，以便于轻松跟踪和解决问题。该日志文件包含错误代码和失败的 Ansible 任务。
 
 
 NOTE: 此页面上提供的错误代码仅供参考。如果错误仍然存在或未提及解决方法、请联系支持团队。

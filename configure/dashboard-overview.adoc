@@ -11,16 +11,14 @@ summary: 在vCenter Client的快捷方式部分中选择适用于VMware vSphere�
 
 
 [role="lead"]
-在vCenter Client的快捷方式部分中选择适用于VMware vSphere的ONTAP工具插件图标后、用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。
+从 vCenter 客户端的快捷方式部分选择适用ONTAP tools for VMware vSphere插件图标即可打开概览页面。此仪表板提供了适用ONTAP tools for VMware vSphere的摘要。
 
-对于增强型链接模式设置(ELM)、将显示vCenter Server选择下拉列表、您可以选择所需的vCenter Server以查看与其相关的数据。此下拉列表可用于此插件的所有其他列表视图。
-在一个页面中选择的vCenter Server会在此插件的各个选项卡上保留。
-image:../media/remote-plugin-dashboard.png["信息板概述"]
+对于增强型链接模式 (ELM) 设置，将出现 vCenter Server 选择下拉菜单，您可以选择所需的 vCenter Server 来查看与其相关的数据。此下拉菜单适用于该插件的所有其他列表视图。在一个页面中所做的 vCenter Server 选择将保留在该插件的各个选项卡中。image:../media/remote-plugin-dashboard.png["信息板概述"]
 
 在概述页面中，您可以运行*Discovery操作。发现操作会在vCenter级别运行发现、以检测任何新添加或更新的存储后端、主机、数据存储库以及保护状态/关系。您可以按需发现实体、而不必等待计划的发现。
 
 
-NOTE: 只有在您有权执行发现操作时、才会启用操作按钮。
+NOTE: 仅当您具有执行发现操作所需的权限时，才会启用“*发现*”操作按钮。
 
 提交发现请求后，您可以在最近任务面板中跟踪操作的进度。
 

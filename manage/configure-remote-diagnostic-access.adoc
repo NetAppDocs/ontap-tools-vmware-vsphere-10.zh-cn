@@ -20,7 +20,7 @@ summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用
 
 使用 SSH 访问 diag 用户帐户具有以下限制：
 
-* 每次激活 SSH 时，您只能使用一个登录帐户。
+* 每次激活 SSH 时只允许使用一个登录帐户。
 * 发生以下情况之一时，将禁用对 diag 用户帐户的 SSH 访问：
 +
 ** 此时间将到期。
@@ -35,8 +35,8 @@ summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用
 .步骤
 . 从 vCenter Server 中，打开一个 VASA Provider 控制台。
 . 以维护用户身份登录。
-. 输入 ... `4` 以选择支持和诊断。
-. 输入 `2`以选择Enable remote diagnostics access。
+. 输入 `4`以选择*Support and Diagnostic*。
+. 进入 `2`选择*启用远程诊断访问*。
 . 输入 ... `y` 在确认对话框中启用远程诊断访问。
 . 输入远程诊断访问的密码。
 

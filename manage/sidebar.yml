@@ -4,12 +4,22 @@ title: 管理适用于VMware vSphere的ONTAP工具
 entries:
 - title: 适用于VMware vSphere的ONTAP工具信息板概述
   url: "/configure/dashboard-overview.html"
-- title: ONTAP工具管理器用户界面
-  url: "/configure/manager-user-interface.html"
 - title: 了解 igroup 和导出政策
   url: "/manage/igroup-workflow.html"
 - title: 了解ONTAP工具管理的 igroup
   url: "/manage/nested-igroups.html"
+- title: ONTAP工具管理器用户界面
+  url: "/manage/manager-user-interface.html"
+- title: 管理ONTAP工具管理器设置
+  entries:
+  - title: 编辑AutoSupport设置
+    url: "/manage/edit-autosupport.html"
+  - title: 添加NTP服务器
+    url: "/manage/add-ntpserver.html"
+  - title: 重置 VASA 提供程序和 SRA 凭据
+    url: "/manage/reset-vasa-sra-credentials.html"
+  - title: 编辑备份设置
+    url: "/manage/backup-settings.html"
 - title: 为VMware vSphere服务启用ONTAP工具
   url: "/manage/enable-services.html"
 - title: 更改适用于VMware vSphere的ONTAP工具配置
@@ -38,7 +48,7 @@ entries:
   url: "/manage/manage-storage-threshold.html"
 - title: 管理存储后端
   url: "/manage/storage-backend.html"
-- title: 管理vCenter Server实例
+- title: 在ONTAP工具中管理 vCenter Server 实例
   url: "/manage/manage-vcenter.html"
 - title: 管理证书
   url: "/manage/certificate-manage.html"
@@ -52,10 +62,10 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: 更新vCenter Server和ONTAP凭据
     url: "/manage/update-vcenter-credentials.html"
+  - title: 更改证书验证标志
+    url: "/manage/change-valid-flag.html"
 - title: ONTAP工具报告
   url: "/manage/reports.html"
-- title: 收集日志文件
-  url: "/manage/collect-the-log-files.html"
 - title: 管理虚拟机
   entries:
   - title: 迁移或克隆虚拟机的注意事项
@@ -86,14 +96,8 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 删除主机集群保护
     url: "/manage/delete-hostcluster-protection.html"
-- title: 禁用AutoSupport
-  url: "/manage/disable-autosupport.html"
-- title: 更新AutoSupport代理URL
-  url: "/manage/update-proxyurl.html"
-- title: 添加NTP服务器
-  url: "/manage/add-ntpserver.html"
-- title: 创建备份并恢复ONTAP工具设置
-  url: "/manage/enable-backup.html"
+- title: 恢复ONTAP工具设置
+  url: "/manage/recover-backup.html"
 - title: 卸载适用于VMware vSphere的ONTAP工具
   url: "/manage/uninstall-deployment.html"
 - title: 删除FlexVol卷

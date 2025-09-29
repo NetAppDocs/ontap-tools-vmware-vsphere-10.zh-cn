@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
 keywords:  
-summary: 适用于VMware vSphere设备的ONTAP工具部署为小型单节点、并通过核心服务支持NFS和VMFS数据存储库。 
+summary: ONTAP tools for VMware vSphere部署为小型单节点，具有核心服务以支持 NFS 和 VMFS 数据存储库。 
 ---
 = 部署适用于VMware vSphere的ONTAP工具
 :allow-uri-read: 
@@ -11,27 +11,33 @@ summary: 适用于VMware vSphere设备的ONTAP工具部署为小型单节点、�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere部署为小型单节点，并包含核心服务以支持 NFS 和 VMFS 数据存储库。ONTAPONTAP部署过程最多可能需要 45 分钟。
+ONTAP tools for VMware vSphere部署为小型单节点，具有核心服务以支持 NFS 和 VMFS 数据存储库。ONTAP部署过程最多可能需要 45 分钟。
 
 .开始之前
-VMware 中的内容库是一个容器对象，用于存储虚拟机模板、vApp 模板和其他类型的文件。使用内容库进行部署可为您提供无缝体验，因为它不依赖于网络连接。
+如果您正在部署小型单节点，则内容库是可选的。对于多节点或 HA 部署，需要内容库。在 VMware 中，内容库存储 VM 模板、vApp 模板和其他文件。使用内容库进行部署可提供无缝体验，因为它不依赖于网络连接。
+
+创建内容库之前请考虑以下事项：
+
+* 在共享数据存储上创建内容库，以便集群中的所有主机都可以访问它。
+* 在部署适用ONTAP tools for VMware vSphere之前设置内容库。
+* 确保在为 HA 配置设备之前创建内容库。
++
+
+NOTE: 部署后不要删除内容库中的OVA模板。
 
 
-NOTE: 您应将内容库存储在共享数据存储库上、以便集群中的所有主机都可以访问该内容库。在将设备配置为HA配置之前、创建用于存储OVA的内容库。部署后、请勿删除内容库模板。
 
 
-NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部署在ESXi主机上。而是将其部署在集群或资源池上。
+NOTE: 为了将来启用 HA 部署，请避免直接在 ESXi 主机上部署ONTAP工具虚拟机。相反，将其部署在 ESXi 主机集群或资源池中。
 
-如果您没有内容库、请按照以下步骤创建一个：
-
-*创建内容库*如果您计划仅使用小型单节点部署，则不需要创建内容库。
+请按照以下步骤创建内容库：
 
 . 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。
 . 登录到vSphere Client
 . 选择vSphere客户端菜单并选择*内容库*。
 . 选择页面右侧的*创建*。
 . 提供库的名称并创建内容库。
-. 导航到您创建的内容库。
+. 转到您创建的内容库。
 . 选择页面右侧的*Actions*并选择*Import Item*并导入OVA文件。
 
 
@@ -39,14 +45,14 @@ NOTE: 要稍后启用HA部署、请勿将托管ONTAP工具的虚拟机直接部�
 NOTE: 有关详细信息、请参见 https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["创建和使用内容库"]博客。
 
 
-NOTE: 在继续部署之前、请将清单上集群的Distributed Resource Scheduler (DRS)设置为"保守"。这样可确保在安装期间不会迁移VM。
+NOTE: 在继续部署之前，请将清单上的集群分布式资源调度程序 (DRS) 设置为“保守”。这可确保虚拟机在安装期间不会被迁移。
 
-VMware vSphere 的 ONTAP 工具最初部署为非 HA 设置。要扩展到HA部署、您需要启用CPU热插拔和内存热插件。您可以在部署过程中执行此步骤、也可以在部署后编辑虚拟机设置。
+ONTAP tools for VMware vSphere最初部署为非 HA 设置。要扩展至高可用性部署，您需要启用 CPU 热插拔和内存热插拔。您可以在部署过程中执行此步骤，也可以在部署后编辑虚拟机设置。
 
 .步骤
 . 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。如果您已经将OVA导入内容库，则可以跳过此步骤，继续下一步。
 . 登录到vSphere服务器。
-. 导航到要部署OVA的资源池、集群或主机。
+. 转到您打算部署 OVA 的资源池、集群或主机。
 +
 
 NOTE: 切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理的vvol数据存储库中。
@@ -72,9 +78,9 @@ NOTE: 切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理�
 . 阅读并接受许可协议，然后选择*Next*。
 . 为配置和磁盘格式选择存储，然后选择*Next*。
 . 为每个源网络选择目标网络，然后选择*Next*。
-. 在*自定义模板*窗口中，填写必填字段并选择*下一步*。image:../media/customize-temp.png["自定义模板"]
+. 在*自定义模板*窗口中，填写必填字段并选择*下一步*。image:../media/sys-conf.png["自定义模板"]
 +
-** 此信息会在安装期间进行验证。如果存在差异、Web控制台上会显示一条错误消息、并提示您更正该错误。
+** 该信息在安装期间进行验证。如果存在差异，Web 控制台上会出现一条错误消息，并提示您进行更正。
 ** 主机名必须包含字母(A-Z、a-z)、数字(0-9)和连字符(-)。要配置双堆栈、请指定映射到IPv6地址的主机名。
 +
 
@@ -84,7 +90,7 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 ** IPv4是节点配置的IP地址组件、可用于在节点上启用诊断Shell和SSH访问、以便进行调试和维护。
 
 
-. 使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。image:../media/customize-hw.png["定制硬件"]
+. 使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。image:../media/customize-hw105.png["定制硬件"] image:../media/customize-hw.png["定制硬件"]
 . 查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 +
 创建部署任务后、vSphere任务栏中将显示进度。
@@ -101,7 +107,7 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 
 . 登录到vCenter Client
 . 关闭ONTAP工具节点。
-. 导航到*库存*下适用于VMware vSphere虚拟机的ONTAP工具、然后选择*编辑设置*选项。
+. 转到*库存*下的ONTAP tools for VMware vSphere并选择*编辑设置*选项。
 . 在*CPU*选项下，选中*Enable CPU Hot add*复选框
 . 在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。
 

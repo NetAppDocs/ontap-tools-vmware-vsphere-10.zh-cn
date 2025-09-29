@@ -2,7 +2,7 @@
 permalink: configure/create-datastore.html 
 sidebar: sidebar 
 keywords:  
-summary: 在主机集群级别创建数据存储库时、系统会创建数据存储库并将其挂载到目标的所有主机上、只有当前用户具有执行权限时、才会启用此操作。 
+summary: 当您在主机集群级别创建数据存储库时， ONTAP工具会将其挂载到所有目标主机上，并且仅当您拥有所需的权限时才启用该操作。 
 ---
 = 创建数据存储库
 :allow-uri-read: 
@@ -11,29 +11,29 @@ summary: 在主机集群级别创建数据存储库时、系统会创建数据�
 
 
 [role="lead"]
-在主机集群级别创建数据存储库时、系统会创建数据存储库并将其挂载到目标的所有主机上、只有当前用户具有执行权限时、才会启用此操作。
+当您在主机集群级别创建数据存储库时， ONTAP工具会将其挂载到所有目标主机上，并且仅当您拥有所需的权限时才启用该操作。
 
 *本机数据存储与 vCenter Server 和 ONTAP 工具管理的数据存储之间的互操作性*
 
-适用于 VMware vSphere 10 的 ONTAP 工具会为数据存储创建嵌套 igroup，其中父 igroup 特定于数据存储，子 igroup 则映射到主机。您可以从 ONTAP 系统管理器创建平面 igroup，并使用它们创建 VMFS 数据存储，而无需使用 ONTAP 工具。有关详细信息、请参见 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 启动器和 igroup"] 。
+从适用于ONTAP tools for VMware vSphere开始， ONTAP工具为数据存储区创建嵌套 igroup，其中父 igroup 特定于数据存储区，子 igroup 映射到主机。您可以从ONTAP系统管理器创建平面 igroup，并使用它们创建 VMFS 数据存储库，而无需使用ONTAP工具。参考 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 启动器和 igroup"]了解更多信息。
 
-当存储加入 ONTAP 工具并运行数据存储发现功能时，扁平 igroup 和 VMFS 数据存储将由 ONTAP 工具管理，并转换为嵌套 igroup。您无法使用早期的扁平 igroup 创建新的数据存储；您必须使用 ONTAP 工具用户界面或 REST API 来重用嵌套 igroup。
+在您加入存储并运行数据存储发现后， ONTAP工具会将 VMFS 数据存储中的平面 igroup 更改为嵌套 igroup。您不能使用早期的平面 igroup 来创建新的数据存储。使用ONTAP工具界面或 REST API 来重用嵌套 igroup。
 
 [role="tabbed-block"]
 ====
 .创建一个卷数据存储库
 --
-从适用于VMware vSphere 10.3的ONTAP工具开始、您可以在ASA R2系统上创建空间效率为thin-vvol的vVol数据存储库。在创建VVOP数据存储库时、VASA Provider会创建一个容器和所需的协议端点。此容器不包含任何后备卷。
+从适用于ONTAP tools for VMware vSphere开始，您可以在ASA r2 系统上创建具有与 thin.vVol 相同的空间效率的vVols数据存储。  VASA 提供程序在创建 vVol 数据存储时创建一个容器和所需的协议端点。  VASA 提供程序不会为该容器分配任何支持卷。
 
 .开始之前
 * 确保根聚合未映射到 SVM。
 * 确保已向选定vCenter注册VASA Provider。
-* 在ASA R2存储系统中、SVM应映射到SVM用户的聚合。
+* 在ASA r2 存储系统中，SVM 应映射到 SVM 用户的聚合。
 
 
 .步骤
 . 登录到vSphere Client。
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create DataSystem*。
+. 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 选择"vols *数据存储库类型*"。
 . 输入*数据存储库名称*和*协议*信息。
 +
@@ -43,7 +43,7 @@ NOTE: ASA R2系统支持对虚拟卷使用iSCSI和FC协议。
 . 选择要在其中创建数据存储库的Storage VM。
 . 在高级选项下：
 +
-** 如果选择*自定义导出策略*、请确保在vCenter中对所有对象运行发现。建议不要使用此选项。
+** 如果您选择*自定义导出策略*，请确保在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
 ** 您可以为iSCSI和FC协议选择*自定义启动程序组*名称。
 +
 
@@ -53,7 +53,7 @@ NOTE: 在ASA r2 存储系统类型 SVM 中，不会创建存储单元（LUN/命�
 
 . 在*存储属性*窗格中，您可以创建新卷或使用现有卷。但是、不能将这两种类型的卷组合在一起来创建一个卷数据存储库。
 +
-创建新卷时、您可以在数据存储库上启用QoS。默认情况下、系统会为每个LUN创建的请求创建一个卷。此步骤不适用于使用ASA R2存储系统的虚拟卷数据存储库。
+创建新卷时，您可以在数据存储上启用 QoS。默认情况下，每个 LUN 创建请求都会创建一个卷。对于ASA r2 存储系统上的vVols数据存储，请跳过此步骤。
 
 . 在*摘要*窗格中查看您的选择，然后选择*完成*。
 
@@ -61,11 +61,11 @@ NOTE: 在ASA r2 存储系统类型 SVM 中，不会创建存储单元（LUN/命�
 --
 .创建NFS数据存储库
 --
-VMware网络文件系统(NFS)数据存储库使用NFS协议通过网络将ESXi主机连接到共享存储设备。NFS数据存储库通常用于VMware vSphere环境、并具有多种优势、例如精简性和灵活性。
+NFS 数据存储使用 NFS 协议将 ESXi 主机连接到共享存储。它们简单、灵活，可用于 VMware vSphere 环境。
 
 .步骤
 . 登录到vSphere Client。
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create dataC*。
+. 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 在*数据存储库类型*字段中选择NFS。
 . 在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。在高级选项中选择*数据存储库集群*和* Kerberos身份验证*。
 +
@@ -73,32 +73,32 @@ VMware网络文件系统(NFS)数据存储库使用NFS协议通过网络将ESXi�
 NOTE: 只有在选择了NFS 4.1协议时、才能使用Kerberos身份验证。
 
 . 在*存储*窗格中选择*平台*和*存储VM*。
-. 如果在高级选项下选择*自定义导出策略*，请在vCenter中对所有对象运行发现。建议不要使用此选项。
+. 如果在高级选项下选择“自定义导出策略”，则在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
 +
 
-NOTE: 您不能使用SVM的默认/根卷策略创建NFS数据存储库。
+NOTE: 您不能使用 SVM 的默认或根卷策略创建 NFS 数据存储库。
 
 +
 ** 在高级选项中，只有在平台下拉列表中选择了性能或容量时，*非对称*切换按钮才可见。
-** 在平台下拉列表中选择*任何*选项后、无论平台或非对称标志如何、您都可以看到属于vCenter的SVM。
+** 当您在平台下拉菜单中选择“*任何*”选项时，您可以看到 vCenter 中的所有 SVM。平台和不对称旗帜不影响可见性。
 
 
 . 在*存储属性*窗格中选择要创建卷的聚合。在高级选项中，根据需要选择*Space Reserve*和*Enable QoS*。
 . 查看*Summary (摘要)*窗格中的选择，然后选择*Finish (完成)*。
 
 
-此时将在所有主机上创建并挂载NFS数据存储库。
+ONTAP工具创建 NFS 数据存储库并将其挂载到所有主机上。
 
 --
 .创建VMFS数据存储库
 --
-虚拟机文件系统(VMFS)是一种集群模式文件系统、用于在VMware vSphere环境中存储虚拟机文件。VMFS允许多个ESXi主机同时访问相同的虚拟机文件、从而实现vMotion和高可用性等功能。
+VMFS 是一个用于存储虚拟机文件的集群文件系统。多个 ESXi 主机可以同时访问相同的 VM 文件，以实现 vMotion 和高可用性功能。
 
 在受保护集群上：
 
-* 您只能创建VMFS数据存储库。将VMFS数据存储库添加到受保护集群时、该数据存储库将自动受到保护。
+* 您只能创建 VMFS 数据存储区。将 VMFS 数据存储添加到受保护的集群会自动保护它。
 * 您不能在包含一个或多个受保护主机集群的数据中心上创建数据存储库。
-* 如果父主机集群受"自动故障转移双工策略"类型的关系(统一/非统一配置)保护、则无法在ESXi主机上创建数据存储库。
+* 如果父主机群集受“自动故障转移双工策略”（统一或非统一配置）保护，则无法在 ESXi 主机上创建数据存储。
 * 您只能在受异步关系保护的ESXi主机上创建VMFS数据存储库。您不能在受"自动故障转移双工"策略保护的主机集群中的ESXi主机上创建和挂载数据存储库。
 
 
@@ -112,14 +112,14 @@ NOTE: 您不能使用SVM的默认/根卷策略创建NFS数据存储库。
 
 NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议使用VMware vSphere 8.0及更高版本。
 
-.. 验证网络接口卡(Network Interface Card、NIC)供应商是否支持采用NVMe/TCP协议的ESXi NIC。
-.. 根据NIC供应商规格为NVMe/TCP配置ESXi NIC。
+.. 检查网络接口卡 (NIC) 供应商是否支持采用 NVMe/TCP 协议的 ESXi NIC。
+.. 根据 NIC 供应商规范为 NVMe/TCP 设置 ESXi NIC。
 .. 使用VMware vSphere 7版本时、请按照VMware站点上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["为基于TCP适配器的NVMe配置VMkernel绑定"]配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在ESXi上配置基于TCP的NVMe"]配置NVMe/TCP端口绑定。
 .. 对于VMware vSphere 7版本、请按照第页上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["启用基于RDMA的NVMe或基于TCP的NVMe软件适配器"]配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["添加基于RDMA的软件NVMe或基于TCP适配器的NVMe"]配置NVMe/TCP软件适配器。
 .. link:../configure/discover-storage-systems-and-hosts.html["发现存储系统和主机"]在ESXi主机上运行操作。有关详细信息，请参阅 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP"]。
 
 
-* 如果您使用的是NVMe/FC协议、请执行以下步骤来配置ESXi主机：
+* 如果您使用 NVME/FC 协议，请执行以下步骤来配置 ESXi 主机：
 +
 .. 如果尚未启用、请在ESXi主机上启用基于网络结构的NVMe (NVMe-oF)。
 .. 完成SCSI分区。
@@ -136,21 +136,21 @@ NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议
 
 .步骤
 . 登录到vSphere Client。
-. 右键单击主机系统、主机集群或数据中心，然后选择*Create NetApp ONTAP tools*>*Create DataSystem*。
+. 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 选择VMFS数据存储库类型。
-. 在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。如果您选择将新数据存储库添加到现有VMFS数据存储库集群、请选择高级选项下的数据存储库集群选择器。
+. 在“名称和协议”窗格中输入数据存储名称、大小和协议信息。要将新的数据存储区添加到现有的 VMFS 群集，请在高级选项中选择数据存储区群集。
 . 在*存储*窗格中选择Storage VM。根据需要在*高级选项*部分中提供*自定义启动程序组名称*。您可以为此数据存储库选择一个现有igrop、也可以使用自定义名称创建一个新的igrop。
 +
-如果选择NVMe/FC或NVMe/TCP协议、则会创建一个新的命名空间子系统、并使用该子系统进行命名空间映射。命名空间子系统会使用自动生成的名称来创建、该名称包含数据存储库名称。您可以在*Storage*窗格高级选项的*custom nam命名 空间子系统名称*字段中重命名命名命名命名空间子系统。
+当选择NVMe/FC或NVMe/TCP协议时，会创建一个新的命名空间子系统，并用于命名空间映射。 ONTAP工具使用包含数据存储名称的自动生成名称创建命名空间子系统。您可以在“存储”窗格的高级选项中的“自定义命名空间子系统名称”字段中重命名命名空间子系统。
 
 . 从*storage attributes*窗格：
 +
 .. 从下拉选项中选择*聚合*。
 +
 
-NOTE: 对于ASA r2 存储系统，由于ASA r2 存储是分解式存储，因此不会显示“*聚合*”选项。当您选择ASA r2 存储系统类型的 SVM 时，存储属性页面会显示用于启用 QoS 的选项。
+NOTE: 对于ASA r2 存储系统，由于存储是分解的，因此不会显示 *Aggregate* 选项。当您选择ASA r2 存储系统类型的 SVM 时，存储属性页面会显示用于启用 QoS 的选项。
 
-.. 根据选定协议、系统会创建一个空间预留类型为精简的存储单元(LUN /命名空间)。
+.. ONTAP工具根据所选协议创建具有精简空间预留的存储单元（LUN/命名空间）。
 +
 
 NOTE: 从ONTAP 9.161开始、ASA R2存储系统支持每个集群最多12个节点。
@@ -162,11 +162,11 @@ NOTE: 从ONTAP 9.161开始、ASA R2存储系统支持每个集群最多12个节�
 .. 根据需要选择*使用现有卷*、*启用QoS*选项并提供详细信息。
 +
 
-NOTE: 在ASA R2存储类型中、卷创建或选择不适用于存储单元创建(LUN /命名空间)。因此、不会显示这些选项。
+NOTE: 在ASA r2 存储类型中，卷创建或选择不适用于存储单元创建（LUN/命名空间）。因此，这些选项不会显示。
 
 +
 
-NOTE: 您不能使用现有卷创建采用NVMe/FC或NVMe/TCP协议的VMFS数据存储库、而应创建新卷。
+NOTE: 您不能使用现有卷来创建具有 NVMe/FC 或 NVMe/TCP 协议的 VMFS 数据存储。为 VMFS 数据存储创建新卷。
 
 
 
@@ -177,7 +177,7 @@ NOTE: 您不能使用现有卷创建采用NVMe/FC或NVMe/TCP协议的VMFS数据�
 NOTE: 如果您在受保护集群上创建数据存储库、则会看到一条只读消息："正在将数据存储库挂载到受保护集群上。"
 
 .结果
-此时将创建VMFS数据存储库并将其挂载到所有主机上。
+ONTAP工具创建 VMFS 数据存储库并将其安装在所有主机上。
 
 --
 ====
