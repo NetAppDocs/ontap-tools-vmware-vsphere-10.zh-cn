@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 启动器组 (igroup) 是包含 FC 协议主机全球端口名称 (WWPN) 或 iSCSI 主机限定节点名称的表。您可以定义 igroup 并将其映射到 LUN，以控制哪些启动器有权访问 LUN。
 
-在ONTAP tools for VMware vSphere中，igroup 是在扁平结构中创建和管理的，其中 vCenter 中的每个数据存储都与单个 igroup 相关联。该模型限制了跨多个数据存储的 igroup 的灵活性和重用性。ONTAP tools for VMware vSphere引入了嵌套 igroup，其中 vCenter 中的每个数据存储都与一个父 igroup 相关联，而每个主机都链接到该父 igroup 下的子 igroup。您可以使用用户定义的名称定义自定义父 igroup，以便在多个数据存储区中重复使用，从而实现更灵活和互连的 igroup 管理。了解 igroup 工作流程对于在ONTAP tools for VMware vSphere中有效管理 LUN 和数据存储库至关重要。不同的工作流会生成不同的 igroup 配置，如以下示例所示：
+在ONTAP tools for VMware vSphere中，igroup 是在扁平结构中创建和管理的，其中 vCenter 中的每个数据存储都与单个 igroup 相关联。该模型限制了跨多个数据存储的 igroup 的灵活性和重用性。ONTAP tools for VMware vSphere引入了嵌套 igroup，其中 vCenter 中的每个数据存储都与一个父 igroup 相关联，而每个主机都链接到该父 igroup 下的子 igroup。您可以使用用户定义的名称定义自定义父 igroup，以便在数据存储区之间重复使用，从而使 igroup 管理更加容易。了解 igroup 工作流程，以便在ONTAP tools for VMware vSphere中管理 LUN 和数据存储库。不同的工作流会生成不同的 igroup 配置，如以下示例所示：
 
 
 NOTE: 所提及的名称仅用于说明目的，并不代表真实的 igroup 名称。 ONTAP工具管理的 igroup 使用前缀“otv_”。自定义 igroup 可以赋予任意名称。
@@ -61,7 +61,7 @@ NOTE: 所提及的名称仅用于说明目的，并不代表真实的 igroup 名
 
 
 
-在 ONTAP 系统上为 DS1 创建了一个父 igroup DS1Igroup，并有一个子 igroup host1Igroup 映射到 lun1。LUN始终映射到子 igroup。
+ONTAP为 DS1 创建父 igroup DS1Igroup，并将子 igroup host1Igroup 映射到 lun1。系统始终将 LUN 映射到子 igroup。
 
 .示例 2：
 将现有数据存储挂载到其他主机
@@ -78,7 +78,7 @@ NOTE: 所提及的名称仅用于说明目的，并不代表真实的 igroup 名
 
 
 
-创建子 igroup host2Igroup 并将其添加到现有的父 igroup DS1Igroup。
+ONTAP tools for VMware vSphere创建一个子 igroup host2Igroup 并将其添加到现有的父 igroup DS1Igroup。
 
 .示例 3：
 从主机卸载数据存储
@@ -94,7 +94,7 @@ NOTE: 所提及的名称仅用于说明目的，并不代表真实的 igroup 名
 
 
 
-host1Igroup 已从层次结构中删除。子 igroup 未被明确删除。在以下两种情况下会发生删除：
+ONTAP tools for VMware vSphere从层次结构中删除 host1Igroup。系统不会明确删除子 igroup。它会在以下两种情况下删除它们：
 
 * 如果没有映射任何 LUN，则 ONTAP 系统将删除子 igroup。
 * 计划的清理作业将删除没有 LUN 映射的悬空子 igroup。这些情况仅适用于 ONTAP 工具管理的 igroup，不适用于自定义创建的 igroup。
@@ -114,7 +114,7 @@ host1Igroup 已从层次结构中删除。子 igroup 未被明确删除。在以
 
 
 
-如果另一个数据存储不重用父 igroup，则会删除父 igroup 和子 igroup。子 igroup 永远不会被明确删除
+除非另一个数据存储重新使用父 igroup，否则父 igroup 和子 igroup 都会被删除。子 igroup 未被明确删除
 
 .例 5：
 在自定义父 igroup 下创建多个数据存储区
@@ -230,13 +230,13 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["关于 igrou
 
 == 导出策略
 
-导出策略控制 VMware vSphere ONTAP 工具中对 NFS 数据存储区的访问。它们定义哪些客户端可以访问数据存储区以及它们拥有哪些权限。导出策略在 ONTAP 系统中创建和管理，并可与 NFS 数据存储区关联以强制执行访问控制。每个导出策略都包含一些规则，这些规则指定允许访问的客户端（IP 地址或子网）以及授予的权限（只读或读写）。
+导出策略控制ONTAP tools for VMware vSphere中的 NFS 数据存储访问和客户端权限。导出策略在ONTAP系统中创建和管理，并可与 NFS 数据存储库一起使用来强制执行访问控制。每个导出策略均由指定允许访问的客户端（IP 地址或子网）和授予的权限（只读或读写）的规则组成。
 
 在适用于 VMware vSphere 的 ONTAP 工具中创建 NFS 数据存储库时，您可以选择现有的导出策略或创建新的导出策略。导出策略随后会应用于该数据存储库，确保只有授权的客户端才能访问它。
 
 在新的 ESXi 主机上挂载 NFS 数据存储库时，适用于 VMware vSphere 的 ONTAP 工具会将该主机的 IP 地址添加到与该数据存储库关联的现有导出策略中。这样，新主机无需创建新的导出策略即可访问该数据存储库。
 
-当您从 ESXi 主机删除或卸载 NFS 数据存储库时，适用于 VMware vSphere 的 ONTAP 工具会从导出策略中删除该主机的 IP 地址。如果没有其他主机正在使用该导出策略，则该策略将被删除。当您删除 NFS 数据存储库时，如果该数据存储库关联的导出策略未被任何其他数据存储库重用，则适用于 VMware vSphere 的 ONTAP 工具会删除该导出策略。如果重用了该导出策略，它将保留主机 IP 地址并保持不变。当您删除数据存储库时，导出策略会取消分配主机 IP 地址并分配默认导出策略，以便 ONTAP 系统可以在需要时访问它们。
+当您从 ESXi 主机删除或卸载 NFS 数据存储库时，ONTAP tools for VMware vSphere会从导出策略中删除该主机的 IP 地址。如果没有其他主机使用该导出策略，它将被删除。删除 NFS 数据存储库时，如果该数据存储库未被任何其他数据存储库重用，则ONTAP tools for VMware vSphere会删除与该数据存储库关联的导出策略。如果重复使用导出策略，它会保留主机IP地址并且不会改变。当您删除数据存储库时，导出策略会取消分配主机 IP 地址并分配默认导出策略，以便ONTAP系统可以在需要时访问它们。
 
 在不同数据存储之间重复使用导出策略时，分配导出策略的方式会有所不同。重复使用导出策略时，您可以将新的主机 IP 地址附加到策略中。删除或卸载使用共享导出策略的数据存储时，该策略不会被删除。它会保持不变，并且主机 IP 地址不会被移除，因为它与其他数据存储共享。不建议重复使用导出策略，因为这可能会导致访问和延迟问题。
 

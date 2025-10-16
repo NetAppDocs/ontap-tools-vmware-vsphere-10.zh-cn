@@ -26,7 +26,7 @@ ONTAP tools for VMware vSphere符合当前的 VMware 互操作性认证标准，
 * * MetroCluster支持*
 
 
-此版本引入了对MetroCluster (MCC) 配置的支持，增强了高可用性和灾难恢复功能。
+此版本引入了对MetroCluster配置的支持，增强了高可用性和灾难恢复功能。
 
 * *安全和证书管理*
 

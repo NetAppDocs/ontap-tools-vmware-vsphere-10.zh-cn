@@ -44,3 +44,5 @@ NOTE: 您不能删除虚拟机使用的数据存储区。删除之前，将虚�
 NOTE: 对于统一ONTAP存储上属于受保护主机集群的 VMFS 数据存储库，您无法从ONTAP集群中删除该卷。
 
 
+
+当您删除 NFS、VMFS 或vVols数据存储库时，父 igroup 仍保留在ONTAP系统上。未映射到任何 LUN 的子 igroup 将被自动删除。 ONTAP工具每天执行清理以删除未映射的默认父 igroup。必须在ONTAP中手动删除自定义父 igroup。任何剩余的父 igroup 都会变得陈旧，并且无法被ONTAP工具重复使用。

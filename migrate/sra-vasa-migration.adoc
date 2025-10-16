@@ -25,8 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 通过 vCenter 服务器 API 在本地为 ONTAP 工具插件加入存储后端。
 . 从Swagger或Postman发出以下API进行迁移。
 +
-curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
-
+[listing]
+----
+curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
+----
 +
 您可以通过此 URL 访问 Swagger： `\https://$FQDN_IP_PORT/` ， 例如： `\https://10.67.25.33:8443/` 。
 
@@ -51,22 +53,44 @@ curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}
 
 *卷示例*
 
-curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs'[] \ --header 'x-auth：<auth_token>' \ --header 'Content-Type：application/json' \ --data '{“otv_ip”：“xx.xx.xx.xx”，“vasa_provider_credentials”：{“用户名”：“xxxxx”，“密码”：“******”}，“database_password”：“******”}'
-
+[listing]
+----
+curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
+--header 'x-auth: <auth_token>' \
+--header 'Content-Type: application/json' \
+--data '{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "******"
+  },
+  "database_password": "******"
+}'
+----
 其他版本迁移的请求正文：
 
-{ “otv_ip”：“xx.xx.xx.xx”， “vasa_provider_credentials”：{ “用户名”：“xxxxx”， “密码”：“*******” } }
-
+[listing]
+----
+{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "*******"
+  }
+}
+----
 *JSON输出示例*
 
-返回作业对象。您应保存作业标识符、以便在下一步中使用。
+系统返回一个作业对象。保存作业标识符以便在下一步中使用。
 
-｛
-  "id"：123、
-  "migration_id"：d50073ce-35b4-4c51-9d2e-4ce66f802c35"、
-  "Status"："running"
-｝
-
+[listing]
+----
+{
+  "id": 123,
+  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
+  "status": "running"
+}
+----
 ====
 . 在Swagger中使用以下URI检查状态：
 +
@@ -75,7 +99,7 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
-完成此作业后、请查看迁移报告。此报告包含在作业数据中、可从作业响应访问。
+作业完成后，请查看作业响应中的迁移报告。
 
 . 将适用于 VMware vSphere 存储提供程序的 ONTAP 工具添加到 vCenter Server 并link:../configure/registration-process.html["注册VASA Provider"]使用适用于 VMware vSphere 的 ONTAP 工具。
 . link:../manage/enable-services.html["启用 VASA Provider"]ONTAP tools for VMware vSphere上的服务。
@@ -86,7 +110,7 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 +
 旧 VASA 提供程序停止后，vCenter Server 将故障转移到ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由适用于ONTAP tools for VMware vSphere提供服务。
 
-. 仅当触发数据存储发现作业后，从ONTAP tools for VMware vSphere迁移的 NFS 和 VMFS 数据存储才会在ONTAP tools for VMware vSphere中可见，这可能需要长达 30 分钟才能完成。验证数据存储库是否在 VMware vSphere 插件用户界面页面的ONTAP工具概览页面上可见。
+. 完成数据存储发现作业后，迁移的 NFS 和 VMFS 数据存储将出现在ONTAP tools for VMware vSphere中，这可能需要长达 30 分钟的时间。在概览页面上检查它们的可见性。
 . 在Swagger或Postman中使用以下API执行修补程序迁移：
 +
 []
@@ -109,18 +133,22 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 
 *卷示例*
 
-curl -X 补丁 `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
-
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+----
 *JSON输出示例*
 
 返回作业对象。您应保存作业标识符、以便在下一步中使用。
 
-｛
-  "id"：123、
-  "migration_id"：d50073ce-35b4-4c51-9d2e-4ce66f802c35"、
-  "Status"："running"
-｝
-
+[listing]
+----
+{
+  "id": 123,
+  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
+  "status": "running"
+}
+----
 修补操作的请求正文为空。
 
 
@@ -134,20 +162,20 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 .下一步行动
 完成迁移并将ONTAP Tools 10.5 注册到 vCenter Server 后，请按照以下步骤操作：
 
-* 等待*Discovery *完成，所有主机上的证书将自动刷新。
-* 启动数据存储区和虚拟机操作之前，请留出足够的时间。所需的等待时间因配置中的主机、数据存储区和虚拟机的数量而异。等待失败可能会导致间歇性操作失败。
+* 等待*发现*完成，系统会自动在所有主机上刷新证书。
+* 等待数据存储区和虚拟机操作开始。等待时间取决于主机、数据存储和虚拟机的数量。如果您不等待，您可能会偶尔看到失败。
 
 
 升级后、如果虚拟机的合规性状态已过时、请按照以下步骤重新应用存储策略：
 
 . 转到数据存储并选择*摘要*>*虚拟机存储策略*。
 +
-VM存储策略兼容性*下的兼容性状态显示为*过时*。
+系统显示*虚拟机存储策略合规性*下的合规性状态为*过时*。
 
-. 选择Storage VM策略和相应的VM
-. 选择*应用*
+. 选择存储虚拟机策略和相应的虚拟机。
+. 选择*应用*。
 +
-现在，“VM storage policy Compliance”(VM存储策略合规性)下的合规状态将显示为“Compliance”(合规)。
+*虚拟机存储策略合规性*下的合规性状态显示为合规。
 
 
 
@@ -178,7 +206,7 @@ NOTE: 如果故障转移已完成但重新保护仍处于待定状态，则不�
 +
 .. link:../manage/enable-services.html["为VMware vSphere服务启用ONTAP工具"]
 .. 使用以下步骤ONTAP tools for VMware vSpherelink:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]。
-.. 在VMware Live Site Recovery用户界面页面上，执行*Discover Arrays (发现阵列)*和*Discover Devices*(发现设备)操作，并确认这些设备在迁移前显示为。
+.. 在 VMware Live Site Recovery 界面上，运行 *Discover Arrays* 和 *Discover Devices*。确认设备显示与迁移前相同。
 
 
 
