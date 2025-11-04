@@ -14,11 +14,10 @@ summary: 升级之前、您需要在其他节点上启动SSH。
 升级之前、您需要在其他节点上启动SSH。
 
 .开始之前
-应为vCenter Server实例启用VASA Provider扩展。
+为您的 vCenter Server 实例启用 VASA Provider 扩展。
 
-* 关于此任务 *
-
-升级之前、请对每个节点执行此过程。
+.关于此任务
+升级前，请对每个节点重复此步骤。
 
 .步骤
 . 从 vCenter Server 中，打开一个 VASA Provider 控制台。

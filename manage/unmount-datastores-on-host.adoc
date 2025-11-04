@@ -11,13 +11,13 @@ summary: 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储
 
 
 [role="lead"]
-卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储库。对于由适用于VMware vSphere的ONTAP工具发现或管理的NFS和VMFS数据存储库、系统会启用卸载数据存储库操作。
+卸载数据存储操作会从 ESXi 主机中删除 NFS 或 VMFS 数据存储。它适用于由ONTAP tools for VMware vSphere发现或管理的数据存储。
 
 .步骤
 . 登录到vSphere Client。
 . 右键单击 NFS 或 VMFS 数据存储对象并选择*卸载数据存储*。
 +
-此时将打开一个对话框、其中列出了挂载数据存储库的ESXi主机。对受保护的数据存储库执行此操作时、屏幕上会显示一条警告消息。
+vSphere 客户端打开一个对话框，列出挂载数据存储的 ESXi 主机。当对受保护的数据存储执行操作时，屏幕上会显示一条警告消息。
 
 . 选择一个或多个ESXi主机以卸载数据存储库。
 +

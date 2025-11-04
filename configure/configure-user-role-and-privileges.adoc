@@ -104,7 +104,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 === 非管理员全局范围集群用户所需的最低权限列表
 
-本节列出了没有 JSON 文件的非管理员全局范围集群用户所需的最低权限。如果集群处于本地范围内，请使用 JSON 文件创建用户，因为适用ONTAP tools for VMware vSphere需要的不仅仅是在ONTAP上进行配置的读取权限。
+本页列出了没有 JSON 文件的非管理员全局作用域集群用户所需的最低权限。如果集群处于本地范围内，请使用 JSON 文件创建用户，因为适用ONTAP tools for VMware vSphere需要的不仅仅是在ONTAP上进行配置的读取权限。
 
 您可以使用 API 访问功能：
 

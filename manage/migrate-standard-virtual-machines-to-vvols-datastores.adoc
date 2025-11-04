@@ -16,8 +16,7 @@ summary: '您可以将虚拟机从NFS和VMFS数据存储库迁移到虚拟卷\(V
 .开始之前
 确保您计划迁移的任何虚拟机上未运行VASA Provider。如果将运行 VASA Provider 的虚拟机迁移到 VVOL 数据存储库，则无法执行任何管理操作，包括启动 VVOL 数据存储库上的虚拟机。
 
-* 关于此任务 *
-
+.关于此任务
 从NFS和VMFS数据存储库迁移到Vvol数据存储库时、vCenter Server会在从VMFS数据存储库(而不是NFS VMDK文件)移动数据时使用vStorage APIS for Array Integration (VAAI)卸载。VAAI 卸载通常会降低主机上的负载。
 
 .步骤

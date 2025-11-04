@@ -25,7 +25,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 ** 348 GB用于厚配置安装
 
 
-* *主机系统大小要求* 下表显示了每种部署规模的推荐内存。对于高可用性 (HA) 部署，您需要列出的设备大小的三倍。
+* *主机系统规模要求* 下表显示了每种部署规模的推荐内存。对于高可用性 (HA) 部署，您需要列出的设备大小的三倍。
 
 
 |===
@@ -84,70 +84,74 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == 端口要求
 
-下表概述了NetApp使用的网络端口及其用途。请确保这些端口处于开放状态且可访问，以保证系统正常运行和通信。请确保已完成必要的网络配置，以允许这些端口上的流量，从而使相关服务正常运行。根据您的安全策略，您可能需要配置防火墙或其他安全设备，以允许此类流量在您的网络中传输。
+下表概述了NetApp使用的网络端口及其用途。端口分为三种类型：
+
+* 外部端口：这些端口可以从 Kubernetes 集群或节点外部访问。它们允许服务与外部网络或用户通信，从而实现与集群环境之外的系统集成。
+* 节点间端口：这些端口允许 Kubernetes 集群内的节点之间进行通信。它们是集群任务（例如数据共享和协同工作）所必需的。对于单节点部署，节点间端口仅在节点内部使用，不需要外部访问。节点间端口可以接受来自集群外部的流量。使用防火墙规则阻止节点间端口访问互联网。
+* 内部端口：这些端口使用 ClusterIP 地址在 Kubernetes 集群内部进行通信。它们不会对外暴露，因此无需添加到防火墙规则中。
+
 
 
 NOTE: 确保所有ONTAP工具节点位于同一子网，以保持彼此之间不间断的通信。
 
+
+|===
+| *服务/组件名称* | * 端口 * | *协议* | *端口类型* | * 问题描述 * 
+
+
+| ntv-gateway-svc (LB) | 443、8443 | TCP | 外部 | 用于 VASA 提供商服务的传入通信的直通端口。VASA 提供程序自签名证书和自定义 CA 证书托管在此端口上。 
+
+
+| SSH | 22 | TCP | 外部 | 用于远程服务器登录和命令执行的安全外壳协议 (Secure Shell)。 
+
+
+| rke2 服务器 | 9345 | TCP | 节点间 | RKE2 监管 API（仅限受信任网络）。 
+
+
+| kube-apiserver | 6443 | TCP | 节点间 | Kubernetes API 服务器端口（仅限受信任的网络）。 
+
+
+| rpcbind/端口映射器 | 111 | TCP/UDP | 节点间 | 用于服务间的 RPC 通信。 
+
+
+| coredns（DNS） | 53 | TCP/UDP | 节点间 | 集群内用于名称解析的域名系统 (DNS) 服务。 
+
+
+| NTP | 123 | UDP | 节点间 | 网络时间协议（NTP）用于时间同步。 
+
+
+| etcd | 2379、2380、2381 | TCP | 节点间 | 用于存储集群数据的键值存储。 
+
+
+| kube-vip | 2112 | TCP | 节点间 | Kubernetes API 服务器端口。 
+
+
+| kubelet | 10248、10250 | TCP | 节点间 | Kubernetes 组件 
+
+
+| kube-controller | 10257 | TCP | 节点间 | Kubernetes 组件 
+
+
+| 云控制器 | 10258 | TCP | 节点间 | Kubernetes 组件 
+
+
+| kube-scheduler | 10259 | TCP | 节点间 | Kubernetes 组件 
+
+
+| kube-proxy | 10249、10256 | TCP | 节点间 | Kubernetes 组件 
+
+
+| 加州节点 | 9091、9099 | TCP | 节点间 | Calico 网络组件。 
+
+
+| containerd | 10010 | TCP | 节点间 | 容器守护进程服务。 
+
+
+| VXLAN（法兰绒） | 8472 | UDP | 节点间 | 用于 pod 通信的覆盖网络。 
 |===
 
+NOTE: 对于高可用性部署，请确保所有节点之间都已打开 UDP 端口 8472。该端口支持跨节点的 pod 间通信；阻塞该端口将中断节点间网络连接。
 
-| * 端口 * | *协议* | * 问题描述 * 
-
-
-| 8143 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
-
-
-| 8043 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
-
-
-| 9060 | TCP | 用于ONTAP工具的HTTP/HTTPS连接。 
-
-
-| 22 | TCP | 在集群配置期间、Ans可 使用此SSH端口进行通信。要执行更改维护用户密码、状态消息等功能、以及在HA配置情况下更新所有三个节点上的值、需要使用此端口。 
-
-
-| 443 | TCP | 这是VASA Provider服务的传入通信的直通端口。VASA Provider自签名证书和自定义CA证书托管在此端口上。 
-
-
-| 8443 | TCP | 此端口通过Swagger和Manager用户界面应用程序托管API文档。 
-
-
-| 2379 | TCP | 这是客户端请求(例如GET、Put、DELETE或监视et执行 密钥值存储区中的密钥)的默认端口。 
-
-
-| 2380 | TCP | 对于etc集群、这是服务器到服务器通信的默认端口、该集群使用raft Consensus算法、etc用于数据复制和一致性。 
-
-
-| 7946 | TCP/UDP | 该端口用于Docker的容器网络发现。 
-
-
-| 9083 | TCP | 此端口是VASA Provider服务内部使用的服务端口。 
-
-
-| 6443 | TCP | 来源：RKE2代理节点。目标：REK2服务器节点。说明：Kubenetes API 
-
-
-| 9345 | TCP | 来源：RKE2代理节点。目标：REK2服务器节点。说明：REK2 Supervisor API 
-
-
-| 8472 | tcp+udp. | 使用法兰通道VXLAN时、所有节点都需要能够通过UDP端口8472访问其他节点。源：所有RKE2节点。Destination：所有REK2节点。描述：带有VXLAN的Canal CNI 
-
-
-| 10250 | TCP | 源：所有RKE2节点。Destination：所有REK2节点。说明：Kubelet指标 
-
-
-| 30000-32767 | TCP | 源：所有RKE2节点。Destination：所有REK2节点。说明：nodePort端口范围 
-
-
-| 123 | TCP | ntpd.使用此端口执行NTP服务器的验证。 
-
-
-| 3300 和 6789-7300 | TCP | 节点间数据平面 
-
-
-| 9080 | TCP | VP HTTP/HTTPS连接(对于IPv4、仅为127.0.0.0/8；对于IPv6、仅为：1/128)。 
-|===
 
 
 == 部署适用于VMware vSphere的ONTAP工具的配置限制

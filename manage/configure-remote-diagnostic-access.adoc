@@ -14,10 +14,9 @@ summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用
 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用SSH访问。
 
 .开始之前
-应为vCenter Server实例启用VASA Provider扩展。
+为您的 vCenter Server 实例启用 VASA Provider 扩展。
 
-* 关于此任务 *
-
+.关于此任务
 使用 SSH 访问 diag 用户帐户具有以下限制：
 
 * 每次激活 SSH 时只允许使用一个登录帐户。
@@ -25,7 +24,7 @@ summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用
 +
 ** 此时间将到期。
 +
-登录会话仅在第二天午夜之前有效。
+登录会话将于次日午夜过期。
 
 ** 您再次使用 SSH 以 diag 用户身份登录。
 

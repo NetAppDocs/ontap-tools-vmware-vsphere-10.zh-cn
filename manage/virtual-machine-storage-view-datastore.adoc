@@ -11,10 +11,10 @@ summary: 存储视图显示虚拟机创建的虚拟卷的列表。
 
 
 [role="lead"]
-存储视图显示虚拟机创建的虚拟卷的列表。
+存储视图显示虚拟机创建的vVols列表。
 
 
-NOTE: 此视图适用于至少挂载了一个适用于VMware vSphere管理的Vvol数据存储库相关磁盘的ONTAP工具的虚拟机。
+NOTE: 此视图适用于至少有一个来自ONTAP tools for VMware vSphere管理的vVols数据存储的磁盘的虚拟机。
 
 .步骤
 . 从 vSphere Client 转到虚拟机。

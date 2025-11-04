@@ -11,12 +11,14 @@ summary: 一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCen
 
 
 [role="lead"]
-默认情况下、在部署期间会为ONTAP工具和VASA Provider生成自签名证书。您可以使用ONTAP工具管理器界面续订证书或将其升级到自定义CA。在多vCenter部署中、自定义CA证书是必需的。
+部署期间默认为ONTAP工具和 VASA Provider 生成自签名证书。使用ONTAP工具管理器界面，您可以更新证书或将其升级为自定义 CA。在多 vCenter 部署中，必须使用自定义 CA 证书。
 
 .开始之前
-* 颁发证书的域名应映射到虚拟IP地址。
-* 对域名运行nslookup检查、检查域是否已解析为预期的IP地址。
-* 应使用域名和ONTAP工具IP地址创建证书。
+开始之前，您应该准备好以下物品：
+
+* 域名已映射到虚拟 IP 地址。
+* 成功执行域名 nslookup 查询，确认其解析到正确的 IP 地址。
+* 使用域名和ONTAP工具 IP 地址创建的证书。
 
 
 

@@ -11,7 +11,7 @@ summary: 按照本节中的步骤执行ASA清理。
 
 
 [role="lead"]
-按照本节中的步骤执行ASA清理。
+按照以下说明完成 VASA 清理过程。
 
 
 NOTE: 建议您在执行VASACleanup之前删除所有VVOs数据存储库。
