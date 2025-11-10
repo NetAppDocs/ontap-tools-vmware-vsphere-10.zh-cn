@@ -94,7 +94,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 NOTE: 确保所有ONTAP工具节点位于同一子网，以保持彼此之间不间断的通信。
 
+点击展开或折叠端口要求表。
 
+[%collapsible]
+====
 |===
 | *服务/组件名称* | * 端口 * | *协议* | *端口类型* | * 问题描述 * 
 
@@ -152,6 +155,7 @@ NOTE: 确保所有ONTAP工具节点位于同一子网，以保持彼此之间不
 
 NOTE: 对于高可用性部署，请确保所有节点之间都已打开 UDP 端口 8472。该端口支持跨节点的 pod 间通信；阻塞该端口将中断节点间网络连接。
 
+====
 
 
 == 部署适用于VMware vSphere的ONTAP工具的配置限制

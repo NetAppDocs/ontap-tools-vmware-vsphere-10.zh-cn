@@ -62,7 +62,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: 在其他节点上启动SSH
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: 更新vCenter Server和ONTAP凭据
+  - title: 更新 vCenter 服务器凭据
     url: "/manage/update-vcenter-credentials.html"
   - title: 更改证书验证标志
     url: "/manage/change-valid-flag.html"
