@@ -23,7 +23,7 @@ ONTAP tools for VMware vSphere部署为小型单节点，具有核心服务以�
 * 确保在为 HA 配置设备之前创建内容库。
 +
 
-NOTE: 部署后不要删除内容库中的OVA模板。
+NOTE: 部署后不要删除内容库中的 OVA 模板。
 
 
 
@@ -78,8 +78,24 @@ NOTE: 切勿将适用于VMware vSphere虚拟机的ONTAP工具存储在其管理�
 . 阅读并接受许可协议，然后选择*Next*。
 . 为配置和磁盘格式选择存储，然后选择*Next*。
 . 为每个源网络选择目标网络，然后选择*Next*。
-. 在*自定义模板*窗口中，填写必填字段并选择*下一步*。image:../media/sys-conf.png["自定义模板"]
+. 在“自定义模板”窗口中，填写必填字段。image:../media/custom-temp.png["自定义模板"]
 +
+
+NOTE: vCenter 主机名是部署ONTAP工具设备的 vCenter Server 实例的名称。
+
++
+如果您在双 vCenter Server 拓扑中部署ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，该用户和角色仅需以下列出的数据存储权限即可部署 OVF 模板：
+
++
+** 分配空间
+** 浏览数据存储库
+** 底层文件操作
+** 删除文件
+** 更新虚拟机文件
+** 更新虚拟机元数据
++
+对于将由ONTAP工具管理的 vCenter 实例，请确保 vCenter 用户帐户具有管理员权限。
+
 ** 该信息在安装期间进行验证。如果存在差异，Web 控制台上会出现一条错误消息，并提示您进行更正。
 ** 主机名必须包含字母(A-Z、a-z)、数字(0-9)和连字符(-)。要配置双堆栈、请指定映射到IPv6地址的主机名。
 +
@@ -90,7 +106,7 @@ NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
 ** IPv4是节点配置的IP地址组件、可用于在节点上启用诊断Shell和SSH访问、以便进行调试和维护。
 
 
-. 使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。image:../media/customize-hw105.png["定制硬件"] image:../media/customize-hw.png["定制硬件"]
+. 使用 vCenter Server 8.0.3 版本时，在“自定义硬件”窗口中，启用“CPU 热添加”和“内存热插拔”选项，以启用 HA 功能。image:../media/customize-hw105.png["定制硬件"]
 . 查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 +
 创建部署任务后、vSphere任务栏中将显示进度。

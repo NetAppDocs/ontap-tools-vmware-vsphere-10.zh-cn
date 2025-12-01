@@ -11,10 +11,10 @@ summary: 按照本节中的步骤执行ASA清理。
 
 
 [role="lead"]
-按照以下说明完成 VASA 清理过程。
+要完成 VASA 清理过程，请按照以下步骤操作。
 
 
-NOTE: 建议您在执行VASACleanup之前删除所有VVOs数据存储库。
+NOTE: 建议在开始 VASA 清理之前删除所有vVols数据存储。
 
 .步骤
 . 转到\https://OTV_IP:8143/Register.html以取消注册此插件

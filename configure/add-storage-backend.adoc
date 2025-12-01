@@ -11,13 +11,13 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 
 
 [role="lead"]
-当您将存储后端添加到ONTAP工具时，您可以直接从 vCenter Server 配置和管理数据存储库。
+使用ONTAP tools for VMware vSphere，为您的 ESXi 主机添加和管理存储后端。您可以部署集群或 SVM，启用MetroCluster支持，并验证证书以确保安全连接。您可以使用ONTAP工具管理器或 vSphere 客户端配置存储后端，监控证书状态，并在集群更改后手动重新发现资源。
 
-要在本地添加存储后端，请在ONTAP工具界面中使用集群或 SVM 凭据。这些存储后端仅适用于选定的 vCenter Server。 ONTAP工具将 SVM 映射到 vCenter Server 以进行vVols或 VMFS 数据存储库管理。对于 VMFS 数据存储和 SRA 工作流，您可以使用 SVM 凭据，而无需全局映射的集群。
+要在本地添加存储后端，请在ONTAP工具界面中使用集群或 SVM 凭据。本地存储后端仅对选定的 vCenter Server 可用。ONTAP工具将 SVM 映射到 vCenter Server 以进行vVols或 VMFS 数据存储库管理。对于 VMFS 数据存储和 SRA 工作流，您可以使用 SVM 凭据而无需全局映射集群。
 
-您可以使用ONTAP工具管理器中的ONTAP集群凭据添加全局存储后端。全局存储后端支持发现工作流来识别 vVol 管理所需的集群资源。在多租户设置中，您可以在本地添加 SVM 用户来管理vVols数据存储。
+要添加全局存储后端，请在ONTAP工具管理器中使用ONTAP集群凭据。全局存储后端支持发现工作流，以识别 vVol 管理所需的集群资源。在多租户环境中，您可以本地添加 SVM 用户来管理vVols数据存储。
 
-在ONTAP系统中启用MetroCluster支持时，将源集群和目标集群都作为本地或全局存储后端加入。
+如果ONTAP中启用了MetroCluster支持，则将源集群和目标集群都作为本地或全局存储后端加入。
 
 .开始之前
 验证证书是否包含有效的主题备用名称 (SAN) 字段。  ONTAP系统使用 SAN 字段来识别集群和 SVM 管理 LIF。

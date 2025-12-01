@@ -22,7 +22,20 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . ONTAP tools for VMware vSphere的 OVA。
 . 添加要迁移到ONTAP tools for VMware vSphere的 vCenter Server 实例。请参阅link:../configure/add-vcenter.html["添加vCenter Server实例"]了解更多信息。
-. 通过 vCenter 服务器 API 在本地为 ONTAP 工具插件加入存储后端。
+. 通过 vCenter Server API 将存储后端本地集成到ONTAP工具插件中。请参阅link:../configure/add-storage-backend.html["使用 vSphere 客户端界面添加存储后端"]了解更多信息。
+. 获取访问令牌以验证 REST API 请求。请使用以下示例，并将变量替换为特定于您环境的值。
++
+[source, curl]
+----
+curl --request POST \
+--location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+-d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+----
++
+复制并保存响应中返回的访问令牌。
+
 . 从Swagger或Postman发出以下API进行迁移。
 +
 [listing]
@@ -96,19 +109,27 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 +
 [listing]
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
 ----
 +
 作业完成后，请查看作业响应中的迁移报告。
 
-. 将适用于 VMware vSphere 存储提供程序的 ONTAP 工具添加到 vCenter Server 并link:../configure/registration-process.html["注册VASA Provider"]使用适用于 VMware vSphere 的 ONTAP 工具。
+. 将ONTAP tools for VMware vSphere添加到 vCenter Server。
+. 使用ONTAP tools for VMware vSphere 的VASA 提供程序。有关说明，请参阅link:../configure/registration-process.html["注册VASA Provider"]。
+. 注册后，请在 vSphere Client 的“存储提供程序”下验证 VASA 提供程序的名称及其状态。  VASA 提供商应在线显示，确认注册成功。
 . link:../manage/enable-services.html["启用 VASA Provider"]ONTAP tools for VMware vSphere上的服务。
-. 从维护控制台停止适用于VMware vSphere存储提供程序9.10/9.11/9.12/9.13的ONTAP工具VASA Provider服务。
+. 请按照以下步骤停止ONTAP tools for VMware vSphere：
 +
-不要删除 VASA 提供程序。
-
+.. 在ONTAP工具 9.x 中，打开 Web 控制台。
+.. 访问维护控制台。
+.. 进入 `1`选择“应用程序配置”菜单。
+.. 进入 `5`停止 VASA Provider 和 SRA 服务。
+.. 在 vSphere Client 中，导航至“清单”>“存储提供程序”。
+.. 从存储后端选择ONTAP工具 9.x VASA 提供程序，然后单击“删除”。
 +
 旧 VASA 提供程序停止后，vCenter Server 将故障转移到ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由适用于ONTAP tools for VMware vSphere提供服务。
+
+
 
 . 完成数据存储发现作业后，迁移的 NFS 和 VMFS 数据存储将出现在ONTAP tools for VMware vSphere中，这可能需要长达 30 分钟的时间。在概览页面上检查它们的可见性。
 . 在Swagger或Postman中使用以下API执行修补程序迁移：
@@ -131,11 +152,17 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 
 异步
 
+请在 Swagger 中使用以下 URI：
+
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
 *卷示例*
 
 [listing]
 ----
-curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
 *JSON输出示例*
 
@@ -149,15 +176,16 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373
   "status": "running"
 }
 ----
+====
++
 修补操作的请求正文为空。
+
+
 
 
 NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 
 运行修补程序迁移API后、所有VM都会遵守存储策略。
-
-====
-
 
 .下一步行动
 完成迁移并将ONTAP Tools 10.5 注册到 vCenter Server 后，请按照以下步骤操作：
