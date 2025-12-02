@@ -10,6 +10,9 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 :imagesdir: ../media/
 
 
+[role="lead"]
+按照本节中的步骤，将 VASA 提供程序从ONTAP tools for VMware vSphere迁移到ONTAP tools for VMware vSphere，并更新 VMware Live Site Recovery 设备上的存储复制适配器 (SRA)。
+
 
 
 == 迁移 VASA 提供程序的步骤
