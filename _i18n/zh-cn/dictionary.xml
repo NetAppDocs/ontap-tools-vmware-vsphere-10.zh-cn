@@ -1117,7 +1117,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="700e580d2a33afbe04073228203485fe" category="paragraph">如果证书已过期或即将到期、您可以续订该证书。如果证书类型为CA签名、则可以使用续订选项。在弹出窗口中、提供服务器证书、专用密钥、根CA和中间证书详细信息。</block>
   <block id="04b97a75d793e5e8d9c91f69fb8803f5" category="admonition">在续订证书之前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。</block>
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">在弹出窗口中、上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。</block>
-  <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">输入生成此证书的域名并升级此证书。</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">升级完成前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。如果您管理多个vCenter Server实例并希望在这些实例上启用vvol功能、则需要将自签名证书更改为自定义CA证书。</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">选择*Certificates*&gt;*VASA Provider*或*VASA ONTAP tools*&gt;*Renew*以续订证书。</block>
@@ -1291,7 +1290,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="cf3ebf71afc09e18d1f314148fa3811e" category="section-title">适用于VMware vSphere 10的ONTAP工具附带的角色</block>
   <block id="9956bf2190822dfa9e747d5beea541f5" category="paragraph">为了简化vCenter Server RBAC的使用、适用于VMware vSphere的ONTAP工具提供了针对各种管理任务量身定制的预定义角色。</block>
   <block id="164df67d012e8e0ac61963c54eda6893" category="admonition">您可以根据需要创建新的自定义角色。在这种情况下、您应克隆一个现有ONTAP工具角色、并根据需要对其进行编辑。更改配置后、受影响的vSphere客户端用户需要注销并重新登录才能激活更改。</block>
-  <block id="63c3900e2803574b915938ebce0260d4" category="paragraph">要查看适用于VMware vSphere的ONTAP工具角色、请选择vSphere Client顶部的*菜单*、然后单击*管理*、再单击左侧的*角色*。下面介绍了三种预定义角色。</block>
   <block id="37dfa1e83e1bae8babc789706610e685" category="paragraph">提供执行适用于VMware vSphere的核心Privileges工具管理员任务所需的所有本机vCenter Server ONTAP和ONTAP工具专用Privileges。</block>
   <block id="cd027b3cb7fb1e8712103dffdf01a491" category="paragraph-title">适用于VMware vSphere的NetApp ONTAP工具配置</block>
   <block id="7e5cada6cb223f80ed0a2b6fee9ab3dc" category="section-title">vSphere对象和ONTAP存储后端</block>
@@ -2336,7 +2334,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c81c266dd6001708c9f3076ddf21214c" category="paragraph">现在， ONTAP tools for VMware vSphere可以发现并管理新的主机。您可以继续在新主机上管理数据存储。</block>
   <block id="11d81e4c78f6be23d5539c87f4f3a7a7" category="list-text"><block ref="c5978119f323c1ceb37571472aaae169" category="inline-link-macro-rx"></block>在新主机上。</block>
   <block id="063680c82bcd7ffea25b1d4d5c3c6470" category="list-text"><block ref="b5251e50ffdcc6a83e84a63c2a1cd1e4" category="inline-link-macro-rx"></block>在新主机上。</block>
-  <block id="0eb234ccef0fdd3bb9f5b615c5ec8eef" category="paragraph">部署期间默认为ONTAP工具和 VASA Provider 生成自签名证书。使用ONTAP工具管理器界面，您可以更新证书或将其升级为自定义 CA。在多 vCenter 部署中，必须使用自定义 CA 证书。</block>
   <block id="badf77f43d93c8a563816ac386123a63" category="paragraph">开始之前，您应该准备好以下物品：</block>
   <block id="37b0536bf9555d4fd2d03f77ee0b0bab" category="list-text">域名已映射到虚拟 IP 地址。</block>
   <block id="d417b5848864e0c056fdd924f5f377f5" category="list-text">成功执行域名 nslookup 查询，确认其解析到正确的 IP 地址。</block>
@@ -2410,7 +2407,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3a7af0096c6ddabf7582b1bae1272dd6" category="paragraph">如果您在双 vCenter Server 拓扑中部署ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，该用户和角色仅需以下列出的数据存储权限即可部署 OVF 模板：</block>
   <block id="c6519d60f243eebfcc92d096e23bdb8b" category="list-text">分配空间</block>
   <block id="653ea8411fd85f46f22e62ee3cabb643" category="list-text">浏览数据存储库</block>
-  <block id="c1e99705ec496cfaec18f7abaf8deb4f" category="list-text">底层文件操作</block>
   <block id="b21f085d08623fc7a5a9da204cc66c8c" category="list-text">删除文件</block>
   <block id="e9cfb64d47efe034339436bf09172593" category="list-text">更新虚拟机文件</block>
   <block id="08437994b9601a135d92f032a83daf1c" category="list-text">更新虚拟机元数据</block>
@@ -2507,4 +2503,109 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">针对 iSCSI VMFS 和 NFS v3 数据存储的 SRA 复制结合了 SMAS 和 VMware Live Site Recovery 的三站点保护。SRA 支持 FCP 与 VMFS。</block>
   <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">出现提示时，请提供 vCenter 凭据。这是托管ONTAP工具的 vCenter 实例。</block>
   <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">如果您在双 vCenter Server 拓扑中使用ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，并仅授予其以下列出的数据存储权限：</block>
+  <block id="02086c74e7c7de9c13df55ddb85cb6a9" category="paragraph">要查看ONTAP tools for VMware vSphere，请在 vSphere Client 顶部选择“菜单”，然后单击左侧的“管理”，再单击“角色”。分配给负责部署或启用 vCenter 的 vCenter 用户的角色必须包含以下权限。请确保将这些权限配置为部署或入职流程的先决条件。</block>
+  <block id="301d574ef42563b03638c8eae19225cb" category="list-text">警报</block>
+  <block id="6c352acb91887b241b030d91d72bdf66" category="list-text">确认警报</block>
+  <block id="55764a40428feb54ed131a5442e5e9d6" category="list-text">内容库</block>
+  <block id="7fda80facd4b5302f2a2c887c2ecb595" category="list-text">添加库项目</block>
+  <block id="1e1c0c7bc66940beac7add74f122a6f5" category="list-text">请在模板中签到</block>
+  <block id="68bc9937a90b947daae3bb691abad236" category="list-text">查看模板</block>
+  <block id="3fcf474605790b0472ff59a3b813e230" category="list-text">下载文件</block>
+  <block id="2ccfd03d6c52fc23815076ccc63f020a" category="list-text">进口存储</block>
+  <block id="bf0d559fc72e2b15ec4b32db14be07ad" category="list-text">读取存储</block>
+  <block id="df4952ff5cee5ec41685b522c3c98e1f" category="list-text">同步库项目</block>
+  <block id="bb08c14df0dc403c06e4d04c8d09aa47" category="list-text">同步已订阅的库</block>
+  <block id="4f2a0b4125eaf9d8804c99dcd015f5c0" category="list-text">查看配置设置</block>
+  <block id="0c675ffdeb5e9d32e027b53289046420" category="list-text">低级别的文件操作</block>
+  <block id="8c79c9b6e95183161d6876a3c3e5e7de" category="list-text">ESX 代理管理器</block>
+  <block id="4351cfebe4b61d8aa5efa1d020710005" category="list-text">查看</block>
+  <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="list-text">文件夹</block>
+  <block id="5dc1e97c14fbe72d8b566ce29c39f010" category="list-text">创建文件夹</block>
+  <block id="c2ca16d048ec66e04bca283eab048ec2" category="list-text">主机</block>
+  <block id="254f642527b45bc260048e30704edb39" category="list-text">配置</block>
+  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="list-text">高级设置</block>
+  <block id="1221ff7164cdee8b469096ebf5e997f6" category="list-text">更改设置</block>
+  <block id="5dd57c2a315d3af44c2eb40eefc47111" category="list-text">网络配置</block>
+  <block id="4f925d4097e72dc18c34b7ebba99bc4f" category="list-text">系统资源</block>
+  <block id="d154fb143613245dc009aa97a790ae3b" category="list-text">虚拟机自动启动配置</block>
+  <block id="97fc2547b66cc43d6329a79c740cc008" category="list-text">本地操作</block>
+  <block id="5daad9a463f9102e036b5aaa1cf2b87e" category="list-text">创建虚拟机</block>
+  <block id="dd230a946aa4a56d733b1f9296f90610" category="list-text">删除虚拟机</block>
+  <block id="d4d82afbdd25c6582604ef24a51dd4eb" category="list-text">重新配置虚拟机</block>
+  <block id="eec89088ee408b80387155272b113256" category="list-text">网络</block>
+  <block id="0f2a9e2e169a500cc92684521eaa4a9a" category="list-text">分配网络</block>
+  <block id="f1206f9fadc5ce41694f69129aecac26" category="list-text">配置</block>
+  <block id="1b4221480b16d411125810dde8dde8f9" category="list-text">OvfManager</block>
+  <block id="fe84a57f372ccd35cea7a9f532b0758e" category="list-text">Ovf消费者访问</block>
+  <block id="1e96581e09b24e0b3ef2fa9e9837a567" category="list-text">主机配置文件</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="list-text">资源</block>
+  <block id="be4e8bed170ca25e86a8395892b08952" category="list-text">向资源池分配虚拟机</block>
+  <block id="fdae47a7dc2be0ca39d6eaef415f393e" category="list-text">计划任务</block>
+  <block id="dbce9628ef585e7df3a0399258ab906a" category="list-text">创建任务</block>
+  <block id="dc5458cbf6935d24490c83f49e40b5db" category="list-text">修改任务</block>
+  <block id="7020e3d2f102ae19d25897edced29ba9" category="list-text">运行任务</block>
+  <block id="ef615563c8e8ea902c7fcac3cd2c4246" category="list-text">Tasks</block>
+  <block id="9c0f21d13609c634ed11fdef5006227b" category="list-text">创建任务</block>
+  <block id="fb6df535efad5feef144fec0d962d6fd" category="list-text">更新任务</block>
+  <block id="776c22edd71a94b798c726e47a0fce00" category="list-text">vApp</block>
+  <block id="9a8c4687d06865a95cc7648eeddb3a61" category="list-text">添加虚拟机</block>
+  <block id="d3489e687ecac056ebf2c2638db98a8f" category="list-text">分配资源池</block>
+  <block id="4fc186574fa1d6007738c545dfd83193" category="list-text">分配虚拟应用程序</block>
+  <block id="72d6d7a1885885bb55a565fd1070581a" category="list-text">导入</block>
+  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="list-text">移动</block>
+  <block id="1bb202d66fd437a5e7ad355057d3dcb3" category="list-text">关闭</block>
+  <block id="eb503c4e76174415d5b8c63a4393ee0b" category="list-text">启动</block>
+  <block id="a140a7a64a801da8270ca529a9f13fb4" category="list-text">从 URL 拉取</block>
+  <block id="6539d32084cd2a9331de2229c0f1b1ea" category="list-text">查看 OVF 环境</block>
+  <block id="56a1d9dbd940bf6b46e973e279c60c10" category="list-text">更改配置</block>
+  <block id="c629a65bf0cad09db50b338d3b22ceaa" category="list-text">添加现有磁盘</block>
+  <block id="290f3ac3e6b4bd78ff9a9070bb2c965a" category="list-text">添加新磁盘</block>
+  <block id="ef1affd058b739f5a69433d49a5ddfe8" category="list-text">添加或删除设备</block>
+  <block id="119dd5a342e981b13bf0024d5c6a6933" category="list-text">高级配置</block>
+  <block id="61705f157c64f8c4f27e58eff60b09e2" category="list-text">更改 CPU 计数</block>
+  <block id="e99fa5e2795936890719554d3dc1dbcf" category="list-text">记忆</block>
+  <block id="2ad5d114916a79d614211b7622b98251" category="list-text">更改设置</block>
+  <block id="b81398b82bb104abd241c7bce6d3450b" category="list-text">更改资源</block>
+  <block id="86381d484481a4d844f53e28c769eaad" category="list-text">扩展虚拟磁盘</block>
+  <block id="7a4d0d96ff85f2e26f1ac8d0a5c42b74" category="list-text">修改设备设置</block>
+  <block id="175d3bc37a203b0e58c2d1bb572971de" category="list-text">删除磁盘</block>
+  <block id="6c2cadc5f0b182e333bf2dad08ca8ff1" category="list-text">重置宾客信息</block>
+  <block id="5ec85f637822f3afefe71224e4f551b5" category="list-text">升级虚拟机兼容性</block>
+  <block id="4d37e6414fba199227861f08a4aefb2f" category="list-text">编辑库存</block>
+  <block id="eb420426750166280dc02d6c621c14d0" category="list-text">基于现有清单创建</block>
+  <block id="f7f78b9dfe29752b9e04490253838264" category="list-text">新建</block>
+  <block id="0ba7583639a274c434bbe6ef797115a4" category="list-text">注册</block>
+  <block id="1063e38cb53d94d386f21227fcd84717" category="list-text">删除</block>
+  <block id="9d4a8f2dfe3c62f3ce3011035d28fb66" category="list-text">注销</block>
+  <block id="61ee5a22cd5f14ed4e48eb5611031e74" category="list-text">相互作用</block>
+  <block id="2db1c743d337c4f4d863422ad30d97cd" category="list-text">虚拟机备份操作</block>
+  <block id="0dc00ee511e76ee47dd673fefe3dbe99" category="list-text">配置 CD 介质</block>
+  <block id="9a0f1db822b6f7870f968161a6f8d334" category="list-text">配置软盘介质</block>
+  <block id="90d357ff2349f9ba8e8edcd12eb41b7d" category="list-text">连接设备</block>
+  <block id="477528aa800f91aa21332ac6b7ef36fc" category="list-text">控制台交互</block>
+  <block id="9068dd22ad3328ced9301270e409df6a" category="list-text">通过 VIX API 进行客户操作系统管理</block>
+  <block id="526d688f37a86d3c3f27d0c5016eb71d" category="list-text">重置</block>
+  <block id="b3834d6f7a63e5e750e0ca5ecf31e3b9" category="list-text">暂停</block>
+  <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="list-text">配置</block>
+  <block id="5680f22aa1fdfe0f98deeffd2ff47d08" category="list-text">允许磁盘访问</block>
+  <block id="e175434c80ef613608d78e91fd789903" category="list-text">克隆模板</block>
+  <block id="598fbc9a28d6f19e92b27e1a5af7ad0e" category="list-text">定制宾客</block>
+  <block id="c7578f41f073fde5296d8ddc592abd31" category="list-text">部署模板</block>
+  <block id="3c42b71d77b9e5f83e0ee3f8ed97d8da" category="list-text">修改定制规范</block>
+  <block id="c2578bfe84d0cf1e9df740a50d2613b1" category="list-text">读取自定义规范</block>
+  <block id="70f03bba53aef7388a7ba23be66f7ca0" category="list-text">Snapshot 管理</block>
+  <block id="bfb2cee5de3a54c30810194a0077e673" category="list-text">创建 Snapshot</block>
+  <block id="ada1b8fca015644eb0e5c19ee82795da" category="list-text">删除快照</block>
+  <block id="c3b272eb798aaa11b258a91dbf4ef016" category="list-text">重命名快照</block>
+  <block id="e2a5f777b44916836fdc3739a3964e98" category="list-text">还原为快照</block>
+  <block id="9d907c3f5539ff6f152a649a7d58d691" category="paragraph">有三个预定义的角色，如下所述。</block>
+  <block id="ed6bb5734812ec0d7dd5450746f207a0" category="paragraph">在部署过程中，默认情况下会为ONTAP工具和 VASA 提供程序生成自签名证书。您可以使用ONTAP工具管理器界面来续订此证书或将其替换为自定义 CA 证书。在多 vCenter 部署中，必须使用自定义 CA 证书。</block>
+  <block id="324fa302eeeb16cb22483400ce096be0" category="list-text">输入您为其生成此证书的负载均衡器 IP 的 FQDN，并升级证书。</block>
+  <block id="1289a0b5a75e6b47ee61b41fe287786a" category="section-title">更新 vCenter Server 证书</block>
+  <block id="45666909a9079a8d4af9a72d51a83220" category="paragraph">ONTAP工具会在 vCenter 证书即将到期或已过期时通知您。更新 vCenter 证书后，请按照以下步骤将新证书上传到ONTAP工具：</block>
+  <block id="282eed63cac957955b046d29d83d09d8" category="list-text">登录到ONTAP工具远程诊断 shell。</block>
+  <block id="e6452e8e9c18000281aae81760220823" category="list-text">从诊断 shell 获取更新后的 vCenter 证书：</block>
+  <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">请确保证书采用 Base64 ASCII 格式，并包含起始行和结束行，例如：</block>
+  <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">复制输出结果并将其另存为文本文件。<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> 桌面扩展程序。</block>
+  <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
 </blocks>
