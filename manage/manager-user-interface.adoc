@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools manager, managerui 
 summary: ONTAP工具管理器为VMware vSphere管理员提供了更多的ONTAP工具控制和功能、有助于全面管理设备、租户和存储后端。 
 ---
-= ONTAP工具管理器用户界面
+= 了解 ONTAP tools Manager 用户界面
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

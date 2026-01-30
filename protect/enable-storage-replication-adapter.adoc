@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 适用于VMware vSphere的ONTAP工具提供了一个选项、用于启用SRA功能来配置灾难恢复。 
 ---
-= 配置 SRA 以保护数据存储
+= 在 ONTAP tools 中配置 SRA 以保护数据存储区
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

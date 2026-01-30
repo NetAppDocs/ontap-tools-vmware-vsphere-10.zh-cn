@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 将数据磁盘连接到虚拟机以扩展存储容量。 
 ---
-= 将数据磁盘与虚拟机连接或断开
+= 在 ONTAP tools 中从虚拟机附加或分离数据磁盘
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '配置占位数据存储以在恢复站点的 vCenter 清单中为受保护的虚拟机 (VM) 保留空间。占位数据存储需要最小容量，因为占位虚拟机很小，通常仅使用几百千字节。' 
 ---
-= 配置占位数据存储库
+= 在 ONTAP tools 中配置占位符数据存储区
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在扇出保护场景中，一致性组受到双重保护，在第一个目标ONTAP集群上具有同步关系，在第二个目标ONTAP集群上具有异步关系。 
 ---
-= 扇出保护
+= ONTAP tools 中的扇出保护
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

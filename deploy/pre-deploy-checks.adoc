@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
 ---
-= 开始之前…​
+= ONTAP tools 的部署前要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

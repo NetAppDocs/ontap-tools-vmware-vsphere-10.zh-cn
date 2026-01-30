@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 按照本节中的步骤执行ASA清理。 
 ---
-= VASA清理
+= 在 ONTAP tools 中清理 VASA 配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

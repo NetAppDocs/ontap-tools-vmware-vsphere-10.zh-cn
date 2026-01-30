@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Recovery之前、应先设置存储系统。' 
 ---
-= 为SAN和NAS环境配置SRA
+= 在适用于 SAN 和 NAS 环境的 ONTAP tools 中配置 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

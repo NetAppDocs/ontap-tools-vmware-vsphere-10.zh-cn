@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 首次ONTAP tools for VMware vSphere时， AutoSupport默认处于启用状态。启用后 24 小时内会向技术支持发送消息。 
 ---
-= 编辑AutoSupport设置
+= 编辑 ONTAP tools AutoSupport 设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

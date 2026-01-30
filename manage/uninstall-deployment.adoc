@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 按照本节中的说明正常终止适用于VMware vSphere的ONTAP工具部署。 
 ---
-= 卸载适用于VMware vSphere的ONTAP工具
+= 卸载 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

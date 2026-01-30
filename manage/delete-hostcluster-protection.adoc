@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 删除主机集群保护后、数据存储库将不受保护。 
 ---
-= 删除主机集群保护
+= 删除 ONTAP tools 中的主机群集保护
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

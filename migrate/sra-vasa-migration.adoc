@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。 
 ---
-= 迁移 VASA 提供程序并更新 SRA
+= 迁移 VASA Provider 并在 ONTAP tools 中更新 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

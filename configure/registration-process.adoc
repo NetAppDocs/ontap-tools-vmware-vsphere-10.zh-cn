@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用适用于ONTAP tools for VMware vSphere将 VASA 提供程序注册到 vCenter Server 实例。 
 ---
-= 使用ONTAP工具向 vCenter Server 实例注册 VASA 提供程序
+= 在 ONTAP tools 中向 vCenter Server 实例注册 VASA Provider
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

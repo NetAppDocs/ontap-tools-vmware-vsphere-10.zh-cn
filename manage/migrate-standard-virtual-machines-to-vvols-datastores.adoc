@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Migrate NFS and VMFS virtual machines 
 summary: '您可以将虚拟机从NFS和VMFS数据存储库迁移到虚拟卷\(Vvols\)数据存储库、以利用基于策略的VM管理和其他Vvols功能。通过 VVOL 数据存储库，您可以满足日益增长的工作负载需求。' 
 ---
-= 将具有NFS和VMFS数据存储库的虚拟机迁移到虚拟卷数据存储库
+= 将虚拟机迁移到 ONTAP tools 中的 vVols 数据存储库
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

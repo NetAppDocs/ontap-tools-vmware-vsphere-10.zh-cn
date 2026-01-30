@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以设置阈值、以便在卷和聚合容量达到特定级别时在vCenter Server中接收通知。  
 ---
-= 管理存储阈值
+= 在 ONTAP tools 中管理存储阈值
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

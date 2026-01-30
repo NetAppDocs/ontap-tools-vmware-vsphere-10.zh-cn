@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 开始使用适用于VMware vSphere的ONTAP工具包括几个步骤。 
 ---
-= 高可用性(HA)部署工作流
+= ONTAP tools 的高可用性部署工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

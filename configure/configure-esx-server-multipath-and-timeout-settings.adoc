@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 适用于VMware vSphere的ONTAP工具可检查并设置最适合NetApp存储系统的ESXi主机多路径设置和HBA超时设置。 
 ---
-= 配置ESXi主机设置
+= 在 ONTAP tools 中配置 ESXi 主机设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

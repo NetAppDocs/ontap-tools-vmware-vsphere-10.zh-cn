@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '部署 VMware Live Site Recovery 设备后，配置存储复制适配器 (SRA) 以启用灾难恢复管理。' 
 ---
-= 在VMware Live Site Recovery设备上配置SRA
+= 使用 ONTAP tools 在 VMware Live Site Recovery 设备上配置 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

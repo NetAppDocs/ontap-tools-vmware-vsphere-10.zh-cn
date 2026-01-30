@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 存储后端是ESXi主机用于数据存储的系统。 
 ---
-= 管理存储后端
+= 在 ONTAP tools 中管理存储后端
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

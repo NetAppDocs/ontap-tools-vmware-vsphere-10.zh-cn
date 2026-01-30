@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 将存储后端与vCenter Server相关联、以便在存储后端与全局已登录的vCenter Server实例之间创建映射。 
 ---
-= 将存储后端与vCenter Server实例相关联
+= 在 ONTAP tools 中将存储后端与 vCenter Server 实例关联
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

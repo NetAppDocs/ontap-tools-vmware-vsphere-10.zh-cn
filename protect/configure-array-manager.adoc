@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。' 
 ---
-= 使用阵列管理器配置 SRA
+= 使用 ONTAP tools 中的阵列管理器配置 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

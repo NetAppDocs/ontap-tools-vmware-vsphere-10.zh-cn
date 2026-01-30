@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools vmware vsphere rest api reference 
 summary: 虽然REST建立了一组通用技术和最佳实践、但每个API的具体实施可能会因设计选择而异。在使用之前、您应熟悉适用于VMware vSphere 10 REST API的ONTAP工具的设计方式。 
 ---
-= 适用于VMware vSphere 10 REST API的ONTAP工具的实施详细信息
+= ONTAP tools REST API 实施详细信息
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

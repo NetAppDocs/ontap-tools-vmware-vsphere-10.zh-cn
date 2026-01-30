@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 适用于VMware vSphere的ONTAP工具是一组用于虚拟机生命周期管理的工具。它可与VMware生态系统集成、并有助于虚拟机的配置、基本保护和灾难恢复。 
 ---
-= 适用于VMware vSphere的ONTAP工具概述
+= 了解 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

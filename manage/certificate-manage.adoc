@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。 
 ---
-= 管理证书
+= 管理 ONTAP tools 证书
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

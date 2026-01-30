@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您应映射受保护站点和恢复站点上的网络、以便它们之间能够进行通信。 
 ---
-= 配置网络映射
+= 在 ONTAP tools 中配置网络映射
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

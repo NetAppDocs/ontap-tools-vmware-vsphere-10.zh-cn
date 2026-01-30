@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 适用于VMware vSphere的ONTAP工具的配置选项卡下的ONTAP存储视图可提供与数据存储库及其卷相关的数据。 
 ---
-= 数据存储库的ONTAP存储视图
+= ONTAP tools 中数据存储的 ONTAP 存储视图
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

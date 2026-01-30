@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用维护控制台更改证书验证标志。 
 ---
-= 更改证书验证标志
+= 更改 ONTAP tools 中的证书验证标志
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: 在vCenter Client的快捷方式部分中选择适用于VMware vSphere的ONTAP工具插件图标后、用户界面将导航到概述页面。此页面类似于提供适用于VMware vSphere的ONTAP工具插件摘要的信息板。 
 ---
-= 适用于VMware vSphere的ONTAP工具信息板概述
+= 了解 ONTAP tools 控制面板
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

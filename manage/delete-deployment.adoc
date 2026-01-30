@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 如果将专用ONTAP集群用于ONTAP工具以进行VMware部署、则会创建许多未使用的FlexVol卷。删除适用于VMware vSphere的ONTAP工具后、您应删除FlexVol卷、以避免可能对性能造成的影响。 
 ---
-= 删除FlexVol卷
+= 卸载 ONTAP tools 后删除 FlexVol 卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

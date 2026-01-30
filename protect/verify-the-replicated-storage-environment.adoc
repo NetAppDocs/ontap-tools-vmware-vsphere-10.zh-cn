@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '在配置Storage Replication Adapter \(SRA\)后、您应验证受保护站点和恢复站点是否已成功配对。受保护站点和恢复站点均应可发现复制的存储系统。' 
 ---
-= 验证复制的存储系统
+= 验证 ONTAP tools 中的复制存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

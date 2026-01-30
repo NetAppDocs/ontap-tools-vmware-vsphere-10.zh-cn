@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您应创建保护组来保护受保护站点上的一组虚拟机。 
 ---
-= 配置受保护站点和恢复站点
+= 在 ONTAP tools 中配置受保护站点和恢复站点
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

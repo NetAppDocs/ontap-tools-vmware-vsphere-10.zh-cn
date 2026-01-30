@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具时、适用于VMware vSphere的ONTAP工具会发现ESXi主机、其LUN和NFS导出以及这些LUN和导出所属的NetApp存储系统。 
 ---
-= 发现存储系统和主机
+= 在 ONTAP tools 中发现存储系统和主机
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

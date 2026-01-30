@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: 此页面概述了适用于VMware vSphere系统的ONTAP工具的部署、重新启动和恢复操作的错误代码。 
 ---
-= 排查部署错误
+= 排除 ONTAP tools 部署错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

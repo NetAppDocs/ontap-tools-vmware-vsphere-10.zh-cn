@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用ONTAP工具管理器更改管理员密码。 
 ---
-= 更改适用于VMware vSphere的ONTAP工具配置
+= 更改 ONTAP tools 设备设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

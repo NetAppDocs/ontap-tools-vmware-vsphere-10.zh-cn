@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 通过调整数据存储库大小、可以增加虚拟机文件的存储。您可以根据基础架构要求的变化更改数据存储库的大小。 
 ---
-= 调整NFS和VMFS数据存储库的大小
+= 调整 ONTAP tools 中的 NFS 和 VMFS 数据存储区大小
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

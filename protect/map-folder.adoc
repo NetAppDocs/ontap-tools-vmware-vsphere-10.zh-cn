@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您应映射受保护站点和恢复站点上的文件夹、以便它们之间可以进行通信。 
 ---
-= 配置文件夹映射
+= 在 ONTAP tools 中配置文件夹映射
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

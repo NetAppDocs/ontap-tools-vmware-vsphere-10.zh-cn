@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role based access control, rbac, rbac components, learn about rbac 
 summary: '基于角色的访问控制(Role-Based Access Control、RBAC)是一种用于控制对组织内资源访问的安全框架。RBAC通过定义具有特定权限级别的角色来执行操作、而不是为单个用户分配授权、从而简化了管理。定义的角色会分配给用户、这有助于降低出错风险并简化整个组织的访问控制管理。' 
 ---
-= 了解适用于VMware vSphere 10 RBAC的ONTAP工具
+= 了解 ONTAP tools RBAC
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

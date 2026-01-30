@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以为VMware vSphere配置ONTAP工具、以便为diag用户启用SSH访问。 
 ---
-= 配置远程诊断访问
+= 配置 ONTAP tools 的远程诊断访问
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 存储视图显示虚拟机创建的虚拟卷的列表。 
 ---
-= 虚拟机存储视图
+= ONTAP tools 中的虚拟机存储视图
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
