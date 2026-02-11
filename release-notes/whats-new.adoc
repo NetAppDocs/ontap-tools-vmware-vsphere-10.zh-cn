@@ -47,4 +47,8 @@ ONTAP tools for VMware vSphere符合当前的 VMware 互操作性认证标准，
 
 == 支持的ONTAP平台和 vCenter Server 版本
 
+ONTAP tools for VMware vSphere 10.5 P1 支持 SRA 和 SnapMirror active sync 组件的 vCenter 高可用性（HA）配置。此配置不支持 vVols。在 HA 故障转移期间，vCenter 可能会有几分钟不可用。在大型环境中或发生错误时，故障转移时间可能超过 15 分钟。
+
+有关详细信息，请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["vCenter 高可用性文档"^]。有关 vCenter HA 的问题，请联系 https://support.broadcom.com/["Broadcom 支持"^]。
+
 有关版本兼容性的最新详细信息，请参阅 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["NetApp 互操作性表工具"^]。
