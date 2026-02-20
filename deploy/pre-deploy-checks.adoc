@@ -60,7 +60,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | 要求 | 您的价值 
 
 
-| ONTAP工具应用程序的 IP 地址。这是用于访问ONTAP工具 Web 界面（负载均衡器）的 IP 地址 |  
+| ONTAP 工具应用程序的 IP 地址。这是访问 ONTAP 工具管理器 Web 界面（负载平衡器）的 IP 地址，位于 `\https://<ip>:8443/virtualization/ui/` |  
 
 
 | ONTAP工具用于内部通信的虚拟 IP 地址。此 IP 地址用于具有多个ONTAP工具实例的设置中的内部通信。此 IP 地址不应与ONTAP工具应用程序的 IP 地址相同。（Kubernetes 控制平面） |  
@@ -78,7 +78,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | DNS搜索域 |  
 
 
-| ONTAP工具管理节点的 IPv4 地址。它是管理网络上节点管理接口的唯一 IPv4 地址。 |  
+| ONTAP 工具管理节点的 IPv4 地址。它是管理网络上节点管理接口的唯一 IPv4 地址。这用于连接到 ONTAP 工具设备，以便通过 SSH 进行远程诊断访问。 |  
 
 
 | IPv4地址的子网掩码 |  
