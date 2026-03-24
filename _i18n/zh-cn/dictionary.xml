@@ -246,7 +246,6 @@
   <block id="3b326cad8d176fc4ce802f76863c3ac6" category="paragraph">放置克隆虚拟机的 FlexVol 卷，元数据文件将获取更新后的虚拟机详细信息。</block>
   <block id="504756afdd8e0a45f90bb3a07484512e" category="paragraph">支持受保护虚拟机的克隆。</block>
   <block id="74aa15274c9a75ae1e9b01b9a4867fea" category="section-title">虚拟机快照</block>
-  <block id="49e93fd9a17de8559bffcb0218844f3a" category="paragraph">目前仅支持不含内存的虚拟机 Snapshot 。如果虚拟机具有带有内存的 Snapshot ，则不会考虑对该虚拟机进行保护。</block>
   <block id="317f8a592684314bc3829f0ff356fe47" category="summary">删除数据存储库操作将删除此数据存储库。如果使用的是NFS或VMFS数据存储库、则会显示一个对话框、其中列出了正在使用该数据存储库的虚拟机。</block>
   <block id="3cd4a1ddd805e8692af529725906108e" category="doc">删除数据存储库</block>
   <block id="a8211be0a6fb73b95cdffd1ac6d2b9d5" category="list-text">要删除ONTAP存储上的后备卷、请选择*删除ONTAP集群上的卷*。</block>
@@ -2072,7 +2071,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="7cc3bb1c6bb475d226bfbe5da1ebd38c" category="cell">ONTAP工具节点卡显示设备中的所有节点，包括节点名称、虚拟机名称、状态和网络信息。选择“查看详细信息”以查看特定节点的更多详细信息。 [注意] 在非 HA 配置中，仅出现一个节点。在 HA 配置中，显示三个节点。</block>
   <block id="5ab1668c9ec40eca8f10aa49dea404c7" category="list-text">选择虚拟磁盘格式、虚拟机存储策略以及与要迁移的数据存储区的功能相匹配的 vVol 数据存储区。</block>
   <block id="74d3a58195c8c6b12b2399fe05a69332" category="paragraph">VMware 目前不支持将虚拟机克隆到 VM 模板。</block>
-  <block id="685ad41930091bf99f93dc256b62607d" category="paragraph">您也无法保护具有内存快照的未受保护的虚拟机。对于此版本，您需要在启用虚拟机保护之前删除内存快照。</block>
   <block id="8406161320cdde68124591ab85e4092a" category="paragraph">ONTAP tools for VMware vSphere在两种不同的上下文中解释 igroup：</block>
   <block id="eef2558425e977ca0012ab130a151a4c" category="paragraph">创建数据存储库时，ONTAP tools for VMware vSphere会自动使用嵌套结构创建 igroup，以便更轻松地进行 LUN 映射。</block>
   <block id="dc48ac4a32526d5d7522c456f1f1cc94" category="paragraph">从适用于ONTAP tools for VMware vSphere开始，备份功能默认启用。</block>
@@ -2328,7 +2326,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="0e3dbc4805c820c2543dcfc7fb0ff1ae" category="paragraph">部署适用ONTAP tools for VMware vSphere后，如果无法访问维护控制台，请从 vCenter Server 安装 VMware 工具。使用以下方式登录<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>部署期间设置的用户名和密码。使用 *nano* 在维护控制台或 root 登录控制台中编辑文件。</block>
   <block id="3dc9723f860cc7fa81343acb2b1bc55f" category="list-text">在“*编辑阈值*”窗口中，在“*接近满*”和“*满*”字段中提供所需的值，然后选择“*保存*”。您可以将阈值恢复为推荐的默认值：接近满格为 80，满格为 90。</block>
   <block id="0fb6f15f7c944e350ea4ee5dbe349ad8" category="paragraph">如果将虚拟机迁移到不同的FlexVol volume，系统会使用虚拟机信息更新该卷的元数据文件。如果虚拟机迁移到不同的 ESXi 主机但相同的存储，则底层FlexVol volume数据文件将不会被修改。</block>
-  <block id="ffae2d616a4df47529c992a2371e2ccb" category="paragraph">对于采用ASA r2 存储类型的 Windows VM，虚拟机的快照是只读的。当您启动虚拟机时，VASA Provider 会从只读快照创建 LUN 并启用 IOPS。关闭虚拟机电源时，VASA Provider 会删除 LUN 并禁用 IOPS。</block>
   <block id="77320a87e6ca763456023daeede0729f" category="inline-link">将 ESX 主机添加到 vSphere 集群工作流程</block>
   <block id="91d42183cd7455cc3f88c0c77b61174e" category="admonition">当您使用以下方式添加新的 ESXi 主机时：<block ref="4954232b8967f3dbfaee01742ae35b89" category="inline-link-rx"></block>等待计划的主机发现完成，然后它才会出现在ONTAP工具中。或者，您可以从NetApp ONTAP工具概览屏幕手动运行发现。</block>
   <block id="ba8e3bf168d21be1baf9d641e008977f" category="paragraph">最近任务面板会显示进度。</block>
@@ -2424,7 +2421,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="919f060162028da82b75ccf8400335b5" category="list-text">通过 vCenter Server API 将存储后端本地集成到ONTAP工具插件中。请参阅<block ref="d60b7308493aa415dfe7fcd24539d7e4" category="inline-link-macro-rx"></block>了解更多信息。</block>
   <block id="25c9412d6c1bba60178b87bc1c36e2bc" category="list-text">获取访问令牌以验证 REST API 请求。请使用以下示例，并将变量替换为特定于您环境的值。</block>
   <block id="8d5176b0f7c64423a1410ec460a2fbcd" category="paragraph">复制并保存响应中返回的访问令牌。</block>
-  <block id="7b7cd5f7fba7393568ce0f3e6a816e91" category="list-text">将ONTAP tools for VMware vSphere添加到 vCenter Server。</block>
   <block id="2b0f4f36b8001dce4b825bc0fecf2e17" category="list-text">使用ONTAP tools for VMware vSphere 的VASA 提供程序。有关说明，请参阅<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>。</block>
   <block id="7449849ed5e181a25bd151a90c66a6d6" category="list-text">请按照以下步骤停止ONTAP tools for VMware vSphere：</block>
   <block id="3076f368d1fb701b7d40be8f8c0f7d05" category="list-text">在ONTAP工具 9.x 中，打开 Web 控制台。</block>
@@ -2709,4 +2705,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8d80b04306b64b2c7241ee8c3b8cac3a" category="list-text">确认 SAN 条目与 ONTAP 管理 IP 地址或 DNS 名称或两者匹配。</block>
   <block id="0c205dec8702acf753959708a299c51f" category="list-text">确保用于载入 ONTAP 的详细信息与证书 SAN 条目中的 IP 地址或 DNS 名称匹配。</block>
   <block id="f38a6ced93585f5991828bd2b6c8fa42" category="paragraph">遵循这些步骤有助于防止证书验证问题，并确保 ONTAP 系统安全集成。</block>
+  <block id="dbc36b4329f96473c291b930fc0022cc" category="paragraph">支持没有内存的虚拟机快照。如果虚拟机具有带内存的快照，则无法保护该虚拟机。</block>
+  <block id="d160829889a8982ffa6a76e6a77e9c03" category="paragraph">无法保护包含内存快照的未受保护虚拟机。在对虚拟机启用保护之前，请删除内存快照。</block>
+  <block id="b4458ee64903f6d51a1cecdf4bbd4ab4" category="paragraph">对于具有 ASA r2 存储类型的 Windows VM，虚拟机快照为只读。当您打开虚拟机时，VASA Provider 将从只读快照创建 LUN 并启用 IOPS。当您关闭虚拟机时，VASA Provider 会删除 LUN 并禁用 IOPS。</block>
 </blocks>
