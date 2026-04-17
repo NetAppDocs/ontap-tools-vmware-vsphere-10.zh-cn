@@ -11,7 +11,7 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 
 
 [role="lead"]
-适用于VMware vSphere的ONTAP工具可管理主机集群的保护。属于选定SVM且挂载在集群中一个或多个主机上的所有数据存储库都会在主机集群下受到保护。
+ONTAP tools for VMware vSphere 管理主机集群的保护。属于选定 SVM 并装载在集群的一个或多个主机上的所有数据存储区都在主机集群下受到保护。
 
 .开始之前
 在保护主机群集之前，请确保满足以下要求：
@@ -34,10 +34,10 @@ summary: 适用于VMware vSphere的ONTAP工具可管理主机集群的保护。
 策略类型可以是异步或自动故障转移双工。
 
 +
-如果要将SnapMirror关系添加为AutomatedFailOver双 工类型策略、则必须将目标Storage VM作为存储后端添加到部署适用于VMware vSphere的ONTAP工具的同一vCenter中。
+当您将 SnapMirror 关系添加为 AutomatedFailOverDuplex 类型策略时，必须将目标存储 VM 作为存储后端添加到部署了 ONTAP tools for VMware vSphere 的同一个 vCenter。
 
 +
-在 AutomatedFailOverDuplex 策略类型中，有统一和非统一主机配置。当您选择*统一主机配置*切换按钮时，主机启动器组配置将被隐式复制到目标站点上。有关详细信息，请参阅link:../concepts/ontap-tools-concepts-terms.html["关键概念和术语"] 。
+在 AutomatedFailOverDuplex 策略类型中，有统一和非统一的主机配置。当您选择*统一主机配置*切换按钮时，主机启动器组配置将隐式复制到目标站点上。有关详细信息，请参阅link:../concepts/ontap-tools-concepts-terms.html["关键概念和术语"]。
 
 . 如果您选择的主机配置不一致、请为集群中的每个主机选择主机访问(源/目标)。
 . 选择 * 添加 * 。

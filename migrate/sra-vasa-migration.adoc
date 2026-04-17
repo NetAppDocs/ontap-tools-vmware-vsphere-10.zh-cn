@@ -40,7 +40,7 @@ curl --request POST \
 +
 复制并保存响应中返回的访问令牌。
 
-. 从Swagger或Postman发出以下API进行迁移。
+. 从 Swagger 或 Postman 发布以下 API 以进行迁移。
 +
 [listing]
 ----
@@ -246,11 +246,11 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRMVMware Live Site Recovery 设备界面显示恢复计划的状态，包括受保护站点和恢复站点的详细信息。在恢复计划中，CLEANUP 和 REPROTECT 按钮被禁用，而 TEST 和 RUN 按钮仍然启用。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。
 
 
-NOTE: 如果故障转移已完成但重新保护仍处于待定状态，则不要开始迁移。确保在继续迁移之前重新保护过程已完成。如果正在进行测试故障转移，请清理测试故障转移并开始迁移。
+NOTE: 如果故障转移已完成但重新保护处于挂起状态，请勿开始迁移。在继续迁移之前，请确保重新保护过程已完成。如果正在执行测试故障转移，请清除测试故障转移并开始迁移。
 
 . 请按照以下步骤在VMware站点恢复中删除适用于VMware vSphere 9.xx的ONTAP工具SRA适配器：
+. 转到 VMware Live Site Recovery 配置管理页面。
 +
-.. 转到VMware Live Site Recovery配置管理页面
 .. 转到*Storage Replication Adapter*部分。
 .. 从省略号菜单中选择*重置配置*。
 .. 从省略号菜单中选择*Delete*。

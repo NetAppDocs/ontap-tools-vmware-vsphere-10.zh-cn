@@ -17,6 +17,9 @@ summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Reco
 
 == 为SAN环境配置SRA
 
+
+NOTE: 只有统一和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）才支持 SRA 工作流中的一致性组。
+
 .开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
@@ -27,9 +30,15 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 * SRA：在 VMware Live Site Recovery 上安装适配器。
 
 
+对于 iSCSI 协议配置，在运行 SRA 工作流之前，请注意以下事项：
+
+* *受保护站点*：配置数据存储库时，会自动配置 iSCSI 存储适配器和数据 LIF 详细信息。无需手动配置。
+* *恢复站点*：必须在包含在灾难恢复资源映射中的每个 ESXi 主机上手动配置 iSCSI 存储适配器。为避免在每台主机上单独配置适配器，请使用配置 SRA 工作流的 SVM 在恢复站点上创建 iSCSI 类型的占位符数据存储区。这会自动将 iSCSI 适配器和所需的数据 LIF IP 地址添加到所有映射的 ESXi 主机。有关更多详细信息，请参见 link:../protect/configure-placeholder-datastores.html["在 ONTAP tools 中配置占位符数据存储区"]。
+
+
 .步骤
 . 验证主 ESXi 主机是否已连接到受保护站点上主存储系统中的 LUN 。
-. 验证LUN是否位于具有的igroub中 `ostype` 选项在主存储系统上设置为_vmware_。
+. 验证 LUN 是否位于主存储系统上已将  `ostype` 选项设置为 _VMware_ 的 igroup 中。
 . 验证恢复站点上的 ESXi 主机是否与存储虚拟机 (SVM) 具有适当的 iSCSI 和光纤通道连接。辅助站点 ESXi 主机应该能够访问辅助站点存储，主站点 ESXi 主机应该能够访问主站点存储。
 +
 为此、您可以验证ESXi主机是否已在SVM或上连接本地LUN `iscsi show initiators` 命令。
@@ -41,6 +50,9 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 == 为NAS环境配置SRA
 
+
+NOTE: SRA 工作流中的 NFS 不支持一致性组。如果 NFS 数据存储卷被置于一致性组并受到保护，则发现设备操作将失败。使用 SRA 保护 NFS 数据存储时，请勿使用一致性组。
+
 .开始之前
 您应在受保护站点和恢复站点上安装以下程序：
 
@@ -50,7 +62,7 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 .步骤
 . 验证受保护站点上的数据存储库是否包含已向 vCenter Server 注册的虚拟机。
-. 验证受保护站点上的 ESXi 主机是否已挂载 Storage Virtual Machine （ SVM ）中的 NFS 导出卷。
-. 使用阵列管理器向导将阵列添加到 VMware Live Site Recovery 时，请验证“*NFS 地址*”字段中指定的有效地址（例如，存在 NFS 导出的 IP 地址或 FQDN）。请勿在“*NFS 地址*”字段中使用 NFS 主机名。
+. 验证受保护站点上的 ESXi 主机是否已从 storage virtual machine (SVM) 装载 NFS 导出卷。
+. 使用 Array Manager 向导将阵列添加到 VMware Live Site Recovery 时，验证是否在 *NFS Addresses* 字段中指定了存在 NFS 导出的有效 IP 地址。不要在 *NFS Addresses* 字段中使用 NFS 主机名或 FQDN。
 . 使用 `ping` 命令、以验证此主机是否具有可访问用于从SVM提供NFS导出的IP地址的VMkernel端口。
 

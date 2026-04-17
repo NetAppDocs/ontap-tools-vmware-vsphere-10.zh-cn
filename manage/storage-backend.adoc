@@ -68,7 +68,7 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 . 选择垂直省略号菜单并选择*删除*。确保存储后端不包含任何数据存储。您可以在最近任务面板中跟踪进度。
 
 
-您可以使用ONTAP工具管理器对全局ONTAP集群执行删除操作。
+您可以使用 ONTAP tools Manager 删除全局 ONTAP 集群。
 
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
@@ -92,7 +92,7 @@ summary: 存储后端是ESXi主机用于数据存储的系统。
 * 有关虚拟机的基本信息
 * 证书详细信息，例如证书状态和到期日期。
 * 网络信息，例如网络的 IP 地址和端口。对于子 SVM，该信息与父存储后端相同。
-* 存储后端允许和限制的Privileges。对于子 SVM，该信息与父存储后端相同。 ONTAP工具仅显示基于集群的存储后端的权限。如果添加 SVM 作为存储后端，则不会显示权限信息。
+* 存储后端允许和限制的 Privileges。对于子 SVM，信息与父存储后端相同。ONTAP tools 仅在基于集群的存储后端上显示 Privileges。如果将 SVM 添加为存储后端，则不会显示 Privileges 信息。
 * 当 SVM 或集群的分解属性设置为“true”时， ASA r2 系统集群下钻视图不包含本地层选项卡。
 * 对于ASA R2 SVM系统、不会显示容量portlet。只有当SVM或集群的离散属性设置为"TRUE"时、才需要使用容量门户。
 * 对于ASA R2 SVM系统、基本信息部分显示了平台类型。

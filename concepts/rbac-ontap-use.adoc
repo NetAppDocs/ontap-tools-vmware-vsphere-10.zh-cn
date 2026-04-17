@@ -55,7 +55,7 @@ RBAC定义会打包为多种产品功能、包括VSC、VASA Provider和SRA的组
 
 === 特权
 
-根据ONTAP存储所需的访问级别、角色Privileges分为四组。这些角色所基于的Privileges包括：
+角色权限根据 ONTAP 存储所需的访问级别分为四组。角色所基于的权限包括：
 
 * 发现
 +
@@ -89,4 +89,4 @@ RBAC定义会打包为多种产品功能、包括VSC、VASA Provider和SRA的组
 .示例
 `OTV_10_VSC_Discovery_Create`
 
-新用户将添加到"用户和角色"页面的列表中。请注意、HTTP和ONTAPI用户登录方法均受支持。
+新用户将被添加到"用户和角色"页面上的列表中。请注意，HTTP 和 ONTAPI 用户登录方法均受支持。

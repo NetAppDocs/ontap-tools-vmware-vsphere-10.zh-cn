@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: '您可以使用ONTAP工具管理器更改管理员密码、以便使用ONTAP工具管理器启用VASA Provider、导入vvol配置和灾难恢复(SRA)等服务。' 
+summary: '您可以使用 ONTAP tools Manager 启用可选服务，如 VASA Provider、vVols 配置导入和灾难恢复 (SRA)。' 
 ---
 = 启用 ONTAP tools 服务
 :allow-uri-read: 

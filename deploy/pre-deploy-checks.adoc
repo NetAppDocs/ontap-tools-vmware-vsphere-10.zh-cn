@@ -17,7 +17,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | 要求 | 您的状态 
 
 
-| vSphere版本、ONTAP版本和ESXi主机版本与ONTAP工具版本兼容。 | ❏是❏否 
+| vSphere 版本、ONTAP 版本和 ESXi 主机版本与 ONTAP tools 版本兼容。 | ❏是❏否 
 
 
 | 已设置并配置vCenter Server环境 | ❏是❏否 
@@ -63,7 +63,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | ONTAP 工具应用程序的 IP 地址。这是访问 ONTAP 工具管理器 Web 界面（负载平衡器）的 IP 地址，位于 `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| ONTAP工具用于内部通信的虚拟 IP 地址。此 IP 地址用于具有多个ONTAP工具实例的设置中的内部通信。此 IP 地址不应与ONTAP工具应用程序的 IP 地址相同。（Kubernetes 控制平面） |  
+| ONTAP tools 用于内部通信的虚拟 IP 地址。此 IP 地址用于在具有多个 ONTAP tools 实例的设置中进行内部通信。此 IP 地址不应与 ONTAP tools 应用程序的 IP 地址相同。（Kubernetes Control Plane） |  
 
 
 | ONTAP工具管理节点的 DNS 主机名 |  
@@ -96,7 +96,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | IPv6地址的网关(可选) |  
 |===
 
-NOTE: 为上述所有IP地址创建DNS记录。在分配主机名之前、请将其映射到DNS上的可用IP地址。所有IP地址都应位于为部署选择的同一个VLAN上。
+NOTE: 为上述所有 IP 地址创建 DNS 记录。在分配主机名之前，请将其映射到 DNS 中的可用 IP 地址。所有 IP 地址都应位于选择用于部署的相同 VLAN 上。
 
 
 

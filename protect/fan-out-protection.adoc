@@ -44,14 +44,14 @@ NOTE: SVM 用户不支持扇出。
 下图显示了扇出保护配置：image:../media/fan-out-protection.png["扇出保护配置"] image:../media/fan-out-protection-relationship.png["扇出保护关系"]
 
 .步骤
-. 选择一个新的占位数据存储。分阶段保护的占位数据存储选择标准是：
+. 选择一个新的占位符数据存储区。分阶段保护的占位符数据存储区选择标准是：
 +
 ** 请勿将占位数据存储放置在您正在保护的主机群集中。
-** 如果您需要在主机集群中包含占位数据存储，请在设置SnapMirror主动同步保护之前将其添加到 VMware Live Site Recovery 设备。通过此设置，您可以将占位数据存储置于保护之外。
+** 如果需要在主机群集中包含占位符数据存储区，请在设置 SnapMirror 活动同步保护之前将其添加到 VMware Live Site Recovery 应用装置中。通过此设置，您可以将占位符数据存储区置于保护范围之外。
 +
 有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["选择占位数据存储库"]
 
 
 
-. 通过以下步骤将数据存储添加到主机群集保护中link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。添加异步和同步策略类型。
+. 通过以下步骤将数据存储区添加到主机群集保护 link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。同时添加异步和同步策略类型。
 

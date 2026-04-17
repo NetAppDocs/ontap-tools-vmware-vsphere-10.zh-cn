@@ -90,11 +90,11 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 . 创建用户：
 +
-.. 在*USERS*表下选择*ADD*。
+.. 在 *用户* 表下选择 *添加*。
 .. 在*添加用户*对话框中，选择*系统管理器*。
 .. 输入*用户名*。
 .. 从上面的*Create Roles*步骤中创建的选项中选择*Role*。
-.. 输入要授予访问权限的应用程序和身份验证方法。ONTAPI和HTTP是必需的应用程序，并且身份验证类型为*Password*。
+.. 输入要授予访问权限的应用程序和身份验证方法。ONTAPI 和 HTTP 是必需的应用程序，身份验证类型为 *Password*。
 .. 设置*用户密码*和*保存*用户。
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-此外、对于ONTAP 9.16.0及更高版本、请运行以下命令：
+此外，对于 ONTAP 版本 9.16.0 及更高版本，请运行以下命令：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-对于ASA ONTAP R2系统上的9.16.1及更高版本、运行以下命令：
+对于 ONTAP 版本 9.16.1 及更高版本上的 ASA r2 系统，运行以下命令：
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-此外、对于ONTAP 9.16.0及更高版本、请运行以下命令：
+此外，对于 ONTAP 版本 9.16.0 及更高版本，请运行以下命令：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-要使用上述基于API创建的角色创建基于API的新用户、请运行以下命令：
+要使用以前创建的基于 API 的角色创建新的基于 API 的用户，请运行以下命令：
 
 [listing]
 ----

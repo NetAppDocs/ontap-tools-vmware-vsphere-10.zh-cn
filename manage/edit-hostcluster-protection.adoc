@@ -2,7 +2,7 @@
 permalink: manage/edit-hostcluster-protection.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: 您可以编辑受保护主机集群的SnapMirror关系。您可以添加、修改和删除这些关系。但是、您不能编辑一致性组名称。 
+summary: 您可以编辑受保护主机群集的 SnapMirror 关系。您可以添加、修改和删除关系。但是，无法编辑一致性组名称。 
 ---
 = 在 ONTAP tools 中修改受保护的主机集群
 :allow-uri-read: 

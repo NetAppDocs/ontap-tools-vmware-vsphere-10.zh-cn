@@ -15,7 +15,7 @@ summary: HA和非HA部署均支持升级。
 
 [NOTE]
 ====
-* 对于ASA r2 系统，在设置更多存储可用区 (SAZ) 之前，请确保将ONTAP tools for VMware vSphere升级到 10.5，将ONTAP到 9.16.1。
+* 对于 ASA r2 系统，在设置更多存储可用区 (SAZ) 之前，请确保将 ONTAP tools for VMware vSphere 升级到 10.5，并将 ONTAP 升级到 9.16.1。
 * 如果从ONTAP tools for VMware vSphere升级到 10.5 失败，则无法回滚。使用低 RPO 或快照恢复来恢复设置。对于ONTAP tools for VMware vSphere，使用零 RPO 来恢复设置。
 
 
@@ -68,7 +68,7 @@ summary: HA和非HA部署均支持升级。
 . 以维护用户身份登录。
 . 输入*2*选择*系统配置*菜单。
 . 输入*7*选择*升级*选项。
-. 出现提示时，请提供 vCenter 凭据。这是托管ONTAP工具的 vCenter 实例。
+. 出现提示时提供 vCenter 凭据。这是托管 ONTAP tools 的 vCenter 实例。
 +
 如果您在双 vCenter Server 拓扑中使用ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，仅授予其部署 OVF 模板所需的权限。详情请参阅职位列表中所列的角色。 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"]。
 

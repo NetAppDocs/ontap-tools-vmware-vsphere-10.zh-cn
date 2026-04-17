@@ -39,4 +39,4 @@ HA 解决方案可帮助您从以下类型的中断中快速恢复：
 ONTAP tools for VMware vSphere不支持 vCenter HA。
 
 ====
-要使用 HA 功能，请确保在部署期间或稍后在 VM 设置中启用 CPU 热添加和内存热插拔。
+要使用 HA 功能，请确保在部署期间或在 VM 设置中启用 CPU 热添加和内存热插拔。

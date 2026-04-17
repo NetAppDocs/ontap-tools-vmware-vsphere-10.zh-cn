@@ -25,7 +25,7 @@ NOTE: 在VMware Live Site Recovery中、资源可以是资源池、ESXi主机或
 . 在管理选项卡中选择*Resource Mapping*>*New*以创建新的资源映射。
 . 在创建资源映射向导中，执行以下操作：
 +
-.. 选择*为具有匹配名称的资源自动准备映射*，然后选择*下一步*。
+.. 选择 *Automatically Prepare Mappings for Resources with Matching Names* 并选择 *Next*。
 .. 为受保护站点和恢复站点选择所需的数据中心对象、然后选择*添加映射*。
 .. 成功创建映射后选择*Next*。
 .. 选择先前用于创建反向映射的对象，然后选择*Complete*。
@@ -34,4 +34,4 @@ NOTE: 在VMware Live Site Recovery中、资源可以是资源池、ESXi主机或
 
 
 .结果
-" 资源映射 " 页面显示受保护站点资源和恢复站点资源。您可以对环境中的其他网络执行相同的步骤。
+Resource Mappings 页面显示受保护的站点资源和恢复站点资源。您可以对环境中的其他资源执行相同的步骤。
