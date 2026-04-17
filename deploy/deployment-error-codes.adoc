@@ -163,7 +163,7 @@ sudo rke2-uninstall.sh (所有VM)。
 
 * 启用诊断 shell。
 * 运行以下命令： `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* 请查看  `/var/log/otvng/post-deploy-upgrade.log` 的日志。
+* 请查看以下位置的日志： `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===

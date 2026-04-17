@@ -22,7 +22,7 @@ summary: 您应创建保护组来保护受保护站点上的一组虚拟机。
 您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter (SRA)能够发现存储系统。
 
 
-NOTE: 存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组；如果 NFS 数据存储卷置于一致性组下，则 Discover Devices 操作将失败。
+NOTE: 存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组。如果 NFS 数据存储卷置于一致性组下，则发现设备操作将失败。
 
 .开始之前
 * 您应在受保护站点和恢复站点上安装VMware Live Site Recovery。

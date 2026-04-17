@@ -361,7 +361,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="8beb897fce777c3277508139c7915a20" category="list-text">您应已配置存储系统。</block>
   <block id="7ceb2eab648208033ac8e2800ced40ef" category="list-text">在对SRA执行测试故障转移操作和故障转移操作之前、您应已启用FlexClone许可证和SnapMirror许可证。</block>
   <block id="71efe8ad619e3e3d48e0a978e35c5446" category="list-text">登录到 vCenter Server 。</block>
-  <block id="8bb83fccb484f1f0daa29d9b57c5cf9a" category="paragraph">应在受保护站点和恢复站点发现状态为"`已启用`"的存储系统。</block>
   <block id="dfb1f7e164fa9a18cdccdd70cc836871" category="doc">更新 SRA 凭据</block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="a505f8df337aa6363aedcbf7da761b22" category="summary">您应映射受保护站点和恢复站点上的文件夹、以便它们之间可以进行通信。</block>
@@ -2093,7 +2092,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="265d1364e0c9a1c88e39aa2446ded154" category="paragraph">除非另一个数据存储重新使用父 igroup，否则父 igroup 和子 igroup 都会被删除。子 igroup 未被明确删除</block>
   <block id="cd703691d1da791a7eedb75ca98439de" category="paragraph">导出策略控制ONTAP tools for VMware vSphere中的 NFS 数据存储访问和客户端权限。导出策略在ONTAP系统中创建和管理，并可与 NFS 数据存储库一起使用来强制执行访问控制。每个导出策略均由指定允许访问的客户端（IP 地址或子网）和授予的权限（只读或读写）的规则组成。</block>
   <block id="4a03eb267c1ef745af6c9e425460c0ea" category="paragraph">当您从 ESXi 主机删除或卸载 NFS 数据存储库时，ONTAP tools for VMware vSphere会从导出策略中删除该主机的 IP 地址。如果没有其他主机使用该导出策略，它将被删除。删除 NFS 数据存储库时，如果该数据存储库未被任何其他数据存储库重用，则ONTAP tools for VMware vSphere会删除与该数据存储库关联的导出策略。如果重复使用导出策略，它会保留主机IP地址并且不会改变。当您删除数据存储库时，导出策略会取消分配主机 IP 地址并分配默认导出策略，以便ONTAP系统可以在需要时访问它们。</block>
-  <block id="1bfb5765f8a7477bcd0a19363204252d" category="paragraph">ONTAP tools for VMware vSphere会自动创建和维护ONTAP和 vCenter 对象，以简化 VMware 数据中心环境中的数据存储管理。</block>
   <block id="6465cb40b753be2d9e804f4f78805149" category="paragraph">在ONTAP工具中创建数据存储区时，您可以输入自定义 igroup 名称，而不是从下拉列表中选择。然后， ONTAP工具会使用您指定的名称在数据存储级别创建一个父 igroup。如果同一主机用于多个数据存储，则会重复使用现有的主机级（子）igroup。因此，新数据存储区的 LUN 将映射到此现有子 igroup，该子 igroup 现在可能与多个父 igroup 相关联（每个数据存储区一个）。您可以在 vCenter Server 界面中看到具有自定义 igroup 名称的新数据存储。</block>
   <block id="fa885aacf6740d8be756318202aaeea3" category="paragraph">在ONTAP工具中运行数据存储发现后， ONTAP工具会将平面 igroup 转换为嵌套结构。然后， ONTAP工具会管理 igroup，并使用“otv_”前缀对其进行重命名。在此过程中，LUN 仍然映射到同一个 igroup。</block>
   <block id="6e63f9b05e0f51c3646052747b709edf" category="paragraph">您可以使用在ONTAP系统中首次创建的 igroup 在ONTAP工具中创建数据存储库，然后由ONTAP工具对其进行管理。这些 igroup 出现在自定义启动器组名称下拉列表中。然后，数据存储区的新 LUN 将映射到相应的规范化子 igroup，例如“otv_NativeIgroup1”。</block>
@@ -2628,7 +2626,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4f8fbebc962f05c4dfc0237789208547" category="paragraph">如果部署失败并显示错误代码 114，请完成以下步骤：</block>
   <block id="4780dfcfb0a5ecdfae0e318e6542d23a" category="list-text">启用诊断 shell。</block>
   <block id="611a014c34b69fef8cff8cd0a561aee9" category="list-text">运行以下命令：<block ref="44eaadaddba398d530de456241b9f3da" prefix=" " category="inline-code"></block></block>
-  <block id="0a757ce751065b64e3352b32c640a98a" category="list-text">请查看 <block ref="7554706fe49df304ac54d9ab0e3a3ca3" prefix=" " category="inline-code"></block> 的日志。</block>
   <block id="a312ce26b8ed1d9b491805fe774f55aa" category="paragraph">要配置 vVols 数据存储区，必须启用 VASA Provider 服务。在 vCenter 中注册 VASA Provider，并确保您的存储策略符合 HA 要求，包括适当的网络和存储配置。</block>
   <block id="3f07b7680deaadf68a28477426629d63" category="admonition">为了在未来启用 HA 部署，请避免在 ESXi 主机上直接部署 ONTAP tools 虚拟机。而是将其部署在 ESXi 主机群集或资源池中。</block>
   <block id="b1ddccad5b5afdfe2272b6e7c0be4bc6" category="list-text">选择页面右侧的 *Actions*，选择 *Import item*，然后导入 OVA 文件。</block>
@@ -2703,7 +2700,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="09a7c391005da807f6dee49c0fb6789e" category="list-text">在 ONTAP tools Manager 中启用 SRA 服务。有关详细信息，请参见<block ref="39b62016395601556cd6c6d261d293be" category="inline-link-macro-rx"></block>节。</block>
   <block id="8e14dbb27ed333e155285b318187bdc6" category="list-text">将 vCenter 服务器添加到 ONTAP tools for VMware vSphere 设备中。有关详细信息，请参见<block ref="3dbde986d1342171f2ded3fc331c93f7" category="inline-link-macro-rx"></block>节。</block>
   <block id="98d22aed7deed599da3d87eaa4409a67" category="list-text">将存储后端添加到 ONTAP tools for VMware vSphere。有关详细信息，请参见<block ref="a4b852b9645b4ce1db7f6b1fa35e7953" category="inline-link-macro-rx"></block>节。</block>
-  <block id="0633e5dc36205f30a5af18c5068635f1" category="admonition">存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组；如果 NFS 数据存储卷置于一致性组下，则 Discover Devices 操作将失败。</block>
   <block id="a4c40bc478ce5f55e59a4aab72716a37" category="list-text">在 *Type* 字段中，选择 *Type field option...* 作为 NFS 和 VMFS 数据存储的数据存储组（基于阵列的复制）。故障域由启用复制的 SVM 组成。将显示仅实现对等且没有问题的 SVM。</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的超时间隔是最大值。您无需等待达到最大超时。大多数命令在设置的最大超时间隔内完成。</block>
   <block id="0c00b4af56bd9b91aa675fff4e45e3b1" category="admonition">只有统一和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）才支持 SRA 工作流中的一致性组。</block>
@@ -2763,4 +2759,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="643cb37fb2acf3124bc8318042c61ff5" category="list-text">重新启动主节点：</block>
   <block id="e9ea3eb60fedc2c670f5dcd02007c32b" category="list-text">对于 ASA r2 系统，在设置更多存储可用区 (SAZ) 之前，请确保将 ONTAP tools for VMware vSphere 升级到 10.5，并将 ONTAP 升级到 9.16.1。</block>
   <block id="c7350f69257f107789d11e22929c1c1d" category="list-text">出现提示时提供 vCenter 凭据。这是托管 ONTAP tools 的 vCenter 实例。</block>
+  <block id="1fd4970a87fe9d5dd4ecbaf6fc97bc98" category="list-text">请查看以下位置的日志：<block ref="7554706fe49df304ac54d9ab0e3a3ca3" prefix=" " category="inline-code"></block></block>
+  <block id="13851b8712fd713a2b4c64e5c006d207" category="paragraph">从 ONTAP tools for VMware vSphere 10.4 开始，ONTAP tools 可自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。</block>
+  <block id="8a905a5ae0b4e8a047369390f0e12e9a" category="admonition">存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组。如果 NFS 数据存储卷置于一致性组下，则发现设备操作将失败。</block>
+  <block id="130feced60ff3be4c19a41924346eaef" category="paragraph">应在受保护站点和恢复站点发现状态为 *已启用* 的存储系统。</block>
 </blocks>
