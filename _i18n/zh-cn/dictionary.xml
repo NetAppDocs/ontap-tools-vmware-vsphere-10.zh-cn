@@ -2430,8 +2430,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">复制输出结果并将其另存为文本文件。<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> 桌面扩展程序。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">在使用ONTAP tools for VMware vSphere 10 时，需要考虑两种不同的 RBAC 环境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都拥有特定的权限才能执行操作。虽然ONTAP工具可以自动执行存储管理任务，但它不会在 vCenter 或ONTAP中创建用户帐户。服务帐户必须由 vSphere 管理员根据需要创建。本文档为管理员提供指导，以便分配必要的角色和权限，从而有效地管理ONTAP工具。</block>
-  <block id="4ae8aea132dd80b8c5923dad28c5b661" category="paragraph">如果您在双 vCenter Server 拓扑中部署ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，仅授予其部署 OVF 模板所需的权限。详情请参阅职位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
-  <block id="281aaa5cbe3748f40438f77dcaf6f2ab" category="paragraph">如果您在双 vCenter Server 拓扑中使用ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，仅授予其部署 OVF 模板所需的权限。详情请参阅职位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
   <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">ONTAP tools REST API 参考</block>
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">进行首次 ONTAP tools REST API 调用</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">了解 ONTAP tools REST API</block>
@@ -2763,4 +2761,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="13851b8712fd713a2b4c64e5c006d207" category="paragraph">从 ONTAP tools for VMware vSphere 10.4 开始，ONTAP tools 可自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。</block>
   <block id="8a905a5ae0b4e8a047369390f0e12e9a" category="admonition">存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组。如果 NFS 数据存储卷置于一致性组下，则发现设备操作将失败。</block>
   <block id="130feced60ff3be4c19a41924346eaef" category="paragraph">应在受保护站点和恢复站点发现状态为 *已启用* 的存储系统。</block>
+  <block id="f6db8158f30cb5444097d38ac58ea534" category="paragraph">如果要在双 vCenter 服务器拓扑中部署 ONTAP 工具（设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管 ONTAP 工具的 vCenter 实例分配受限角色。您可以仅使用 OVF 模板部署所需的权限创建专用 vCenter 用户和角色。有关详细信息，请参见 <block ref="195bdbec94ccbccdb53d22ac92079db9" category="inline-link-macro-rx"></block> 中列出的角色。</block>
+  <block id="f8eb6f34101d2549cf54a3790c57397e" category="paragraph">如果您在使用 ONTAP 工具的双 vCenter Server 拓扑结构中——即设备托管在一个 vCenter 实例并管理另一个实例，您可以为托管 ONTAP 工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，并仅授予其部署 OVF 模板所需的权限。详细信息请参见 <block ref="195bdbec94ccbccdb53d22ac92079db9" category="inline-link-macro-rx"></block> 中列出的角色。</block>
 </blocks>

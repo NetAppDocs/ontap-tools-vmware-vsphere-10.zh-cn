@@ -84,7 +84,7 @@ NOTE: 切勿将 ONTAP tools for VMware vSphere 虚拟机存储在其管理的 vV
 NOTE: vCenter 主机名是部署ONTAP工具设备的 vCenter Server 实例的名称。
 
 +
-如果您在双 vCenter Server 拓扑中部署ONTAP工具（其中设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管ONTAP工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，仅授予其部署 OVF 模板所需的权限。详情请参阅职位列表中所列的角色。 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"]。
+如果要在双 vCenter 服务器拓扑中部署 ONTAP 工具（设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管 ONTAP 工具的 vCenter 实例分配受限角色。您可以仅使用 OVF 模板部署所需的权限创建专用 vCenter 用户和角色。有关详细信息，请参见 link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"] 中列出的角色。
 
 +
 对于将由ONTAP工具管理的 vCenter 实例，请确保 vCenter 用户帐户具有管理员权限。
