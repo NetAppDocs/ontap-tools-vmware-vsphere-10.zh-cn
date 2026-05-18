@@ -2,7 +2,7 @@
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，包括嵌套 igroup 行为、重用和 10.5 P2 清理更改。 
 ---
 = ONTAP tools 如何管理 igroup
 :allow-uri-read: 
@@ -11,19 +11,33 @@ summary:
 
 
 [role="lead"]
-如果您同时管理ONTAP工具虚拟机和ONTAP存储系统，那么了解 igroup 的行为方式非常重要，尤其是在将数据存储区从不受 ONTAP 工具管理的环境移动到受ONTAP工具管理的环境时。本页解释了在此过程中 igroup 是如何更新的。
+如果您同时管理 ONTAP tools VM 和 ONTAP 存储系统，请务必了解 igroup 的行为，特别是在将数据存储从非 ONTAP tools 管理的环境移动到 ONTAP tools 管理的环境时。本页介绍 ONTAP tools for VMware vSphere 如何表示和管理 igroup。它是用于了解早期版本和当前嵌套 igroup 模型之间的行为差异的概念信息。
 
-从 ONTAP tools for VMware vSphere 10.4 开始，ONTAP tools 可自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。
+从 ONTAP tools for VMware vSphere 10.4 开始，ONTAP tools 会自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。从 ONTAP tools for VMware vSphere 10.5 P2 开始，迁移的 igroup 在不再使用时也会自动删除。
 
-ONTAP tools for VMware vSphere在两种不同的上下文中解释 igroup：
+
+
+== 快速行为摘要
+
+* ONTAP tools 管理的 VMFS 数据存储使用嵌套的 igroup：每个数据存储上下文一个父 igroup，每个主机一个子 igroup。
+* LUN 映射应用于子 igroup。
+* 自定义父 igroup 可以跨数据存储区重用。
+* 无法重复使用从 ONTAP tools 9.x 迁移的 igroup。
+
+
+
+
+== Igroup 上下文
+
+ONTAP tools for VMware vSphere 在两种上下文中处理 igroup。
 
 .非ONTAP工具管理的 igroup
-作为存储管理员，您可以在ONTAP系统上将 igroup 创建为平面或嵌套结构。该图显示了在ONTAP系统中创建的平面 igroup。
+作为存储管理员，您可以在 ONTAP 系统上创建平面或嵌套结构的 igroup。下图显示了直接在 ONTAP 中创建的平面 igroup。
 
 image:../media/non-otv-managed.png["非ONTAP工具管理的 igroup"]
 
 .ONTAP工具管理的 igroup
-创建数据存储库时，ONTAP tools for VMware vSphere会自动使用嵌套结构创建 igroup，以便更轻松地进行 LUN 映射。
+在创建数据存储库时，ONTAP tools for VMware vSphere 会在嵌套结构中创建 igroup。
 
 例如，当在主机 1、2 和 3 上创建并挂载 datastore1，并在主机 3、4 和 5 上创建并挂载新的 datastore（datastore2）时， ONTAP工具会重用主机级 igroup 以实现高效管理。
 
@@ -31,41 +45,69 @@ image:../media/otv-managed.png["ONTAP工具管理的 igroup"]
 
 image:../media/otv-managed2.png["ONTAP工具管理的 igroup 具有重复使用的子 igroup"]
 
-以下是适用于ONTAP tools for VMware vSphere的一些案例。
-
-*当您使用默认 igroup 设置创建数据存储时*
-
-当您创建数据存储库并将 igroup 字段留空（默认设置）时， ONTAP工具会自动为该数据存储库生成嵌套的 igroup 结构。数据存储级别的父 igroup 使用以下模式命名：otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>。每个主机级子 igroup 遵循以下模式：otv_<hostMoref>_<vcguid>。您可以在ONTAP存储界面的 *Parent Initiator Group* 部分中查看父 (数据存储级别) igroup 和子 (主机级别) igroup 之间的关联。
-
-使用嵌套 igroup 方法，LUN 仅映射到子 igroup。然后，vCenter Server 清单将显示新的数据存储。
-
-*当您使用自定义 igroup 名称创建数据存储时*
-
-在ONTAP工具中创建数据存储区时，您可以输入自定义 igroup 名称，而不是从下拉列表中选择。然后， ONTAP工具会使用您指定的名称在数据存储级别创建一个父 igroup。如果同一主机用于多个数据存储，则会重复使用现有的主机级（子）igroup。因此，新数据存储区的 LUN 将映射到此现有子 igroup，该子 igroup 现在可能与多个父 igroup 相关联（每个数据存储区一个）。您可以在 vCenter Server 界面中看到具有自定义 igroup 名称的新数据存储。
-
-*在创建数据存储区期间重复使用 igroup 名称时*
-
-使用ONTAP工具用户界面创建数据存储库时，您可以从下拉列表中选择现有的自定义父 igroup。重新使用父 igroup 创建另一个数据存储库后， ONTAP系统用户界面会显示此关联。新的数据存储区也会出现在 vCenter Server 用户界面中。
-
-此操作也可以使用 API 执行。要在数据存储创建期间重用现有的 igroup，请在 API 请求有效负载中指定 igroup UUID。
 
 
-NOTE: 只能重复使用自定义 igroup。从 ONTAP tools 9.x 迁移期间创建的 igroup（已迁移的 igroup）无法重复使用，并且从 ONTAP tools 10.5P2 开始，在不再使用时会自动删除。
+== 命名行为
 
-*当您从ONTAP和 vCenter 本地创建数据存储区和 igroup 时*
+创建数据存储区并将 igroup 字段留空时，ONTAP tools 会创建默认的嵌套 igroup 结构。
 
-如果您直接在ONTAP系统和 VMware 环境中创建 igroup 和数据存储， ONTAP工具首先不会管理这些对象。这将创建一个扁平的 igroup 结构。
+* 父级 igroup 命名模式： `otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>`
+* 子 igroup 命名模式： `otv_<hostMoref>_<vcguid>`
+
+
+ONTAP 系统界面在 *Parent Initiator Group* 字段中显示父和子 igroup 之间的关系。
+
+
+
+== 按情形划分的行为
+
+[cols="25,25,25,25"]
+|===
+| 场景 | 父级 igroup 行为 | 子 igroup 行为 | LUN 映射和可见性 
+
+
+| 使用默认 igroup 设置创建的数据存储区 | 创建默认的 ONTAP tools 管理的父 igroup。 | 根据需要创建主机级子 igroup。 | LUN 映射到子 igroup。该数据存储库显示在 vCenter Server 库存中。 
+
+
+| 已使用自定义 igroup 名称创建数据存储区 | 将使用指定名称创建自定义父 igroup。 | 当主机重叠时，将重用现有的主机级子 igroup。 | 新数据存储区 LUN 映射到已重用或新创建的子 igroup。数据存储区显示在 vCenter Server 中。 
+
+
+| 在数据存储创建过程中重复使用的现有自定义 igroup | 已选择并重用现有的自定义父级 igroup。 | 子 igroup 会根据主机成员身份重复使用或扩展。 | 新数据存储区 LUN 通过关联的子 igroup 映射。数据存储区显示在 vCenter Server 中。 
+
+
+| 数据存储区和 igroup 在 ONTAP 和 vCenter 中本地创建，然后由 ONTAP tools 发现 | ONTAP tools 在其管理上下文中创建父 igroup 并保留原始 igroup 名称。 | ONTAP tools 使用  `otv_` 前缀重命名原始 igroup，并将其表示为层次结构中的子 igroup。 | 启动器映射保持不变。只有映射到数据存储的 igroup 在发现期间被转换。 
+|===
+
+
+== 自定义 igroup 重用和 API 行为
+
+在 ONTAP tools 用户界面中，您可以在创建数据存储库时从下拉列表重用现有的自定义父级 igroup。
+
+API 支持相同的行为。要在数据存储区创建过程中重用现有的 igroup，请在 API 请求有效负载中提供 igroup UUID。
+
+
+NOTE: 只能重复使用自定义 igroup。从 ONTAP tools 9.x 迁移的 igroup 不能重复使用，并且从 ONTAP tools 10.5 P2 开始，在不再使用时会自动删除。
+
+
+
+== 本机到托管的转换视图
+
+如果您直接在 ONTAP 系统和 VMware 环境中创建 igroup 和数据存储区，则 ONTAP tools 最初不会管理这些对象。这会导致扁平的 igroup 结构。
 
 image:../media/vmfsds-native.png["本地创建的数据存储区和 igroup"]
 
-要使用ONTAP工具管理现有数据存储库和 igroup，您应该执行数据存储库发现。 ONTAP工具识别并注册数据存储和 igroup，并将它们转换为数据库中的嵌套结构。使用自定义名称创建一个新的父 igroup，同时使用“otv_”前缀重命名现有 igroup 并成为子 igroup。启动器映射保持不变。仅映射到数据存储区的 igroup 在发现过程中进行转换。此后，igroup 结构如下图所示。
+在数据存储区发现之后， ONTAP tools 识别并注册数据存储区映射的 igroup ，然后在嵌套模型中表示它们。父 igroup 在数据存储层表示，现有 igroup 使用 `otv_`前缀重命名为子 igroup ，发起方映射保持不变。
 
 image:../media/otv-ds.png["由ONTAP工具管理的数据存储和 igroup"]
 
-在ONTAP工具中运行数据存储发现后， ONTAP工具会将平面 igroup 转换为嵌套结构。然后， ONTAP工具会管理 igroup，并使用“otv_”前缀对其进行重命名。在此过程中，LUN 仍然映射到同一个 igroup。
+ONTAP tools for VMware vSphere 不会检测或管理在 ONTAP 系统中创建但未映射到数据存储或链接到 ONTAP tools 的 igroup。在发现过程中，ONTAP tools 仅转换映射到已发现数据存储的那些 igroup；其他 igroup 仍未被管理。
 
-ONTAP工具如何重用本机创建的 igroup
 
-您可以使用在ONTAP系统中首次创建的 igroup 在ONTAP工具中创建数据存储库，然后由ONTAP工具对其进行管理。这些 igroup 出现在自定义启动器组名称下拉列表中。然后，数据存储区的新 LUN 将映射到相应的规范化子 igroup，例如“otv_NativeIgroup1”。
 
-ONTAP tools for VMware vSphere不会检测或使用在ONTAP系统中创建的、未由ONTAP工具管理或未链接到数据存储的 igroup。
+== 重复使用发现的本地 igroups
+
+ONTAP tools 管理发现的本机 igroup 后，该 igroup 在用于创建数据存储的自定义启动器组名称下拉列表中可用。
+
+新数据存储区 LUN 映射到规范化的子 igroup，例如 `otv_NativeIgroup1`。
+
+ONTAP tools for VMware vSphere 不会检测或使用在未由 ONTAP tools 管理或未链接到数据存储的 ONTAP 系统中创建的 igroup。
