@@ -2791,4 +2791,8 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">ONTAP tools 管理发现的本机 igroup 后，该 igroup 在用于创建数据存储的自定义启动器组名称下拉列表中可用。</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">新数据存储区 LUN 映射到规范化的子 igroup，例如<block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block>。</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere 不会检测或使用在未由 ONTAP tools 管理或未链接到数据存储的 ONTAP 系统中创建的 igroup。</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">为 vCenter 实例本地添加和管理存储后端，或为 ONTAP 工具中的集群范围发现进行全局添加和管理。</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10：什么是存储后端全局和本地范围</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">有关全局和本地存储后端的更多信息，请参见 KB 文章：<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block>。</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>
