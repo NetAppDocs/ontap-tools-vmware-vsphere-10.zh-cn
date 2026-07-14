@@ -15,66 +15,77 @@ summary: 下一节介绍了本文档中使用的重要概念和术语。
 
 
 
+[[certificate-authority-ca]]
 === 证书颁发机构(CA)
 
 CA 是颁发安全套接字层 (SSL) 证书的受信任实体。
 
 
 
+[[consistency-group]]
 === 一致性组
 
 一致性组是作为一个单位管理的卷的集合。一致性组同步以实现跨存储单元和卷的数据一致性。在 ONTAP 中，它们为跨多个卷的应用程序工作负载提供轻松的管理和保护保证。进一步了解 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["一致性组"]。
 
 
 
+[[dual-stack]]
 === 双堆栈
 
 双堆栈网络是一种支持同时使用IPv4和IPv6地址的网络环境。
 
 
 
+[[high-availability-ha]]
 === 高可用性（ HA ）
 
 集群节点以HA对的形式进行配置、以实现无中断运行。
 
 
 
+[[logical-unit-number-lun]]
 === 逻辑单元号(LUN)
 
 LUN是一个数字、用于标识存储区域网络(SAN)中的逻辑单元。这些可寻址设备通常是通过小型计算机系统接口(SCSI)协议或其封装派生程序之一访问的逻辑磁盘。
 
 
 
+[[nvme-namespace-and-subsystem]]
 === NVMe命名空间和子系统
 
 NVMe 命名空间是指可格式化为逻辑块的非易失性内存量。命名空间相当于 FC 和 iSCSI 协议的 LUN ， NVMe 子系统类似于 igroup 。NVMe子系统可以与启动程序关联、以便关联的启动程序可以访问此子系统中的命名区域。
 
 
 
+[[ontap-tools-manager]]
 === ONTAP工具管理器
 
 ONTAP tools Manager 为 VMware vSphere 管理员提供了 ONTAP tools for VMware vSphere，可以更好地控制托管的 vCenter Server 实例和已载入的存储后端。它有助于管理 vCenter Server 实例、存储后端、证书、密码和日志包。
 
 
 
+[[open-virtual-appliance-ova]]
 === 开放式虚拟设备(OVA)
 
 OVA是一种用于打包和分发必须在虚拟机上运行的虚拟设备或软件的开放式标准。
 
 
 
+[[recovery-point-objective-rpo]]
 === 恢复点目标(RPO)
 
 RPO 衡量备份或复制数据的频率。它指定了发生中断后恢复数据以恢复业务运营所需的确切时间点。例如、如果组织的RPO为4小时、则在发生灾难时、可以允许最多丢失4小时的数据。
 
 
 
+[[snapmirror-active-sync]]
 === SnapMirror活动同步
 
 SnapMirror主动同步支持业务服务在站点完全瘫痪的情况下继续运行、支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移不需要手动干预或自定义脚本。详细了解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror活动同步"]。
 
 
 
+[[storage-backends]]
 === 存储后端
 
 存储后端是ESXi主机用于存储虚拟机文件、数据和其他资源的底层存储基础架构。它们允许ESXi主机访问和管理永久性数据、从而为虚拟化环境提供所需的存储功能和性能。
@@ -87,18 +98,21 @@ SnapMirror主动同步支持业务服务在站点完全瘫痪的情况下继续�
 
 
 
+[[storage-replication-adapter-sra]]
 === Storage Replication Adapter （ SRA ）
 
 SRA是VMware Live Site Recovery设备中安装的特定于存储供应商的软件。通过该适配器、可以在Storage Virtual Machine (SVM)级别和集群级别配置上实现Site Recovery Manager与存储控制器之间的通信。
 
 
 
+[[storage-virtual-machine-svm]]
 === Storage Virtual Machine (SVM)
 
 SVM 是 ONTAP 中多租户的单位。就像在虚拟机监控程序上运行的虚拟机一样，SVM 是一个抽象物理资源的逻辑实体。SVM 包含数据卷和一个或多个 LIF，通过这些 LIF 向客户端提供数据。
 
 
 
+[[uniform-and-non-uniform-configuration]]
 === 统一和非统一配置
 
 * *统一主机访问*表示两个站点的主机连接到两个站点上存储集群的所有路径。跨站点路径会跨越多个距离。
@@ -111,54 +125,63 @@ NOTE: 任何SnapMirror主动同步部署均支持统一主机访问；只有对�
 
 
 
+[[virtual-machine-file-system-vmfs]]
 === 虚拟机文件系统(VMFS)
 
 VMFS是一种集群模式文件系统、专用于在VMware vSphere环境中存储虚拟机文件。
 
 
 
+[[virtual-volumes-vvols]]
 === 虚拟卷（ VVOL ）
 
 vVols 为虚拟机使用的存储提供卷级抽象。它包括几个好处，并提供了使用传统 LUN 的替代方案。vVol 数据存储区通常与用作 vVols 容器的单个 LUN 相关联。
 
 
 
+[[vm-storage-policy]]
 === 虚拟机存储策略
 
 VM存储策略会在vCenter Server中的"Policies and Profile (策略和配置文件)"下创建。对于NetApp、请使用来自VMware虚拟卷存储类型提供程序的规则创建一个规则集。
 
 
 
+[[vmware-live-site-recovery]]
 === VMware Live Site Recovery
 
 VMware Live Site Recovery (以前称为Site Recovery Manager、SRM)可为VMware虚拟环境提供业务连续性、灾难恢复、站点迁移和无中断测试功能。
 
 
 
+[[vmware-vsphere-apis-for-storage-awareness-vasa]]
 === 用于存储感知的VMware vSphere API (VASA)
 
 VASA是一组API、可将存储阵列与vCenter Server集成在一起以进行管理。该架构基于多个组件、包括负责处理VMware vSphere与存储系统之间通信的VASA Provider。
 
 
 
+[[vmware-vsphere-storage-apis-array-integration-vaai]]
 === VMware vSphere存储API—阵列集成(VAAI)
 
 VAAI是一组API、可用于在VMware vSphere ESXi主机和存储设备之间进行通信。这些API包括一组原始操作、主机使用这些操作将存储操作卸载到阵列。VAAI可以显著提高存储密集型任务的性能。
 
 
 
+[[vsphere-metro-storage-cluster]]
 === vSphere Metro Storage Cluster
 
 vSphere Metro Storage Cluster (vMSC) 是一种在扩展群集部署中启用和支持 vSphere 的体系结构。vMSC 解决方案在 NetApp MetroCluster 和 SnapMirror 主动同步（以前称为 SMBC）上受支持。这些解决方案可在出现域故障时提供增强的业务连续性。弹性模型基于您的特定配置选择。详细了解 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster"]。
 
 
 
+[[vvols-datastore]]
 === VVOL 数据存储库
 
 vVols 数据存储库是由 VASA Provider 创建和维护的 vVols 容器的逻辑表示。
 
 
 
+[[zero-rpo]]
 === 零RPO
 
 RPO表示恢复点目标、即在给定时间内视为可接受的数据丢失量。零RPO表示不允许丢失任何数据。

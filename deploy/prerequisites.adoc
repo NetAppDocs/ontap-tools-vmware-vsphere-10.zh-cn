@@ -17,6 +17,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 
 
 
+[[system-requirements]]
 == 系统要求
 
 * *每个节点的安装包空间要求*
@@ -47,6 +48,7 @@ NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上�
 
 
 
+[[minimum-storage-and-application-requirements]]
 == 最低存储和应用程序要求
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == 端口要求
 
 下表概述了NetApp使用的网络端口及其用途。端口分为三种类型：
@@ -158,6 +161,7 @@ NOTE: 对于高可用性部署，请确保所有节点之间都已打开 UDP 端
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == 部署 ONTAP tools for VMware vSphere 用于 vVols 数据存储库的配置限制
 
 您可以使用下表作为配置 ONTAP tools for VMware vSphere 的指南。
@@ -187,6 +191,7 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == 部署适用于 VMFS 和 NFS 数据存储库的 VMware vSphere ONTAP tools 的配置限制
 
 本节中列出的配置限制由 NetApp 验证和支持。实际限制可能因您的环境和工作负载而异。超过这些限制可能会影响性能或支持性，因此不建议使用。在查看表格时，请考虑以下几点：
@@ -218,6 +223,7 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == 适用于VMware vSphere的ONTAP工具—Storage Replication Adapter (SRA)
 
 下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。

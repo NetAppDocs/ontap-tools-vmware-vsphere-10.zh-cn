@@ -80,6 +80,21 @@ NOTE: 切勿将 ONTAP tools for VMware vSphere 虚拟机存储在其管理的 vV
 . 为每个源网络选择目标网络，然后选择*Next*。
 . 在 *自定义模板* 窗口中，填写必填字段。image:../media/custom-temp-p2.png["自定义模板"]
 +
+[IMPORTANT]
+====
+*自定义模板*页面上的值是成功部署所必需的。
+
+特别注意以下字段：
+
+** *主机名*：输入 ONTAP tools VM 主机名。请使用有效的主机名格式。
+** *ONTAP tools IP address*：这是用于访问 ONTAP tools 的主要管理界面。
+** *IPv4 address*：这是用于诊断 shell 和 SSH 访问以进行故障排除和维护的节点 IP 地址。
+
+
+如果您为主机或 vCenter 使用 DNS 名称，请确保这些名称在 DNS 中正确解析。
+
+====
++
 
 NOTE: vCenter 主机名是部署ONTAP工具设备的 vCenter Server 实例的名称。
 

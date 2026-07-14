@@ -17,6 +17,7 @@ summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，�
 
 
 
+[[quick-behavior-summary]]
 == 快速行为摘要
 
 * ONTAP tools 管理的 VMFS 数据存储使用嵌套的 igroup：每个数据存储上下文一个父 igroup，每个主机一个子 igroup。
@@ -27,6 +28,7 @@ summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，�
 
 
 
+[[igroup-contexts]]
 == Igroup 上下文
 
 ONTAP tools for VMware vSphere 在两种上下文中处理 igroup。
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["ONTAP工具管理的 igroup 具有重复使用�
 
 
 
+[[naming-behavior]]
 == 命名行为
 
 创建数据存储区并将 igroup 字段留空时，ONTAP tools 会创建默认的嵌套 igroup 结构。
@@ -59,6 +62,7 @@ ONTAP 系统界面在 *Parent Initiator Group* 字段中显示父和子 igroup �
 
 
 
+[[behavior-by-scenario]]
 == 按情形划分的行为
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ ONTAP 系统界面在 *Parent Initiator Group* 字段中显示父和子 igroup �
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == 自定义 igroup 重用和 API 行为
 
 在 ONTAP tools 用户界面中，您可以在创建数据存储库时从下拉列表重用现有的自定义父级 igroup。
@@ -90,6 +95,7 @@ NOTE: 只能重复使用自定义 igroup。从 ONTAP tools 9.x 迁移的 igroup 
 
 
 
+[[native-to-managed-conversion-view]]
 == 本机到托管的转换视图
 
 如果您直接在 ONTAP 系统和 VMware 环境中创建 igroup 和数据存储区，则 ONTAP tools 最初不会管理这些对象。这会导致扁平的 igroup 结构。
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere 不会检测或管理在 ONTAP 系统中创建但
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == 重复使用发现的本地 igroups
 
 ONTAP tools 管理发现的本机 igroup 后，该 igroup 在用于创建数据存储的自定义启动器组名称下拉列表中可用。

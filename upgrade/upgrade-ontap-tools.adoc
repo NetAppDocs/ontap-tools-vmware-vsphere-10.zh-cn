@@ -67,7 +67,7 @@ summary: HA和非HA部署均支持升级。
 . 从vCenter Server中、打开一个ONTAP工具控制台。
 . 以维护用户身份登录。
 . 输入*2*选择*系统配置*菜单。
-. 输入*7*选择*升级*选项。
+. 输入 *6* 以选择*升级*选项。
 . 出现提示时提供 vCenter 凭据。这是托管 ONTAP tools 的 vCenter 实例。
 +
 如果您在使用 ONTAP 工具的双 vCenter Server 拓扑结构中——即设备托管在一个 vCenter 实例并管理另一个实例，您可以为托管 ONTAP 工具的 vCenter 实例分配受限角色。您可以创建一个专用的 vCenter 用户和角色，并仅授予其部署 OVF 模板所需的权限。详细信息请参见 link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"] 中列出的角色。

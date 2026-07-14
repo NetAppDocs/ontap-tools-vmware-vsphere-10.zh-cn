@@ -16,6 +16,14 @@ summary: 将vCenter Server实例添加到适用于VMware vSphere的ONTAP工具�
 .关于此任务
 ONTAP工具与 vCenter Server 集成，可直接从 vSphere 客户端执行配置、快照和数据保护等存储任务。
 
+将vCenter Server实例添加到ONTAP工具会自动触发以下操作：
+
+* ONTAP工具将 vCenter 客户端插件注册为远程插件。
+* 此插件和API的自定义Privileges将应用于vCenter Server实例。
+* 创建自定义角色以管理用户。
+* 此插件会在vSphere用户界面上显示为快捷方式。
+
+
 .开始之前
 * 确保 vCenter 服务器证书包含包含 DNS 和 IP 地址条目的有效使用者备用名称 (SAN) 扩展。例如：
 +
@@ -53,12 +61,4 @@ X509v3 extensions:
 
 NOTE: 您不需要管理员帐户即可将vCenter实例添加到ONTAP工具。您可以创建自定义角色、而无需具有有限权限的管理员帐户。有关详细信息、请参见 link:../concepts/rbac-vcenter-use.html["将vCenter Server RBAC与适用于VMware vSphere 10的ONTAP工具结合使用"] 。
 
-
-
-将vCenter Server实例添加到ONTAP工具会自动触发以下操作：
-
-* ONTAP工具将 vCenter 客户端插件注册为远程插件。
-* 此插件和API的自定义Privileges将应用于vCenter Server实例。
-* 创建自定义角色以管理用户。
-* 此插件会在vSphere用户界面上显示为快捷方式。
 

@@ -48,10 +48,12 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 |===
 
 
+[[deployment-worksheet]]
 == 部署工作表
 
 
 
+[[for-single-node-deployment]]
 === 适用于单节点部署
 
 使用以下工作表收集适用于 VMware vSphere 的 ONTAP 工具初始部署所需的信息：
@@ -100,6 +102,7 @@ NOTE: 为上述所有 IP 地址创建 DNS 记录。在分配主机名之前，�
 
 
 
+[[for-high-availability-ha-deployment]]
 === 适用于高可用性(HA)部署
 
 除了单节点部署要求之外、您还需要HA部署的以下信息：
@@ -132,12 +135,14 @@ NOTE: 为上述所有 IP 地址创建 DNS 记录。在分配主机名之前，�
 |===
 
 
+[[network-firewall-configuration]]
 == 网络防火墙配置
 
 确保所有相关 IP 地址的必要防火墙端口均已打开。 ONTAP工具需要通过端口 443 访问 LIF。有关所需端口的完整列表，请参阅端口要求部分link:../deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"]。
 
 
 
+[[ontap-storage-settings]]
 == ONTAP存储设置
 
 要确保ONTAP存储与适用于VMware vSphere的ONTAP工具无缝集成、请考虑以下设置：

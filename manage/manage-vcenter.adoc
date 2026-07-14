@@ -15,6 +15,7 @@ vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == 断开存储后端与vCenter Server实例的关联
 
 vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。
@@ -29,6 +30,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 
 
 
+[[modify-a-vcenter-server-instance]]
 == 修改vCenter Server实例
 
 请按照以下步骤修改vCenter Server实例。
@@ -43,6 +45,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 
 
 
+[[remove-a-vcenter-server-instance]]
 == 删除vCenter Server实例
 
 删除 vCenter Server 之前，请先删除其中的所有存储后端。
@@ -65,6 +68,7 @@ NOTE: 删除 vCenter Server 实例后，应用程序将不再维护它们。
 
 
 
+[[renew-vcenter-server-certificate]]
 == 更新 vCenter Server 证书
 
 ONTAP工具会在 vCenter 证书即将到期或已过期时通知您。更新 vCenter 证书后，请按照以下步骤将新证书上传到ONTAP工具：

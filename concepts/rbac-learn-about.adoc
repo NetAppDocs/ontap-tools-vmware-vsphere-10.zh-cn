@@ -20,6 +20,7 @@ RBAC标准模型由多种实施技术或阶段组成、这些技术或阶段的�
 
 
 
+[[rbac-components]]
 == RBAC组件
 
 在高层次上，每个 RBAC 实施中通常包含几个组件。作为定义授权流程的一部分，这些组件以不同的方式绑定在一起。
@@ -41,6 +42,7 @@ permission是将用户或组与角色绑定到对象的定义。权限对于分�
 
 
 
+[[two-rbac-environments]]
 == 两个RBAC环境
 
 在使用ONTAP tools for VMware vSphere 10 时，需要考虑两种不同的 RBAC 环境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都拥有特定的权限才能执行操作。虽然ONTAP工具可以自动执行存储管理任务，但它不会在 vCenter 或ONTAP中创建用户帐户。服务帐户必须由 vSphere 管理员根据需要创建。本文档为管理员提供指导，以便分配必要的角色和权限，从而有效地管理ONTAP工具。

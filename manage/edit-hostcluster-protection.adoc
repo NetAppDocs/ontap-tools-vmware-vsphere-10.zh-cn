@@ -24,6 +24,7 @@ NOTE: 在创建、编辑或删除主机群集的保护后，您需要执行存�
 
 
 
+[[monitor-host-cluster-protection]]
 == 监控主机集群保护
 
 监控每个受保护主机集群的保护状态、 SnapMirror关系、数据存储库和SnapMirror状态。
@@ -39,6 +40,7 @@ NOTE: 在创建、编辑或删除主机群集的保护后，您需要执行存�
 
 
 
+[[add-new-datastores-or-hosts]]
 == 添加新数据存储库或主机
 
 使用 vCenter 用户界面在受保护的集群上添加主机或创建数据存储区。
@@ -69,6 +71,7 @@ ONTAP工具创建一个 vCenter 任务，您可以在 *最近任务* 面板中�
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == 添加新的SnapMirror关系
 
 .步骤
@@ -91,6 +94,7 @@ ONTAP工具创建一个 vCenter 任务，您可以在 *最近任务* 面板中�
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == 删除现有SnapMirror关系
 
 要删除SnapMirror异步关系，请确保将辅助站点 SVM 或集群添加为适用ONTAP tools for VMware vSphere中的存储后端。您不能一次删除所有SnapMirror关系。删除关系也会从ONTAP集群中删除相应的关系。当您删除自动故障转移双工SnapMirror关系时，系统将取消目标数据存储的映射，并从目标ONTAP集群中删除一致性组、LUN、卷和 igroup。
@@ -118,6 +122,7 @@ ONTAP工具创建一个 vCenter 任务，您可以在 *最近任务* 面板中�
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == 修改现有SnapMirror关系
 
 要修改SnapMirror异步关系，请确保将辅助站点 SVM 或集群添加为适用ONTAP tools for VMware vSphere中的存储后端。对于自动故障转移双工SnapMirror关系，您可以更新主机邻近度以实现统一配置，或更新主机访问以实现非统一配置。不支持在异步和自动故障转移双工策略类型之间进行更改。您可以为集群中新发现的主机配置邻近度或访问设置。

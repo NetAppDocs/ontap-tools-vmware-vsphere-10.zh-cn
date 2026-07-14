@@ -31,6 +31,7 @@ summary: 您可以使用维护控制台更改证书验证标志。
 
 
 
+[[verify-san-based-certificates-for-storage-backends]]
 == 验证存储后端的基于 SAN 的证书
 
 为确保安全通信和正确验证，请验证所有存储后端都使用基于 SAN 的证书：

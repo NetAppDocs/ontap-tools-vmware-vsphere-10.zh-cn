@@ -1320,28 +1320,15 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
   <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>部署适用于VMware vSphere的ONTAP工具</block>
   <block id="e5470d0dab088b9c8b712af4be3801de" category="list-text"><block ref="e5470d0dab088b9c8b712af4be3801de" category="inline-link-macro-rx"></block></block>
-  <block id="d6f4de0e60c9b74a0f06b9c8cb7e5556" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>添加vCenter Server实例</block>
-  <block id="fbc3413db4202f1fe331f16af6b38f13" category="list-text"><block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四个</block>
-  <block id="f876a7cbd467b5fe36bfff5b237cab15" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>配置ONTAP用户角色和Privileges</block>
-  <block id="a3dce2225c6773b6233d6d06ca6524a1" category="paragraph">使用适用于VMware vSphere的ONTAP工具提供的JSON文件配置新用户角色和Privileges以管理存储后端。</block>
   <block id="b3debf9a0a4da8901422599f88761e9e" category="list-text"><block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五个</block>
-  <block id="78a9753ae84f65cfc93b9190109fdbe1" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>配置存储后端</block>
-  <block id="151c3727ca69fe365d30ca8b00d0ef02" category="paragraph">将存储后端添加到ONTAP集群。对于vCenter充当关联SVM的租户的多租户设置、请使用ONTAP工具管理器添加集群。将存储后端与vCenter Server相关联、以便将其全局映射到已登录的vCenter Server实例。</block>
   <block id="623727ddcf21460c69461e09290ff6e3" category="paragraph">使用ONTAP工具用户界面使用集群或SVM凭据添加本地存储后端。这些存储后端仅限于一个vCenter。在本地使用集群凭据时、关联的SVM会自动映射到vCenter以管理Vvol或VMFS。对于VMFS管理(包括SRA)、ONTAP工具支持SVM凭据、而不需要全局集群。</block>
   <block id="5e15cfab5137c8c5b07a50f9eb816e0a" category="list-text"><block ref="5e15cfab5137c8c5b07a50f9eb816e0a" category="inline-link-macro-rx"></block></block>
   <block id="d0c12810d8bb376bdd62e0a7dcb8f3ef" category="inline-link-macro">将存储后端与vCenter Server实例相关联</block>
   <block id="349dea55081cba7988d2e74a569b149b" category="list-text"><block ref="349dea55081cba7988d2e74a569b149b" category="inline-link-macro-rx"></block></block>
-  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六个</block>
-  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七个</block>
-  <block id="461016ffd7a6c7ca138e75fad0c9b7ce" category="paragraph">启用SRA功能以配置灾难恢复并保护NFS或VMFS数据存储库。</block>
   <block id="9b6610ae0d9b3f2df042445cc8433cf4" category="list-text"><block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
-  <block id="24d27c169c2c881eb09a065116f2aa5c" category="inline-image-macro">八个</block>
-  <block id="1f3c2366ee78e590a43f78ce3ec33af9" category="paragraph-title"><block ref="bf2dc80b0d3f76e4f77c4fce580f56c0" category="inline-image-macro-rx" type="image"></block>(可选)启用SnapMirror主动同步保护</block>
   <block id="5c77c00bef7fd2d8fb97abc8f2ff015a" category="list-text"><block ref="5c77c00bef7fd2d8fb97abc8f2ff015a" category="inline-link-macro-rx"></block></block>
-  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">九</block>
-  <block id="c5ee3ef473a8e2d4f3f8b40330e2bcd2" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block>为适用于VMware vSphere的ONTAP工具部署设置备份和恢复</block>
   <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">确保已启用CPU热添加和内存热插拔。</block>
   <block id="1e98e4c05a8f5cfd1ddd0daba1e28284" category="paragraph">您可以通过ONTAP工具IP地址和端口访问适用于VMware vSphere 10 REST API的ONTAP工具。完整的URL包括以下几个部分：</block>
   <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link">一致性组</block>
@@ -1508,9 +1495,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="e4365b2f9588eb138888d2bae6c6ac55" category="list-text">使用VMware vSphere 7版本时、请按照VMware站点上的说明<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>配置NVMe/TCP端口绑定。</block>
   <block id="d6e530451ec429932fcb540369b5619d" category="list-text">对于VMware vSphere 7版本、请按照第页上的说明<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block>配置NVMe/TCP软件适配器。</block>
   <block id="9d596e014ec247e8a36a9d698795a54f" category="list-text"><block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>在ESXi主机上运行操作。有关详细信息，请参阅<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>。</block>
-  <block id="5ba022aa97c9316a9962bea92efe8e4f" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block>如果您使用多个 vCenter Server 实例，请升级证书</block>
-  <block id="cc2976705cd90914f7093a509084c243" category="paragraph">使用多个 vCenter Server 实例时，将自签名证书升级为证书颁发机构 (CA) 签名的证书。</block>
-  <block id="293752750693507b1f4c7f6bc41f019e" category="paragraph">配置适用于VMware vSphere的ONTAP工具、以管理SnapMirror活动同步的主机集群保护。在 ONTAP 系统中执行 ONTAP 集群和 SVM 对等连接以使用 SnapMirror 主动同步。这仅适用于VMFS数据存储库。</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">在 vCenter Server 中，将灾难恢复服务 (DRS) 自动化级别设置为部分自动化。部署 HA 后，将其恢复为完全自动化。</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">HA 设置中的节点主机名应采用小写。</block>
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。</block>
@@ -1628,10 +1612,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="64330c7217f629eb146d9c9276f808df" category="admonition">在ASA r2 存储系统类型 SVM 中，不会创建存储单元（LUN/命名空间），因为数据存储只是一个逻辑容器。</block>
   <block id="36b0287ed1ac9ef5ae710b3824924694" category="paragraph">提交发现请求后，您可以在最近任务面板中跟踪操作的进度。</block>
   <block id="8598aab6bb36721c708c8e437a58cdc2" category="summary">使用此快速入门部分ONTAP tools for VMware vSphere。</block>
-  <block id="569d8591be50649b9e7b8bea144f3512" category="paragraph">验证您的 vSphere、 ONTAP和 ESXi 主机版本是否与ONTAP工具版本兼容。分配足够的 CPU、内存和磁盘空间。根据您的安全规则，您可能需要设置防火墙或其他安全工具以允许网络流量。</block>
-  <block id="e9b5da82e11916ae21c792527e11c3be" category="paragraph">最初，您将部署ONTAP tools for VMware vSphere作为小型单节点配置，该配置提供核心服务以支持 NFS 和 VMFS 数据存储。如果您计划扩展配置以使用vVols数据存储和高可用性 (HA)，请在完成此工作流程后进行扩展。要扩展至 HA 设置，请确保已启用 CPU 热添加和内存热插拔功能。</block>
-  <block id="e6a187afd099cc2fbaed679eda4f9a89" category="paragraph">将 vCenter Server 实例添加到ONTAP tools for VMware vSphere中，以配置、管理和保护 vCenter Server 环境中的虚拟数据存储库。</block>
-  <block id="0115ba480d5059c11ce8f89628a7743d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> （可选）配置 SRA 保护</block>
   <block id="3d67f96eb2aec81f92bfe17a27594d9f" category="list-text"><block ref="3d67f96eb2aec81f92bfe17a27594d9f" category="inline-link-macro-rx"></block></block>
   <block id="034f02f8ec70fbc1533e451250a2bcad" category="admonition">该磁盘已从虚拟机中移除。如果其他虚拟机共享该磁盘，则不会删除磁盘文件。</block>
   <block id="a5e1dbbf601c017647380a6aecd9eb8d" category="list-text">提供日志包标签并生成日志包。文件生成后，您可以看到下载选项。下载可能需要一些时间。</block>
@@ -2051,7 +2031,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="2613ec9391540fc8d9d6ce743d7a9759" category="list-text">确保已启用 CPU 和 RAM 的热插拔。</block>
   <block id="c3061246985713c75c44c8a3b878779b" category="list-text">在编辑设置窗口中的*CD/DVD 驱动器*字段下选择*内容库 ISO 文件*。</block>
   <block id="462136a29a804d85c9626a4ff63b2bef" category="list-text">选择 ISO 文件，选中 *CD/DVD 驱动器* 字段的 *已连接* 框，然后单击 *确定*。</block>
-  <block id="9f6f7d4ab9570c7b22acd4966be9f823" category="list-text">输入*7*选择*升级*选项。</block>
   <block id="c6306b642a5e71b051af55355ca139dc" category="paragraph">在升级过程中，如果任何内置存储后端证书缺少主题备用名称 (SAN) 条目，您将收到提示，指出缺少 SAN。如果您选择在未验证 SAN 的情况下继续，升级将继续，但由于存在潜在的安全风险，因此不建议这样做。</block>
   <block id="6c872843c1ab00a20d8f946d62fe9e30" category="list-text">网关证书续期，有效期为1年。当您移除之前的 SRA 适配器并上传新的 10.5 适配器时，SRA 证书有效期将从 10 年变为 1 年。</block>
   <block id="f77f29b09f12b9fd7711c99fe911df61" category="list-text">远程插件已升级</block>
@@ -2795,4 +2774,32 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10：什么是存储后端全局和本地范围</block>
   <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">有关全局和本地存储后端的更多信息，请参见 KB 文章：<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block>。</block>
   <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
+  <block id="32baa6fa3fd628b1cfe2b88a5916a2d0" category="paragraph">*自定义模板*页面上的值是成功部署所必需的。</block>
+  <block id="75db3442d8b7defbd86cc017cc392550" category="paragraph">特别注意以下字段：</block>
+  <block id="2bd591705cef0dfc0c9ec432fc2beb36" category="list-text">*主机名*：输入 ONTAP tools VM 主机名。请使用有效的主机名格式。</block>
+  <block id="03ffc67414aededc55ef2a19403a00ab" category="list-text">*ONTAP tools IP address*：这是用于访问 ONTAP tools 的主要管理界面。</block>
+  <block id="93d910cd0742d24cb2d5837f339a34f8" category="list-text">*IPv4 address*：这是用于诊断 shell 和 SSH 访问以进行故障排除和维护的节点 IP 地址。</block>
+  <block id="c9143eee30edd84eeded44c8dd4bb50f" category="paragraph">如果您为主机或 vCenter 使用 DNS 名称，请确保这些名称在 DNS 中正确解析。</block>
+  <block id="b58aeebf1906a056812bcdbaf54f976c" category="paragraph">首先完成这些核心任务，使 ONTAP tools 可以用于第 0 天的管理和配置。然后根据您的环境和保护要求完成可选任务。</block>
+  <block id="64d1ecdf3bedbe05adfb8f78686b4db7" category="paragraph">确认您的环境已准备好进行受支持的部署。验证您的 vSphere、ONTAP 和 ESXi 主机版本是否与 ONTAP tools 版本兼容。分配足够的 CPU、内存和磁盘空间。根据您的安全规则，您可能需要设置防火墙或其他安全工具来允许网络流量。</block>
+  <block id="276faf3e6e29fa7b1570b8f766258180" category="paragraph">部署 ONTAP tools 设备，为 NFS 和 VMFS 数据存储区建立基本服务。</block>
+  <block id="55747971e728b60a8cf7102d4827be24" category="paragraph">最初，您将以小型单节点配置部署 ONTAP tools for VMware vSphere。如果您计划将配置扩展为使用 vVols 数据存储和高可用性 (HA)，请在完成此工作流程后执行此操作。要扩展到 HA 设置，请确保已启用 CPU 热添加和内存热插拔。</block>
+  <block id="8a6f9e4a5fb59bbab0bc76b71989a8f2" category="paragraph">在部署期间，请仔细查看*自定义模板*字段，特别是主机名、ONTAP tools IP 地址使用情况和 DNS 要求。</block>
+  <block id="b03edebb993cb976361dcfc8a538c1f7" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 注册并安装 vCenter 客户端插件</block>
+  <block id="5bc0d5ae0656002c035d2539cfea51ba" category="paragraph">添加 vCenter 服务器实例以注册 vCenter 客户端插件并应用所需的权限和角色。添加 vCenter Server 实例时，ONTAP tools 会注册远程插件、应用自定义插件和 API 权限、创建自定义角色并在 vSphere 用户界面中添加插件快捷方式。</block>
+  <block id="24e6d4440f24355aaa1e4165cfb6a5cc" category="list-text"><block ref="24e6d4440f24355aaa1e4165cfb6a5cc" category="inline-link-macro-rx"></block></block>
+  <block id="b52069e3641f2eb2864cffb4c8c7c4fa" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 配置存储后端</block>
+  <block id="2a26c8ff6aa8490afbb0fa106898391c" category="paragraph">连接 ONTAP 存储资源，允许 ONTAP tools 配置和管理数据存储。将存储后端添加到 ONTAP 集群。在 vCenter 服务器与租户 SVM 关联的多租户环境中，请使用 ONTAP tools Manager 添加集群。然后将存储后端与 vCenter 服务器关联，为该 vCenter 实例创建全局映射。</block>
+  <block id="ea535b00ee3474d0227260e20f46a815" category="floating-title">可选的后续任务</block>
+  <block id="21a0a2e2c5f22a528df4f552d86138b3" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 配置 ONTAP 用户角色和权限</block>
+  <block id="76d2aa0929f56a4db2a8e5000cf7fb83" category="paragraph">为最低权限访问配置自定义 ONTAP 角色，而不是使用默认管理员帐户。</block>
+  <block id="a280d081e593760440ed6669695cab4c" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 为多个 vCenter Server 实例升级证书</block>
+  <block id="c561f6968a3856f0e862792702438ef2" category="paragraph">升级证书，以便跨多个 vCenter Server 实例使用可信、基于证书的通信。</block>
+  <block id="12df35656e0e2d52e94d1b7dfa72dec6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 配置 SRA 保护</block>
+  <block id="362b420dc64efd583c01df906961512c" category="paragraph">启用 SRA 功能以设置 NFS 和 VMFS 数据存储的灾难恢复保护。</block>
+  <block id="f62b5a465756ead58c7977a24742bf1e" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 启用 SnapMirror 活动同步保护</block>
+  <block id="5c6a636fcbf98404a3efd92d16afa6ff" category="paragraph">使用 SnapMirror 活动同步设置主机集群保护，以保护 VMFS 数据存储区。在 ONTAP 系统中，对等所需的集群和 SVM，然后在 ONTAP tools for VMware vSphere 中配置主机集群保护。此选项仅适用于 VMFS 数据存储区。</block>
+  <block id="a3aabff6b45a63c93a791fd68b5023c2" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 为您的 ONTAP tools 部署设置备份和恢复</block>
+  <block id="09aa3c7b466d868e6fc06622035e28ff" category="paragraph">设置备份和恢复以保护 ONTAP tools 配置，并从故障中快速恢复。</block>
+  <block id="528b6cb0de0d2a7a4138b5cc5f0e7bd2" category="list-text">输入 *6* 以选择*升级*选项。</block>
 </blocks>

@@ -15,6 +15,7 @@ summary: 此页面概述了适用于VMware vSphere系统的ONTAP工具的部署�
 
 
 
+[[collect-the-log-files]]
 == 收集日志文件
 
 您可以从 ONTAP tools Manager 用户界面中提供的选项收集 ONTAP tools for VMware vSphere 的日志文件。技术支持可能会要求您收集日志文件，以帮助解决问题。
@@ -49,6 +50,7 @@ NOTE: 生成的日志包将替换过去3天或72小时内生成的日志包。
 
 
 
+[[deployment-error-codes]]
 == 部署错误代码
 
 在适用于VMware vSphere的ONTAP工具部署、重新启动和恢复操作期间、您可能会遇到错误代码。
