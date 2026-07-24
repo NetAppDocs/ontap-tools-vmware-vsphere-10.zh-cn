@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: 通过将符合条件的 VMFS 数据存储区添加到具有 SnapMirror 复制的保护组来保护该数据存储区。 
+---
+= 保护 VMFS 数据存储库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此任务可通过将符合条件的 VMFS 数据存储区添加到保护组来对其进行保护。
+
+.开始之前
+* 确保数据存储库使用 iSCSI 或 FC 协议。
+* 请确认您在 vSphere 中具有管理权限。
+* 验证数据存储区是否已属于保护组。
+
+
+.步骤
+. 登录到 vSphere 客户端。
+. 选择一个主机集群并选择 *Datastores*。
+. 右键单击要保护的合格 VMFS 数据存储库，然后选择 *NetApp ONTAP tools* > *保护*。
++
+系统会检查数据存储区是否符合保护条件。如果数据存储区符合条件，则继续执行保护工作流程。如果数据存储区不符合条件，则会显示一条消息说明原因，无法继续操作。
+
+. 选择是将数据存储添加到现有保护组还是创建新的保护组。
++
+.. 要使用现有保护组，请选择该保护组并继续。
+.. 要创建新保护组：
++
+... 提供保护组的名称。
+... 选择*添加关系*。
+... 在*添加SnapMirror关系*窗口中、选择*目标Storage VM*和*策略*类型。
++
+策略类型可以是*异步*或*AutomatedFailOverDuplex*。
+
++
+如果您选择 *AutomatedFailOverDuplex*，请将目标 storage VM 作为存储后端添加到部署了 ONTAP tools for VMware vSphere 的同一个 vCenter Server 中。
+
++
+对于 *AutomatedFailOverDuplex*，请选择统一或非统一主机配置。当您选择*统一主机配置*切换时，主机启动器组配置将隐式复制到目标站点上。有关详细信息，请参阅 link:../concepts/ontap-tools-concepts-terms.html["关键概念和术语"]。
+
+... 如果选择不统一的主机配置，请为集群中的每个主机选择主机访问权限（源/目标）。
+
+
+
+
+. 选择*OK*开始保护工作流程。
+
+
+.结果
+数据存储区显示在选定的保护组中。您可以通过 ONTAP tools 插件查看和管理保护状态。

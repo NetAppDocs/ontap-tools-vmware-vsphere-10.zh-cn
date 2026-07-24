@@ -1,8 +1,8 @@
 ---
 permalink: manage/remove-storage-from-a-vvols-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: 如果选定数据存储库上没有任何卷、则删除数据存储库操作将删除该数据存储库。 
+keywords: shrink vVols datastore, remove storage from vVol datastore, ONTAP tools vVol capacity reduction, virtual volumes datastore resize down 
+summary: 仅当选定数据存储库上没有剩余 vVols 时，才删除 vVols 数据存储库。 
 ---
 = 缩小 ONTAP tools 中的 vVols 数据存储库
 :allow-uri-read: 

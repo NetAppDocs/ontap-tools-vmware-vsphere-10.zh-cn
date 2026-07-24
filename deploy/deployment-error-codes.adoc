@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: 此页面概述了适用于VMware vSphere系统的ONTAP工具的部署、重新启动和恢复操作的错误代码。 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: 使用 ONTAP tools 部署错误代码来诊断和解决部署、重新启动和恢复失败。 
 ---
 = 排除 ONTAP tools 部署错误
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 此页面概述了适用于VMware vSphere系统的ONTAP工具的部署�
 
 
 [role="lead"]
-如果您遇到部署问题，请查看日志和错误代码以诊断和解决问题。从适用于ONTAP tools for VMware vSphere开始，从 pod 收集的日志包包括来自 MongoDB、RabbitMQ 和 Vault 的日志，以及所有 pod 的状态和描述。这些是在现有ONTAP工具服务日志的基础上提供的，增强了可支持性和故障排除能力。
+如果遇到部署问题，请查看日志和错误代码以诊断和解决问题。从 ONTAP tools for VMware vSphere 10.6 开始，从 Pod 收集的日志捆绑包包括来自 MongoDB、RabbitMQ 和 Vault 的日志，以及所有 Pod 的状态和描述。ONTAP tools 10.6 还添加了审计日志记录，以提高故障排除过程中的可追溯性。除了现有的 ONTAP tools 服务日志之外，还提供了这些功能，从而增强了可支持性和故障排除能力。
 
 
 
@@ -56,7 +56,7 @@ NOTE: 生成的日志包将替换过去3天或72小时内生成的日志包。
 在适用于VMware vSphere的ONTAP工具部署、重新启动和恢复操作期间、您可能会遇到错误代码。
 错误代码的长度为五位数、其中前两位数表示遇到问题描述的脚本、后三位数表示该脚本中的特定工作流。
 
-所有错误日志都记录在 /var/log 目录下的 ansible-perl-errors.log 文件中，以便于轻松跟踪和解决问题。该日志文件包含错误代码和失败的 Ansible 任务。
+所有错误日志都记录在 /var/log/otvng 目录下的 ansible-perl-errors.log 文件中，以便于跟踪和解决问题。此日志文件包含错误代码和失败的 Ansible 任务。
 
 
 NOTE: 本页提供的错误代码仅供参考。如果错误仍然存在或没有提及解决方案，请联系客服团队。
@@ -129,10 +129,10 @@ sudo rke2-uninstall.sh (所有VM)。
 | 060 | 操作员部署失败 | 重新启动 
 
 
-| 061 | 服务部署失败 | 在NTV-system命名空间中执行基本Kubirnetes调试、例如GET Pod、GET RS、GET Svc等、有关详细信息和错误日志、请访问/var/log/ansible-perl-errors.log和/var/log/ansible-run.log并重新部署。 
+| 061 | 服务部署失败 | 在 ntv-system 命名空间中执行基本的 Kubernetes 调试，如 get pods、get rs、get svc 等，以获取更多详细信息，并查看 /var/log/otvng/ansible-perl-errors.log 和 /var/log/otvng/ansible-run.log 中的错误日志，然后重新部署。 
 
 
-| 062 | ONTAP工具服务部署失败 | 有关详细信息、请参见/var/log/ansible-perl-errors.log上的错误日志并重新部署。 
+| 062 | ONTAP工具服务部署失败 | 有关更多详细信息和重新部署，请参阅 /var/log/otvng/ansible-perl-errors.log 中的错误日志。 
 
 
 | 065 | 无法访问Swagger页面URL | 重新部署 
@@ -143,7 +143,7 @@ sudo rke2-uninstall.sh (所有VM)。
 
 * 启用诊断 shell。
 * 运行 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy' 命令。
-* 请检查 /var/log/post-deploy-upgrade.log 中的日志。
+* 请检查 /var/log/otvng/post-deploy-upgrade.log 中的日志。
 
 
 
@@ -158,16 +158,6 @@ sudo rke2-uninstall.sh (所有VM)。
 
 
 | 108 | 传播脚本失败 | - 
-
-
-| 114 | MongoDB 集合中的内部证书更新失败  a| 
-如果部署失败并显示错误代码 114，请完成以下步骤：
-
-* 启用诊断 shell。
-* 运行以下命令： `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* 请查看以下位置的日志： `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

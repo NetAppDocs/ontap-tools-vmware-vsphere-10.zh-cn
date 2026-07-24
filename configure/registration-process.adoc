@@ -1,8 +1,8 @@
 ---
 permalink: configure/registration-process.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以使用适用于ONTAP tools for VMware vSphere将 VASA 提供程序注册到 vCenter Server 实例。 
+keywords: register VASA Provider, ONTAP tools VASA registration, vCenter VASA Provider, vVols policy management 
+summary: 使用 ONTAP tools 远程插件界面向 vCenter Server 实例注册 VASA Provider。 
 ---
 = 在 ONTAP tools 中向 vCenter Server 实例注册 VASA Provider
 :allow-uri-read: 

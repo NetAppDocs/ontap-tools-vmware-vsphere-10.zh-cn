@@ -1,8 +1,8 @@
 ---
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。 
+keywords: ONTAP tools requirements, configuration limits, supported versions, sizing 
+summary: 在部署 ONTAP tools for VMware vSphere 之前，请查看支持的版本、大小调整、端口要求和配置限制。 
 ---
 = 适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 
 
 [role="lead"]
-在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软件包的空间要求以及一些基本主机系统要求。
+在部署 ONTAP tools for VMware vSphere 之前，请查看支持的版本、大小调整、端口要求和配置限制。
 
-您可以将 ONTAP tools for VMware vSphere 与 VMware vCenter Server Virtual Appliance (vCSA) 配合使用。您应该在受支持的 vSphere 环境（包括 ESXi 主机）上部署 ONTAP tools for VMware vSphere。
+在支持的 vSphere 环境（包括 ESXi 主机和 VMware vCenter Server Virtual Appliance (vCSA)）上部署 ONTAP tools for VMware vSphere。
 
 
 
@@ -26,7 +26,7 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 ** 348 GB用于厚配置安装
 
 
-* *主机系统规模要求* 下表显示了每种部署规模的推荐内存。对于高可用性 (HA) 部署，您需要列出的设备大小的三倍。
+* *主机系统大小要求* 下表显示了每个部署规模的每个节点的推荐 CPU、内存和磁盘空间。对于高可用性 (HA) 部署，请部署三个节点。
 
 
 |===
@@ -35,16 +35,22 @@ summary: 在为 VMware vSphere 部署 ONTAP 工具之前，您应熟悉部署软
 | *部署类型* | *每个节点的CPU数* | *每个节点的内存(GB)* | *每个节点厚配置的磁盘空间(GB)* 
 
 
+| 特小 (XS) | 6 | 12 | 350 
+
+
 | 小型 | 9 | 18 | 350 
 
 
 | 中 | 13 | 26 | 350 
 
 
-| 大注：大型部署仅适用于HA配置。 | 17 | 34 | 350 
+| 大型 | 17 | 34 | 350 
 |===
 
-NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上还需要50 GB的空间。因此、非HA需要400 GB的空间、而HA总共需要1100 GB的空间。
+NOTE: 大型部署规模仅支持 HA 配置。
+
+
+NOTE: 启用备份后，每个 ONTAP tools 集群在部署虚拟机的数据存储区上需要额外的 50 GB 空间。因此，非 HA 需要 400 GB，HA 总共需要 1100 GB 的空间。
 
 
 
@@ -55,28 +61,28 @@ NOTE: 启用备份后、每个ONTAP工具集群在部署VM的数据存储库上�
 | 存储、主机和应用程序 | 版本要求 
 
 
-| ONTAP | 9.15.1、9.16.1 和 9.17.0 
+| ONTAP 系统 | 9.16.1、9.17.1、9.18.1、9.19.1 
 
 
-| ONTAP工具支持的ESXi主机 | 7.0.3及更高版本 
+| 由 ONTAP tools 管理的 ESXi 主机 | 7.0.3及更高版本 
 
 
-| ONTAP工具支持的vCenter Server | 7.0U3及更高版本 
+| vCenter Server 实例由 ONTAP tools 管理 | 8.0U3 起 
 
 
 | VASA Provider | 3.0 
 
 
-| OVA应用程序 | 10.5 
+| OVA应用程序 | 10.6 
 
 
-| ESXi主机以部署ONTAP Tools虚拟机 | 7.0U3和8.0U3 
+| 用于部署 ONTAP tools 虚拟机的 ESXi 主机 | 7.0U3和8.0U3 
 
 
-| vCenter Server以部署ONTAP Tools虚拟机 | 7.0和8.0 
+| vCenter Server 用于部署 ONTAP tools 虚拟机 | 7.0和8.0 
 |===
 
-NOTE: 从适用于VMware vSphere 10.4的ONTAP工具开始、虚拟机硬件已从版本10更改为17。
+NOTE: 从 ONTAP tools for VMware vSphere 10.4 开始，虚拟机硬件版本从 10 更改为 17。
 
 互操作性表工具(IMT)提供了有关受支持的ONTAP、vCenter Server、ESXi主机和插件应用程序版本的最新信息。
 
@@ -90,7 +96,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 下表概述了NetApp使用的网络端口及其用途。端口分为三种类型：
 
 * 外部端口：这些端口可以从 Kubernetes 集群或节点外部访问。它们允许服务与外部网络或用户通信，从而实现与集群环境之外的系统集成。
-* 节点间端口：这些端口允许 Kubernetes 集群内的节点之间进行通信。它们是集群任务（例如数据共享和协同工作）所必需的。对于单节点部署，节点间端口仅在节点内部使用，不需要外部访问。节点间端口可以接受来自集群外部的流量。使用防火墙规则阻止节点间端口访问互联网。
+* 节点间端口：这些端口支持 Kubernetes 集群内的节点之间的通信。它们是数据交换和节点协调等集群操作所必需的。对于单节点部署，节点间端口仅在节点内使用，不需要外部访问。仅允许来自受信任集群网络的节点间流量，并使用防火墙规则阻止 Internet 访问。
 * 内部端口：这些端口使用 ClusterIP 地址在 Kubernetes 集群内部进行通信。它们不会对外暴露，因此无需添加到防火墙规则中。
 
 
@@ -161,10 +167,10 @@ NOTE: 对于高可用性部署，请确保所有节点之间都已打开 UDP 端
 ====
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
-== 部署 ONTAP tools for VMware vSphere 用于 vVols 数据存储库的配置限制
+[[configuration-limits-for-vvol-datastores]]
+== vVol 数据存储的配置限制
 
-您可以使用下表作为配置 ONTAP tools for VMware vSphere 的指南。
+使用下表作为配置 ONTAP tools for VMware vSphere 的指南。
 
 |===
 
@@ -178,21 +184,21 @@ NOTE: 对于高可用性部署，请确保所有节点之间都已打开 UDP 端
 | 非HA | 中(M) | 高达 24K | 64 
 
 
-| 高可用性 | 小型(S) | 高达 24K | 64 
+| HA | 小型(S) | 高达 24K | 64 
 
 
-| 高可用性 | 中(M) | 高达 5 万 | 128 
+| HA | 中(M) | 高达 50K | 128 
 
 
-| 高可用性 | 大(L) | 高达 100k | 256 
+| HA | 大(L) | 高达 100K | 256 
 |===
 
 NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
-== 部署适用于 VMFS 和 NFS 数据存储库的 VMware vSphere ONTAP tools 的配置限制
+[[configuration-limits-for-vmfs-and-nfs-datastores]]
+== VMFS 和 NFS 数据存储的配置限制
 
 本节中列出的配置限制由 NetApp 验证和支持。实际限制可能因您的环境和工作负载而异。超过这些限制可能会影响性能或支持性，因此不建议使用。在查看表格时，请考虑以下几点：
 
@@ -207,10 +213,16 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 | 部署 | VMFS 和 NFS 数据存储区数量 | 启用 DR 的 VMFS 数据存储区数量 | 主机数量 
 
 
+| 特小 | 50 | 50 | 16 
+
+
 | 小型非HA | 200 | 80 | 32. 
 
 
 | 非HA中型 | 250 | 100 | 32. 
+
+
+| HA 超小型 | 200 | 100 | 32. 
 
 
 | 小型HA | 350 | 200 | 64 
@@ -229,7 +241,7 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 下表显示了使用适用于VMware vSphere的ONTAP工具时每个VMware Live Site Recovery实例支持的数量。
 
 |===
-| *vCenter部署大小* | *小* | *中* 
+| *vCenter 部署规模* | *小* | *中* 
 
 
 | 配置为使用基于阵列的复制进行保护的虚拟机总数 | 2000 | 5000 
@@ -251,10 +263,10 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 |===
 
 
-| *VMware Live Site Recovery实例数* | * ONTAP工具部署规模* 
+| *VMware Live Site Recovery实例数* | *ONTAP tools 部署规模* 
 
 
-| 最多4个 | 小型 
+| 最多 4 | 小型 
 
 
 | 4 到 8 | 中 

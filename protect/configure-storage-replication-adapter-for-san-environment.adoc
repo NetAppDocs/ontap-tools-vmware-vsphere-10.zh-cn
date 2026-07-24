@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Recovery之前、应先设置存储系统。' 
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools 
+summary: 在 VMware Live Site Recovery 中运行 SRA 工作流之前，请设置 SAN 和 NAS 存储系统。 
 ---
 = 在适用于 SAN 和 NAS 环境的 ONTAP tools 中配置 SRA
 :allow-uri-read: 
@@ -19,7 +19,7 @@ summary: '在运行Storage Replication Adapter \(SRA\) for VMware Live Site Reco
 == 为SAN环境配置SRA
 
 
-NOTE: 只有统一和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）才支持 SRA 工作流中的一致性组。
+NOTE: 仅在 ONTAP 存储和 ASA r2 存储系统上使用 SAN 协议（iSCSI 和光纤通道）时，才支持 SRA 工作流中的一致性组。
 
 .开始之前
 您应在受保护站点和恢复站点上安装以下程序：

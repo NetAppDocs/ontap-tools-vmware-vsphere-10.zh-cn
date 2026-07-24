@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: 您应映射受保护站点和恢复站点上的文件夹、以便它们之间可以进行通信。 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: 在受保护站点和恢复站点之间映射文件夹，以准备 VMware Live Site Recovery 故障转移工作流。 
 ---
 = 在 ONTAP tools 中配置文件夹映射
 :allow-uri-read: 

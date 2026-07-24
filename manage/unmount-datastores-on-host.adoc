@@ -1,8 +1,8 @@
 ---
 permalink: manage/unmount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储库。对于由适用于VMware vSphere的ONTAP工具发现或管理的NFS和VMFS数据存储库、系统会启用卸载数据存储库操作。 
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach 
+summary: 使用 ONTAP tools 从 ESXi 主机卸载 NFS 或 VMFS 数据存储。 
 ---
 = 在 ONTAP tools 中卸载 NFS 和 VMFS 数据存储区
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: 卸载数据存储库操作会从ESXi主机卸载NFS或VMFS数据存储
 
 
 [role="lead"]
-卸载数据存储操作会从 ESXi 主机中删除 NFS 或 VMFS 数据存储。它适用于由ONTAP tools for VMware vSphere发现或管理的数据存储。
+使用此任务可从 ESXi 主机卸载 NFS 或 VMFS 数据存储区。UI 或 API 不支持集群级数据存储卸载。
+
+从 ONTAP tools 10.6 开始，受保护的 VMFS 数据存储区将阻止卸载操作。
 
 .步骤
 . 登录到vSphere Client。
-. 右键单击 NFS 或 VMFS 数据存储对象并选择*卸载数据存储*。
+. 右键单击 NFS 或 VMFS 数据存储对象并选择 *卸载数据存储*。
 +
-vSphere 客户端打开一个对话框，列出挂载数据存储的 ESXi 主机。当对受保护的数据存储执行操作时，屏幕上会显示一条警告消息。
+vSphere 客户端打开一个对话框，列出挂载数据存储库的 ESXi 主机。如果数据存储区受到保护，ONTAP tools 会阻止该请求并显示一条消息，提示该数据存储区受到保护且无法卸载。
 
 . 选择一个或多个ESXi主机以卸载数据存储库。
 +
@@ -25,12 +27,12 @@ vSphere 客户端打开一个对话框，列出挂载数据存储的 ESXi 主机
 
 . 选择*Unmount*按钮。
 +
-如果数据存储库属于受保护主机集群、则会显示一条警告消息。
+*卸载数据存储区*选项仅在主机移出受保护的主机群集时可用。
 
 
 
 
-NOTE: 如果受保护的数据存储区已卸载，则现有的保护设置可能会导致保护效果不完整。请参阅link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]以实现全面保护。
+NOTE: 如果数据存储区受到保护，则必须先取消保护，然后才能卸载它。
 
 .下一步是什么？
 您可以在近期任务面板中跟踪进度。

@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: 查看 ONTAP tools 如何捕获、保留和监控审核日志，以确保安全性和合规性。 
+---
+= 管理 ONTAP tools 的审核日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此任务可在 ONTAP tools for VMware vSphere 中管理审核日志记录行为和操作响应。审核日志提供了一个事件跟踪，显示谁执行了操作、执行了哪些操作、何时发生、请求源以及操作是成功还是失败。
+
+.开始之前
+* 确保您拥有 ONTAP tools Manager 的管理员访问权限。
+* 如果计划更改本地保留设置，请确保拥有维护控制台访问权限。
+* 查看组织在保留、转发和事件响应方面的安全性和合规性要求。
+
+
+.关于此任务
+ONTAP tools 可捕获全面的审计事件，以实现运营和合规可见性。
+
+审核范围包括：
+
+* 用户和 API 操作，例如数据存储区创建/删除、vCenter 启用和存储后端操作
+* 内部服务调用，包括 VASA Provider 服务交互
+* 作业，包括发现、保护和聚合操作
+* 维护控制台活动
+
+
+审核条目可以包括：
+
+* 用户名（如果可用）
+* 已执行的操作
+* 时间戳
+* 请求源（UI、API 或服务间）
+* 包含状态的请求和响应详细信息
+
+
+审核档案每天生成，可从 ONTAP tools Manager 中生成的支持包中获得。指定日期的存档在第二天可用。
+
+审核日志记录具有以下操作限制：
+
+* 不支持禁用审核日志记录。
+* 审核日志文件大小不可由用户配置。
+
+
+敏感数据处理内置于其中：
+
+* 敏感数据（例如密码、令牌和私钥材料）将被隐去。
+* 长请求和响应有效负载可能会被截断。
+
+
+.步骤
+. 从 ONTAP tools Manager 生成支持包：
++
+.. 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. 使用 ONTAP tools for VMware vSphere 管理员凭据登录。
+.. 从边栏中选择*Log Bundes*。
+.. 选择 *Generate*。
+.. 输入日志捆绑包的标签，然后选择*Generate*。
++
+审核日志可在下载的支持包中审核目录下的每日存档中找到。
+
+
+
+. 可选：从维护控制台配置本地保留：
++
+.. 登录到 vCenter 服务器。
+.. 找到 ONTAP tools 虚拟机并启动 Web 控制台。
+.. 使用 `maint`凭据登录。
+.. 输入 `1`以选择*应用程序配置*。
+.. 输入 `4`以选择 *Change Audit Log Retention*。
+.. 输入保留值（以天为单位）并确认更改。
++
+默认保留时间为 30 天，支持的范围为 1 至 180 天。
+
++
+
+WARNING: 更改审核日志保留会重新启动服务，并且会造成系统中断。
+
+
+
+. 监控 ONTAP tools Manager 中的审核日志完整性状态：
++
+.. 在 ONTAP tools Manager 控制面板上，查看*警报*卡片，了解活动警报。
+.. 选择警报计数超链接，或打开*管理警报*以查看警报详细信息和状态。
++
+ONTAP tools 每 3 分钟检查一次审核日志存档的完整性。ONTAP tools 维护预期存档的记录。如果存档丢失或被更改，ONTAP tools 会在 ONTAP tools Manager 中发出警报。
+
+
+
+. 可选：从维护控制台更改审核完整性检查间隔：
++
+.. 登录到 vCenter 服务器。
+.. 找到 ONTAP tools 虚拟机并启动 Web 控制台。
+.. 使用 `maint`凭据登录。
+.. 输入 `4`以选择*支持和诊断*。
+.. 输入 `2`以选择 *Enable diag access*。
+.. 以 `diag`用户身份登录。
+.. 运行以下命令来更改间隔（以秒为单位）：
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+最小支持时间间隔为 60 秒。
+
++
+
+WARNING: 更改审核完整性检查间隔会重新启动服务，并且会造成系统中断。
+
+
+
+. 可选：将审核日志转发到外部 syslog 目标。当您需要集中监控、长期保留或安全信息和事件管理 (SIEM) 关联时，请使用 syslog 转发。遵循企业的 TLS、证书、端口和保留标准。
+. 如果出现完整性警报，请执行事件响应操作。
++
+.. 尽快收集支持包。
+.. 根据组织的事件响应流程保留导出的捆绑包和存档。
+.. 在 ONTAP tools Manager 中查看警报详细信息，并在需要时联系 NetApp 支持人员。
+
+
+
+
+
+
+[[example-audit-record]]
+== 审核记录示例
+
+审核记录包括一组一致的字段，以支持可追溯性。典型字段包括：
+
+* 时间戳（UTC）
+* 用户名（已验证用户身份）
+* 操作（HTTP 方法和请求 URI）
+* 请求源（UI、API 或服务间）
+* 状态（成功或失败和状态代码）
+* 用户代理（客户身份，如有）
+* 请求标识符（如果可用）（例如，相关 ID）
+* 作业标识符（如果可用）（用于异步工作流）
+* 租户或 vCenter 标识符（如有）
+
+
+以下示例显示了捕获的信息类型。确切的字段集可能因工作流程而异。
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

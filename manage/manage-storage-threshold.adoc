@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以设置阈值、以便在卷和聚合容量达到特定级别时在vCenter Server中接收通知。  
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: 设置 vCenter Server 中卷和聚合容量级别的阈值通知。 
 ---
 = 在 ONTAP tools 中管理存储阈值
 :allow-uri-read: 

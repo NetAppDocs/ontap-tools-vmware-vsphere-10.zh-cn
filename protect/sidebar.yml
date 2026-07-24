@@ -2,8 +2,12 @@
 section: protect
 title: 保护数据存储库和虚拟机
 entries:
-- title: 使用主机集群保护进行保护
-  url: "/configure/protect-cluster.html"
+- title: 粒度数据存储保护概念和资格
+  url: "/protect/granular-datastore-protection-concept.html"
+- title: 为数据存储区保护配置集群
+  url: "/protect/config-proximity.html"
+- title: 保护集群中的数据存储
+  url: "/protect/protect-multiple-ds.html"
 - title: 使用SRA保护进行保护
   entries:
   - title: 配置 SRA 以保护数据存储

@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: 当您在 vCenter 客户端的快捷方式部分选择 ONTAP tools for VMware vSphere 插件图标时，用户界面会导航到概览页面。此页面作为仪表板，提供 ONTAP tools for VMware vSphere 插件的摘要信息。 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: 查看 ONTAP tools 仪表板，以查看插件状态、数据存储区和 vCenter Server 数据的摘要。 
 ---
 = 了解 ONTAP tools 控制面板
 :allow-uri-read: 
@@ -16,6 +16,10 @@ summary: 当您在 vCenter 客户端的快捷方式部分选择 ONTAP tools for 
 在增强链接模式 (ELM) 中，会出现 vCenter Server 下拉菜单。选择一个 vCenter Server 来查看其数据。该下拉菜单在插件的所有列表视图中均可用。当您在一个页面上选择一个 vCenter Server 时，在插件中切换选项卡时，该 vCenter Server 保持不变。image:../media/remote-plugin-dashboard.png["信息板概述"]
 
 从概览页面，您可以运行*发现*操作。发现操作检测 vCenter 级别新添加或更新的存储后端、主机、数据存储区以及保护状态或关系。运行按需发现，无需等待计划的发现。
+
+向受保护的主机群集中添加新主机时，保护设置将更改为*部分受保护*。
+
+要解决此状态，请打开*修改群集配置*，将主机分配给正确的站点（源或目标），然后选择*修改*。
 
 
 NOTE: 只有当您具有执行发现所需的 Privileges 时，才会启用 *Discovery* 按钮。

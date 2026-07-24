@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: vCenter是一种中央管理平台、可用于控制主机、虚拟机和存储后端。 
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management 
+summary: 在 ONTAP tools 中管理 vCenter 实例，以控制主机、虚拟机和存储后端。 
 ---
 = 在ONTAP工具中管理 vCenter Server 实例
 :allow-uri-read: 
@@ -15,16 +15,16 @@ vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟
 
 
 
-[[dissociate-storage-backends-with-the-vcenter-server-instance]]
-== 断开存储后端与vCenter Server实例的关联
+[[dissociate-storage-backends-from-a-vcenter-server-instance]]
+== 将存储后端与 vCenter Server 实例解除关联
 
 vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。
 
 .步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
-. 从工具条中选择所需的vCenter Server实例。
-. 选择要与存储后端关联或解除关联的vCenter Server旁边的垂直省略号。
+. 从侧栏中选择 *vCenters*。
+. 选择要与存储后端关联或解除关联的 vCenter Server 的垂直省略号（⋮）。
 . 选择*取消关联存储后端*。
 
 
@@ -33,12 +33,10 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 [[modify-a-vcenter-server-instance]]
 == 修改vCenter Server实例
 
-请按照以下步骤修改vCenter Server实例。
-
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
-. 从侧栏中选择适用的vCenter Server实例
-. 选择要修改的vCenter Server旁边的垂直省略号，然后选择*Modify*。
+. 从侧栏中选择 *vCenters*。
+. 选择要修改的 vCenter Server 的垂直省略号，然后选择*修改*。
 . 在“修改 vCenter”窗口中，输入用户名、密码和端口详细信息。
 . 上传证书并选择*修改*。
 
@@ -48,22 +46,61 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 [[remove-a-vcenter-server-instance]]
 == 删除vCenter Server实例
 
-删除 vCenter Server 之前，请先删除其中的所有存储后端。
+即使数据存储区和存储后端仍然关联，也可以删除 vCenter 服务器实例。*删除 vCenter* 对话框将根据 vCenter 服务器的当前状态引导您完成所有必需的操作。
 
+
+NOTE: 强制删除仅删除 ONTAP tools 元数据。它不会删除 ONTAP 存储对象（卷或 LUN）、vSphere 数据存储区或虚拟机。
+
+.开始之前
+如果 vCenter Server 具有 vVols 数据存储或受保护的数据存储，则强制删除将被阻止。在继续之前：
+
+* 删除或迁移所有 vVols 数据存储库。
+* 取消对所有受保护数据存储库的保护。
+* 确保没有正在运行的发现作业。如果正在执行发现作业，强制删除操作将不会继续。
+
+
+
+NOTE: 与其他 vCenter Server 实例共享的全局存储后端将被保留。仅删除与已删除的 vCenter Server 的关联。
+
+.步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
-. 从工具条中选择适用的vCenter Server实例
-. 选择要删除的 vCenter Server 的垂直省略号，然后选择“*删除*”。
+. 从侧栏中选择 *vCenters*。
+. 选择所需 vCenter Server 的垂直省略号，然后选择 *Remove*。
+. 在*删除 vCenter* 对话框中，查看 vCenter Server 的状态并完成所有必需的操作。
 +
+对话框行为取决于 vCenter 服务器的状态：
 
-NOTE: 删除 vCenter Server 实例后，应用程序将不再维护它们。
++
+[cols="2,2,3"]
+|===
+| 条件 | 对话行为 | 需要执行的操作 
 
 
+| 没有 vVols 或受保护的数据存储，但存储后端已关联 | 该对话框显示关联的存储后端和数据存储区的数量。 | 选择*从此 vCenter Server 中删除所有存储工件*和*我了解关联的数据存储将不再由 ONTAP tools 管理*。 
 
-在ONTAP工具中删除vCenter Server实例时、系统会自动执行以下操作：
+
+| 无 vVols 数据存储区、受保护数据存储区或存储后端 | 对话框确认删除。 | 无需执行其他操作。 
+|===
+. 选择*强制删除*。
+. 确认此操作。
+
+
+.结果
+ONTAP tools 会自动执行以下操作：
 
 * 已取消注册插件。
 * 插件权限和插件角色将被删除。
+
+
+vCenter 服务器实例不再由 ONTAP tools 管理。
+
+如果在删除过程中无法访问 vCenter 服务器：
+
+* ONTAP tools 删除 vCenter Server 记录。
+* 未进行插件注销。
+* 此时将显示警告。
+* 您必须从 VMware vCenter Server 手动注销该插件。
 
 
 
@@ -120,9 +157,9 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择适用的vCenter Server实例
-. 选择要修改的vCenter Server旁边的垂直省略号，然后选择*Modify*。
+. 选择要修改的 vCenter Server 的垂直省略号，然后选择*修改*。
 . 在“修改 vCenter”窗口中，输入用户名、密码和端口详细信息。
-. 上传证书并选择*修改*。
+. 上传证书并选择*Modify*。
 
 
 .相关信息

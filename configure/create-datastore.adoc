@@ -1,8 +1,8 @@
 ---
 permalink: configure/create-datastore.html 
 sidebar: sidebar 
-keywords:  
-summary: 当您在主机集群级别创建数据存储库时， ONTAP工具会将其挂载到所有目标主机上，并且仅当您拥有所需的权限时才启用该操作。 
+keywords: create datastore, ONTAP tools NFS VMFS vVols, host cluster datastore provisioning, nconnect datastore settings 
+summary: 在主机或主机群集级别的 ONTAP tools 中创建 NFS、VMFS 或 vVols 数据存储。 
 ---
 = 在 ONTAP tools 中创建数据存储库
 :allow-uri-read: 
@@ -23,16 +23,16 @@ summary: 当您在主机集群级别创建数据存储库时， ONTAP工具会�
 ====
 .创建一个卷数据存储库
 --
-从适用于ONTAP tools for VMware vSphere开始，您可以在ASA r2 系统上创建具有与 thin.vVol 相同的空间效率的vVols数据存储。  VASA 提供程序在创建 vVol 数据存储时创建一个容器和所需的协议端点。  VASA 提供程序不会为该容器分配任何支持卷。
+从 ONTAP tools for VMware vSphere 10.3 开始，您可以在 ASA r2 系统上以精简空间效率创建 vVols 数据存储库。VASA Provider 在创建 vVol 数据存储库时会创建容器和所需的协议端点。VASA Provider 不会将任何后备卷分配给此容器。
 
 .开始之前
 * 确保根聚合未映射到 SVM。
 * 确保已向选定vCenter注册VASA Provider。
-* 在ASA r2 存储系统中，SVM 应映射到 SVM 用户的聚合。
+* 对于 ASA r2 存储系统，不需要 SVM 到聚合的映射。
 
 
 .步骤
-. 登录到vSphere Client。
+. 登录到 vSphere 客户端。
 . 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 选择 vVols 作为 *数据存储类型*。
 . 输入*数据存储库名称*和*协议*信息。
@@ -41,13 +41,13 @@ summary: 当您在主机集群级别创建数据存储库时， ONTAP工具会�
 NOTE: ASA R2系统支持对虚拟卷使用iSCSI和FC协议。
 
 . 选择要在其中创建数据存储库的Storage VM。
-. 在高级选项下：
+. 在*高级选项*下：
 +
-** 如果您选择*自定义导出策略*，请确保在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
+** 如果选择*自定义导出策略*，请在继续之前先在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
 ** 您可以为 iSCSI 和 FC 协议选择*自定义启动器组*名称。
 +
 
-NOTE: 在ASA r2 存储系统类型 SVM 中，不会创建存储单元（LUN/命名空间），因为数据存储只是一个逻辑容器。
+NOTE: 对于 ASA r2 SVM，不会创建存储单元（LUN/命名空间），因为数据存储库只是一个逻辑容器。
 
 
 
@@ -61,30 +61,35 @@ NOTE: 在ASA r2 存储系统类型 SVM 中，不会创建存储单元（LUN/命�
 --
 .创建NFS数据存储库
 --
-NFS 数据存储使用 NFS 协议将 ESXi 主机连接到共享存储。它们简单、灵活，可用于 VMware vSphere 环境。
+NFS 数据存储区使用 NFS 协议将 ESXi 主机连接到共享存储。它简单灵活，适用于 VMware vSphere 环境。
 
 .步骤
-. 登录到vSphere Client。
+. 登录到 vSphere 客户端。
 . 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 在*数据存储库类型*字段中选择NFS。
-. 在*名称和协议*窗格中输入数据存储库名称、大小和协议信息。在高级选项中选择*数据存储库集群*和* Kerberos身份验证*。
+. 在 *名称和协议* 窗格中输入数据存储区名称、大小和协议信息。
++
+.. 在*高级选项*中选择*数据存储集群*和* Kerberos 身份验证*。
 +
 
 NOTE: 只有在选择了NFS 4.1协议时、才能使用Kerberos身份验证。
 
-. 在*存储*窗格中选择*平台*和*存储VM*。
-. 如果在高级选项下选择“自定义导出策略”，则在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
+.. 指定数据存储库的*连接数（nconnect）*。默认值为 4，可从 1 到 8 进行配置。如果您选择的值高于当前主机级别的 nconnect 设置，ONTAP tools 将更新主机级别的 nconnect 设置以匹配。
+
+
+. 在 *Storage* 窗格中，选择 *Platform* 和 *Storage VM*。
+. 如果您在*高级选项*下选择*自定义导出策略*，请先在 vCenter 中对所有对象运行发现，然后再继续。
 +
 
 NOTE: 您不能使用 SVM 的默认或根卷策略创建 NFS 数据存储库。
 
 +
-** 在高级选项中，只有在平台下拉列表中选择了性能或容量时，*非对称*切换按钮才可见。
-** 当您在平台下拉菜单中选择“*任何*”选项时，您可以看到 vCenter 中的所有 SVM。平台和不对称旗帜不影响可见性。
+** 在*高级选项*中，*非对称*切换按钮仅在平台下拉列表中选择性能或容量时才可见。但是，*非对称*选项不适用于 NFS 数据存储区创建。
+** 当您在平台下拉列表中选择*任何*选项时，vCenter 中的所有 SVM 都可见。平台和非对称设置不会影响可见性。
 
 
-. 在*存储属性*窗格中选择要创建卷的聚合。在高级选项中，根据需要选择*Space Reserve*和*Enable QoS*。
-. 查看*Summary (摘要)*窗格中的选择，然后选择*Finish (完成)*。
+. 在*存储属性*窗格中，选择用于创建卷的聚合。在*高级选项*中，根据需要选择*空间预留*和*启用 QoS*。
+. 在*摘要*窗格中，查看选择并选择*完成*。
 
 
 ONTAP工具创建 NFS 数据存储库并将其挂载到所有主机上。
@@ -94,17 +99,9 @@ ONTAP工具创建 NFS 数据存储库并将其挂载到所有主机上。
 --
 VMFS 是一个用于存储虚拟机文件的集群文件系统。多个 ESXi 主机可以同时访问相同的 VM 文件，以实现 vMotion 和高可用性功能。
 
-在受保护集群上：
-
-* 您只能创建 VMFS 数据存储区。将 VMFS 数据存储添加到受保护的集群会自动保护它。
-* 您不能在包含一个或多个受保护主机集群的数据中心上创建数据存储库。
-* 如果父主机群集受“自动故障转移双工策略”（统一或非统一配置）保护，则无法在 ESXi 主机上创建数据存储。
-* 您只能在受异步关系保护的ESXi主机上创建VMFS数据存储库。您不能在受"自动故障转移双工"策略保护的主机集群中的ESXi主机上创建和挂载数据存储库。
-
-
 .开始之前
 * 在ONTAP存储端为每个协议启用服务和LUN。
-* 为ASA R2存储系统中的SVM用户将SVM映射到聚合。
+* 对于 ASA r2 存储系统，不需要 SVM 到聚合的映射。
 * 如果您使用的是NVMe/TCP协议、请配置ESXi主机：
 +
 .. 查看 https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware 兼容性指南"]
@@ -112,16 +109,16 @@ VMFS 是一个用于存储虚拟机文件的集群文件系统。多个 ESXi 主
 
 NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议使用VMware vSphere 8.0及更高版本。
 
-.. 检查网络接口卡 (NIC) 供应商是否支持采用 NVMe/TCP 协议的 ESXi NIC。
+.. 检查网络接口卡 (NIC) 供应商是否支持使用 NVMe/TCP 协议的 ESXi NIC。
 .. 根据 NIC 供应商规范为 NVMe/TCP 设置 ESXi NIC。
 .. 使用VMware vSphere 7版本时、请按照VMware站点上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["为基于TCP适配器的NVMe配置VMkernel绑定"]配置NVMe/TCP端口绑定。使用VMware vSphere 8版本时，请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在ESXi上配置基于TCP的NVMe"]配置NVMe/TCP端口绑定。
 .. 对于VMware vSphere 7版本、请按照第页上的说明 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["启用基于RDMA的NVMe或基于TCP的NVMe软件适配器"]配置NVMe/TCP软件适配器。对于VMware vSphere 8版本、请按照 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["添加基于RDMA的软件NVMe或基于TCP适配器的NVMe"]配置NVMe/TCP软件适配器。
-.. link:../configure/discover-storage-systems-and-hosts.html["发现存储系统和主机"]在ESXi主机上运行操作。有关详细信息，请参阅 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP"]。
+.. 在 ESXi 主机上运行 link:../configure/discover-storage-systems-and-hosts.html["发现存储系统和主机"] 操作。有关详细信息，请参见 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用vSphere 8.0 Update 1和VMfs.13.1为ONTAP 9数据存储库配置NVMe/TCP"]。
 
 
-* 如果您使用 NVME/FC 协议，请执行以下步骤来配置 ESXi 主机：
+* 如果使用 NVMe/FC 协议，请执行以下步骤来配置 ESXi 主机：
 +
-.. 如果尚未启用、请在ESXi主机上启用基于网络结构的NVMe (NVMe-oF)。
+.. 如果尚未启用，请在 ESXi 主机上启用 NVMe over Fabrics (NVMe-oF)。
 .. 完成SCSI分区。
 .. 确保ESXi主机和ONTAP系统在物理层和逻辑层进行连接。
 
@@ -132,30 +129,30 @@ NOTE: VMware vSphere 7.0 U3及更高版本支持NVMe/TCP协议。但是、建议
 
 有关在VMware vSphere 8.0中使用NVMe/FC协议的详细信息，请参阅 https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["适用于采用ONTAP 的ESXi 8.x的NVMe-oF主机配置"]。
 
-有关在VMware vSphere 7.0中使用NVMe/FC的详细信息，请参阅 https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["《 ONTAP NVMe/FC 主机配置指南》"]和 http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"]。
+有关在 VMware vSphere 7.0 中使用 NVMe/FC 的更多信息，请参阅 https://docs.netapp.com/us-en/ontap-sanhost/nvme-esxi-7.html["《 ONTAP NVMe/FC 主机配置指南》"]。
 
 .步骤
-. 登录到vSphere Client。
+. 登录到 vSphere 客户端。
 . 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 创建数据存储*。
 . 选择 VMFS 数据存储类型。
-. 在“名称和协议”窗格中输入数据存储名称、大小和协议信息。要将新的数据存储区添加到现有的 VMFS 群集，请在高级选项中选择数据存储区群集。
-. 在 *Storage* 窗格中选择一个存储 VM。根据需要在 *Advanced options* 部分中提供 *Custom initiator group name*。您可以为数据存储选择现有的 igroup，也可以使用自定义名称创建新的 igroup。
+. 在*名称和协议*窗格中输入数据存储区名称、大小和协议信息。要将新数据存储添加到现有 VMFS 群集，请在*高级选项*中选择数据存储群集。
+. 在 *存储* 窗格中选择存储虚拟机。根据需要在 *高级选项* 部分中提供 *自定义启动器组名称*。您可以为数据存储区选择现有的 igroup，也可以使用自定义名称创建新的 igroup。
 +
-当选择NVMe/FC或NVMe/TCP协议时，会创建一个新的命名空间子系统，并用于命名空间映射。 ONTAP工具使用包含数据存储名称的自动生成名称创建命名空间子系统。您可以在“存储”窗格的高级选项中的“自定义命名空间子系统名称”字段中重命名命名空间子系统。
+选择 NVMe/FC 或 NVMe/TCP 协议时，将创建一个新的命名空间子系统并用于命名空间映射。ONTAP tools 使用包含数据存储区名称的自动生成名称创建命名空间子系统。您可以在*存储*窗格的*高级选项*中的*自定义命名空间子系统名称*字段中重命名命名空间子系统。
 
-. 从*storage attributes*窗格：
+. 在*存储属性*窗格中：
 +
 .. 从下拉选项中选择*聚合*。
 +
 
-NOTE: 对于ASA r2 存储系统，由于存储是分解的，因此不会显示 *Aggregate* 选项。当您选择ASA r2 存储系统类型的 SVM 时，存储属性页面会显示用于启用 QoS 的选项。
+NOTE: 对于 ASA r2 存储系统，不显示 *Aggregate* 选项，因为存储是分解的。当您选择 ASA r2 存储系统类型 SVM 时，*存储属性*页面将显示启用 QoS 的选项。
 
 .. ONTAP工具根据所选协议创建具有精简空间预留的存储单元（LUN/命名空间）。
 +
 
 NOTE: 从ONTAP 9.161开始、ASA R2存储系统支持每个集群最多12个节点。
 
-.. 为包含12个节点的异构集群SVM的ASA R2存储系统选择*性能服务级别*。如果选定SVM是同构集群或使用SVM用户、则此选项不可用。
+.. 为异构集群中具有 12 节点 SVM 的 ASA r2 存储系统选择*性能服务级别*。如果选定的 SVM 是同构集群或使用 SVM 用户，则此选项不可用。
 +
 "any"是默认性能服务级别(PSL)值。此设置使用ONTAP平衡放置算法创建存储单元。但是、您可以根据需要选择性能或极高选项。
 
@@ -170,11 +167,22 @@ NOTE: 您不能使用现有卷来创建具有 NVMe/FC 或 NVMe/TCP 协议的 VMF
 
 
 
+. 在*保护*窗口中，选择*使用 SnapMirror 复制保护此数据存储区*以启用保护。您可以将数据存储添加到现有保护组或创建新的保护组。要创建新的保护组：
++
+.. 输入*保护组名称*。
+.. 配置 SnapMirror 关系。如果选择自动故障转移双工策略 (AFD)，请在继续之前设置主机集群配置设置。有关详细信息，请参见 link:../protect/config-proximity.html["使用 ONTAP tools 配置用于数据存储保护的集群"]。
++
+
+NOTE: 如果所选卷已属于其他保护设置，则下一个保护页面将被禁用，并显示一条信息性消息。如果数据存储区不符合保护条件，则会禁用保护选项并显示不符合条件的原因。您仍然可以在没有保护的情况下创建数据存储。
+
+
+
 . 在*Summary (摘要)*窗格中查看数据存储库详细信息，然后选择*Finish (完成)*。
++
+
+NOTE: 如果数据存储区受到保护，ONTAP tools 会将其挂载到集群中的所有主机上。
 
 
-
-NOTE: 如果您在受保护集群上创建数据存储库、则会看到一条只读消息："正在将数据存储库挂载到受保护集群上。"
 
 .结果
 ONTAP工具创建 VMFS 数据存储库并将其安装在所有主机上。

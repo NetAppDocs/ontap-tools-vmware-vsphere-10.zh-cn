@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: 通过将数据存储区分组到保护组并应用 SnapMirror 策略，保护主机集群中的多个 VMFS 数据存储区。 
+---
+= 使用 ONTAP tools 保护集群中的数据存储
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当主机群集包括来自多个存储虚拟机 (SVM) 的数据存储，并且需要使用不同策略保护选定数据存储时，请使用粒度数据存储区保护。
+
+.开始之前
+在保护主机群集中的数据存储之前，请确保满足以下要求：
+
+* 数据存储是使用 iSCSI 或 FC 协议的 VMFS 数据存储。
+* 数据存储库已被发现，可在 ONTAP tools 中使用。
+* 源和目标存储虚拟机已针对 SnapMirror 关系进行配置。
+
+
+.步骤
+. 登录到 vSphere 客户端。
+. 右键单击主机或主机集群，然后选择*NetApp ONTAP tools* > *Protect datastores*。
+. 选择集群中的 *Storage VM*。
++
+将显示选定 SVM 中的数据存储区。
+
+. *数据存储区类型*字段已预先填充 VMFS 作为唯一受支持的保护数据存储区类型，并已禁用。
+. 从根据资格条件填充的列表中，选择要保护的数据存储，然后单击*下一步*。
+. 在 *Protection settings* 窗口中，选择是在现有保护组还是新保护组中保护选定的数据存储区。
+. 如果选择*新建*，请提供保护组的名称，然后选择*添加关系*。
+. 在*添加SnapMirror关系*窗口中、选择*目标Storage VM*和*策略*类型。
++
+策略类型可以是异步或 AutomatedFailOverDuplex。AutomatedFailOverDuplex 仅支持在使用 iSCSI 或 FC 协议的 ONTAP 9.15.1 上配置并挂载到主机集群的数据存储库。
+
++
+如果您将 SnapMirror 关系添加为 AutomatedFailOverDuplex，请将目标存储作为存储后端添加到部署了 ONTAP tools for VMware vSphere 的同一 vCenter Server 中。
+
++
+在 AutomatedFailOverDuplex 策略类型中，有统一和非统一的集群配置。对于统一集群配置，主机启动器组配置将复制到目标站点。有关详细信息，请参阅 link:../concepts/ontap-tools-concepts-terms.html["关键概念和术语"]。
+
+. 对于不统一的集群配置，请为集群中的每个主机选择主机访问权限（源或目标）。ONTAP tools 在目标存储上创建相应的主机启动器组配置，以提供对目标存储对象的主机访问权限。
+. 选择 * 保存 * 。
+. 在*摘要*窗口中查看配置并选择*保护*。
+. 要查看所有可用保护组的详细信息，请转到 *NetApp ONTAP tools* > *保护* > *保护组*。
+
+
+.结果
+系统将使用所选数据存储创建一个新的保护组，并将 SnapMirror 关系添加到该保护组。系统创建包含作业 ID 详细信息的 vCenter 任务，并在最近任务面板中显示其进度。这是一个异步任务；用户界面仅显示请求提交状态，不会等待任务完成。
+
+[NOTE]
+====
+对于 ONTAP 存储（ONTAP 9）集群，如果保护组具有异步关系，则不支持取消对非最后一个数据存储的保护。
+
+====
+.相关信息
+* link:../manage/protect-ds.html["保护 VMFS 数据存储库"]
+* link:../manage/unprotect-ds.html["取消对 VMFS 数据存储库的保护"]
+

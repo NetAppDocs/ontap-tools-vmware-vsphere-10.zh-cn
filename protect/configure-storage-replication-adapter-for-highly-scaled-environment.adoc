@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-highly-scaled-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: '您应按照建议的设置配置存储超时时间间隔、以使Storage Replication Adapter \(SRA\)在高度扩展的环境中以最佳性能运行。' 
+keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
+summary: 在高度扩展的环境中为 SRA 配置 VMware Live Site Recovery 存储提供程序超时设置。 
 ---
 = 在 ONTAP tools 中配置适用于高度扩展环境的 SRA
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: configure/add-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: 将vCenter Server实例添加到适用于VMware vSphere的ONTAP工具中、以配置、管理和保护vCenter Server环境中的虚拟数据存储库。 
+keywords: add vCenter Server, ONTAP tools vCenter registration, multiple vCenter support, vCenter CA certificate 
+summary: 将 vCenter Server 实例添加到 ONTAP tools，以配置、管理和保护数据存储。 
 ---
 = 将 vCenter Server 实例添加到ONTAP工具
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将vCenter Server实例添加到适用于VMware vSphere的ONTAP工具�
 
 
 [role="lead"]
-将vCenter Server实例添加到适用于VMware vSphere的ONTAP工具中、以配置、管理和保护vCenter Server环境中的虚拟数据存储库。添加多个 vCenter Server 实例时，需要自定义 CA 证书才能在 ONTAP 工具和每个 vCenter Server 之间进行安全通信。
+将 vCenter Server 实例添加到 ONTAP tools for VMware vSphere，以配置、管理和保护 vCenter Server 环境中的数据存储。添加多个 vCenter Server 实例时，需要自定义 CA 证书才能在 ONTAP tools 和每个 vCenter Server 之间进行安全通信。
 
 .关于此任务
 ONTAP工具与 vCenter Server 集成，可直接从 vSphere 客户端执行配置、快照和数据保护等存储任务。

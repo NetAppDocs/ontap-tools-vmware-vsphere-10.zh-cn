@@ -1,8 +1,8 @@
 ---
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
-keywords:  
-summary: 在扇出保护场景中，一致性组受到双重保护，在第一个目标ONTAP集群上具有同步关系，在第二个目标ONTAP集群上具有异步关系。 
+keywords: fan-out protection, SnapMirror active sync, asynchronous replication, VMware Live Site Recovery, placeholder datastore, host cluster protection 
+summary: 通过跨两个目标 ONTAP 集群使用同步和异步复制，利用扇出保护来保护一致性组。 
 ---
 = ONTAP tools 中的扇出保护
 :allow-uri-read: 
@@ -11,37 +11,35 @@ summary: 在扇出保护场景中，一致性组受到双重保护，在第一�
 
 
 [role="lead"]
-在扇出保护场景中，一致性组受到双重保护，在第一个目标ONTAP集群上具有同步关系，在第二个目标ONTAP集群上具有异步关系。创建、编辑和删除SnapMirror主动同步保护工作流维护同步保护。  VMware Live Site Recovery 设备故障转移和重新保护工作流维持异步保护。
+使用扇出保护来保护两个目标 ONTAP 集群上的一致性组。ONTAP tools 通过创建、编辑和删除 SnapMirror 活动同步保护工作流来维护同步关系，VMware Live Site Recovery 通过故障转移和重新保护工作流来维护异步关系。
 
 
 NOTE: SVM 用户不支持扇出。
 
 要设置扇出保护，请将三个站点集群和 SVM 对等连接。
 
+下图显示了扇出保护配置： image:../media/fan-out-protection.png["扇出保护配置"]
+
 示例
 
-|===
+如果：
 
-
-| 条件 | 然后 
-
-
- a| 
 * 源一致性组位于集群C1和SVM svm1上
 * 第一个目标一致性组位于集群C2和SVM svm2和上
 * 第二个目标一致性组位于集群C3和SVM svm3上
 
- a| 
+
+然后，
+
 * 源ONTAP集群上的集群对等将为(C1、C2)和(C1、C3)。
 * 第一个目标ONTAP集群上的集群对等将为(C2、C1)和(C2、C3)和
 * 第二个目标ONTAP集群上的集群对等将为(C3、C1)和(C3、C2)。
 * 源SVM上的SVM对等将为(svm1、svm2)和(svm1、svm3)。
 * 第一个目标SVM上的SVM对等关系将为(svm2、svm1)和(svm2、svm3)和
-* 第二个目标SVM上的SVM对等将为(svm3、svm1)和(svm3、svm2)。
+* 第二个目标 SVM 上的 SVM 对等将为 (svm3, svm1) 和 (svm3, svm2)。
 
 
-|===
-下图显示了扇出保护配置：image:../media/fan-out-protection.png["扇出保护配置"] image:../media/fan-out-protection-relationship.png["扇出保护关系"]
+image:../media/fan-out-protection-relationship.png["扇出保护关系"]
 
 .步骤
 . 选择一个新的占位符数据存储区。分阶段保护的占位符数据存储区选择标准是：
@@ -49,9 +47,9 @@ NOTE: SVM 用户不支持扇出。
 ** 请勿将占位数据存储放置在您正在保护的主机群集中。
 ** 如果需要在主机群集中包含占位符数据存储区，请在设置 SnapMirror 活动同步保护之前将其添加到 VMware Live Site Recovery 应用装置中。通过此设置，您可以将占位符数据存储区置于保护范围之外。
 +
-有关详细信息，请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["选择占位数据存储库"]
+有关详细信息，请参见  https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["选择占位符数据存储区"]
 
 
 
-. 通过以下步骤将数据存储区添加到主机群集保护 link:../manage/edit-hostcluster-protection.html["修改受保护的主机集群"]。同时添加异步和同步策略类型。
+. 通过以下步骤将数据存储区添加到主机群集保护 link:../protect/protect-multiple-ds.html["保护集群中的数据存储"]。同时添加异步和同步策略类型。
 

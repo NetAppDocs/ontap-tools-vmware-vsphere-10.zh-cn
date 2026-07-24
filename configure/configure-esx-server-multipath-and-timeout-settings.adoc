@@ -1,8 +1,8 @@
 ---
 permalink: configure/configure-esx-server-multipath-and-timeout-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: 适用于VMware vSphere的ONTAP工具可检查并设置最适合NetApp存储系统的ESXi主机多路径设置和HBA超时设置。 
+keywords: ESXi multipath settings, HBA timeout settings, ONTAP tools host settings, NetApp storage failover 
+summary: 配置 ESXi 主机多路径和 HBA 超时设置，以获得最佳 NetApp 存储性能。 
 ---
 = 在 ONTAP tools 中配置 ESXi 主机设置
 :allow-uri-read: 

@@ -1,55 +1,126 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
-summary: 了解适用于ONTAP tools for VMware vSphere中提供的新功能。 
+keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nconnect 
+summary: 了解 ONTAP tools for VMware vSphere 10.6 中的新功能和增强功能。 
 ---
-= 适用于ONTAP tools for VMware vSphere的新功能
+= ONTAP tools for VMware vSphere 10.6 中的新增功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-了解适用于ONTAP tools for VMware vSphere中提供的新功能。
-
-* *平台资质*
-
-
-ONTAP tools for VMware vSphere增加了对ASA r2 系统的支持，从而提供了与最新硬件和软件配置的兼容性。此版本还包括与ONTAP 9.16.1 和 9.17.1 的集成，扩展了支持的环境。
-
-* *VMware 资格和认证*
-
-
-ONTAP tools for VMware vSphere符合当前的 VMware 互操作性认证标准，支持 ESXi 主机和 vCenter Server。
-
-* * MetroCluster支持*
-
-
-此版本引入了对MetroCluster配置的支持，增强了高可用性和灾难恢复功能。
-
-* *安全和证书管理*
-
-
-此版本引入了自签名证书的简化管理，增强了用户体验并提高了对安全标准的遵守。它提供了改进的证书验证工作流程，以保护ONTAP tools for VMware vSphere通信的ONTAP和 ONTAP 工具。
-
-* *复制增强*
-
-
-此版本支持具有分层一致性组的 VMFS 复制，包括ASA r2 系统中的 SRA 和SnapMirror活动同步。它支持零 RPO 备份，以提高数据保护和恢复。
-
-* *升级和迁移*
-
-
-从以前版本的ONTAP tools for VMware vSphere到ONTAP tools for VMware vSphere的升级和迁移过程旨在无缝且高效，从而最大限度地减少停机时间并确保平稳过渡。
+了解 ONTAP tools for VMware vSphere 10.6 中的新功能和增强功能。
 
 
 
-[[supported-ontap-platforms-and-vcenter-server-versions]]
-== 支持的ONTAP平台和 vCenter Server 版本
+[[granular-datastore-protection]]
+== 粒度数据存储库保护
 
-ONTAP tools for VMware vSphere 10.5 P1 支持 SRA 和 SnapMirror active sync 组件的 vCenter 高可用性（HA）配置。此配置不支持 vVols。在 HA 故障转移期间，vCenter 可能会有几分钟不可用。在大型环境中或发生错误时，故障转移时间可能超过 15 分钟。
+ONTAP tools 10.6 引入了数据存储级保护，因此您可以将保护应用于选定的数据存储，而不是整个主机集群。
 
-有关详细信息，请参见 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-availability/vcenter-server-high-availability.html["vCenter 高可用性文档"^]。有关 vCenter HA 的问题，请联系 https://support.broadcom.com/["Broadcom 支持"^]。
+主要增强功能包括：
 
-有关版本兼容性的最新详细信息，请参阅 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["NetApp 互操作性表工具"^]。
+* 针对 ONTAP 系统和 ASA r2 系统的数据存储级保护
+* 自动故障转移双工(AFD)和异步保护策略
+* 支持 iSCSI 和 FC VMFS 数据存储
+* 分层一致性组和扇出配置
+* 通过选择要共同保护的数据存储来控制一致性组成员身份
+* 均匀和非均匀的 AFD 保护配置
+* 能够通过添加或删除数据存储区和主机来修改保护
+* vCenter 插件中的数据存储区保护工作流程
+* 从主机群集保护到数据存储级保护的升级路径
+
+
+
+
+[[audit-logging]]
+== 审核日志记录
+
+ONTAP tools 10.6 添加了审核日志记录，以提高安全性和操作可追溯性。
+
+审核日志记录包括：
+
+* 所有非 GET REST API 调用，包括请求和响应详细信息
+* 发现作业、AutoSupport 捆绑作业、清理作业和维护控制台操作
+* 审计日志存档的完整性保护，包括篡改和删除警报
+* 系统日志转发支持
+
+
+这些更新支持合规性和安全要求。
+
+
+
+[[nconnect-support-for-nfs-datastores]]
+== NFS 数据存储区的 nconnect 支持
+
+ONTAP tools 10.6 增加了对 VMware NFS 数据存储的 nconnect 支持，支持 ESXi 主机和 ONTAP NFS 数据存储之间的多个并行 TCP 连接。
+
+此版本支持：
+
+* 调配期间 NFSv3 数据存储的 nconnect
+* 在使用 vCenter 8.0U3 及更高版本进行配置期间，NFSv4.1 数据存储区的 nconnect
+* 修改 ESXi 主机上的最大 nconnect 值
+
+
+这有助于提高多虚拟机工作负载的吞吐量和 NFS 数据存储性能。
+
+
+
+[[smaller-default-deployment-with-xs-profile]]
+== 采用 XS 配置文件的较小默认部署
+
+ONTAP tools 10.6 引入了更小的默认超小型（XS）部署配置文件，以减少资源开销并简化初始部署。
+
+增强功能包括：
+
+* XS 作为初始部署的默认配置
+* 采用优化默认硬件设置的 OVA 部署
+* 使用 XS 支持数据存储库配置、保护、SRA 服务启用和 HA 模式
+* Manager UI 中有四个可用的部署配置文件：超小型 (XS)、小型 (S)、中型 (M) 和大型 (L)
+
+
+此型号具有较低的起始占用空间和清晰的纵向扩展路径。
+
+
+
+[[ease-of-deployment-improvement]]
+== 易于部署的改进
+
+ONTAP tools 10.6 默认为主 ONTAP tools VM 的全新部署启用 CPU 热添加和内存热插拔功能。
+
+这样就无需在部署之前或之后手动启用这些设置。
+
+
+
+[[protection-workflow-improvement]]
+== 保护工作流改进
+
+ONTAP tools 10.6 取消了在 ONTAP 集群不可用时手动触发存储发现的要求，从而简化了保护工作流。
+
+
+
+[[platform-and-interoperability-qualification]]
+== 平台和互操作性鉴定
+
+ONTAP tools 10.6 扩展了对关键 ONTAP 和 VMware 版本的平台和互操作性支持，实现了 VMware 环境中的无缝 NetApp 存储集成。
+
+此版本与当前的 ONTAP 平台配置和 VMware 版本保持一致，降低了平台升级和 VMware 堆栈刷新过程中的操作复杂性。
+
+
+
+[[supportability-enhancements]]
+== 可支持性增强功能
+
+ONTAP tools 10.6 改进了故障排除和生命周期管理。
+
+主要更新包括：
+
+* 强制删除无法访问或过时的 vCenter 条目
+* 从 `ntpd`迁移到 `chronyd`以实现时间同步，在升级期间自动迁移现有 NTP 服务器设置
+* 用于续订内部服务证书的维护控制台选项，即使在到期后也是如此
+* 通过标准 NTP 协议（UDP 端口 123）支持传统 NTP 服务器和基于 RHEL 的 chrony 服务器
+
+
+有关版本兼容性的最新详细信息，请参阅 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。

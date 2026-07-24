@@ -1,8 +1,8 @@
 ---
 permalink: manage/edit-esxi-host-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以使用适用于 VMware vSphere 的 ONTAP 工具信息板编辑 ESXi 主机设置。 
+keywords: modify ESXi host settings, ONTAP tools host configuration, VMware host tuning, ESXi settings dashboard 
+summary: 从 ONTAP tools 仪表板编辑 ESXi 主机设置。 
 ---
 = 使用 ONTAP 工具修改 ESXi 主机设置
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/reports.html 
 sidebar: sidebar 
-keywords:  
-summary: 适用于VMware vSphere插件的ONTAP工具可为虚拟机和数据存储库提供报告。 
+keywords: ONTAP tools reports, virtual machine reports, datastore reports, VMware storage reporting 
+summary: 在 ONTAP tools 插件中查看虚拟机和数据存储区报告。 
 ---
 = ONTAP工具报告
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-protection-groups.html 
 sidebar: sidebar 
-keywords:  
-summary: 您应创建保护组来保护受保护站点上的一组虚拟机。 
+keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
+summary: 为受保护站点虚拟机创建保护组，并在将数据存储添加到受保护卷后更新存储发现。 
 ---
 = 在 ONTAP tools 中配置受保护站点和恢复站点
 :allow-uri-read: 
@@ -23,10 +23,10 @@ summary: 您应创建保护组来保护受保护站点上的一组虚拟机。
 您应对使用vSphere Client创建的受保护站点和恢复站点进行配对、以使Storage Replication Adapter (SRA)能够发现存储系统。
 
 
-NOTE: 存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障转移双工类型的同步关系和一致性组上的异步 SnapMirror 关系。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出或卷上的扇出 SnapMirror 关系。保管库类型 SnapMirror 关系不在这些扇出限制范围内。SRA 中的一致性组支持仅限于 Unified 和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组。如果 NFS 数据存储卷置于一致性组下，则发现设备操作将失败。
+NOTE: 存储复制适配器 (SRA) 支持通过自动故障转移双工类型的一个同步关系以及一致性组上的异步 SnapMirror 关系进行扇出。但是，不支持在一致性组上具有两个异步 SnapMirror 关系的扇出，也不支持卷上的扇出 SnapMirror 关系。保管库类型的 SnapMirror 关系不在这些扇出限制的考虑范围之内。SRA 中的一致性组支持仅限于 ONTAP 存储和 ASA r2 存储系统上的 SAN 协议（iSCSI 和光纤通道）。NFS 不支持一致性组。如果 NFS 数据存储卷置于一致性组下，则发现设备操作将失败。
 
 .开始之前
-* 您应在受保护站点和恢复站点上安装VMware Live Site Recovery。
+* 应在受保护站点和恢复站点上安装 VMware Live Site Recovery (VLSR)。
 * 您应已在受保护站点和恢复站点上安装SRA。
 
 
@@ -54,7 +54,7 @@ NOTE: 存储复制适配器 (SRA) 支持扇出，其中包含一个自动故障�
 .开始之前
 您应确保已为以下项配置源站点和目标站点：
 
-* 已安装相同版本的VMware Live Site Recovery
+* 已安装相同版本的 VLSR
 * 虚拟机
 * 已配对的受保护站点和恢复站点
 * 源数据存储库和目标数据存储库应挂载到相应的站点上

@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: 在 ONTAP tools 中查看、编辑和删除保护组及其关系。 
+---
+= 在 ONTAP tools 中管理保护组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此任务可从 ONTAP tools 的"保护组"页面查看、编辑和删除保护组及其关系。
+
+.开始之前
+* 请确保您在 vSphere 中具有管理权限。
+* 确保您的 ONTAP tools 用户帐户具有管理保护组的权限。
+
+
+
+IMPORTANT: 在编辑或删除保护之前，请查看对话框中的警告消息。删除关系可能会影响备份和一致性行为。
+
+.关于此任务
+* ONTAP tools 更新选定 ONTAP tools 实例中的本地保护记录。
+* 如果选择*删除关联的存储元素*，ONTAP tools 将删除保护组中的存储元素。
+* 如果未选择*删除关联存储元素*，请在 ONTAP 中手动删除目标端关系和存储元素。
+
+
+
+
+[[view-protection-groups]]
+== 查看保护组
+
+.步骤
+. 在 ONTAP tools 插件中，导航到 *Protection* > *Protection groups*。
++
+保护组列表显示关联的关系，包括一致性组、SnapMirror 策略和受保护的数据存储。
+
+. 查看保护组详细信息，包括受保护数据存储区的数量。
+
+
+
+
+[[edit-protection-group-relationships]]
+== 编辑保护组关系
+
+.步骤
+. 在 ONTAP tools 插件中，导航到 *Protection* > *Protection groups*。
+. 选择要编辑的保护组旁边的垂直省略号（三个点）。
+. 选择*编辑保护组*。
+. 更新关系设置：
++
+.. 如果保护组具有自动故障转移双工(AFD)关系，则可以添加异步关系。
+.. 如果保护组具有异步关系，则可以添加自动故障转移双工 (AFD) 关系。
+.. 如果保护组同时具有自动故障转移双工(AFD)和异步关系，则可以从*编辑保护组*窗口中删除任一关系。
+.. 每个保护组只能有一个自动故障转移双工(AFD)关系和一个异步关系。
+.. 若要使用其他 AFD 关系，请删除现有 AFD 关系，然后添加新的 AFD 关系。
+.. 如果在*编辑保护组*窗口中删除现有关系，请查看删除关系可能会影响备份和一致性的警告。
+.. 如果在*编辑保护组*窗口中删除异步关系，则不会自动删除目标端存储资源。手动删除 ONTAP 中的目标端关系和存储元素。
+
+
+
+
+
+NOTE: 编辑操作仅限于支持的关系设置。请在保存更改前参阅您的保护策略和工作流程要求。
+
+
+
+[[remove-a-protection-group]]
+== 删除保护组
+
+.步骤
+. 在 ONTAP tools 插件中，导航到 *Protection* > *Protection groups*。
+. 选择要删除的保护组旁边的垂直省略号（三个点）。
+. 选择*Remove protection*。
+. 在*移除保护*对话框中，查看移除主机集群保护会导致数据存储区不受保护的消息。
+. 可选：选择 *Delete associated storage elements*（清理项目）以删除保护组中的存储元素。
++
+存储元素可以包括一致性组、卷、存储单元和快照。
+
+. 如果未选择*删除关联存储元素*，则 ONTAP tools 将仅删除本地保护记录。手动删除 ONTAP 中的目标端关系和存储元素。
+
+
+[cols="1,1,1,1"]
+|===
+| 关系类型 | 删除范围 | 自动清理 | 需要手动清理 
+
+
+| 自动故障转移双工(AFD) | 删除任一站点上的保护都会删除两个站点上的关系。 | 关系记录将作为工作流程的一部分被删除。 | 如果未选择*删除关联存储元素*，请根据需要手动删除其余存储元素。 
+
+
+| 异步 | 删除仅适用于本地 ONTAP tools 实例；跨站点删除不可用。 | 本地保护记录已删除。 | 在 ONTAP 中手动删除目标端关系和存储元素。 
+|===
+.结果
+* ONTAP tools 会删除选定保护组的本地保护记录。
+* 如果选择*删除关联的存储元素*，ONTAP tools 将删除保护组中选定的存储元素。
+* 如果目标端关系或存储元素仍然存在，请在 ONTAP 中手动将其删除。
+
+
+.相关主题
+* link:../manage/protect-ds.html["保护 VMFS 数据存储库"]
+* link:../protect/protect-multiple-ds.html["保护多个数据存储库"]
+* link:../protect/config-proximity.html["使用 ONTAP tools 配置用于数据存储保护的集群"]
+

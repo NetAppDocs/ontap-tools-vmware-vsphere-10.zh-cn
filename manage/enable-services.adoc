@@ -1,8 +1,8 @@
 ---
 permalink: manage/enable-services.html 
 sidebar: sidebar 
-keywords:  
-summary: '您可以使用 ONTAP tools Manager 启用可选服务，如 VASA Provider、vVols 配置导入和灾难恢复 (SRA)。' 
+keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration 
+summary: '启用可选的 ONTAP tools 服务，包括 VASA Provider、vVols 配置导入和灾难恢复 (SRA)。' 
 ---
 = 启用 ONTAP tools 服务
 :allow-uri-read: 
@@ -11,21 +11,25 @@ summary: '您可以使用 ONTAP tools Manager 启用可选服务，如 VASA Prov
 
 
 [role="lead"]
-您可以使用ONTAP工具管理器更改管理员密码、以便使用ONTAP工具管理器启用VASA Provider、导入vvol配置和灾难恢复(SRA)等服务。
+使用 ONTAP tools Manager 启用可选服务，如 VASA Provider、vVols 配置导入和灾难恢复 (SRA)。
 
 .步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
-. 在概述部分中选择*编辑设备设置*。
-. 在“服务”部分，您可以根据需要启用 VASA 提供程序、 vVols配置导入和灾难恢复 (SRA) 等可选服务。
+. 在*概述*部分，选择*编辑设备设置*。
+. 在 *Services* 部分，启用所需的可选服务，例如 VASA Provider、vVols 配置导入和灾难恢复 (SRA)。
 +
-首次启用服务时、您必须创建VASA Provider和SRA凭据。这些命令用于在vCenter Server上注册或启用VASA Provider和SRA服务。用户名只能包含字母、数字和下划线。密码长度应介于8到256个字符之间。
-
-+
-
-NOTE: 在禁用任何可选服务之前，请确保ONTAP工具管理的 vCenter Server 不使用它们。
+首次启用这些服务时，请创建 VASA Provider 和 SRA 凭据。
 
 +
-仅当启用 VASA 提供程序服务时才会显示 *允许导入vVols配置* 选项。此选项支持将vVols数据从ONTAP工具 9.xx 迁移到ONTAP工具 10.5。
+** 使用这些凭据在 vCenter Server 上注册和启用 VASA Provider 和 SRA 服务。
+** 此用户名只能包含字母、数字和下划线。
+** 密码长度必须介于 8 到 256 个字符之间。
 
 
+
+
+
+NOTE: 在禁用任何可选服务之前，请确保由 ONTAP tools 管理的 vCenter Server 实例不使用该服务。
+
++ *允许导入 vVols 配置*选项仅在启用 VASA Provider 服务时显示。此选项支持将 vVols 数据从 ONTAP tools 9.x 迁移到 ONTAP tools 10.6。

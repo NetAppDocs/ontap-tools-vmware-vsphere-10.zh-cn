@@ -1,8 +1,8 @@
 ---
 permalink: deploy/quick-start.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: 使用此快速入门部分ONTAP tools for VMware vSphere。 
+keywords: quick start deployment, vCenter onboarding, storage backend, post-deployment setup 
+summary: 部署 ONTAP tools for VMware vSphere，并完成核心部署后设置工作流。 
 ---
 = 适用于VMware vSphere的ONTAP工具快速入门
 :allow-uri-read: 
@@ -11,18 +11,18 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 
 
 [role="lead"]
-使用此快速入门部分ONTAP tools for VMware vSphere。
+使用此快速入门设置 ONTAP tools for VMware vSphere。
 
-首先完成这些核心任务，使 ONTAP tools 可以用于第 0 天的管理和配置。然后根据您的环境和保护要求完成可选任务。
+首先完成这些核心任务，以使 ONTAP tools 可用于初始设置和配置。然后根据您的环境和保护要求完成可选任务。
 
-最初，您将部署ONTAP tools for VMware vSphere作为小型单节点配置，该配置提供核心服务来支持 NFS 和 VMFS 数据存储区。要扩展配置以为每个服务添加更多容器、增强弹性或使用vVols数据存储和高可用性 (HA)，请先完成此工作流程，然后继续执行扩展步骤。欲了解更多信息，请参阅link:../deploy/ha-workflow.html["HA部署工作流"] 。
+最初，将 ONTAP tools for VMware vSphere 部署为超小型 (XS) 单节点配置，为 NFS 和 VMFS 数据存储区提供核心服务。如果您需要每个服务的额外容器、更高的弹性或 vVols 数据存储和高可用性 (HA)，请先完成此工作流程，然后继续扩展。有关详细信息，请参见 link:../deploy/ha-workflow.html["HA部署工作流"]。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]规划部署
 [role="quick-margin-para"]
-确认您的环境已准备好进行受支持的部署。验证您的 vSphere、ONTAP 和 ESXi 主机版本是否与 ONTAP tools 版本兼容。分配足够的 CPU、内存和磁盘空间。根据您的安全规则，您可能需要设置防火墙或其他安全工具来允许网络流量。
+确认您的环境已准备好进行受支持的部署。验证您的 vSphere、ONTAP 和 ESXi 主机版本是否与 ONTAP tools 版本兼容。分配足够的 CPU、内存和磁盘空间。根据您的安全规则，您可能需要配置防火墙或其他安全控制以允许网络流量。
 
 [role="quick-margin-para"]
-确保vCenter Server已安装且可访问。
+确保已安装并可访问 vCenter Server。
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome["互操作性表工具"]
@@ -35,7 +35,7 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 部署 ONTAP tools 设备，为 NFS 和 VMFS 数据存储区建立基本服务。
 
 [role="quick-margin-para"]
-最初，您将以小型单节点配置部署 ONTAP tools for VMware vSphere。如果您计划将配置扩展为使用 vVols 数据存储和高可用性 (HA)，请在完成此工作流程后执行此操作。要扩展到 HA 设置，请确保已启用 CPU 热添加和内存热插拔。
+如果您计划扩展 vVols 数据存储区和 HA 的部署，请先完成此工作流程。在 ONTAP tools for VMware vSphere 10.6 中，默认情况下已启用 CPU 热添加和内存热插拔。
 
 [role="quick-margin-para"]
 在部署期间，请仔细查看*自定义模板*字段，特别是主机名、ONTAP tools IP 地址使用情况和 DNS 要求。
@@ -54,10 +54,10 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] 配置存储后端
 [role="quick-margin-para"]
-连接 ONTAP 存储资源，允许 ONTAP tools 配置和管理数据存储。将存储后端添加到 ONTAP 集群。在 vCenter 服务器与租户 SVM 关联的多租户环境中，请使用 ONTAP tools Manager 添加集群。然后将存储后端与 vCenter 服务器关联，为该 vCenter 实例创建全局映射。
+连接 ONTAP 存储资源，以便 ONTAP 工具可以配置和管理数据存储。将存储后端添加到 ONTAP 集群。在 vCenter 服务器与租户 SVM 关联的多租户环境中，请使用 ONTAP tools Manager 添加集群。然后将存储后端与 vCenter 服务器关联，为该 vCenter 实例创建全局映射。
 
 [role="quick-margin-para"]
-使用ONTAP工具用户界面使用集群或SVM凭据添加本地存储后端。这些存储后端仅限于一个vCenter。在本地使用集群凭据时、关联的SVM会自动映射到vCenter以管理Vvol或VMFS。对于VMFS管理(包括SRA)、ONTAP工具支持SVM凭据、而不需要全局集群。
+使用 ONTAP tools 界面，通过集群或 SVM 凭据添加本地存储后端。这些存储后端仅限于单个 vCenter。在本地使用集群凭据时，关联的 SVM 会自动映射到 vCenter，以进行 vVol 或 VMFS 管理。对于 VMFS 管理（包括 SRA），ONTAP tools 支持 SVM 凭据，而无需全局集群。
 
 [role="quick-margin-list"]
 * link:../configure/add-storage-backend.html["添加存储后端"]
@@ -67,9 +67,14 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 [discrete]
 == 可选的后续任务
 
+
+
+[[optional-next-tasks]]
+== 可选的后续任务
+
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 配置 ONTAP 用户角色和权限
 [role="quick-margin-para"]
-为最低权限访问配置自定义 ONTAP 角色，而不是使用默认管理员帐户。
+配置自定义 ONTAP 角色以实现最低权限访问，而不是使用默认管理员帐户。
 
 [role="quick-margin-list"]
 * link:../configure/configure-user-role-and-privileges.html["配置ONTAP用户角色和权限"]
@@ -77,7 +82,7 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 为多个 vCenter Server 实例升级证书
 [role="quick-margin-para"]
-升级证书，以便跨多个 vCenter Server 实例使用可信、基于证书的通信。
+升级证书以在多个 vCenter Server 实例之间使用基于可信证书的通信。
 
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html["管理证书"]
@@ -85,7 +90,7 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 配置 SRA 保护
 [role="quick-margin-para"]
-启用 SRA 功能以设置 NFS 和 VMFS 数据存储的灾难恢复保护。
+启用 SRA 功能，为 NFS 和 VMFS 数据存储区配置灾难恢复保护。
 
 [role="quick-margin-list"]
 * link:../manage/enable-services.html["为VMware vSphere服务启用ONTAP工具"]
@@ -94,10 +99,11 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"] 启用 SnapMirror 活动同步保护
 [role="quick-margin-para"]
-使用 SnapMirror 活动同步设置主机集群保护，以保护 VMFS 数据存储区。在 ONTAP 系统中，对等所需的集群和 SVM，然后在 ONTAP tools for VMware vSphere 中配置主机集群保护。此选项仅适用于 VMFS 数据存储区。
+使用 SnapMirror 活动同步设置主机集群保护，以保护 VMFS 数据存储区。在 ONTAP 系统中，对等所需的集群和 SVM，然后在 ONTAP tools 中配置保护。此选项仅适用于 VMFS 数据存储区。
 
 [role="quick-margin-list"]
-* link:../configure/protect-cluster.html["使用主机集群保护进行保护"]
+* link:../protect/config-proximity.html["使用 ONTAP tools 配置用于数据存储保护的集群"]
+* link:../protect/protect-multiple-ds.html["保护集群中的数据存储"]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"] 为您的 ONTAP tools 部署设置备份和恢复
@@ -105,7 +111,7 @@ summary: 使用此快速入门部分ONTAP tools for VMware vSphere。
 设置备份和恢复以保护 ONTAP tools 配置，并从故障中快速恢复。
 
 [role="quick-margin-para"]
-默认情况下， ONTAP tools for VMware vSphere会启用备份，每 10 分钟进行一次。安排ONTAP tools for VMware vSphere进行备份，以便在发生故障时恢复设置。
+默认情况下，备份在 ONTAP tools for VMware vSphere 10.6 中处于启用状态，每 10 分钟运行一次。
 
 [role="quick-margin-list"]
 * link:../manage/backup-settings.html["编辑备份设置"]

@@ -1,8 +1,8 @@
 ---
 permalink: configure/discover-storage-systems-and-hosts.html 
 sidebar: sidebar 
-keywords:  
-summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具时、适用于VMware vSphere的ONTAP工具会发现ESXi主机、其LUN和NFS导出以及这些LUN和导出所属的NetApp存储系统。 
+keywords: discover storage systems and hosts, ONTAP tools first discovery, ESXi host and LUN discovery, NFS export discovery 
+summary: 首次启动时，在 ONTAP tools 中发现 ESXi 主机、LUN、NFS 导出和 NetApp 存储系统。 
 ---
 = 在 ONTAP tools 中发现存储系统和主机
 :allow-uri-read: 
@@ -24,8 +24,8 @@ summary: 首次在vSphere Client中运行适用于VMware vSphere的ONTAP工具�
 发现存储系统时、适用于VMware vSphere的ONTAP工具会从vCenter Server实例管理的ESXi主机收集信息。
 
 .步骤
-. 在vSphere Client主页中、选择*主机和集群*。
-. 右键单击所需的数据中心，然后选择 *NetApp ONTAP tools* > *Update Host Data*。
+. 在 vSphere 客户端主页中，选择*主机和群集*。
+. 右键单击所需的数据中心，然后选择*NetApp ONTAP tools* > *更新主机和存储数据*。
 +
 在*Confirm *(确认*)对话框中，确认您的选择。
 

@@ -1,8 +1,8 @@
 ---
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAP tools for VMware vSphere部署为小型单节点，具有核心服务以支持 NFS 和 VMFS 数据存储库。 
+keywords: deploy ONTAP tools, OVA, content library, single-node configuration 
+summary: 将 ONTAP tools for VMware vSphere 部署为超小型单节点设备。 
 ---
 = 部署 ONTAP tools
 :allow-uri-read: 
@@ -11,53 +11,51 @@ summary: ONTAP tools for VMware vSphere部署为小型单节点，具有核心�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere部署为小型单节点，具有核心服务以支持 NFS 和 VMFS 数据存储库。ONTAP部署过程最多可能需要 45 分钟。
+将 ONTAP tools for VMware vSphere 部署为支持 NFS 和 VMFS 数据存储的超小型单节点设备。部署过程最多需要 45 分钟。
 
 .开始之前
-如果您正在部署小型单节点，则内容库是可选的。对于多节点或 HA 部署，需要内容库。在 VMware 中，内容库存储 VM 模板、vApp 模板和其他文件。使用内容库进行部署可提供无缝体验，因为它不依赖于网络连接。
+如果部署超小型单节点配置，则内容库是可选的。对于多节点或 HA 部署，需要内容库。
 
-创建内容库之前请考虑以下事项：
+在 VMware 中，内容库存储 VM 模板、vApp 模板和其他文件。使用内容库可简化部署，因为它在模板操作期间不依赖于直接网络访问。
+
+在创建内容库之前：
 
 * 在共享数据存储上创建内容库，以便集群中的所有主机都可以访问它。
-* 在部署适用ONTAP tools for VMware vSphere之前设置内容库。
-* 确保在为 HA 配置设备之前创建内容库。
-+
-
-NOTE: 部署后不要删除内容库中的 OVA 模板。
+* 在部署 ONTAP tools for VMware vSphere OVA 之前，请先创建内容库。
+* 部署后，将 OVA 模板保留在内容库中。
 
 
 
+NOTE: 如果您计划稍后启用 HA，请将 ONTAP tools 虚拟机部署在 ESXi 集群或资源池中，而不是直接部署在 ESXi 主机上。
 
-NOTE: 为了在未来启用 HA 部署，请避免在 ESXi 主机上直接部署 ONTAP tools 虚拟机。而是将其部署在 ESXi 主机群集或资源池中。
+要创建内容库，请执行以下操作：
 
-请按照以下步骤创建内容库：
-
-. 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。
-. 登录到vSphere Client
-. 选择vSphere客户端菜单并选择*内容库*。
-. 选择页面右侧的*创建*。
-. 提供库的名称并创建内容库。
-. 转到您创建的内容库。
-. 选择页面右侧的 *Actions*，选择 *Import item*，然后导入 OVA 文件。
-
+. 从 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]下载 ONTAP tools for VMware vSphere 二进制文件（_.ova_）和签名证书。
+. 登录到 vSphere 客户端。
+. 在 vSphere Client 菜单中，选择*内容库*。
+. 选择 *Create*。
+. 输入名称，然后创建内容库。
+. 打开您创建的内容库。
+. 选择*操作* > *导入项目*，然后导入 OVA 文件。
 
 
-NOTE: 有关详细信息、请参见 https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["创建和使用内容库"]博客。
+
+NOTE: 有关详细信息，请参见 https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["创建和使用内容库"]。
 
 
-NOTE: 在继续部署之前，请将群集的分布式资源调度程序 (DRS) 设置为"保守"。这可确保在安装过程中不会迁移 VM。
+NOTE: 在部署之前，请将集群分布式资源调度程序 (DRS) 设置为"保守"，以防止在安装期间进行虚拟机迁移。
 
-ONTAP tools for VMware vSphere 最初部署为非 HA 设置。要扩展到 HA 部署，您需要启用 CPU 热添加和内存热插拔。您可以在部署过程中执行此步骤，也可以在部署后编辑 VM 设置。
+ONTAP tools for VMware vSphere 最初部署为非 HA 配置。从 ONTAP tools 10.6 开始，默认情况下启用 CPU 热添加和内存热插拔。要稍后扩展到 HA，必须启用这些功能。
 
 .步骤
-. 从下载包含ONTAP tools for VMware vSphere的二进制文件 (_.ova_) 和签名证书的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^] 。如果您已经将OVA导入内容库，则可以跳过此步骤，继续下一步。
+. 从 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支持站点"^]下载 ONTAP tools OVA 文件和签名证书。如果您已将 OVA 导入内容库，请跳过此步骤。
 . 登录到vSphere服务器。
-. 转到您打算部署 OVA 的资源池、集群或主机。
+. 转到要部署 OVA 的资源池、群集或主机。
 +
 
-NOTE: 切勿将 ONTAP tools for VMware vSphere 虚拟机存储在其管理的 vVols 数据存储上。
+IMPORTANT: 请勿将 ONTAP tools 虚拟机存储在其管理的 vVols 数据存储上。
 
-. 您可以从内容库或本地系统部署OVA。
+. 从内容库或本地系统部署 OVA。
 +
 |===
 
@@ -67,18 +65,13 @@ NOTE: 切勿将 ONTAP tools for VMware vSphere 虚拟机存储在其管理的 vV
 
 | a.右键单击并选择*部署OVF模板...*。b.从URL中选择OVA文件或浏览到其位置，然后选择*下一步*。 | a.转到您的内容库并选择要部署的库项目。b.选择*操作*>*从此模板中新建虚拟机* 
 |===
-. 在*选择名称和文件夹*字段中，输入虚拟机名称并选择其位置。
-+
-** 如果您使用的是 vCenter Server 8.0.3 版本，请选择 *Customize this virtual machine's hardware* 选项，这将在进入 *Ready to complete* 窗口之前激活一个名为 *Customize hardware* 的额外步骤。
-** 如果您使用的是 vCenter Server 7.0.3 版本，请按照部署结束时的 *下一步是什么？* 部分中的步骤进行操作。image:../media/select-name.png["选择名称和文件夹"]
-
-
+. 在*选择名称和文件夹*中，输入虚拟机名称和位置。
 . 选择计算机资源，然后选择*Next*。(可选)选中*自动启动已部署的VM*复选框。
 . 查看模板的详细信息，然后选择*Next*。
 . 阅读并接受许可协议，然后选择*Next*。
 . 为配置和磁盘格式选择存储，然后选择*Next*。
 . 为每个源网络选择目标网络，然后选择*Next*。
-. 在 *自定义模板* 窗口中，填写必填字段。image:../media/custom-temp-p2.png["自定义模板"]
+. 在*自定义模板*窗口中，输入所需的值。 image:../media/custom-temp-p2.png["自定义模板"]
 +
 [IMPORTANT]
 ====
@@ -99,39 +92,29 @@ NOTE: 切勿将 ONTAP tools for VMware vSphere 虚拟机存储在其管理的 vV
 NOTE: vCenter 主机名是部署ONTAP工具设备的 vCenter Server 实例的名称。
 
 +
-如果要在双 vCenter 服务器拓扑中部署 ONTAP 工具（设备托管在一个 vCenter 实例中并管理另一个实例），则可以为托管 ONTAP 工具的 vCenter 实例分配受限角色。您可以仅使用 OVF 模板部署所需的权限创建专用 vCenter 用户和角色。有关详细信息，请参见 link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"] 中列出的角色。
+如果您在双 vCenter 服务器拓扑中部署 ONTAP tools，其中设备托管在一个 vCenter 实例中并管理另一个实例，请为托管 ONTAP tools 的 vCenter 实例分配受限角色。创建专用 vCenter 用户和角色，仅具有 OVF 模板部署所需的权限。有关详细信息，请参见 link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["适用于VMware vSphere 10的ONTAP工具附带的角色"]。
 
 +
-对于将由ONTAP工具管理的 vCenter 实例，请确保 vCenter 用户帐户具有管理员权限。
+对于由 ONTAP tools 管理的 vCenter 实例，请确保 vCenter 用户帐户具有管理员权限。
 
 +
-** 主机名必须包含字母(A-Z、a-z)、数字(0-9)和连字符(-)。要配置双堆栈、请指定映射到IPv6地址的主机名。
+** 主机名必须包含字母（A-Z、a-z）、数字（0-9）和连字符（-）。对于双栈，请指定映射到 IPv6 地址的主机名。
 +
 
-NOTE: 不支持纯IPv6。包含IPv6和IPv4地址的VLAN支持混合模式。
+NOTE: 不支持纯 IPv6。混合模式支持包含 IPv6 和 IPv4 地址的 VLAN。
 
-** ONTAP工具IP地址是与ONTAP工具通信的主要接口。
-** IPv4是节点配置的IP地址组件、可用于在节点上启用诊断Shell和SSH访问、以便进行调试和维护。
+** ONTAP tools IP 地址（以前称为负载均衡器）是 ONTAP tools Manager 的外部端点(`\https://<ip>:8443/virtualization/ui/`）、API 调用以及从 vCenter UI 访问插件。
+** ONTAP tools 虚拟 IP 地址（以前称为节点互连）分配给 Kubernetes API（kube-api）服务器，并充当 Kubernetes 控制平面的虚拟 IP。
+** IPv4 地址是映射到指定主机名的节点管理地址，用于诊断 shell 和 SSH 访问。
 
 
-. 使用 vCenter Server 8.0.3 版本时，在 *自定义硬件* 窗口中，启用 *CPU 热添加* 和 *内存热插拔* 选项以允许 HA 功能。image:../media/customize-hw105-p2-1.png["CPU 热添加"] image:../media/customize-hw105-p2.png["内存热插拔"]
 . 查看*Ready to Complete*(准备完成*)窗口中的详细信息，选择*Complete*(完成*)。
 +
-创建部署任务后、vSphere任务栏中将显示进度。
+部署任务启动时，进度会显示在 vSphere 任务栏中。
 
-. 如果未选择自动启动虚拟机的选项、请在完成任务后启动虚拟机。
+. 如果未选择自动开机，请在任务完成后启动 VM。
 
 
-您可以在VM的Web控制台中跟踪安装进度。
+从虚拟机 Web 控制台跟踪安装进度。
 
-如果 OVF 表格存在差异，则会出现一个对话框提示采取纠正措施。使用标签按钮进行导航，进行必要的更改，然后选择*确定*。您有三次机会来解决任何问题。如果三次尝试后问题仍然存在，安装过程将停止，建议在新的虚拟机上重新尝试安装。
-
-.下一步是什么？
-如果您已使用 vCenter Server 7.0.3 部署了 ONTAP tools for VMware vSphere，请在部署后按照以下步骤操作。
-
-. 登录到vCenter Client
-. 关闭ONTAP工具节点。
-. 转到*库存*下的ONTAP tools for VMware vSphere并选择*编辑设置*选项。
-. 在*CPU*选项下，选中*Enable CPU Hot add*复选框
-. 在*内存*选项下，选中*内存热插拔*旁边的*启用*复选框。
-
+如果 OVF 表单中存在差异，对话框会提示纠正措施。使用 Tab 键导航，进行所需的更改，然后选择 *OK*。您有三次机会来解决问题。如果三次尝试后问题仍然存在，安装将停止，您应在新虚拟机上重试安装。

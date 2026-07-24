@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-network.html 
 sidebar: sidebar 
-keywords:  
-summary: 您应映射受保护站点和恢复站点上的网络、以便它们之间能够进行通信。 
+keywords: network mappings, protected and recovery sites, VMware Live Site Recovery, resource mappings, ONTAP tools 
+summary: 映射受保护站点和恢复站点之间的网络，以便在 VMware Live Site Recovery 故障转移期间对齐虚拟机连接。 
 ---
 = 在 ONTAP tools 中配置网络映射
 :allow-uri-read: 

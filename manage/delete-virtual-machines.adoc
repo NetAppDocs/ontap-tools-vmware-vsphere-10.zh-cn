@@ -1,8 +1,8 @@
 ---
 permalink: manage/delete-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: 按照本节中的步骤执行ASA清理。 
+keywords: VASA cleanup, clean up VASA configurations, ONTAP tools VM removal cleanup, vVol metadata cleanup 
+summary: 删除虚拟机后运行 VASA 清理。 
 ---
 = 在 ONTAP tools 中清理 VASA 配置
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-vcenter-environment.html 
 sidebar: sidebar 
-keywords: vcenter, vcenter server, vcenter server rbac, rbac environment 
-summary: VMware vCenter Server提供了RBAC功能、可用于控制对vSphere对象的访问。它是vCenter集中式身份验证和授权安全服务的重要组成部分。 
+keywords: vCenter Server RBAC, vSphere object access, permissions, authorization 
+summary: 查看 vCenter Server RBAC 如何在集中式身份验证过程中控制 vSphere 对象访问权限。 
 ---
 = vCenter 服务器 RBAC 如何与 ONTAP tools 配合使用
 :hardbreaks:

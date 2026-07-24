@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: 在保护主机集群中的数据存储之前，了解粒度数据存储保护和数据存储资格标准。 
+---
+= 粒度数据存储保护资格标准
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用粒度数据存储保护来保护主机集群中的选定 VMFS 数据存储，而不是保护整个集群。
+
+ONTAP tools for VMware vSphere 10.6 及更高版本提供精细的数据存储保护。此功能提供数据存储级别的保护规划，而不是集群范围的选择。
+
+此功能用于：
+
+* 仅保护主机集群中的选定数据存储区。
+* 将所选数据存储区分组到保护组。
+* 在保护组级别应用 SnapMirror 关系和策略。
+* 对同一集群中的不同数据存储组使用不同的保护方法。
+
+
+此功能仅支持使用 iSCSI 或 FC 协议的 VMFS 数据存储区。
+
+可以对符合条件的数据存储区使用以下策略类型：
+
+* *AutomatedFailOverDuplex (AFD)*
++
+** *统一主机配置*：两个站点的主机都可以访问受保护的数据存储。
+** *非统一主机配置*：主机访问权限仅限于特定站点的主机。
+
+
+* *异步*：目标站点维护用于恢复的异步副本。
+
+
+扇出保护可以将主站点之间的 AFD 与到第三个站点的异步复制相结合。
+
+
+
+[[eligibility-evaluation]]
+== 资格评估
+
+资格评估分为两个阶段：列出和选择。
+
+仅当数据存储区满足以下所有条件时，才会列出数据存储区以进行精细数据存储区保护：
+
+* 数据存储类型为 VMFS。
+* 协议为iSCSI或FC。
+* 仅在选定主机群集中的主机上装载此数据存储库。
+* 当数据存储区位于 vCenter Server 中的选定主机集群中时，ONTAP tools 可以评估数据存储区以进行保护。
+
+
+列出数据存储库后，仅当满足以下所有要求时，才可选择对其进行保护：
+
+* 此数据存储库尚未受到保护。
+* 此数据存储库仅保留在选定主机集群内装载。
+* 源 SVM 和目标 SVM 已建立对等关系并载入 ONTAP tools。
+* ONTAP 版本为 9.15.1 或更高版本。
+* 仅支持 2x2 和 4x4 源和目标集群节点组合。
+* MetroCluster 配置不符合条件。
+* 支持数据存储区的 FlexVol volume 或 LUN 不属于现有一致性组。
+* 支持数据存储区的 FlexVol volume 或 LUN 不属于现有 SnapMirror 关系。
+
+
+请考虑以下操作限制和行为：
+
+* 在配置数据存储区保护之前配置集群邻近度。
+* 单个主机群集可以使用统一或非统一 AFD 配置，不能同时使用两者。
+* 不支持在保护组之间移动数据存储区。请在目标组中取消保护，然后再次保护。
+* 不支持在同一主机集群中使用一个源和多个不同目标的跨 SVM 保护。
+* 自定义异步策略不受支持。使用默认的 ONTAP 异步策略。
+* 在三级或仅异步配置中，异步关系清理需手动执行。
+* 从 ONTAP System Manager 触发故障转移。在 ONTAP tools 之外配置 ONTAP Mediator。
+
+
+从 ONTAP tools 10.5 升级时，现有主机集群保护配置将迁移至精细数据存储保护格式。升级后，验证保护组和数据存储区成员身份。
+
+.相关信息
+* link:../protect/protect-multiple-ds.html["使用 ONTAP tools 保护集群中的数据存储"]
+

@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: 迁移数据中心中的现有虚拟机时，您应注意一些注意事项。 
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
+summary: 在迁移数据中心中的现有虚拟机之前，请查看主要注意事项。 
 ---
 = ONTAP 工具的虚拟机迁移和克隆注意事项
 :allow-uri-read: 
@@ -27,7 +27,7 @@ ONTAP tools for VMware vSphere 支持所有主要类型的虚拟机迁移，包�
 
 如果将虚拟机迁移到其他 FlexVol 卷，系统将使用虚拟机信息更新该卷的元数据文件。如果虚拟机迁移到不同的 ESXi 主机但相同的存储，则不会修改底层 FlexVol 卷元数据文件。
 
-有关迁移虚拟机的信息，请参见 Broadcom 文档： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere 虚拟机迁移"]
+有关迁移虚拟机的信息，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]
 
 
 
@@ -63,11 +63,11 @@ VMware 目前不支持克隆到 VM 模板的虚拟机。
 
 ONTAP tools 通过标准 VMware 工作流程支持虚拟机快照。快照是用于测试和修补程序准备等用例的短期回滚点。它们不能替代基于备份或复制的数据保护。在快照上长时间运行虚拟机会导致不稳定和数据丢失。
 
-您可以在所有支持的数据存储类型上获取故障一致性快照（没有内存状态的快照，可用于将虚拟机重新启动到一致状态）。静止快照，即在捕获之前使用 VMware Tools 将内存中的数据刷新到磁盘，也受支持。有关快照类型和行为的概述，请参阅 https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["vSphere 中的虚拟机快照概述"]。
+您可以在所有支持的数据存储类型上获取故障一致性快照（没有内存状态的快照，可用于将虚拟机重新启动到一致状态）。静止快照，即在捕获之前使用 VMware Tools 将内存中的数据刷新到磁盘，也受支持。有关快照类型和行为的概述，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]。
 
 
 NOTE: 内存快照捕获正在运行的内存状态并暂时停止虚拟机。ONTAP tools 工作流程不支持它们。如果虚拟机具有内存快照，则必须先将其删除，然后才能将虚拟机包含在由 ONTAP tools 管理的一致性组或主机群集关系中。
 
 在 ASA r2 存储系统上，虚拟机快照行为不同于其他存储类型。快照是只读的。启动虚拟机时，VASA Provider 从只读快照创建 LUN 并启用 IOPS。关闭虚拟机时，VASA Provider 删除 LUN 并禁用 IOPS。
 
-有关管理虚拟机快照的信息，请参见 Broadcom 文档 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["使用快照管理虚拟机"]。
+要了解有关管理虚拟机快照的信息，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]。

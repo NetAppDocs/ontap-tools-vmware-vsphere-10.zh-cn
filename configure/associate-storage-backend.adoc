@@ -1,8 +1,8 @@
 ---
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: 将存储后端与vCenter Server相关联、以便在存储后端与全局已登录的vCenter Server实例之间创建映射。 
+keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
+summary: 将全局存储后端与 ONTAP tools 中的 vCenter Server 实例关联。 
 ---
 = 在 ONTAP tools 中将存储后端与 vCenter Server 实例关联
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将存储后端与vCenter Server相关联、以便在存储后端与全
 
 
 [role="lead"]
-将存储后端与 vCenter Server 实例关联，以启用所有 vCenter Server 实例的访问。对于MetroCluster配置，当关联存储后端集群时，请确保还将其对等集群与 vCenter Server 关联。
+使用此任务可将全局存储后端与 vCenter Server 实例关联。全局存储后端是在 ONTAP tools Manager 中添加的后端，尚未与特定 vCenter Server 实例关联。对于 NetApp MetroCluster 配置，当您关联存储后端集群时，还需将其对等集群与 vCenter Server 关联。
 
 .步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

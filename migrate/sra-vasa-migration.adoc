@@ -1,8 +1,8 @@
 ---
 permalink: migrate/sra-vasa-migration.html 
 sidebar: sidebar 
-keywords: migrate 
-summary: 迁移存储数据时、系统会使用REST API手动启用存储后端。迁移VASA Provider数据时、数据会从现有Derby数据库导出并导入到MongoDB数据库中。 
+keywords: VASA Provider migration, SRA update, VMware Live Site Recovery, ONTAP tools migration, vVols migration, migration jobs, Swagger, REST API 
+summary: 将 VASA Provider 从 ONTAP tools 9.x 迁移到 10.6，并更新 SRA 以实现 VMware Live Site Recovery。 
 ---
 = 迁移 VASA Provider 并在 ONTAP tools 中更新 SRA
 :allow-uri-read: 
@@ -11,23 +11,25 @@ summary: 迁移存储数据时、系统会使用REST API手动启用存储后端
 
 
 [role="lead"]
-按照本节中的步骤，将 VASA 提供程序从ONTAP tools for VMware vSphere迁移到ONTAP tools for VMware vSphere，并更新 VMware Live Site Recovery 设备上的存储复制适配器 (SRA)。
+使用此任务可将 VASA Provider 从 ONTAP tools for VMware vSphere 9.xx 迁移到 10.6，并更新 VMware Live Site Recovery 设备上的存储复制适配器 (SRA)。
 
 
 
-[[steps-to-migrate-the-vasa-provider]]
-== 迁移 VASA 提供程序的步骤
+[[migrate-the-vasa-provider]]
+== 迁移 VASA 提供程序
 
-. 要在适用于VMware vSphere的现有ONTAP工具上启用Derby端口1527、请启用root用户并通过SSH登录到命令行界面。然后、运行以下命令：
+.开始之前
+确保部署了 ONTAP tools for VMware vSphere 10.6，并确保目标 vCenter Server 和存储后端已准备好进行迁移。
+
+. 要在适用于 VMware vSphere 的现有 ONTAP tools 设备上启用 Derby 端口 1527，请启用 root 用户，通过 SSH 登录到 CLI，然后运行以下命令：
 +
 [listing]
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. ONTAP tools for VMware vSphere的 OVA。
-. 添加要迁移到ONTAP tools for VMware vSphere的 vCenter Server 实例。请参阅link:../configure/add-vcenter.html["添加vCenter Server实例"]了解更多信息。
-. link:../manage/enable-services.html["启用 VASA Provider"]ONTAP tools for VMware vSphere上的服务。
-. 通过 vCenter Server API 将存储后端本地集成到ONTAP工具插件中。请参阅link:../configure/add-storage-backend.html["使用 vSphere 客户端界面添加存储后端"]了解更多信息。
+. 部署适用于 VMware vSphere 10.6 的 ONTAP tools for VMware vSphere 的 OVA。
+. 添加要迁移到 ONTAP tools for VMware vSphere 10.6 的 vCenter Server 实例。有关详细信息，请参阅 link:../configure/add-vcenter.html["添加vCenter Server实例"]。
+. 通过 ONTAP tools 插件的 vCenter Server API 在本地挂载存储后端。有关详细信息，请参见 link:../configure/add-storage-backend.html["使用 vSphere Client 界面添加存储后端"]。
 . 获取访问令牌以验证 REST API 请求。请使用以下示例，并将变量替换为特定于您环境的值。
 +
 [source, curl]
@@ -41,7 +43,7 @@ curl --request POST \
 +
 复制并保存响应中返回的访问令牌。
 
-. 从 Swagger 或 Postman 发布以下 API 以进行迁移。
+. 从 Swagger 或 Postman 发出以下迁移 API 调用。
 +
 [listing]
 ----
@@ -110,6 +112,13 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 }
 ----
 ====
+
+
+
+
+[[check-migration-status]]
+=== 检查迁移状态
+
 . 在Swagger中使用以下URI检查状态：
 +
 [listing]
@@ -118,6 +127,13 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 ----
 +
 使用上一步中从迁移作业返回的"id"值。作业完成后，在作业响应中查看迁移报告。
+
+
+
+
+
+[[register-and-verify-the-migrated-vasa-provider]]
+=== 注册并验证已迁移的 VASA Provider
 
 . 使用ONTAP tools for VMware vSphere 的VASA 提供程序。有关说明，请参阅link:../configure/registration-process.html["注册VASA Provider"]。
 . 验证 VASA Provider 注册：
@@ -130,18 +146,25 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 . 请按照以下步骤停止ONTAP tools for VMware vSphere：
 +
 .. 在ONTAP工具 9.x 中，打开 Web 控制台。
-.. 访问维护控制台。
+.. 使用 `maint`凭据登录。
 .. 进入 `1`选择“应用程序配置”菜单。
 .. 进入 `5`停止 VASA Provider 和 SRA 服务。
 .. 在 vSphere 客户端中，导航到 vCenter 服务器，然后选择*配置* > *存储提供程序*。
 .. 选择适用于 ONTAP 工具 9.x 的离线 VASA Provider，然后选择*删除*。
 +
-旧 VASA 提供程序停止后，vCenter Server 将故障转移到ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由适用于ONTAP tools for VMware vSphere提供服务。
+旧的 VASA Provider 停止后，vCenter Server 将故障转移到 ONTAP tools for VMware vSphere。所有数据存储库和虚拟机均可访问，并由 ONTAP tools for VMware vSphere 提供服务。
 
 
 
-. 完成数据存储发现作业后，迁移的 NFS 和 VMFS 数据存储将出现在ONTAP tools for VMware vSphere中，这可能需要长达 30 分钟的时间。在概览页面上检查它们的可见性。
-. 在Swagger或Postman中使用以下API执行修补程序迁移：
+. 迁移的 NFS 和 VMFS 数据存储区在数据存储区发现作业完成后出现在 ONTAP tools for VMware vSphere 10.6 中，这可能需要长达 30 分钟的时间。在概览页面上查看其可见性。
+
+
+
+
+[[run-the-patch-migration]]
+=== 运行修补程序迁移
+
+. 使用 Swagger 或 Postman 执行补丁迁移 API 调用：
 +
 []
 ====
@@ -218,8 +241,12 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 
 运行修补程序迁移API后、所有VM都会遵守存储策略。
 
-.下一步行动
-完成迁移并将ONTAP Tools 10.5 注册到 vCenter Server 后，请按照以下步骤操作：
+
+
+[[after-migration]]
+== 迁移后
+
+完成迁移并向 vCenter Server 注册 ONTAP tools 10.6 后，请执行以下步骤：
 
 * 等待*发现*完成，系统会自动在所有主机上刷新证书。
 * 等待数据存储区和虚拟机操作开始。等待时间取决于主机、数据存储和虚拟机的数量。如果您不等待，您可能会偶尔看到失败。
@@ -236,16 +263,21 @@ NOTE: UUID是为响应迁移后API而返回的迁移UUID。
 
 .相关信息
 * link:../concepts/rbac-learn-about.html["了解适用于VMware vSphere 10 RBAC的ONTAP工具"]
-* link:../upgrade/upgrade-ontap-tools.html["将适用于ONTAP tools for VMware vSphere升级到 10.5"]
+* link:../upgrade/upgrade-ontap-tools.html["从 ONTAP tools for VMware vSphere 10.x 升级到 10.6"]
 
 
 
 
-[[steps-to-update-the-storage-replication-adapter-sra]]
-== 更新存储复制适配器 (SRA) 的步骤
+[[update-the-storage-replication-adapter-sra]]
+== 更新存储复制适配器 (SRA)
 
 .开始之前
-在恢复计划中，受保护站点是指虚拟机当前运行的位置，而恢复站点是指虚拟机将被恢复到的位置。SRMVMware Live Site Recovery 设备界面显示恢复计划的状态，包括受保护站点和恢复站点的详细信息。在恢复计划中，CLEANUP 和 REPROTECT 按钮被禁用，而 TEST 和 RUN 按钮仍然启用。这表示该站点已准备好进行数据恢复。在迁移 SRA 之前，请验证一个站点处于受保护状态，另一个站点处于恢复状态。
+在迁移 SRA 之前，请验证以下内容：
+
+* 在恢复计划中，受保护站点是虚拟机当前运行的位置，而恢复站点是将恢复虚拟机的位置。
+* 在 VMware Live Site Recovery 应用装置界面中，一个站点显示为受保护状态，另一个站点显示为恢复状态。
+* 在恢复计划中，*CLEANUP* 和 *REPROTECT* 按钮已禁用，*TEST* 和 *RUN* 按钮保持启用状态。
+
 
 
 NOTE: 如果故障转移已完成但重新保护处于挂起状态，请勿开始迁移。在继续迁移之前，请确保重新保护过程已完成。如果正在执行测试故障转移，请清除测试故障转移并开始迁移。
@@ -261,7 +293,7 @@ NOTE: 如果故障转移已完成但重新保护处于挂起状态，请勿开�
 . 在保护站点和恢复站点上执行这些步骤。
 +
 .. link:../manage/enable-services.html["为VMware vSphere服务启用ONTAP工具"]
-.. 使用以下步骤ONTAP tools for VMware vSpherelink:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"]。
+.. 使用 link:../protect/configure-on-srm-appliance.html["在VMware Live Site Recovery设备上配置SRA"] 中的步骤为 VMware vSphere 10.6 SRA 适配器配置 ONTAP tools。
 .. 在 VMware Live Site Recovery 界面上，运行 *Discover Arrays* 和 *Discover Devices*。确认设备显示与迁移前相同。
 
 

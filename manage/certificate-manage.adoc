@@ -1,8 +1,8 @@
 ---
 permalink: manage/certificate-manage.html 
 sidebar: sidebar 
-keywords:  
-summary: 一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCenter Server实例。适用于VMware vSphere的ONTAP工具使用适用于VASA Provider的自签名证书进行部署。这样、只能为Vvol数据存储库管理一个vCenter Server实例。 
+keywords: ONTAP tools certificates, VASA provider certificate, vCenter certificate trust, manage appliance certificates 
+summary: 管理 ONTAP tools 和 VASA Provider 证书、续订默认证书或替换为自定义 CA 证书。 
 ---
 = 管理 ONTAP tools 证书
 :allow-uri-read: 
@@ -13,16 +13,19 @@ summary: 一个适用于VMware vSphere的ONTAP工具实例可以管理多个vCen
 [role="lead"]
 在部署过程中，默认情况下会为ONTAP工具和 VASA 提供程序生成自签名证书。您可以使用ONTAP工具管理器界面来续订此证书或将其替换为自定义 CA 证书。在多 vCenter 部署中，必须使用自定义 CA 证书。
 
+
+WARNING: 如果证书过期而未及时续订，ONTAP tools 将停止运行。在到期前续订证书，以保持连续运行并防止服务中断。
+
 .开始之前
 开始之前，您应该准备好以下物品：
 
-* 域名已映射到虚拟 IP 地址。
+* 映射到 ONTAP tools IP 地址的域名。
 * 成功执行域名 nslookup 查询，确认其解析到正确的 IP 地址。
 * 使用域名和ONTAP工具 IP 地址创建的证书。
 
 
 
-NOTE: ONTAP工具IP地址应映射到完全限定域名(FQDN)。证书应包含映射到使用者或使用者替代名称中的ONTAP工具IP地址的相同FQDN。
+NOTE: ONTAP tools IP 地址应映射到完全限定域名 (FQDN)。证书应包含在使用者或使用者替代名称中映射到 ONTAP tools IP 地址的相同 FQDN。
 
 
 NOTE: 您不能从CA签名证书切换到自签名证书。
@@ -38,7 +41,7 @@ ONTAP工具选项卡显示证书类型(自签名/CA签名)和域名等详细信�
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 选择*Certificates*> ONTAP tools*>*Renew*以续订证书。
 +
-如果证书已过期或即将到期、您可以续订该证书。如果证书类型为CA签名、则可以使用续订选项。在弹出窗口中、提供服务器证书、专用密钥、根CA和中间证书详细信息。
+如果证书已过期或即将到期，您可以续订证书。当证书类型为自签名或 CA 签名时，续订选项可用。在弹出窗口中，提供服务器证书、私钥、根 CA 和中间证书详细信息。
 
 +
 
@@ -47,7 +50,7 @@ NOTE: 在续订证书之前、系统将处于脱机状态、您将从ONTAP工具
 . 要将自签名证书升级为自定义CA证书，请选择*Certificates*>* ONTAP tools*>*升级到CA*选项。
 +
 .. 在弹出窗口中、上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。
-.. 输入您为其生成此证书的负载均衡器 IP 的 FQDN，并升级证书。
+.. 输入映射到您为其生成此证书的 ONTAP tools IP 地址（以前称为负载均衡器 IP）的 FQDN，并升级证书。
 +
 
 NOTE: 升级完成前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。
@@ -68,7 +71,7 @@ NOTE: 升级完成前、系统将处于脱机状态、您将从ONTAP工具管理
 . 选择*Certificates*>*VASA Provider*或*VASA ONTAP tools*>*升级到CA*以将自签名证书升级到自定义CA证书。
 +
 .. 在弹出窗口中、上传服务器证书、服务器证书专用密钥、根CA证书和中间证书文件。
-.. 输入您为其生成此证书的负载均衡器 IP 的 FQDN，并升级证书。
+.. 输入映射到您为其生成此证书的 ONTAP tools IP 地址（以前称为负载均衡器 IP）的 FQDN，并升级证书。
 +
 
 NOTE: 升级完成前、系统将处于脱机状态、您将从ONTAP工具管理器界面中注销。
@@ -76,6 +79,24 @@ NOTE: 升级完成前、系统将处于脱机状态、您将从ONTAP工具管理
 
 
 
+
+--
+.刷新 ONTAP tools 服务证书
+--
+从 ONTAP tools 10.5 开始，证书有效期从 10 年更改为 1 年。从 ONTAP tools 10.5P2 开始，在 ONTAP tools 升级过程中，内部服务通信证书会自动更新，网关自签名证书也会刷新。
+
+当收到内部证书即将到期的警报，或 ONTAP tools 在一年内未升级时，请使用此维护控制台选项手动刷新内部服务通信证书。从 ONTAP tools 10.5P2 开始，升级会自动续订这些证书。更新后的证书继续使用一年有效期（365 天），这有助于满足审核要求。
+
+.步骤
+. 登录到 vCenter 服务器。
+. 找到 ONTAP tools 虚拟机并启动 Web 控制台。
+. 使用 `maint`凭据登录。
+. 进入 `2`选择“系统配置”。
+. 输入 `9`以选择 *Refresh ONTAP tools services certificates*。
+
+
+
+WARNING: 此操作会重新启动所有服务，并可能导致停机或中断。若要继续，请键入 `y`以确认警告，然后刷新过程将开始。
 
 --
 ====

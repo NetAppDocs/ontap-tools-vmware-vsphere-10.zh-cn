@@ -1,8 +1,8 @@
 ---
 permalink: concepts/ontap-tools-concepts-terms.html 
 sidebar: sidebar 
-keywords:  
-summary: 下一节介绍了本文档中使用的重要概念和术语。 
+keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
+summary: 查看 ONTAP tools for VMware vSphere 文档中使用的关键概念和术语。 
 ---
 = ONTAP tools 中的关键概念和术语
 :allow-uri-read: 

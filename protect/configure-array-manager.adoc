@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-array-manager.html 
 sidebar: sidebar 
-keywords:  
-summary: '您可以使用VMware Live Site Recovery中的阵列管理器向导配置Storage Replication Adapter \(SRA\)、以便在VMware Live Site Recovery和Storage Virtual Machine \(SVM\)之间进行交互。' 
+keywords: SRA configuration, Array Manager, VMware Live Site Recovery, SnapMirror, SVM interactions 
+summary: 使用 VMware Live Site Recovery Array Manager 向导配置 SRA，以将受保护站点和恢复站点连接到存储虚拟机。 
 ---
 = 使用 ONTAP tools 中的阵列管理器配置 SRA
 :allow-uri-read: 

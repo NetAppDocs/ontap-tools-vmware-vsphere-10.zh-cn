@@ -1,8 +1,8 @@
 ---
 permalink: release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html 
 sidebar: sidebar 
-keywords: release notes, feature, comparison 
-summary: 了解适用于ONTAP tools for VMware vSphere和ONTAP tools for VMware vSphere的功能比较 
+keywords: ONTAP tools feature comparison, VMware vSphere, version upgrade, compatibility, NetApp tools 
+summary: 比较 ONTAP tools for VMware vSphere 9 和 10 的功能，以决定是否迁移到 ONTAP tools 10.2 或更高版本。 
 ---
 = ONTAP tools for VMware vSphere 9 和 10 功能比较
 :allow-uri-read: 
@@ -11,26 +11,28 @@ summary: 了解适用于ONTAP tools for VMware vSphere和ONTAP tools for VMware 
 
 
 [role="lead"]
-了解从ONTAP tools for VMware vSphere迁移到ONTAP tools for VMware vSphere是否适合您。
+了解为什么从 ONTAP tools for VMware vSphere 9 迁移到 ONTAP tools for VMware vSphere 10.2 或更高版本可能是适合您环境的正确选择。
 
 
-NOTE: 有关最新的兼容性信息，请参阅  https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+NOTE: 有关最新的兼容性信息，请参阅 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]。
+
+要了解 ONTAP tools 9.x 的最新终止支持信息，请参阅 https://mysupport.netapp.com/site/info/version-support["软件版本支持"^]。
 
 [cols="20%,25%,30%"]
 |===
 | 功能 | ONTAP工具 9.13 | ONTAP工具 10.2 及更高版本 
 
 
-| 关键价值主张 | 通过增强的安全性、合规性和自动化功能，简化从第 0 天到第 2 天的运营 | 扩展支持，包括 FC for VMFS 和 NVMe-oF for VMFS。NetApp SnapMirror易于使用，vSphere Metro 存储集群设置简单，并支持三站点 VMware Live Site Recovery 
+| 关键价值主张 | 通过增强的安全性、合规性和自动化功能，简化从第 0 天到第 2 天的操作，每个 ONTAP tools 设备仅支持一台 vCenter Server。 | 扩展支持，包括用于 VMFS 的 FC 和仅用于 VMFS 的 NVMe-oF。易于使用 NetApp SnapMirror，针对 vSphere 城域存储集群的简单设置，以及三站点 VMware Live Site Recovery 支持每个 ONTAP tools 设备支持多个 vCenter Server 实例，从而减少设备数量和整体资源需求。 
 
 
-| ONTAP发布资格 | ONTAP 9.9.1 升级至ONTAP 9.16.1 | ONTAP tools 10.2 的 ONTAP 9.12.1 到 9.15.1。ONTAP tools 10.3 的 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。ONTAP tools 10.4 的 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用 ASA r2 系统时，ONTAP tools 10.4 需要 ONTAP 9.16.1P3 及更高版本。ONTAP tools 10.5 的 ONTAP 9.15.1、9.16.1 和 9.17.0 
+| ONTAP发布资格 | ONTAP 9.9.1 升级至ONTAP 9.16.1 | ONTAP tools 10.2 的 ONTAP 9.12.1 至 9.15.1。ONTAP tools 10.3 的 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。ONTAP tools 10.4 的 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用 ASA r2 系统时，ONTAP tools 10.4 需要 ONTAP 9.16.1P3 及更高版本。ONTAP tools 10.5 的 ONTAP 9.15.1、9.16.1 和 9.17.0；ONTAP tools 10.6 的 ONTAP 9.16.1、9.17.1、9.18.1 和 9.19.1，以及 ASA r2 版本 9.16.1P3、9.17.1、9.18.1 和 9.19.1。 
 
 
-| VMware 版本支持 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 至 VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0（从ONTAP tools 10.5 开始） VMware Site Recovery Manager (SRM) 8.7 至 VMware Live Site Recovery 9.0 *注意：* 在ONTAP tools 10.x 中，SRM 支持共享站点，从而增强了可扩展性并提高了性能。 
+| VMware 版本支持 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 至 VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0（从 ONTAP tools 10.5 起）VMware Site Recovery Manager (SRM) 8.7 至 VMware Live Site Recovery 9.0、9.0.1、9.0.2、9.0.3 和 9.0.4 
 
 
-| 协议支持 | NFS 和 VMFS 数据存储：NFS（v3 和 v4.1）、VMFS（iSCSI 和 FCP） | NFS 和 VMFS 数据存储：NFS（v3 和 v4.1）、VMFS（iSCSI/FCP/NVMe-oF） 
+| 协议支持 | NFS 和 VMFS 数据存储：NFS（v3 和 v4.1）、VMFS（iSCSI 和 FCP） | NFS 和 VMFS 数据存储：NFS（v3 和 v4.1）、VMFS（iSCSI/FCP/NVMe-TCP 和 NVMe-FC） 
 
 
 | 可扩展性 | 主机和虚拟机：300 台主机，最多 1 万台虚拟机；数据存储：600 个 NFS 存储，最多 50 个 VMFS 存储。 | 主机和虚拟机：600 台主机 
@@ -39,7 +41,7 @@ NOTE: 有关最新的兼容性信息，请参阅  https://mysupport.netapp.com/m
 | 可观察性 | 性能、容量和主机合规性仪表板动态虚拟机和数据存储区报告 | 更新了性能、容量和主机合规性仪表板动态虚拟机和数据存储区报告 
 
 
-| 数据保护 | SRA 复制适用于 VMFS 和 NFS。  SCV集成和互操作性，可用于备份。 | 针对 iSCSI VMFS 和 NFS v3 数据存储的 SRA 复制结合了 SMAS 和 VMware Live Site Recovery 的三站点保护。SRA 支持 FCP 与 VMFS。 
+| 数据保护 | SRA 复制适用于 VMFS 和 NFS。  SCV集成和互操作性，可用于备份。 | 结合 SMAS 和 VMware Live Site Recovery 的 iSCSI VMFS 和 NFS v3 数据存储三站点保护的 SRA 复制。支持 FCP 与 VMFS 的 SRA。ONTAP tools 10.6 提供的精细数据存储保护和一致性组管理。*注意：* 在 ONTAP tools 10.x 中，SRM 支持共享站点，从而增强可扩展性并提高性能。 
 
 
 | VASA 提供程序支持 | VASA 4.0 | VASA 3.0 

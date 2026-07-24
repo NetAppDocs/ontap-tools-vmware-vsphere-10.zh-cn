@@ -1,8 +1,8 @@
 ---
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
-keywords:  
-summary: 将数据磁盘连接到虚拟机以扩展存储容量。 
+keywords: attach data disk VM, detach VM disk, ONTAP tools virtual machine disk, VMware VM storage expansion 
+summary: 附加或分离虚拟机数据磁盘以管理存储容量。 
 ---
 = 在 ONTAP tools 中从虚拟机附加或分离数据磁盘
 :allow-uri-read: 

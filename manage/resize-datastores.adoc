@@ -1,8 +1,8 @@
 ---
 permalink: manage/resize-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: 通过调整数据存储库大小、可以增加虚拟机文件的存储。您可以根据基础架构要求的变化更改数据存储库的大小。 
+keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change 
+summary: 随着基础架构要求的变化，调整数据存储区大小以增加虚拟机文件存储。 
 ---
 = 调整 ONTAP tools 中的 NFS 和 VMFS 数据存储区大小
 :allow-uri-read: 
