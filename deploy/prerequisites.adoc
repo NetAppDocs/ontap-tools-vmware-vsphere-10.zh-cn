@@ -197,6 +197,13 @@ NOTE: 表中的主机计数表示所有已连接 vCenters 的总数。
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== 存储后端发现的配置限制
+
+ONTAP tools 支持多达 200 个 SVM 和大约 10,000 个 LUN 的存储后端发现。
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == VMFS 和 NFS 数据存储的配置限制
 

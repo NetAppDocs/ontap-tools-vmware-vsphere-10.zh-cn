@@ -67,11 +67,6 @@ summary: 部署 ONTAP tools for VMware vSphere，并完成核心部署后设置�
 [discrete]
 == 可选的后续任务
 
-
-
-[[optional-next-tasks]]
-== 可选的后续任务
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 配置 ONTAP 用户角色和权限
 [role="quick-margin-para"]
 配置自定义 ONTAP 角色以实现最低权限访问，而不是使用默认管理员帐户。
