@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: key concepts, ONTAP tools terms, consistency group, dual stack 
 summary: 查看 ONTAP tools for VMware vSphere 文档中使用的关键概念和术语。 
 ---
-= ONTAP tools 中的关键概念和术语
+= ONTAP tools 的关键术语和定义
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-下一节介绍了本文档中使用的重要概念和术语。
+熟悉 ONTAP tools for VMware vSphere 中使用的关键概念和术语。定义涵盖存储后端、虚拟卷（vVols）、SnapMirror 活动同步、VASA、SRA 和其他核心组件。
 
 
 
@@ -53,7 +53,7 @@ LUN是一个数字、用于标识存储区域网络(SAN)中的逻辑单元。这
 [[nvme-namespace-and-subsystem]]
 === NVMe命名空间和子系统
 
-NVMe 命名空间是指可格式化为逻辑块的非易失性内存量。命名空间相当于 FC 和 iSCSI 协议的 LUN ， NVMe 子系统类似于 igroup 。NVMe子系统可以与启动程序关联、以便关联的启动程序可以访问此子系统中的命名区域。
+NVMe 命名空间是可以格式化为逻辑块的大量非易失性内存。命名空间相当于 FC 和 iSCSI 协议的 LUN，NVMe 子系统类似于 igroup。NVMe 子系统可以与启动器关联，使其能够访问子系统内的命名空间。
 
 
 
@@ -74,14 +74,14 @@ OVA是一种用于打包和分发必须在虚拟机上运行的虚拟设备或�
 [[recovery-point-objective-rpo]]
 === 恢复点目标(RPO)
 
-RPO 衡量备份或复制数据的频率。它指定了发生中断后恢复数据以恢复业务运营所需的确切时间点。例如、如果组织的RPO为4小时、则在发生灾难时、可以允许最多丢失4小时的数据。
+RPO 衡量您备份或复制数据的频率。它指定了中断后恢复数据以恢复业务运营所需的确切时间点。例如，如果组织的 RPO 为 4 小时，则在发生灾难时可以容忍最多 4 小时的数据丢失。
 
 
 
 [[snapmirror-active-sync]]
 === SnapMirror活动同步
 
-SnapMirror主动同步支持业务服务在站点完全瘫痪的情况下继续运行、支持应用程序使用二级副本透明地进行故障转移。使用SnapMirror活动同步触发故障转移不需要手动干预或自定义脚本。详细了解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror活动同步"]。
+SnapMirror 主动同步使业务服务即使在完全站点故障的情况下也能继续运行，支持应用程序使用辅助副本透明地进行故障切换。SnapMirror 主动同步不需要手动干预或自定义脚本来触发故障切换。详细了解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror活动同步"]。
 
 
 
@@ -119,7 +119,7 @@ SVM 是 ONTAP 中多租户的单位。就像在虚拟机监控程序上运行的
 * *非一致主机访问*表示每个站点中的主机仅连接到同一站点中的集群。跨站点路径和延伸型路径未连接。
 +
 
-NOTE: 任何SnapMirror主动同步部署均支持统一主机访问；只有对称主动/主动部署才支持非统一主机访问。详细了解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["ONTAP中的SnapMirror主动同步概述"]。
+NOTE: SnapMirror 活动同步支持任何部署的统一主机访问；只有对称活动/活动部署支持非统一主机访问。详细了解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["ONTAP中的SnapMirror主动同步概述"]。
 
 
 
@@ -135,7 +135,7 @@ VMFS是一种集群模式文件系统、专用于在VMware vSphere环境中存�
 [[virtual-volumes-vvols]]
 === 虚拟卷（ VVOL ）
 
-vVols 为虚拟机使用的存储提供卷级抽象。它包括几个好处，并提供了使用传统 LUN 的替代方案。vVol 数据存储区通常与用作 vVols 容器的单个 LUN 相关联。
+vVols 为虚拟机使用的存储提供卷级抽象。vVols 包括多项优势，并提供使用传统 LUN 的替代方案。vVol 数据存储通常与充当 vVols 容器的单个 LUN 相关联。
 
 
 
@@ -149,7 +149,7 @@ VM存储策略会在vCenter Server中的"Policies and Profile (策略和配置�
 [[vmware-live-site-recovery]]
 === VMware Live Site Recovery
 
-VMware Live Site Recovery (以前称为Site Recovery Manager、SRM)可为VMware虚拟环境提供业务连续性、灾难恢复、站点迁移和无中断测试功能。
+VMware Live Site Recovery（以前称为 Site Recovery Manager (SRM)）为 VMware 虚拟环境提供业务连续性、灾难恢复、站点迁移和无中断测试功能。
 
 
 

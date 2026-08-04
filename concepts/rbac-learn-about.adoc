@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC framework, role-based access control, authorization, security 
 summary: 了解 RBAC 如何使用特定权限级别定义角色，以控制访问权限并简化 ONTAP tools 中的用户管理。 
 ---
-= 了解 ONTAP tools RBAC
+= 了解 ONTAP tools 中的 RBAC
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 了解 RBAC 如何使用特定权限级别定义角色，以控制访�
 
 
 [role="lead"]
-基于角色的访问控制(Role-Based Access Control、RBAC)是一种用于控制对组织内资源访问的安全框架。RBAC通过定义具有特定权限级别的角色来执行操作、而不是为单个用户分配授权、从而简化了管理。定义的角色会分配给用户、这有助于降低出错风险并简化整个组织的访问控制管理。
+基于角色的访问控制 (RBAC) 是用于控制组织内资源访问的安全框架。ONTAP tools for VMware vSphere 跨两个不同的环境（VMware vCenter Server 和 ONTAP 集群）使用 RBAC 来管理谁可以执行存储操作和访问 vSphere 对象。RBAC 通过定义具有特定权限级别的角色来简化管理，而不是向单个用户分配授权，从而降低错误风险并简化访问控制管理。
 
 RBAC标准模型由多种实施技术或阶段组成、这些技术或阶段的复杂性不断增加。因此、根据软件供应商及其客户的需求、实际RBAC部署可能会有所不同、从相对简单到非常复杂不等。
 
@@ -23,13 +23,13 @@ RBAC标准模型由多种实施技术或阶段组成、这些技术或阶段的�
 [[rbac-components]]
 == RBAC组件
 
-在高层次上，每个 RBAC 实施中通常包含几个组件。作为定义授权流程的一部分，这些组件以不同的方式绑定在一起。
+每个 RBAC 实现都包含多个组件，这些组件以不同的方式绑定在一起，以定义授权流程。
 
 .特权
 _privilege_ 是可以允许或拒绝的操作或功能。它可能是一些简单的东西，例如读取文件的能力，或特定于给定软件系统的更抽象的操作。还可以定义 Privileges 来限制对 REST API 端点和 CLI 命令的访问。每个 RBAC 实现都包含预定义的 privileges，并且可能还允许管理员创建自定义 privileges。
 
 .角色
-_Role__是包含一个或多个Privileges的容器。角色通常根据特定任务或工作职能进行定义。将角色分配给用户后、系统会为该用户授予该角色中包含的所有Privileges。与Privileges一样、实施也包括预定义角色、通常允许创建自定义角色。
+_role_ 是包含一个或多个权限的容器。角色通常根据特定任务或工作职能来定义。将角色分配给用户时，用户将被授予角色中包含的所有权限。与权限一样，实现包括预定义角色，并且通常允许创建自定义角色。
 
 .对象
 object_表示在RBAC环境中标识的实际资源或抽象资源。通过Privileges定义的操作将在关联对象上或与关联对象一起执行。根据实施情况、可以将Privileges授予某个对象类型或特定对象实例。
@@ -48,7 +48,7 @@ permission是将用户或组与角色绑定到对象的定义。权限对于分�
 在使用ONTAP tools for VMware vSphere 10 时，需要考虑两种不同的 RBAC 环境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都拥有特定的权限才能执行操作。虽然ONTAP工具可以自动执行存储管理任务，但它不会在 vCenter 或ONTAP中创建用户帐户。服务帐户必须由 vSphere 管理员根据需要创建。本文档为管理员提供指导，以便分配必要的角色和权限，从而有效地管理ONTAP工具。
 
 .VMware vCenter Server
-VMware vCenter Server中的RBAC实施用于限制对通过vSphere Client用户界面公开的对象的访问。在安装适用于VMware vSphere 10的ONTAP工具过程中、RBAC环境进行了扩展、以包括表示ONTAP工具功能的其他对象。可通过远程插件访问这些对象。有关详细信息、请参见。link:../concepts/rbac-vcenter-environment.html["vCenter Server RBAC环境"]
+VMware vCenter Server 中的 RBAC 实现限制了对通过 vSphere 客户端用户界面公开的对象的访问。作为安装 ONTAP tools for VMware vSphere 10 的一部分，RBAC 环境已扩展为包含代表 ONTAP tools 功能的其他对象。对这些对象的访问通过远程插件提供。有关详细信息，请参见 link:../concepts/rbac-vcenter-environment.html["vCenter Server RBAC环境"]。
 
 .ONTAP 集群
-适用于VMware vSphere 10的ONTAP工具可通过ONTAP REST API连接到ONTAP集群以执行与存储相关的操作。对存储资源的访问通过身份验证期间提供的与ONTAP用户关联的ONTAP角色进行控制。有关详细信息、请参见 link:../concepts/rbac-ontap-environment.html["ONTAP RBAC环境"] 。
+ONTAP tools for VMware vSphere 10 通过 ONTAP REST API 连接到 ONTAP 集群，以执行与存储相关的操作。对存储资源的访问通过与身份验证期间提供的 ONTAP 用户相关联的 ONTAP 角色来控制。有关详细信息，请参见 link:../concepts/rbac-ontap-environment.html["ONTAP RBAC环境"]。

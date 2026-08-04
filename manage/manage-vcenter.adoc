@@ -11,7 +11,7 @@ summary: 在 ONTAP tools 中管理 vCenter 实例，以控制主机、虚拟机�
 
 
 [role="lead"]
-vCenter Server实例是一种中央管理平台、可用于控制主机、虚拟机和存储后端。
+vCenter Server 实例是集中管理平台，可让您控制主机、虚拟机和存储后端。在 ONTAP tools 中，您可以分离存储后端、修改实例详细信息、删除实例和续订 vCenter Server 证书。
 
 
 
@@ -33,12 +33,14 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 [[modify-a-vcenter-server-instance]]
 == 修改vCenter Server实例
 
+通过完成以下步骤修改 vCenter Server 实例。
+
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择 *vCenters*。
 . 选择要修改的 vCenter Server 的垂直省略号，然后选择*修改*。
 . 在“修改 vCenter”窗口中，输入用户名、密码和端口详细信息。
-. 上传证书并选择*修改*。
+. 上传证书并选择*Modify*。
 
 
 
@@ -117,7 +119,7 @@ ONTAP工具会在 vCenter 证书即将到期或已过期时通知您。更新 vC
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. 请确保证书采用 Base64 ASCII 格式，并包含起始行和结束行，例如：
+. 验证证书是否为 Base 64 ASCII 格式，并包括开始行和结束行，例如：
 +
 [listing]
 ----

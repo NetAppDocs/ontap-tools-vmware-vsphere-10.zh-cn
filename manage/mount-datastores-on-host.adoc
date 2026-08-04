@@ -11,7 +11,7 @@ summary: 将主机添加到 VMware 环境后，在其他主机上挂载数据存
 
 
 [role="lead"]
-挂载数据存储库可为其他主机提供存储访问。将主机添加到 VMware 环境后，您可以将数据存储库挂载到其他主机上。
+将主机添加到 VMware 环境后，挂载数据存储可为其他主机提供存储访问权限。
 
 
 NOTE: 添加主机后，等待计划的主机发现完成后，它才会显示在 ONTAP tools 中。或者，您可以从 NetApp ONTAP tools 概述屏幕手动运行发现。有关如何将 ESXi 主机添加到 vSphere 集群的信息，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]。
@@ -20,11 +20,10 @@ NOTE: 添加主机后，等待计划的主机发现完成后，它才会显示�
 * 根据vSphere客户端版本和选定的数据存储库类型、某些右键单击操作已禁用或不可用。
 +
 ** 如果您使用的是vSphere Client 8.0或更高版本、则某些右键单击选项将处于隐藏状态。
-** 从vSphere 7.0U3到vSphere 8.0版本、即使显示这些选项、该操作也将被禁用。
+** 从 vSphere 7.0U3 到 vSphere 8.0，即使出现选项，也会禁用此操作。
 
 
 * 当主机集群受到统一配置保护时，vSphere 会禁用挂载数据存储选项。
-* 当在新主机上挂载具有 nconnect 的数据存储时，如果数据存储的 nconnect 值超过主机的设置，ONTAP tools 将应用该数据存储的 nconnect 值。
 
 
 .步骤

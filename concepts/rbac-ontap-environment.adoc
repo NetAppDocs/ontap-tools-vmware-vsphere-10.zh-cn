@@ -14,17 +14,17 @@ summary: 查看 ONTAP RBAC 环境，以及它如何通过 REST API 和 CLI 控�
 
 
 [role="lead"]
-ONTAP提供了一个强大且可扩展的RBAC环境。您可以使用RBAC功能控制对通过REST API和命令行界面公开的存储和系统操作的访问。在将该环境与适用于VMware vSphere 10的ONTAP工具结合使用之前、熟悉该环境会很有帮助。
+ONTAP 提供了一个强大且可扩展的 RBAC 环境，可通过 REST API 和 CLI 控制对存储和系统操作的访问。了解 ONTAP RBAC 概念（包括角色类型、范围和权限）有助于您为 ONTAP tools for VMware vSphere 10 部署配置和管理用户访问权限。
 
 
 
 [[overview-of-the-administrative-options]]
 == 管理选项概述
 
-根据您的环境和目标、使用ONTAP RBAC时有多种选项可供选择。主要行政决定概述如下。有关详细信息、另请参见 https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP自动化：RBAC安全性概述"^]。
+使用 ONTAP RBAC 时有几种选择，具体取决于您的环境和目标。以下各节概述了主要的管理决策。另请参见 https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP自动化：RBAC安全性概述"^]以了解更多信息。
 
 
-NOTE: ONTAP RBAC 针对存储环境进行了定制，并且比 vCenter Server 提供的 RBAC 实现更简单。使用ONTAP，您可以直接向用户分配角色。  ONTAP RBAC 不需要配置明确的权限（例如与 vCenter Server 一起使用的权限）。
+NOTE: ONTAP RBAC 是针对存储环境量身定制的，比 vCenter Server 提供的 RBAC 实现更简单。使用 ONTAP，您可以将角色直接分配给用户。与 vCenter Server 不同，ONTAP RBAC 不要求您配置显式权限。
 
 .角色类型和Privileges
 定义ONTAP用户时需要ONTAP角色。ONTAP角色有两种类型：
@@ -39,7 +39,7 @@ REST角色是在ONTAP 9.6中引入的、通常适用于通过REST API访问ONTAP
 
 
 
-虽然 REST 角色是最近引入的，但传统角色提供了一些优势。例如，可以包括其他查询参数，以便让 Privileges 更准确地定义它们应用的对象。
+虽然 REST 角色是最近才引入的，但传统角色提供了一些优势。例如，您可以添加其他查询参数，以便权限更精确地定义它们应用到的对象。
 
 .范围
 可以使用两个不同的范围之一定义ONTAP角色。它们可以应用于特定数据SVM (SVM级别)或整个ONTAP集群(集群级别)。
@@ -52,7 +52,7 @@ ONTAP在集群和SVM级别提供了一组预定义角色。您还可以定义自
 [[working-with-ontap-rest-roles]]
 == 使用ONTAP REST角色
 
-在使用适用于VMware vSphere 10的ONTAP工具附带的ONTAP REST角色时、需要注意几个事项。
+使用 ONTAP tools for VMware vSphere 10 附带的 ONTAP REST 角色时，请注意以下事项。
 
 .角色映射
 无论是使用传统角色还是REST角色、所有ONTAP访问决策都是根据底层命令行界面命令做出的。但是、由于REST角色中的Privileges是根据REST API端点定义的、因此ONTAP需要为每个REST角色创建_Mapped_传统角色。因此、每个REST角色都会映射到一个底层传统角色。这样、无论角色类型如何、ONTAP都能以一致的方式做出访问控制决策。您不能修改并行映射的角色。

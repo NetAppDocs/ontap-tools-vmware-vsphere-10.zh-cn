@@ -11,7 +11,7 @@ summary: 从备份中恢复 ONTAP tools，并按版本了解零 RPO 和接近零
 
 
 [role="lead"]
-从适用于ONTAP tools for VMware vSphere开始，备份功能默认启用。
+您可以通过从数据存储区中存储的备份文件还原来恢复 ONTAP tools for VMware vSphere 的设置。从 ONTAP tools for VMware vSphere 10.5 开始，备份功能默认处于启用状态，因此如果您需要重新部署或恢复设备，可以使用最新的备份。
 
 ONTAP tools for VMware vSphere的数据存储库用于存储备份文件。以ONTAP工具 IP 地址命名的文件夹（用下划线代替点并以 _OTV_backup_ 为后缀）保存两个最新的备份文件（_OTV_backup_1.tar.enc_ 和 _OTV_backup_2.tar.enc_）和一个包含最新备份名称的信息文件（_OTV_backup_info.txt_）。
 
@@ -40,7 +40,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 
-NOTE: 不要改变命令中提到的目标路径和文件名（/home/diag/system_recovery.tar.enc）。
+NOTE: 请勿更改命令中提到的目标路径和文件名(/home/diag/system_recovery.tar.enc)。
 
 . 备份文件传输完成后，登录诊断shell并运行以下命令：
 +

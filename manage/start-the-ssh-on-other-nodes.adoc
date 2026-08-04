@@ -11,7 +11,7 @@ summary: 在运行升级之前，请先在其他节点上启动 SSH。
 
 
 [role="lead"]
-升级之前、您需要在其他节点上启动SSH。
+在升级 ONTAP tools for VMware vSphere 之前，您需要在环境中的每个其他节点上启动 SSH。
 
 .开始之前
 为您的 vCenter Server 实例启用 VASA Provider 扩展。

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools overview, virtual machine lifecycle, VASA Provider, disaster recovery 
 summary: 了解 ONTAP tools for VMware vSphere 如何支持虚拟机存储生命周期管理、数据存储区调配和灾难恢复。 
 ---
-= 了解 ONTAP tools
+= 了解适用于 VMware vSphere 的 ONTAP 工具
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 是一组用于虚拟机存储生命周期管理的工具。它与 VMware 生态系统集成，以简化数据存储配置并为虚拟机提供基本保护。它是作为开放虚拟设备 (OVA) 部署的水平可扩展事件驱动型微服务的集合。
+ONTAP tools for VMware vSphere 是一组用于虚拟机生命周期管理的工具。它与 VMware 生态系统集成，以简化数据存储配置，并为虚拟机提供基本保护和灾难恢复。作为开放式虚拟设备 (OVA) 部署，它使用水平可扩展的事件驱动型微服务，大规模提供可靠的性能。
 
 ONTAP tools for VMware vSphere支持：
 
@@ -21,7 +21,7 @@ ONTAP tools for VMware vSphere支持：
 * Storage Replication Adapter （ SRA ）
 
 
-.适用于 VMware 的ONTAP工具的高可用性
+.ONTAP tools for VMware vSphere 的高可用性
 ONTAP tools for VMware vSphere提供高可用性 (HA) 支持，有助于在发生故障时维持不间断运行。
 
 HA 解决方案可帮助您从以下类型的中断中快速恢复：

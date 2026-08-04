@@ -11,11 +11,11 @@ summary: 仅当选定数据存储库上没有剩余 vVols 时，才删除 vVols 
 
 
 [role="lead"]
-本页介绍如何从vVols数据存储中删除卷。
+使用从数据存储区中删除存储操作从 ONTAP tools 中的 vVols 数据存储区中删除卷，在不再需要其他存储时缩小其容量。
 
 在 vCenter Server 中，对由ONTAP工具管理的任何vVols数据存储使用“从数据存储中删除存储”操作。
 
-如果卷包含vVols，则无法从卷中删除存储；对于此类卷，删除选项将被禁用。从数据存储中删除卷时，您还可以选择从ONTAP存储中删除选定的卷。
+如果卷包含 vVols，则无法从该卷中删除存储；此类卷的删除选项已禁用。从数据存储中删除卷时，您还可以选择从 ONTAP 存储中删除选定的卷。
 
 
 NOTE: 基于ASA r2 系统的vVols数据存储不支持缩小vVols数据存储操作。
@@ -27,7 +27,7 @@ NOTE: 基于ASA r2 系统的vVols数据存储不支持缩小vVols数据存储操
 . 选择没有vVols 的卷，然后选择“删除”。
 +
 
-NOTE: 选择vVols所在卷的选项已被禁用。
+NOTE: 用于选择 vVols 驻留的卷的选项已禁用。
 
-. 在*Remove storage*弹出窗口中，选中*Delete volumes" from ONTAP cluster-*复选框以从数据存储库和ONTAP存储中删除卷，然后选择*Delete*。
+. 在 *Remove storage* 弹出窗口中，选中 *Delete volumes from ONTAP cluster* 复选框以从数据存储和 ONTAP 存储中删除卷，然后选择 *Delete*。
 

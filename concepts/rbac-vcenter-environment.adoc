@@ -14,14 +14,14 @@ summary: 查看 vCenter Server RBAC 如何在集中式身份验证过程中控�
 
 
 [role="lead"]
-VMware vCenter Server提供了RBAC功能、可用于控制对vSphere对象的访问。它是vCenter集中式身份验证和授权安全服务的重要组成部分。
+VMware vCenter Server 提供基于角色的访问控制 (RBAC)，使您能够控制对 vSphere 对象的访问。了解 vCenter Server RBAC 如何与 ONTAP tools for VMware vSphere 集成，有助于您有效地管理权限并保护对存储资源的访问。
 
 
 
 [[illustration-of-a-vcenter-server-permission]]
 == vCenter Server权限图示
 
-权限是在vCenter Server环境中强制实施访问控制的基础。它将应用于权限定义中包含用户或组的vSphere对象。下图简要展示了vCenter权限。
+权限是在 vCenter Server 环境中实施访问控制的基础。它应用于 vSphere 对象，并包括作为权限定义一部分的用户或组。下图显示了 vCenter Server 权限的高级示意图。
 
 image:vc-permission.png["vCenter权限"]
 
@@ -44,7 +44,7 @@ vCenter Server权限是指在创建权限时绑定在一起的多个组件的软
 [[privileges-and-roles]]
 === Privileges和角色
 
-适用于VMware vSphere 10的ONTAP工具可使用两种类型的vSphere Privileges。为了简化在此环境中使用RBAC的过程、ONTAP工具提供了包含所需本机和自定义Privileges的角色。Privileges包括：
+ONTAP tools for VMware vSphere 使用两种类型的 vSphere 权限。为了简化在此环境中使用 RBAC 的工作，ONTAP tools 提供了包含所需本机和自定义权限的角色。这些权限包括：
 
 * 原生 vCenter Server 特权
 +
@@ -61,4 +61,4 @@ vCenter Server权限是指在创建权限时绑定在一起的多个组件的软
 [[users-and-groups]]
 === 用户和组
 
-您可以使用 Active Directory 或本地 vCenter Server 实例定义用户和组。结合角色，您可以创建对 vSphere 对象层次结构中对象的权限。该权限根据关联角色中的特权授予访问权限。请注意，角色并非直接分配给单独用户。相反，用户和组通过角色特权获得对对象的访问权限，这是更大的 vCenter Server 权限的一部分。
+可以使用 Active Directory 或本地 vCenter Server 实例定义用户和组。结合角色，可以在 vSphere 对象层次结构中的对象上创建权限。权限根据关联角色中的特权授予访问权限。角色不会单独直接分配给用户。相反，用户和组作为更大的 vCenter Server 权限的一部分，通过角色特权获得对对象的访问权限。

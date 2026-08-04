@@ -11,7 +11,7 @@ summary: 使用 ONTAP tools Manager 管理设备、租户和存储后端。
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere支持多租户，可管理多个 vCenter Server 实例。
+ONTAP tools Manager 是一个基于 Web 的控制台，用于管理 ONTAP tools for VMware vSphere，包括 vCenter Server 实例、存储后端以及高可用性 (HA) 和节点扩展等设备配置。它支持多租户，因此您可以从单个界面管理多个 vCenter Server 实例。
 
 ONTAP工具管理器是一个基于 Web 的控制台，用于管理ONTAP tools for VMware vSphere。
 
@@ -20,14 +20,14 @@ ONTAP工具管理器提供以下功能：
 * 管理警报 - 查看和过滤由ONTAP tools for VMware vSphere生成的警报。
 * 管理存储后端 - 添加和管理ONTAP存储集群，并将其全局映射到 vCenter Server 实例。
 * 管理 vCenter Server 实例 - 在ONTAP工具中添加和管理 vCenter Server 实例。
-* 监控作业 - 监控和调试从 ONTAP tools 插件界面和 ONTAP tools Manager 界面启动的异步作业。您可以按时间段筛选作业、调整页面大小以及查看作业详细信息，包括错误和子任务。单击失败状态以查看错误详细信息。对于包含子任务的作业，请展开该行以查看描述和状态。对于子作业，请使用作业的下钻来查看详细信息。
+* Monitor jobs - 监控和调试从 ONTAP tools 插件界面和 ONTAP tools Manager 界面启动的异步作业。您可以按时间段筛选作业、调整页面大小以及查看作业详细信息，包括错误和子任务。选择失败状态以查看错误详细信息。对于包含子任务的作业，请展开该行以查看描述和状态。对于子作业，请使用作业的下钻功能查看详细信息。
 * 下载日志包 - 收集日志文件以排除ONTAP tools for VMware vSphere故障。
 * 管理证书 - 用自定义 CA 证书替换自签名证书，并续订或刷新 VASA Provider 和ONTAP工具的证书。
 * 重置密码 - 更改 VASA 提供程序和 SRA 的密码。
 * 管理设备设置 - 配置ONTAP工具设备，包括启用 HA 和扩大节点大小。
 
 
-要访问ONTAP工具管理器、请 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`从浏览器启动、然后使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
+要访问 ONTAP tools Manager，请从浏览器启动 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`，并使用部署期间提供的 ONTAP tools for VMware vSphere 管理员凭据登录。
 
 image:../media/ontap-tools-manager-overview.png["ONTAP工具管理器信息板概述"]
 
@@ -47,5 +47,5 @@ image:../media/ontap-tools-manager-overview.png["ONTAP工具管理器信息板�
 | 存储后端卡 | 存储后端卡显示ONTAP工具中配置的所有ONTAP存储集群的健康和连接状态。您可以通过选择相应的链接来查看每个存储后端的详细信息，该链接将导航到包含有关所选集群的更多信息的页面。 
 
 
-| ONTAP工具节点卡 | ONTAP工具节点卡显示设备中的所有节点，包括节点名称、虚拟机名称、状态和网络信息。选择“查看详细信息”以查看特定节点的更多详细信息。 [注意] 在非 HA 配置中，仅出现一个节点。在 HA 配置中，显示三个节点。 
+| ONTAP工具节点卡 | ONTAP tools 节点卡显示设备中的所有节点，包括节点名称、VM 名称、状态和网络信息。选择 *查看详细信息* 以查看特定节点的更多详细信息。[NOTE] 在非 HA 配置中，仅显示单个节点。在 HA 配置中，显示三个节点。 
 |===
