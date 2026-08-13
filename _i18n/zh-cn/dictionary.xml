@@ -2016,8 +2016,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">使用 ONTAP tools 中的阵列管理器配置 SRA</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">使用 ONTAP tools 在 VMware Live Site Recovery 设备上配置 SRA</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">在 ONTAP tools 中配置占位符数据存储区</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">在 ONTAP tools 中配置受保护站点和恢复站点</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">在 ONTAP tools 中配置适用于高度扩展环境的 SRA</block>
   <block id="366099eedc535323fc065faade609247" category="doc">在适用于 SAN 和 NAS 环境的 ONTAP tools 中配置 SRA</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">在 ONTAP tools 中配置 SRA 以保护数据存储区</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">ONTAP tools 中的扇出保护</block>
@@ -2851,7 +2849,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">有关详细信息，请参见 <block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">通过以下步骤将数据存储区添加到主机群集保护 <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block>。同时添加异步和同步策略类型。</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">在保护主机集群中的数据存储之前，了解粒度数据存储保护和数据存储资格标准。</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">粒度数据存储保护资格标准</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">使用粒度数据存储保护来保护主机集群中的选定 VMFS 数据存储，而不是保护整个集群。</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">ONTAP tools for VMware vSphere 10.6 及更高版本提供精细的数据存储保护。此功能提供数据存储级别的保护规划，而不是集群范围的选择。</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">此功能用于：</block>
@@ -3123,4 +3120,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">该页面列出了所有卷。您可以从 ONTAP 存储窗格中扩展或删除存储。ONTAP tools for VMware vSphere 不支持基于 ASA r2 系统的 vVols 数据存储区的此视图。</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">卸载适用于 VMware vSphere 的 ONTAP tools 部署</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">卸载 ONTAP tools for VMware vSphere 将删除工具中的所有数据，因此您必须完成这些步骤才能正常终止部署并避免意外数据丢失。</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">在 ONTAP tools 中配对站点并配置保护组</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">适用于 ONTAP tools 中高度扩展环境的 SRA 超时设置</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">ONTAP 工具中的粒度数据存储保护资格标准</block>
 </blocks>

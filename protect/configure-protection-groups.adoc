@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
 summary: 为受保护站点虚拟机创建保护组，并在将数据存储添加到受保护卷后更新存储发现。 
 ---
-= 在 ONTAP tools 中配置受保护站点和恢复站点
+= 在 ONTAP tools 中配对站点并配置保护组
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

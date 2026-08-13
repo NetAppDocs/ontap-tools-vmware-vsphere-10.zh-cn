@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
 summary: 在保护主机集群中的数据存储之前，了解粒度数据存储保护和数据存储资格标准。 
 ---
-= 粒度数据存储保护资格标准
+= ONTAP 工具中的粒度数据存储保护资格标准
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

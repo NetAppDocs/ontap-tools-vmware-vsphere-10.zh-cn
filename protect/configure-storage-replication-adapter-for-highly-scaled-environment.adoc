@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
 summary: 在高度扩展的环境中为 SRA 配置 VMware Live Site Recovery 存储提供程序超时设置。 
 ---
-= 在 ONTAP tools 中配置适用于高度扩展环境的 SRA
+= 适用于 ONTAP tools 中高度扩展环境的 SRA 超时设置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
