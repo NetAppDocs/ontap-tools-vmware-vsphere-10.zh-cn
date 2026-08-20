@@ -11,7 +11,7 @@ summary: 更改 vCenter Server 中 ESXi 主机的默认 nconnect 值。
 
 
 [role="lead"]
-使用此任务可更改所选 vCenter Server 中 ESXi 主机的默认连接数 (nconnect)。
+更改所选 vCenter 服务器中 ESXi 主机的默认连接数（nconnect）。
 
 .关于此任务
 * 此页面上设置的 nconnect 值为主机级默认值。

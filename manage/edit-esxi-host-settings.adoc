@@ -11,23 +11,23 @@ summary: 从 ONTAP tools 仪表板编辑 ESXi 主机设置。
 
 
 [role="lead"]
-使用 VMware vSphere 中的ONTAP工具仪表板来识别配置问题、选择 ESXi 主机、查看NetApp推荐的设置并应用它们。
+使用 VMware vSphere 中的 ONTAP tools 控制面板识别配置问题，查看选定 ESXi 主机的 NetApp 建议设置，并应用这些设置。
 
 .开始之前
 ESXi 主机系统 portlet 显示 ESXi 主机设置存在问题。选择问题以查看主机名或 IP 地址。
 
 .步骤
-. 登录到vSphere Client。
-. 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
-. 转到适用于VMware vSphere的ONTAP工具插件概述(信息板)中的*ESXi主机合规性* portlet。
-. 选择*应用建议设置*链接。
-. 在“应用推荐主机设置”窗口中，选择要使用NetApp推荐主机设置的主机，然后选择“下一步”。
+. 登录到 vSphere 客户端。
+. 在"快捷方式"页面上，选择"插件"部分下的"NetApp ONTAP tools"。
+. 转到 ONTAP tools for VMware vSphere 插件的概述仪表板上的 *ESXi Host compliance* portlet。
+. 选择*应用推荐设置*链接。
+. 在*应用推荐的主机设置*窗口中，选择要应用 NetApp 推荐的主机设置的主机，然后选择*下一步*。
 +
 
 NOTE: 您可以展开ESXi主机以查看当前值。
 
-. 在设置页面中、根据需要选择建议值。
-. 在摘要窗格中，检查这些值并选择*Complet*。您可以在最近任务面板中跟踪进度。
+. 在"设置"页面上，根据需要选择建议值。
+. 在摘要窗格中，检查值并选择*Finish*。您可以在"近期任务"面板中跟踪进度。
 
 
 .相关信息

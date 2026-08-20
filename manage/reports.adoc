@@ -11,10 +11,10 @@ summary: 在 ONTAP tools 插件中查看虚拟机和数据存储区报告。
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 插件提供的报告可帮助您监控由 ONTAP 存储支持的虚拟机和数据存储。要查看这些报告，请选择 vCenter 客户端快捷方式区域中的 ONTAP tools for VMware vSphere 插件图标，然后选择“报告”选项卡。
+ONTAP tools for VMware vSphere 插件提供报告，可帮助您监控由 ONTAP 存储支持的虚拟机和数据存储区。要查看报告，请在 vSphere Client 快捷方式部分中选择 ONTAP tools for VMware vSphere 插件图标，然后选择 *Reports* 选项卡。
 
-虚拟机报告列出了在基于 ONTAP 存储的数据存储上至少有一个磁盘的已发现虚拟机，以及性能指标。展开虚拟机记录时，界面会显示所有与磁盘相关的数据存储信息。
+虚拟机报告列出了在基于 ONTAP 存储的数据存储上至少有一个磁盘的已发现虚拟机，以及性能指标。展开虚拟机记录时，可以查看其磁盘的所有数据存储信息。
 
 数据存储库报告列出了 ONTAP tools for VMware vSphere 发现的、使用 ONTAP 存储的数据存储库及其性能指标。
 
-您可以使用"管理列"选项隐藏或显示不同的列。
+您可以使用*管理列*选项隐藏或显示列。

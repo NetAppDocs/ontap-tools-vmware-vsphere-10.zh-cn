@@ -11,14 +11,14 @@ summary: 在 ONTAP tools 中管理 vCenter 实例，以控制主机、虚拟机�
 
 
 [role="lead"]
-vCenter Server 实例是集中管理平台，可让您控制主机、虚拟机和存储后端。在 ONTAP tools 中，您可以分离存储后端、修改实例详细信息、删除实例和续订 vCenter Server 证书。
+使用 ONTAP tools 分离存储后端、修改 vCenter 服务器实例详细信息、删除实例和续订 vCenter 服务器证书。
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == 将存储后端与 vCenter Server 实例解除关联
 
-vCenter Server列表页面会显示相关的存储后端数量。每个vCenter Server实例都可以选择与存储后端关联或解除关联。
+vCenter Server 列表页面显示关联存储后端的数量。每个 vCenter Server 实例都可以与存储后端关联或解除关联。
 
 .步骤
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ vCenter Server列表页面会显示相关的存储后端数量。每个vCenter S
 [[modify-a-vcenter-server-instance]]
 == 修改vCenter Server实例
 
-通过完成以下步骤修改 vCenter Server 实例。
+要修改 vCenter Server 实例，请完成以下步骤。
 
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
@@ -100,7 +100,7 @@ vCenter 服务器实例不再由 ONTAP tools 管理。
 如果在删除过程中无法访问 vCenter 服务器：
 
 * ONTAP tools 删除 vCenter Server 记录。
-* 未进行插件注销。
+* 未发生插件注销。
 * 此时将显示警告。
 * 您必须从 VMware vCenter Server 手动注销该插件。
 
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. 复制输出结果并将其另存为文本文件。 `.pem` 桌面扩展程序。
+. 复制输出并将其另存为桌面上的 `.pem`文件。
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 从侧栏中选择适用的vCenter Server实例

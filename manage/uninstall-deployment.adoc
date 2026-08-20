@@ -11,7 +11,7 @@ summary: 正常终止 ONTAP tools for VMware vSphere 部署。
 
 
 [role="lead"]
-卸载 ONTAP tools for VMware vSphere 将删除工具中的所有数据，因此您必须完成这些步骤才能正常终止部署并避免意外数据丢失。
+卸载 ONTAP tools for VMware vSphere 会删除设备中的数据，因此请完成以下步骤以正常关闭部署并避免意外数据丢失。
 
 .步骤
 . 从适用于VMware vSphere托管的数据存储库的ONTAP工具中删除或移动所有虚拟机。
@@ -21,7 +21,7 @@ summary: 正常终止 ONTAP tools for VMware vSphere 部署。
 
 
 . link:../manage/delete-ds.html["删除数据存储库"]在适用于VMware vSphere的ONTAP工具上创建。
-. 如果已启用VASA Provider、请在ONTAP工具中选择*设置*>* VASA Provider设置*>*注销*、以便从所有vCenter Server中取消注册VASA Provider。
+. 如果您已启用 VASA Provider，请在 ONTAP tools 中选择 *设置* > *VASA Provider 设置* > *注销*，以从所有 vCenter Server 实例中注销 VASA Provider。
 . 解除所有存储后端与vCenter Server实例的关联。请参阅 link:../manage/manage-vcenter.html["断开存储后端与vCenter Server实例的关联"]。
 . 删除所有存储后端。请参阅 link:../manage/storage-backend.html["管理存储后端"]。
 . 从VMware Live Site Recovery中删除SRA适配器：

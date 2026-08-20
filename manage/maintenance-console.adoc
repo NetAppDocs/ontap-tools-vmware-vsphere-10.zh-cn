@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: 管理 ONTAP tools 配置、重置密码、生成支持捆绑包和配置 TLS 设置。 
 ---
-= 了解 ONTAP tools 维护控制台
+= ONTAP tools 维护控制台
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: 管理 ONTAP tools 配置、重置密码、生成支持捆绑包和配�
 [role="lead"]
 ONTAP tools for VMware vSphere的维护控制台使您能够管理应用程序、系统和网络设置。您可以更新管理员和维护密码、生成支持包、配置日志级别、管理 TLS 设置以及启用远程诊断。
 
-部署适用ONTAP tools for VMware vSphere后，如果无法访问维护控制台，请从 vCenter Server 安装 VMware 工具。使用以下方式登录 `maint`部署期间设置的用户名和密码。使用 *nano* 在维护控制台或 root 登录控制台中编辑文件。
+部署 ONTAP tools for VMware vSphere 后，如果无法访问维护控制台，请从 vCenter Server 安装 VMware Tools。使用 `maint`用户名和部署期间设置的密码登录。使用 *nano* 在维护或 root 登录控制台中编辑文件。
 
 
-NOTE: 您应设置的密码 `diag` 用户。
+NOTE: 启用远程诊断时，请为 `diag`用户设置密码。
 
-您应使用为VMware vSphere部署的ONTAP工具的*摘要*选项卡来访问维护控制台。选择后image:../media/launch-maintenance-console.gif["播放按钮"]，维护控制台将启动。
+使用已部署的 ONTAP tools for VMware vSphere 的*摘要*选项卡访问维护控制台。选择 image:../media/launch-maintenance-console.gif["播放按钮"] 以启动维护控制台。
 
 |===
 

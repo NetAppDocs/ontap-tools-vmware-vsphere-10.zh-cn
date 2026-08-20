@@ -11,7 +11,7 @@ summary: 删除 NFS、VMFS 或 vVols 数据存储，并在删除前检查使用�
 
 
 [role="lead"]
-使用此任务通过 vCenter Server 中的 ONTAP tools 删除 NFS、VMFS 或 vVols 数据存储。删除行为和清理选项因数据存储类型而异。
+使用 ONTAP tools 在 vCenter Server 中删除 NFS、VMFS 或 vVols 数据存储。删除行为和清理选项因数据存储类型而异。
 
 .NFS 和 VMFS 数据存储的删除行为
 * 无法删除虚拟机使用的数据存储。
@@ -24,7 +24,7 @@ summary: 删除 NFS、VMFS 或 vVols 数据存储，并在删除前检查使用�
 * vVol 容器已卸载。
 * 如果未使用 igroup，则将其启动器从 igroup 中删除。
 * vVol 容器已被删除。
-* 弹性卷留在存储阵列上。
+* FlexVol 卷保留在存储后端。
 
 
 对于 vVols 数据存储库，只有在所选数据存储库中不存在 vVols 时，您才能删除该数据存储库。
@@ -50,7 +50,7 @@ summary: 删除 NFS、VMFS 或 vVols 数据存储，并在删除前检查使用�
 |===
 .步骤
 . 登录到 vSphere 客户端。
-. 右键单击主机系统、主机集群或数据中心，然后选择 * NetApp ONTAP工具* > * 删除数据存储*。
+. 右键单击主机系统、主机集群或数据中心，然后选择*NetApp ONTAP tools* > *Delete datastore*。
 +
 
 NOTE: 无法删除虚拟机使用的数据存储库。请在删除之前将虚拟机移动到另一个数据存储库。

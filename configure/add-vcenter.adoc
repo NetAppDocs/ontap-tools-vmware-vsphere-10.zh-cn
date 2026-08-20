@@ -11,7 +11,7 @@ summary: 将 vCenter Server 实例添加到 ONTAP tools，以配置、管理和�
 
 
 [role="lead"]
-将 vCenter Server 实例添加到 ONTAP tools for VMware vSphere，以配置、管理和保护 vCenter Server 环境中的数据存储。添加多个 vCenter Server 实例时，需要自定义 CA 证书才能在 ONTAP tools 和每个 vCenter Server 之间进行安全通信。
+将 vCenter Server 实例添加到 ONTAP tools for VMware vSphere，以配置、管理和保护 vCenter Server 环境中的数据存储。添加多个 vCenter Server 实例时，请配置自定义 CA 证书，以实现 ONTAP tools 与每个 vCenter Server 之间的安全通信。
 
 .关于此任务
 ONTAP工具与 vCenter Server 集成，可直接从 vSphere 客户端执行配置、快照和数据保护等存储任务。
@@ -19,8 +19,8 @@ ONTAP工具与 vCenter Server 集成，可直接从 vSphere 客户端执行配�
 将vCenter Server实例添加到ONTAP工具会自动触发以下操作：
 
 * ONTAP工具将 vCenter 客户端插件注册为远程插件。
-* 此插件和API的自定义Privileges将应用于vCenter Server实例。
-* 创建自定义角色以管理用户。
+* ONTAP tools 将插件和 API 的自定义 Privileges 应用于 vCenter Server 实例。
+* ONTAP tools 创建自定义角色以管理用户。
 * 此插件会在vSphere用户界面上显示为快捷方式。
 
 
@@ -37,7 +37,7 @@ X509v3 extensions:
 如果证书不包括 SAN 扩展，或者 SAN 扩展不包含正确的 DNS 或 IP 地址值，则 ONTAP tools 操作可能会由于证书验证错误而失败。
 
 * SAN 详细信息中必须包含 vCenter Server 的主网络标识符 (PNID)。PNID 和 DNS 名称应相同且可在 DNS 中解析。
-* 建议使用其完全限定的域名 (FQDN) 部署 vCenter Server，确保证书中的 SAN 包含 DNS Name=machine_FQDN，以获得最佳兼容性和支持。
+* 使用完全限定域名 (FQDN) 部署 vCenter Server，并确保证书中的 SAN 包含 DNS Name=machine_FQDN，以获得最佳兼容性和支持。
 * 有关详细信息，请参见 VMware 文档：
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["不同解决方案路径的 vSphere 证书要求"]
@@ -49,7 +49,7 @@ X509v3 extensions:
 
 [NOTE]
 ====
-如果 FQDN 不可用，您可以将 PNID 设置为 IP 地址，并将 IP 地址包含在 SAN 中。但是，VMware 不建议这样做。
+如果 FQDN 不可用，您可以将 PNID 设置为 IP 地址，并将 IP 地址包含在 SAN 中。但是，VMware 不推荐此配置。
 
 ====
 .步骤
@@ -59,6 +59,6 @@ X509v3 extensions:
 . 在高级选项中，自动获取 vCenter Server 证书（授权）或手动上传。
 +
 
-NOTE: 您不需要管理员帐户即可将vCenter实例添加到ONTAP工具。您可以创建自定义角色、而无需具有有限权限的管理员帐户。有关详细信息、请参见 link:../concepts/rbac-vcenter-use.html["将vCenter Server RBAC与适用于VMware vSphere 10的ONTAP工具结合使用"] 。
+NOTE: 您无需管理员账号即可将vCenter实例添加到 ONTAP tools。您可以创建不含管理员账号且权限受限的自定义角色。有关详细信息，请参阅 link:../concepts/rbac-vcenter-use.html["将vCenter Server RBAC与适用于VMware vSphere 10的ONTAP工具结合使用"]。
 
 

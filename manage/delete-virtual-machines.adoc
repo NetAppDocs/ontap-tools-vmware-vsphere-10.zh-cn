@@ -11,14 +11,14 @@ summary: 删除虚拟机后运行 VASA 清理。
 
 
 [role="lead"]
-要完成 VASA 清理过程，请按照以下步骤操作。
+按照以下步骤在 ONTAP tools 中完成 VASA 清理。
 
 
-NOTE: 建议在开始 VASA 清理之前删除所有vVols数据存储。
+NOTE: 在开始 VASA 清理之前，请删除所有 vVols 数据存储区。
 
 .步骤
-. 转到\https://OTV_IP:8143/Register.html以取消注册此插件
+. 打开 `\https://OTV_IP:8143/Register.html`以注销插件。
 . 确认此插件在vCenter Server上不再可用。
-. 关闭适用于VMware vSphere VM的ONTAP工具。
+. 关闭 ONTAP tools for VMware vSphere 虚拟机 (VM)。
 . 删除适用于VMware vSphere VM的ONTAP工具。
 

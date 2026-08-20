@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: install NFS VAAI plug-in, NetApp NFS Plug-in for VAAI, ONTAP tools VAAI installation, vSphere NFS offload 
 summary: 使用 ONTAP tools for VMware vSphere 安装 NetApp NFS Plug-in for VAAI。 
 ---
-= 使用ONTAP工具安装 NFS VAAI 插件
+= 使用 ONTAP tools 安装 NFS VAAI 插件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NFS vStorage API for Array Integration (NFS VAAI) 插件将 VMware vSphere 连接到 NFS 存储阵列。使用适用ONTAP tools for VMware vSphere安装 VAAI 插件。这允许 NFS 存储阵列代替 ESXi 主机处理某些存储操作。
+NFS vStorage API for Array Integration (NFS VAAI) 插件将 VMware vSphere 连接到 NFS 存储阵列，允许存储阵列处理某些存储操作，而无需 ESXi 主机执行。使用 ONTAP tools for VMware vSphere 安装 VAAI 插件。
 
 .开始之前
 * 下载 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["适用于 VMware VAAI 的 NetApp NFS 插件"]安装包。
@@ -21,7 +21,7 @@ NFS vStorage API for Array Integration (NFS VAAI) 插件将 VMware vSphere 连�
 
 .步骤
 . 登录到vSphere Client。
-. 选择插件部分下的*快捷方式*>* NetApp ONTAP tools*。
+. 在插件部分下选择*快捷方式* > *NetApp ONTAP tools*。
 . 选择*设置* > *NFS VAAI 工具*。
 . 如果您已经将 VAAI 插件上传到 vCenter Server，请在 *现有版本* 中选择 *更改*。如果还没有，请选择*上传*。
 . 浏览并选择 `.vib`文件，然后选择*Upload*将文件上传到ONTAP工具。

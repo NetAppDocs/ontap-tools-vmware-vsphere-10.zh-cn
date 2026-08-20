@@ -11,7 +11,7 @@ summary: 首次启动时，在 ONTAP tools 中发现 ESXi 主机、LUN、NFS 导
 
 
 [role="lead"]
-当首次在 vSphere Client 中启动ONTAP tools for VMware vSphere时，它会自动发现 ESXi 主机、其关联的 LUN 和 NFS 导出，以及拥有这些资源的NetApp存储系统。
+当您首次在 vSphere Client 中启动 ONTAP tools for VMware vSphere 时，它会自动发现 ESXi 主机、其关联的 LUN 和 NFS 导出以及拥有这些资源的 NetApp 存储系统。
 
 .开始之前
 * 确保所有 ESXi 主机都已开机并连接。

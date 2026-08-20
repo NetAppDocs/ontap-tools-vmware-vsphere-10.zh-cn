@@ -11,15 +11,15 @@ summary: 将 VMware vSphere 主机添加到 ONTAP tools for VMware vSphere。
 
 
 [role="lead"]
-将新的 VMware vSphere 主机添加到ONTAP tools for VMware vSphere，以管理和保护主机上的数据存储。
+将新的 VMware vSphere 主机添加到 ONTAP tools for VMware vSphere，以便您可以管理和保护主机数据存储库。
 
 .步骤
 . 按照 https://techdocs.broadcom.com/["Broadcom 技术文档"]将主机添加到 VMware vSphere 集群。
-. 添加主机后，转到ONTAP工具主菜单，然后在概览面板中选择“发现”。等待调查过程完成。或者，您可以等待计划的主机发现完成。
+. 添加主机后，请转到 ONTAP tools 主菜单，然后在概览面板中选择 *发现*，或等待计划的主机发现操作完成。
 
 
 .结果
-现在， ONTAP tools for VMware vSphere可以发现并管理新的主机。您可以继续在新主机上管理数据存储。
+新主机现在由 ONTAP tools for VMware vSphere 发现和管理。您现在可以在主机上管理数据存储库。
 
 .相关主题
 * link:../manage/mount-a-vvols-datastore.html["挂载 VVOL 数据存储库"]在新主机上。

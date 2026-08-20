@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: 了解 ONTAP tools 如何表示和管理嵌套 igroup，以实现高效的主机和数据存储映射。 
 ---
-= ONTAP tools 如何管理 igroup
+= ONTAP tools 中的嵌套 igroup 管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果您同时管理 ONTAP 工具虚拟机和 ONTAP 存储系统，则需要了解 igroups 的行为方式，特别是在将数据存储从非由 ONTAP 工具管理的环境移动到由 ONTAP 工具管理的环境时。ONTAP tools for VMware vSphere 使用嵌套的 igroup 模型来表示和管理 igroup，了解此模型有助于解释早期版本与当前实现之间的行为差异。
+如果将数据存储区从非 ONTAP tools 管理的环境移动到由 ONTAP tools 管理的环境，请了解 igroups 的行为方式。ONTAP tools for VMware vSphere 使用嵌套的 igroup 模型，这有助于解释早期版本和当前实现之间的行为差异。
 
-从 ONTAP tools for VMware vSphere 10.4 开始，ONTAP tools 会自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。从 ONTAP tools for VMware vSphere 10.5 P2 开始，迁移的 igroup 在不再使用时也会自动删除。
+从适用于 VMware vSphere 10.4 的 ONTAP tools 开始，ONTAP tools 会自动创建和维护 ONTAP 和 vCenter 对象，从而简化 VMware 数据中心环境中的数据存储管理。从适用于 VMware vSphere 10.5 P2 的 ONTAP tools 开始，ONTAP tools 还会在迁移的 igroup 不再使用时自动将其删除。
 
 
 

@@ -11,7 +11,7 @@ summary: 添加 NTP 服务器详细信息以同步 ONTAP tools 中的设备时�
 
 
 [role="lead"]
-输入NTP服务器详细信息以同步ONTAP工具设备的时钟。
+输入 NTP 服务器详细信息以同步 ONTAP tools 设备时钟。
 
 
 NOTE: 从 ONTAP tools for VMware vSphere 10.6 开始，时间同步守护进程为 chronyd，而非 ntpd。升级到 10.6 期间，现有 NTP 服务器设置将自动迁移。无需手动重新配置。
@@ -20,7 +20,7 @@ NOTE: 从 ONTAP tools for VMware vSphere 10.6 开始，时间同步守护进程�
 . 从Web浏览器启动ONTAP工具管理器： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期间提供的适用于VMware vSphere的ONTAP工具管理员凭据登录。
 . 选择*Settings*>*NTP server*>*Edit*选项。
-. 输入逗号分隔的完全限定域名 (FQDN) 或 IPv4 地址。
+. 输入以逗号分隔的完全限定域名 (FQDN) 或 IPv4 地址。
 +
 刷新屏幕以查看更新的值。
 

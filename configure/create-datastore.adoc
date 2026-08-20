@@ -11,9 +11,12 @@ summary: 在主机或主机群集级别的 ONTAP tools 中创建 NFS、VMFS 或 
 
 
 [role="lead"]
-当您在主机集群级别创建数据存储库时， ONTAP工具会将其挂载到所有目标主机上，并且仅当您拥有所需的权限时才启用该操作。
+在主机或主机集群级别创建 NFS、VMFS 或 vVols 数据存储。在主机集群级别创建数据存储时，ONTAP tools 会将其挂载到所有目标主机上，前提是您具有所需的 Privileges。
 
-*本机数据存储与 vCenter Server 和 ONTAP 工具管理的数据存储之间的互操作性*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== 本机数据存储区和 ONTAP tools 托管数据存储区之间的互操作性
 
 从适用于ONTAP tools for VMware vSphere开始， ONTAP工具为数据存储区创建嵌套 igroup，其中父 igroup 特定于数据存储区，子 igroup 映射到主机。您可以从ONTAP系统管理器创建平面 igroup，并使用它们创建 VMFS 数据存储库，而无需使用ONTAP工具。参考 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 启动器和 igroup"]了解更多信息。
 
@@ -43,7 +46,7 @@ NOTE: ASA R2系统支持对虚拟卷使用iSCSI和FC协议。
 . 选择要在其中创建数据存储库的Storage VM。
 . 在*高级选项*下：
 +
-** 如果选择*自定义导出策略*，请在继续之前先在 vCenter 中对所有对象运行发现。建议您不要使用此选项。
+** 如果选择*自定义导出策略*，请在继续之前在 vCenter 中对所有对象运行发现。NetApp 建议不要使用此选项。
 ** 您可以为 iSCSI 和 FC 协议选择*自定义启动器组*名称。
 +
 
@@ -61,7 +64,7 @@ NOTE: 对于 ASA r2 SVM，不会创建存储单元（LUN/命名空间），因�
 --
 .创建NFS数据存储库
 --
-NFS 数据存储区使用 NFS 协议将 ESXi 主机连接到共享存储。它简单灵活，适用于 VMware vSphere 环境。
+NFS 数据存储区使用 NFS 协议将 ESXi 主机连接到共享存储。它简单而灵活，VMware vSphere 环境通常使用它。
 
 .步骤
 . 登录到 vSphere 客户端。
@@ -84,7 +87,7 @@ NOTE: 只有在选择了NFS 4.1协议时、才能使用Kerberos身份验证。
 NOTE: 您不能使用 SVM 的默认或根卷策略创建 NFS 数据存储库。
 
 +
-** 在*高级选项*中，*非对称*切换按钮仅在平台下拉列表中选择性能或容量时才可见。但是，*非对称*选项不适用于 NFS 数据存储区创建。
+** 在*高级选项*中，只有在平台下拉列表中选择性能或容量时，才能看到*非对称*切换按钮。但是，*非对称*选项不适用于 NFS 数据存储区创建。
 ** 当您在平台下拉列表中选择*任何*选项时，vCenter 中的所有 SVM 都可见。平台和非对称设置不会影响可见性。
 
 

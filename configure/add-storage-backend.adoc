@@ -11,11 +11,11 @@ summary: 为 vCenter 实例本地添加和管理存储后端，或为 ONTAP 工�
 
 
 [role="lead"]
-使用ONTAP tools for VMware vSphere，为您的 ESXi 主机添加和管理存储后端。您可以部署集群或 SVM，启用MetroCluster支持，并验证证书以确保安全连接。您可以使用ONTAP工具管理器或 vSphere 客户端配置存储后端，监控证书状态，并在集群更改后手动重新发现资源。
+使用 ONTAP tools for VMware vSphere 为您的 ESXi 主机添加和管理存储后端，包括加载集群或 SVM、启用 MetroCluster 支持以及验证证书以实现安全连接。您可以使用 ONTAP tools Manager 或 vSphere Client 配置存储后端，监控证书状态，并在集群更改后手动重新发现资源。
 
 要在本地添加存储后端，请在ONTAP工具界面中使用集群或 SVM 凭据。本地存储后端仅对选定的 vCenter Server 可用。ONTAP工具将 SVM 映射到 vCenter Server 以进行vVols或 VMFS 数据存储库管理。对于 VMFS 数据存储和 SRA 工作流，您可以使用 SVM 凭据而无需全局映射集群。
 
-要添加全局存储后端，请在ONTAP工具管理器中使用ONTAP集群凭据。全局存储后端支持发现工作流，以识别 vVol 管理所需的集群资源。在多租户环境中，您可以本地添加 SVM 用户来管理vVols数据存储。
+要添加全局存储后端，请在 ONTAP tools Manager 中使用 ONTAP 集群凭据。全局存储后端使发现工作流能够识别 vVols 管理所需的集群资源。在多租户环境中，您可以在本地添加 SVM 用户以管理 vVols 数据存储库。
 
 有关全局和本地存储后端的更多信息，请参见 KB 文章： https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10：什么是存储后端全局和本地范围"^]。
 
@@ -76,7 +76,7 @@ NOTE: ONTAP系统执行切换和切回后，手动运行ONTAP工具发现。
 
 --
 ====
-ONTAP工具在 *存储后端* 页面上列出了新添加的存储后端。如果证书在 30 天或更短时间内过期， ONTAP工具会在证书过期日期列中显示警告。到期后， ONTAP工具会将存储后端标记为未知，因为它无法连接到存储系统。
+ONTAP tools 在 *存储后端* 页面上列出了新添加的存储后端。如果证书在 30 天或更短时间内过期，ONTAP tools 会在证书过期日期列中显示警告。过期后，ONTAP tools 会将存储后端标记为未知，因为它无法连接到存储系统。
 
 .相关信息
 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10：什么是存储后端全局和本地范围"^]

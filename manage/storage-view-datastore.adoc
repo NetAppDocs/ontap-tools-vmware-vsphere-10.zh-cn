@@ -11,7 +11,7 @@ summary: 从 ONTAP tools for VMware vSphere 中的 ONTAP 存储页面查看数�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 在"配置"选项卡上显示数据存储及其卷的 ONTAP 存储端视图，包括每个数据存储类型的存储后端、聚合和卷详细信息。
+ONTAP tools for VMware vSphere 在*配置*选项卡上显示数据存储及其卷的 ONTAP 端详细信息，包括每种数据存储类型的存储后端、聚合和卷详细信息。
 
 .步骤
 . 在 vSphere Client 清单中，选择数据存储库。

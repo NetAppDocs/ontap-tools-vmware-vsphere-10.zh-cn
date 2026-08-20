@@ -11,7 +11,7 @@ summary: '使用 ONTAP tools Manager 扩展 ONTAP tools 设备并配置高可用
 
 
 [role="lead"]
-使用 ONTAP tools Manager 扩展您的设备并配置高可用性 (HA)。默认情况下，ONTAP tools for VMware vSphere 部署为单节点、非 HA 配置。
+使用 ONTAP tools Manager 扩展设备或配置高可用性 (HA)。默认情况下，ONTAP tools for VMware vSphere 部署为单节点、非 HA 配置。
 
 .开始之前
 * 请确保您的 OVA 模板与节点 1（初始部署节点）的版本相匹配。
@@ -30,7 +30,7 @@ NOTE: 您只能增加节点大小，而不能减少它。超小型 (XS) 部署�
 . 在 *Configuration* 部分，选择您的新节点大小并切换 HA 开关以启用高可用性。
 . 在 *HA 设置*页面上，验证以下内容：
 +
-** 内容库位于 ONTAP tools 虚拟机将运行的同一 vCenter 服务器上。
+** 内容库驻留在运行 ONTAP tools 虚拟机 (VM) 的同一 vCenter Server 上。
 ** ONTAP tools 虚拟机部署在集群或资源池中，而不是直接部署在 ESXi 主机上。
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: 启用 HA 后，无法恢复到非 HA 单节点配置。
 
 . 在 *HA settings* 部分，输入节点 2 和 3 的网络详细信息。ONTAP tools 在 HA 模式下支持三个节点。
 +
-ONTAP tools 使用节点 1 网络设置预填充大多数字段。您可以在完成向导之前编辑这些值。仅当在管理节点上启用 IPv6 时，IPv6 地址条目才可用。确保每个 ESXi 主机仅托管一个 ONTAP tools 虚拟机。
+ONTAP tools 会使用节点 1 网络设置预填充大多数字段。您可以在完成向导之前编辑这些值。仅当在管理节点上启用 IPv6 时，IPv6 地址条目才可用。确保每台 ESXi 主机仅运行一个 ONTAP tools 虚拟机。
 
 . 查看摘要，然后单击 *Save*。
 

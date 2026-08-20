@@ -11,7 +11,7 @@ summary: 查看 ONTAP tools 如何捕获、保留和监控审核日志，以确�
 
 
 [role="lead"]
-使用此任务可在 ONTAP tools for VMware vSphere 中管理审核日志记录行为和操作响应。审核日志提供了一个事件跟踪，显示谁执行了操作、执行了哪些操作、何时发生、请求源以及操作是成功还是失败。
+在 ONTAP tools for VMware vSphere 中管理审核日志记录。审核日志显示谁执行了操作、发生了什么、何时发生、请求源以及操作是成功还是失败。
 
 .开始之前
 * 确保您拥有 ONTAP tools Manager 的管理员访问权限。

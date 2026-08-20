@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
 summary: 通过将符合条件的 VMFS 数据存储区添加到具有 SnapMirror 复制的保护组来保护该数据存储区。 
 ---
-= 保护 VMFS 数据存储库
+= 保护 ONTAP tools 中的 VMFS 数据存储区
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-使用此任务可通过将符合条件的 VMFS 数据存储区添加到保护组来对其进行保护。
+通过将符合条件的 VMFS 数据存储区添加到保护组来保护该数据存储区。
 
 .开始之前
 * 确保数据存储库使用 iSCSI 或 FC 协议。
@@ -24,7 +24,7 @@ summary: 通过将符合条件的 VMFS 数据存储区添加到具有 SnapMirror
 . 选择一个主机集群并选择 *Datastores*。
 . 右键单击要保护的合格 VMFS 数据存储库，然后选择 *NetApp ONTAP tools* > *保护*。
 +
-系统会检查数据存储区是否符合保护条件。如果数据存储区符合条件，则继续执行保护工作流程。如果数据存储区不符合条件，则会显示一条消息说明原因，无法继续操作。
+系统会检查数据存储区是否符合保护条件。如果数据存储区符合条件，则继续执行保护工作流程。如果数据存储区不符合条件，则会显示一条消息说明原因，您将无法继续操作。
 
 . 选择是将数据存储添加到现有保护组还是创建新的保护组。
 +

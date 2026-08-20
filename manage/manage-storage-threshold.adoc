@@ -14,8 +14,8 @@ summary: 设置 vCenter Server 中卷和聚合容量级别的阈值通知。
 您可以设置存储阈值，以便在卷或聚合容量达到一定级别时在 vCenter Server 中接收通知。
 
 .步骤
-. 登录到vSphere Client。
-. 在快捷方式页面中，选择插件部分下的NetApp ONTAP tools*。
+. 登录到 vSphere 客户端。
+. 在*快捷方式*页面上，选择*插件*部分中的* NetApp ONTAP tools*。
 . 在ONTAP工具的左侧窗格中，转到 *设置* > *阈值设置* > *编辑*。
 . 在*编辑阈值*窗口中，在*近满*和*满*字段中提供所需的值，然后选择*保存*。
 +

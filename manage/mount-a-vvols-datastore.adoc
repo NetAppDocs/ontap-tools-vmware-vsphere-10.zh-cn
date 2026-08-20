@@ -11,10 +11,10 @@ summary: 将 vVols 数据存储挂载到其他主机，以提供跨虚拟环境�
 
 
 [role="lead"]
-可以将 VMware 虚拟卷（vVols）数据存储区装载到一个或多个其他主机，以便为其他主机提供存储访问权限。只能通过主机级 API 卸载 vVols 数据存储区。不支持集群级数据存储卸载。
+将 VMware 虚拟卷（vVols）数据存储区挂载到一个或多个其他主机以扩展存储访问。只能通过主机级 API 卸载 vVols 数据存储区。不支持集群级数据存储区卸载。
 
 
-NOTE: 添加主机后，等待计划的主机发现完成后，它才会显示在 ONTAP tools 中。或者，您可以从 NetApp ONTAP tools 概述屏幕手动运行发现。有关如何将 ESXi 主机添加到 vSphere 集群的信息，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]。
+NOTE: 添加主机后，等待计划的主机发现完成后，它才会显示在 ONTAP tools 中。或者，您可以从 NetApp ONTAP tools 概述屏幕手动运行发现。有关将 ESXi 主机添加到 vSphere 集群的信息，请参阅 https://techdocs.broadcom.com/["Broadcom 技术文档"]。
 
 .步骤
 . 在vSphere Client主页中、选择*主机和集群*。

@@ -11,15 +11,15 @@ summary: 移除 ONTAP tools 部署后，请删除未使用的 FlexVol 卷，以�
 
 
 [role="lead"]
-如果将专用ONTAP集群用于ONTAP工具以进行VMware部署、则会创建许多未使用的FlexVol卷。删除适用于VMware vSphere的ONTAP工具后、您应删除FlexVol卷、以避免可能对性能造成的影响。
+在专用 ONTAP 集群上部署 ONTAP tools for VMware vSphere 时，部署会创建许多未使用的 FlexVol 卷。删除 ONTAP tools 后，请删除未使用的 FlexVol 卷，以避免可能的性能影响。
 
 .步骤
-. 从ONTAP工具管理节点 VM 中查找ONTAP tools for VMware vSphere。运行以下命令检查部署类型：_cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
+. 从 ONTAP tools 管理节点 VM 确定 ONTAP tools for VMware vSphere 的部署类型。运行以下命令以检查部署类型：_cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 +
-如果是 iSCSI 部署，也需要删除 igroups。
+如果部署使用 iSCSI，请同时删除 igroup。
 
 . 获取FlexVol卷的列表。_kubectl 描述持久卷 | grep internalName | awk -F'=' '{print $2}'_
 . 从vCenter Server中删除VM。请参阅 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["删除并重新注册VM和VM模板"]。
 . 删除FlexVol卷。参考 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["删除 FlexVol 卷"]。在 CLI 命令中输入确切的FlexVol volume名称以删除卷。
-. 如果部署了iSCSI、请从ONTAP存储系统中删除SAN igrou。请参阅 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["查看和管理SAN启动程序和igroup"]。
+. 对于 iSCSI 部署，请从 ONTAP 存储后端删除 SAN igroup。请参阅 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["查看和管理SAN启动程序和igroup"]。
 

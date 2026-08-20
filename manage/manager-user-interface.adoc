@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools Manager UI, appliance administration interface, tenant and backend management, ONTAP tools manager portal 
 summary: 使用 ONTAP tools Manager 管理设备、租户和存储后端。 
 ---
-= 了解 ONTAP tools Manager 用户界面
+= ONTAP工具管理器用户界面
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 使用 ONTAP tools Manager 管理设备、租户和存储后端。
 
 [role="lead"]
 ONTAP tools Manager 是一个基于 Web 的控制台，用于管理 ONTAP tools for VMware vSphere，包括 vCenter Server 实例、存储后端以及高可用性 (HA) 和节点扩展等设备配置。它支持多租户，因此您可以从单个界面管理多个 vCenter Server 实例。
-
-ONTAP工具管理器是一个基于 Web 的控制台，用于管理ONTAP tools for VMware vSphere。
 
 ONTAP工具管理器提供以下功能：
 
@@ -38,7 +36,7 @@ image:../media/ontap-tools-manager-overview.png["ONTAP工具管理器信息板�
 | 设备卡 | 设备卡显示ONTAP工具设备的整体状态、配置详细信息以及已启用服务的状态。要查看更多信息，请选择“查看详细信息”链接。如果您更改设备设置，卡片将显示作业状态和详细信息，直到更改完成。 
 
 
-| 警报卡 | 警报卡显示按类型分类的ONTAP工具警报，包括 HA 节点级警报。您可以通过单击计数超链接来查看详细警报，该超链接将带您进入按所选警报类型过滤的警报页面。 
+| 警报卡 | 警报卡显示按类型分类的 ONTAP tools 警报，包括 HA 节点级警报。您可以通过选择计数链接查看详细警报，该链接将转到按所选警报类型过滤的警报页面。 
 
 
 | vCenters 卡 | vCenters 卡显示由ONTAP工具管理的所有 vCenter Server 实例的健康状况。您可以通过选择相应的链接来查看每个 vCenter 的详细信息，该链接将导航到包含有关所选实例的更多信息的页面。 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection 
 summary: 查看、编辑和删除主机群集保护的主机群集配置设置。 
 ---
-= 在 ONTAP tools 中管理集群配置
+= 在 ONTAP tools 中管理主机集群配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ summary: 查看、编辑和删除主机群集保护的主机群集配置设置�
 +
 .. 要编辑配置，请选择 *Edit* 并更新所需的设置。有关详细信息，请参阅 link:../protect/config-proximity.html["使用 ONTAP tools 配置用于数据存储保护的集群"]。
 +
-将新主机添加到集群时，现有集群配置设置不会自动应用于该主机。编辑现有集群配置并将新主机分配给相应的站点。
+向集群添加新主机时，ONTAP tools 不会自动将现有集群配置设置应用于该主机。编辑现有集群配置，并将新主机分配给相应的站点。
 
 .. 要删除配置，请选择 *Remove* 并在对话框中确认删除。
 

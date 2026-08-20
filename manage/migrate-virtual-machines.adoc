@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: 在迁移数据中心中的现有虚拟机之前，请查看主要注意事项。 
 ---
-= 了解 ONTAP tools 中的虚拟机迁移和克隆
+= ONTAP tools 中的虚拟机迁移和克隆
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 支持所有主要类型的虚拟机迁移，包括仅计算（vMotion）、仅存储（Storage vMotion）以及跨所有数据存储的计算和存储组合迁移。了解这些迁移和克隆注意事项以及最佳实践，有助于您取得成功的结果，无论底层数据存储类型如何。
+查看 ONTAP tools for VMware vSphere 的虚拟机迁移和克隆注意事项，包括仅计算（vMotion）、仅存储（Storage vMotion）以及跨支持的数据存储类型的组合计算和存储迁移。
 
 
 
