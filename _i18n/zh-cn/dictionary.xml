@@ -1838,7 +1838,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="e6452e8e9c18000281aae81760220823" category="list-text">从诊断 shell 获取更新后的 vCenter 证书：</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">在使用ONTAP tools for VMware vSphere 10 时，需要考虑两种不同的 RBAC 环境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都拥有特定的权限才能执行操作。虽然ONTAP工具可以自动执行存储管理任务，但它不会在 vCenter 或ONTAP中创建用户帐户。服务帐户必须由 vSphere 管理员根据需要创建。本文档为管理员提供指导，以便分配必要的角色和权限，从而有效地管理ONTAP工具。</block>
-  <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">ONTAP tools REST API 参考</block>
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">进行首次 ONTAP tools REST API 调用</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">了解 ONTAP tools REST API</block>
   <block id="5a605ad8e95d1a9f3283371391a80135" category="doc">ONTAP tools REST API 实施详细信息</block>
@@ -1851,9 +1850,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="95d5cac81150e067965210d361bbfb2f" category="doc">在 ONTAP tools 中创建数据存储库</block>
   <block id="287275745bfa919e80da387835621319" category="doc">在 ONTAP tools 中发现存储系统和主机</block>
   <block id="e697d4e8f25b738f21f477e610eec27a" category="doc">在 ONTAP tools 中向 vCenter Server 实例注册 VASA Provider</block>
-  <block id="7f3151e275294a9f61ed00de889273e2" category="doc">排除 ONTAP tools 部署错误</block>
   <block id="294a9fea24dd193e76e09982dc7598f8" category="doc">ONTAP tools 的高可用性部署工作流程</block>
-  <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="doc">部署 ONTAP tools</block>
   <block id="a852f7bb9ca4b2463cb324f20a03a33f" category="doc">ONTAP tools 的部署前要求</block>
   <block id="b5d2d3a15a4fc37813f0e8d92c8df16d" category="cell">高达 12K</block>
   <block id="1075c55fd78c4ee15842761b6be2c749" category="cell">高达 24K</block>
@@ -2992,7 +2989,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c0f9e2b5a70cb22ffbaec35e0963504a" category="cell">此卡显示按性能指标排序的前 10 个数据存储区。您可以选择标题，以按升序或降序对所选指标的前 10 个数据存储区进行排序。在您更改或清除浏览器缓存之前，对卡片进行的排序和过滤更改将保持不变。使用数据存储区类型下拉列表选择数据存储区类型：NFS、VMFS 或 vVols。</block>
   <block id="12de44e04cf272eb16b72ae12e77adcd" category="paragraph">当您首次在 vSphere Client 中启动 ONTAP tools for VMware vSphere 时，它会自动发现 ESXi 主机、其关联的 LUN 和 NFS 导出以及拥有这些资源的 NetApp 存储系统。</block>
   <block id="87aa71b46d12fe17cac2c0b855f379a3" category="list-text">右键单击所需的数据中心，然后选择*NetApp ONTAP tools* &gt; *更新主机和存储数据*。</block>
-  <block id="f5eb38e0d7510dc50906995da5266ad4" category="doc">使用 ONTAP tools 安装 NFS VAAI 插件</block>
   <block id="aa73e1a501dc6e18d7c4e895589d2005" category="paragraph">NFS vStorage API for Array Integration (NFS VAAI) 插件将 VMware vSphere 连接到 NFS 存储阵列，允许存储阵列处理某些存储操作，而无需 ESXi 主机执行。使用 ONTAP tools for VMware vSphere 安装 VAAI 插件。</block>
   <block id="a3b203702a6097601122fe2faf910248" category="list-text">在插件部分下选择*快捷方式* &gt; *NetApp ONTAP tools*。</block>
   <block id="7c0e08714c4cb3e8da61be850118b1f9" category="paragraph">输入 NTP 服务器详细信息以同步 ONTAP tools 设备时钟。</block>
@@ -3052,7 +3048,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="3e7ddae4cf1db8d9c002c8ea20899198" category="doc">在 ONTAP tools 中扩展 vVols 数据存储库</block>
   <block id="b0b62f1236c5866a65b083c891ba140b" category="paragraph">在 vCenter 对象视图中右键单击数据存储对象时，插件部分会显示 ONTAP tools for VMware vSphere 支持的操作。可用操作取决于数据存储类型和当前用户 Privileges。</block>
   <block id="95e9c1a7d2cfd152c5a51f8703f540dc" category="admonition">此过程不适用于基于 ASA r2 系统的 vVols 数据存储。</block>
-  <block id="eb50753fe343f5a3bd1299b243db9237" category="doc">ONTAP tools 中的 Igroup 和导出策略工作流</block>
   <block id="f8b2875ad5502793710c9bdefd26c541" category="paragraph">使用此信息了解 ONTAP tools for VMware vSphere 如何创建和管理用于数据存储区访问的 igroup 和导出策略。</block>
   <block id="e71c2200ee51ec842f21452effc78de6" category="paragraph">在适用于 VMware vSphere 9.x 的 ONTAP tools 中，igroup 是在平面结构中创建和管理的，其中 vCenter 中的每个数据存储区都与单个 igroup 相关联。此模型限制了跨多个数据存储区的 igroup 的灵活性和重用。ONTAP tools for VMware vSphere 10.4 引入了嵌套 igroup，其中 vCenter 中的每个数据存储区都与父 igroup 相关联，而每个主机都链接到该父 igroup 下的子 igroup。您可以使用用户定义的名称定义自定义父 igroup，以便跨数据存储区重用，从而使 igroup 管理更加简便。使用此信息了解 ONTAP tools for VMware vSphere 如何通过 igroup 工作流管理 LUN 和数据存储库。不同的工作流会生成不同的 igroup 配置，如以下示例所示：</block>
   <block id="b4620fbb34dbdb976eca43eee22b9fc4" category="paragraph">ONTAP tools for VMware vSphere 创建子 igroup host2Igroup 并将其添加到现有父 igroup DS1Igroup。</block>
@@ -3129,4 +3124,18 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ae70d77fff05174738fe4cb76f19e0a2" category="doc">在 ONTAP tools 中查看虚拟机存储详细信息</block>
   <block id="cac5f85fabd72ec42e30d493b57a81da" category="paragraph">使用存储视图可查看与虚拟机关联的 vVols。</block>
   <block id="82199557859e59cf6898b255cd98ea3f" category="list-text">选择 *NetApp ONTAP tools* &gt; *Storage*。右侧窗格上将显示 *Storage* 详细信息。您可以查看虚拟机上的 vVols 列表。</block>
+  <block id="5a66ba13a8dc00ed8bcea0c5323f9dec" category="doc">在 Swagger UI 中查看 ONTAP tools REST API 文档</block>
+  <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">在 ONTAP tools 中将存储后端与 vCenter Server 实例关联</block>
+  <block id="8761e266bba00679b7078b2ece451295" category="doc">使用 ONTAP tools 安装 NFS VAAI 插件</block>
+  <block id="2476099c83b7793808f5ba708e5b592c" category="doc">ONTAP tools 部署错误代码</block>
+  <block id="8dee8cc33274cb62a45a4ac35700d849" category="doc">将 ONTAP tools 部署为单节点设备</block>
+  <block id="6d538e124b476aff2397c149a69e279b" category="doc">ONTAP tools 如何管理 igroup 和导出策略</block>
+  <block id="30e47efa2040640e7c0056e2bfb71a7b" category="doc">ONTAP tools for VMware vSphere 各版本功能比较</block>
+  <block id="ebf11048b18616fbd6ba58d38a1858be" category="cell">094</block>
+  <block id="dc8434651b9231a4a07cd70651df6cb2" category="cell">NTP 配置失败，系统已回滚到 NTPsec</block>
+  <block id="deffa26efb6f3e7347013d7b1e7145cb" category="paragraph">如果由于 Chrony 安装失败而导致升级失败：</block>
+  <block id="1b4d213b917b2a9601c255e522c420e3" category="list-text">检查是否安装了 Chrony：</block>
+  <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">如果安装了 Chrony，并且问题与您提供的 NTP 服务器有关，请检查这些服务器是否可以访问：</block>
+  <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果服务器可访问，则该问题与服务器可访问性无关。如果服务器确实无法访问，请将其从 ONTAP tools Manager 中删除，然后提供可访问的 NTP 服务器。</block>
+  <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升级期间由于任何其他问题导致升级失败，请检查以下日志：</block>
 </blocks>

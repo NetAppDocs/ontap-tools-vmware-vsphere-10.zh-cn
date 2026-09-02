@@ -119,6 +119,37 @@ NOTE: 本页提供的错误代码仅供参考。如果错误仍然存在或没�
 | 089 | 更改摘要日志轮换配置文件的所有权失败 | 重试升级。 
 
 
+| 094 | NTP 配置失败，系统已回滚到 NTPsec  a| 
+如果由于 Chrony 安装失败而导致升级失败：
+
+. 检查是否安装了 Chrony：
++
+[listing]
+----
+systemctl status chrony
+----
+. 如果安装了 Chrony，并且问题与您提供的 NTP 服务器有关，请检查这些服务器是否可以访问：
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+如果服务器可访问，则该问题与服务器可访问性无关。如果服务器确实无法访问，请将其从 ONTAP tools Manager 中删除，然后提供可访问的 NTP 服务器。
+
+. 如果在 NTP 升级期间由于任何其他问题导致升级失败，请检查以下日志：
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | 操作系统升级失败 | 无法恢复操作系统升级。ONTAP工具服务已升级、新Pod将运行。 
 
 

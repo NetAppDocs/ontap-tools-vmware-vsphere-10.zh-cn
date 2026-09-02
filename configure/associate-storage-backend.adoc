@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: 将全局存储后端与 ONTAP tools 中的 vCenter Server 实例关联。 
 ---
-= 将存储后端与vCenter Server实例相关联
+= 在 ONTAP tools 中将存储后端与 vCenter Server 实例关联
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

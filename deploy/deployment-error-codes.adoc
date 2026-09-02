@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
 summary: 使用 ONTAP tools 部署错误代码来诊断和解决部署、重新启动和恢复失败。 
 ---
-= 排除 ONTAP tools 部署错误
+= ONTAP tools 部署错误代码
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
