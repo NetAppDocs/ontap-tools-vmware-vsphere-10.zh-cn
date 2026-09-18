@@ -1910,7 +1910,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">SAN 详细信息中必须包含 vCenter Server 的主网络标识符 (PNID)。PNID 和 DNS 名称应相同且可在 DNS 中解析。</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">有关详细信息，请参见 VMware 文档：</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">不同解决方案路径的 vSphere 证书要求</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">替换 vCenter 计算机 SSL 证书自定义证书颁发机构签名的证书</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">错误：使用者备用名称 (SAN) 字段不包含 PNID。请提供有效证书</block>
@@ -3138,4 +3137,5 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">如果安装了 Chrony，并且问题与您提供的 NTP 服务器有关，请检查这些服务器是否可以访问：</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果服务器可访问，则该问题与服务器可访问性无关。如果服务器确实无法访问，请将其从 ONTAP tools Manager 中删除，然后提供可访问的 NTP 服务器。</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升级期间由于任何其他问题导致升级失败，请检查以下日志：</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>
