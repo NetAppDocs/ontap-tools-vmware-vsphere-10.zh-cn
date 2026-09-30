@@ -117,7 +117,8 @@ ONTAP工具会在 vCenter 证书即将到期或已过期时通知您。更新 vC
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . 验证证书是否为 Base 64 ASCII 格式，并包括开始行和结束行，例如：
 +

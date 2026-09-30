@@ -84,7 +84,7 @@ summary: 使用所需的预检查和备份步骤，将 ONTAP tools for VMware vS
 .. 远程插件已升级
 .. ONTAP和 vCenter Server 证书经过验证并添加到ONTAP工具中
 .. 已启用备份
-.. 如果存在 10.5 或更早版本的主机集群保护设置，则 ONTAP tools 会在升级期间创建单独的 *Cluster protection configuration* 导航项。
+.. 如果存在 ONTAP tools for VMware vSphere 10.5 或更早版本中的主机集群保护设置，则 ONTAP tools 会将其转换为精细数据存储保护，并创建单独的*集群保护配置*导航项。
 
 
 
@@ -96,6 +96,7 @@ summary: 使用所需的预检查和备份步骤，将 ONTAP tools for VMware vS
 * 卸载 ONTAP tools 10.4 或 10.5 SRA 适配器并上传 10.6 SRA 适配器 tar 文件。
 * 上传 SRA 适配器 tar 文件后，运行安装命令。然后，重新扫描 SRA 适配器以更新 VMware Site Recovery Storage Replication Adapters 页面。
 * 打开*群集保护配置*并验证现有主机群集保护设置是否存在并正确映射。
+* 有关粒度数据存储区保护功能和资格的详细信息，请参见 link:../protect/granular-datastore-protection-concept.html["ONTAP 工具中的粒度数据存储保护资格标准"]。
 
 
 升级后您可以：

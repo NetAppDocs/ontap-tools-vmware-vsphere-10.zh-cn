@@ -850,7 +850,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">选择要挂载的数据存储库并选择*挂载*。</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">从边栏中选择*Settings*。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在适用于VMware vSphere的ONTAP工具上创建。</block>
-  <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">删除所有存储后端。请参阅 <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="11e59432e8c34141d30396d503dc7c73" category="list-text">选择*存储复制适配器*。</block>
   <block id="51853e46fcef4ee8c2608d1c9995935a" category="list-text">确认您知道删除适配器的结果，然后选择*Delete*。</block>
   <block id="7ecf25a7ff85dee8180a09f0f8a71a56" category="list-text">在VMware Live Site Recovery中，选择*Array Manager*&gt;*Add Array Manager*。</block>
@@ -938,9 +937,7 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="c961da7f498e50ff48715252d593d099" category="cell">*可用信息*</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">VMFS数据存储库</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">数据存储库</block>
-  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">断开存储后端与vCenter Server实例的关联</block>
   <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">选择*取消关联存储后端*。</block>
-  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">解除所有存储后端与vCenter Server实例的关联。请参阅 <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>。</block>
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">在VMware Live Site Recovery设备上配置SRA</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">您应已<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>从下载SRA适配器文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
   <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">了解适用于VMware vSphere 10 RBAC的ONTAP工具</block>
@@ -1047,7 +1044,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">从VMware Live Site Recovery中删除SRA适配器：</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">以管理员身份使用端口5480登录到VMware Live Site Recovery设备管理界面。</block>
   <block id="2ec2edd0a7db2ac9b3f23b9db6dda124" category="list-text">选择相应的SRA卡，然后从下拉菜单中选择*Delete*。</block>
-  <block id="d34cead72810ffa475c9303607018d30" category="list-text">删除已登录到适用于VMware vSphere的ONTAP工具的vCenter Server实例。请参阅 <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>。</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">从vCenter Server中关闭适用于VMware vSphere VM的ONTAP工具并删除这些VM。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">从Web浏览器启动ONTAP工具管理器：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
@@ -2699,7 +2695,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="1ecc48e7d703ccee72239ae065025e8b" category="list-text">仅保护主机集群中的选定数据存储区。</block>
   <block id="36c8c92fa35e1f64c72f630ce6180299" category="list-text">将所选数据存储区分组到保护组。</block>
   <block id="7d99b8f7ded10f4f2921239a1a9c9a43" category="list-text">在保护组级别应用 SnapMirror 关系和策略。</block>
-  <block id="76b1a8b712394da72e5366b816d6419b" category="list-text">对同一集群中的不同数据存储组使用不同的保护方法。</block>
   <block id="1947b0d44f9e85eca7623e1cab6b8bae" category="paragraph">此功能仅支持使用 iSCSI 或 FC 协议的 VMFS 数据存储区。</block>
   <block id="632923e99d3fb84490cf1fed11f3d12a" category="paragraph">可以对符合条件的数据存储区使用以下策略类型：</block>
   <block id="b1f095471f89f11c20fe033a35afe72f" category="list-text">*AutomatedFailOverDuplex (AFD)*</block>
@@ -2731,7 +2726,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ab5d207d269446dad86a9b15cec92d6a" category="list-text">自定义异步策略不受支持。使用默认的 ONTAP 异步策略。</block>
   <block id="224a5056830c20959480843b73cf0533" category="list-text">在三级或仅异步配置中，异步关系清理需手动执行。</block>
   <block id="4f948c7d9b938caffddb97c0d0f8394c" category="list-text">从 ONTAP System Manager 触发故障转移。在 ONTAP tools 之外配置 ONTAP Mediator。</block>
-  <block id="9aab7c7432877f8502ee090eee7abdc2" category="paragraph">从 ONTAP tools 10.5 升级时，现有主机集群保护配置将迁移至精细数据存储保护格式。升级后，验证保护组和数据存储区成员身份。</block>
   <block id="7f6120908ce94360b9a41585185a9108" category="inline-link-macro">使用 ONTAP tools 保护集群中的数据存储</block>
   <block id="c1b7f8376d6217ab8332bd89d741aae1" category="list-text"><block ref="c1b7f8376d6217ab8332bd89d741aae1" category="inline-link-macro-rx"></block></block>
   <block id="aa80a3d8f54a41c521c248368b7227fa" category="summary">在受保护站点和恢复站点之间映射文件夹，以准备 VMware Live Site Recovery 故障转移工作流。</block>
@@ -2855,7 +2849,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="a6e5efc1d16eb34745bb75a77226d583" category="list-text">启用低 RPO 备份，并确保在 vSphere 客户端界面中可见一个备份。请在升级前下载备份文件夹。</block>
   <block id="bbac914a781e9dc109fcf5bab03d2c11" category="list-text">找到主 ONTAP tools VM 并启动 Web 控制台。</block>
   <block id="034b9e64b5ae759244f5eecd018ed221" category="list-text">网关证书续订有效期为 1 年。当您移除以前的 SRA 适配器并上传新的 10.6 适配器时，SRA 证书的有效期将从 10 年更改为 1 年。</block>
-  <block id="9b63ec403219c80e52e7dae8c3a61d23" category="list-text">如果存在 10.5 或更早版本的主机集群保护设置，则 ONTAP tools 会在升级期间创建单独的 *Cluster protection configuration* 导航项。</block>
   <block id="1e271ba64f48de298f8de2968b529b3a" category="paragraph">升级到 ONTAP tools for VMware vSphere 10.6 后：</block>
   <block id="7e07903e1b79156be237c3f4f9194ffe" category="list-text">卸载 ONTAP tools 10.4 或 10.5 SRA 适配器并上传 10.6 SRA 适配器 tar 文件。</block>
   <block id="2d96dfea27764d22dbafb174af190a36" category="list-text">打开*群集保护配置*并验证现有主机群集保护设置是否存在并正确映射。</block>
@@ -3138,4 +3131,18 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果服务器可访问，则该问题与服务器可访问性无关。如果服务器确实无法访问，请将其从 ONTAP tools Manager 中删除，然后提供可访问的 NTP 服务器。</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升级期间由于任何其他问题导致升级失败，请检查以下日志：</block>
   <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
+  <block id="345a87b70523fdb5dd79038a7e873845" category="admonition">请勿将 ONTAP tools 虚拟机部署在 VMware vApp 中的 vCenter Server 内。</block>
+  <block id="b86439358b560760313055a90bd5812c" category="list-text">删除已载入到 ONTAP tools for VMware vSphere 的 vCenter Server 实例。请参阅 <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="26adf559940dd20d02f0bdec74d0cc28" category="paragraph">删除 vCenter Server 实例时，ONTAP tools 可以引导您完成所需的清理。如果在 *Remove vCenter* 对话框中出现提示，请选择 *Remove all storage artifacts from this vCenter Server* 和 *I understand that the associated datastores will no longer be managed by ONTAP tools*，然后选择 *Force delete*。</block>
+  <block id="c4d716c88a05e0d00551ac8ea6da15a0" category="paragraph">在使用*强制删除*之前，请确保已删除或迁移所有 vVols 数据存储区，所有受保护的数据存储区均已取消保护，并且未运行任何发现作业。</block>
+  <block id="7eb5227d0f36e7346167a93b856b0fa7" category="paragraph">如果在删除过程中无法访问 vCenter 服务器，ONTAP tools 仅删除 vCenter 服务器记录。您必须从 VMware vCenter Server 手动注销插件。</block>
+  <block id="38fbd92f67469b25016c6a83c8a94171" category="list-text">对同一主机群集中的不同数据存储组使用不同的保护方法。</block>
+  <block id="a56b4b9b7649b05781df3dab1c45651b" category="list-text">为单个主机集群分配多个保护设置。</block>
+  <block id="4bf2e3d77c651d3fb73aa4b90e436796" category="list-text">在相同的Storage Virtual Machine (SVM)、不同的SVM或不同的存储系统上配置保护设置。</block>
+  <block id="20d81ee1f8e1f28cd4b2b539fbf352ee" category="list-text">使主机群集中的某些数据存储不受保护。</block>
+  <block id="e472ea4c0e1a3e6d590c155e00c141db" category="list-text">从单个数据存储库中删除保护。</block>
+  <block id="aa398ba1f850bdbde5e4cba259662cc0" category="list-text">在配置期间保护数据存储库。</block>
+  <block id="47d11b58a635ad0e3f489449a130c627" category="paragraph">从适用于 VMware vSphere 10.5 的 ONTAP tools 升级时，现有主机集群保护设置将自动转换为精细数据存储保护。升级后，验证保护组和数据存储成员资格。</block>
+  <block id="c3f0c8b4da16f3b290431c535f98a9f7" category="list-text">如果存在 ONTAP tools for VMware vSphere 10.5 或更早版本中的主机集群保护设置，则 ONTAP tools 会将其转换为精细数据存储保护，并创建单独的*集群保护配置*导航项。</block>
+  <block id="744e01cbfcb5b5f86287c1c9beac6075" category="list-text">有关粒度数据存储区保护功能和资格的详细信息，请参见 <block ref="9a8072c85e6a05ec4ad84b9967b3caa6" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -16,6 +16,9 @@ summary: 在部署 ONTAP tools for VMware vSphere 之前，请查看支持的版
 在支持的 vSphere 环境（包括 ESXi 主机和 VMware vCenter Server Virtual Appliance (vCSA)）上部署 ONTAP tools for VMware vSphere。
 
 
+NOTE: 请勿将 ONTAP tools 虚拟机部署在 VMware vApp 中的 vCenter Server 内。
+
+
 
 [[system-requirements]]
 == 系统要求

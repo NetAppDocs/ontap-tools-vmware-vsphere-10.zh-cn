@@ -22,8 +22,6 @@ summary: 正常终止 ONTAP tools for VMware vSphere 部署。
 
 . link:../manage/delete-ds.html["删除数据存储库"]在适用于VMware vSphere的ONTAP工具上创建。
 . 如果您已启用 VASA Provider，请在 ONTAP tools 中选择 *设置* > *VASA Provider 设置* > *注销*，以从所有 vCenter Server 实例中注销 VASA Provider。
-. 解除所有存储后端与vCenter Server实例的关联。请参阅 link:../manage/manage-vcenter.html["断开存储后端与vCenter Server实例的关联"]。
-. 删除所有存储后端。请参阅 link:../manage/storage-backend.html["管理存储后端"]。
 . 从VMware Live Site Recovery中删除SRA适配器：
 +
 .. 以管理员身份使用端口5480登录到VMware Live Site Recovery设备管理界面。
@@ -32,7 +30,16 @@ summary: 正常终止 ONTAP tools for VMware vSphere 部署。
 .. 确认您知道删除适配器的结果，然后选择*Delete*。
 
 
-. 删除已登录到适用于VMware vSphere的ONTAP工具的vCenter Server实例。请参阅 link:../manage/manage-vcenter.html["管理vCenter Server实例"]。
+. 删除已载入到 ONTAP tools for VMware vSphere 的 vCenter Server 实例。请参阅 link:../manage/manage-vcenter.html["管理vCenter Server实例"]。
++
+删除 vCenter Server 实例时，ONTAP tools 可以引导您完成所需的清理。如果在 *Remove vCenter* 对话框中出现提示，请选择 *Remove all storage artifacts from this vCenter Server* 和 *I understand that the associated datastores will no longer be managed by ONTAP tools*，然后选择 *Force delete*。
+
++
+在使用*强制删除*之前，请确保已删除或迁移所有 vVols 数据存储区，所有受保护的数据存储区均已取消保护，并且未运行任何发现作业。
+
++
+如果在删除过程中无法访问 vCenter 服务器，ONTAP tools 仅删除 vCenter 服务器记录。您必须从 VMware vCenter Server 手动注销插件。
+
 . 从vCenter Server中关闭适用于VMware vSphere VM的ONTAP工具并删除这些VM。
 
 

@@ -20,7 +20,12 @@ ONTAP tools for VMware vSphere 10.6 及更高版本提供精细的数据存储�
 * 仅保护主机集群中的选定数据存储区。
 * 将所选数据存储区分组到保护组。
 * 在保护组级别应用 SnapMirror 关系和策略。
-* 对同一集群中的不同数据存储组使用不同的保护方法。
+* 对同一主机群集中的不同数据存储组使用不同的保护方法。
+* 为单个主机集群分配多个保护设置。
+* 在相同的Storage Virtual Machine (SVM)、不同的SVM或不同的存储系统上配置保护设置。
+* 使主机群集中的某些数据存储不受保护。
+* 从单个数据存储库中删除保护。
+* 在配置期间保护数据存储库。
 
 
 此功能仅支持使用 iSCSI 或 FC 协议的 VMFS 数据存储区。
@@ -76,7 +81,7 @@ ONTAP tools for VMware vSphere 10.6 及更高版本提供精细的数据存储�
 * 从 ONTAP System Manager 触发故障转移。在 ONTAP tools 之外配置 ONTAP Mediator。
 
 
-从 ONTAP tools 10.5 升级时，现有主机集群保护配置将迁移至精细数据存储保护格式。升级后，验证保护组和数据存储区成员身份。
+从适用于 VMware vSphere 10.5 的 ONTAP tools 升级时，现有主机集群保护设置将自动转换为精细数据存储保护。升级后，验证保护组和数据存储成员资格。
 
 .相关信息
 * link:../protect/protect-multiple-ds.html["使用 ONTAP tools 保护集群中的数据存储"]
