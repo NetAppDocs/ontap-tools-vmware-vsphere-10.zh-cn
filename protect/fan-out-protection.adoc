@@ -14,7 +14,7 @@ summary: 通过跨两个目标 ONTAP 集群使用同步和异步复制，利用�
 使用扇出保护来保护两个目标 ONTAP 集群上的一致性组。ONTAP tools 通过创建、编辑和删除 SnapMirror 活动同步保护工作流来维护同步关系，VMware Live Site Recovery 通过故障转移和重新保护工作流来维护异步关系。
 
 
-NOTE: SVM 用户不支持扇出。
+NOTE: SVM 用户不支持扇出保护。除了 AutomatedFailOverDuplex 关系之外，扇出保护还需要异步关系，并且 ONTAP 工具不支持为使用 SVM 用户凭据添加的存储后端创建异步保护。
 
 要设置扇出保护，请将三个站点集群和 SVM 对等连接。
 
