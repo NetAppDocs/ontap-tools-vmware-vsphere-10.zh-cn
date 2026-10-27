@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: faq-ontap-tools.html 
+keywords: faq, frequently asked questions, frequently asked questions about ontap tools for vmware vsphere, datastore management, disaster recovery, vvols, storage backends 
+summary: 有关 ONTAP tools for VMware vSphere 的常见问题。 
+---
+= ONTAP tools for VMware vSphere 常见问题解答
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+本常见问题解答回答了有关 ONTAP tools for VMware vSphere 的常见问题。它侧重于在部署、管理和对 ONTAP tools 环境进行故障排除时有用的概念、部署、存储后端、数据存储保护和自动化。
+
+
+
+[[deployment-and-high-availability]]
+== 部署和高可用性
+
+.ONTAP 工具支持哪些 VMware vSphere、ESXi 和 ONTAP 版本？
+受支持的 ONTAP、ESXi 和 vCenter Server 版本因 ONTAP tools 版本而异。用于部署 ONTAP tools 虚拟机的 ESXi 主机和 vCenter Server 的要求，也可能与部署后 ONTAP tools 能够管理的版本要求不同且更为严格。受支持的版本在不同版本之间会有所变化，因此请始终查看您正在运行的版本的 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]和link:deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"]。
+
+.我应该使用哪个版本的 ONTAP tools，9.x 还是 10.x？
+大多数环境都受益于迁移到最新的 ONTAP 工具 10.x 版本。与 ONTAP 工具 9.13 相比，它增加了对 VMFS 的 NVMe-oF 支持，符合较新的 ONTAP 和 VMware vSphere 版本，并支持每个设备多个 vCenter Server 实例，而不仅仅是一个。只有当您的环境具有最新的 10.x 版本尚不支持的特定依赖项时，继续使用 ONTAP 工具 9.x 才有意义，并且尽早迁移是值得规划的，因为 ONTAP 工具 9.x 即将终止支持。请在 https://mysupport.netapp.com/site/info/version-support["NetApp 支持站点 - 软件版本支持"^]页面上查看当前的终止支持日期。请参阅 link:release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html["ONTAP tools for VMware vSphere 各版本功能比较"] 和 https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]以确认哪个版本与您的 ONTAP、ESXi 和 vSphere 版本匹配。
+
+.如何随着需求的增长扩展我的 ONTAP tools 部署？
+ONTAP tools 最初总是作为超小型（XS）单节点设备部署，为 NFS 和 VMFS 数据存储提供核心服务。如果您以后需要更多资源、更高的弹性，或者需要 vVols 和 HA，您可以向上扩展到小型、中型或大型，或者扩展到 HA；HA 部署是多节点的，使用三个节点，并且需要内容库，而且大型部署仅支持与 HA 结合使用。要支持 HA 扩展，请在 ESXi 集群或资源池中部署设备，并确保启用 CPU 热添加和内存热插拔；从 ONTAP tools 10.6 开始，新部署默认启用这些设置。link:deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"] 中列出了每种大小的 CPU、内存和磁盘资源，因此从 XS 默认值开始，并随着需求的增长进行扩展是安全的。ONTAP tools 仅支持向上扩展：您只能增加节点大小，而不能减小它，并且在启用 HA 后，您无法恢复到非 HA 的单节点配置。有关部署、规模估算和扩展步骤，请参阅 link:deploy/quick-start.html["适用于VMware vSphere的ONTAP工具快速入门"]、link:deploy/ha-workflow.html["ONTAP tools 的高可用性部署工作流程"] 和 link:manage/edit-appliance-settings.html["扩展 ONTAP tools 并启用高可用性"]。
+
+.高可用性保护什么，我应该考虑什么？
+HA 解决方案旨在帮助从单节点主机故障、网络故障、来宾操作系统故障或 ONTAP tools 应用程序故障中恢复。HA 部署使用三个节点，这些节点必须位于同一子网以进行节点间通信。必须启用 CPU 热添加和内存热插拔；HA 工作流还需要用于 vVols 数据存储的 VASA 提供程序。有关设置步骤，请参阅 link:deploy/ha-workflow.html["ONTAP tools 的高可用性部署工作流程"]。
+
+.我是否需要高可用性（HA）部署，何时应该使用它？
+如果您仅使用不含 vVols 的 NFS 或 VMFS 数据存储，则不需要 HA，但它仍可针对单节点主机、网络、来宾操作系统或 ONTAP tools 应用程序故障提供更广泛的弹性。需要 HA 来保持 VASA Provider 服务对 vVols 数据存储持续可用，因此如果您使用 vVols，或者如果您需要比单节点部署更高的服务弹性和每个服务更多的容器，请使用 HA 部署。
+
+.单个 ONTAP tools 10.x 部署是否可以管理多个 vCenter Server 实例？
+是。与仅支持每个设备一个 vCenter Server 的 ONTAP tools 9.x 不同，ONTAP tools 10.x 支持多租户，并允许您通过单个 ONTAP tools Manager 界面管理多个 vCenter Server 实例，从而减少设备数量和整体资源需求。如果您在多个 vCenter Server 实例中使用 vVols 数据存储，请将自签名证书升级为 CA 签名证书以实现安全通信。有关步骤，请参见 link:configure/add-vcenter.html["将 vCenter Server 实例添加到ONTAP工具"]。
+
+
+
+[[networking-and-ports]]
+== 网络连接和端口
+
+.部署 ONTAP tools 需要多少个 IP 地址，每个 IP 地址的用途是什么？
+单节点部署在同一子网上需要三个唯一的静态 IPv4 地址：
+
+* *ONTAP 工具 IP*（以前称为负载平衡器 IP）：ONTAP 工具管理器(`https://<ONTAPtoolsIP>:8443/virtualization/ui/`）、REST API、VASA 提供程序、存储复制适配器（SRA）和 vSphere Client 插件的外部端点。
+* *ONTAP tools 虚拟 IP*（以前称为节点互连 IP）：分配给 Kubernetes API 服务器，用作 Kubernetes 控制平面的虚拟 IP。
+* *节点 IP*：用于诊断 shell 和 SSH 访问的节点管理地址。
+
+
+HA 部署为第二个和第三个节点各添加一个额外的节点 IP 地址；ONTAP tools IP 和虚拟 IP 在所有节点之间共享。有关完整的部署工作表，请参阅 link:deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"] 和 link:deploy/pre-deploy-checks.html["ONTAP tools 的部署前要求"]。
+
+.ONTAP tools 使用哪些网络端口？
+ONTAP tools 将端口 443 和 8443 公开为 ONTAP tools Manager、REST API、VASA Provider 和 vSphere Client 插件后端的外部直通端口。端口要求表中的其余端口是设备的 Kubernetes 集群内部使用的节点间端口；在单节点部署中，它们不需要外部访问，在 HA 部署中，所有三个节点必须能够在这些端口上相互访问，包括用于 pod 到 pod 通信的 UDP 8472。有关完整的端口表，请参阅 link:deploy/prerequisites.html["适用于 VMware vSphere 的 ONTAP 工具的要求和配置限制"]。
+
+
+
+[[certificates-and-security]]
+== 证书和安全性
+
+.ONTAP tools 对 vCenter Server 证书有何要求？
+仅当证书证明您要连接的服务器的身份时，证书才会保护连接。使用者备用名称（SAN）扩展提供了证明：它列出了证书有效的 DNS 名称和 IP 地址。
+
+vCenter Server 计算机 SSL 证书必须满足以下要求：
+
+* SAN 包括 vCenter 服务器的 DNS 名称和 IP 地址。
+* SAN 包括 vCenter Server 主网络标识符（PNID），并且 PNID 与 DNS 名称匹配。
+* SAN 中的每个名称都在 DNS 中解析。
+
+
+如果证书没有 SAN，或 SAN 与 vCenter Server 的 DNS 名称、IP 地址或 PNID 不匹配，ONTAP tools 操作将因证书验证错误而失败。此验证无法关闭。在添加 vCenter Server 实例之前，请使用 vSphere Certificate Manager 更正 SAN。有关证书要求和示例，请参见 link:configure/add-vcenter.html["将 vCenter Server 实例添加到ONTAP工具"]。
+
+.为什么添加存储后端会导致证书验证失败，以及如何修复它？
+ONTAP tools 默认情况下会验证存储后端证书，原因与验证 vCenter Server 证书相同：SAN 扩展会证明证书属于哪个集群或 SVM 管理 LIF。默认的 ONTAP 自签名证书通常没有 SAN，因此在添加存储后端时无法通过验证。
+
+要解决失败的验证，请执行以下操作：
+
+* 将证书替换为其 SAN 包括集群或 SVM 管理 LIF 的 IP 地址或 DNS 名称的证书，然后在添加或重新添加存储后端时获取并授权更新的证书。
+* 如果无法立即替换证书，请从维护控制台禁用证书验证。此操作将绕过所有已配置存储后端的验证，并且不适用于 vCenter Server 证书。
+
+
+如果存储后端证书在续订之前过期，ONTAP tools 会将存储后端标记为未知，因为它无法再连接到存储系统。请参阅 link:configure/add-storage-backend.html["将存储后端添加到 ONTAP tools"] 和 link:manage/change-valid-flag.html["更改证书验证标志"] 了解相关步骤。
+
+
+
+[[datastores-and-storage-backends]]
+== 数据存储和存储后端
+
+.我可以管理哪些数据存储类型和协议？
+ONTAP tools 支持以下数据存储类型和协议：
+
+* *NFS*：NFSv3 和 NFSv4.1。
+* *VMFS*：iSCSI、FC、NVMe/TCP 和 NVMe/FC。
+* *vVols*：通过 VASA Provider 进行配置和管理。
+
+
+有关创建步骤，请参见 link:configure/create-datastore.html["在 ONTAP tools 中创建数据存储库"]。
+
+.为什么 ONTAP tools 会创建这么多 igroup，我可以使用现有的 flat igroup 吗？
+ONTAP tools 在设计上使用嵌套的 igroup 模型：
+
+* 父 igroup 代表每个数据存储的访问，子 igroup 代表每个 ESXi 主机。LUN 映射适用于子 igroup。
+* 此结构允许 ONTAP tools 在多个数据存储中重用主机的子 igroup，而不是为每个数据存储重复主机访问，并且它为 ONTAP tools 提供了挂载、卸载和主机更新操作所需的精细的每主机控制。
+* ONTAP tools 管理的 igroup 使用  `otv_` 前缀。
+
+
+如果您已经将扁平 igroup 映射到 ONTAP tools 发现的数据存储，则 ONTAP tools 会在发现期间转换它们：它将原始 igroup 保留为使用  `otv_` 前缀重命名的子 igroup，并在其上方创建一个父 igroup，而不更改底层启动器映射。未映射到数据存储的 igroup（例如启动 LUN igroup）将保持不变。
+
+由于 ONTAP tools 依赖于此父子结构来跟踪主机访问，因此请勿手动重命名、编辑或删除 ONTAP tools 管理的 igroup。请改用 ONTAP tools 挂载、卸载和主机更新工作流。有关详细信息，请参阅 link:manage/nested-igroups.html["ONTAP tools 中的嵌套 igroup 管理"] 和 link:manage/igroup-workflow.html["ONTAP tools 如何管理 igroup 和导出策略"]。
+
+.全局存储后端和本地存储后端有什么区别？
+存储后端在范围和凭据方面有所不同：
+
+* *全局存储后端*：仅使用 ONTAP 集群凭据在 ONTAP tools 管理器中添加一次。它不会链接到 vCenter Server，除非您将其与一个服务器关联，并且它提供 vVols 管理所需的集群级别发现。
+* *本地存储后端*：使用集群或 SVM 凭据为每个 vCenter Server 添加，并且仅对该 vCenter Server 可用。仅 SVM 凭据就足以用于 VMFS 数据存储和存储复制适配器（SRA）工作流，但不适用于 vVols。
+
+
+有关步骤，请参阅link:configure/add-storage-backend.html["将存储后端添加到 ONTAP tools"]和link:configure/associate-storage-backend.html["在 ONTAP tools 中将存储后端与 vCenter Server 实例关联"]。
+
+.将 vVols 与 ONTAP 工具结合使用需要什么？
+vVols 数据存储工作流取决于 VASA Provider 服务是否已启用并注册到选定的 vCenter Server。ONTAP tools 使用 VASA Provider 创建和维护 vVols 数据存储表示形式，并且 VM 存储策略使用来自 NetApp vVols 存储类型提供程序的规则。在 HA 设置中，HA 工作流还需要 VASA Provider 用于 vVols 数据存储。有关设置步骤，请参阅 link:manage/enable-services.html["在 ONTAP tools Manager 中启用可选服务"] 和 link:configure/registration-process.html["在 ONTAP tools 中向 vCenter Server 实例注册 VASA Provider"]。
+
+.VMware 已弃用 vVols。这对 ONTAP tools 用户意味着什么？
+Broadcom 已从 VMware Cloud Foundation 和 VMware vSphere Foundation 9.0 开始弃用 vVols，并计划在未来版本中停止该功能。对于新部署，请规划使用 VMFS 或 NFS 数据存储，并禁用 VASA Provider，除非您当前正在使用 vVols。请查阅 ONTAP tools 发行说明，以了解每个版本中的 vVols 支持情况。
+
+
+
+[[protection-and-disaster-recovery]]
+== 保护和灾难恢复
+
+.如何使用 ONTAP tools for VMware vSphere 保护数据存储？
+您可以通过将符合条件的使用 iSCSI 或 FC 协议的 VMFS 数据存储添加到具有 SnapMirror 关系的保护组中，使用异步或 AutomatedFailOverDuplex 策略来保护该数据存储。当主机集群包含来自多个 SVM 的数据存储时，请改用精细数据存储保护工作流，在保护组级别选择并保护数据存储。有关步骤，请参见 link:manage/protect-ds.html["保护 ONTAP tools 中的 VMFS 数据存储区"] 和 link:protect/protect-multiple-ds.html["使用 ONTAP tools 保护集群中的数据存储"]。
+
+.如何使用 ONTAP 工具进行灾难恢复？
+对于基于阵列的灾难恢复，请在 ONTAP tools 中启用 SRA 服务，并在 VMware Live Site Recovery 设备上安装 SRA 适配器。在运行 SRA 工作流之前，请在源集群和目标集群上使用相同的自定义 SnapMirror 计划。在新的 SRA 设置中，始终运行测试故障转移；跳过此操作可能会导致重新保护操作失败。有关设置步骤，请参阅 link:protect/enable-storage-replication-adapter.html["在 ONTAP tools 中配置 SRA 以保护数据存储区"]。
+
+.我可以使用 SRA 和 VMware Live Site Recovery 保护哪些数据存储类型？
+SRA 支持 iSCSI 和 FC 上的 NFSv3 数据存储和 VMFS 数据存储。NVMe-oF 数据存储不支持灾难恢复，并且 VMware Live Site Recovery 不支持 NFSv4.1 或 FlexGroup 数据存储的基于阵列的复制。仅 iSCSI 和 FC 支持一致性组；将 NFS 卷添加到一致性组会导致设备发现失败。
+
+.SnapMirror 主动同步保护与基于 SRA 的灾难恢复有何不同？
+主机群集保护工作流使用 VMFS 数据存储的 SnapMirror 活动同步。ONTAP 工具 10.6 还支持粒度数据存储保护，使您可以使用 iSCSI 或 FC 选择符合条件的 VMFS 数据存储，并在保护组级别应用保护。SRA 改为与 VMware Live Site Recovery 集成，以实现基于阵列的灾难恢复工作流。请参阅 link:protect/granular-datastore-protection-concept.html["ONTAP 工具中的粒度数据存储保护资格标准"] 以了解相关资格详情。
+
+
+
+[[access-control-backup-and-support]]
+== 访问控制、备份和支持
+
+.访问控制如何在 ONTAP 工具、vCenter 和 ONTAP 之间工作？
+访问在两个环境中受到控制：vCenter Server 权限控制对 vSphere 对象的访问，而 ONTAP 角色控制存储操作。ONTAP tools 首先检查 vCenter 角色，然后检查与存储后端关联的 ONTAP 角色。ONTAP tools 不会在 vCenter 或 ONTAP 中创建用户帐户，因此管理员需要创建所需的服务帐户。有关详细信息，请参见 link:concepts/rbac-learn-about.html["了解 ONTAP tools 中的 RBAC"]。
+
+.如何在 ONTAP tools for VMware vSphere 中配置基于角色的访问控制（RBAC）？
+由于 ONTAP tools 不会在 vCenter 或 ONTAP 中创建用户帐户，因此 vSphere 管理员必须创建所需的服务帐户并在两种环境中分配角色。在 vCenter Server 中，ONTAP tools 扩展了 RBAC 模型，通过远程插件公开了其他对象。在 ONTAP 中，访问是通过分配给您在验证存储后端时提供的用户的 ONTAP 角色进行控制的；ONTAP tools 提供预定义的角色和 JSON 角色文件，您可以使用它们来分配存储后端操作所需的最低权限。有关设置步骤，请参阅 link:concepts/rbac-vcenter-use.html["vCenter Server RBAC 如何与 ONTAP tools for VMware vSphere 配合使用"] 和 link:configure/configure-user-role-and-privileges.html["为 ONTAP tools 配置 ONTAP 用户角色和权限"]。
+
+.ONTAP tools 多久备份一次设备？备份的用途是什么？
+从 ONTAP tools 10.5 开始，默认情况下启用备份，并且每 10 分钟运行一次。备份文件存储在数据存储中，如果原始虚拟机丢失，您可以重新部署并恢复 ONTAP tools 设备本身；它们不是 ONTAP tools 管理的 ONTAP 集群或 vCenter Server 配置的备份。您可以将频率更改为 10 到 60 分钟之间。有关步骤，请参见 link:manage/backup-settings.html["编辑 ONTAP tools 备份设置"] 和 link:manage/recover-backup.html["从备份中恢复 ONTAP tools for VMware vSphere"]。
+
+.我可以禁用 ONTAP tools 备份吗？
+您可以，但不要禁用备份，因为这会阻止 ONTAP tools 保持较低的恢复点目标。禁用备份不会删除现有备份文件。有关步骤，请参阅 link:manage/backup-settings.html["编辑 ONTAP tools 备份设置"]。
+
+.当我需要排除故障或联系支持部门时，在哪里可以找到日志？
+您可以在 ONTAP tools Manager 中或从 vSphere Client 生成日志包。在 ONTAP tools Manager 中生成的日志包包含所有受管 vCenter Server 实例的日志；在 vSphere Client 中生成的日志包的作用域为选定的 vCenter Server。下载生成的归档，并在需要时将其提供给技术支持人员。有关步骤，请参阅 link:deploy/deployment-error-codes.html["ONTAP tools 部署错误代码"]。
+
+.如何收集诊断信息以排除 ONTAP 工具的故障？
+除了日志捆绑包之外，您还可以从维护控制台启用对 `diag`用户帐户的远程诊断（SSH）访问。一次只允许一个 diag 登录会话，并且在第二天午夜或您再次以 diag 用户身份登录时，访问权限会自动禁用。使用此访问权限进行超出日志捆绑包所能提供的更深入的故障排除，并首先生成日志捆绑包，以便技术支持人员有基准日志可供使用。有关步骤，请参阅link:manage/configure-remote-diagnostic-access.html["配置 ONTAP tools 的远程诊断访问"]。
+
+
+
+[[upgrade-migration-and-automation]]
+== 升级、迁移和自动化
+
+.我可以直接升级到最新的 ONTAP tools 10.x 版本吗？
+支持从紧接在最新版本之前的两个版本（N-2）进行直接升级。如果您的版本更旧，请先升级到支持直接升级到最新版本的最旧版本，然后再升级到最新版本。在开始之前启用低 RPO 备份并下载该备份，因为失败的升级并不总是可以回滚，此时恢复将依赖于低 RPO 备份或快照恢复。有关支持的升级路径和步骤，请参阅 link:upgrade/upgrade-ontap-tools.html["从 ONTAP tools for VMware vSphere 10.x 升级到 10.6"]。
+
+.如何从 ONTAP tools 9.x 迁移到最新的 10.x 版本？
+仅支持从特定的 ONTAP tools 9.x 版本进行迁移。迁移路径取决于您的环境是否使用 vVols：具有 vVols 的环境会迁移 VASA Provider 并更新 SRA，而仅具有 NFS 和 VMFS 数据存储的环境会删除 9.x 部署并部署 10.x。使用 NVMe/FC 的 vVols 数据存储在迁移后将变得不可操作，因为 ONTAP tools 10.x 仅支持具有 VMFS 数据存储的 NVMe-oF。有关受支持的源版本和步骤，请参见 link:migrate/migrate-to-latest-ontaptools.html["从 ONTAP tools for VMware vSphere 9.xx 迁移到 10.6"]。
+
+.我可以使用 REST API 自动化 ONTAP tools 操作吗？
+是的。ONTAP 工具提供用于自动化的 REST API，独立于 ONTAP 集群 REST API。API 访问使用 ONTAP 工具 IP 地址和端口 8443；使用 ONTAP 工具管理器凭据进行身份验证以获取访问令牌，然后在 `x-auth`标头中发送令牌。长时间运行的操作可以异步运行，并返回要监视的作业。请参阅 link:automation/learn-rest-api.html["了解 ONTAP tools REST API"] 和 link:automation/first-call.html["进行首次 ONTAP tools REST API 调用"] 以开始使用。

@@ -26,6 +26,8 @@ sidebar:
   entries:
   - title: 适用于 VMware vSphere 的 ONTAP 工具 10.6
     url: "/index.html"
+  - title: ONTAP tools for VMware vSphere 常见问题解答
+    url: "/faq-ontap-tools.html"
   - section: release-notes
   - section: concepts
   - section: deploy
