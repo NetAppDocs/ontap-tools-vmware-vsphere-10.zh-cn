@@ -422,7 +422,6 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ef5b87aeaa907022daf2aa19faf9b465" category="inline-link">删除 FlexVol 卷</block>
   <block id="e38d6f0a684b3cc719c83432498db42b" category="inline-link">查看和管理SAN启动程序和igroup</block>
   <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
-  <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
   <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
   <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
   <block id="d6dc3fa77b8368a0795d43ba5098caec" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block> 您需要在密码值周围使用一个引号。</block>
@@ -3237,4 +3236,5 @@ sudo rke2-uninstall.sh (所有VM)。</block>
   <block id="ea4b665c1a45f1eeb347dcc5ac156f2d" category="paragraph-title">我可以使用 REST API 自动化 ONTAP tools 操作吗？</block>
   <block id="ace000412a4686f2d39bcff385c7f9a9" category="paragraph">是的。ONTAP 工具提供用于自动化的 REST API，独立于 ONTAP 集群 REST API。API 访问使用 ONTAP 工具 IP 地址和端口 8443；使用 ONTAP 工具管理器凭据进行身份验证以获取访问令牌，然后在<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>标头中发送令牌。长时间运行的操作可以异步运行，并返回要监视的作业。请参阅 <block ref="d6e36bb958210663cc4b017ad9ad5fc2" category="inline-link-macro-rx"></block> 和 <block ref="e80b3414f41f200b08ca92f57c0602dd" category="inline-link-macro-rx"></block> 以开始使用。</block>
   <block id="cb0bf506e37053e61b7bc79a19047980" category="admonition">SVM 用户不支持扇出保护。除了 AutomatedFailOverDuplex 关系之外，扇出保护还需要异步关系，并且 ONTAP 工具不支持为使用 SVM 用户凭据添加的存储后端创建异步保护。</block>
+  <block id="f12b92f1d5668f1f94a0ad1f11f6cfe8" category="list-text"><block ref="c3933049d26fccba0396e7760f0fba06" prefix="" category="inline-code"></block></block>
 </blocks>
